@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <defs>
+      <linearGradient id="ktGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#7F52FF"/>
+        <stop offset="50%" stop-color="#C711E1"/>
+        <stop offset="100%" stop-color="#E44857"/>
+      </linearGradient>
+    </defs>
+    <polygon points="18,18 110,18 64,64 110,110 18,110" fill="url(#ktGrad)"/>
+  </svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 64 64" fill="none">
+  <!-- Solid Filled Map Pin & Folded Map -->
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M32 4C22.1 4 14 12.1 14 22C14 34.2 32 50 32 50C32 50 50 34.2 50 22C50 12.1 41.9 4 32 4ZM32 29C28.1 29 25 25.9 25 22C25 18.1 28.1 15 32 15C35.9 15 39 18.1 39 22C39 25.9 35.9 29 32 29Z" fill="#00CE44"/>
+  <path d="M15.2 42L6 46V58L22 52L42 58L58 52V40L48.8 43.5C43.7 49.2 36.8 54.8 32 56.5C27.2 54.8 20.3 49.2 15.2 42Z" fill="#00CE44"/>
+</svg>

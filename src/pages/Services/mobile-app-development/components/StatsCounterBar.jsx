@@ -1,0 +1,50 @@
+export default function StatsCounterBar() {
+  const stats = [
+    {
+      value: '150+',
+      label: 'Software Engineers & Specialists',
+      icon: '/assets/mobile-app/apps-launch.svg',
+    },
+    {
+      value: '20+',
+      label: 'Industries Served',
+      icon: '/assets/mobile-app/active-developer.svg',
+    },
+    {
+      value: '70+',
+      label: 'Digital Products Delivered',
+      icon: '/assets/mobile-app/app-downloads.svg',
+    },
+    {
+      value: '8+',
+      label: 'Years in Product Engineering',
+      icon: '/assets/mobile-app/rating.svg',
+    },
+  ]
+
+  return (
+    <section className="py-14 sm:py-16 bg-[#1d1d1d]">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-center">
+          {stats.map((s) => (
+            <div key={s.label} className="flex flex-col items-center justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 flex items-center justify-center">
+                <img
+                  src={s.icon}
+                  alt={s.label}
+                  className="w-full h-full object-contain select-none"
+                />
+              </div>
+              <div className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#00CE44] tracking-tight leading-none mb-1.5">
+                {s.value}
+              </div>
+              <div className="text-white text-xs sm:text-sm font-medium">
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
