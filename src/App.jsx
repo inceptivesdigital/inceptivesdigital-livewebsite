@@ -11,8 +11,12 @@ import Portfolio from './pages/Portfolio'
 import CaseStudyDetail from './pages/CaseStudyDetail'
 import StaffAugmentation from './pages/StaffAugmentation'
 import MobileAppDevelopment from './pages/Services/mobile-app-development'
+import IosAppDevelopment from './pages/Services/ios-app-development'
+import AndroidAppDevelopment from './pages/Services/android-app-development'
+import ReactNativeAppDevelopment from './pages/Services/react-native-app-development'
+import FlutterAppDevelopment from './pages/Services/flutter-app-development'
 import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment'
-import BlockchainDevelopment from './pages/BlockchainDevelopment'
+import BlockchainDevelopment from './pages/Services/blockchain-development'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import PrivacyPolicy from './pages/PrivacyPolicy'
@@ -35,6 +39,11 @@ export default function App() {
             <Route path="/portfolio/:slug" element={<CaseStudyDetail />} />
             <Route path="/staff-augmentation" element={<StaffAugmentation />} />
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route path="/ios-app-development" element={<IosAppDevelopment />} />
+            <Route path="/android-app-development" element={<AndroidAppDevelopment />} />
+            <Route path="/anroid-app-development" element={<AndroidAppDevelopment />} />
+            <Route path="/react-native-app-development" element={<ReactNativeAppDevelopment />} />
+            <Route path="/flutter-app-development" element={<FlutterAppDevelopment />} />
             <Route path="/custom-software-development" element={<CustomSoftwareDevelopment />} />
             <Route path="/blockchain-development" element={<BlockchainDevelopment />} />
             <Route path="/about-us" element={<AboutUs />} />

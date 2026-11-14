@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function CustomMobileServices() {
   const services = [
     {
@@ -15,12 +17,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Native{' '}
-          <a
-            href="https://inceptivesdigital.com/ios-app-development"
+          <Link
+            to="/ios-app-development"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
             iOS app development
-          </a>{' '}
+          </Link>{' '}
           requires deep expertise across Apple’s ecosystem. SwiftUI and UIKit power our custom iPhone and iPad applications, with native SDK integrations addressing advanced device functionality and platform-specific requirements.
         </>
       ),
@@ -31,12 +33,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Custom{' '}
-          <a
-            href="https://inceptivesdigital.com/android-app-development"
+          <Link
+            to="/android-app-development"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
             Android app development
-          </a>{' '}
+          </Link>{' '}
           covers native applications for diverse device environments. Kotlin and Jetpack Compose drive interface engineering, while Android SDK integrations and compatibility testing address the requirements of supported devices and OS versions.
         </>
       ),

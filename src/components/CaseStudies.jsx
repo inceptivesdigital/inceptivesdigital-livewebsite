@@ -374,7 +374,7 @@ export default function CaseStudies() {
                       {/* <Link
                         to={slide.link}
                         style={{ fontWeight: 500 }}
-                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl ${slide.secondaryButtonBg} text-white font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
+                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-none ${slide.secondaryButtonBg} text-white font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
                       >
                         {slide.secondaryButtonText}
                       </Link>

@@ -43,11 +43,11 @@ export default function DoublePhoneCTA() {
           </div>
 
           {/* Right Phones Image Column Aligned Flush to Section Bottom */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end pt-4 lg:pt-8 pb-0">
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end pt-4 lg:pt-6 pb-0">
             <img
               src="/assets/mobile-app/cta-mobile.webp"
               alt="Custom Mobile App Development Strategy"
-              className="w-full max-w-[380px] sm:max-w-[440px] lg:max-w-[470px] h-auto object-contain object-bottom block select-none"
+              className="w-full max-w-[260px] sm:max-w-[310px] lg:max-w-[340px] xl:max-w-[360px] h-auto object-contain object-bottom block select-none"
               loading="lazy"
             />
           </div>

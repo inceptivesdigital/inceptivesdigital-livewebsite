@@ -11,6 +11,42 @@ const SEO_ROUTES = {
       'Inceptives Digital provides custom mobile app development services in the USA, covering native iOS, Android, and cross-platform applications.',
     canonical: 'https://inceptivesdigital.com/mobile-app-development',
   },
+  '/ios-app-development': {
+    title: 'iOS App Development Company in the USA | Inceptives Digital',
+    description:
+      'Inceptives Digital is an iOS app development company in USA delivering custom iPhone apps, Swift engineering, App Store deployment, and post-launch support.',
+    canonical: 'https://inceptivesdigital.com/ios-app-development',
+  },
+  '/android-app-development': {
+    title: 'Android App Development Company in USA | Inceptives Digital',
+    description:
+      'Inceptives Digital builds native Android apps in Kotlin and Java for startups, SMBs, and enterprise teams. Get a scoped estimate for your Android product in 48 hours.',
+    canonical: 'https://inceptivesdigital.com/android-app-development',
+  },
+  '/anroid-app-development': {
+    title: 'Android App Development Company in USA | Inceptives Digital',
+    description:
+      'Inceptives Digital builds native Android apps in Kotlin and Java for startups, SMBs, and enterprise teams. Get a scoped estimate for your Android product in 48 hours.',
+    canonical: 'https://inceptivesdigital.com/android-app-development',
+  },
+  '/blockchain-development': {
+    title: 'Blockchain App Development Services | DApps & DeFi',
+    description:
+      'Blockchain app development services for DApps, DeFi, NFT platforms, and smart contracts. Build secure, scalable blockchain solutions for modern businesses.',
+    canonical: 'https://inceptivesdigital.com/blockchain-development',
+  },
+  '/react-native-app-development': {
+    title: 'React-Native App Development Company | Inceptives Digital',
+    description:
+      'Inceptives Digital excels in React Native app development, providing businesses with robust cross-platform apps that ensure native-grade performance on both iOS and Android devices.',
+    canonical: 'https://inceptivesdigital.com/react-native-app-development',
+  },
+  '/flutter-app-development': {
+    title: 'Flutter App Development Company | Inceptives Digital',
+    description:
+      'Inceptives Digital is a Flutter app development company delivering native quality apps across iOS, Android and web. Get estimates for your product today.',
+    canonical: 'https://inceptivesdigital.com/flutter-app-development',
+  },
 }
 
 function applyRouteSeoToHtml(html, seo) {

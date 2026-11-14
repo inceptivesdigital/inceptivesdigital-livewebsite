@@ -2,13 +2,13 @@ export default function IndustriesMobile() {
   const industries = [
     {
       title: 'Healthcare App Development',
-      icon: '/assets/mobile-app/heart.svg',
+      icon: '/assets/industries-icons/industries-healthcare.svg',
       desc: (
         <>
           Our{' '}
           <a
             href="https://inceptivesdigital.com/healthcare-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             healthcare mobile app development services
           </a>{' '}
@@ -18,13 +18,13 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Fintech App Development',
-      icon: '/assets/mobile-app/fintech.svg',
+      icon: '/assets/industries-icons/industries-fintech.svg',
       desc: (
         <>
           Custom mobile banking and{' '}
           <a
             href="https://inceptivesdigital.com/fintech-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             fintech app development services
           </a>{' '}
@@ -34,13 +34,13 @@ export default function IndustriesMobile() {
     },
     {
       title: 'eCommerce App Development',
-      icon: '/assets/mobile-app/ecommerce.svg',
+      icon: '/assets/industries-icons/industries-cart.svg',
       desc: (
         <>
           Personalized shopping experiences with Shopify and WooCommerce through integrated checkouts and inventory APIs with our{' '}
           <a
             href="https://inceptivesdigital.com/ecommerce-app-development-company"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             eCommerce app development
           </a>
@@ -50,13 +50,13 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Education App Development',
-      icon: '/assets/mobile-app/education.svg',
+      icon: '/assets/industries-icons/industries-education.svg',
       desc: (
         <>
           Our{' '}
           <a
             href="https://inceptivesdigital.com/education-app-development-company"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             education app development
           </a>{' '}
@@ -66,12 +66,12 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Fitness & Wellness App Development',
-      icon: '/assets/mobile-app/fitness.svg',
+      icon: '/assets/industries-icons/industries-fitness.svg',
       desc: (
         <>
           <a
             href="https://inceptivesdigital.com/fitness-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             Fitness mobile app development
           </a>{' '}
@@ -81,13 +81,13 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Real Estate App Development',
-      icon: '/assets/mobile-app/real-state.svg',
+      icon: '/assets/industries-icons/industries-realstate.svg',
       desc: (
         <>
           Custom{' '}
           <a
             href="https://inceptivesdigital.com/real-estate-app-development-company"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             real estate app development
           </a>{' '}
@@ -97,12 +97,12 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Travel & Hospitality App Development',
-      icon: '/assets/mobile-app/travel.svg',
+      icon: '/assets/industries-icons/industries-traveling1.svg',
       desc: (
         <>
           <a
             href="https://inceptivesdigital.com/travel-app-development-company"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             Travel app development
           </a>{' '}
@@ -112,12 +112,12 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Food Delivery App Development',
-      icon: '/assets/mobile-app/food-delivery.svg',
+      icon: '/assets/industries-icons/Food-Delivery.svg',
       desc: (
         <>
           <a
             href="https://inceptivesdigital.com/food-delivery-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] group-hover:text-black transition-colors"
           >
             Food delivery mobile app development
           </a>{' '}
@@ -127,7 +127,7 @@ export default function IndustriesMobile() {
     },
     {
       title: 'Manufacturing App Development',
-      icon: '/assets/mobile-app/manufacturing.svg',
+      icon: '/assets/android-app/automation-1-1.png',
       desc: (
         <>
           Industrial mobile app development covers workforce management with GPS geofencing and offline synchronization for distributed field operations.
@@ -137,49 +137,42 @@ export default function IndustriesMobile() {
   ]
 
   return (
-    <section className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden">
-      {/* Real Mobile App Screen Background Cover with Dim Opacity + Black Overlay */}
-      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-        <img
-          src="/assets/mobile-app/industries-bg-cover.png"
-          alt=""
-          className="w-full h-full object-cover object-center opacity-[0.12]"
-        />
-        <div className="absolute inset-0 bg-black/85" />
-      </div>
-
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
+    <section className="py-20 lg:py-28 bg-[#0d0e11] relative overflow-hidden">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-4">
             <span className="text-[#00CE44]">Custom Mobile Apps</span> for 20+ Industries We Know Best
           </h2>
-          <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
+          <p className="text-slate-300 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
             Every industry solves different problems, serves different users, and operates under different expectations. Our mobile app development services are built around those realities, not one-size-fits-all solutions.
           </p>
         </div>
 
-        {/* 9 Cards: 4 + 4 + 1 Centered Grid, Green Border, Centered Text */}
-        <div className="flex flex-wrap justify-center gap-6">
+        {/* Homepage-Style Box Cards Grid (9 Cards, 3 Columns on Desktop, Equal Heights & Clean 1px Borders) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
           {industries.map((ind) => (
             <div
               key={ind.title}
-              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] p-6 sm:p-7 rounded-[22px] bg-[#16171a]/90 border border-[#00CE44] flex flex-col items-center text-center shadow-none"
+              className="group p-6 sm:p-7 xl:p-8 flex flex-col justify-start bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 min-h-[280px] lg:min-h-[300px] h-full select-none text-left"
             >
-              <div className="w-11 h-11 mb-4 flex items-center justify-center shrink-0">
+              {/* Icon (35px x 35px) */}
+              <div className="w-[35px] h-[35px] mb-6 sm:mb-8 flex items-center justify-start shrink-0">
                 <img
                   src={ind.icon}
                   alt={ind.title}
-                  className="w-full h-full object-contain select-none"
+                  className="w-[35px] h-[35px] object-contain transition-all duration-300 group-hover:brightness-0"
                   loading="lazy"
                 />
               </div>
 
-              <h3 className="text-base sm:text-[17px] font-bold text-white mb-2.5 leading-snug">
+              {/* Title: H3 tag, 25px font-size bold */}
+              <h3 className="text-[20px] sm:text-[23px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
                 {ind.title}
               </h3>
 
-              <p className="text-white/85 text-xs sm:text-[13px] leading-relaxed font-normal">
+              {/* Description: 16px font-size */}
+              <p className="text-[15px] sm:text-[16px] text-slate-300 group-hover:text-black transition-colors duration-300 leading-relaxed font-normal">
                 {ind.desc}
               </p>
             </div>

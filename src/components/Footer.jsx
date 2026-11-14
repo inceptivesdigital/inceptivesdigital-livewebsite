@@ -184,6 +184,31 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/ios-app-development" className="text-white hover:text-[#00CE44] transition-colors">
+                    iOS App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/android-app-development" className="text-white hover:text-[#00CE44] transition-colors">
+                    Android App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/react-native-app-development" className="text-white hover:text-[#00CE44] transition-colors">
+                    React Native App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/flutter-app-development" className="text-white hover:text-[#00CE44] transition-colors">
+                    Flutter App Development
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blockchain-development" className="text-white hover:text-[#00CE44] transition-colors">
+                    Blockchain Development
+                  </Link>
+                </li>
+                <li>
                   <Link to="/ai-development" className="text-white hover:text-[#00CE44] transition-colors">
                     AI Development
                   </Link>

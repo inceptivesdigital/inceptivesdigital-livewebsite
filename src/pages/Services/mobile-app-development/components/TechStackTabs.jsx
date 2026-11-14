@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 // =========================================================================
@@ -276,7 +275,7 @@ export default function TechStackTabs() {
           </p>
         </div>
 
-        {/* Two Solid Green Panels Matching Screenshot 13 */}
+        {/* Two Solid Green Panels Matching Original Layout */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Left Green Panel: Category List */}
@@ -288,7 +287,7 @@ export default function TechStackTabs() {
                   key={cat.name}
                   type="button"
                   onClick={() => setActiveCategory(idx)}
-                  className={`w-full text-left px-4 py-3 rounded-lg transition-colors flex items-center justify-between text-xs sm:text-sm cursor-pointer border-0 shadow-none ${
+                  className={`w-full text-left px-4 py-3 rounded-none transition-colors flex items-center justify-between text-xs sm:text-sm cursor-pointer border-0 shadow-none ${
                     isActive
                       ? 'bg-black text-white font-semibold'
                       : 'bg-transparent text-black font-medium hover:bg-black/10 border-b border-black/10'
@@ -301,15 +300,15 @@ export default function TechStackTabs() {
             })}
           </div>
 
-          {/* Right Green Panel: White Tech Logo Boxes */}
+          {/* Right Green Panel: White Tech Logo Boxes (Logos Fixed & Crisp) */}
           <div className="lg:col-span-8 rounded-[16px] bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8 min-h-[360px] border-0 shadow-none">
             {techStackCategories[activeCategory].items.map((tech) => (
               <div key={tech.name} className="flex flex-col items-center w-24 sm:w-28 text-center">
-                <div className="w-24 sm:w-28 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-3 mb-2.5 border-0 shadow-none">
+                <div className="w-24 sm:w-28 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 mb-2.5 border-0 shadow-none">
                   <img
                     src={tech.img}
                     alt={tech.alt || tech.name}
-                    className="max-h-12 sm:max-h-14 max-w-full object-contain select-none"
+                    className="w-16 h-14 sm:w-20 sm:h-16 object-contain select-none"
                     loading="lazy"
                   />
                 </div>

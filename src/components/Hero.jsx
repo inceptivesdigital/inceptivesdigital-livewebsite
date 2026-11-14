@@ -59,14 +59,14 @@ export default function Hero() {
           <div className="mt-6 flex flex-wrap justify-center items-center gap-3">
             <a
               href="#schedule"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#00CE44] hover:bg-[#00b53c] text-black font-semibold text-sm transition-colors active:scale-95 shadow-none"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-[#00CE44] hover:bg-[#00b53c] text-black font-semibold text-sm transition-colors active:scale-95 shadow-none"
             >
               Get A Call Now!
             </a>
 
             <a
               href="#schedule"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-transparent hover:bg-white/10 border border-white text-white font-semibold text-sm transition-colors active:scale-95 shadow-none"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-semibold text-sm transition-colors active:scale-95 shadow-none"
             >
               Schedule A Call
             </a>
@@ -162,14 +162,14 @@ export default function Hero() {
               <div className="mt-6 xl:mt-7 flex flex-wrap items-center gap-3">
                 <a
                   href="#schedule"
-                  className="inline-flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-xl bg-black hover:bg-[#1a1a1a] text-white font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
+                  className="inline-flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-none bg-black hover:bg-[#1a1a1a] text-white font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
                 >
                   Get A Call Now!
                 </a>
 
                 <a
                   href="#schedule"
-                  className="inline-flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-xl border-2 border-black hover:bg-black/10 text-black font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
+                  className="inline-flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-none border-2 border-black hover:bg-black/10 text-black font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
                 >
                   Schedule A Call
                 </a>

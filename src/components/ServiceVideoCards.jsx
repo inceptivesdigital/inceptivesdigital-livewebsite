@@ -45,7 +45,7 @@ export default function ServiceVideoCards() {
           <div className="shrink-0">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 shadow-none cursor-pointer border-0"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 shadow-none cursor-pointer border-0"
             >
               Start My Product Roadmap
             </a>

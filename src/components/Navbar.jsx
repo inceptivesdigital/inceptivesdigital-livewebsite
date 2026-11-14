@@ -79,7 +79,7 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMenu('services')}
               className={`text-[15px] font-medium transition-colors cursor-pointer py-1 ${
                 activeMenu === 'services' || location.pathname.startsWith('/services')
-                  ? 'text-[#00CE44] font-semibold'
+                  ? 'text-[#00CE44]'
                   : 'text-slate-200 hover:text-white'
               }`}
             >
@@ -90,7 +90,7 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMenu('industries')}
               onClick={() => setActiveMenu(activeMenu === 'industries' ? null : 'industries')}
               className={`text-[15px] font-medium transition-colors cursor-pointer py-1 ${
-                activeMenu === 'industries' ? 'text-[#00CE44] font-semibold' : 'text-slate-200 hover:text-white'
+                activeMenu === 'industries' ? 'text-[#00CE44]' : 'text-slate-200 hover:text-white'
               }`}
             >
               Industries
@@ -100,7 +100,7 @@ export default function Navbar() {
               onMouseEnter={() => setActiveMenu('locations')}
               onClick={() => setActiveMenu(activeMenu === 'locations' ? null : 'locations')}
               className={`text-[15px] font-medium transition-colors cursor-pointer py-1 ${
-                activeMenu === 'locations' ? 'text-[#00CE44] font-semibold' : 'text-slate-200 hover:text-white'
+                activeMenu === 'locations' ? 'text-[#00CE44]' : 'text-slate-200 hover:text-white'
               }`}
             >
               Locations
@@ -110,7 +110,7 @@ export default function Navbar() {
               to="/portfolio"
               className={`text-[15px] font-medium transition-colors py-1 ${
                 location.pathname.startsWith('/portfolio')
-                  ? 'text-[#00CE44] font-semibold'
+                  ? 'text-[#00CE44]'
                   : 'text-slate-200 hover:text-white'
               }`}
             >
@@ -122,7 +122,7 @@ export default function Navbar() {
               onClick={() => setActiveMenu(activeMenu === 'company' ? null : 'company')}
               className={`text-[15px] font-medium transition-colors cursor-pointer py-1 ${
                 activeMenu === 'company' || location.pathname === '/about-us'
-                  ? 'text-[#00CE44] font-semibold'
+                  ? 'text-[#00CE44]'
                   : 'text-slate-200 hover:text-white'
               }`}
             >
@@ -134,7 +134,7 @@ export default function Navbar() {
           <div className="flex items-center gap-[15px]">
             <Link
               to="/contact-us"
-              className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-xs sm:text-sm tracking-tight transition-all duration-150 active:scale-95 cursor-pointer shadow-none whitespace-nowrap"
+              className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-xs sm:text-sm tracking-tight transition-all duration-150 active:scale-95 cursor-pointer shadow-none whitespace-nowrap"
             >
               Get In Touch
             </Link>
@@ -178,10 +178,10 @@ export default function Navbar() {
                 By Platform
               </h4>
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/mobile-app-development" className="hover:text-white transition">iOS App</Link></li>
-                <li><Link to="/mobile-app-development" className="hover:text-white transition">Android App</Link></li>
-                <li><Link to="/mobile-app-development" className="hover:text-white transition">React Native App</Link></li>
-                <li><Link to="/mobile-app-development" className="hover:text-white transition">Flutter</Link></li>
+                <li><Link to="/ios-app-development" className="hover:text-white transition">iOS App</Link></li>
+                <li><Link to="/android-app-development" className="hover:text-white transition">Android App</Link></li>
+                <li><Link to="/react-native-app-development" className="hover:text-white transition">React Native App</Link></li>
+                <li><Link to="/flutter-app-development" className="hover:text-white transition">Flutter</Link></li>
                 <li><Link to="/mobile-app-development" className="hover:text-white transition">Kotlin Multiplatform</Link></li>
               </ul>
 
@@ -388,12 +388,12 @@ export default function Navbar() {
         >
           <div className="p-4 sm:p-5 bg-[#25272a] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl overflow-y-auto max-h-[80vh] flex flex-col gap-1.5 no-scrollbar">
             
-            {/* 1. Services Accordion */}
+            {/* 1. Services Accordion with FULL Categories, Headings & Sub-links matching Desktop Mega Menu */}
             <div className="border-b border-white/[0.06] pb-1.5">
               <button
                 type="button"
                 onClick={() => toggleMobileAccordion('services')}
-                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-lg transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-none transition-colors cursor-pointer"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -409,7 +409,7 @@ export default function Navbar() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="py-2 px-3 space-y-3 text-[14px]">
+                  <div className="max-h-[55vh] overflow-y-auto pr-2 py-2 pl-3 space-y-4 megamenu-scroll text-[13px]">
                     {/* All Services Overview Link */}
                     <div>
                       <Link
@@ -417,55 +417,244 @@ export default function Navbar() {
                         onClick={() => setMobileOpen(false)}
                         className="inline-flex items-center gap-1.5 font-bold text-[#00CE44] hover:underline text-[14px]"
                       >
-                        <span>All Services Overview</span>
-                        <span>→</span>
+                        <span>Services</span>
+                        <ArrowRight className="w-4 h-4 text-[#00CE44]" />
                       </Link>
                     </div>
 
-                    {/* Services Items matching exact design */}
-                    <div className="space-y-2.5 text-white">
-                      <Link
-                        to="/mobile-app-development"
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-slate-200 hover:text-white transition-colors"
-                      >
-                        Mobile App Development
-                      </Link>
-                      <Link
-                        to="/services"
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-slate-200 hover:text-white transition-colors"
-                      >
-                        AI Development &amp; LLMs
-                      </Link>
-                      <Link
-                        to="/services"
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-slate-200 hover:text-white transition-colors"
-                      >
+                    {/* Group 1: Application Development */}
+                    <div className="space-y-2 border-t border-white/[0.06] pt-3">
+                      <div className="font-bold text-white text-[15px]">
+                        Application Development
+                      </div>
+                      <div className="space-y-1.5 pl-2 text-slate-300">
+                        <Link
+                          to="/mobile-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Mobile App Development
+                        </Link>
+                        <Link
+                          to="/blockchain-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Blockchain Development
+                        </Link>
+                      </div>
+
+                      {/* By Platform */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        By Platform
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
+                        <Link
+                          to="/ios-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          iOS App
+                        </Link>
+                        <Link
+                          to="/android-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Android App
+                        </Link>
+                        <Link
+                          to="/react-native-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          React Native App
+                        </Link>
+                        <Link
+                          to="/flutter-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Flutter
+                        </Link>
+                        <Link
+                          to="/mobile-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Kotlin Multiplatform
+                        </Link>
+                      </div>
+
+                      {/* By Type */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        By Type
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
+                        <Link
+                          to="/custom-software-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Web App Development
+                        </Link>
+                        <Link
+                          to="/custom-software-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Backend and API
+                        </Link>
+                        <Link
+                          to="/custom-software-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Cross-Platform Development
+                        </Link>
+                      </div>
+
+                      {/* Launch & Growth */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        Launch &amp; Growth
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
+                        <Link
+                          to="/services"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          App Store Optimization
+                        </Link>
+                        <Link
+                          to="/services"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Product Launch Strategy
+                        </Link>
+                        <Link
+                          to="/services"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Post Launch Analytics and Iteration
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Group 2: Artificial Intelligence */}
+                    <div className="space-y-2 border-t border-white/[0.06] pt-3">
+                      <div className="font-bold text-white text-[15px]">
+                        Artificial Intelligence
+                      </div>
+                      <div className="space-y-1.5 pl-2 text-slate-300">
+                        {[
+                          'Custom AI',
+                          'LLM Integration',
+                          'Generative AI',
+                          'Agentic AI',
+                          'Agentic AI Workflow Automation',
+                        ].map((ai) => (
+                          <Link
+                            key={ai}
+                            to="/services"
+                            onClick={() => setMobileOpen(false)}
+                            className="block hover:text-white transition-colors"
+                          >
+                            {ai}
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Solutions */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        Solutions
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
+                        {[
+                          'AI Chatbots and Virtual Assistants',
+                          'Predictive Analytics',
+                          'Natural Language Processing',
+                          'Computer Vision',
+                        ].map((sol) => (
+                          <Link
+                            key={sol}
+                            to="/services"
+                            onClick={() => setMobileOpen(false)}
+                            className="block hover:text-white transition-colors"
+                          >
+                            {sol}
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Integration */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        Integration
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
+                        {[
+                          'AI Product Strategy',
+                          'Model Training & Fine-Tuning',
+                          'AI Infrastructure & MLOps',
+                          'Ethical AI & Governance',
+                        ].map((intg) => (
+                          <Link
+                            key={intg}
+                            to="/services"
+                            onClick={() => setMobileOpen(false)}
+                            className="block hover:text-white transition-colors"
+                          >
+                            {intg}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Group 3: Digital Product Development */}
+                    <div className="space-y-2 border-t border-white/[0.06] pt-3">
+                      <div className="font-bold text-white text-[15px]">
                         Digital Product Development
-                      </Link>
-                      <Link
-                        to="/blockchain-development"
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-slate-200 hover:text-white transition-colors"
-                      >
-                        Blockchain &amp; Web3 Development
-                      </Link>
-                      <Link
-                        to="/custom-software-development"
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-slate-200 hover:text-white transition-colors"
-                      >
-                        Custom Software &amp; APIs
-                      </Link>
-                      <Link
-                        to="/staff-augmentation"
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-slate-200 hover:text-white transition-colors"
-                      >
-                        IT Talent &amp; Staff Augmentation
-                      </Link>
+                      </div>
+                      <div className="space-y-1.5 pl-2 text-slate-300">
+                        {[
+                          'Product Design (UI/UX)',
+                          'MVP Development',
+                          'Discovery Sprint',
+                          'User Research & Prototyping',
+                        ].map((dp) => (
+                          <Link
+                            key={dp}
+                            to="/services"
+                            onClick={() => setMobileOpen(false)}
+                            className="block hover:text-white transition-colors"
+                          >
+                            {dp}
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Tech & Talent */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        Tech &amp; Talent
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
+                        {[
+                          'Dedicated Development Teams',
+                          'Staff Augmentation',
+                          'CTO as a Service',
+                        ].map((tt) => (
+                          <Link
+                            key={tt}
+                            to="/staff-augmentation"
+                            onClick={() => setMobileOpen(false)}
+                            className="block hover:text-white transition-colors"
+                          >
+                            {tt}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -477,7 +666,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => toggleMobileAccordion('industries')}
-                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-lg transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-none transition-colors cursor-pointer"
               >
                 <span>Industries</span>
                 <ChevronDown
@@ -522,7 +711,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => toggleMobileAccordion('locations')}
-                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-lg transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-none transition-colors cursor-pointer"
               >
                 <span>Locations</span>
                 <ChevronDown
@@ -567,7 +756,7 @@ export default function Navbar() {
               <Link
                 to="/portfolio"
                 onClick={() => setMobileOpen(false)}
-                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-lg transition-colors"
+                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-none transition-colors"
               >
                 <span>Case Studies</span>
                 <ArrowRight className="w-4 h-4 text-slate-400" />
@@ -579,7 +768,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => toggleMobileAccordion('company')}
-                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-lg transition-colors cursor-pointer"
+                className="w-full flex items-center justify-between py-2.5 px-3 text-left text-[15px] font-medium text-white hover:text-[#00CE44] rounded-none transition-colors cursor-pointer"
               >
                 <span>Company</span>
                 <ChevronDown
@@ -598,7 +787,7 @@ export default function Navbar() {
                   <div className="pl-0 pr-2 py-2 space-y-2 border-l-0 border-[#00CE44]/40 ml-3 text-[13px]">
                     {[
                       { label: 'About', to: '/about-us' },
-                      { label: 'Blog', to: '/blog' },
+                      { label: 'Blogs', to: '/blog' },
                       { label: 'Press & Media', to: '/press-release' },
                       { label: 'Partnership', to: '/partnership' },
                       { label: 'Life At Inceptives Digital', to: '/life-at-inceptives-digital' },
@@ -633,7 +822,7 @@ export default function Navbar() {
               <Link
                 to="/contact-us"
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-[13px] sm:text-sm whitespace-nowrap transition-colors active:scale-95 shadow-none shrink-0"
+                className="inline-flex items-center justify-center px-4 sm:px-6 py-2.5 sm:py-3 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-[13px] sm:text-sm whitespace-nowrap transition-colors active:scale-95 shadow-none shrink-0"
               >
                 Get In Touch
               </Link>
