@@ -28,6 +28,7 @@ import ProductLaunchStrategy from './pages/Services/product-launch-strategy'
 import AppStoreOptimization from './pages/Services/app-store-optimization'
 import PostLaunchAnalyticsIteration from './pages/Services/post-launch-analytics-iteration'
 import BlockchainDevelopment from './pages/Services/blockchain-development'
+import AiDevelopment from './pages/Services/ai-development'
 
 // Company Pages (company/ ke 8 dedicated pages apne apne components ke saath)
 import AboutUs from './pages/Company/about-us'
@@ -48,7 +49,9 @@ function PreFooterCTA() {
     pathname === '/leadership' ||
     pathname === '/company/leadership' ||
     pathname === '/founders-letter' ||
-    pathname === '/company/founders-letter'
+    pathname === '/company/founders-letter' ||
+    pathname === '/ai-development' ||
+    pathname === '/services/ai-development'
   ) return null
   return <BookingCTA />
 }
@@ -89,6 +92,8 @@ export default function App() {
             <Route path="/app-store-optimization" element={<AppStoreOptimization />} />
             <Route path="/post-launch-analytics-iteration" element={<PostLaunchAnalyticsIteration />} />
             <Route path="/blockchain-development" element={<BlockchainDevelopment />} />
+            <Route path="/ai-development" element={<AiDevelopment />} />
+            <Route path="/services/ai-development" element={<AiDevelopment />} />
 
             {/* Company Routes (8 Dedicated Company Pages) */}
             <Route path="/about-us" element={<AboutUs />} />
