@@ -1,13 +1,4 @@
-import { MessageCircle } from 'lucide-react'
 import ContactForm from './ContactForm'
-
-const openLiveChat = () => {
-  // Opens the live chat widget if one is loaded on the page (Tawk / LiveChat / Intercom / Crisp).
-  if (window.Tawk_API?.maximize) return window.Tawk_API.maximize()
-  if (window.LiveChatWidget?.call) return window.LiveChatWidget.call('maximize')
-  if (window.Intercom) return window.Intercom('show')
-  if (window.$crisp) return window.$crisp.push(['do', 'chat:open'])
-}
 
 export default function ContactHero() {
   const rows = [
@@ -55,18 +46,6 @@ export default function ContactHero() {
                   <span className="text-sm sm:text-base font-medium">{r.label}</span>
                 </a>
               ))}
-              <button
-                type="button"
-                onClick={openLiveChat}
-                className="flex items-center gap-3 text-white hover:text-[#00CE44] transition-colors bg-transparent border-0 p-0 cursor-pointer text-left group"
-              >
-                <span className="w-6 h-6 rounded-full bg-[#00CE44] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                  <svg className="w-3.5 h-3.5 text-black fill-current" viewBox="0 0 24 24">
-                    <path d="M12 3c-4.97 0-9 3.58-9 8 0 1.68.61 3.23 1.66 4.49L3.5 20.5l5.22-1.39C10.02 19.64 10.99 20 12 20c4.97 0 9-3.58 9-8s-4.03-8-9-8z" />
-                  </svg>
-                </span>
-                <span className="text-sm sm:text-base font-medium">Live chat</span>
-              </button>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 sm:gap-8">
