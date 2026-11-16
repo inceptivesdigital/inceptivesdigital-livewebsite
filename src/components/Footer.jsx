@@ -204,6 +204,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/kotlin-multiplatform-app-development" className="text-white hover:text-[#00CE44] transition-colors">
+                    Kotlin Multiplatform
+                  </Link>
+                </li>
+                <li>
                   <Link to="/blockchain-development" className="text-white hover:text-[#00CE44] transition-colors">
                     Blockchain Development
                   </Link>

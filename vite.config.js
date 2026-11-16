@@ -47,6 +47,24 @@ const SEO_ROUTES = {
       'Inceptives Digital is a Flutter app development company delivering native quality apps across iOS, Android and web. Get estimates for your product today.',
     canonical: 'https://inceptivesdigital.com/flutter-app-development',
   },
+  '/kotlin-multiplatform-app-development': {
+    title: 'Kotlin Multiplatform App Development Services | Inceptives Digital',
+    description:
+      'Discover Inceptives Digital, a leader in Kotlin multiplatform app development. We create production-grade KMP products with shared business logic and native UI.',
+    canonical: 'https://inceptivesdigital.com/kotlin-multiplatform-app-development',
+  },
+  '/backend-api-development': {
+    title: 'Backend & API Development Services | Inceptives Digital',
+    description:
+      'Inceptives Digital delivers backend & API development services built for scale, security, and long-term performance. Partner with engineers who build scalable systems.',
+    canonical: 'https://inceptivesdigital.com/backend-api-development',
+  },
+  '/web-app-development-company': {
+    title: 'Web App Development Company | Inceptives Digital',
+    description:
+      'Inceptives Digital is a web app development company that builds scalable, high-performance digital products. Explore our services and start your project today.',
+    canonical: 'https://inceptivesdigital.com/web-app-development-company',
+  },
 }
 
 function applyRouteSeoToHtml(html, seo) {

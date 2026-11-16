@@ -133,12 +133,12 @@ export default function AndroidNativeVsCrossPlatform() {
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#00CE44] font-bold mt-0.5">✓</span>
                   <span>
-                    <a
-                      href="https://inceptivesdigital.com/kotlin-multiplatform-app-development"
+                    <Link
+                      to="/kotlin-multiplatform-app-development"
                       className="underline text-[#00CE44] hover:text-white transition-colors"
                     >
                       Kotlin Multiplatform
-                    </a>{' '}
+                    </Link>{' '}
                     (KMP) for shared Kotlin logic with flexible UI choices
                   </span>
                 </li>

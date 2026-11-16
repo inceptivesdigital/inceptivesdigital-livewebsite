@@ -15,6 +15,9 @@ import IosAppDevelopment from './pages/Services/ios-app-development'
 import AndroidAppDevelopment from './pages/Services/android-app-development'
 import ReactNativeAppDevelopment from './pages/Services/react-native-app-development'
 import FlutterAppDevelopment from './pages/Services/flutter-app-development'
+import KotlinMultiplatformAppDevelopment from './pages/Services/kotlin-multiplatform-app-development'
+import BackendApiDevelopment from './pages/Services/backend-api-development'
+import WebAppDevelopmentCompany from './pages/Services/web-app-development-company'
 import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment'
 import BlockchainDevelopment from './pages/Services/blockchain-development'
 import AboutUs from './pages/AboutUs'
@@ -44,6 +47,9 @@ export default function App() {
             <Route path="/anroid-app-development" element={<AndroidAppDevelopment />} />
             <Route path="/react-native-app-development" element={<ReactNativeAppDevelopment />} />
             <Route path="/flutter-app-development" element={<FlutterAppDevelopment />} />
+            <Route path="/kotlin-multiplatform-app-development" element={<KotlinMultiplatformAppDevelopment />} />
+            <Route path="/backend-api-development" element={<BackendApiDevelopment />} />
+            <Route path="/web-app-development-company" element={<WebAppDevelopmentCompany />} />
             <Route path="/custom-software-development" element={<CustomSoftwareDevelopment />} />
             <Route path="/blockchain-development" element={<BlockchainDevelopment />} />
             <Route path="/about-us" element={<AboutUs />} />

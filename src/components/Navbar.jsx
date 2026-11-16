@@ -182,15 +182,15 @@ export default function Navbar() {
                 <li><Link to="/android-app-development" className="hover:text-white transition">Android App</Link></li>
                 <li><Link to="/react-native-app-development" className="hover:text-white transition">React Native App</Link></li>
                 <li><Link to="/flutter-app-development" className="hover:text-white transition">Flutter</Link></li>
-                <li><Link to="/mobile-app-development" className="hover:text-white transition">Kotlin Multiplatform</Link></li>
+                <li><Link to="/kotlin-multiplatform-app-development" className="hover:text-white transition">Kotlin Multiplatform</Link></li>
               </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
                 By Type
               </h4>
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/custom-software-development" className="hover:text-white transition">Web App Development</Link></li>
-                <li><Link to="/custom-software-development" className="hover:text-white transition">Backend and API</Link></li>
+                <li><Link to="/web-app-development-company" className="hover:text-white transition">Web App Development</Link></li>
+                <li><Link to="/backend-api-development" className="hover:text-white transition">Backend and API</Link></li>
                 <li><Link to="/custom-software-development" className="hover:text-white transition">Cross-Platform Development</Link></li>
               </ul>
 
@@ -478,7 +478,7 @@ export default function Navbar() {
                           Flutter
                         </Link>
                         <Link
-                          to="/mobile-app-development"
+                          to="/kotlin-multiplatform-app-development"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
@@ -492,14 +492,14 @@ export default function Navbar() {
                       </div>
                       <div className="space-y-1.5 pl-4 text-slate-300">
                         <Link
-                          to="/custom-software-development"
+                          to="/web-app-development-company"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
                           Web App Development
                         </Link>
                         <Link
-                          to="/custom-software-development"
+                          to="/backend-api-development"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
