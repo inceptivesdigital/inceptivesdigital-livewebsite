@@ -48,11 +48,11 @@ export default function AiPlatforms() {
               className="bg-[#121212] hover:bg-[#161616] border border-white/[0.08] hover:border-[#00CE44]/30 rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 group"
             >
               <div>
-                <div className="h-12 flex items-center mb-6">
+                <div className="h-10 flex items-center justify-start mb-6">
                   <img
                     src={p.logo}
                     alt={p.name}
-                    className="max-h-8 max-w-[140px] object-contain brightness-90 group-hover:brightness-100 transition-all"
+                    className="max-h-8 w-auto object-contain brightness-95 group-hover:brightness-100 transition-all"
                   />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#00CE44] transition-colors">

@@ -1,16 +1,16 @@
 import { useEffect } from 'react'
 import AiHero from './components/AiHero'
 import AiCoreServices from './components/AiCoreServices'
-import AiProcess from './components/AiProcess'
+import AiMidCta from './components/AiMidCta'
 import AiStages from './components/AiStages'
 import AiCaseStudies from './components/AiCaseStudies'
-import AiTestimonials from './components/AiTestimonials'
 import AiIndustries from './components/AiIndustries'
-import AiPlatforms from './components/AiPlatforms'
+import AiProcess from './components/AiProcess'
+import AiTestimonials from './components/AiTestimonials'
 import AiTechStack from './components/AiTechStack'
+import AiPlatforms from './components/AiPlatforms'
 import AiSecurity from './components/AiSecurity'
 import AiEngagements from './components/AiEngagements'
-import AiMidCta from './components/AiMidCta'
 import AiFaqs from './components/AiFaqs'
 import BookingCTA from '../../../components/BookingCTA'
 import ScheduleSection from '../../../components/ScheduleSection'
@@ -56,8 +56,8 @@ export default function AiDevelopmentPage() {
       {/* 2. Core Services & Automation Tabs */}
       <AiCoreServices />
 
-      {/* 3. Delivery Process (6 Interactive Steps) */}
-      <AiProcess />
+      {/* 3. Competitive AI Double Phone CTA Banner (Matching Mobile-App) */}
+      <AiMidCta />
 
       {/* 4. Stages: Startups vs SMBs */}
       <AiStages />
@@ -65,28 +65,28 @@ export default function AiDevelopmentPage() {
       {/* 5. Case Studies Carousel */}
       <AiCaseStudies />
 
-      {/* 6. Testimonials Vertical Scroll */}
-      <AiTestimonials />
-
-      {/* 7. Industry Solutions (8 Cards Grid + CTA) */}
+      {/* 6. Industries (Homepage-Style Clean 4-Column Grid, Zero Icon Border/Bg/Padding) */}
       <AiIndustries />
 
-      {/* 8. AI Platforms (OpenAI, Anthropic, LangChain, Hugging Face, LLaMA) */}
-      <AiPlatforms />
+      {/* 7. Delivery Process (Matching Homepage ProcessSection / DevelopmentProcess with Drag Tabs & Clean Detail Card) */}
+      <AiProcess />
 
-      {/* 9. Tech Stack (Solid Green Panels with White Badges) */}
+      {/* 8. Client Testimonials */}
+      <AiTestimonials />
+
+      {/* 9. Tech Stack Powering Our Services (Matching Mobile-App Solid Green Panels Layout) */}
       <AiTechStack />
 
-      {/* 10. Security & Compliance (4 Cards) */}
+      {/* 10. AI Platforms */}
+      <AiPlatforms />
+
+      {/* 11. Security & Compliance */}
       <AiSecurity />
 
-      {/* 11. Engagements (4 Cards with Best For) */}
+      {/* 12. Engagement Models */}
       <AiEngagements />
 
-      {/* 12. Mid-Page CTA Banner */}
-      <AiMidCta />
-
-      {/* 13. FAQs Accordion (12 Complete Questions) */}
+      {/* 13. FAQs Accordion */}
       <AiFaqs />
 
       {/* 14. Global Contact Form */}

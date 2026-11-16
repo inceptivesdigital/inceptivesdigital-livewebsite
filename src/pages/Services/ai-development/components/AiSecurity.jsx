@@ -64,7 +64,7 @@ export default function AiSecurity() {
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
+        {/* 4 Cards Grid with Clean Full Fill Icons (Zero borders, zero background, zero padding on icons) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {securityFeatures.map((sec, idx) => (
             <div
@@ -72,10 +72,10 @@ export default function AiSecurity() {
               className="bg-[#121212] hover:bg-[#161616] border border-white/[0.08] hover:border-[#00CE44]/30 rounded-3xl p-8 sm:p-10 transition-all duration-200 flex flex-col justify-between group"
             >
               <div>
-                {/* Header with Icon or Badges */}
+                {/* Header with Clean Full Fill Icon or Badges */}
                 <div className="flex items-center gap-4 mb-6">
                   {sec.icon && (
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-3 group-hover:border-[#00CE44]/40 group-hover:bg-[#00CE44]/10 transition-all">
+                    <div className="w-12 h-12 flex items-center justify-start shrink-0">
                       <img
                         src={sec.icon}
                         alt={sec.title}
@@ -86,8 +86,8 @@ export default function AiSecurity() {
                   {sec.badges && (
                     <div className="flex items-center gap-3 flex-wrap">
                       {sec.badges.map((badge, bIdx) => (
-                        <div key={bIdx} className="h-10 px-2 py-1 bg-white/5 rounded-lg border border-white/10 flex items-center">
-                          <img src={badge} alt="Compliance Badge" className="h-7 w-auto object-contain" />
+                        <div key={bIdx} className="h-10 flex items-center">
+                          <img src={badge} alt="Compliance Badge" className="h-8 w-auto object-contain" />
                         </div>
                       ))}
                     </div>
