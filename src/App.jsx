@@ -46,7 +46,9 @@ function PreFooterCTA() {
     pathname === '/contact-us' ||
     pathname === '/company/contact-us' ||
     pathname === '/leadership' ||
-    pathname === '/company/leadership'
+    pathname === '/company/leadership' ||
+    pathname === '/founders-letter' ||
+    pathname === '/company/founders-letter'
   ) return null
   return <BookingCTA />
 }

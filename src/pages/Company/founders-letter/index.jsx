@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import FoundersHero from './components/FoundersHero'
 import FoundersLetterBody from './components/FoundersLetterBody'
-import FoundersPrinciples from './components/FoundersPrinciples'
+import FoundersRoadmapCTA from './components/FoundersRoadmapCTA'
+import FoundersConsultation from './components/FoundersConsultation'
 
 export default function FoundersLetterPage() {
   useEffect(() => {
     const seoTitle = "Founder's Letter | Inceptives Digital"
     const seoDesc =
-      'Hannan Sharon shares how Inceptives Digital grew, what the company stands for, and the principles that guide our product engineering philosophy.'
+      'The company should never depend on one important person. Hannan Shahnoor shares the principles that guide Inceptives Digital, from distributed decision-making to building enduring software products.'
 
     document.title = seoTitle
 
@@ -38,14 +39,17 @@ export default function FoundersLetterPage() {
 
   return (
     <div className="bg-black text-white selection:bg-[#00CE44] selection:text-black">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section with Emerald Aura & Circular Portrait */}
       <FoundersHero />
 
-      {/* 2. Letter Content */}
+      {/* 2. Complete 9-Section Letter Body with Emerald Headings */}
       <FoundersLetterBody />
 
-      {/* 3. Principles Highlight */}
-      <FoundersPrinciples />
+      {/* 3. Pre-CTA Roadmap Banner */}
+      <FoundersRoadmapCTA />
+
+      {/* 4. Consultation & Brief Contact Form */}
+      <FoundersConsultation />
     </div>
   )
 }
