@@ -36,7 +36,8 @@ export default function AiStages() {
               {/* Graphic Right */}
               <div className="lg:col-span-6 flex justify-center lg:justify-end">
                 <img
-                  src="/assets/ai-development/fgg-1.png"
+                  src="https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/fgg-1.png"
+                  onError={(e) => { e.currentTarget.src = '/assets/ai-development/fgg-1.png' }}
                   alt="AI Development for Startups"
                   className="w-full max-w-[460px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] select-none"
                   loading="lazy"
@@ -51,7 +52,8 @@ export default function AiStages() {
               {/* Graphic Left */}
               <div className="lg:col-span-6 flex justify-center lg:justify-start order-2 lg:order-1">
                 <img
-                  src="/assets/ai-development/dff-1.png"
+                  src="https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/dff-1.png"
+                  onError={(e) => { e.currentTarget.src = '/assets/ai-development/dff-1.png' }}
                   alt="AI Development for Growing Businesses"
                   className="w-full max-w-[460px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] select-none"
                   loading="lazy"

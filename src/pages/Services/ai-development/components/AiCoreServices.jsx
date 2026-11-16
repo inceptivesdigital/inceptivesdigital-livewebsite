@@ -134,7 +134,8 @@ export default function AiCoreServices() {
               {/* Subtle back ambient glow */}
               <div className="absolute inset-0 bg-[#00CE44]/15 rounded-3xl blur-3xl -z-10 group-hover:bg-[#00CE44]/25 transition-all" />
               <img
-                src="/assets/ai-development/mobile-498x1024.png"
+                src="https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/mobile-498x1024.png"
+                onError={(e) => { e.currentTarget.src = '/assets/ai-development/mobile-498x1024.png' }}
                 alt="AI App Interface Mockup"
                 className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] select-none"
                 loading="lazy"
