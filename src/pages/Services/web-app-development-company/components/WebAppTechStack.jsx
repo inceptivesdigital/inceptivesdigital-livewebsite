@@ -7,7 +7,7 @@ const TECH_CATEGORIES = [
     label: 'Front-End',
     items: [
       { name: 'React', icon: '/assets/mobile-app/react-native.jpg' },
-      { name: 'Next.js', icon: '/assets/backend-api/next-js.jpg' },
+      { name: 'Next.js', icon: '/assets/web-app/next-js.jpg' },
       { name: 'TypeScript', icon: '/assets/mobile-app/typescript.jpg' },
       { name: 'JavaScript', icon: '/assets/mobile-app/javascript.png' },
     ],
@@ -43,8 +43,8 @@ const TECH_CATEGORIES = [
       { name: 'Microsoft Azure', icon: '/assets/react-native/microsoft-azure.jpg' },
       { name: 'Docker', icon: '/assets/mobile-app/docker.jpg' },
       { name: 'GitHub Actions', icon: '/assets/mobile-app/gitHub-actions.jpg' },
-      { name: 'Sentry', icon: '/assets/backend-api/sentry.jpg' },
-      { name: 'New Relic', icon: '/assets/backend-api/new-relic.jpg' },
+      { name: 'Sentry', icon: '/assets/web-app/sentry.jpg' },
+      { name: 'New Relic', icon: '/assets/web-app/new-relic.jpg' },
     ],
   },
 ]

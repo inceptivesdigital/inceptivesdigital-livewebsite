@@ -65,6 +65,30 @@ const SEO_ROUTES = {
       'Inceptives Digital is a web app development company that builds scalable, high-performance digital products. Explore our services and start your project today.',
     canonical: 'https://inceptivesdigital.com/web-app-development-company',
   },
+  '/cross-platform-app-development': {
+    title: 'Cross-Platform App Development Company | Inceptives Digital',
+    description:
+      'Top-rated cross-platform app development company building scalable apps for iOS and Android across 20+ industries, driving sustainable growth.',
+    canonical: 'https://inceptivesdigital.com/cross-platform-app-development',
+  },
+  '/product-launch-strategy': {
+    title: 'Product Launch Strategy & Consulting Services| Inceptives Digital',
+    description:
+      'Inceptives Digital builds the go-to-market strategy and executes it, from $10,000 MVPs to $100,000 enterprise launches.',
+    canonical: 'https://inceptivesdigital.com/product-launch-strategy',
+  },
+  '/app-store-optimization': {
+    title: 'App Store Optimization Services | Inceptives Digital',
+    description:
+      'Inceptives Digital is an App Store Optimization company that turns app store pages into conversion engines. Data-backed ASO strategy for iOS and Android.',
+    canonical: 'https://inceptivesdigital.com/app-store-optimization',
+  },
+  '/post-launch-analytics-iteration': {
+    title: 'Post-Launch Analytics & Iteration Services — Inceptives Digital',
+    description:
+      'Inceptives Digital helps digital products grow after launch through structured iteration cycles, data-driven decisions, and continuous improvement.',
+    canonical: 'https://inceptivesdigital.com/post-launch-analytics-iteration',
+  },
 }
 
 function applyRouteSeoToHtml(html, seo) {

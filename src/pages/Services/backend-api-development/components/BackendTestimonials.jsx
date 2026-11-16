@@ -74,9 +74,9 @@ export default function BackendTestimonials() {
       }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column: Heading (35px) + Text + Platform Logos */}
-          <div className="lg:col-span-5 flex flex-col justify-center text-left">
+          <div className="lg:col-span-5 flex flex-col justify-start text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-[1.2] mb-4">
               How Reliable Backend Engineering Changed Client Products
             </h2>

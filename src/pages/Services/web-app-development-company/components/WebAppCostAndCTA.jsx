@@ -124,7 +124,7 @@ export default function WebAppCostAndCTA() {
             </div>
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
               <img
-                src="/assets/backend-api/api-1.png"
+                src="/assets/mobile-app/compress-cta-1024x469.webp"
                 alt="Web Application Architecture"
                 className="w-full max-w-[440px] h-auto object-contain"
                 loading="lazy"

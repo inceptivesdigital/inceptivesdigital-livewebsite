@@ -84,23 +84,17 @@ export default function IosWhyChooseUs() {
           </p>
         </div>
 
-        {/* 6 Cards Grid */}
+        {/* 6 Cards Grid (matching live site structure without broken dummy icon) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14 sm:mb-20">
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="p-7 rounded-[16px] bg-[#242424] text-left border-0 shadow-none flex flex-col justify-start"
+              className="p-7 sm:p-8 rounded-[16px] bg-[#242424] text-left border-0 shadow-none flex flex-col justify-start transition-colors hover:bg-[#282828]"
             >
-              <img
-                src="/assets/mobile-app/icon01.png"
-                alt={p.title}
-                className="w-9 h-9 object-contain mb-4 select-none"
-                loading="lazy"
-              />
-              <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-2.5 leading-snug">
+              <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-3 leading-snug">
                 {p.title}
               </h3>
-              <p className="text-white/90 text-xs sm:text-[13.5px] leading-relaxed font-normal">
+              <p className="text-white/90 text-xs sm:text-[14px] leading-relaxed font-normal">
                 {p.desc}
               </p>
             </div>

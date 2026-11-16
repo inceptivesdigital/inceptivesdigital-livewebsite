@@ -28,22 +28,22 @@ export default function IosTechPartnerships() {
           </p>
         </div>
 
-        {/* 12 Partner Logos Grid (6x2 on Desktop) — Dark Cards for White/Light Partner Logos */}
+        {/* 12 Partner Logos Grid (6x2 on Desktop) — #161616 dark cards matching live Elementor style */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5">
           {partners.map((p) => (
             <div
               key={p.name}
-              className="p-5 rounded-[16px] bg-[#1e1e1e] border border-white/10 hover:border-[#00CE44] flex flex-col items-center justify-center text-center h-28 sm:h-32 transition-all duration-300 hover:scale-[1.03]"
+              className="p-5 rounded-[15px] bg-[#161616] border border-white/5 hover:border-[#00CE44] flex flex-col items-center justify-center text-center h-28 sm:h-32 transition-all duration-300 hover:scale-[1.03]"
             >
-              <div className="h-12 sm:h-14 flex items-center justify-center mb-2.5">
+              <div className="h-10 sm:h-12 flex items-center justify-center mb-2">
                 <img
                   src={p.src}
                   alt={p.name}
-                  className="max-h-10 sm:max-h-11 max-w-[130px] w-auto h-auto object-contain select-none"
+                  className="max-h-8 sm:max-h-9 max-w-[120px] w-auto h-auto object-contain select-none"
                   loading="lazy"
                 />
               </div>
-              <span className="text-white text-xs sm:text-[13px] font-bold leading-tight">
+              <span className="text-white text-xs sm:text-[13px] font-medium leading-tight">
                 {p.name}
               </span>
             </div>

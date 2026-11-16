@@ -1,40 +1,28 @@
 export default function IosTrustedLogos() {
   const clients = [
     {
-      name: 'Printer Pix',
-      src: '/assets/Product Builds & Clients/Printer Pix.webp',
+      name: 'DPS AIrem',
+      src: '/assets/ios-app/mobile-brand2.png',
     },
     {
-      name: 'Brsk',
-      src: '/assets/Product Builds & Clients/Brsk.webp',
+      name: 'Family Entertainment Group',
+      src: '/assets/ios-app/mobile-brand3.png',
     },
     {
-      name: 'DPS Airem',
-      src: '/assets/Product Builds & Clients/DPS Airem.webp',
+      name: 'Pulse Check Timer',
+      src: '/assets/ios-app/mobile-brand4.png',
     },
     {
-      name: 'Fanverse',
-      src: '/assets/Product Builds & Clients/Fanverse.webp',
-    },
-    {
-      name: 'MTV',
-      src: '/assets/Product Builds & Clients/MTV.webp',
+      name: 'State of the Art Chiropractic',
+      src: '/assets/ios-app/seo-page-sec2-icon5.png',
     },
     {
       name: 'Kaefer',
-      src: '/assets/Product Builds & Clients/Kaefer.webp',
+      src: '/assets/ios-app/kaefer-img.png',
     },
     {
-      name: 'GDA Capital',
-      src: '/assets/Product Builds & Clients/GDA Capital.webp',
-    },
-    {
-      name: 'Family Entertainment Group LLC',
-      src: '/assets/Product Builds & Clients/Family Entertainment Group LLC.webp',
-    },
-    {
-      name: 'Jetzhub',
-      src: '/assets/Product Builds & Clients/Jetzhub.webp',
+      name: 'Bookwave Publishing',
+      src: '/assets/ios-app/bookwave-img.png',
     },
   ]
 
@@ -48,17 +36,17 @@ export default function IosTrustedLogos() {
           </h2>
         </div>
 
-        {/* Same Logos & CSS as Homepage "From Startups to Growing Enterprises" */}
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-4 lg:gap-5 w-full">
+        {/* 6 App Squircle Logos matching live site */}
+        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto">
           {clients.map((client) => (
             <div
               key={client.name}
-              className="w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(16.666%-17px)] h-24 sm:h-28 md:h-32 bg-white rounded-2xl sm:rounded-[22px] p-4 sm:p-5 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] cursor-pointer shrink-0 border-0 shadow-none"
+              className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto transition-all duration-300 hover:-translate-y-2.5 hover:scale-110 cursor-pointer shrink-0"
             >
               <img
-                src={encodeURI(client.src)}
+                src={client.src}
                 alt={client.name}
-                className="max-h-12 sm:max-h-14 md:max-h-20 w-auto max-w-[82%] object-contain select-none"
+                className="w-full h-auto object-contain select-none drop-shadow-lg"
                 loading="lazy"
               />
             </div>

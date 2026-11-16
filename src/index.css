@@ -53,6 +53,15 @@ input[type="submit"],
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
 }
 
+/* All links inside p tags across the entire website have font-weight: 400 */
+p a,
+p a:visited,
+p a:hover,
+p a:focus,
+p Link {
+  font-weight: 400 !important;
+}
+
 /* ==========================================================================
    Smooth Infinite Marquee Animation (Zero-Jerk Seamless Loop)
    ========================================================================== */
@@ -74,6 +83,37 @@ input[type="submit"],
 }
 
 .marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
 

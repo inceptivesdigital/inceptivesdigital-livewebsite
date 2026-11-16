@@ -51,7 +51,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-3 sm:pt-4">
+    <header className="fixed top-0 left-0 right-0 z-[99999] pt-3 sm:pt-4">
       <div
         ref={navRef}
         className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative"
@@ -191,16 +191,16 @@ export default function Navbar() {
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
                 <li><Link to="/web-app-development-company" className="hover:text-white transition">Web App Development</Link></li>
                 <li><Link to="/backend-api-development" className="hover:text-white transition">Backend and API</Link></li>
-                <li><Link to="/custom-software-development" className="hover:text-white transition">Cross-Platform Development</Link></li>
+                <li><Link to="/cross-platform-app-development" className="hover:text-white transition">Cross-Platform Development</Link></li>
               </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
                 Launch &amp; Growth
               </h4>
               <ul className="space-y-1 2xl:space-y-1.5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/services" className="hover:text-white transition">App Store Optimization</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Product Launch Strategy</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Post Launch Analytics and Iteration</Link></li>
+                <li><Link to="/app-store-optimization" className="hover:text-white transition">App Store Optimization</Link></li>
+                <li><Link to="/product-launch-strategy" className="hover:text-white transition">Product Launch Strategy</Link></li>
+                <li><Link to="/post-launch-analytics-iteration" className="hover:text-white transition">Post Launch Analytics and Iteration</Link></li>
               </ul>
             </div>
 
@@ -209,54 +209,56 @@ export default function Navbar() {
               <h3 className="text-[16px] 2xl:text-[20px] font-bold text-white mb-2 2xl:mb-3">
                 Artificial Intelligence
               </h3>
-              <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/services" className="hover:text-white transition">Custom AI</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">LLM Integration</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Generative AI</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Agentic AI</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Agentic AI Workflow Automation</Link></li>
-              </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
-                Solutions
+                AI Servicess
               </h4>
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/services" className="hover:text-white transition">AI Chatbots and Virtual Assistants</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Predictive Analytics</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Natural Language Processing</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Computer Vision</Link></li>
+                <li><Link to="/ai-development" className="hover:text-white transition">AI Development</Link></li>
+                <li><Link to="/ai-app-development-services" className="hover:text-white transition">AI App Development</Link></li>
+                <li><Link to="/ai-chatbot-development-services" className="hover:text-white transition">AI Chatbot Development</Link></li>
+                <li><Link to="/ai-agent-development" className="hover:text-white transition">AI Agent Development</Link></li>
+                <li><Link to="/generative-ai-development-company" className="hover:text-white transition">Generative AI Development</Link></li>
+                <li><Link to="/machine-learning-development-services" className="hover:text-white transition">Machine Learning Development</Link></li>
+                <li><Link to="/nlp-development-services" className="hover:text-white transition">NLP Development</Link></li>
+                <li><Link to="/ai-mvp-development" className="hover:text-white transition">AI MVP Development</Link></li>
               </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
-                Integration
+                Automation
               </h4>
               <ul className="space-y-1 2xl:space-y-1.5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/services" className="hover:text-white transition">AI Product Strategy</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Model Training &amp; Fine-Tuning</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">AI Infrastructure &amp; MLOps</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Ethical AI &amp; Governance</Link></li>
+                <li><Link to="/ai-automation-services" className="hover:text-white transition">AI Automation</Link></li>
+                <li><Link to="/system-integration-api-automation" className="hover:text-white transition">System Integration &amp; API Automation Services</Link></li>
+                <li><Link to="/business-process-automation" className="hover:text-white transition">Business Process Automation Services</Link></li>
+                <li><Link to="/rpa-development-services" className="hover:text-white transition">RPA Development</Link></li>
               </ul>
             </div>
 
-            {/* Column 4: Digital Product & Staff */}
+            {/* Column 4: Digital Product Development */}
             <div className="col-span-4 p-5 2xl:p-7">
               <h3 className="text-[16px] 2xl:text-[20px] font-bold text-white mb-2 2xl:mb-3">
                 Digital Product Development
               </h3>
+
+              <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
+                By Engagement
+              </h4>
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/services" className="hover:text-white transition">Product Design (UI/UX)</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">MVP Development</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">Discovery Sprint</Link></li>
-                <li><Link to="/services" className="hover:text-white transition">User Research &amp; Prototyping</Link></li>
+                <li><Link to="/digital-product-development" className="hover:text-white transition">Digital Product Development</Link></li>
+                <li><Link to="/discovery-sprint" className="hover:text-white transition">Discovery Sprint</Link></li>
+                <li><Link to="/mvp-development" className="hover:text-white transition">MVP Development</Link></li>
+                <li><Link to="/product-rescue-scaling" className="hover:text-white transition">Product Rescue &amp; Scaling</Link></li>
+                <li><Link to="/product-strategy-consulting" className="hover:text-white transition">Product Strategy &amp; Consulting</Link></li>
+                <li><Link to="/custom-software-development" className="hover:text-white transition">Custom Software Development</Link></li>
               </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
-                Tech &amp; Talent
+                By Craft
               </h4>
-              <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
-                <li><Link to="/staff-augmentation" className="hover:text-white transition">Dedicated Development Teams</Link></li>
-                <li><Link to="/staff-augmentation" className="hover:text-white transition">Staff Augmentation</Link></li>
-                <li><Link to="/staff-augmentation" className="hover:text-white transition">CTO as a Service</Link></li>
+              <ul className="space-y-1 2xl:space-y-1.5 text-[13px] 2xl:text-[14px] text-slate-300">
+                <li><Link to="/ui-ux-design" className="hover:text-white transition">UI/UX Design</Link></li>
+                <li><Link to="/interactive-prototyping" className="hover:text-white transition">Interactive Prototyping</Link></li>
               </ul>
             </div>
           </div>
@@ -506,7 +508,7 @@ export default function Navbar() {
                           Backend and API
                         </Link>
                         <Link
-                          to="/custom-software-development"
+                          to="/cross-platform-app-development"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
@@ -520,21 +522,21 @@ export default function Navbar() {
                       </div>
                       <div className="space-y-1.5 pl-4 text-slate-300">
                         <Link
-                          to="/services"
+                          to="/app-store-optimization"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
                           App Store Optimization
                         </Link>
                         <Link
-                          to="/services"
+                          to="/product-launch-strategy"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
                           Product Launch Strategy
                         </Link>
                         <Link
-                          to="/services"
+                          to="/post-launch-analytics-iteration"
                           onClick={() => setMobileOpen(false)}
                           className="block hover:text-white transition-colors"
                         >
@@ -548,65 +550,51 @@ export default function Navbar() {
                       <div className="font-bold text-white text-[15px]">
                         Artificial Intelligence
                       </div>
-                      <div className="space-y-1.5 pl-2 text-slate-300">
+
+                      {/* AI Servicess */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        AI Servicess
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
                         {[
-                          'Custom AI',
-                          'LLM Integration',
-                          'Generative AI',
-                          'Agentic AI',
-                          'Agentic AI Workflow Automation',
-                        ].map((ai) => (
+                          { name: 'AI Development', to: '/ai-development' },
+                          { name: 'AI App Development', to: '/ai-app-development-services' },
+                          { name: 'AI Chatbot Development', to: '/ai-chatbot-development-services' },
+                          { name: 'AI Agent Development', to: '/ai-agent-development' },
+                          { name: 'Generative AI Development', to: '/generative-ai-development-company' },
+                          { name: 'Machine Learning Development', to: '/machine-learning-development-services' },
+                          { name: 'NLP Development', to: '/nlp-development-services' },
+                          { name: 'AI MVP Development', to: '/ai-mvp-development' },
+                        ].map((item) => (
                           <Link
-                            key={ai}
-                            to="/services"
+                            key={item.name}
+                            to={item.to}
                             onClick={() => setMobileOpen(false)}
                             className="block hover:text-white transition-colors"
                           >
-                            {ai}
+                            {item.name}
                           </Link>
                         ))}
                       </div>
 
-                      {/* Solutions */}
+                      {/* Automation */}
                       <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
-                        Solutions
+                        Automation
                       </div>
                       <div className="space-y-1.5 pl-4 text-slate-300">
                         {[
-                          'AI Chatbots and Virtual Assistants',
-                          'Predictive Analytics',
-                          'Natural Language Processing',
-                          'Computer Vision',
-                        ].map((sol) => (
+                          { name: 'AI Automation', to: '/ai-automation-services' },
+                          { name: 'System Integration & API Automation Services', to: '/system-integration-api-automation' },
+                          { name: 'Business Process Automation Services', to: '/business-process-automation' },
+                          { name: 'RPA Development', to: '/rpa-development-services' },
+                        ].map((item) => (
                           <Link
-                            key={sol}
-                            to="/services"
+                            key={item.name}
+                            to={item.to}
                             onClick={() => setMobileOpen(false)}
                             className="block hover:text-white transition-colors"
                           >
-                            {sol}
-                          </Link>
-                        ))}
-                      </div>
-
-                      {/* Integration */}
-                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
-                        Integration
-                      </div>
-                      <div className="space-y-1.5 pl-4 text-slate-300">
-                        {[
-                          'AI Product Strategy',
-                          'Model Training & Fine-Tuning',
-                          'AI Infrastructure & MLOps',
-                          'Ethical AI & Governance',
-                        ].map((intg) => (
-                          <Link
-                            key={intg}
-                            to="/services"
-                            onClick={() => setMobileOpen(false)}
-                            className="block hover:text-white transition-colors"
-                          >
-                            {intg}
+                            {item.name}
                           </Link>
                         ))}
                       </div>
@@ -617,41 +605,47 @@ export default function Navbar() {
                       <div className="font-bold text-white text-[15px]">
                         Digital Product Development
                       </div>
-                      <div className="space-y-1.5 pl-2 text-slate-300">
+
+                      {/* By Engagement */}
+                      <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
+                        By Engagement
+                      </div>
+                      <div className="space-y-1.5 pl-4 text-slate-300">
                         {[
-                          'Product Design (UI/UX)',
-                          'MVP Development',
-                          'Discovery Sprint',
-                          'User Research & Prototyping',
-                        ].map((dp) => (
+                          { name: 'Digital Product Development', to: '/digital-product-development' },
+                          { name: 'Discovery Sprint', to: '/discovery-sprint' },
+                          { name: 'MVP Development', to: '/mvp-development' },
+                          { name: 'Product Rescue & Scaling', to: '/product-rescue-scaling' },
+                          { name: 'Product Strategy & Consulting', to: '/product-strategy-consulting' },
+                          { name: 'Custom Software Development', to: '/custom-software-development' },
+                        ].map((item) => (
                           <Link
-                            key={dp}
-                            to="/services"
+                            key={item.name}
+                            to={item.to}
                             onClick={() => setMobileOpen(false)}
                             className="block hover:text-white transition-colors"
                           >
-                            {dp}
+                            {item.name}
                           </Link>
                         ))}
                       </div>
 
-                      {/* Tech & Talent */}
+                      {/* By Craft */}
                       <div className="text-[#00CE44] uppercase tracking-wider text-[11px] font-bold pt-1.5 pl-2">
-                        Tech &amp; Talent
+                        By Craft
                       </div>
                       <div className="space-y-1.5 pl-4 text-slate-300">
                         {[
-                          'Dedicated Development Teams',
-                          'Staff Augmentation',
-                          'CTO as a Service',
-                        ].map((tt) => (
+                          { name: 'UI/UX Design', to: '/ui-ux-design' },
+                          { name: 'Interactive Prototyping', to: '/interactive-prototyping' },
+                        ].map((item) => (
                           <Link
-                            key={tt}
-                            to="/staff-augmentation"
+                            key={item.name}
+                            to={item.to}
                             onClick={() => setMobileOpen(false)}
                             className="block hover:text-white transition-colors"
                           >
-                            {tt}
+                            {item.name}
                           </Link>
                         ))}
                       </div>

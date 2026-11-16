@@ -74,7 +74,7 @@ export default function WebAppNextGenTech() {
   return (
     <section
       className="relative py-16 sm:py-24 bg-[#1d1d1d] bg-cover bg-center bg-no-repeat text-white overflow-hidden"
-      style={{ backgroundImage: "url('/assets/backend-api/ios-bg-section.webp')" }}
+      style={{ backgroundImage: "url('/assets/web-app/ios-bg-section.webp')" }}
     >
       <div className="absolute inset-0 bg-[#0D0D0D]/80 pointer-events-none" />
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">

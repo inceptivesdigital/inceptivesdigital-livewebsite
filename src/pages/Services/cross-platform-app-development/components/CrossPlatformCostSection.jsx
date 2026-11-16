@@ -1,0 +1,159 @@
+const TIERS = [
+  {
+    name: 'Basic Cross-Platform App',
+    price: '$10,000 – $30,000',
+    desc: 'For businesses validating a product idea across iOS and Android simultaneously.',
+    features: [
+      'Core screens and single-purpose user flow',
+      'Standard authentication and light third-party integrations',
+      'Platform-adapted UI in a shared component architecture',
+      'App Store and Google Play submission with ASO',
+      'Six to ten weeks from scope confirmation',
+    ],
+  },
+  {
+    name: 'Mid-Complexity Cross-Platform App',
+    price: '$30,000 – $65,000',
+    desc: 'For businesses building a production-ready product beyond MVP standard.',
+    features: [
+      'Multi-flow product with richer shared UI',
+      'Custom backend, push notifications, and real-time data',
+      'Custom authentication and role-based access control',
+      'Production-ready standard across both platforms',
+      'Ten to eighteen weeks from scope confirmation',
+    ],
+  },
+  {
+    name: 'Complex Cross-Platform App',
+    price: '$65,000 – $120,000+',
+    desc: 'For businesses requiring advanced architecture, deep integrations, and regulatory compliance.',
+    features: [
+      'Custom backend with real-time data architecture',
+      'AI, AR, IoT, or blockchain within the shared codebase',
+      'HIPAA, PCI-DSS, and GDPR compliance covered',
+      'Post-launch optimization and iteration included',
+      'Timeline defined by scope and compliance requirements',
+    ],
+  },
+]
+
+export default function CrossPlatformCostSection() {
+  return (
+    <>
+      <section className="py-16 sm:py-24 bg-[#000000] border-t border-white/10">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+          {/* Section Header */}
+          <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
+              How Inceptives Digital Prices{' '}
+              <span className="text-[#00CE44]">Cross-Platform App Development</span>
+            </h2>
+            <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
+              Cross-platform app development offers a real cost advantage, and Inceptives Digital makes sure that advantage is felt from the first estimate. Every{' '}
+              <a
+                href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-[#00CE44] hover:text-white transition-colors"
+              >
+                mobile app development cost
+              </a>{' '}
+              is scoped against product complexity, documented before development begins, and held to throughout every sprint that follows.
+            </p>
+          </div>
+
+          {/* 3 Equal Flat Dark Gray Lined Cards matching IosCostSection */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch w-full mb-10">
+            {TIERS.map((tier) => (
+              <div
+                key={tier.name}
+                className="p-8 sm:p-9 rounded-[20px] bg-[#242424] text-left flex flex-col justify-start border-0 shadow-none"
+              >
+                {/* 1. Heading */}
+                <h3 className="text-xl sm:text-2xl font-bold text-white pb-5 mb-5 border-b border-white/25">
+                  {tier.name}
+                </h3>
+
+                {/* 2. Price */}
+                <div className="pb-5 mb-5 border-b border-white/25">
+                  <div className="text-lg sm:text-xl lg:text-[24px] font-bold text-[#00CE44] tracking-tight">
+                    {tier.price}
+                  </div>
+                </div>
+
+                {/* 3. Description */}
+                <div className="pb-5 mb-5 border-b border-white/25">
+                  <p className="text-xs sm:text-sm font-normal text-white/90 leading-relaxed">
+                    {tier.desc}
+                  </p>
+                </div>
+
+                {/* 4. Bullet List */}
+                <ul className="space-y-2.5 text-white/90 text-xs sm:text-sm leading-relaxed">
+                  {tier.features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Estimate Callout Bar */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-[16px]">
+            <p className="text-white text-base font-medium">
+              The number agreed before development begins is the final number, while careful scoping can{' '}
+              <a
+                href="https://inceptivesdigital.com/blog/how-to-reduce-mobile-app-development-cost"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-[#00CE44] hover:text-white transition-colors"
+              >
+                reduce mobile app development cost
+              </a>
+              .
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors shrink-0"
+            >
+              Get Your Fixed Estimate
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA Banner */}
+      <section className="bg-[#141414] text-white py-16 sm:py-20 overflow-hidden">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <h2 className="text-[28px] sm:text-[35px] font-bold text-white leading-[1.22] tracking-tight mb-4">
+                Ready to Launch Your Multi-Platform Strategy?
+              </h2>
+              <p className="text-[#D4D4D4] text-[16px] leading-relaxed mb-8 max-w-2xl">
+                Submit your project briefs to receive a detailed, fixed-cost estimate within 24 hours.
+              </p>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
+              >
+                Get Your Fixed Estimate
+              </a>
+            </div>
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <img
+                src="/assets/backend-api/api-1.png"
+                alt="Cross-Platform App Development Architecture"
+                className="w-full max-w-[440px] h-auto object-contain"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

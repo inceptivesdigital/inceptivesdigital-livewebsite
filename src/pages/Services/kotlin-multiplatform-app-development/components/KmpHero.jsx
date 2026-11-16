@@ -40,7 +40,7 @@ export default function KmpHero() {
               KMP consolidates your business logic into one shared Kotlin module, giving Android, iOS, web, and desktop a unified foundation, while each platform still runs its own native UI. That architecture only holds at scale when the module boundaries and platform interfaces are defined correctly from the start, which is precisely where Inceptives Digital, as a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-bold text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
                 mobile app development company
               </Link>

@@ -2,7 +2,7 @@ export default function IosAdvancedTech() {
   const techItems = [
     {
       title: 'IoT App Development',
-      icon: '/assets/mobile-app/Internet-Of-Things-1.svg',
+      icon: '/assets/ios-app/Internet-Of-Things.svg',
       desc: (
         <>
           Connect iPhone and iPad applications with smart devices through Core Bluetooth and Bluetooth Low Energy (BLE). Our iOS developers support{' '}
@@ -18,7 +18,7 @@ export default function IosAdvancedTech() {
     },
     {
       title: 'Augmented Reality Development',
-      icon: '/assets/mobile-app/Augmented-Virtual-Reality-1.svg',
+      icon: '/assets/ios-app/Augmented-Virtual-Reality.svg',
       desc: 'ARKit brings spatial tracking to native iOS applications, while RealityKit handles interactive 3D content. From virtual product previews to immersive training, our iPhone app development services support AR experiences on compatible Apple devices.',
     },
     {
@@ -28,7 +28,7 @@ export default function IosAdvancedTech() {
     },
     {
       title: 'Apple Intelligence and Machine Learning',
-      icon: '/assets/mobile-app/AI-and-machine-learning-1.svg',
+      icon: '/assets/ios-app/AI-and-machine-learning.svg',
       desc: (
         <>
           Apple&apos;s latest Foundation Models framework brings language understanding and structured generation into supported iPhone applications. Our{' '}
@@ -44,7 +44,7 @@ export default function IosAdvancedTech() {
     },
     {
       title: 'Blockchain Integration',
-      icon: '/assets/mobile-app/blockchain.svg',
+      icon: '/assets/ios-app/blockchain.svg',
       desc: (
         <>
           For iOS fintech applications requiring{' '}
@@ -60,7 +60,7 @@ export default function IosAdvancedTech() {
     },
     {
       title: 'Cloud Integration',
-      icon: '/assets/mobile-app/Cloud-Integration-1.svg',
+      icon: '/assets/ios-app/Cloud-Integration.svg',
       desc: "Custom iPhone applications often depend on cloud infrastructure for account data and synchronization. Inceptives Digital integrates native iOS apps with AWS, Firebase, or Azure through backend APIs, according to the product's requirements.",
     },
   ]

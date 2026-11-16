@@ -28,7 +28,7 @@ export default function ScheduleSection() {
     'https://calendly.com/inceptivesdigital-info/30min?embed_type=Inline&embed_domain=1&month=2026-11'
 
   return (
-    <section id="schedule" className="py-16 sm:py-20 lg:py-24 bg-[#0c0d10] relative overflow-hidden">
+    <section id="schedule" className="py-16 sm:py-20 lg:py-24 bg-black relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         
         {/* Heading: 40px bold, text-center, vibrant green #00CE44 */}

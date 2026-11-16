@@ -23,7 +23,7 @@ export default function WebAppHero() {
   ]
 
   return (
-    <section className="relative min-h-[640px] lg:min-h-[90vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-16 lg:pb-24 bg-black overflow-hidden lg:bg-[url('/assets/backend-api/backendapi.png')] lg:bg-no-repeat lg:bg-right lg:bg-cover">
+    <section className="relative min-h-[640px] lg:min-h-[85vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-16 lg:pb-20 bg-black overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column */}
@@ -40,7 +40,7 @@ export default function WebAppHero() {
               As a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-bold text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
                 mobile app development company
               </Link>
@@ -74,6 +74,18 @@ export default function WebAppHero() {
                   />
                 </a>
               ))}
+            </div>
+          </div>
+
+          {/* Right Column: Web App Banner Image */}
+          <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end items-center">
+            <div className="w-full max-w-[500px] sm:max-w-[560px] lg:max-w-[580px] xl:max-w-[640px]">
+              <img
+                src="/assets/web-app/webapp-banner.png"
+                alt="Web App Development Company Banner"
+                className="w-full h-auto object-contain block select-none"
+                loading="eager"
+              />
             </div>
           </div>
         </div>

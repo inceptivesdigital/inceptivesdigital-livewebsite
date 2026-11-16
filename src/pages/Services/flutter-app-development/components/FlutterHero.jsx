@@ -40,7 +40,7 @@ export default function FlutterHero() {
               Flutter now powers apps used by more than 500 million people worldwide, and the companies behind those products chose it for the same reasons: one codebase, consistent performance, and faster time to market. Inceptives Digital is a digital product studio built around Flutter engineering as part of a broader{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-bold text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
                 mobile app development
               </Link>{' '}

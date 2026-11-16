@@ -28,7 +28,7 @@ export default function WebAppStatsBar() {
       {/* Mid CTA Banner */}
       <section
         className="relative py-16 sm:py-20 bg-[#141414] bg-cover bg-center bg-no-repeat text-white overflow-hidden"
-        style={{ backgroundImage: "url('/assets/backend-api/ctabg.png')" }}
+        style={{ backgroundImage: "url('/assets/web-app/ctabg.png')" }}
       >
         <div className="absolute inset-0 bg-black/75 pointer-events-none" />
         <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">

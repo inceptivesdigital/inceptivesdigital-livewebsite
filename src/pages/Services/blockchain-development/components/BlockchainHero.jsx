@@ -89,7 +89,7 @@ export default function BlockchainHero() {
               As a blockchain app development company and experienced{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-bold text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
                 mobile app development company
               </Link>

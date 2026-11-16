@@ -79,7 +79,7 @@ export default function WebAppComparisonTable() {
             <tbody className="divide-y divide-white/10">
               {rows.map((row) => (
                 <tr key={row.aspect} className="hover:bg-white/[0.03] transition-colors">
-                  <td className="py-4 px-6 font-bold text-[#00CE44] text-sm sm:text-base">
+                  <td className="py-4 px-6 font-normal text-white text-sm sm:text-base">
                     {row.aspect}
                   </td>
                   <td className="py-4 px-6 text-white/90 text-sm sm:text-[15px] border-l border-white/10">
@@ -96,15 +96,15 @@ export default function WebAppComparisonTable() {
 
         <p className="mt-6 text-sm sm:text-[15px] text-white/75 leading-relaxed">
           Need native mobile performance or cross-platform mobile reach alongside your web app? Explore our{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-semibold">
+          <Link to="/ios-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-normal">
             iOS app development
           </Link>
           ,{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-semibold">
+          <Link to="/android-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-normal">
             Android app development
           </Link>
           , and{' '}
-          <Link to="/flutter-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-semibold">
+          <Link to="/flutter-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-normal">
             Flutter app development
           </Link>{' '}
           services.

@@ -42,7 +42,7 @@ export default function ReactNativeHero() {
               A single codebase reaching iOS and Android at native-grade performance is not a compromise. It is an engineering decision. Inceptives Digital, a renowned React Native app development company, has been making that decision precisely for eight years as a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-bold text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
                 mobile app development company
               </Link>
