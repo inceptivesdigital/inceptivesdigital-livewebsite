@@ -1,5 +1,3 @@
-import { Check } from 'lucide-react'
-
 export default function AiSecurity() {
   const securityFeatures = [
     {
@@ -14,7 +12,10 @@ export default function AiSecurity() {
     },
     {
       title: 'SOC 2 and ISO 27001 Readiness',
-      icon: '/assets/ai-development/Layer-1-5.png',
+      badges: [
+        '/assets/ai-development/Layer-1-5.png',
+        '/assets/ai-development/Layer-2-6.png',
+      ],
       bullets: [
         'Security controls aligned with SOC 2 Type I and Type II frameworks',
         'ISO 27001-aligned development and delivery practices',
@@ -55,58 +56,61 @@ export default function AiSecurity() {
     <section className="relative py-20 lg:py-28 bg-[#0a0a0a] text-white overflow-hidden border-t border-white/5">
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Section Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-tight mb-4">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-black tracking-tight mb-4 leading-tight">
             How Our AI Development Company <span className="text-[#00CE44]">Protects Your Data and Systems</span>
           </h2>
-          <p className="text-white/70 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
-            Security and compliance are architectural decisions made on day one, not added after deployment.
+          <p className="text-white/70 text-sm sm:text-base lg:text-[17px] max-w-3xl mx-auto leading-relaxed">
+            Security is not a feature we add before delivery. It is an architectural decision we make before development begins.
           </p>
         </div>
 
-        {/* 4 Cards Grid with Clean Full Fill Icons (Zero borders, zero background, zero padding on icons) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* 4 Cards in 1 Row on Desktop (1 row 4 columns matching media_1794895103410_a630b6bf.jpg) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 w-full">
           {securityFeatures.map((sec, idx) => (
             <div
               key={idx}
-              className="bg-[#121212] hover:bg-[#161616] border border-white/[0.08] hover:border-[#00CE44]/30 rounded-3xl p-8 sm:p-10 transition-all duration-200 flex flex-col justify-between group"
+              className="bg-[#121214] border border-white/[0.08] hover:border-[#00CE44]/30 rounded-2xl p-6 sm:p-7 transition-all duration-200 flex flex-col justify-start text-left"
             >
-              <div>
-                {/* Header with Clean Full Fill Icon or Badges */}
-                <div className="flex items-center gap-4 mb-6">
-                  {sec.icon && (
-                    <div className="w-12 h-12 flex items-center justify-start shrink-0">
+              {/* Header Icon / Badges */}
+              <div className="h-12 flex items-center mb-5">
+                {sec.icon && (
+                  <img
+                    src={sec.icon}
+                    alt={sec.title}
+                    className="h-10 sm:h-11 w-auto object-contain select-none"
+                    loading="lazy"
+                  />
+                )}
+                {sec.badges && (
+                  <div className="flex items-center gap-2.5 flex-wrap">
+                    {sec.badges.map((badge, bIdx) => (
                       <img
-                        src={sec.icon}
-                        alt={sec.title}
-                        className="w-full h-full object-contain"
+                        key={bIdx}
+                        src={badge}
+                        alt="Security Compliance Badge"
+                        className="h-9 sm:h-10 w-auto object-contain select-none"
+                        loading="lazy"
                       />
-                    </div>
-                  )}
-                  {sec.badges && (
-                    <div className="flex items-center gap-3 flex-wrap">
-                      {sec.badges.map((badge, bIdx) => (
-                        <div key={bIdx} className="h-10 flex items-center">
-                          <img src={badge} alt="Compliance Badge" className="h-8 w-auto object-contain" />
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <h3 className="text-xl sm:text-2xl font-black text-white mb-6 group-hover:text-[#00CE44] transition-colors tracking-tight">
-                  {sec.title}
-                </h3>
-
-                <ul className="space-y-3">
-                  {sec.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-3 text-xs sm:text-sm text-white/75 leading-relaxed">
-                      <Check className="w-4 h-4 text-[#00CE44] shrink-0 mt-0.5" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+                    ))}
+                  </div>
+                )}
               </div>
+
+              {/* Title in Green matching screenshot */}
+              <h3 className="text-[17px] sm:text-[18px] lg:text-[19px] font-bold text-[#00CE44] mb-4 tracking-tight leading-snug">
+                {sec.title}
+              </h3>
+
+              {/* Bullets with green dots */}
+              <ul className="space-y-2.5 mt-auto">
+                {sec.bullets.map((bullet, bIdx) => (
+                  <li key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-white/80 leading-relaxed font-normal">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] shrink-0 mt-1.5" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

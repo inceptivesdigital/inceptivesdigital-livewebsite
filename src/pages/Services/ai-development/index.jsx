@@ -1,19 +1,20 @@
 import { useEffect } from 'react'
 import AiHero from './components/AiHero'
+import AiDifference from './components/AiDifference'
 import AiCoreServices from './components/AiCoreServices'
 import AiMidCta from './components/AiMidCta'
 import AiStages from './components/AiStages'
+import AiTools from './components/AiTools'
 import AiCaseStudies from './components/AiCaseStudies'
+import AiTestimonials from './components/AiTestimonials'
 import AiIndustries from './components/AiIndustries'
 import AiProcess from './components/AiProcess'
-import AiTestimonials from './components/AiTestimonials'
 import AiTechStack from './components/AiTechStack'
 import AiPlatforms from './components/AiPlatforms'
 import AiSecurity from './components/AiSecurity'
 import AiEngagements from './components/AiEngagements'
 import AiFaqs from './components/AiFaqs'
 import BookingCTA from '../../../components/BookingCTA'
-import ScheduleSection from '../../../components/ScheduleSection'
 
 export default function AiDevelopmentPage() {
   useEffect(() => {
@@ -50,50 +51,53 @@ export default function AiDevelopmentPage() {
 
   return (
     <div className="bg-[#000000] text-white selection:bg-[#00CE44] selection:text-black">
-      {/* 1. Hero Section */}
+      {/* 01. Hero Section */}
       <AiHero />
 
-      {/* 2. Core Services & Automation Tabs */}
+      {/* 02. Core AI & Automation Services (AI Development Services Built to Perform Under Real Load) */}
       <AiCoreServices />
 
-      {/* 3. Competitive AI Double Phone CTA Banner (Matching Mobile-App) */}
-      <AiMidCta />
-
-      {/* 4. Stages: Startups vs SMBs */}
-      <AiStages />
-
-      {/* 5. Case Studies Carousel */}
-      <AiCaseStudies />
-
-      {/* 6. Industries (Homepage-Style Clean 4-Column Grid, Zero Icon Border/Bg/Padding) */}
-      <AiIndustries />
-
-      {/* 7. Delivery Process (Matching Homepage ProcessSection / DevelopmentProcess with Drag Tabs & Clean Detail Card) */}
+      {/* 03. Delivery Process (Clone of Homepage ProcessSection) */}
       <AiProcess />
 
-      {/* 8. Client Testimonials */}
+      {/* 04. The Difference Between AI That Assists and AI That Operates */}
+      <AiDifference />
+
+      {/* 05. Mid CTA (Build AI Into Foundation) */}
+      <AiMidCta />
+
+      {/* 06. By Business Size: Startups vs SMBs */}
+      <AiStages />
+
+      {/* 07. Free AI Tools */}
+      <AiTools />
+
+      {/* 08. Featured AI Case Studies */}
+      <AiCaseStudies />
+
+      {/* 09. Client Testimonials */}
       <AiTestimonials />
 
-      {/* 9. Tech Stack Powering Our Services (Matching Mobile-App Solid Green Panels Layout) */}
+      {/* 10. Industries Grid */}
+      <AiIndustries />
+
+      {/* 11. Tech Stack (Solid Green Panels) */}
       <AiTechStack />
 
-      {/* 10. AI Platforms */}
+      {/* 12. AI Platforms We Build On */}
       <AiPlatforms />
 
-      {/* 11. Security & Compliance */}
+      {/* 13. Security and Compliance */}
       <AiSecurity />
 
-      {/* 12. Engagement Models */}
+      {/* 14. Engagement Models */}
       <AiEngagements />
 
-      {/* 13. FAQs Accordion */}
+      {/* 15. FAQs Accordion */}
       <AiFaqs />
 
-      {/* 14. Global Contact Form */}
+      {/* 16. Contact Form */}
       <BookingCTA />
-
-      {/* 15. Calendly Scheduler */}
-      <ScheduleSection />
     </div>
   )
 }

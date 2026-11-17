@@ -29,14 +29,6 @@ export default function CrossPlatformProcess() {
     isDraggingRef.current = false
   }
 
-  const handleWheel = (e) => {
-    if (tabsRef.current && tabsRef.current.scrollWidth > tabsRef.current.clientWidth) {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        tabsRef.current.scrollLeft += e.deltaY * 0.8
-      }
-    }
-  }
-
   const handleTabClick = (idx, e) => {
     if (hasMovedRef.current) return
     setActiveTab(idx)
@@ -57,27 +49,25 @@ export default function CrossPlatformProcess() {
     {
       num: '01.',
       tabTitle: 'Discovery',
-      tabIcon: '/assets/process/tab-1.png',
       cardTitle: 'Discovery and Roadmapping',
       cardDesc: (
         <>
-          Every engagement begins with a fully documented technical scope, feature priorities, and{' '}
+          Every engagement begins with a{' '}
           <a
-            href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
+            href="https://inceptivesdigital.com/discovery-sprint"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#00CE44] underline hover:text-white transition-colors"
           >
-            mobile app tech stack
+            discovery sprint
           </a>{' '}
-          selection. A locked functional specification, fixed timeline, and confirmed cost are produced before the first sprint begins.
+          that documents technical scope, feature priorities, and stack selection. A locked functional specification, fixed timeline, and confirmed cost are produced before the first sprint begins.
         </>
       ),
     },
     {
       num: '02.',
       tabTitle: 'UI/UX Design',
-      tabIcon: '/assets/process/tab-2.png',
       cardTitle: 'UI/UX Design and Prototyping',
       cardDesc:
         'To validate the real-world layouts and user journeys across both platforms, high-fidelity interactive prototypes are built around a unified component architecture before a single line of shared code is written.',
@@ -85,125 +75,80 @@ export default function CrossPlatformProcess() {
     {
       num: '03.',
       tabTitle: 'Agile Sprints',
-      tabIcon: '/assets/process/tab-3.png',
       cardTitle: 'Agile Development Sprints',
       cardDesc:
         'Every two weeks, engineering runs take place, and at each cycle close, a functional build is delivered. Continuous feedback shapes the shared codebase throughout the engagement rather than arriving when it is costly to act on.',
     },
     {
       num: '04.',
-      tabTitle: 'Multi-Platform QA',
-      tabIcon: '/assets/process/tab-4.png',
+      tabTitle: 'QA & Testing',
       cardTitle: 'Multi-Platform QA and Testing',
       cardDesc:
         'The unified codebase is verified on physical device grids across screen resolutions, chipsets, and active OS versions on both iOS and Android before either platform receives a release candidate.',
     },
     {
       num: '05.',
-      tabTitle: 'Launch & Support',
-      tabIcon: '/assets/process/tab-5.png',
+      tabTitle: 'Deployment',
       cardTitle: 'Deployment and Post-Launch Support',
       cardDesc:
         'Both store submissions are managed in-house. Throughout each iOS and Android release cycle after launch, a designated engineer keeps an eye on production performance, applies security updates, and implements feature iterations throughout the shared codebase.',
     },
   ]
 
-  const current = steps[activeTab]
-
   return (
-    <section id="process" className="py-20 lg:py-28 bg-[#0c0d10] relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#0a0a0c] text-white relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Top Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight max-w-4xl mx-auto">
-          Our 5-Step{' '}
-          <span className="text-[#00CE44]">Cross-Platform App Development</span> Framework
-        </h2>
+        {/* Section Header */}
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight mb-4 text-center">
+            Our 5-Step{' '}
+            <span className="text-[#00CE44]">Cross-Platform App Development</span> Framework
+          </h2>
+          <p className="text-white/85 text-[16px] leading-relaxed font-normal text-center">
+            Every cross-platform app development project at Inceptives Digital begins with a technical scope that accounts for both operating systems. Our five-stage process connects product decisions to working builds, giving your team clear checkpoints from discovery through deployment.
+          </p>
+        </div>
 
-        {/* Bottom Text */}
-        <p className="mt-3 sm:mt-4 text-white/90 text-[16px] font-normal text-center max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
-          Every cross-platform engagement at Inceptives Digital follows a defined five-stage execution model built on eight years of production-scale delivery. Predictable timelines, technical clarity, and full accountability across both platforms are built into the process, not promised after the fact.
-        </p>
-
-        {/* Interactive Step Navigation Tabs (5 Steps) */}
+        {/* Process Tabs Row */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
-          onWheel={handleWheel}
-          className="w-full max-w-full flex lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-6 overflow-x-auto lg:overflow-visible no-scrollbar mb-10 sm:mb-14 pt-4 pb-4 lg:pt-3 lg:pb-0 scroll-smooth cursor-grab active:cursor-grabbing select-none"
-          style={{ WebkitOverflowScrolling: 'touch' }}
+          className="flex items-center justify-start sm:justify-center gap-3 sm:gap-4 overflow-x-auto pb-4 mb-8 no-scrollbar cursor-grab active:cursor-grabbing select-none"
         >
-          {steps.map((st, idx) => {
-            const isActive = activeTab === idx
-            return (
-              <button
-                key={st.tabTitle}
-                type="button"
-                onClick={(e) => handleTabClick(idx, e)}
-                className="shrink-0 min-w-[135px] sm:min-w-[150px] lg:min-w-0 group flex flex-col items-center text-center focus:outline-none cursor-pointer transition-all duration-300 pt-1"
-              >
-                <div
-                  className={`w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center rounded-full mb-3.5 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-[#00CE44] scale-105'
-                      : 'bg-[#202125] hover:bg-[#282a30] hover:scale-105'
-                  }`}
-                >
-                  <img
-                    src={st.tabIcon}
-                    alt={st.tabTitle}
-                    className={`w-7 h-7 sm:w-8 sm:h-8 object-contain transition-all duration-300 ${
-                      isActive ? 'brightness-0' : ''
-                    }`}
-                  />
-
-                  <span
-                    className={`absolute -top-1 -right-3.5 sm:-right-4.5 z-10 text-[11px] sm:text-[12px] font-mono font-medium px-2 sm:px-2.5 py-0.5 rounded-[50px] border whitespace-nowrap transition-colors ${
-                      isActive
-                        ? 'bg-black text-[#00CE44] border-[#00CE44]'
-                        : 'bg-black text-[#00CE44] border-[#00CE44]/60 group-hover:border-[#00CE44]'
-                    }`}
-                  >
-                    {st.num}
-                  </span>
-                </div>
-
-                <span
-                  className={`text-[14px] sm:text-[15px] font-normal transition-colors duration-200 whitespace-nowrap ${
-                    isActive
-                      ? 'text-white'
-                      : 'text-slate-400 group-hover:text-slate-200'
-                  }`}
-                >
-                  {st.tabTitle}
-                </span>
-              </button>
-            )
-          })}
+          {steps.map((st, i) => (
+            <button
+              key={st.num}
+              onClick={(e) => handleTabClick(i, e)}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 shrink-0 border cursor-pointer ${
+                activeTab === i
+                  ? 'bg-[#00CE44] text-black border-[#00CE44]'
+                  : 'bg-[#18191e] text-white/80 border-white/10 hover:border-white/30'
+              }`}
+            >
+              <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${
+                activeTab === i ? 'bg-black text-white' : 'bg-white/10 text-white'
+              }`}>
+                {i + 1}
+              </span>
+              <span>{st.tabTitle}</span>
+            </button>
+          ))}
         </div>
 
-        {/* Content Card Box */}
-        <div className="bg-[#1b1c20] border-0 rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 lg:p-11 shadow-none transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 lg:gap-10">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#00CE44] flex items-center justify-center shrink-0 shadow-none">
-              <img
-                src={current.tabIcon}
-                alt={current.tabTitle}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain brightness-0"
-              />
-            </div>
-
-            <div className="text-left flex-1">
-              <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] leading-tight mb-2.5 sm:mb-3">
-                {current.cardTitle}
-              </h3>
-              <p className="text-[15px] sm:text-[16px] text-slate-300 leading-relaxed font-normal max-w-4xl">
-                {current.cardDesc}
-              </p>
-            </div>
+        {/* Active Step Content Box */}
+        <div className="max-w-3xl mx-auto p-8 sm:p-10 rounded-[24px] bg-[#14151a] border border-white/10 text-left">
+          <div className="text-xs font-bold uppercase tracking-wider text-[#00CE44] mb-2">
+            Step {steps[activeTab].num}
           </div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-snug">
+            {steps[activeTab].cardTitle}
+          </h3>
+          <p className="text-white/85 text-sm sm:text-base leading-relaxed font-normal">
+            {steps[activeTab].cardDesc}
+          </p>
         </div>
       </div>
     </section>

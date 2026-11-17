@@ -1,12 +1,4 @@
 export default function MarketStatBanner() {
-  const bullets = [
-    'Mobile applications account for up to 70% of digital media time.',
-    'Smartphone users spend nearly 90% of their mobile time in apps rather than browsers.',
-    'Over 85% of shoppers prefer mobile apps over mobile websites for online purchases.',
-    'Mobile apps convert up to 3x higher than mobile websites.',
-    'Personalized push notifications can boost app engagement and retention by up to 88%.',
-  ]
-
   return (
     <section className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden">
       {/* Full-Width 100% Edge-to-Edge Mobile App Screen Background Cover + Black Overlay (No Right Gap) */}
@@ -22,7 +14,7 @@ export default function MarketStatBanner() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Left Column: Heading (35px) + Intro + Bullet List */}
+          {/* Left Column: Heading (35px) + Intro */}
           <div className="lg:col-span-6 text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-[1.2] mb-4">
               Claim Your Place in a{' '}
@@ -37,18 +29,9 @@ export default function MarketStatBanner() {
               Mobile App Market, Before Your Competitors Do.
             </h2>
 
-            <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-5">
+            <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
               Grab your opportunity before it&apos;s too late. Our custom mobile app development services help your product earn a share of that growth.
             </p>
-
-            <ul className="space-y-2.5 text-white/90 text-xs sm:text-sm leading-relaxed">
-              {bullets.map((item) => (
-                <li key={item} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white mt-2 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Right Column: Bar Chart Image */}

@@ -38,16 +38,19 @@ export default function USLocationsSection() {
                 ))}
               </div>
 
-              <p className="text-white/90 text-sm sm:text-base font-medium mb-3">
-                Prefer to talk first?
-              </p>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href=""
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
+                >
+                  Get Your App Strategy Today
+                </a>
 
-              <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="tel:(469) 788-8527"
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
                 >
-                  Call (469) 788-8527
+                  Prefer to talk first?
                 </a>
               </div>
             </div>
@@ -67,7 +70,7 @@ export default function USLocationsSection() {
       </section>
 
       {/* Donut Chart Breakdown Section (Pure Black Background matching Screenshot) */}
-      <section className="py-14 sm:py-20 bg-[#000000]">
+      {/* <section className="py-14 sm:py-20 bg-[#000000]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] flex justify-center">
           <img
             src="/assets/mobile-app/mobile-app-chart-img-1024x649.png"
@@ -76,7 +79,7 @@ export default function USLocationsSection() {
             loading="lazy"
           />
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

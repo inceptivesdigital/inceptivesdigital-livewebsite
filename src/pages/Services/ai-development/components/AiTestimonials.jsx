@@ -33,7 +33,7 @@ export default function AiTestimonials() {
           {/* Left Column */}
           <div className="lg:col-span-5 text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.15] mb-6">
-              What Our Clients Say About Building With Us
+              What Clients Say About Building AI With Us
             </h2>
             <p className="text-white/75 text-sm sm:text-base lg:text-[17px] leading-relaxed mb-10">
               Every successful product starts with alignment between the people building it and the people who need it. These stories reflect the collaboration, trust, and product decisions behind our work.
@@ -41,9 +41,30 @@ export default function AiTestimonials() {
 
             {/* Platform Badges */}
             <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-6 border-t border-white/10">
-              <img src="/assets/clutch.png" alt="Clutch 5.0 Rating" className="h-9 sm:h-11 w-auto object-contain select-none" />
-              <img src="/assets/bark.png" alt="Bark 5.0 Rating" className="h-9 sm:h-11 w-auto object-contain select-none" />
-              <img src="/assets/trustpilot.png" alt="Trustpilot 4.7 Rating" className="h-9 sm:h-11 w-auto object-contain select-none" />
+              <a
+                href="https://clutch.co/profile/inceptives-digital"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-block transition-opacity hover:opacity-80"
+              >
+                <img src="/assets/clutch.png" alt="Clutch 5.0 Rating" className="h-9 sm:h-11 w-auto object-contain select-none" />
+              </a>
+              <a
+                href="https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-block transition-opacity hover:opacity-80"
+              >
+                <img src="/assets/bark.png" alt="Bark 5.0 Rating" className="h-9 sm:h-11 w-auto object-contain select-none" />
+              </a>
+              <a
+                href="https://www.trustpilot.com/review/inceptivesdigital.com"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-block transition-opacity hover:opacity-80"
+              >
+                <img src="/assets/trustpilot.png" alt="Trustpilot 4.7 Rating" className="h-9 sm:h-11 w-auto object-contain select-none" />
+              </a>
             </div>
           </div>
 

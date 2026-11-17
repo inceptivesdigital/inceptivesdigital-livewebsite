@@ -77,7 +77,7 @@ export default function AiTechStack() {
             <span className="text-[#00CE44]">AI Development Services</span> Under the Hood
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-            Every technology decision shapes your product&apos;s future. We build on a proven AI tech stack with modern infrastructure that supports performance today and growth tomorrow.
+            A tech stack is only as credible as the products built on it. These are the frameworks, models, and infrastructure behind our AI development services.
           </p>
         </div>
 

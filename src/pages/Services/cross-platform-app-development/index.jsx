@@ -1,24 +1,28 @@
 import { useEffect } from 'react'
 import CrossPlatformHero from './components/CrossPlatformHero'
-import CrossPlatformTrustedLogos from './components/CrossPlatformTrustedLogos'
+import CrossPlatformAwards from './components/CrossPlatformAwards'
+import CrossPlatformAdvantages from './components/CrossPlatformAdvantages'
 import CrossPlatformBenchmark from './components/CrossPlatformBenchmark'
+import CrossPlatformNativeVsCross from './components/CrossPlatformNativeVsCross'
 import CrossPlatformServicesGrid from './components/CrossPlatformServicesGrid'
-import CrossPlatformStatsBar from './components/CrossPlatformStatsBar'
+import CrossPlatformFrameworks from './components/CrossPlatformFrameworks'
 import CrossPlatformIndustries from './components/CrossPlatformIndustries'
 import CrossPlatformCaseStudies from './components/CrossPlatformCaseStudies'
 import CrossPlatformTestimonials from './components/CrossPlatformTestimonials'
 import CrossPlatformWhyChooseUs from './components/CrossPlatformWhyChooseUs'
-import CrossPlatformProcess from './components/CrossPlatformProcess'
 import CrossPlatformTechStack from './components/CrossPlatformTechStack'
+import CrossPlatformTechPartnerships from './components/CrossPlatformTechPartnerships'
 import CrossPlatformEmergingTech from './components/CrossPlatformEmergingTech'
+import CrossPlatformProcess from './components/CrossPlatformProcess'
 import CrossPlatformCostSection from './components/CrossPlatformCostSection'
+import CrossPlatformLocations from './components/CrossPlatformLocations'
 import CrossPlatformFAQs from './components/CrossPlatformFAQs'
 
 export default function CrossPlatformAppDevelopmentPage() {
   useEffect(() => {
-    const seoTitle = 'Cross-Platform App Development Company | Inceptives Digital'
+    const seoTitle = 'Cross-Platform App Development Company USA | Inceptives Digital'
     const seoDesc =
-      'Top-rated cross-platform app development company building scalable apps for iOS and Android across 20+ industries, driving sustainable growth.'
+      'Inceptives Digital is a cross-platform app development company in the USA, building Flutter and React Native apps for iOS and Android from one codebase.'
 
     document.title = seoTitle
 
@@ -52,43 +56,55 @@ export default function CrossPlatformAppDevelopmentPage() {
       {/* 1. Hero */}
       <CrossPlatformHero />
 
-      {/* 2. Trusted By Clients */}
-      <CrossPlatformTrustedLogos />
+      {/* 2. Awards & Recognition */}
+      <CrossPlatformAwards />
 
-      {/* 3. Benchmark / Market Move */}
+      {/* 3. Advantages / Why Growing Businesses Begin (New Section) */}
+      <CrossPlatformAdvantages />
+
+      {/* 4. Benchmark / Market Move */}
       <CrossPlatformBenchmark />
 
-      {/* 4. Comprehensive Services Grid */}
+      {/* 5. Native vs Cross-Platform Guide (New Section) */}
+      <CrossPlatformNativeVsCross />
+
+      {/* 6. Comprehensive Services Grid + Mid CTA */}
       <CrossPlatformServicesGrid />
 
-      {/* 5. Stats & Mid CTA */}
-      <CrossPlatformStatsBar />
+      {/* 7. Frameworks Behind Every Cross-Platform App */}
+      <CrossPlatformFrameworks />
 
-      {/* 6. Industries */}
+      {/* 8. Industries (20+ Market Sectors) */}
       <CrossPlatformIndustries />
 
-      {/* 7. Case Studies */}
+      {/* 9. Case Studies */}
       <CrossPlatformCaseStudies />
 
-      {/* 8. Testimonials */}
+      {/* 10. Testimonials */}
       <CrossPlatformTestimonials />
 
-      {/* 9. Why Choose Us */}
+      {/* 11. Why Choose Us + CTA Banner */}
       <CrossPlatformWhyChooseUs />
 
-      {/* 10. Process (5 Steps) */}
-      <CrossPlatformProcess />
-
-      {/* 11. Tech Stack */}
+      {/* 12. Tech Stack */}
       <CrossPlatformTechStack />
 
-      {/* 12. Emerging Technologies */}
+      {/* 13. Technology Partnerships (New Section) */}
+      <CrossPlatformTechPartnerships />
+
+      {/* 14. Emerging Technologies */}
       <CrossPlatformEmergingTech />
 
-      {/* 13. Cost Section & Bottom CTA */}
+      {/* 15. Process (5 Steps) */}
+      <CrossPlatformProcess />
+
+      {/* 16. Cost Section & Cost Estimate CTA */}
       <CrossPlatformCostSection />
 
-      {/* 14. FAQs */}
+      {/* 17. Locations Section (Where Our Teams Work) */}
+      <CrossPlatformLocations />
+
+      {/* 18. FAQs */}
       <CrossPlatformFAQs />
     </div>
   )

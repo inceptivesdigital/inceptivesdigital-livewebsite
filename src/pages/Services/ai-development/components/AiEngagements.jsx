@@ -1,4 +1,14 @@
+import { ArrowRight } from 'lucide-react'
+
 export default function AiEngagements() {
+  const scrollToContact = () => {
+    const el =
+      document.getElementById('contact') ||
+      document.getElementById('consultation-cta') ||
+      document.getElementById('contact-form')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const models = [
     {
       title: 'Discovery Sprint',
@@ -40,7 +50,7 @@ export default function AiEngagements() {
           {models.map((m, idx) => (
             <div
               key={idx}
-              className="bg-[#121212] hover:bg-[#161616] border border-white/[0.08] hover:border-[#00CE44]/30 rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 group"
+              className="bg-[#121212] hover:bg-[#161616] border border-white/[0.08] hover:border-[#00CE44]/30 rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 group text-left"
             >
               <div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#00CE44] transition-colors">
@@ -61,6 +71,21 @@ export default function AiEngagements() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Bar */}
+        <div className="mt-14 text-center max-w-3xl mx-auto p-6 sm:p-8 rounded-2xl bg-[#121814] border border-[#00CE44]/20 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p className="text-white/85 text-sm sm:text-base text-left font-normal">
+            Not sure which model fits? That is what the first conversation is for.
+          </p>
+          <button
+            type="button"
+            onClick={scrollToContact}
+            className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-sm tracking-tight whitespace-nowrap cursor-pointer transition-colors shadow-md border-0 shrink-0"
+          >
+            <span>Book an AI Consultation</span>
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </button>
         </div>
       </div>
     </section>

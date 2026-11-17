@@ -8,38 +8,38 @@ export default function CrossPlatformBenchmark() {
           {/* Left Column Heading (40px) */}
           <div className="lg:col-span-5 text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2]">
-              Cross-Platform Is the New Benchmark for Modern Mobile Development. Execute It With the Right Partner.
+              Cross-Platform Is the New Benchmark for Modern Mobile Development.{' '}
+              <span className="text-[#00CE44]">Execute It With the Right Partner.</span>
             </h2>
           </div>
 
           {/* Right Column Description (16px) */}
           <div className="lg:col-span-7 text-left">
-            <p className="text-white/80 text-[15px] sm:text-[16px] leading-[1.7] mb-6">
-              Over 40% of all mobile applications shipped today run from a single cross-platform foundation. The market has moved, and the businesses performing best within it chose their engineering partner carefully. Inceptives Digital is the cross-platform app development company that ensures every product holds its ground on iOS and Android equally.
-            </p>
-            <p className="text-white/80 text-[15px] sm:text-[16px] leading-[1.7] mb-8">
-              Being supported by 150+ engineers operating across{' '}
+            <p className="text-white/80 text-[15px] sm:text-[16px] leading-[1.7] mb-6 font-normal">
+              Over 40% of all mobile applications shipped today run from a single cross-platform foundation. The market has moved, and the businesses performing best within it chose their engineering partner carefully. Inceptives Digital is the cross-platform app development company that ensures every product holds its ground on iOS and Android equally. Being supported by 150+ engineers operating across{' '}
               <Link
                 to="/flutter-app-development"
                 className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-white transition-colors"
               >
-                Flutter app development
+                Flutter
               </Link>{' '}
               and{' '}
               <Link
                 to="/react-native-app-development"
                 className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-white transition-colors"
               >
-                React Native app development
+                React Native
               </Link>
               , every engagement draws on experience built at production scale.
             </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
-            >
-              Discuss Your Project
-            </a>
+            <div>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
+              >
+                Discuss Your Project
+              </a>
+            </div>
           </div>
         </div>
       </div>

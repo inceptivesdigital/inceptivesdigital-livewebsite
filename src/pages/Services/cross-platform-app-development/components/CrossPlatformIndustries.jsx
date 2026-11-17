@@ -2,83 +2,106 @@ export default function CrossPlatformIndustries() {
   const industries = [
     {
       name: 'Healthcare',
+      link: 'https://inceptivesdigital.com/healthcare-app-development',
       icon: '/assets/industries-icons/industries-healthcare.svg',
-      desc: 'HIPAA-compliant cross-platform mobile apps for telehealth, patient engagement, and remote vitals tracking.',
+      desc: 'HIPAA-aware architecture for patient portals, telehealth, and remote monitoring apps.',
     },
     {
       name: 'Fintech',
+      link: 'https://inceptivesdigital.com/fintech-app-development',
       icon: '/assets/industries-icons/industries-fintech.svg',
-      desc: 'Secure digital wallets, cross-border payment flows, and PCI-DSS compliant financial applications.',
+      desc: 'Secure authentication and PCI-DSS-compliant payment flows for wallets and investment platforms.',
     },
     {
       name: 'e-Commerce',
+      link: 'https://inceptivesdigital.com/ecommerce-app-development-company',
       icon: '/assets/industries-icons/industries-cart.svg',
-      desc: 'High-converting mobile storefronts, localized checkouts, and seamless payment gateway integrations.',
+      desc: 'Real-time inventory, checkout, and order tracking built for high-traffic release cycles.',
     },
     {
       name: 'Real Estate',
+      link: 'https://inceptivesdigital.com/real-estate-app-development-company',
       icon: '/assets/industries-icons/industries-realstate.svg',
-      desc: 'Interactive property map discovery, broker scheduling tools, and virtual unit inspection apps.',
+      desc: 'Listing search, virtual tours, and scheduling built for both platforms simultaneously.',
     },
     {
       name: 'Fitness',
+      link: 'https://inceptivesdigital.com/fitness-app-development',
       icon: '/assets/industries-icons/industries-fitness.svg',
-      desc: 'Cross-platform health tracking apps with Bluetooth wearable syncing and dynamic workout programs.',
+      desc: 'Wearable integration and activity tracking synced across iOS and Android.',
     },
     {
       name: 'e-Learning',
+      link: 'https://inceptivesdigital.com/education-app-development-company',
       icon: '/assets/industries-icons/industries-education.svg',
-      desc: 'Interactive learning platforms, live mobile classrooms, and offline study material synchronization.',
+      desc: 'Offline-capable course delivery and progress tracking for distributed user bases.',
     },
     {
       name: 'Travel',
+      link: 'https://inceptivesdigital.com/travel-app-development-company',
       icon: '/assets/industries-icons/industries-traveling1.svg',
-      desc: 'Comprehensive itinerary organizers, flight and hotel booking engines, and real-time travel alerts.',
+      desc: 'Booking, itinerary, and real-time notification systems built for on-the-go use.',
     },
     {
       name: 'Food Delivery',
+      link: 'https://inceptivesdigital.com/food-delivery-app-development',
       icon: '/assets/industries-icons/Food-Delivery.svg',
-      desc: 'Multi-vendor food ordering apps, real-time GPS driver tracking, and instant digital payments.',
+      desc: 'Live order tracking and driver-facing apps running on the same shared backend.',
     },
     {
       name: 'Automotive',
+      link: null,
       icon: '/assets/industries-icons/industries-startup.svg',
-      desc: 'Connected vehicle telemetry dashboards, EV charging locators, and roadside service booking systems.',
+      desc: 'Connected-vehicle and dealership apps requiring consistent cross-device performance.',
     },
   ]
 
   return (
-    <section className="py-20 lg:py-28 bg-[#0d0e11] text-white relative overflow-hidden">
+    <section className="py-20 lg:py-28 bg-[#0a0a0c] text-white relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+        {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight mb-4 text-center">
             Tailored Cross-Platform Solutions for{' '}
             <span className="text-[#00CE44]">20+ Market Sectors</span>
           </h2>
-          <p className="text-slate-300 text-[16px] leading-relaxed">
+          <p className="text-white/85 text-[16px] leading-relaxed font-normal text-center">
             Different sectors present unique technical constraints and compliance rules. Inceptives Digital&apos;s cross platform mobile app development services are adapted to match the precise requirements, user habits, and integration demands of your specific industry.
           </p>
         </div>
 
-        {/* Homepage-Style Hairline Grid Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        {/* 9 Industry Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((ind) => (
             <div
               key={ind.name}
-              className="group p-6 sm:p-7 xl:p-8 flex flex-col justify-start bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 cursor-pointer min-h-[260px] h-full select-none"
+              className="p-7 sm:p-8 rounded-[20px] bg-[#15161a] border border-white/5 hover:border-[#00CE44]/60 transition-all duration-300 flex flex-col justify-start text-left group"
             >
-              <div className="w-[35px] h-[35px] mb-6 sm:mb-8 flex items-center justify-start shrink-0 p-0 border-0 bg-transparent">
+              <div className="mb-5 shrink-0 flex items-center">
                 <img
                   src={ind.icon}
                   alt={ind.name}
-                  className="w-[35px] h-[35px] object-contain transition-all duration-300 group-hover:brightness-0"
+                  className="w-10 h-10 object-contain p-0 m-0 border-0 bg-transparent"
                   loading="lazy"
                 />
               </div>
-              <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
-                {ind.name}
+
+              <h3 className="text-xl sm:text-2xl font-bold text-[#00CE44] mb-2 leading-snug">
+                {ind.link ? (
+                  <a
+                    href={ind.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline hover:text-white transition-colors"
+                  >
+                    {ind.name}
+                  </a>
+                ) : (
+                  ind.name
+                )}
               </h3>
-              <p className="text-[15px] sm:text-[16px] text-slate-300 group-hover:text-black transition-colors duration-300 leading-relaxed font-normal">
+
+              <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-normal">
                 {ind.desc}
               </p>
             </div>

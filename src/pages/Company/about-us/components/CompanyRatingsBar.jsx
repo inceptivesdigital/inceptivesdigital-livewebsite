@@ -82,7 +82,7 @@ export default function CompanyRatingsBar() {
               <a
                 href={rev.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="group flex flex-col items-center justify-center p-3 rounded-xl transition-all duration-300 hover:scale-105"
                 title={`${rev.platform} Reviews`}
               >

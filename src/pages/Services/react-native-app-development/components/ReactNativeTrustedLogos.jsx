@@ -44,8 +44,7 @@ export default function ReactNativeTrustedLogos() {
         {/* Section Heading: H2, 40px, bold, centered */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight text-center">
-            The Studio Behind{' '}
-            <span className="text-[#00CE44]">Global React Native</span> Product Launches
+            Brands Building Their <span className="text-[#00CE44]">React Native Apps</span> With Us
           </h2>
         </div>
 

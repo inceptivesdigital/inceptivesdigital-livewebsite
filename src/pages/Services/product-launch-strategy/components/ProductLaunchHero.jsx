@@ -78,7 +78,7 @@ export default function ProductLaunchHero() {
                   key={badge.name}
                   href={badge.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="opacity-90 hover:opacity-100 transition-opacity"
                 >
                   <img

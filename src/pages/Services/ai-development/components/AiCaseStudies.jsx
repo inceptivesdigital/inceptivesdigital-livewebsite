@@ -8,27 +8,67 @@ export default function AiCaseStudies() {
   const touchEndX = useRef(0)
 
   const slides = [
-    // Slide 1: WordSmith (Featured for AI Development)
+    // Slide 1: WordSmith Pro (AI Writing Intelligence)
     {
       id: 'wordsmith',
       type: 'standard',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
-      brand: 'WordSmith',
+      brand: 'WordSmith Pro',
       logo: '/assets/case-studies/wordsmith-logo.png',
       logoAlt: 'WordSmith Pro Logo',
       titleColor: 'text-[#E88B13]',
       subtitle: 'AI Writing Improvement Platform',
-      desc: 'Writing intelligence platform analyzing grammar, tone, clarity, and structure with personalized, actionable feedback.',
+      desc: 'Writing intelligence platform analyzing grammar, tone, clarity, and structure with personalized, actionable feedback in real time.',
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#E88B13] hover:bg-[#d47d0e]',
       buttonTextCol: 'text-white',
       link: '/portfolio',
       mockup: '/assets/case-studies/wordsmith-mockup.png',
       mockupAlt: 'WordSmith Pro App Screens',
-      alt: 'WordSmith Pro App Screens'
+      alt: 'WordSmith Pro App Screens',
     },
-    // Slide 2: State Of The Art Chiropractic
+    // Slide 2: Payroll Automation Platform (The Anchor AI System)
+    {
+      id: 'payroll-platform',
+      type: 'standard',
+      cardBg: 'bg-white',
+      textColor: 'text-[#111215]',
+      brand: 'Payroll Automation Platform',
+      logo: '/assets/case-studies/dps-logo.png',
+      logoAlt: 'Payroll Automation Platform Logo',
+      titleColor: 'text-[#00CE44]',
+      subtitle: 'End-to-End Financial Intelligence System',
+      desc: 'A full AI system that replaced manual payroll workflows entirely. Automated data ingestion, tax calculation, exception detection, and compliance reporting. The finance team manages exceptions — the system runs the rest.',
+      buttonText: 'See Full Case Study →',
+      buttonBg: 'bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold',
+      buttonTextCol: 'text-black',
+      link: '/portfolio',
+      mockup: '/assets/case-studies/dps-mockup.svg',
+      mockupAlt: 'Payroll Automation Platform Screens',
+      alt: 'Payroll Automation Platform Screens',
+    },
+    // Slide 3: Pets Before Profit (AI Veterinary Intelligence)
+    {
+      id: 'pets',
+      type: 'standard',
+      cardBg: 'bg-white',
+      textColor: 'text-[#111215]',
+      brand: 'Pets Before Profit',
+      logo: '/assets/case-studies/pets-logo.png',
+      logoAlt: 'Pets Before Profit Logo',
+      titleColor: 'text-[#6B46C1]',
+      subtitle: 'AI Veterinary Intelligence Platform',
+      desc: 'An AI-assisted veterinary intelligence platform that analyzes pet medical bills, explains treatment costs, and provides healthcare insights to improve pricing transparency for pet owners.',
+      buttonText: 'View Case Study →',
+      buttonBg: 'bg-[#6B46C1] hover:bg-[#553c9a]',
+      buttonTextCol: 'text-white',
+      link: '/portfolio',
+      mockup: '/assets/case-studies/pets-mockup.png',
+      mockupAlt: 'Pets Before Profit App Screens',
+      alt: 'Pets Before Profit App Screens',
+    },
+    // Slide 4: State Of The Art Chiropractic
     {
       id: 'chiropractic',
       type: 'standard',
@@ -38,7 +78,7 @@ export default function AiCaseStudies() {
       logo: '/assets/case-studies/chiropractic-logo.png',
       logoAlt: 'State of the Art Chiropractic Logo',
       titleColor: 'text-[#8A3FFC]',
-      subtitle: 'Connected Chiropractic Care And Telehealth Platform',
+      subtitle: 'Connected Healthcare And Telehealth Platform',
       desc: 'A secure digital healthcare platform combining appointment scheduling, telehealth consultations, patient communication, online payments, and practice management.',
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#8A3FFC] hover:bg-[#7b34e5]',
@@ -46,9 +86,9 @@ export default function AiCaseStudies() {
       link: '/portfolio',
       mockup: '/assets/case-studies/chiropractic-mockup.png',
       mockupAlt: 'State of the Art Chiropractic App Screens',
-      alt: 'State of the Art Chiropractic App Screens'
+      alt: 'State of the Art Chiropractic App Screens',
     },
-    // Slide 3: Pulse Check
+    // Slide 5: Pulse Check
     {
       id: 'pulse-check',
       type: 'pulse-check',
@@ -62,19 +102,12 @@ export default function AiCaseStudies() {
       desc: 'A precision-built mobile application that guides CPR cycles, automates pulse check timing, records critical events, and simplifies emergency documentation.',
       primaryButtonText: 'View Case Study →',
       primaryButtonBg: 'bg-[#E53935] hover:bg-[#d32f2f]',
-      secondaryButtonText: 'Read Case Study →',
-      secondaryButtonBg: 'bg-[#151515] hover:bg-[#252525]',
-      results: [
-        { value: '90%', label: 'Less manual paperwork' },
-        { value: '1,000+', label: 'Security personnel managed' }
-      ],
-      appStoreBadge: '/assets/case-studies/app-store.png',
       link: '/portfolio',
       mockup: '/assets/case-studies/pulse-mockup.svg',
       mockupAlt: 'Pulse Check Timer App Screens',
-      alt: 'Pulse Check Timer App Screens'
+      alt: 'Pulse Check Timer App Screens',
     },
-    // Slide 4: DPS Airem (Yellow Card)
+    // Slide 6: DPS Airem (Yellow Card)
     {
       id: 'dps-airem',
       type: 'dps-airem',
@@ -86,101 +119,14 @@ export default function AiCaseStudies() {
       titleColor: 'text-[#111111]',
       subtitle: 'Modernizing Security Workforce Operations',
       challenge: 'DPS Airem wanted live visibility over security personnel spread across multiple locations, without the paper-based attendance and reporting that slowed every shift.',
-      howWeHelped: 'We developed an Android app with geofenced GPS attendance and offline synchronization, built to give managers reliable oversight at every site.',
-      outcomeBullets: [
-        '90% reduction in manual paperwork',
-        '1,000+ security personnel supported',
-        'Better visibility across field operations'
-      ],
       buttonText: 'Read Case Study →',
       buttonBg: 'bg-[#151515] hover:bg-[#252525]',
       buttonTextCol: 'text-white',
-      playStoreBadge: '/assets/case-studies/play-store.png',
       link: '/portfolio',
       mockup: '/assets/case-studies/dps-mockup.svg',
       mockupAlt: 'DPS Airem App Screens',
-      alt: 'DPS Airem App Screens'
+      alt: 'DPS Airem App Screens',
     },
-    // Slide 5: Pets B4 Profit
-    {
-      id: 'pets',
-      type: 'standard',
-      cardBg: 'bg-white',
-      textColor: 'text-[#111215]',
-      brand: 'Pets B4 Profit',
-      logo: '/assets/case-studies/pets-logo.png',
-      logoAlt: 'Pets B4 Profit Logo',
-      titleColor: 'text-[#6B46C1]',
-      subtitle: 'Automated Experience Capture And Delivery',
-      desc: 'An AI-assisted veterinary intelligence platform that analyzes pet medical bills, explains treatment costs, and provides healthcare insights to improve pricing transparency for pet owners.',
-      buttonText: 'View Case Study →',
-      buttonBg: 'bg-[#6B46C1] hover:bg-[#553c9a]',
-      buttonTextCol: 'text-white',
-      link: '/portfolio',
-      mockup: '/assets/case-studies/pets-mockup.png',
-      mockupAlt: 'Pets B4 Profit App Screens',
-      alt: 'Pets B4 Profit App Screens'
-    },
-    // Slide 6: Family Entertainment Group
-    {
-      id: 'feg',
-      type: 'standard',
-      cardBg: 'bg-white',
-      textColor: 'text-[#111215]',
-      brand: 'Family Entertainment Group',
-      logo: '/assets/case-studies/feg-logo.png',
-      logoAlt: 'Family Entertainment Group (FEG) Logo',
-      titleColor: 'text-[#0066CC]',
-      subtitle: 'Automated Experience Capture And Delivery',
-      desc: 'IoT-powered video platform using synchronized cameras, automated processing, and instant memory delivery.',
-      buttonText: 'View Case Study →',
-      buttonBg: 'bg-[#0066CC] hover:bg-[#0052a3]',
-      buttonTextCol: 'text-white',
-      link: '/portfolio',
-      mockup: '/assets/case-studies/feg-mockup.png',
-      mockupAlt: 'Family Entertainment Group (FEG) App Screens',
-      alt: 'Family Entertainment Group (FEG) App Screens'
-    },
-    // Slide 7: StakBread
-    {
-      id: 'stakbread',
-      type: 'standard',
-      cardBg: 'bg-white',
-      textColor: 'text-[#111215]',
-      brand: 'StakBread',
-      logo: '/assets/case-studies/stakbread-logo.png',
-      logoAlt: 'StakBread Logo',
-      titleColor: 'text-[#16A34A]',
-      subtitle: 'Real-Time Workforce Operations Platform',
-      desc: 'A creator commerce platform that enables creators to grow audiences, sell digital products, and monetize content through a scalable, production-ready architecture.',
-      buttonText: 'View Case Study →',
-      buttonBg: 'bg-[#16A34A] hover:bg-[#15803d]',
-      buttonTextCol: 'text-white',
-      link: '/portfolio',
-      mockup: '/assets/case-studies/stakbread-mockup.png',
-      mockupAlt: 'StakBread App Screens',
-      alt: 'StakBread App Screens'
-    },
-    // Slide 8: My Tango Event
-    {
-      id: 'mytango',
-      type: 'standard',
-      cardBg: 'bg-white',
-      textColor: 'text-[#111215]',
-      brand: 'My Tango Event',
-      logo: '/assets/case-studies/mytango-logo.png',
-      logoAlt: 'MY TANGO EVENT',
-      titleColor: 'text-[#8B008B]',
-      subtitle: 'Global Event Discovery And Community Engagement Platform',
-      desc: 'A real-time workforce management platform that cut manual paperwork by 90%, streamlining operations and improving accuracy.',
-      buttonText: 'View Case Study →',
-      buttonBg: 'bg-[#8B008B] hover:bg-[#700070]',
-      buttonTextCol: 'text-white',
-      link: '/portfolio',
-      mockup: '/assets/case-studies/mytango-mockup.png',
-      mockupAlt: 'My Tango Event App Screens',
-      alt: 'My Tango Event App Screens'
-    }
   ]
 
   const nextSlide = () => {
@@ -213,21 +159,26 @@ export default function AiCaseStudies() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Top Header Row: Headline on Left, Green CTA on Right */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight max-w-2xl">
-            Your Idea Deserves Better Than Average Execution.
-          </h2>
+          <div>
+            <span className="text-[#00CE44] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-2">
+              Featured Case Studies
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight max-w-2xl">
+              The Work That Defines Us as an <span className="text-[#00CE44]">AI Development Company</span>
+            </h2>
+          </div>
 
           <div className="shrink-0">
             <Link
               to="/portfolio"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 shadow-none border-0"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 shadow-none border-0"
             >
-              View All Case Studies
+              See All AI Work →
             </Link>
           </div>
         </div>
 
-        {/* Main Showcase Container with Equal Dimensions and Zero Height Jumps */}
+        {/* Main Showcase Container */}
         <div 
           className="rounded-[25px] overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.6)] relative select-none"
           onTouchStart={handleTouchStart}
@@ -244,7 +195,7 @@ export default function AiCaseStudies() {
                 key={slide.id}
                 className={`w-full shrink-0 min-w-full flex flex-col lg:flex-row items-stretch justify-between min-h-[520px] sm:min-h-[560px] lg:min-h-[520px] xl:min-h-[560px] 2xl:min-h-[600px] lg:h-[530px] xl:h-[570px] 2xl:h-[610px] relative ${slide.cardBg} rounded-[25px] overflow-hidden`}
               >
-                {/* Left Column: Brand Info, Title, Copy, CTA Button (padded generously & vertically centered) */}
+                {/* Left Column: Brand Info, Title, Copy, CTA Button */}
                 <div className="w-full lg:w-[42%] xl:w-[38%] p-6 sm:p-8 lg:p-9 xl:p-12 xl:pl-16 flex flex-col justify-center text-left shrink-0 z-10">
                   
                   {/* Brand Logo */}
@@ -277,7 +228,7 @@ export default function AiCaseStudies() {
                     </div>
                   )}
 
-                  {/* TYPE 2: Pulse Check (Results + Dual Buttons) */}
+                  {/* TYPE 2: Pulse Check */}
                   {slide.type === 'pulse-check' && (
                     <div className="space-y-4 mb-6">
                       <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
@@ -286,7 +237,6 @@ export default function AiCaseStudies() {
                       <div>
                         <Link
                           to={slide.link}
-                          style={{ fontWeight: 500 }}
                           className={`inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-none ${slide.primaryButtonBg} text-white font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
                         >
                           {slide.primaryButtonText}
@@ -295,7 +245,7 @@ export default function AiCaseStudies() {
                     </div>
                   )}
 
-                  {/* TYPE 3: Standard Cards (WordSmith, FEG, StakBread, etc.) */}
+                  {/* TYPE 3: Standard Cards (WordSmith Pro, Payroll Platform, Pets Before Profit) */}
                   {slide.type === 'standard' && (
                     <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal mb-8 max-w-lg">
                       {slide.desc}
@@ -307,8 +257,7 @@ export default function AiCaseStudies() {
                     <div>
                       <Link
                         to={slide.link}
-                        style={{ fontWeight: 500 }}
-                        className={`inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
+                        className={`inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
                       >
                         {slide.buttonText}
                       </Link>
@@ -320,8 +269,7 @@ export default function AiCaseStudies() {
                     <div className="flex items-center gap-4">
                       <Link
                         to={slide.link}
-                        style={{ fontWeight: 500 }}
-                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
+                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
                       >
                         {slide.buttonText}
                       </Link>
@@ -330,7 +278,7 @@ export default function AiCaseStudies() {
 
                 </div>
 
-                {/* Right Column: 3D Device Mockup Graphic anchored to the bottom right edge */}
+                {/* Right Column: 3D Device Mockup Graphic */}
                 <div className="w-full lg:w-[58%] xl:w-[62%] flex items-end justify-center lg:justify-end px-4 sm:px-6 lg:px-0 pt-4 lg:pt-6 pb-0 self-end overflow-hidden h-full">
                   <img
                     src={slide.mockup}
@@ -347,7 +295,6 @@ export default function AiCaseStudies() {
 
         {/* Bottom Carousel Controls: Centered Arrows */}
         <div className="flex items-center justify-center gap-4 mt-8 sm:mt-10">
-          {/* Previous Arrow Button */}
           <button
             onClick={prevSlide}
             aria-label="Previous Case Study"
@@ -356,7 +303,6 @@ export default function AiCaseStudies() {
             <ArrowLeft className="w-5 h-5" />
           </button>
 
-          {/* Next Arrow Button */}
           <button
             onClick={nextSlide}
             aria-label="Next Case Study"

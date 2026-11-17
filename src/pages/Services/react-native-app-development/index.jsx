@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import ReactNativeHero from './components/ReactNativeHero'
 import ReactNativeTrustedLogos from './components/ReactNativeTrustedLogos'
 import ReactNativeBuildChoice from './components/ReactNativeBuildChoice'
-import ReactNativeVsFlutterTable from './components/ReactNativeVsFlutterTable'
+// import ReactNativeVsFlutterTable from './components/ReactNativeVsFlutterTable'
 import ReactNativeServicesGrid from './components/ReactNativeServicesGrid'
 import ReactNativeStatsAndCTA from './components/ReactNativeStatsAndCTA'
 import ReactNativeIndustries from './components/ReactNativeIndustries'
@@ -11,15 +11,16 @@ import ReactNativeTestimonials from './components/ReactNativeTestimonials'
 import ReactNativeWhyChooseUs from './components/ReactNativeWhyChooseUs'
 import ReactNativeProcess from './components/ReactNativeProcess'
 import ReactNativeTechStack from './components/ReactNativeTechStack'
+import ReactNativeTechPartnerships from './components/ReactNativeTechPartnerships'
 import ReactNativeEmergingTech from './components/ReactNativeEmergingTech'
 import ReactNativeCostSection from './components/ReactNativeCostSection'
 import ReactNativeFAQs from './components/ReactNativeFAQs'
 
 export default function ReactNativeAppDevelopmentPage() {
   useEffect(() => {
-    const seoTitle = 'React-Native App Development Company | Inceptives Digital'
+    const seoTitle = 'React Native App Development Company | Inceptives Digital'
     const seoDesc =
-      'Inceptives Digital excels in React Native app development, providing businesses with robust cross-platform apps that ensure native-grade performance on both iOS and Android devices.'
+      'Build iOS and Android applications with our React Native app development services, covering custom engineering, migration, and ongoing support.'
 
     document.title = seoTitle
 
@@ -56,43 +57,46 @@ export default function ReactNativeAppDevelopmentPage() {
       {/* 2. The Studio Behind Global React Native Product Launches */}
       <ReactNativeTrustedLogos />
 
-      {/* 3. What Makes React Native the Best Build Choice? */}
+      {/* 3. Why Businesses Choose React Native for Mobile App Development */}
       <ReactNativeBuildChoice />
 
-      {/* 4. React Native vs Flutter Comparison Table */}
-      <ReactNativeVsFlutterTable />
+      {/* 4. Comparison Table - Hidden/Commented as not present in doc */}
+      {/* <ReactNativeVsFlutterTable /> */}
 
-      {/* 5. All-inclusive React Native App Development Services Under One Roof (6 Cards) */}
+      {/* 5. Custom React Native App Development Services We Offer (6 Cards) */}
       <ReactNativeServicesGrid />
 
-      {/* 6. 4 Stats Counters + Stop Building Twice. Start Building Smarter. CTA */}
+      {/* 6. 4 Stats Counters + Stop Building Twice CTA */}
       <ReactNativeStatsAndCTA />
 
-      {/* 7. Industry-Specific React Native App Development (9 Homepage Box Cards) */}
+      {/* 7. Industries We Build React Native Apps For (9 Box Cards) */}
       <ReactNativeIndustries />
 
-      {/* 8. Case Studies Proven by Real React Native Engineering */}
+      {/* 8. React Native Applications We've Developed (4 Case Studies) */}
       <ReactNativeCaseStudies />
 
-      {/* 9. The Businesses That Built Here. In Their Own Words. */}
+      {/* 9. What Clients Say After Launching With Us */}
       <ReactNativeTestimonials />
 
-      {/* 10. Collaborate CTA + Inside a React Native Mobile App Development Company (6 Cards) */}
+      {/* 10. Collaborate CTA + Inside a React Native Mobile App Development Company (6 Cards + Awards) */}
       <ReactNativeWhyChooseUs />
 
-      {/* 11. The React Native App Development Process in Stages (5 Steps) */}
+      {/* 11. From Discovery to Deployment, Our React Native App Development Process (5 Steps) */}
       <ReactNativeProcess />
 
       {/* 12. Tools Selected for React Native. Refined Across Deliveries. (8 Tech Categories) */}
       <ReactNativeTechStack />
 
-      {/* 13. Future-Ready React Native Products Through Emerging Technology (6 Cards) */}
+      {/* 13. Technology Partnerships Behind Our React Native Engineering (Black BG) */}
+      <ReactNativeTechPartnerships />
+
+      {/* 14. Future-Ready React Native Products Through Emerging Technology (6 Cards) */}
       <ReactNativeEmergingTech />
 
-      {/* 14. How Much Does React Native App Development Cost? (3 Tier Cards + Bottom Quote CTA) */}
+      {/* 15. How Much Does React Native App Development Cost? (3 Tier Cards + Quote CTA) */}
       <ReactNativeCostSection />
 
-      {/* 15. React Native App Development FAQs (11 FAQs) */}
+      {/* 16. React Native App Development FAQs (13 FAQs) */}
       <ReactNativeFAQs />
     </div>
   )

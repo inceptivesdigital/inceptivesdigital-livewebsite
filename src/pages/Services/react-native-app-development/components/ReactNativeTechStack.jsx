@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const techStackCategories = [
   {
@@ -106,7 +107,14 @@ export default function ReactNativeTechStack() {
             Refined Across Deliveries.
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-            The selection of the correct toolkit distinguishes React Native applications that perform consistently from those that deteriorate over time. Our React Native app development services run on a stack selected for engineering merit, tested across real-world conditions, and refined through years of production delivery across multiple industries and product types.
+            The right{' '}
+            <Link
+              to="/services/mobile-app-development"
+              className="text-[#00CE44] underline hover:text-white transition-colors"
+            >
+              mobile app tech stack
+            </Link>{' '}
+            lays the foundation for React Native applications that perform reliably as product demands evolve. Our engineers draw on years of production experience to select proven development tools that meet each application&apos;s performance requirements and long-term engineering needs.
           </p>
         </div>
 

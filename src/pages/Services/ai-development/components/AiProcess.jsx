@@ -50,7 +50,7 @@ export default function AiProcess() {
       const containerWidth = container.offsetWidth
       container.scrollTo({
         left: targetLeft - containerWidth / 2 + targetWidth / 2,
-        behavior: 'smooth',
+        behavior: 'smooth'
       })
     }
   }
@@ -59,51 +59,51 @@ export default function AiProcess() {
     {
       num: '01.',
       tabTitle: 'Discovery',
-      tabIcon: '/assets/ai-development/dis.png',
+      tabIcon: '/assets/process/tab-1.png',
       cardTitle: 'Discovery and AI Opportunity Assessment',
       cardDesc:
-        'We map your business processes, evaluate data readiness across structured and unstructured sources, and define the system architecture before development begins. This is where the Discovery Sprint produces a clear build plan — scope defined, architecture confirmed, timeline set.',
+        'We map your business processes, evaluate data readiness across structured and unstructured sources, and define the system architecture before development begins. This is where the Discovery Sprint produces a clear build plan — scope defined, architecture confirmed, timeline set.'
     },
     {
       num: '02.',
       tabTitle: 'Data Architecture',
-      tabIcon: '/assets/ai-development/presstwo.png',
+      tabIcon: '/assets/process/tab-2.png',
       cardTitle: 'Data Architecture and Engineering Foundation',
       cardDesc:
-        'We build ETL pipelines, data transformation workflows, and storage architecture around the AI requirements from day one. On high-volume systems, distributed infrastructure like Apache Spark or Kafka is built in from the start, not retrofitted afterward.',
+        'We build ETL pipelines, data transformation workflows, and storage architecture around the AI requirements from day one. On high-volume systems, distributed infrastructure like Apache Spark or Kafka is built in from the start, not retrofitted afterward.'
     },
     {
       num: '03.',
       tabTitle: 'AI Model',
-      tabIcon: '/assets/ai-development/proess3.png',
+      tabIcon: '/assets/process/tab-3.png',
       cardTitle: 'AI Model Design and Development',
       cardDesc:
-        'Models are selected for your specific use case. LLMs like GPT and Claude for generative tasks. Fine-tuned Hugging Face models for domain-specific applications. RAG architectures with Pinecone or Weaviate for knowledge-grounded systems. XGBoost or Random Forest, where prediction is the requirement.',
+        'Models are selected for your specific use case. LLMs like GPT and Claude for generative tasks. Fine-tuned Hugging Face models for domain-specific applications. RAG architectures with Pinecone or Weaviate for knowledge-grounded systems. XGBoost or Random Forest, where prediction is the requirement.'
     },
     {
       num: '04.',
       tabTitle: 'Development',
-      tabIcon: '/assets/ai-development/ai-product.png',
+      tabIcon: '/assets/process/tab-4.png',
       cardTitle: 'AI Product and Application Development',
       cardDesc:
-        'We build the application layer, REST APIs, and intelligent interfaces that turn trained models into products people actually use. Built on FastAPI or Node.js, integrated with your existing software ecosystem from the start.',
+        'We build the application layer, REST APIs, and intelligent interfaces that turn trained models into products people actually use. Built on FastAPI or Node.js, integrated with your existing software ecosystem from the start.'
     },
     {
       num: '05.',
       tabTitle: 'Deployment',
-      tabIcon: '/assets/ai-development/process5.png',
+      tabIcon: '/assets/process/tab-5.png',
       cardTitle: 'Production Deployment and System Integration',
       cardDesc:
-        'Deployed on AWS SageMaker, Google Vertex AI, or Azure ML. Containerised with Docker, orchestrated with Kubernetes. SOC 2, GDPR, and HIPAA compliance are built in at this stage, not added afterward.',
+        'Deployed on AWS SageMaker, Google Vertex AI, or Azure ML. Containerised with Docker, orchestrated with Kubernetes. SOC 2, GDPR, and HIPAA compliance are built in at this stage, not added afterward.'
     },
     {
       num: '06.',
       tabTitle: 'Monitoring',
-      tabIcon: '/assets/ai-development/process6.png',
+      tabIcon: '/assets/process/tab-6.png',
       cardTitle: 'Monitoring, Optimization, and Continuous Improvement',
       cardDesc:
-        'Models drift. Data distributions shift. We monitor performance with MLflow, retrain when degradation is detected, and optimise inference pipelines for latency and throughput over time.',
-    },
+        'Models drift. Data distributions shift. We monitor performance with MLflow, retrain when degradation is detected, and optimise inference pipelines for latency and throughput over time.'
+    }
   ]
 
   const current = steps[activeTab]
@@ -111,6 +111,7 @@ export default function AiProcess() {
   return (
     <section id="process" className="py-20 lg:py-28 bg-[#0c0d10] relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+        
         {/* Top Heading: H2, 40px bold, text-center */}
         <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight max-w-4xl mx-auto">
           How We Deliver Custom{' '}
@@ -119,12 +120,12 @@ export default function AiProcess() {
           </span>
         </h2>
 
-        {/* Bottom Text: 18px font-size, text-center */}
-        <p className="mt-3 sm:mt-4 text-slate-300 text-[16px] sm:text-[18px] font-normal text-center max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed">
+        {/* Bottom Text: 18px font-size, 400 font-weight, text-center */}
+        <p className="mt-3 sm:mt-4 text-slate-300 text-[16px] sm:text-[18px] font-normal text-center max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
           No shortcuts. No retrofitting. No surprises after launch.
         </p>
 
-        {/* Interactive Step Navigation Tabs (6 Steps): Matching ProcessSection / DevelopmentProcess exactly */}
+        {/* Interactive Step Navigation Tabs (6 Steps): Flex scrollable with drag-to-scroll & wheel scroll on small devices */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -144,25 +145,19 @@ export default function AiProcess() {
                 onClick={(e) => handleTabClick(idx, e)}
                 className="shrink-0 min-w-[125px] sm:min-w-[140px] lg:min-w-0 group flex flex-col items-center text-center focus:outline-none cursor-pointer transition-all duration-300 pt-1"
               >
-                {/* Circular Icon with Number Badge */}
-                <div
-                  className={`w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center rounded-full mb-3.5 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-[#00CE44] scale-105'
-                      : 'bg-[#202125] hover:bg-[#282a30] hover:scale-105'
-                  }`}
-                >
+                {/* Full fill icon without any bg, border, or padding */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center mb-3.5">
                   <img
                     src={st.tabIcon}
                     alt={st.tabTitle}
-                    className={`w-7 h-7 sm:w-8 sm:h-8 object-contain transition-all duration-300 ${
-                      isActive ? 'brightness-0' : ''
+                    className={`w-full h-full object-contain select-none transition-all duration-300 ${
+                      isActive ? 'scale-110 drop-shadow-[0_0_12px_rgba(0,206,68,0.4)]' : 'opacity-70 hover:opacity-100 hover:scale-105'
                     }`}
                   />
 
                   {/* Step Number Badge */}
                   <span
-                    className={`absolute -top-1 -right-3.5 sm:-right-4.5 z-10 text-[11px] sm:text-[12px] font-mono font-medium px-2 sm:px-2.5 py-0.5 rounded-[50px] border whitespace-nowrap transition-colors ${
+                    className={`absolute -top-1 -right-3 sm:-right-3.5 z-10 text-[11px] sm:text-[12px] font-mono font-medium px-2 py-0.5 rounded-[50px] border whitespace-nowrap transition-colors ${
                       isActive
                         ? 'bg-black text-[#00CE44] border-[#00CE44]'
                         : 'bg-black text-[#00CE44] border-[#00CE44]/60 group-hover:border-[#00CE44]'
@@ -172,11 +167,11 @@ export default function AiProcess() {
                   </span>
                 </div>
 
-                {/* Tab Label */}
+                {/* Tab Label: Active is purely text-white without bold weight */}
                 <span
                   className={`text-[14px] sm:text-[15px] font-normal transition-colors duration-200 whitespace-nowrap ${
                     isActive
-                      ? 'text-white font-medium'
+                      ? 'text-white'
                       : 'text-slate-400 group-hover:text-slate-200'
                   }`}
                 >
@@ -187,15 +182,16 @@ export default function AiProcess() {
           })}
         </div>
 
-        {/* Content Card Box: Rounded-[24px] matching ProcessSection / DevelopmentProcess */}
-        <div className="bg-[#1b1c20] border border-[#2d2f36] rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 lg:p-11 shadow-none transition-all duration-300">
+        {/* Content Card Box: Rounded, with exact matching Tab Icon on Left, H3 Title 25px & Text 16px on Right */}
+        <div className="bg-[#1b1c20] border border-[#2d2f36] rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 lg:p-11 shadow-none transition-all duration-300 animate-in fade-in duration-200">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 lg:gap-10">
-            {/* Left: Green Circle with Icon */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#00CE44] flex items-center justify-center shrink-0 shadow-none">
+            
+            {/* Left: Full fill Tab Icon (Zero bg, zero border, zero padding) */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center shrink-0">
               <img
                 src={current.tabIcon}
                 alt={current.cardTitle}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain brightness-0"
+                className="w-full h-full object-contain select-none"
               />
             </div>
 
@@ -208,8 +204,10 @@ export default function AiProcess() {
                 {current.cardDesc}
               </p>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   )

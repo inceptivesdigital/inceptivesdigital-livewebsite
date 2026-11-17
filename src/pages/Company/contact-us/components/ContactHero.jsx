@@ -7,9 +7,9 @@ export default function ContactHero() {
   ]
 
   const ratings = [
-    { src: '/assets/clutch.png', alt: 'Clutch 5.0 stars' },
-    { src: '/assets/bark.png', alt: 'Bark 5.0 rating' },
-    { src: '/assets/trustpilot.png', alt: 'Trustpilot 4.7 rating' },
+    { src: '/assets/clutch.png', alt: 'Clutch 5.0 stars', url: 'https://clutch.co/profile/inceptives-digital' },
+    { src: '/assets/bark.png', alt: 'Bark 5.0 rating', url: 'https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/' },
+    { src: '/assets/trustpilot.png', alt: 'Trustpilot 4.7 rating', url: 'https://www.trustpilot.com/review/inceptivesdigital.com' },
   ]
 
   return (
@@ -50,7 +50,15 @@ export default function ContactHero() {
 
             <div className="flex flex-wrap items-center gap-6 sm:gap-8">
               {ratings.map((r) => (
-                <img key={r.alt} src={r.src} alt={r.alt} className="h-12 sm:h-14 w-auto object-contain select-none" loading="lazy" />
+                <a
+                  key={r.alt}
+                  href={r.url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="inline-block transition-opacity hover:opacity-80"
+                >
+                  <img src={r.src} alt={r.alt} className="h-12 sm:h-14 w-auto object-contain select-none" loading="lazy" />
+                </a>
               ))}
             </div>
           </div>

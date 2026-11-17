@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ReactNativeProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -61,24 +62,47 @@ export default function ReactNativeProcess() {
       tabTitle: 'Discovery',
       tabIcon: '/assets/process/tab-1.png',
       cardTitle: 'Discovery and Scoping',
-      cardDesc:
-        'React Native development begins with more decisions than most frameworks because one codebase has to serve two platforms precisely. Every architecture choice, platform requirement, and business objective is validated before the first sprint begins.',
+      cardDesc: (
+        <>
+          Define the right development scope before committing your budget. Our React Native consultants run a{' '}
+          <a
+            href="https://inceptivesdigital.com/discovery-sprint"
+            className="text-[#00CE44] underline hover:text-white transition-colors"
+          >
+            discovery sprint
+          </a>{' '}
+          that assesses product requirements and technical dependencies to establish architecture priorities and a realistic delivery estimate.
+        </>
+      ),
     },
     {
       num: '02.',
       tabTitle: 'UI/UX Design',
       tabIcon: '/assets/process/tab-2.png',
       cardTitle: 'UI/UX Design and Prototype',
-      cardDesc:
-        'With design approved on both platforms, engineering runs on two-week sprints where a working build is shared at each cycle close. Client feedback is incorporated continuously, so the product that reaches the App Store and Google Play reflects decisions made throughout, not just at the end.',
+      cardDesc: (
+        <>
+          The approved scope guides our UI/UX designers as they develop{' '}
+          <a
+            href="https://inceptivesdigital.com/interactive-prototyping"
+            className="text-[#00CE44] underline hover:text-white transition-colors"
+          >
+            interactive prototypes
+          </a>{' '}
+          in Figma. You can review navigation and critical user journeys before engineering begins, reducing avoidable design revisions during development.
+        </>
+      ),
     },
     {
       num: '03.',
       tabTitle: 'Development',
       tabIcon: '/assets/process/tab-3.png',
       cardTitle: 'Agile Development Sprints',
-      cardDesc:
-        'Development runs on two-week sprints, delivering a working build on both iOS and Android at each cycle close. Every decision, update, and change is tracked, so feedback shapes the product continuously rather than arriving at the end of the engagement.',
+      cardDesc: (
+        <>
+          Our React Native engineers turn approved designs into working builds through two-week development sprints. At each checkpoint, clients review completed functionality and provide feedback before the next development milestone.
+        </>
+      ),
     },
     {
       num: '04.',
@@ -87,36 +111,39 @@ export default function ReactNativeProcess() {
       cardTitle: 'QA and Pre-Launch Testing',
       cardDesc: (
         <>
-          Once the build is complete,{' '}
+          Our QA engineers apply{' '}
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-testing-strategies"
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-[#00CE44] underline hover:text-white transition-colors"
           >
             mobile app testing strategies
           </a>{' '}
-          are applied on real iOS and Android hardware across device tiers, screen sizes, and active OS versions. Every cross-platform compatibility issue, performance gap, and security vulnerability is resolved before App Store and Google Play submission begins.
+          to React Native builds on real iOS and Android devices across supported screen sizes, device tiers, and OS versions. They investigate compatibility issues and performance gaps, while security tests check readiness against agreed release criteria.
         </>
       ),
     },
     {
       num: '05.',
-      tabTitle: 'Support',
+      tabTitle: 'Deployment',
       tabIcon: '/assets/process/tab-5.png',
       cardTitle: 'Dual-Platform Deployment and Support',
       cardDesc: (
         <>
-          After both platform submissions are approved,{' '}
+          Following QA approval, our release engineers prepare production builds for{' '}
           <a
-            href="https://inceptivesdigital.com/blog/10-aso-strategies-to-increase-your-app-store-rankings"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
             className="text-[#00CE44] underline hover:text-white transition-colors"
           >
-            ASO strategies
+            App Store and Google Play submission
           </a>
-          , metadata, and graphic assets are handled in-house for the App Store and Google Play simultaneously. Post-launch support continues with JS bundle optimization, OS compatibility updates, and feature iteration with a dedicated React Native engineer assigned from launch day.
+          . The team handles store metadata and{' '}
+          <Link
+            to="/services/app-store-optimization"
+            className="text-[#00CE44] underline hover:text-white transition-colors"
+          >
+            ASO requirements
+          </Link>
+          , while post-launch support addresses OS compatibility as platform updates roll out.
         </>
       ),
     },
@@ -127,28 +154,25 @@ export default function ReactNativeProcess() {
   return (
     <section id="process" className="py-20 lg:py-28 bg-[#0c0d10] relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Top Heading: H2, 40px bold, text-center */}
+        {/* Top Heading */}
         <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight max-w-4xl mx-auto">
-          The{' '}
-          <span className="text-[#00CE44]">React Native App Development Process</span>{' '}
-          in Stages
+          From Discovery to Deployment, Our{' '}
+          <span className="text-[#00CE44]">React Native App Development Process</span>
         </h2>
 
-        {/* Bottom Text: 16px font-size, 400 font-weight, text-center */}
+        {/* Bottom Text */}
         <p className="mt-3 sm:mt-4 text-white/90 text-[16px] font-normal text-center max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
-          Inceptives Digital manages every React Native{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-development-timeline"
-            target="_blank"
-            rel="noopener noreferrer"
+          As an experienced{' '}
+          <Link
+            to="/services/cross-platform-app-development"
             className="text-[#00CE44] underline hover:text-white transition-colors"
           >
-            app development timeline
-          </a>{' '}
-          through five defined stages, each with a clear output, a named owner, and a documented milestone that both parties sign off on before the next stage begins.
+            React Native app development company
+          </Link>
+          , Inceptives Digital tailors each project roadmap to its technical scope and business priorities. Our engineers follow defined milestones, with regular client reviews keeping development aligned with project goals.
         </p>
 
-        {/* Interactive Step Navigation Tabs (5 Steps): Exact Clone of Homepage / MobileApp ProcessSection */}
+        {/* Interactive Step Navigation Tabs (5 Steps): Exact UI Design from Homepage ProcessSection.jsx */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -168,7 +192,7 @@ export default function ReactNativeProcess() {
                 onClick={(e) => handleTabClick(idx, e)}
                 className="shrink-0 min-w-[125px] sm:min-w-[140px] lg:min-w-0 group flex flex-col items-center text-center focus:outline-none cursor-pointer transition-all duration-300 pt-1"
               >
-                {/* Circular Icon with Number Badge (No shadow on icon) */}
+                {/* Circular Icon with Number Badge (No shadow on icon, crisp rendering) */}
                 <div
                   className={`w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center rounded-full mb-3.5 transition-all duration-300 ${
                     isActive
@@ -184,7 +208,7 @@ export default function ReactNativeProcess() {
                     }`}
                   />
 
-                  {/* Step Number Badge with 50px border-radius */}
+                  {/* Step Number Badge */}
                   <span
                     className={`absolute -top-1 -right-3.5 sm:-right-4.5 z-10 text-[11px] sm:text-[12px] font-mono font-medium px-2 sm:px-2.5 py-0.5 rounded-[50px] border whitespace-nowrap transition-colors ${
                       isActive
@@ -211,10 +235,10 @@ export default function ReactNativeProcess() {
           })}
         </div>
 
-        {/* Content Card Box: Exact Clone of Homepage ProcessSection.jsx (Zero Borders, Zero Shadows) */}
-        <div className="bg-[#1b1c20] border-0 rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 lg:p-11 shadow-none transition-all duration-300">
+        {/* Content Card Box: Exact Homepage Style (Rounded, Green Circle on Left, Zero Shadows) */}
+        <div className="bg-[#1b1c20] border border-[#2d2f36] rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 lg:p-11 shadow-none transition-all duration-300">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 lg:gap-10">
-            {/* Left: Green Circle with exact matching Tab Icon (Zero shadow, black icon) */}
+            {/* Left: Green Circle with crisp Tab Icon (Zero shadow, black icon) */}
             <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#00CE44] flex items-center justify-center shrink-0 shadow-none">
               <img
                 src={current.tabIcon}
@@ -223,14 +247,14 @@ export default function ReactNativeProcess() {
               />
             </div>
 
-            {/* Right: Heading H3 (25px) + Text P (16px) */}
+            {/* Right: Heading H3 + Text P */}
             <div className="text-left flex-1">
               <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] leading-tight mb-2.5 sm:mb-3">
                 {current.cardTitle}
               </h3>
-              <p className="text-[15px] sm:text-[16px] text-slate-300 leading-relaxed font-normal max-w-4xl">
+              <div className="text-[15px] sm:text-[16px] text-slate-300 leading-relaxed font-normal max-w-4xl">
                 {current.cardDesc}
-              </p>
+              </div>
             </div>
           </div>
         </div>

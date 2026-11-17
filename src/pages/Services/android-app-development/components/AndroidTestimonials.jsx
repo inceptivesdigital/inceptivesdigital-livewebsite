@@ -88,24 +88,45 @@ export default function AndroidTestimonials() {
 
             {/* 3 White/Inverted Platform Logos: Clutch, Bark, Trustpilot */}
             <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-2">
-              <img
-                src="/assets/clutch.png"
-                alt="Clutch 5.0 Rating"
-                className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80"
-                loading="lazy"
-              />
-              <img
-                src="/assets/bark.png"
-                alt="Bark 5.0 Rating"
-                className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80"
-                loading="lazy"
-              />
-              <img
-                src="/assets/trustpilot.png"
-                alt="Trustpilot 4.7 Rating"
-                className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80"
-                loading="lazy"
-              />
+              <a
+                href="https://clutch.co/profile/inceptives-digital"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-opacity hover:opacity-100 inline-block"
+              >
+                <img
+                  src="/assets/clutch.png"
+                  alt="Clutch 5.0 Rating"
+                  className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-opacity hover:opacity-100 inline-block"
+              >
+                <img
+                  src="/assets/bark.png"
+                  alt="Bark 5.0 Rating"
+                  className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.trustpilot.com/review/inceptivesdigital.com"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-opacity hover:opacity-100 inline-block"
+              >
+                <img
+                  src="/assets/trustpilot.png"
+                  alt="Trustpilot 4.7 Rating"
+                  className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 

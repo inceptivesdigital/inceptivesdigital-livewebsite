@@ -7,54 +7,52 @@ export default function ReactNativeEmergingTech() {
       icon: '/assets/mobile-app/AI-and-machine-learning-1.svg',
       desc: (
         <>
-          On-device AI in React Native means intelligence without connectivity gaps. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/machine-learning-development-services"
-            target="_blank"
-            rel="noopener noreferrer"
+          Our React Native engineers integrate{' '}
+          <Link
+            to="/services/ai-development"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
-            machine learning development services
-          </a>{' '}
-          use TensorFlow Lite and ML Kit for personalisation, predictive analysis, and adaptive behaviour directly inside the application layer.
+            AI and machine learning
+          </Link>{' '}
+          models using TensorFlow Lite and ML Kit to support intelligent mobile features and on-device processing where appropriate.
         </>
       ),
     },
     {
-      title: 'AR with Viro React',
+      title: 'Augmented Reality Integration',
       icon: '/assets/react-native/Augmented-Virtual-Reality-2.svg',
-      desc: 'React Native leverages ViroReact and React 360 to deliver immersive AR experiences from one codebase, enabling consistent interactions and product visualization across iOS and Android.',
+      desc: 'Bring interactive 3D experiences into React Native applications with ViroReact. Our developers assess device compatibility to deliver AR functionality suited to your product.',
     },
     {
       title: 'IoT Integration',
       icon: '/assets/mobile-app/Internet-Of-Things-1.svg',
-      desc: 'React Native connects to IoT devices through Bluetooth LE and MQTT, bringing real-time monitoring, sensor data processing, and automation into one cross-platform codebase for healthcare, fitness, and automotive.',
+      desc: 'Connect React Native applications with IoT devices through Bluetooth Low Energy and MQTT, enabling real-time monitoring and reliable data exchange across connected products.',
     },
     {
-      title: 'Blockchain',
+      title: 'Blockchain Integration',
       icon: '/assets/mobile-app/blockchain.svg',
       desc: (
         <>
-          Data integrity in any industry cannot be an architectural afterthought.{' '}
+          For products that need{' '}
           <Link
-            to="/blockchain-development"
+            to="/services/blockchain-development"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
-            Blockchain development
-          </Link>{' '}
-          in React Native brings cryptographic verification and immutable record-keeping into the cross-platform product from the ground up.
+            blockchain development
+          </Link>
+          , our engineers integrate supported networks and smart contracts into React Native applications, with security requirements guiding the implementation approach.
         </>
       ),
     },
     {
       title: 'Cloud-Native Architecture',
       icon: '/assets/mobile-app/Cloud-Integration-1.svg',
-      desc: 'AWS Amplify, Firebase, and Google Cloud are integrated from the beginning, enabling scalable infrastructure, real-time synchronization, and consistent application experiences across iOS and Android deployments.',
+      desc: 'Our cloud engineering approach connects React Native applications with AWS, Firebase, and Google Cloud services to support scalable backend infrastructure and data synchronization.',
     },
     {
-      title: '5G-Ready Development',
+      title: '5G-Enabled Mobile Experiences',
       icon: '/assets/ios-app/5G-Architecture.svg',
-      desc: '5G transforms what React Native applications can deliver in real time. A single optimized codebase serves both iOS and Android simultaneously, with low-latency interactions and high-bandwidth data exchange.',
+      desc: 'React Native applications can leverage 5G connectivity for high-bandwidth experiences. Our engineers optimize network handling to maintain responsive functionality as connection conditions change.',
     },
   ]
 
@@ -68,13 +66,13 @@ export default function ReactNativeEmergingTech() {
             <span className="text-[#00CE44]">Emerging Technology</span>
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal max-w-3xl mx-auto text-center">
-            The mobile landscape shifts faster than most development cycles can accommodate. As a React Native app development company, Inceptives Digital evaluates emerging technology at the scoping stage of every engagement, integrating the latest technologies where the product specifically demands it.
+            Our React Native app development capabilities extend to products requiring AI, connected devices, and advanced mobile integrations. Engineers assess compatibility with the existing architecture before selecting the technologies that fit each product.
           </p>
         </div>
 
         {/* 6 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techItems.map((item) => (
+          {techItems.map((item, idx) => (
             <div
               key={item.title}
               className="p-7 rounded-[16px] bg-[#292929] text-left border-0 shadow-none flex flex-col justify-start"
@@ -86,7 +84,7 @@ export default function ReactNativeEmergingTech() {
                 loading="lazy"
               />
               <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-2.5 leading-snug">
-                {item.title}
+                {idx + 1}. {item.title}
               </h3>
               <p className="text-white/90 text-xs sm:text-[13.5px] leading-relaxed font-normal">
                 {item.desc}

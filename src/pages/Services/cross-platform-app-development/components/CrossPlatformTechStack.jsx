@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const TECH_CATEGORIES = [
   {
-    id: 'frameworks',
-    label: 'Frameworks',
+    id: 'development',
+    label: 'Development',
     items: [
       { name: 'Flutter', icon: '/assets/mobile-app/flutter.png' },
       { name: 'React Native', icon: '/assets/mobile-app/react-native.jpg' },
@@ -44,6 +45,23 @@ const TECH_CATEGORIES = [
       { name: 'Fastlane', icon: '/assets/mobile-app/fastlane.jpg' },
     ],
   },
+  {
+    id: 'ai',
+    label: 'AI & Intelligent Features',
+    items: [
+      { name: 'OpenAI', icon: '/assets/mobile-app/python.jpg' },
+      { name: 'TensorFlow Lite', icon: '/assets/mobile-app/flutter.png' },
+      { name: 'LangChain', icon: '/assets/mobile-app/node.jpg' },
+    ],
+  },
+  {
+    id: 'design',
+    label: 'Design & Prototyping',
+    items: [
+      { name: 'Figma', icon: '/assets/mobile-app/typescript.jpg' },
+      { name: 'Adobe XD', icon: '/assets/mobile-app/javascript.png' },
+    ],
+  },
 ]
 
 export default function CrossPlatformTechStack() {
@@ -54,20 +72,29 @@ export default function CrossPlatformTechStack() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Header Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white leading-[1.2] tracking-tight">
               Tech Stack We Use for{' '}
               <span className="text-[#00CE44]">Cross-Platform Mobile App</span> Development
             </h2>
           </div>
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 text-left">
             <p className="text-white/85 text-[16px] leading-relaxed font-normal">
-              The frameworks, libraries, and integrations selected for every engagement are chosen for one reason: production-grade performance across iOS and Android from a single codebase. Every tool earns its place against the specific demands of the product.
+              The frameworks, libraries, and integrations selected for every engagement are chosen for one reason: production-grade performance across iOS and Android from a single codebase. Every tool earns its place against the specific demands of the product, including the{' '}
+              <a
+                href="https://inceptivesdigital.com/backend-api-development"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-[#00CE44] hover:text-white transition-colors"
+              >
+                backend and API layer
+              </a>{' '}
+              each build connects to.
             </p>
           </div>
         </div>
 
-        {/* Two Solid Green Panels Matching Site-Wide TechStack Layout */}
+        {/* Two Solid Green Panels */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left Green Panel: Category List */}
           <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-between border-0 shadow-none">
@@ -99,11 +126,11 @@ export default function CrossPlatformTechStack() {
                   <img
                     src={tech.icon}
                     alt={tech.name}
-                    className="w-16 h-14 sm:w-20 sm:h-16 object-contain select-none"
+                    className="max-h-full max-w-full object-contain"
                     loading="lazy"
                   />
                 </div>
-                <span className="text-black text-xs sm:text-[14px] font-medium leading-tight">
+                <span className="text-xs font-semibold text-black leading-tight">
                   {tech.name}
                 </span>
               </div>

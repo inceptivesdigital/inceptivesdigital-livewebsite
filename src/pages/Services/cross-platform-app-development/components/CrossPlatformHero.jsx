@@ -23,28 +23,42 @@ export default function CrossPlatformHero() {
   ]
 
   return (
-    <section className="relative min-h-[640px] lg:min-h-[90vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-16 lg:pb-24 bg-black overflow-hidden lg:bg-[url('/assets/cross-platform/crossnew-banner.png')] lg:bg-no-repeat lg:bg-right lg:bg-cover">
+    <section className="relative min-h-[640px] lg:min-h-[88vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-16 lg:pb-24 bg-[#000000] overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column */}
-          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-start text-left pb-4 lg:pb-0">
+          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-start text-left z-10">
             <h1 className="text-[#00CE44] text-sm sm:text-base lg:text-[17px] font-bold block mb-3">
               Cross-Platform App Development Company
             </h1>
 
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.18] mb-5 max-w-2xl">
-              Dual-Platform Market Reach via a Single, High-Performance Codebase
+              Custom iOS and Android Applications, Engineered as One Product
             </h2>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
-              Why build twice when one codebase covers both? Covering iOS and Android from a single foundation is a decision that compounds in value when executed with precision. Inceptives Digital is a cross-platform app development company built around that precision and backed by a broader{' '}
+              Launch your app on iOS and Android without managing two separate development projects. Inceptives Digital is a{' '}
               <Link
                 to="/mobile-app-development"
                 className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
-                mobile app development company
+                cross-platform mobile app development company
               </Link>{' '}
-              practice. Serving startups and high-growth businesses across 20+ markets, every application is engineered to perform equally on both platforms.
+              with 8+ years of experience building custom applications using{' '}
+              <Link
+                to="/flutter-app-development"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+              >
+                Flutter
+              </Link>{' '}
+              and{' '}
+              <Link
+                to="/react-native-app-development"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+              >
+                React Native
+              </Link>
+              . Our cross-platform app developers handle shared architecture and native integrations exactly around your product requirements. With us, you get a coordinated path to both app stores, with less duplicated engineering and greater control over your development investment.
             </p>
 
             {/* Rectangular Button (Sharp Corners, Zero Shadow) */}
@@ -64,7 +78,7 @@ export default function CrossPlatformHero() {
                   key={badge.name}
                   href={badge.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="opacity-90 hover:opacity-100 transition-opacity"
                 >
                   <img
@@ -74,6 +88,18 @@ export default function CrossPlatformHero() {
                   />
                 </a>
               ))}
+            </div>
+          </div>
+
+          {/* Right Column: App Preview */}
+          <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end items-center relative">
+            <div className="w-full max-w-[460px] sm:max-w-[500px] lg:max-w-[540px] xl:max-w-[600px] flex justify-center lg:justify-end">
+              <img
+                src="/assets/cross-platform/crossnew-banner.png"
+                alt="Cross-Platform App Development Company Preview"
+                className="w-full h-auto object-contain max-h-[520px] lg:max-h-[580px] xl:max-h-[620px] select-none"
+                loading="eager"
+              />
             </div>
           </div>
         </div>

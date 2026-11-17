@@ -5,7 +5,9 @@ import CustomMobileServices from './components/CustomMobileServices'
 import StatsCounterBar from './components/StatsCounterBar'
 import DoublePhoneCTA from './components/DoublePhoneCTA'
 import IndustriesMobile from './components/IndustriesMobile'
+import SimilarProjectCTA from './components/SimilarProjectCTA'
 import ProductModelsSection from './components/ProductModelsSection'
+import ProposalCTA from './components/ProposalCTA'
 import SmartCapabilities from './components/SmartCapabilities'
 import MobileCaseStudies from './components/MobileCaseStudies'
 import MobileTestimonials from './components/MobileTestimonials'
@@ -72,6 +74,9 @@ export default function MobileAppDevelopmentPage() {
       {/* 9. From Idea to Launch: Custom Apps We’ve Built Carousel (Image 9) */}
       <MobileCaseStudies />
 
+      {/* Similar Project CTA Banner */}
+      <SimilarProjectCTA />
+
       {/* 6. Custom Mobile Apps for 20+ Industries (Image 6) */}
       <IndustriesMobile />
 
@@ -80,6 +85,9 @@ export default function MobileAppDevelopmentPage() {
 
       {/* 7. Pick Your Model. We Build the Custom Mobile App Around It. (Image 7) */}
       <ProductModelsSection />
+
+      {/* Development Proposal CTA Banner */}
+      <ProposalCTA />
 
       {/* 8. The Capabilities Inside Our Custom Mobile Apps (Image 8) */}
       <SmartCapabilities />
@@ -120,6 +128,8 @@ export default function MobileAppDevelopmentPage() {
    
       {/* 19. Custom Mobile App Development FAQs */}
       <MobileFAQs />
+
+      {/* 20. Ready to Launch Your App? Contact Us Form CTA */}
     </div>
   )
 }

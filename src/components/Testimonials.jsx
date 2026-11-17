@@ -83,7 +83,7 @@ export default function Testimonials() {
                   key={badge.name}
                   href={badge.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="transition-transform duration-200 hover:scale-105 inline-flex items-center justify-center"
                 >
                   <img

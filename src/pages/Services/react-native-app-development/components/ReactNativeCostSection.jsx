@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom'
+
 export default function ReactNativeCostSection() {
   const tiers = [
     {
       name: 'Basic React Native App',
       price: '$10,000–$30,000',
       target:
-        'For businesses, validating a product idea or launching a focused single-purpose cross-platform application.',
+        'For businesses validating a product idea or launching a focused, single-purpose cross-platform application.',
       features: [
         'Core screens and single-purpose user flow',
         'Standard authentication and light third-party integrations',
@@ -15,19 +17,17 @@ export default function ReactNativeCostSection() {
     },
     {
       name: 'Mid-Complexity React Native App',
-      price: '$30,000–$70,000',
+      price: '$30,000 - $70,000',
       target: (
         <>
-          For businesses building a production-ready cross-platform product beyond the{' '}
-          <a
-            href="https://inceptivesdigital.com/mvp-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          For businesses building a production-ready product beyond the{' '}
+          <Link
+            to="/services/mobile-app-development"
             className="text-[#00CE44] underline hover:text-white transition-colors"
           >
             MVP development
-          </a>{' '}
-          standard.
+          </Link>{' '}
+          stage.
         </>
       ),
       features: [
@@ -40,7 +40,7 @@ export default function ReactNativeCostSection() {
     },
     {
       name: 'Complex React Native App',
-      price: '$70,000–$150,000+',
+      price: '$70,000 - $150,000+',
       target:
         'For businesses requiring advanced architecture, native module integration, and regulatory compliance.',
       features: [
@@ -57,23 +57,14 @@ export default function ReactNativeCostSection() {
     <>
       <section className="py-16 sm:py-24 bg-[#000000]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-          {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+          {/* Section Header: Centered */}
           <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
               How Much Does{' '}
               <span className="text-[#00CE44]">React Native App Development</span> Cost?
             </h2>
             <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-              Cost clarity before commitment is the standard at Inceptives Digital. React Native{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
-              >
-                mobile app development cost
-              </a>{' '}
-              is not a range that narrows over time but a precise figure determined at scoping, written into the contract, and held to at delivery regardless of how the engagement evolves.
+              React Native app development cost at Inceptives Digital ranges from $10,000 for a focused MVP to $150,000+ for compliance-driven platforms. Our in-house engineers scope your product first, so each tier below matches the work your app needs. Tell us about your product, and we will outline the scope and a tailored estimate.
             </p>
           </div>
 
@@ -98,45 +89,33 @@ export default function ReactNativeCostSection() {
 
                 {/* 3. Target */}
                 <div className="pb-5 mb-5 border-b border-white/25">
-                  <p className="text-xs sm:text-sm font-medium text-white/90 leading-relaxed">
+                  <span className="text-xs uppercase font-medium text-[#00CE44] tracking-wider block mb-1">
+                    Best for:
+                  </span>
+                  <div className="text-white/90 text-sm leading-relaxed font-normal">
                     {tier.target}
-                  </p>
+                  </div>
                 </div>
 
-                {/* 4. Bullet List */}
-                <ul className="space-y-2.5 text-white/90 text-xs sm:text-sm leading-relaxed">
-                  {tier.features.map((feat) => (
-                    <li key={feat} className="flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* 4. Features */}
+                <div className="mt-2">
+                  <span className="text-xs uppercase font-medium text-[#00CE44] tracking-wider block mb-3">
+                    Includes:
+                  </span>
+                  <ul className="space-y-3">
+                    {tier.features.map((feat) => (
+                      <li
+                        key={feat}
+                        className="text-white/90 text-sm leading-relaxed flex items-start gap-2.5 font-normal"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
-          </div>
-
-          {/* Footer Note + Centered Primary CTA */}
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed mb-7">
-              The number agreed before development is the number at the end. Product scoping can also{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/how-to-reduce-mobile-app-development-cost"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
-              >
-                reduce mobile app development cost
-              </a>{' '}
-              before engineering begins.
-            </p>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
-            >
-              Scope My React Native App
-            </a>
           </div>
         </div>
       </section>
@@ -162,7 +141,7 @@ export default function ReactNativeCostSection() {
               <div className="lg:col-span-7 text-left">
                 <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-[1.2] mb-4 max-w-2xl">
                   <span className="text-[#00CE44]">Find Out What Your React Native App</span>{' '}
-                  Actually Costs.
+                  Costs Exactly.
                 </h2>
 
                 <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-7 max-w-2xl">
@@ -172,7 +151,7 @@ export default function ReactNativeCostSection() {
                 <div className="flex flex-wrap items-center gap-4">
                   <a
                     href="#contact"
-                    className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
+                    className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
                   >
                     Discover My Price
                   </a>
@@ -182,7 +161,7 @@ export default function ReactNativeCostSection() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
                 <img
                   src="/assets/react-native/CTA-22-1.png"
-                  alt="Find Out What Your React Native App Actually Costs."
+                  alt="Find Out What Your React Native App Costs Exactly."
                   className="w-full max-w-[240px] sm:max-w-[290px] lg:max-w-[330px] xl:max-w-[360px] h-auto object-contain block select-none"
                   loading="lazy"
                 />

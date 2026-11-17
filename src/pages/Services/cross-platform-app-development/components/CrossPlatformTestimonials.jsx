@@ -78,7 +78,7 @@ export default function CrossPlatformTestimonials() {
           {/* Left Column: Heading + Text + Platform Logos */}
           <div className="lg:col-span-5 flex flex-col justify-start text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-[1.2] mb-4">
-              What Clients Say About Working With Us
+              What Clients Say About Working With Inceptives
             </h2>
 
             <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-8 max-w-md">
@@ -86,24 +86,45 @@ export default function CrossPlatformTestimonials() {
             </p>
 
             <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-2">
-              <img
-                src="/assets/clutch.png"
-                alt="Clutch 5.0 Rating"
-                className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80"
-                loading="lazy"
-              />
-              <img
-                src="/assets/bark.png"
-                alt="Bark 5.0 Rating"
-                className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80"
-                loading="lazy"
-              />
-              <img
-                src="/assets/trustpilot.png"
-                alt="Trustpilot 4.7 Rating"
-                className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80"
-                loading="lazy"
-              />
+              <a
+                href="https://clutch.co/profile/inceptives-digital"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-opacity hover:opacity-100 inline-block"
+              >
+                <img
+                  src="/assets/clutch.png"
+                  alt="Clutch 5.0 Rating"
+                  className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-opacity hover:opacity-100 inline-block"
+              >
+                <img
+                  src="/assets/bark.png"
+                  alt="Bark 5.0 Rating"
+                  className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.trustpilot.com/review/inceptivesdigital.com"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-opacity hover:opacity-100 inline-block"
+              >
+                <img
+                  src="/assets/trustpilot.png"
+                  alt="Trustpilot 4.7 Rating"
+                  className="h-10 sm:h-11 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 

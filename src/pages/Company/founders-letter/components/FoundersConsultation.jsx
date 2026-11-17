@@ -2,9 +2,9 @@ import ContactForm from '../../contact-us/components/ContactForm'
 
 export default function FoundersConsultation() {
   const ratings = [
-    { src: '/assets/clutch.png', alt: 'Clutch 5.0' },
-    { src: '/assets/bark.png', alt: 'Bark 5.0' },
-    { src: '/assets/trustpilot.png', alt: 'Trustpilot 4.7' },
+    { src: '/assets/clutch.png', alt: 'Clutch 5.0', url: 'https://clutch.co/profile/inceptives-digital' },
+    { src: '/assets/bark.png', alt: 'Bark 5.0', url: 'https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/' },
+    { src: '/assets/trustpilot.png', alt: 'Trustpilot 4.7', url: 'https://www.trustpilot.com/review/inceptivesdigital.com' },
   ]
 
   return (
@@ -42,13 +42,20 @@ export default function FoundersConsultation() {
 
             <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-4 border-t border-white/10">
               {ratings.map((r) => (
-                <img
+                <a
                   key={r.alt}
-                  src={r.src}
-                  alt={r.alt}
-                  className="h-10 sm:h-12 w-auto object-contain select-none opacity-85 hover:opacity-100 transition"
-                  loading="lazy"
-                />
+                  href={r.url}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="inline-block transition-opacity hover:opacity-100"
+                >
+                  <img
+                    src={r.src}
+                    alt={r.alt}
+                    className="h-10 sm:h-12 w-auto object-contain select-none opacity-85 hover:opacity-100 transition"
+                    loading="lazy"
+                  />
+                </a>
               ))}
             </div>
           </div>

@@ -7,91 +7,95 @@ export default function AiHero() {
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
 
-  // Live image URLs from https://nextincep.wpenginepowered.com/ai-development
-  const liveHeroBg = 'https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/ai-banner-dev.png'
-  const liveHeroPhone = 'https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/17promax-newupdate.png'
-  const liveClutch = 'https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/clutch.png'
-  const liveBark = 'https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/bark.png'
-  const liveTrustpilot = 'https://nextincep.wpenginepowered.com/wp-content/uploads/2026/07/trustpilot.png'
+  // Local assets from public/assets
+  const heroBg = '/assets/ai-development/ai-banner-dev.png'
+  const clutchBadge = '/assets/clutch.png'
+  const barkBadge = '/assets/bark.png'
+  const trustpilotBadge = '/assets/trustpilot.png'
 
   return (
     <section
-      className="relative min-h-[600px] lg:min-h-[720px] flex items-center pt-32 sm:pt-40 pb-16 lg:pb-24 bg-[#1E1E1E] overflow-hidden"
+      className="relative w-full min-h-screen min-h-[100dvh] lg:h-screen flex items-center justify-center pt-24 sm:pt-28 lg:pt-24 pb-12 sm:pb-14 lg:pb-10 bg-[#1E1E1E] overflow-hidden"
       style={{
-        backgroundImage: `url("${liveHeroBg}"), url("/assets/ai-development/ai-banner-dev.png")`,
-        backgroundPosition: 'bottom center',
+        backgroundImage: `url("${heroBg}")`,
+        backgroundPosition: 'right center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       }}
     >
-      {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#00CE44]/15 rounded-full blur-[140px] pointer-events-none" />
-
-      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-          {/* Left Column: Heading + Copy + CTA + Trust Badges */}
-          <div className="lg:col-span-7 text-left">
-            <span className="text-[#00CE44] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-4">
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] flex items-center my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center w-full">
+          {/* Left Column: Category + Title + Subtitle + CTA + Review Badges */}
+          <div className="lg:col-span-7 xl:col-span-7 text-left max-w-2xl">
+            {/* Category Tag */}
+            <span className="text-[#00CE44] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3 sm:mb-4">
               AI Development Services
             </span>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black text-white tracking-tight leading-[1.12] mb-6">
+            {/* H1 Title */}
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-black text-white tracking-tight leading-[1.12] mb-4 sm:mb-6">
               <span className="text-[#00CE44]">AI Development Company</span> That Embeds Intelligence Into Your Operations
             </h1>
 
-            <p className="text-white/85 text-sm sm:text-base lg:text-[17px] leading-relaxed max-w-xl mb-8 font-normal">
+            {/* Subheading */}
+            <p className="text-white/85 text-xs sm:text-base lg:text-[16px] xl:text-[17px] leading-relaxed mb-6 sm:mb-8 font-normal max-w-xl">
               Chatbots, agents, generative AI, automation workflows, and complete AI systems, built for businesses that want AI to run their operations, not assist them.
             </p>
 
-            <div className="mb-10">
+            {/* CTA Button */}
+            <div className="mb-8 sm:mb-10 lg:mb-12">
               <button
                 type="button"
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 cursor-pointer shadow-lg shadow-[#00CE44]/20"
+                className="inline-flex items-center justify-center px-7 sm:px-8 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-xs sm:text-sm md:text-base tracking-tight transition-all duration-150 active:scale-95 cursor-pointer shadow-lg shadow-[#00CE44]/20 border-0"
               >
                 Book an AI Consultation
               </button>
             </div>
 
-            {/* Review Badges imported from live links */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-4 border-t border-white/10">
-              <img
-                src={liveClutch}
-                onError={(e) => { e.currentTarget.src = '/assets/clutch.png' }}
-                alt="Clutch 5.0 Rating"
-                className="h-10 sm:h-12 w-auto object-contain select-none"
-              />
-              <img
-                src={liveBark}
-                onError={(e) => { e.currentTarget.src = '/assets/bark.png' }}
-                alt="Bark 5.0 Rating"
-                className="h-10 sm:h-12 w-auto object-contain select-none"
-              />
-              <img
-                src={liveTrustpilot}
-                onError={(e) => { e.currentTarget.src = '/assets/trustpilot.png' }}
-                alt="Trustpilot 4.7 Rating"
-                className="h-10 sm:h-12 w-auto object-contain select-none"
-              />
+            {/* Review Badges */}
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 pt-4 sm:pt-6 border-t border-white/10">
+              <a
+                href="https://clutch.co/profile/inceptives-digital"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-block transition-opacity hover:opacity-80"
+              >
+                <img
+                  src={clutchBadge}
+                  alt="Clutch 5.0 Rating"
+                  className="h-8 sm:h-10 lg:h-12 w-auto object-contain select-none"
+                />
+              </a>
+              <a
+                href="https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-block transition-opacity hover:opacity-80"
+              >
+                <img
+                  src={barkBadge}
+                  alt="Bark 5.0 Rating"
+                  className="h-8 sm:h-10 lg:h-12 w-auto object-contain select-none"
+                />
+              </a>
+              <a
+                href="https://www.trustpilot.com/review/inceptivesdigital.com"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="inline-block transition-opacity hover:opacity-80"
+              >
+                <img
+                  src={trustpilotBadge}
+                  alt="Trustpilot 4.7 Rating"
+                  className="h-8 sm:h-10 lg:h-12 w-auto object-contain select-none"
+                />
+              </a>
             </div>
           </div>
 
-          {/* Right Column: Hand holding iPhone with green circular backdrop */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative flex items-center justify-center">
-              {/* Overlapping green circles as seen in live hero section */}
-              <div className="absolute w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] rounded-full bg-[#00CE44] -top-6 -left-6 z-0" />
-              <div className="absolute w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] rounded-full bg-[#00CE44] -bottom-8 -right-4 z-0 opacity-90" />
-
-              <img
-                src={liveHeroPhone}
-                onError={(e) => { e.currentTarget.src = '/assets/ai-development/17promax-newupdate.png' }}
-                alt="AI Development Platform Demo"
-                className="relative z-10 w-[280px] sm:w-[360px] lg:w-[420px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)] select-none"
-                loading="eager"
-              />
-            </div>
-          </div>
+          {/* Right Column: Empty column reserved for background phone artwork from ai-banner-dev.png */}
+          <div className="hidden lg:block lg:col-span-5 xl:col-span-5 pointer-events-none" />
         </div>
       </div>
     </section>

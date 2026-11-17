@@ -8,12 +8,14 @@ export default function MobileCaseStudies() {
   const touchEndX = useRef(0)
 
   const slides = [
+    // 1. DPS Airem
     {
       id: 'dps-airem',
       cardBg: 'bg-[#EBF946]',
       textColor: 'text-[#111111]',
       brand: 'DPS Airem',
       logo: '/assets/case-studies/dps-logo.png',
+      logoAlt: 'DPS Airem Logo',
       titleColor: 'text-[#111111]',
       subtitle: 'Mobile Workforce Management for Distributed Security Operations',
       desc: 'We engineered a React Native mobile application with GPS geofencing and offline-first architecture. Guards can record attendance and report incidents without continuous connectivity. A Node.js backend synchronizes field activity with the management dashboard, while role-based access supports different operational responsibilities.',
@@ -27,64 +29,22 @@ export default function MobileCaseStudies() {
       buttonText: 'Read the DPS Airem Case Study →',
       buttonBg: 'bg-[#151515] hover:bg-[#252525]',
       buttonTextCol: 'text-white',
-      externalUrl: 'https://inceptivesdigital.com/portfolio/dps-airem',
+      buttonUrl: 'https://inceptivesdigital.com/portfolio/dps-airem',
       mockup: '/assets/case-studies/dps-mockup.svg',
+      mockupAlt: 'DPS Airem App Screens',
     },
-    // {
-    //   id: 'fitness360',
-    //   cardBg: 'bg-white',
-    //   textColor: 'text-[#111215]',
-    //   brand: 'Fitness360 Tracker',
-    //   logo: '/assets/case-studies/pets-logo.png',
-    //   titleColor: 'text-[#16A34A]',
-    //   subtitle: 'A Mobile Fitness & Nutrition Platform With AI Coaching',
-    //   desc: 'Fitness360 Tracker brings calorie tracking and dietitian-created meal plans into an iPhone application. The product also includes AI coaching insights and weekly progress reports. Community challenges support engagement, while in-app subscriptions provide access to premium functionality.',
-    //   outcomes: [
-    //     'iOS application live on the Apple App Store',
-    //     'AI coaching and weekly fitness reports',
-    //     'Dietitian-created meal plans',
-    //     'Community challenges and leaderboards',
-    //     'Premium in-app subscriptions',
-    //   ],
-    //   platforms: 'iOS — Live | Android — In Review',
-    //   techStack: 'Swift, SwiftUI, AI Coaching, In-App Subscriptions',
-    //   buttonText: 'View on Apple App Store →',
-    //   buttonBg: 'bg-[#16A34A] hover:bg-[#15803d]',
-    //   buttonTextCol: 'text-white',
-    //   externalUrl: 'https://apps.apple.com/us/app/fitness360-tracker/id6758733625',
-    //   mockup: '/assets/case-studies/pets-mockup.png',
-    // }
-    // {
-    //   id: 'cost-effective-energy',
-    //   cardBg: 'bg-white',
-    //   textColor: 'text-[#111215]',
-    //   brand: 'Cost Effective Energy',
-    //   logo: '/assets/case-studies/stakbread-logo.png',
-    //   titleColor: 'text-[#0066CC]',
-    //   subtitle: 'A Mobile Energy Management App With Automated Plan Comparison',
-    //   desc: 'Cost Effective Energy gives users access to electricity plan comparisons based on their consumption. The mobile application includes usage dashboards and automated plan-switching functionality. Customers can also upload supplier bills and manage service transfers when they move.',
-    //   outcomes: [
-    //     'Live on the Apple App Store and Google Play',
-    //     'Electricity plan comparison functionality',
-    //     'Automated plan switching',
-    //     'Energy usage and savings dashboards',
-    //     'Supplier bill uploads and referral rewards',
-    //   ],
-    //   platforms: 'iOS and Android — Live',
-    //   techStack: 'Cross-Platform Mobile, Usage Dashboards, Automated Switching',
-    //   buttonText: 'Apple App Store →',
-    //   buttonBg: 'bg-[#0066CC] hover:bg-[#0052a3]',
-    //   buttonTextCol: 'text-white',
-    //   externalUrl: 'https://apps.apple.com/us/app/cost-effective-energy/id6752792612',
-    //   playStoreUrl: 'https://play.google.com/store/apps/details?id=com.app.cost_effective_energy&hl=en',
-    //   mockup: '/assets/case-studies/stakbread-mockup.png',
-    // },
+    // 2. Fitness360 Tracker
+    
+    // 3. Cost Effective Energy
+   
+    // 4. State of the Art Chiropractic
     {
       id: 'chiropractic',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
       brand: 'State of the Art Chiropractic',
       logo: '/assets/case-studies/chiropractic-logo.png',
+      logoAlt: 'State of the Art Chiropractic Logo',
       titleColor: 'text-[#8A3FFC]',
       subtitle: 'Connected Mobile Healthcare Beyond Clinic Appointments',
       desc: 'A Flutter mobile application brings appointment scheduling and telehealth into the patient experience. We connected it with a physician portal and administration dashboard. The platform incorporates role-based access and HIPAA-focused security controls.',
@@ -98,38 +58,20 @@ export default function MobileCaseStudies() {
       buttonText: 'Read the State of the Art Chiropractic Case Study →',
       buttonBg: 'bg-[#8A3FFC] hover:bg-[#7b34e5]',
       buttonTextCol: 'text-white',
-      externalUrl: 'https://inceptivesdigital.com/portfolio/state-of-the-art-chiropractic',
+      buttonUrl: 'https://inceptivesdigital.com/portfolio/state-of-the-art-chiropractic',
       mockup: '/assets/case-studies/chiropractic-mockup.png',
+      mockupAlt: 'State of the Art Chiropractic App Screens',
     },
-    {
-      id: 'halwar-connect',
-      cardBg: 'bg-white',
-      textColor: 'text-[#111215]',
-      brand: 'Halwar Connect',
-      logo: '/assets/case-studies/mytango-logo.png',
-      titleColor: 'text-[#8B008B]',
-      subtitle: 'A Two-Sided Mobile Marketplace for Local Services',
-      desc: 'We developed two Flutter mobile applications with dedicated customer and provider workflows. Stripe Connect handles transactions and provider payouts. A React.js dashboard centralizes marketplace operations, with Firebase supporting real-time communication.',
-      outcomes: [
-        '3 connected products launched',
-        '2 mobile applications for customers and providers',
-        '2 languages supported: English and French',
-        'Integrated marketplace payments and payouts',
-      ],
-      platforms: 'iOS, Android, Web',
-      techStack: 'Flutter, React.js, Stripe Connect, Firebase',
-      buttonText: 'Read the Halwar Connect Case Study →',
-      buttonBg: 'bg-[#8B008B] hover:bg-[#700070]',
-      buttonTextCol: 'text-white',
-      externalUrl: 'https://inceptivesdigital.com/portfolio/halwar-connect',
-      mockup: '/assets/case-studies/mytango-mockup.png',
-    },
+    // 5. Halwar Connect
+    
+    // 6. WordSmith Pro
     {
       id: 'wordsmith-pro',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
       brand: 'WordSmith Pro',
       logo: '/assets/case-studies/wordsmith-logo.png',
+      logoAlt: 'WordSmith Pro Logo',
       titleColor: 'text-[#E88B13]',
       subtitle: 'AI-Powered Writing Assistance With Real-Time Feedback',
       desc: 'Our React Native engineers integrated OpenAI APIs with LanguageTool to deliver real-time writing feedback. Streaming responses keep suggestions available during composition, while OCR adds printed-document analysis. The React.js admin dashboard manages enterprise accounts and subscription activity through a connected platform.',
@@ -144,15 +86,18 @@ export default function MobileCaseStudies() {
       buttonText: 'Explore WordSmith Pro →',
       buttonBg: 'bg-[#E88B13] hover:bg-[#d47d0e]',
       buttonTextCol: 'text-white',
-      externalUrl: 'https://inceptivesdigital.com/portfolio',
+      buttonUrl: 'https://inceptivesdigital.com/portfolio',
       mockup: '/assets/case-studies/wordsmith-mockup.png',
+      mockupAlt: 'WordSmith Pro App Screens',
     },
+    // 7. Pulse Check Timer
     {
       id: 'pulse-check',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
       brand: 'Pulse Check Timer',
       logo: '/assets/case-studies/pulse-logo.png',
+      logoAlt: 'Pulse Check Timer Logo',
       titleColor: 'text-[#E53935]',
       subtitle: 'Clinical CPR Timing and Event Documentation',
       desc: 'We developed a Flutter clinical application around automated two-minute CPR cycles. Audible prompts guide protocol timing, while offline event logging records critical interventions. The reporting engine generates timestamped PDF and DOCX documents.',
@@ -167,8 +112,9 @@ export default function MobileCaseStudies() {
       buttonText: 'Read the Pulse Check Timer Case Study →',
       buttonBg: 'bg-[#E53935] hover:bg-[#d32f2f]',
       buttonTextCol: 'text-white',
-      externalUrl: 'https://inceptivesdigital.com/portfolio/pulse-check-timer',
+      buttonUrl: 'https://inceptivesdigital.com/portfolio/pulse-check-timer',
       mockup: '/assets/case-studies/pulse-mockup.svg',
+      mockupAlt: 'Pulse Check Timer App Screens',
     },
   ]
 
@@ -194,123 +140,125 @@ export default function MobileCaseStudies() {
   }
 
   return (
-    <section id="case-studies" className="py-16 sm:py-24 lg:py-28 bg-[#000000] relative overflow-hidden">
+    <section id="case-studies" className="py-16 sm:py-24 lg:py-28 bg-black relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         
-        {/* Top Header Row: Headline on Left, Green CTA on Right */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14">
+        {/* Top Header Row: Headline on Left, Green CTA on Right (Exact 1:1 match with homepage CaseStudies) */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-14">
           <div className="max-w-3xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2] mb-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
               From Idea to Launch: <span className="text-[#00CE44]">Custom Apps We’ve Built</span>
             </h2>
-            <p className="text-white/90 text-[16px] leading-relaxed font-normal">
+            <p className="text-white/80 text-sm sm:text-base mt-2.5 leading-relaxed font-normal">
               See how we've helped businesses transform ideas into mobile apps through thoughtful product strategy and scalable development. Our custom mobile app development portfolio spans enterprise mobility and AI-powered products, shaping the architecture around its industry requirements.
             </p>
           </div>
 
-          <div className="shrink-0">
+          <div className="shrink-0 self-start sm:self-center">
             <Link
               to="/portfolio"
-              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-sm sm:text-base tracking-tight transition-colors border-0"
+              className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 shadow-none border-0"
             >
               View Our Full Portfolio
             </Link>
           </div>
         </div>
 
-        {/* Main Showcase Container (Exact Clone of CaseStudies.jsx, Zero Shadow, Zero Border) */}
-        <div
-          className="rounded-[25px] overflow-hidden relative select-none"
+        {/* Main Showcase Container with Equal Dimensions and Zero Height Jumps (Identical to CaseStudies.jsx) */}
+        <div 
+          className="rounded-[25px] overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.6)] relative select-none"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div
+          {/* Continuous Sliding Horizontal Track */}
+          <div 
             className="flex w-full transition-transform duration-600 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform items-stretch"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {slides.map((slide, index) => (
-              <div
+              <div 
                 key={slide.id}
-                className={`w-full shrink-0 min-w-full flex flex-col lg:flex-row items-stretch justify-between min-h-[520px] sm:min-h-[560px] lg:min-h-[540px] xl:min-h-[570px] relative ${slide.cardBg} rounded-[25px] overflow-hidden`}
+                className={`w-full shrink-0 min-w-full flex flex-col lg:flex-row items-stretch justify-between min-h-[520px] sm:min-h-[560px] lg:min-h-[520px] xl:min-h-[560px] 2xl:min-h-[600px] lg:h-[530px] xl:h-[570px] 2xl:h-[610px] relative ${slide.cardBg} rounded-[25px] overflow-hidden`}
               >
-                {/* Left Column */}
-                <div className="w-full lg:w-[44%] xl:w-[42%] p-6 sm:p-8 lg:p-10 xl:p-12 xl:pl-14 flex flex-col justify-center text-left shrink-0 z-10">
+                {/* Left Column: Brand Info, Title, Copy, Bullets, Meta & CTA Buttons */}
+                <div className="w-full lg:w-[42%] xl:w-[38%] p-6 sm:p-8 lg:p-9 xl:p-12 xl:pl-16 flex flex-col justify-center text-left shrink-0 z-10">
                   
                   {/* Brand Logo */}
-                  <div className="h-10 sm:h-11 mb-3 sm:mb-4 flex items-center justify-start">
+                  <div className="h-10 sm:h-12 lg:h-12 mb-3 sm:mb-4 lg:mb-5 flex items-center justify-start">
                     <img
                       src={slide.logo}
-                      alt={slide.brand}
-                      className="max-h-9 sm:max-h-11 w-auto object-contain select-none"
+                      alt={slide.logoAlt || slide.brand}
+                      className="max-h-9 sm:max-h-11 lg:max-h-12 w-auto object-contain select-none"
                       loading="lazy"
                     />
                   </div>
 
-                  {/* Brand Name */}
-                  <h3 className={`text-xl sm:text-2xl lg:text-[28px] xl:text-[32px] font-black tracking-tight leading-tight mb-1.5 ${slide.titleColor}`}>
+                  {/* Brand Name / Title */}
+                  <h3 className={`text-xl sm:text-2xl lg:text-[28px] xl:text-[32px] font-black tracking-tight leading-tight mb-2 ${slide.titleColor}`}>
                     {slide.brand}
                   </h3>
 
-                  {/* Subtitle */}
-                  <h4 className={`text-xs sm:text-sm lg:text-[15px] font-bold tracking-tight mb-3 ${slide.textColor}`}>
+                  {/* Subtitle / Category */}
+                  <h4 className={`text-xs sm:text-sm lg:text-[15px] font-bold tracking-tight mb-3 lg:mb-3.5 ${slide.textColor}`}>
                     {slide.subtitle}
                   </h4>
 
-                  {/* Description */}
-                  <p className={`text-xs sm:text-[13.5px] leading-relaxed font-normal mb-4 ${slide.cardBg === 'bg-white' ? 'text-slate-600' : 'text-black/85'}`}>
+                  {/* Solution / Description */}
+                  <p className={`text-xs sm:text-sm leading-relaxed font-normal mb-3 ${slide.cardBg === 'bg-white' ? 'text-slate-600' : 'text-black/85'}`}>
                     {slide.desc}
                   </p>
 
-                  {/* Outcomes List */}
-                  <ul className={`space-y-1 mb-5 text-xs ${slide.cardBg === 'bg-white' ? 'text-slate-700' : 'text-black/90'}`}>
-                    {slide.outcomes.map((item) => (
-                      <li key={item} className="flex items-center gap-2 font-medium">
+                  {/* Outcomes Bullets */}
+                  <ul className={`space-y-1 mb-3.5 text-xs sm:text-[13px] ${slide.cardBg === 'bg-white' ? 'text-slate-700' : 'text-black/90'}`}>
+                    {slide.outcomes.map((item, i) => (
+                      <li key={i} className="flex items-center gap-2 font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-current shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
                   </ul>
 
+                  {/* Platforms & Tech Stack Meta */}
+                  <div className={`text-[11px] sm:text-xs space-y-0.5 mb-5 ${slide.cardBg === 'bg-white' ? 'text-slate-500' : 'text-black/75'}`}>
+                    <p><span className="font-semibold text-black">Platforms:</span> {slide.platforms}</p>
+                    <p><span className="font-semibold text-black">Tech Stack:</span> {slide.techStack}</p>
+                  </div>
+
                   {/* Action Buttons */}
                   <div className="flex flex-wrap items-center gap-3">
-                    {slide.externalUrl ? (
+                    {slide.buttonUrl && (
                       <a
-                        href={slide.externalUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} font-medium text-xs sm:text-sm tracking-tight transition-colors border-0`}
+                        href={slide.buttonUrl}
+                        target={slide.buttonUrl.startsWith('http') ? '_blank' : undefined}
+                        rel={slide.buttonUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        style={{ fontWeight: 500 }}
+                        className={`inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0`}
                       >
                         {slide.buttonText}
                       </a>
-                    ) : (
-                      <Link
-                        to={slide.link}
-                        className={`inline-flex items-center gap-2 px-6 py-3 rounded-none ${slide.buttonBg} ${slide.buttonTextCol} font-medium text-xs sm:text-sm tracking-tight transition-colors border-0`}
-                      >
-                        {slide.buttonText}
-                      </Link>
                     )}
 
-                    {slide.playStoreUrl && (
+                    {slide.secondaryButtonUrl && (
                       <a
-                        href={slide.playStoreUrl}
+                        href={slide.secondaryButtonUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-3 rounded-none bg-[#151515] hover:bg-[#252525] text-white font-medium text-xs sm:text-sm tracking-tight transition-colors border-0"
+                        style={{ fontWeight: 500 }}
+                        className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#151515] hover:bg-[#252525] text-white font-medium text-xs sm:text-sm tracking-tight transition-all duration-200 active:scale-95 shadow-none border-0"
                       >
-                        Google Play →
+                        {slide.secondaryButtonText}
                       </a>
                     )}
                   </div>
                 </div>
 
-                {/* Right Column: 3D Device Mockup */}
-                <div className="w-full lg:w-[56%] xl:w-[58%] flex items-end justify-center lg:justify-end px-4 sm:px-6 lg:px-0 pt-4 lg:pt-6 pb-0 self-end overflow-hidden h-full">
+                {/* Right Column: 3D Device Mockup (Exact 1:1 match with homepage CaseStudies) */}
+                <div className="w-full lg:w-[58%] xl:w-[62%] flex items-end justify-center lg:justify-end px-4 sm:px-6 lg:px-0 pt-4 lg:pt-6 pb-0 self-end overflow-hidden h-full">
                   <img
                     src={slide.mockup}
-                    alt={`${slide.brand} App Screens`}
-                    className="w-auto h-auto max-h-[280px] sm:max-h-[340px] md:max-h-[380px] lg:max-h-[440px] xl:max-h-[490px] max-w-full object-contain object-bottom lg:object-right-bottom select-none translate-y-1 sm:translate-y-2"
+                    alt={slide.mockupAlt || `${slide.brand} App Screens`}
+                    className="w-auto h-auto max-h-[340px] sm:max-h-[400px] md:max-h-[460px] lg:max-h-[490px] xl:max-h-[540px] 2xl:max-h-[580px] max-w-full object-contain object-bottom lg:object-right-bottom select-none translate-y-1 sm:translate-y-2"
                     loading={index === 0 ? 'eager' : 'lazy'}
                   />
                 </div>
@@ -319,7 +267,7 @@ export default function MobileCaseStudies() {
           </div>
         </div>
 
-        {/* Bottom Carousel Controls: Centered Arrows */}
+        {/* Bottom Carousel Controls: Centered Arrows (Exact 1:1 match with homepage CaseStudies) */}
         <div className="flex items-center justify-center gap-4 mt-8 sm:mt-10">
           <button
             onClick={prevSlide}

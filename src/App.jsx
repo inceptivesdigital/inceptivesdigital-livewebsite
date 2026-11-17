@@ -79,19 +79,32 @@ export default function App() {
 
             {/* Services Routes */}
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/ios-app-development" element={<IosAppDevelopment />} />
+            <Route path="/services/ios-app-development" element={<IosAppDevelopment />} />
             <Route path="/android-app-development" element={<AndroidAppDevelopment />} />
+            <Route path="/services/android-app-development" element={<AndroidAppDevelopment />} />
             <Route path="/anroid-app-development" element={<AndroidAppDevelopment />} />
             <Route path="/react-native-app-development" element={<ReactNativeAppDevelopment />} />
+            <Route path="/services/react-native-app-development" element={<ReactNativeAppDevelopment />} />
             <Route path="/flutter-app-development" element={<FlutterAppDevelopment />} />
+            <Route path="/services/flutter-app-development" element={<FlutterAppDevelopment />} />
             <Route path="/kotlin-multiplatform-app-development" element={<KotlinMultiplatformAppDevelopment />} />
+            <Route path="/services/kotlin-multiplatform-app-development" element={<KotlinMultiplatformAppDevelopment />} />
             <Route path="/backend-api-development" element={<BackendApiDevelopment />} />
+            <Route path="/services/backend-api-development" element={<BackendApiDevelopment />} />
             <Route path="/web-app-development-company" element={<WebAppDevelopmentCompany />} />
+            <Route path="/services/web-app-development-company" element={<WebAppDevelopmentCompany />} />
             <Route path="/cross-platform-app-development" element={<CrossPlatformAppDevelopment />} />
+            <Route path="/services/cross-platform-app-development" element={<CrossPlatformAppDevelopment />} />
             <Route path="/product-launch-strategy" element={<ProductLaunchStrategy />} />
+            <Route path="/services/product-launch-strategy" element={<ProductLaunchStrategy />} />
             <Route path="/app-store-optimization" element={<AppStoreOptimization />} />
+            <Route path="/services/app-store-optimization" element={<AppStoreOptimization />} />
             <Route path="/post-launch-analytics-iteration" element={<PostLaunchAnalyticsIteration />} />
+            <Route path="/services/post-launch-analytics-iteration" element={<PostLaunchAnalyticsIteration />} />
             <Route path="/blockchain-development" element={<BlockchainDevelopment />} />
+            <Route path="/services/blockchain-development" element={<BlockchainDevelopment />} />
             <Route path="/ai-development" element={<AiDevelopment />} />
             <Route path="/services/ai-development" element={<AiDevelopment />} />
 

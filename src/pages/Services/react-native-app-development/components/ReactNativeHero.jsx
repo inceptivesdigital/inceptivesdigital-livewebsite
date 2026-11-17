@@ -35,34 +35,34 @@ export default function ReactNativeHero() {
             </h1>
 
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.18] mb-5 max-w-2xl">
-              Engineered for Performance, Built for Rapid Market Delivery
+              Custom React Native Application Development for Cross-Platform Business Growth
             </h2>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
-              A single codebase reaching iOS and Android at native-grade performance is not a compromise. It is an engineering decision. Inceptives Digital, a renowned React Native app development company, has been making that decision precisely for eight years as a{' '}
+              Inceptives Digital brings eight years of mobile engineering experience to React Native application development for{' '}
               <Link
-                to="/mobile-app-development"
+                to="/services/ios-app-development"
                 className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
               >
-                mobile app development company
+                iOS
+              </Link>{' '}
+              and{' '}
+              <Link
+                to="/services/android-app-development"
+                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+              >
+                Android
               </Link>
-              . With 150+ developers managing every stage from architecture to dual-platform submission, applications in JavaScript and TypeScript are delivered to businesses that need to compete faster.
+              . Backed by 150+ developers, the studio delivers custom React Native applications with native integrations and architecture that supports future product growth.
             </p>
 
-            {/* Rectangular Buttons (Sharp Corners, Zero Shadow) */}
+            {/* Rectangular CTA Button (Sharp Corners, Zero Shadow) */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
               >
-                Discuss Your Project
-              </a>
-
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/5 border border-white text-white font-medium text-sm sm:text-base transition-colors"
-              >
-                Schedule A Call
+                Consult Our React Native Experts
               </a>
             </div>
 

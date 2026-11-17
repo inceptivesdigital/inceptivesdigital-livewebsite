@@ -1,66 +1,58 @@
+import { Link } from 'react-router-dom'
+
 export default function ReactNativeServicesGrid() {
   const services = [
     {
       title: 'React Native App Consultation',
       icon: '/assets/ios-app/serivces1.svg',
-      desc: "Inceptives Digital's React Native consultation service turns business objectives into a validated product strategy. Architecture, technology selection, and platform requirements are defined upfront, giving every engagement a foundation that holds through every sprint.",
+      desc: 'Before development begins, React Native consulting services help establish a clear technical direction for the product. Our consultants assess platform requirements and integration dependencies to define a practical roadmap aligned with the project\'s investment.',
     },
     {
       title: 'React Native UI/UX Design',
       icon: '/assets/ios-app/serivces2.svg',
-      desc: (
-        <>
-          Interfaces that feel native on iOS and Android simultaneously require more than good design. Inceptives Digital applies{' '}
-          <a
-            href="https://inceptivesdigital.com/ui-ux-design"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
-          >
-            UI/UX design
-          </a>{' '}
-          principles to every screen using platform-specific interaction standards in Figma and Adobe XD, with usability validated before engineering begins.
-        </>
-      ),
+      desc: 'Give your application an intuitive mobile user experience that respects the interaction standards of both platforms. React Native UI/UX designers develop user flows and interactive prototypes that support usability across iOS and Android.',
     },
     {
       title: 'Custom React Native App Development',
       icon: '/assets/ios-app/serivces3.svg',
       desc: (
         <>
-          Single-codebase applications engineered in JavaScript and TypeScript with native module integration, modular architecture, and optimized JS thread handling. Selecting the right{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
-            target="_blank"
-            rel="noopener noreferrer"
+          Build around the requirements that make your mobile product distinct. Our{' '}
+          <Link
+            to="/services/cross-platform-app-development"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
-            mobile app tech stack
-          </a>{' '}
-          at the architecture stage helps ensure the application remains maintainable.
+            custom React Native app development
+          </Link>{' '}
+          services use modular architecture and native integrations to build reliable iOS and Android applications with room for future expansion.
         </>
       ),
     },
     {
       title: 'React Native App Migration',
       icon: '/assets/ios-app/serivces4.svg',
-      desc: 'Existing applications migrated to React Native without compromising performance or cross-platform compatibility. Code analysis, API integration, and functionality validation are completed before migration begins, so continuity is maintained throughout.',
+      desc: 'Legacy applications require careful assessment before moving to a shared mobile architecture. React Native app migration services address native dependencies and existing integrations, with product rescue helping businesses modernize without disrupting critical workflows.',
     },
     {
       title: 'Dual-Platform Deployment and ASO',
       icon: '/assets/ios-app/serivces5.svg',
       desc: (
         <>
-          React Native&apos;s single codebase advantage extends to deployment. App Store and Google Play submission, policy compliance, metadata, graphic assets, and{' '}
-          <a
-            href="https://inceptivesdigital.com/app-store-optimization"
-            target="_blank"
-            rel="noopener noreferrer"
+          Bring your React Native application to market through a coordinated{' '}
+          <Link
+            to="/services/product-launch-strategy"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
-            app store optimization
-          </a>{' '}
-          are all handled in-house, with every listing optimized for discoverability and ranking on both platforms simultaneously.
+            product launch strategy
+          </Link>{' '}
+          across iOS and Android. Our deployment team manages store submissions, while targeted{' '}
+          <Link
+            to="/services/app-store-optimization"
+            className="underline text-[#00CE44] hover:text-white transition-colors"
+          >
+            app store optimization (ASO)
+          </Link>{' '}
+          strengthens listing relevance and helps reach potential users.
         </>
       ),
     },
@@ -69,16 +61,14 @@ export default function ReactNativeServicesGrid() {
       icon: '/assets/ios-app/serivces6.svg',
       desc: (
         <>
-          Post-launch support covering OS compatibility updates, performance monitoring, bug resolution, and feature iteration. Every React Native application is kept current through each iOS and Android release cycle, with the long-term{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-maintenance-cost"
-            target="_blank"
-            rel="noopener noreferrer"
+          As mobile platforms evolve,{' '}
+          <Link
+            to="/services/post-launch-analytics-iteration"
             className="underline text-[#00CE44] hover:text-white transition-colors"
           >
-            mobile app maintenance cost
-          </a>
-          .
+            React Native maintenance services
+          </Link>{' '}
+          help businesses keep their applications compatible with changing OS requirements. Engineers address performance issues and support planned enhancements to maintain product reliability after launch.
         </>
       ),
     },
@@ -87,24 +77,20 @@ export default function ReactNativeServicesGrid() {
   return (
     <section className="py-16 sm:py-24 bg-[#1d1d1d]">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+        {/* Section Header: Centered */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
-            All-inclusive{' '}
-            <span className="text-[#00CE44]">React Native App Development Services</span>{' '}
-            Under One Roof
+            Custom <span className="text-[#00CE44]">React Native App Development Services</span> We Offer
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
-            React Native app development services at Inceptives Digital cover every stage of the product lifecycle without gaps in engineering standards, from the initial question of{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/how-to-build-cross-platform-mobile-app"
-              target="_blank"
-              rel="noopener noreferrer"
+            Our React Native app development services cover the complete product lifecycle, from consultation through post-launch support. An experienced{' '}
+            <Link
+              to="/services/cross-platform-app-development"
               className="underline text-[#00CE44] hover:text-white transition-colors"
             >
-              how to build a cross-platform mobile app
-            </a>{' '}
-            through to launch. From the first consultation to post-launch support, one team manages the entire engagement in-house, so the product that ships reflects the precision applied from the first sprint.
+              cross-platform app development team
+            </Link>{' '}
+            manages each engagement with shared engineering oversight, keeping delivery consistent as you build an app across iOS and Android.
           </p>
         </div>
 
