@@ -49,11 +49,11 @@ export default function LeadershipFounders() {
               className="group flex flex-col bg-[#121316] border border-white/10 overflow-hidden hover:border-[#00CE44]/50 transition-all duration-300"
             >
               {/* Photo Area with Grayscale Tone and subtle hover focus */}
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden bg-[#18191d]">
+              <div className="relative aspect-[1/3] sm:aspect-[16/18] overflow-hidden bg-[#18191d]">
                 <img
                   src={f.image}
                   alt={f.name}
-                  className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121316] via-transparent to-transparent opacity-90" />

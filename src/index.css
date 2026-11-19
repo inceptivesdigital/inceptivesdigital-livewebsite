@@ -42,12 +42,28 @@ button, input, textarea, select {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
 }
 
-/* Buttons Strict Typography & Style: Zero shadow, font-weight 500 */
+/* Buttons Strict Typography & Style: Zero shadow, font-weight 500 (medium) overall */
 button,
+button *,
 a[role="button"],
+a[role="button"] *,
 a[href="#contact"],
+a[href*="/contact"],
+a[href*="/work"],
+a[href*="/portfolio"],
+a[href*="/discovery-call"],
 input[type="submit"],
-.btn {
+input[type="button"],
+.btn,
+.button,
+a.btn,
+a[class*="inline-flex"][class*="items-center"][class*="justify-center"],
+a[class*="bg-[#00CE44]"],
+a[class*="bg-black"],
+a[class*="bg-white"],
+button[class*="rounded"],
+button[type="button"],
+button[type="submit"] {
   box-shadow: none !important;
   font-weight: 500 !important;
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;

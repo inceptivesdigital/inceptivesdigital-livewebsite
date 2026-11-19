@@ -31,9 +31,7 @@ export default function LeadershipCollective() {
         
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-[#00CE44]/10 border border-[#00CE44]/30 text-[#00CE44] text-xs font-bold tracking-wider uppercase">
-            <span>Engineering &amp; Product Leadership</span>
-          </div>
+          
           <h2 className="text-3xl sm:text-5xl lg:text-[46px] font-black text-white tracking-tight leading-[1.15] mb-4">
             The Collective Strength of Inceptives Digital
           </h2>

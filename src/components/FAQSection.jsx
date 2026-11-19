@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-export default function FAQSection() {
+export default function FAQSection({ faqs: customFaqs, heading = "Frequently Asked Questions." }) {
   // Default first item expanded as on live site
   const [openIdx, setOpenIdx] = useState(0)
 
-  const faqs = [
+  const defaultFaqs = [
     {
       q: 'Will my app look and feel native on both platforms?',
       a: 'Every project starts with a structured discovery phase. Goals, industry dynamics, and user profiles are documented before development begins, so the application produces measurable business outcomes rather than just technical deliverables.'
@@ -23,6 +23,8 @@ export default function FAQSection() {
     }
   ]
 
+  const faqs = customFaqs && customFaqs.length > 0 ? customFaqs : defaultFaqs
+
   const toggleFAQ = (idx) => {
     setOpenIdx(openIdx === idx ? -1 : idx)
   }
@@ -33,7 +35,7 @@ export default function FAQSection() {
         
         {/* Top Heading: H2, 40px bold, white, centered */}
         <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-12 sm:mb-16">
-          Frequently Asked Questions.
+          {heading}
         </h2>
 
         {/* Accordion Container */}

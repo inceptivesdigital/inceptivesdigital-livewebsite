@@ -22,9 +22,7 @@ export default function LeadershipCulture() {
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Section Header */}
         <div className="max-w-3xl text-left mb-14 sm:mb-16">
-          <div className="text-[12px] sm:text-[13px] font-bold text-[#00CE44] tracking-[0.2em] uppercase mb-3">
-            Beyond the Work, Together
-          </div>
+          
           <h2 className="text-3xl sm:text-5xl lg:text-[46px] font-black text-white tracking-tight leading-[1.15] mb-4">
             Our People and Culture
           </h2>

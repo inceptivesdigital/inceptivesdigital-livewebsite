@@ -56,11 +56,6 @@ export default function ContactUsPage() {
       <ContactDelivered />
       <ContactAwards />
       <ContactVideoTestimonials />
-      <ContactCtaBanner
-        tag="Engineered For Scale"
-        title="Looking for More Than an Average Digital Product? You've Got the Right Partner."
-        desc="Let's turn your idea into a product people love using, built right, launched fast, and backed by a team that stays invested in your success."
-      />
       <ContactMap />
       <ContactFaqs />
     </div>

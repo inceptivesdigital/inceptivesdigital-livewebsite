@@ -50,7 +50,7 @@ export default function LeadershipPage() {
       <LeadershipFounders />
 
       {/* 3. The Collective Strength of Inceptives Digital */}
-      <LeadershipCollective />
+      {/* <LeadershipCollective /> */}
 
       {/* 4. Businesses We’re Proud to Have Served */}
       <LeadershipClients />
@@ -65,7 +65,7 @@ export default function LeadershipPage() {
       <LeadershipAwards />
 
       {/* 8. Put the Right Minds on Your Idea / Change Catalysts Consultation */}
-      <LeadershipConsultation />
+      {/* <LeadershipConsultation /> */}
     </div>
   )
 }

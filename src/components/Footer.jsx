@@ -81,8 +81,8 @@ export default function Footer() {
     {
       name: 'Dubai, UAE',
       flag: '/assets/flags/ae.webp',
-      address: 'IFZA Business Park Building A2, Dubai Silicon Oasis Dubai, UAE',
-      mapUrl: 'https://maps.app.goo.gl/mkz2q5JivLcZYdkW6',
+      address: 'Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates',
+      mapUrl: 'https://maps.google.com/?q=Building+A1,+Dubai+Digital+Park,+Dubai+Silicon+Oasis,+Dubai,+United+Arab+Emirates',
     },
     {
       name: 'Singapore',

@@ -16,9 +16,7 @@ export default function FoundersConsultation() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left: Heading + Context + Ratings */}
           <div className="lg:col-span-5 text-left pt-2">
-            <span className="text-[#00CE44] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3">
-              Direct Access
-            </span>
+            
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12] mb-5">
               Get in touch!
             </h2>

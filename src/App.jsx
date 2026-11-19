@@ -30,6 +30,15 @@ import PostLaunchAnalyticsIteration from './pages/Services/post-launch-analytics
 import BlockchainDevelopment from './pages/Services/blockchain-development'
 import AiDevelopment from './pages/Services/ai-development'
 
+// Location Pages
+import MobileAppSanFrancisco from './pages/Locations/mobile-app-development-san-francisco'
+import MobileAppAustin from './pages/Locations/mobile-app-development-austin'
+import MobileAppNewYork from './pages/Locations/mobile-app-development-new-york'
+import MobileAppToronto from './pages/Locations/mobile-app-development-toronto'
+import MobileAppLondon from './pages/Locations/mobile-app-development-london'
+import MobileAppDubai from './pages/Locations/mobile-app-development-dubai'
+import MobileAppSingapore from './pages/Locations/mobile-app-development-singapore'
+
 // Company Pages (company/ ke 8 dedicated pages apne apne components ke saath)
 import AboutUs from './pages/Company/about-us'
 import Blogs from './pages/Company/blogs'
@@ -107,6 +116,34 @@ export default function App() {
             <Route path="/services/blockchain-development" element={<BlockchainDevelopment />} />
             <Route path="/ai-development" element={<AiDevelopment />} />
             <Route path="/services/ai-development" element={<AiDevelopment />} />
+
+            {/* Location Routes */}
+            <Route path="/mobile-app-development-san-francisco" element={<MobileAppSanFrancisco />} />
+            <Route path="/locations/mobile-app-development-san-francisco" element={<MobileAppSanFrancisco />} />
+            <Route path="/mobile-app-development-austin" element={<MobileAppAustin />} />
+            <Route path="/locations/mobile-app-development-austin" element={<MobileAppAustin />} />
+            <Route path="/mobile-app-development-newyork" element={<MobileAppNewYork />} />
+            <Route path="/mobile-app-development-new-york" element={<MobileAppNewYork />} />
+            <Route path="/locations/mobile-app-development-newyork" element={<MobileAppNewYork />} />
+            <Route path="/locations/mobile-app-development-new-york" element={<MobileAppNewYork />} />
+            <Route path="/mobile-apps-development-company-in-toronto-canada" element={<MobileAppToronto />} />
+            <Route path="/mobile-app-development-company-in-toronto-canada" element={<MobileAppToronto />} />
+            <Route path="/mobile-app-development-toronto" element={<MobileAppToronto />} />
+            <Route path="/locations/mobile-apps-development-company-in-toronto-canada" element={<MobileAppToronto />} />
+            <Route path="/locations/mobile-app-development-company-in-toronto-canada" element={<MobileAppToronto />} />
+            <Route path="/locations/mobile-app-development-toronto" element={<MobileAppToronto />} />
+            <Route path="/mobile-app-development-company-london-uk" element={<MobileAppLondon />} />
+            <Route path="/mobile-app-development-london" element={<MobileAppLondon />} />
+            <Route path="/locations/mobile-app-development-company-london-uk" element={<MobileAppLondon />} />
+            <Route path="/locations/mobile-app-development-london" element={<MobileAppLondon />} />
+            <Route path="/mobile-app-development-company-dubai-uae" element={<MobileAppDubai />} />
+            <Route path="/mobile-app-development-dubai" element={<MobileAppDubai />} />
+            <Route path="/locations/mobile-app-development-company-dubai-uae" element={<MobileAppDubai />} />
+            <Route path="/locations/mobile-app-development-dubai" element={<MobileAppDubai />} />
+            <Route path="/mobile-app-development-company-singapore" element={<MobileAppSingapore />} />
+            <Route path="/mobile-app-development-singapore" element={<MobileAppSingapore />} />
+            <Route path="/locations/mobile-app-development-company-singapore" element={<MobileAppSingapore />} />
+            <Route path="/locations/mobile-app-development-singapore" element={<MobileAppSingapore />} />
 
             {/* Company Routes (8 Dedicated Company Pages) */}
             <Route path="/about-us" element={<AboutUs />} />

@@ -11,7 +11,12 @@ const cities = [
   { name: 'Toronto', coords: [43.6532, -79.3832], label: 'top' },
   { name: 'New York', coords: [40.7128, -74.006], label: 'right' },
   { name: 'London', coords: [51.5074, -0.1278], label: 'right' },
-  { name: 'Dubai', coords: [25.2048, 55.2708], label: 'left' },
+  {
+    name: 'Dubai',
+    coords: [25.2048, 55.2708],
+    label: 'left',
+    address: 'Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates',
+  },
   {
     name: 'Pakistan',
     coords: [24.8716, 67.0599],

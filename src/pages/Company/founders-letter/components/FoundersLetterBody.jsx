@@ -1,7 +1,7 @@
 export default function FoundersLetterBody() {
   return (
     <section className="py-20 sm:py-28 bg-[#0a0a0c] relative text-left">
-      <div className="w-full mx-auto px-5 sm:px-8 lg:px-12 xl:max-w-[1080px]">
+      <div className="w-full mx-auto px-5 sm:px-8 lg:px-12 xl:max-w-[1600px]">
         <article className="space-y-14 sm:space-y-16">
           {/* Section 1: The Letter */}
           <section className="space-y-5">
@@ -76,7 +76,7 @@ export default function FoundersLetterBody() {
               <p className="text-white font-medium">Titles matter less than responsibility.</p>
               <p className="font-semibold text-white pt-2">A leader should be able to answer three questions:</p>
               
-              <div className="pl-4 sm:pl-6 border-l-2 border-[#00CE44]/60 space-y-2 py-1 my-3 bg-white/[0.02] rounded-r-lg">
+              <div className="pl-4 sm:pl-6 space-y-2 py-1 my-3 ">
                 <p className="text-white font-medium">• What does my team own?</p>
                 <p className="text-white font-medium">• What result are we responsible for?</p>
                 <p className="text-white font-medium">• Who is becoming more capable because of my leadership?</p>
@@ -100,7 +100,7 @@ export default function FoundersLetterBody() {
                 That trust cannot be created through polished claims. It develops through what happens after the agreement is signed.
               </p>
 
-              <div className="pl-4 sm:pl-6 border-l-2 border-[#00CE44]/60 space-y-2 py-1 my-3 bg-white/[0.02] rounded-r-lg">
+              <div className="pl-4 sm:pl-6 space-y-2 py-1 my-3 ">
                 <p className="text-white font-medium">• Does the company communicate when something is going wrong?</p>
                 <p className="text-white font-medium">• Does the team question a weak idea before money is spent building it?</p>
                 <p className="text-white font-medium">• Does someone accept responsibility when a decision fails?</p>
@@ -246,7 +246,7 @@ export default function FoundersLetterBody() {
             </div>
 
             {/* Founder Signature Block */}
-            <div className="pt-8 border-t border-white/10 mt-10">
+            <div className="mt-10">
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 Hannan Shahnoor
               </h3>

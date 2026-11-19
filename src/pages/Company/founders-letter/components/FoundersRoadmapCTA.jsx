@@ -16,10 +16,7 @@ export default function FoundersRoadmapCTA() {
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         <div className="p-8 sm:p-14 lg:p-16 rounded-none bg-[#111215] border border-white/10 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl text-left">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00CE44]/10 border border-[#00CE44]/30 text-[#00CE44] text-xs font-semibold uppercase tracking-wider mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44]" />
-              Product Strategy &amp; Engineering
-            </span>
+            
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight mb-4">
               Serious products need clear decisions before development starts
             </h2>

@@ -45,10 +45,12 @@ export default function ContactCtaBanner({ title, desc, tag, button = 'Submit Yo
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 lg:gap-14 text-left">
           <div className="max-w-3xl">
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-5 bg-[#00CE44]/10 border border-[#00CE44]/30 text-[#00CE44] text-xs font-bold tracking-wider uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] animate-pulse" />
-              <span>{tag || 'Start Your Project'}</span>
-            </div>
+            {tag && (
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-5 bg-[#00CE44]/10 border border-[#00CE44]/30 text-[#00CE44] text-xs font-bold tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] animate-pulse" />
+                <span>{tag}</span>
+              </div>
+            )}
 
             <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-black text-white tracking-tight leading-[1.15] mb-4">
               {renderTitle(title)}
@@ -85,9 +87,6 @@ export default function ContactCtaBanner({ title, desc, tag, button = 'Submit Yo
               <span>{button}</span>
               <ArrowRight className="w-5 h-5 text-black group-hover:translate-x-1.5 transition-transform duration-200" />
             </button>
-            <span className="text-xs text-white/50 font-medium tracking-wide">
-              ⚡ Turnaround within 1 business day
-            </span>
           </div>
         </div>
       </div>

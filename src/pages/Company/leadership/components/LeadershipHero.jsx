@@ -25,10 +25,6 @@ export default function LeadershipHero() {
           {/* Left Column: Heading + Copy + Action CTAs */}
           <div className="lg:col-span-7 text-left">
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-6 bg-[#00CE44]/10 border border-[#00CE44]/30 text-[#00CE44] text-xs font-bold tracking-wider uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] animate-pulse" />
-              <span>Inceptives Digital Leadership</span>
-            </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-black text-white tracking-tight leading-[1.12] mb-6">
               Meet the Visionaries Behind <span className="text-[#00CE44]">Decisions</span>
@@ -51,7 +47,7 @@ export default function LeadershipHero() {
 
               <Link
                 to="/portfolio"
-                className="px-8 py-3.5 rounded-none bg-transparent hover:bg-white/[0.08] text-white font-semibold text-sm sm:text-base tracking-tight transition-all duration-200 cursor-pointer border border-white/20 hover:border-white/40 active:scale-95 inline-flex items-center gap-2"
+                className="px-8 py-3.5 rounded-none bg-transparent hover:bg-white/[0.08] text-white font-medium text-sm sm:text-base tracking-tight transition-all duration-200 cursor-pointer border border-white/20 hover:border-white/40 active:scale-95 inline-flex items-center gap-2"
               >
                 <span>Explore Our Work</span>
               </Link>

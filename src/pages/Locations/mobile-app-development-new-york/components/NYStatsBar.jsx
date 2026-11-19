@@ -1,0 +1,27 @@
+export default function NYStatsBar() {
+  const stats = [
+    { value: '70+', label: 'Apps Shipped' },
+    { value: '8+', label: 'Years Building Products' },
+    { value: '4.9', label: 'on Clutch' },
+    { value: '100%', label: 'Client Success Rate' },
+  ]
+
+  return (
+    <section className="py-12 sm:py-16 bg-[#000000] border-y border-white/5 relative">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((item) => (
+            <div key={item.label} className="flex flex-col items-center justify-center">
+              <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#00CE44] tracking-tight mb-2">
+                {item.value}
+              </span>
+              <span className="text-white/80 text-xs sm:text-sm font-medium tracking-wide">
+                {item.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
