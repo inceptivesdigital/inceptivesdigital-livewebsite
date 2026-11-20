@@ -42,10 +42,12 @@ export default function FAQSection({ faqs: customFaqs, heading = "Frequently Ask
         <div className="w-full space-y-4 sm:space-y-5">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx
+            const qText = faq.q || faq.question
+            const aContent = faq.a ?? faq.answer
 
             return (
               <div
-                key={faq.q}
+                key={qText || idx}
                 className="bg-[#1b1c21] rounded-[16px] sm:rounded-[18px] border border-white/[0.04] overflow-hidden transition-colors duration-300"
               >
                 {/* Accordion Header / Trigger Button */}
@@ -63,7 +65,7 @@ export default function FAQSection({ faqs: customFaqs, heading = "Frequently Ask
                         : 'text-white group-hover:text-white/90'
                     }`}
                   >
-                    {faq.q}
+                    {qText}
                   </h3>
 
                   {/* Chevron Icon: Green pointing up when open, gray pointing down when closed */}
@@ -99,10 +101,10 @@ export default function FAQSection({ faqs: customFaqs, heading = "Frequently Ask
                 >
                   <div className="overflow-hidden">
                     <div className="px-4 sm:px-6 lg:px-5 pb-6 sm:pb-7 pt-0 text-slate-300 text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed font-normal [&_a]:text-[#00CE44] [&_a]:underline hover:[&_a]:text-white [&_a]:transition-colors">
-                      {typeof faq.a === 'string' ? (
-                        <p dangerouslySetInnerHTML={{ __html: faq.a }} />
+                      {typeof aContent === 'string' ? (
+                        <p dangerouslySetInnerHTML={{ __html: aContent }} />
                       ) : (
-                        <p>{faq.a}</p>
+                        <p>{aContent}</p>
                       )}
                     </div>
                   </div>

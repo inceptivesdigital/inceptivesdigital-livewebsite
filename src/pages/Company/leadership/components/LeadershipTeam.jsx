@@ -5,21 +5,21 @@ export default function LeadershipTeam() {
       role: 'Chief Executive Officer',
       focus: 'Product Strategy & Architecture Direction',
       belief: 'Companies shouldn’t create dependencies on single individuals. Strong systems empower autonomous teams to deliver reliable software.',
-      image: '/assets/team/hannan.jpg',
+      image: '/assets/leadership/hannan.png',
     },
     {
       name: 'Areeb Rehman',
       role: 'Chief Operating Officer',
       focus: 'Engineering Operations & Delivery Quality',
       belief: 'Execution rigor and operational consistency are what turn great technical architecture into long-lasting business value.',
-      image: '/assets/team/areeb.jpg',
+      image: '/assets/leadership/areeb.png',
     },
     {
       name: 'Aaron Francis',
       role: 'Vice President RevOps | DevOps',
       focus: 'Infrastructure, Scalability & Automation',
       belief: 'Developer velocity and deployment confidence stem from disciplined CI/CD automation and zero-downtime infrastructure.',
-      image: '/assets/team/aaron.jpg',
+      image: '/assets/leadership/founders-card.png',
     },
   ]
 

@@ -2,7 +2,11 @@ import { useState, useRef } from 'react'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-export default function CaseStudies() {
+export default function CaseStudies({
+  heading = 'Your Idea Deserves Better Than Average Execution.',
+  subtitle = null,
+  ctaText = 'View All Case Studies',
+} = {}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
@@ -210,20 +214,27 @@ export default function CaseStudies() {
 
   return (
     <section id="case-studies" className="py-16 sm:py-24 lg:py-28 bg-black relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]">
         
         {/* Top Header Row: Headline on Left, Green CTA on Right */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight max-w-2xl">
-            Your Idea Deserves Better Than Average Execution.
-          </h2>
+          <div className="max-w-3xl text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
+              {heading}
+            </h2>
+            {subtitle && (
+              <p className="text-white/80 text-sm sm:text-base lg:text-[17px] leading-relaxed font-normal mt-3">
+                {subtitle}
+              </p>
+            )}
+          </div>
 
           <div className="shrink-0">
             <Link
               to="/portfolio"
               className="inline-flex items-center justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-sm sm:text-base tracking-tight transition-all duration-150 active:scale-95 shadow-none border-0"
             >
-              View All Case Studies
+              {ctaText}
             </Link>
           </div>
         </div>

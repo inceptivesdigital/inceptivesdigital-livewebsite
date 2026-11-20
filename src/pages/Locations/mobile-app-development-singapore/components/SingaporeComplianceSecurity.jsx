@@ -1,8 +1,60 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function SingaporeComplianceSecurity() {
   const [activeTab, setActiveTab] = useState(0)
+  const tabsRef = useRef(null)
+  const isDraggingRef = useRef(false)
+  const startXRef = useRef(0)
+  const scrollLeftRef = useRef(0)
+  const hasMovedRef = useRef(false)
+
+  const handleMouseDown = (e) => {
+    isDraggingRef.current = true
+    hasMovedRef.current = false
+    startXRef.current = e.pageX - (tabsRef.current ? tabsRef.current.offsetLeft : 0)
+    scrollLeftRef.current = tabsRef.current ? tabsRef.current.scrollLeft : 0
+  }
+
+  const handleMouseMove = (e) => {
+    if (!isDraggingRef.current || !tabsRef.current) return
+    const x = e.pageX - tabsRef.current.offsetLeft
+    const walk = (x - startXRef.current) * 1.5
+    if (Math.abs(walk) > 4) {
+      hasMovedRef.current = true
+    }
+    tabsRef.current.scrollLeft = scrollLeftRef.current - walk
+  }
+
+  const handleMouseUp = () => {
+    isDraggingRef.current = false
+  }
+
+  const handleWheel = (e) => {
+    if (tabsRef.current && tabsRef.current.scrollWidth > tabsRef.current.clientWidth) {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        tabsRef.current.scrollLeft += e.deltaY * 0.8
+      }
+    }
+  }
+
+  const handleTabClick = (idx, e) => {
+    if (hasMovedRef.current) {
+      return
+    }
+    setActiveTab(idx)
+    if (tabsRef.current && e?.currentTarget) {
+      const container = tabsRef.current
+      const target = e.currentTarget
+      const targetLeft = target.offsetLeft
+      const targetWidth = target.offsetWidth
+      const containerWidth = container.offsetWidth
+      container.scrollTo({
+        left: targetLeft - containerWidth / 2 + targetWidth / 2,
+        behavior: 'smooth',
+      })
+    }
+  }
 
   const tabs = [
     {
@@ -86,17 +138,23 @@ export default function SingaporeComplianceSecurity() {
           </p>
         </div>
 
-        {/* Tab Navigation Bar: Single line full width on desktop, hidden-scrollbar horizontal scroll on smaller devices */}
+        {/* Tab Navigation Bar: Single line full width on desktop (5-col grid), draggable hidden-scrollbar horizontal scroll on smaller devices */}
         <div
-          className="w-full flex flex-nowrap items-center justify-start lg:justify-between gap-2 sm:gap-3 overflow-x-auto no-scrollbar py-2 mb-12 select-none scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          ref={tabsRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onWheel={handleWheel}
+          className="w-full max-w-full flex lg:grid lg:grid-cols-5 items-center gap-2 sm:gap-3 lg:gap-3 overflow-x-auto no-scrollbar py-2 mb-12 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {tabs.map((tab, idx) => (
             <button
               key={idx}
               type="button"
-              onClick={() => setActiveTab(idx)}
-              className={`shrink-0 lg:flex-1 px-4 sm:px-5 py-3 rounded-none whitespace-nowrap text-center text-xs sm:text-sm font-medium transition-all cursor-pointer border-0 ${
+              onClick={(e) => handleTabClick(idx, e)}
+              className={`shrink-0 lg:shrink min-w-[210px] sm:min-w-[230px] lg:min-w-0 lg:w-full px-4 sm:px-5 py-3.5 rounded-none whitespace-nowrap text-center text-xs sm:text-sm font-medium transition-all cursor-pointer border-0 ${
                 activeTab === idx
                   ? 'bg-[#00CE44] text-black font-semibold'
                   : 'bg-[#12141a] text-white/80 hover:bg-[#1a1d26] hover:text-white'

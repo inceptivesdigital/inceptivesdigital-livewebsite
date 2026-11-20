@@ -279,11 +279,14 @@ export default function Navbar() {
                 {[
                   { label: 'Healthcare', to: '/healthcare-app-development' },
                   { label: 'Fitness', to: '/fitness-app-development' },
+                  { label: 'FinTech', to: '/fintech-app-development' },
                   { label: 'Dating', to: '/dating-app-development-company' },
                   { label: 'Education', to: '/education-app-development-company' },
                   { label: 'Real Estate', to: '/real-estate-app-development-company' },
                   { label: 'Travel', to: '/travel-app-development-company' },
                   { label: 'Food Delivery', to: '/food-delivery-app-development' },
+                  { label: 'eCommerce', to: '/ecommerce-app-development-company' },
+                  { label: 'Startup', to: '/startup-app-development-company' },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link
@@ -680,11 +683,14 @@ export default function Navbar() {
                     {[
                       { label: 'Healthcare', to: '/healthcare-app-development' },
                       { label: 'Fitness', to: '/fitness-app-development' },
+                      { label: 'FinTech', to: '/fintech-app-development' },
                       { label: 'Dating', to: '/dating-app-development-company' },
                       { label: 'Education', to: '/education-app-development-company' },
                       { label: 'Real Estate', to: '/real-estate-app-development-company' },
                       { label: 'Travel', to: '/travel-app-development-company' },
                       { label: 'Food Delivery', to: '/food-delivery-app-development' },
+                      { label: 'eCommerce', to: '/ecommerce-app-development-company' },
+                  { label: 'Startup', to: '/startup-app-development-company' },
                     ].map((item) => (
                       <Link
                         key={item.label}

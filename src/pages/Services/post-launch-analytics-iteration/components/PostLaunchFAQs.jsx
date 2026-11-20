@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import { Plus, Minus } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import FAQSection from '../../../../components/FAQSection'
 
-export default function PostLaunchFAQs() {
-  const [openIndex, setOpenIndex] = useState(0)
-
-  const faqs = [
+const faqs = [
     {
       q: 'When should a product start a post-launch analytics engagement?',
       a: 'Right after launch. The first 30 days generate the clearest behavioral signals your product will ever produce, so starting early costs far less than catching up later.',
@@ -114,59 +110,11 @@ export default function PostLaunchFAQs() {
     },
   ]
 
-  const toggleIndex = (index) => {
-    setOpenIndex(openIndex === index ? -1 : index)
-  }
-
+export default function PostLaunchFAQs() {
   return (
-    <section className="py-16 sm:py-24 bg-[#0a0a0a] relative">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
-          <div className="text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-widest mb-2">
-            Post Launch Analytics and Iteration Services
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
-            Frequently Asked{' '}
-            <span className="text-[#00CE44]">Questions</span>
-          </h2>
-        </div>
-
-        {/* Accordion List */}
-        <div className="max-w-4xl mx-auto space-y-4">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndex === index
-            return (
-              <div
-                key={index}
-                className="rounded-[16px] bg-[#141414] overflow-hidden border border-white/5 transition-colors"
-              >
-                <button
-                  onClick={() => toggleIndex(index)}
-                  className="w-full p-6 sm:p-7 flex items-center justify-between text-left gap-4 hover:bg-[#1a1a1a] transition-colors"
-                >
-                  <span className="text-base sm:text-lg lg:text-[19px] font-bold text-white tracking-tight leading-snug">
-                    {faq.q}
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-[#202020] flex items-center justify-center shrink-0 text-[#00CE44]">
-                    {isOpen ? (
-                      <Minus className="w-4 h-4 text-[#00CE44]" />
-                    ) : (
-                      <Plus className="w-4 h-4 text-white/80" />
-                    )}
-                  </div>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-white/80 text-sm sm:text-base leading-relaxed font-normal border-t border-white/5">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={faqs}
+      heading={<>Frequently Asked{' '} <span className="text-[#00CE44]">Questions</span></>}
+    />
   )
 }

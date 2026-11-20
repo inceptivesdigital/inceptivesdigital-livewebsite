@@ -73,7 +73,7 @@ export default function WebAppTechStack() {
         {/* Two Solid Green Panels Matching Site-Wide TechStack Layout */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left Green Panel: Category List */}
-          <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-between border-0 shadow-none">
+          <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-start gap-1 border-0 shadow-none">
             {TECH_CATEGORIES.map((cat, idx) => {
               const isActive = activeCategory === idx
               return (

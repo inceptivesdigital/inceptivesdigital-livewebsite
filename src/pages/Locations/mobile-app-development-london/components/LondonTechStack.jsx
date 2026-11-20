@@ -23,14 +23,14 @@ export default function LondonTechStack() {
             >
               mobile app tech stack
             </Link>{' '}
-            choices you make early on shape a product’s performance, scalability, security, and long-term maintenance. Our mobile app development services in London combine production-ready frameworks, cloud platforms, and engineering tools to match your product&apos;s specific goals.
+            choices you make early on shape a productâ€™s performance, scalability, security, and long-term maintenance. Our mobile app development services in London combine production-ready frameworks, cloud platforms, and engineering tools to match your product&apos;s specific goals.
           </p>
         </div>
 
         {/* Two Solid Green Panels Layout: Matching mobile-app-development */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left Green Panel: Category List */}
-          <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-between border-0 shadow-none">
+          <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-start gap-1 border-0 shadow-none">
             {techStackCategories.map((cat, idx) => {
               const isActive = activeCategory === idx
               return (

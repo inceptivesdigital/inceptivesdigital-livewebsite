@@ -1,99 +1,64 @@
+import StandardTechStack from '../../../../components/StandardTechStack'
+
+const iosCategories = [
+  {
+    name: 'Native iOS Development',
+    items: [
+      { name: 'Swift', img: '/assets/mobile-app/tech/swift.svg' },
+      { name: 'SwiftUI', img: '/assets/mobile-app/tech/swiftui.svg' },
+      { name: 'UIKit', img: '/assets/mobile-app/tech/uikit.svg' },
+      { name: 'iOS SDK', img: '/assets/healthcare/tech/ios.jpg' },
+    ],
+  },
+  {
+    name: 'Backend & APIs',
+    items: [
+      { name: 'Node.js', img: '/assets/mobile-app/node.jpg' },
+      { name: 'REST APIs', img: '/assets/mobile-app/rest-api.jpg' },
+      { name: 'GraphQL', img: '/assets/mobile-app/graphQL.jpg' },
+      { name: 'PostgreSQL', img: '/assets/mobile-app/postgreSQL.jpg' },
+    ],
+  },
+  {
+    name: 'Apple Frameworks & AI',
+    items: [
+      { name: 'Apple HealthKit', img: '/assets/healthcare/tech/apple-healthKit.jpg' },
+      { name: 'OpenAI APIs', img: '/assets/mobile-app/openai.png' },
+      { name: 'TensorFlow', img: '/assets/mobile-app/tensorFlow.jpg' },
+      { name: 'Computer Vision', img: '/assets/mobile-app/computer-vision-1.jpg' },
+    ],
+  },
+  {
+    name: 'Security & Authentication',
+    items: [
+      { name: 'OAuth 2.0', img: '/assets/mobile-app/oauth.jpg' },
+      { name: 'JWT', img: '/assets/mobile-app/jwt.jpg' },
+      { name: 'Biometric Auth', img: '/assets/mobile-app/tech/biometric-auth.svg' },
+      { name: 'SSL/TLS', img: '/assets/mobile-app/ssl-tls.jpg' },
+    ],
+  },
+  {
+    name: 'Cloud, CI/CD & Testing',
+    items: [
+      { name: 'AWS', img: '/assets/mobile-app/aws.jpg' },
+      { name: 'Firebase', img: '/assets/mobile-app/firebase.jpg' },
+      { name: 'GitHub Actions', img: '/assets/mobile-app/gitHub-actions.jpg' },
+      { name: 'Fastlane', img: '/assets/mobile-app/fastlane.jpg' },
+    ],
+  },
+]
+
 export default function IosTechStackTable() {
-  const rows = [
-    {
-      area: 'Native Development',
-      tech: 'Swift, SwiftUI, UIKit, Objective-C',
-    },
-    {
-      area: 'App Architecture',
-      tech: 'MVVM, Swift Concurrency, async/await',
-    },
-    {
-      area: 'Data Storage',
-      tech: 'SwiftData, Core Data, CloudKit',
-    },
-    {
-      area: 'API Integration',
-      tech: 'URLSession, REST APIs, GraphQL, WebSockets',
-    },
-    {
-      area: 'Apple Frameworks',
-      tech: 'HealthKit, MapKit, StoreKit, WidgetKit',
-    },
-    {
-      area: 'AI and Spatial Computing',
-      tech: 'Foundation Models, Core ML, Vision, ARKit, RealityKit',
-    },
-    {
-      area: 'App Security',
-      tech: 'Keychain, LocalAuthentication, CryptoKit',
-    },
-    {
-      area: 'Testing',
-      tech: 'XCTest, XCUITest, Swift Testing, TestFlight',
-    },
-    {
-      area: 'Deployment',
-      tech: 'Xcode, Xcode Cloud, GitHub Actions',
-    },
-    {
-      area: 'Backend Infrastructure',
-      tech: 'AWS, Firebase, Node.js, PostgreSQL',
-    },
-  ]
-
   return (
-    <section className="py-16 sm:py-24 bg-[#000000]">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
-            Technologies Behind Our{' '}
-            <span className="text-[#00CE44]">Native iOS App Development Services</span>
-          </h2>
-          <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
-            Our iOS developers use Apple’s latest SDKs and native frameworks to develop custom iPhone and iPad applications. Every{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
-            >
-              mobile app tech stack
-            </a>{' '}
-            we choose varies according to the product’s functionality and integration requirements.
-          </p>
-        </div>
-
-        {/* 10-Row Engineering Area / Technologies Table */}
-        <div className="w-full overflow-x-auto no-scrollbar rounded-[20px] border border-white/15 bg-[#161616]">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-[#00CE44] text-black">
-                <th className="py-4 px-6 sm:px-8 text-sm sm:text-base font-bold w-1/3 border-b border-black/10">
-                  Engineering Area
-                </th>
-                <th className="py-4 px-6 sm:px-8 text-sm sm:text-base font-bold border-b border-black/10">
-                  Technologies
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-white/10">
-              {rows.map((r, idx) => (
-                <tr
-                  key={r.area}
-                  className={idx % 2 === 0 ? 'bg-[#181818]' : 'bg-[#202020]'}
-                >
-                  <td className="py-4 px-6 sm:px-8 text-sm sm:text-[15px] font-bold text-[#00CE44] whitespace-nowrap">
-                    {r.area}
-                  </td>
-                  <td className="py-4 px-6 sm:px-8 text-xs sm:text-sm text-white/90 font-normal">
-                    {r.tech}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <StandardTechStack
+      heading={
+        <>
+          Technologies Behind Our{' '}
+          <span className="text-[#00CE44]">Native iOS App Development Services</span>
+        </>
+      }
+      subtitle="Our iOS developers use Apple’s latest SDKs and native frameworks to develop custom iPhone and iPad applications. Every mobile app tech stack we choose varies according to the product’s functionality and integration requirements."
+      categories={iosCategories}
+    />
   )
 }

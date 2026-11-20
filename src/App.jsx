@@ -29,6 +29,29 @@ import AppStoreOptimization from './pages/Services/app-store-optimization'
 import PostLaunchAnalyticsIteration from './pages/Services/post-launch-analytics-iteration'
 import BlockchainDevelopment from './pages/Services/blockchain-development'
 import AiDevelopment from './pages/Services/ai-development'
+import AiAppDevelopmentServices from './pages/Services/ai-app-development-services'
+import AiChatbotDevelopmentServices from './pages/Services/ai-chatbot-development-services'
+import AiAgentDevelopment from './pages/Services/ai-agent-development'
+import GenerativeAiDevelopment from './pages/Services/generative-ai-development-company'
+import MachineLearningDevelopment from './pages/Services/machine-learning-development-services'
+import NlpDevelopment from './pages/Services/nlp-development-services'
+import AiMvpDevelopment from './pages/Services/ai-mvp-development'
+import AiAutomationServices from './pages/Services/ai-automation-services'
+import SystemIntegrationApiAutomation from './pages/Services/system-integration-api-automation'
+import BusinessProcessAutomation from './pages/Services/business-process-automation'
+import RpaDevelopmentServices from './pages/Services/rpa-development-services'
+
+// Industries Pages
+import HealthcareAppDevelopment from './pages/Industries/healthcare-app-development'
+import FitnessAppDevelopment from './pages/Industries/fitness-app-development'
+import FintechAppDevelopment from './pages/Industries/fintech-app-development'
+import EducationAppDevelopment from './pages/Industries/education-app-development-company'
+import RealEstateAppDevelopment from './pages/Industries/real-estate-app-development-company'
+import DatingAppDevelopment from './pages/Industries/dating-app-development-company'
+import TravelAppDevelopment from './pages/Industries/travel-app-development-company'
+import FoodDeliveryAppDevelopment from './pages/Industries/food-delivery-app-development'
+import EcommerceAppDevelopment from './pages/Industries/ecommerce-app-development-company'
+import StartupAppDevelopment from './pages/Industries/startup-app-development-company'
 
 // Location Pages
 import MobileAppSanFrancisco from './pages/Locations/mobile-app-development-san-francisco'
@@ -116,6 +139,54 @@ export default function App() {
             <Route path="/services/blockchain-development" element={<BlockchainDevelopment />} />
             <Route path="/ai-development" element={<AiDevelopment />} />
             <Route path="/services/ai-development" element={<AiDevelopment />} />
+            <Route path="/ai-app-development-services" element={<AiAppDevelopmentServices />} />
+            <Route path="/services/ai-app-development-services" element={<AiAppDevelopmentServices />} />
+            <Route path="/ai-chatbot-development-services" element={<AiChatbotDevelopmentServices />} />
+            <Route path="/services/ai-chatbot-development-services" element={<AiChatbotDevelopmentServices />} />
+            <Route path="/ai-agent-development" element={<AiAgentDevelopment />} />
+            <Route path="/services/ai-agent-development" element={<AiAgentDevelopment />} />
+            <Route path="/generative-ai-development-company" element={<GenerativeAiDevelopment />} />
+            <Route path="/services/generative-ai-development-company" element={<GenerativeAiDevelopment />} />
+            <Route path="/machine-learning-development-services" element={<MachineLearningDevelopment />} />
+            <Route path="/services/machine-learning-development-services" element={<MachineLearningDevelopment />} />
+            <Route path="/nlp-development-services" element={<NlpDevelopment />} />
+            <Route path="/services/nlp-development-services" element={<NlpDevelopment />} />
+            <Route path="/ai-mvp-development" element={<AiMvpDevelopment />} />
+            <Route path="/services/ai-mvp-development" element={<AiMvpDevelopment />} />
+            <Route path="/ai-automation-services" element={<AiAutomationServices />} />
+            <Route path="/services/ai-automation-services" element={<AiAutomationServices />} />
+            <Route path="/system-integration-api-automation" element={<SystemIntegrationApiAutomation />} />
+            <Route path="/services/system-integration-api-automation" element={<SystemIntegrationApiAutomation />} />
+            <Route path="/business-process-automation" element={<BusinessProcessAutomation />} />
+            <Route path="/services/business-process-automation" element={<BusinessProcessAutomation />} />
+            <Route path="/rpa-development-services" element={<RpaDevelopmentServices />} />
+            <Route path="/services/rpa-development-services" element={<RpaDevelopmentServices />} />
+
+            {/* Industries Routes */}
+            <Route path="/healthcare-app-development" element={<HealthcareAppDevelopment />} />
+            <Route path="/industries/healthcare-app-development" element={<HealthcareAppDevelopment />} />
+            <Route path="/fitness-app-development" element={<FitnessAppDevelopment />} />
+            <Route path="/industries/fitness-app-development" element={<FitnessAppDevelopment />} />
+            <Route path="/fintech-app-development" element={<FintechAppDevelopment />} />
+            <Route path="/industries/fintech-app-development" element={<FintechAppDevelopment />} />
+            <Route path="/education-app-development-company" element={<EducationAppDevelopment />} />
+            <Route path="/industries/education-app-development-company" element={<EducationAppDevelopment />} />
+            <Route path="/real-estate-app-development-company" element={<RealEstateAppDevelopment />} />
+            <Route path="/industries/real-estate-app-development-company" element={<RealEstateAppDevelopment />} />
+            <Route path="/dating-app-development-company" element={<DatingAppDevelopment />} />
+            <Route path="/industries/dating-app-development-company" element={<DatingAppDevelopment />} />
+            <Route path="/travel-app-development-company" element={<TravelAppDevelopment />} />
+            <Route path="/industries/travel-app-development-company" element={<TravelAppDevelopment />} />
+            <Route path="/food-delivery-app-development" element={<FoodDeliveryAppDevelopment />} />
+            <Route path="/industries/food-delivery-app-development" element={<FoodDeliveryAppDevelopment />} />
+            <Route path="/ecommerce-app-development-company" element={<EcommerceAppDevelopment />} />
+            <Route path="/ecommerce-app-development" element={<EcommerceAppDevelopment />} />
+            <Route path="/industries/ecommerce-app-development-company" element={<EcommerceAppDevelopment />} />
+            <Route path="/industries/ecommerce-app-development" element={<EcommerceAppDevelopment />} />
+            <Route path="/startup-app-development-company" element={<StartupAppDevelopment />} />
+            <Route path="/startup-app-development" element={<StartupAppDevelopment />} />
+            <Route path="/industries/startup-app-development-company" element={<StartupAppDevelopment />} />
+            <Route path="/industries/startup-app-development" element={<StartupAppDevelopment />} />
 
             {/* Location Routes */}
             <Route path="/mobile-app-development-san-francisco" element={<MobileAppSanFrancisco />} />

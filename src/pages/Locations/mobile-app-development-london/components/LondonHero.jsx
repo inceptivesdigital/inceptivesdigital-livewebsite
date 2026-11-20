@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+
 export default function LondonHero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#050608] text-white pt-28 pb-16 lg:pt-36 lg:pb-24">
@@ -51,32 +53,7 @@ export default function LondonHero() {
           </div>
 
           {/* Social Proof Review Badges */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 border-t border-white/10">
-            <div className="flex items-center gap-2">
-              <img
-                src="/assets/locations/london/clutch.png"
-                alt="Clutch 5.0 Rating"
-                className="h-7 sm:h-8 w-auto object-contain select-none"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <img
-                src="/assets/locations/london/bark.png"
-                alt="Bark 5.0 Rating"
-                className="h-7 sm:h-8 w-auto object-contain select-none"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <img
-                src="/assets/locations/london/trustpilot.png"
-                alt="Trustpilot 4.7 Rating"
-                className="h-7 sm:h-8 w-auto object-contain select-none"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          <HeroTrustBadges className="pt-4 border-t border-white/10" />
         </div>
       </div>
     </section>

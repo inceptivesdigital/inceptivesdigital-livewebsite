@@ -1,4 +1,4 @@
-export default function ClientGridSection() {
+export default function ClientGridSection({ heading } = {}) {
   const clients = [
     {
       name: 'Printer Pix',
@@ -44,7 +44,11 @@ export default function ClientGridSection() {
         {/* Section Heading: H2, 40px, bold */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
-            From Startups to <span className="text-[#00CE44]">Growing Enterprises</span>
+            {heading || (
+              <>
+                From Startups to <span className="text-[#00CE44]">Growing Enterprises</span>
+              </>
+            )}
           </h2>
         </div>
 

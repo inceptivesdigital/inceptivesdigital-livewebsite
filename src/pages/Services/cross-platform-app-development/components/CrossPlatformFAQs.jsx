@@ -1,9 +1,6 @@
-import { useState } from 'react'
+import FAQSection from '../../../../components/FAQSection'
 
-export default function CrossPlatformFAQs() {
-  const [openIdx, setOpenIdx] = useState(0)
-
-  const faqs = [
+const faqs = [
     {
       q: '1. What is cross-platform app development?',
       a: 'Cross-platform app development is the process of building a single application that runs on both iOS and Android from one shared codebase. Frameworks like Flutter and React Native make this possible, allowing businesses to reach both platform audiences simultaneously without the overhead of two separate native builds.',
@@ -84,62 +81,11 @@ export default function CrossPlatformFAQs() {
     },
   ]
 
-  const toggleFAQ = (idx) => {
-    setOpenIdx(openIdx === idx ? -1 : idx)
-  }
-
+export default function CrossPlatformFAQs() {
   return (
-    <section id="faqs" className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden border-t border-white/10">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Top Heading */}
-        <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-12 sm:mb-16">
-          Cross-Platform App Development{' '}
-          <span className="text-[#00CE44]">FAQs</span>
-        </h2>
-
-        {/* Accordion Container */}
-        <div className="w-full space-y-3.5">
-          {faqs.map((faq, idx) => {
-            const isOpen = openIdx === idx
-
-            return (
-              <div
-                key={idx}
-                className="bg-[#18191e] rounded-[12px] border border-white/5 overflow-hidden transition-colors duration-200"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full flex items-center justify-between text-left px-6 py-4 sm:py-5 gap-4 cursor-pointer focus:outline-none"
-                  aria-expanded={isOpen}
-                >
-                  <h3
-                    className={`text-sm sm:text-base font-bold tracking-tight leading-snug transition-colors duration-200 ${
-                      isOpen ? 'text-[#00CE44]' : 'text-white'
-                    }`}
-                  >
-                    {faq.q}
-                  </h3>
-
-                  <span
-                    className={`shrink-0 text-lg font-bold leading-none select-none ${
-                      isOpen ? 'text-[#00CE44]' : 'text-white'
-                    }`}
-                  >
-                    {isOpen ? '−' : '+'}
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-0 text-white/85 text-xs sm:text-sm leading-relaxed font-normal">
-                    <div>{faq.a}</div>
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={faqs}
+      heading={<>Cross-Platform App Development{' '} <span className="text-[#00CE44]">FAQs</span></>}
+    />
   )
 }

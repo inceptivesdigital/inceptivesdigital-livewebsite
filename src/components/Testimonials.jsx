@@ -1,4 +1,7 @@
-export default function Testimonials() {
+export default function Testimonials({
+  heading = 'What Our Clients Say About Building With Us',
+  subtitle = 'Every successful product starts with alignment between the people building it and the people who need it. These stories reflect the collaboration, trust, and product decisions behind our work.',
+} = {}) {
   const reviews = [
     {
       name: 'Collis Maddox',
@@ -68,12 +71,12 @@ export default function Testimonials() {
           <div className="flex flex-col justify-start text-left max-w-xl">
             {/* Heading: h2, font-size 35px, bold, white */}
             <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-tight mb-4 sm:mb-6">
-              What Our Clients Say About Building With Us
+              {heading}
             </h2>
 
             {/* Description Text */}
             <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed mb-8 sm:mb-10">
-              Every successful product starts with alignment between the people building it and the people who need it. These stories reflect the collaboration, trust, and product decisions behind our work.
+              {subtitle}
             </p>
 
             {/* Trust Badges Row with Banner-style Links */}

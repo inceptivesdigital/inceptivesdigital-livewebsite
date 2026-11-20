@@ -1,3 +1,4 @@
+import HeroTrustBadges from '../../../../components/HeroTrustBadges'
 import { Link } from 'react-router-dom'
 
 export default function TorontoHero() {
@@ -44,32 +45,7 @@ export default function TorontoHero() {
           </div>
 
           {/* Social Proof Review Badges from Live Link */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4">
-            <div className="flex items-center gap-2">
-              <img
-                src="/assets/locations/toronto/clutch.png"
-                alt="Clutch 5.0 Rating"
-                className="h-10 sm:h-13 w-auto object-contain select-none"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <img
-                src="/assets/locations/toronto/bark.png"
-                alt="Bark 5.0 Rating"
-                className="h-10 sm:h-13 w-auto object-contain select-none"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <img
-                src="/assets/locations/toronto/trustpilot.png"
-                alt="Trustpilot 4.7 Rating"
-                className="h-10 sm:h-13 w-auto object-contain select-none"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          <HeroTrustBadges className="pt-4" />
         </div>
       </div>
     </section>

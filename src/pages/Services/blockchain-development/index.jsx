@@ -4,20 +4,21 @@ import BlockchainValueSection from './components/BlockchainValueSection'
 import BlockchainServicesTabs from './components/BlockchainServicesTabs'
 import BlockchainMidCTA from './components/BlockchainMidCTA'
 import BlockchainIndustries from './components/BlockchainIndustries'
+import BlockchainTechStack from './components/BlockchainTechStack'
 import BlockchainPlatforms from './components/BlockchainPlatforms'
-import BlockchainProcess from './components/BlockchainProcess'
 import BlockchainMarketStats from './components/BlockchainMarketStats'
+import BlockchainBottomCTA from './components/BlockchainBottomCTA'
 import BlockchainWhyChooseUs from './components/BlockchainWhyChooseUs'
 import BlockchainCostSection from './components/BlockchainCostSection'
-import BlockchainBottomCTA from './components/BlockchainBottomCTA'
 import BlockchainAwards from './components/BlockchainAwards'
+import BlockchainProcess from './components/BlockchainProcess'
 import BlockchainFAQs from './components/BlockchainFAQs'
 
 export default function BlockchainDevelopmentPage() {
   useEffect(() => {
-    const seoTitle = 'Blockchain App Development Services | DApps & DeFi'
+    const seoTitle = 'Blockchain Development Services | Inceptives Digital'
     const seoDesc =
-      'Blockchain app development services for DApps, DeFi, NFT platforms, and smart contracts. Build secure, scalable blockchain solutions for modern businesses.'
+      'Our industry-leading blockchain development services are supported by 150+ experienced developers and 8+ years of industry experience. Smart contracts, DeFi, DApps, NFT platforms & enterprise integrations.'
 
     document.title = seoTitle
 
@@ -44,47 +45,52 @@ export default function BlockchainDevelopmentPage() {
       document.head.appendChild(canonical)
     }
     canonical.setAttribute('href', 'https://inceptivesdigital.com/blockchain-development')
+
+    window.scrollTo(0, 0)
   }, [])
 
   return (
-    <div className="bg-[#000000] text-white selection:bg-[#00CE44] selection:text-black">
-      {/* 1. Hero Section + Trusted Brand Logos */}
+    <div className="bg-[#121212] text-white selection:bg-[#00CE44] selection:text-black overflow-x-hidden">
+      {/* 1. Hero + 4-Column Review Trust Bar */}
       <BlockchainHero />
 
-      {/* 2. Blockchain App Development for Products That Deliver Value */}
+      {/* 2. Inceptives Digital as a Blockchain Development Company */}
       <BlockchainValueSection />
 
-      {/* 3. Blockchain App Development Services (8 Interactive Tabs) */}
+      {/* 3. Services Banner + 8 Interactive Service Tabs */}
       <BlockchainServicesTabs />
 
-      {/* 4. Mid CTA Banner: Have a Blockchain Opportunity Worth Exploring? */}
+      {/* 4. CTA Banner 1: Let's Build the Future Together */}
       <BlockchainMidCTA />
 
-      {/* 5. Blockchain App Development Across Industries (Homepage Box Cards) */}
+      {/* 5. Cross-Industry Custom Blockchain Solutions (9 Staggered Cards) */}
       <BlockchainIndustries />
 
-      {/* 6. Diverse Blockchain Development Platforms We Support (9 Platform Cards) */}
+      {/* 6. Tech Stack We Use (7 Logos Row) */}
+      <BlockchainTechStack />
+
+      {/* 7. Diverse Blockchain Development Platforms We Support (9 Cards) */}
       <BlockchainPlatforms />
 
-      {/* 7. Comprehensive Blockchain App Development Process We Follow (6 Steps) */}
-      <BlockchainProcess />
-
-      {/* 8. Why Businesses Are Investing in Blockchain Application Development */}
+      {/* 8. Why Businesses Are Turning to Blockchain in 2026 + Bar Chart */}
       <BlockchainMarketStats />
 
-      {/* 9. Why Businesses Choose Our Blockchain App Development Services + 4 Counters */}
+      {/* 9. CTA Banner 2: Stay Ahead with Blockchain in 2026 */}
+      <BlockchainBottomCTA />
+
+      {/* 10. Why Consider Inceptives Digital + 4-Column Stats Bar */}
       <BlockchainWhyChooseUs />
 
-      {/* 10. Blockchain App Development Cost Breakdown Estimates (3 Tier Cards) */}
+      {/* 11. Cost Breakdown (3 Cards) + Development Effort Donut Chart */}
       <BlockchainCostSection />
-
-      {/* 11. Bottom CTA Banner + Budget Allocation Progress Chart */}
-      <BlockchainBottomCTA />
 
       {/* 12. Awards And Recognitions */}
       <BlockchainAwards />
 
-      {/* 13. FAQs About Our Blockchain App Development Services */}
+      {/* 13. Comprehensive Blockchain Development Process (4 Interactive Tabs) */}
+      <BlockchainProcess />
+
+      {/* 14. FAQs About Our Blockchain Development Services (7 Questions) */}
       <BlockchainFAQs />
     </div>
   )

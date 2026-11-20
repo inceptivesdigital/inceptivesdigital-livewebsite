@@ -69,7 +69,7 @@ export default function AsoIndustries() {
     {
       title: 'Real Estate',
       url: '/real-estate-app-development-company',
-      icon: '/assets/industries-icons/real-estate.svg',
+      icon: '/assets/industries-icons/industries-realstate.svg',
       desc: (
         <>
           Geo-targeted keyword visibility, virtual tour feature highlights, and lead conversion listing structures.{' '}
@@ -85,7 +85,7 @@ export default function AsoIndustries() {
     {
       title: 'Education & eLearning',
       url: '/education-app-development-company',
-      icon: '/assets/industries-icons/education.svg',
+      icon: '/assets/industries-icons/industries-education.svg',
       desc: (
         <>
           Student and parent search intent mapping, interactive course previews, and global localization for learning platforms.{' '}
@@ -101,7 +101,7 @@ export default function AsoIndustries() {
     {
       title: 'Travel & Hospitality',
       url: '/travel-app-development-company',
-      icon: '/assets/industries-icons/travel.svg',
+      icon: '/assets/industries-icons/industries-traveling1.svg',
       desc: (
         <>
           Seasonal travel search optimization, booking engine feature highlights, and multi-currency listing localization.{' '}
@@ -133,7 +133,7 @@ export default function AsoIndustries() {
     {
       title: 'Fitness & Wellness',
       url: '/fitness-app-development',
-      icon: '/assets/industries-icons/fitness.svg',
+      icon: '/assets/industries-icons/industries-fitness.svg',
       desc: (
         <>
           Workout streaming and wearable integration highlights, trial-to-subscriber conversion testing, and community keywords.{' '}

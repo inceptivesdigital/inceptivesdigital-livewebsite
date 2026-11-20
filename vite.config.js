@@ -89,6 +89,60 @@ const SEO_ROUTES = {
       'Inceptives Digital helps digital products grow after launch through structured iteration cycles, data-driven decisions, and continuous improvement.',
     canonical: 'https://inceptivesdigital.com/post-launch-analytics-iteration',
   },
+  '/ai-agent-development': {
+    title: 'AI Agent Development Company | Custom AI Agent Development',
+    description:
+      'Inceptives Digital builds intelligent AI agents that automate workflows, integrate enterprise systems, and deliver measurable business impact.',
+    canonical: 'https://inceptivesdigital.com/ai-agent-development',
+  },
+  '/generative-ai-development-company': {
+    title: 'Generative AI Development Company',
+    description:
+      'A generative AI development company building production-ready systems that automate workflows, generate content, and deliver measurable business impact.',
+    canonical: 'https://inceptivesdigital.com/generative-ai-development-company',
+  },
+  '/machine-learning-development-services': {
+    title: 'Machine Learning Software Development Services & Solutions',
+    description:
+      'Our machine learning development services reduce manual tasks by 50%, improve forecasting accuracy, and deliver scalable, reliable AI systems.',
+    canonical: 'https://inceptivesdigital.com/machine-learning-development-services',
+  },
+  '/nlp-development-services': {
+    title: 'NLP Development Services | Custom NLP Solutions',
+    description:
+      'Build custom NLP solutions for text classification, sentiment analysis, entity extraction, semantic search, document processing, and speech recognition. Conversational systems understand intent, retain context, and respond accurately across customer support, sales, and internal knowledge use cases.',
+    canonical: 'https://inceptivesdigital.com/nlp-development-services',
+  },
+  '/ai-mvp-development': {
+    title: 'AI MVP Development Services | Validate Your AI Idea',
+    description:
+      'Validate your AI idea with rapid MVP development. Test feasibility, data, architecture, and user value before committing to a full-scale AI build.',
+    canonical: 'https://inceptivesdigital.com/ai-mvp-development',
+  },
+  '/ai-automation-services': {
+    title: 'AI Automation Services for Businesses',
+    description:
+      'AI automation services that automate workflows, reduce manual effort, and deliver measurable operational impact across enterprise processes.',
+    canonical: 'https://inceptivesdigital.com/ai-automation-services',
+  },
+  '/system-integration-api-automation': {
+    title: 'System Integration & API Automation Services',
+    description:
+      'System integration and API automation services that connect tools, sync data, and enable seamless workflow communication across platforms.',
+    canonical: 'https://inceptivesdigital.com/system-integration-api-automation',
+  },
+  '/business-process-automation': {
+    title: 'Business Process Automation Services for Workflow Efficiency',
+    description:
+      'Business process automation services that streamline workflows, remove manual operations, and improve cross-system efficiency across business processes.',
+    canonical: 'https://inceptivesdigital.com/business-process-automation',
+  },
+  '/rpa-development-services': {
+    title: 'RPA Development Services | Workflow Automation',
+    description:
+      'Automate repetitive workflows with custom RPA development services. Build reliable bots that connect enterprise systems, reduce errors, and improve efficiency.',
+    canonical: 'https://inceptivesdigital.com/rpa-development-services',
+  },
 }
 
 function applyRouteSeoToHtml(html, seo) {

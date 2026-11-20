@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import FAQSection from '../../../../components/FAQSection'
 
 export const londonFaqs = [
   {
@@ -52,86 +52,10 @@ export const londonFaqs = [
 ]
 
 export default function LondonFaqs() {
-  const [openIdx, setOpenIdx] = useState(0)
-
-  const toggleFAQ = (idx) => {
-    setOpenIdx(openIdx === idx ? -1 : idx)
-  }
-
   return (
-    <section id="faqs" className="py-20 lg:py-20 bg-[#000] relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
-        {/* Top Heading */}
-        <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-12 sm:mb-16">
-          Frequently Asked{' '}
-          <span className="text-[#00CE44]">Questions</span>
-        </h2>
-
-        {/* Accordion Container: Zero Border on Cards */}
-        <div className="w-full space-y-4 sm:space-y-5">
-          {londonFaqs.map((faq, idx) => {
-            const isOpen = openIdx === idx
-            return (
-              <div
-                key={faq.q}
-                className="bg-[#1b1c21] rounded-[16px] sm:rounded-[18px] border-0 overflow-hidden transition-colors duration-300 shadow-none"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full flex items-center justify-between text-left p-4 sm:p-6 lg:p-5 gap-4 cursor-pointer focus:outline-none transition-colors group"
-                  aria-expanded={isOpen}
-                >
-                  <h3
-                    className={`text-[17px] sm:text-[19px] lg:text-[20px] font-medium tracking-tight leading-snug transition-colors duration-200 ${
-                      isOpen
-                        ? 'text-[#00CE44]'
-                        : 'text-white group-hover:text-white/90'
-                    }`}
-                  >
-                    {faq.q}
-                  </h3>
-
-                  <span
-                    className={`shrink-0 transition-transform duration-300 ease-in-out ${
-                      isOpen
-                        ? 'rotate-180 text-[#00CE44]'
-                        : 'rotate-0 text-slate-400 group-hover:text-slate-200'
-                    }`}
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </span>
-                </button>
-
-                <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen
-                      ? 'grid-rows-[1fr] opacity-100'
-                      : 'grid-rows-[0fr] opacity-0'
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="px-4 sm:px-6 lg:px-5 pb-5 sm:pb-6 pt-0 text-white/80 text-sm sm:text-base leading-relaxed font-normal text-left">
-                      {faq.a}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={londonFaqs}
+      heading={<>Frequently Asked{' '} <span className="text-[#00CE44]">Questions</span></>}
+    />
   )
 }

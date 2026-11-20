@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import FAQSection from '../../../../components/FAQSection'
 
 const FAQS = [
   {
@@ -146,53 +145,10 @@ const FAQS = [
 ];
 
 export default function BackendFAQs() {
-  const [openIndex, setOpenIndex] = useState(0);
-
   return (
-    <section className="bg-white py-20 lg:py-[100px] border-t border-[#EAEAEA]">
-      <div className="max-w-[1340px] mx-auto px-6 sm:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-4">
-            <span className="inline-block text-[13px] font-bold uppercase tracking-[0.12em] text-[#00B81B] mb-3">
-              FAQs
-            </span>
-            <h2 className="text-[32px] sm:text-[40px] font-bold text-[#111111] leading-[1.2] tracking-[-0.02em]">
-              Backend & API Development
-            </h2>
-          </div>
-
-          <div className="lg:col-span-8 divide-y divide-[#E5E5E5] border-t border-b border-[#E5E5E5]">
-            {FAQS.map((faq, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div key={faq.question} className="py-5">
-                  <button
-                    type="button"
-                    onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                    className="w-full flex items-center justify-between gap-4 text-left py-2 group"
-                    aria-expanded={isOpen}
-                  >
-                    <span className="text-[18px] sm:text-[19px] font-semibold text-[#111111] group-hover:text-[#00B81B] transition-colors leading-snug">
-                      {faq.question}
-                    </span>
-                    <ChevronDown
-                      className={`w-5 h-5 shrink-0 text-[#111111] transition-transform duration-300 ${
-                        isOpen ? 'rotate-180 text-[#00B81B]' : ''
-                      }`}
-                    />
-                  </button>
-
-                  {isOpen && (
-                    <div className="pt-3 pb-2 pr-8 text-[15px] text-[#555555] leading-[1.75]">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+    <FAQSection
+      faqs={FAQS}
+      heading={<>Backend & API Development</>}
+    />
+  )
 }

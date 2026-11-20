@@ -1,9 +1,6 @@
-import { useState } from 'react'
+import FAQSection from '../../../../components/FAQSection'
 
-export default function AndroidFAQs() {
-  const [openIdx, setOpenIdx] = useState(0)
-
-  const faqs = [
+const faqs = [
     {
       q: '1. How much does it cost to hire an Android app development company?',
       a: 'Basic Android applications typically cost $15,000 - $40,000, mid-complexity products range from $40,000 - $80,000, and advanced platforms start at $80,000 and can exceed $150,000. The final development cost depends on application features, system integrations, and security requirements.',
@@ -137,67 +134,11 @@ export default function AndroidFAQs() {
     },
   ]
 
-  const toggleFAQ = (idx) => {
-    setOpenIdx(openIdx === idx ? -1 : idx)
-  }
-
+export default function AndroidFAQs() {
   return (
-    <section id="faqs" className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Top Heading: H2, 40px bold, centered */}
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-wider block mb-2.5">
-            Android App Development FAQs
-          </span>
-          <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight">
-            Frequently Asked Questions About{' '}
-            <span className="text-[#00CE44]">Android App Development</span>
-          </h2>
-        </div>
-
-        {/* Accordion Container */}
-        <div className="w-full space-y-3.5">
-          {faqs.map((faq, idx) => {
-            const isOpen = openIdx === idx
-
-            return (
-              <div
-                key={faq.q}
-                className="bg-[#242424] rounded-[12px] border-0 shadow-none overflow-hidden transition-colors duration-200"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full flex items-center justify-between text-left px-6 py-4 sm:py-5 gap-4 cursor-pointer focus:outline-none rounded-none"
-                  aria-expanded={isOpen}
-                >
-                  <h3
-                    className={`text-sm sm:text-base font-bold tracking-tight leading-snug transition-colors duration-200 ${
-                      isOpen ? 'text-[#00CE44]' : 'text-white'
-                    }`}
-                  >
-                    {faq.q}
-                  </h3>
-
-                  <span
-                    className={`shrink-0 text-lg font-bold leading-none select-none ${
-                      isOpen ? 'text-[#00CE44]' : 'text-white'
-                    }`}
-                  >
-                    {isOpen ? '−' : '+'}
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-0 text-white/90 text-xs sm:text-sm leading-relaxed font-normal whitespace-pre-line">
-                    <div>{faq.a}</div>
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={faqs}
+      heading={<>Frequently Asked Questions About{' '} <span className="text-[#00CE44]">Android App Development</span></>}
+    />
   )
 }

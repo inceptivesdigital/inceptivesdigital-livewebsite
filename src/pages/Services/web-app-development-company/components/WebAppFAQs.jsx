@@ -1,9 +1,6 @@
-import { useState } from 'react'
+import FAQSection from '../../../../components/FAQSection'
 
-export default function WebAppFAQs() {
-  const [openIdx, setOpenIdx] = useState(0)
-
-  const faqs = [
+const faqs = [
     {
       q: '1. What is a web application?',
       a: 'A web application is software that runs in a browser, such as Salesforce, Notion, or Shopify. It processes data, responds to user inputs, and scales with the business.',
@@ -54,62 +51,11 @@ export default function WebAppFAQs() {
     },
   ]
 
-  const toggleFAQ = (idx) => {
-    setOpenIdx(openIdx === idx ? -1 : idx)
-  }
-
+export default function WebAppFAQs() {
   return (
-    <section id="faqs" className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Top Heading: H2, 40px bold, centered */}
-        <h2 className="text-2xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-12 sm:mb-16">
-          Frequently Asked Questions About{' '}
-          <span className="text-[#00CE44]">Web App Development Services</span>
-        </h2>
-
-        {/* Accordion Container matching IosFAQs */}
-        <div className="w-full space-y-3.5">
-          {faqs.map((faq, idx) => {
-            const isOpen = openIdx === idx
-
-            return (
-              <div
-                key={faq.q}
-                className="bg-[#242424] rounded-[12px] border-0 shadow-none overflow-hidden transition-colors duration-200"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full flex items-center justify-between text-left px-6 py-4 sm:py-5 gap-4 cursor-pointer focus:outline-none"
-                  aria-expanded={isOpen}
-                >
-                  <h3
-                    className={`text-sm sm:text-base font-bold tracking-tight leading-snug transition-colors duration-200 ${
-                      isOpen ? 'text-[#00CE44]' : 'text-white'
-                    }`}
-                  >
-                    {faq.q}
-                  </h3>
-
-                  <span
-                    className={`shrink-0 text-lg font-bold leading-none select-none ${
-                      isOpen ? 'text-[#00CE44]' : 'text-white'
-                    }`}
-                  >
-                    {isOpen ? '−' : '+'}
-                  </span>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-0 text-white/90 text-xs sm:text-sm leading-relaxed font-normal whitespace-pre-line">
-                    <div>{faq.a}</div>
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={faqs}
+      heading={<>Frequently Asked Questions About{' '} <span className="text-[#00CE44]">Web App Development Services</span></>}
+    />
   )
 }

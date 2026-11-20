@@ -1,75 +1,43 @@
+import React from 'react'
+
+const statsBullets = [
+  'Supposedly, the blockchain market is going to be a whopping $94 billion in 2027.',
+  'It is predicted that between now and 2025, about 65% of enterprises will be embracing blockchain for at least some of the processes in their supply chains, payments, or security.',
+  'Reportedly, it is claimed that companies using blockchain witness a 30% decline in terms of fraud and data breach incidents due to the non-tamperable nature of that technology.',
+  'Cross-border payments made through blockchain settle 80% faster than traditional banks.',
+  'Such businesses can also reduce operational costs, especially in finance and logistics, by as much as 50% through the implementation of the technology.',
+]
+
 export default function BlockchainMarketStats() {
-  const bullets = [
-    <>
-      The global blockchain market is projected to grow from $32.99 billion in 2025 to $393.45 billion by 2030, driven by enterprise adoption across finance, healthcare, retail, and other industries. The{' '}
-      <a
-        href="https://inceptivesdigital.com/blog/main-benefits-of-blockchain-technology"
-        className="underline text-[#00CE44] hover:text-white transition-colors"
-      >
-        main benefits of blockchain technology
-      </a>{' '}
-      are pushing businesses toward tokenization, transparency, automation, and secure digital transactions.
-    </>,
-    <>
-      Businesses are increasingly exploring{' '}
-      <a
-        href="https://inceptivesdigital.com/blog/blockchain-app-development-in-business"
-        className="underline text-[#00CE44] hover:text-white transition-colors"
-      >
-        blockchain app development in business
-      </a>{' '}
-      for tokenization, secure digital transactions, smart contracts, and decentralized applications that improve transparency and automation.
-    </>,
-    'Financial institutions are moving beyond blockchain experiments, with growing interest in tokenized assets and blockchain-based settlement systems.',
-    'Blockchain-powered payment infrastructure is helping organizations create faster, more efficient transaction processes across global markets.',
-    <>
-      Industries such as logistics, finance, and healthcare are adopting{' '}
-      <a
-        href="https://inceptivesdigital.com/blog/blockchain-in-software-development"
-        className="underline text-[#00CE44] hover:text-white transition-colors"
-      >
-        blockchain in software development
-      </a>{' '}
-      to improve traceability, data security, and connected business operations.
-    </>,
-  ]
-
   return (
-    <section className="py-16 sm:py-24 bg-[#000000] relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-        <img
-          src="/assets/mobile-app/market-bg-cover.png"
-          alt=""
-          className="w-full h-full object-cover object-center opacity-[0.14]"
-        />
-        <div className="absolute inset-0 bg-black/85" />
-      </div>
-
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
+    <section className="w-full bg-black text-white py-16 md:py-24">
+      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Heading + Bullets */}
+          {/* Left: Heading + 5 Bullets */}
           <div className="lg:col-span-6 text-left">
-            <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2] mb-5">
-              Why Businesses Are Investing in{' '}
-              <span className="text-[#00CE44]">Blockchain Application Development</span>
+            <h2 className="text-[28px] sm:text-[38px] lg:text-[44px] font-bold leading-[1.18] text-white mb-7">
+              Why Businesses Are Turning to Blockchain in 2026
             </h2>
 
-            <ul className="space-y-3.5 text-white/90 text-sm sm:text-[15px] leading-relaxed">
-              {bullets.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="w-2 h-2 rounded-full bg-[#00CE44] mt-2 shrink-0" />
+            <ul className="space-y-4">
+              {statsBullets.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-white/90 text-[15px] sm:text-[16px] leading-[1.7] font-normal"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#00CE44] mt-2.5 shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Right Column: Market Growth Chart */}
+          {/* Right: Market Size Bar Chart */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <img
-              src="/assets/mobile-app/chartsection-1024x622.png"
-              alt="Blockchain Market Growth Projection Chart"
-              className="w-full max-w-[580px] h-auto object-contain select-none"
+              src="/assets/blockchain-v2/bar-chart.webp"
+              alt="Blockchain Market Size Chart"
+              className="w-full max-w-[680px] h-auto object-contain select-none"
               loading="lazy"
             />
           </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import FAQSection from '../../../../components/FAQSection'
 
 export const singaporeFaqs = [
   {
@@ -60,95 +60,10 @@ export const singaporeFaqs = [
 ]
 
 export default function SingaporeFaqs() {
-  const [openIdx, setOpenIdx] = useState(0)
-
-  const toggleFAQ = (idx) => {
-    setOpenIdx(openIdx === idx ? -1 : idx)
-  }
-
   return (
-    <section id="faqs" className="py-20 lg:py-28 bg-[#000000] relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
-        {/* Top Heading: H2, 40px bold, white, centered matching Homepage FAQ */}
-        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
-          <span className="text-[#00CE44] text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">
-            Common Inquiries
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight">
-            Frequently Asked <span className="text-[#00CE44]">Questions</span>
-          </h2>
-        </div>
-
-        {/* Accordion Container matching Homepage FAQSection full 1600px width */}
-        <div className="w-full space-y-4 sm:space-y-5">
-          {singaporeFaqs.map((faq, idx) => {
-            const isOpen = openIdx === idx
-
-            return (
-              <div
-                key={faq.q}
-                className="bg-[#1b1c21] rounded-[16px] sm:rounded-[18px] border border-white/[0.04] overflow-hidden transition-colors duration-300"
-              >
-                {/* Accordion Header / Trigger Button */}
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full flex items-center justify-between text-left p-4 sm:p-6 lg:p-6 gap-4 cursor-pointer focus:outline-none transition-colors group"
-                  aria-expanded={isOpen}
-                >
-                  {/* Question Text: Green #00CE44 when active/open, White when closed */}
-                  <h3
-                    className={`text-[17px] sm:text-[19px] lg:text-[20px] font-medium tracking-tight leading-snug transition-colors duration-200 ${
-                      isOpen
-                        ? 'text-[#00CE44]'
-                        : 'text-white group-hover:text-white/90'
-                    }`}
-                  >
-                    {faq.q}
-                  </h3>
-
-                  {/* Chevron Icon: Green pointing up when open, gray pointing down when closed */}
-                  <span
-                    className={`shrink-0 transition-transform duration-300 ease-in-out ${
-                      isOpen
-                        ? 'rotate-180 text-[#00CE44]'
-                        : 'rotate-0 text-slate-400 group-hover:text-slate-200'
-                    }`}
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </span>
-                </button>
-
-                {/* Smooth Animated Accordion Dropdown Content (CSS Grid Row Transition) */}
-                <div
-                  className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
-                    isOpen
-                      ? 'grid-rows-[1fr] opacity-100'
-                      : 'grid-rows-[0fr] opacity-0'
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="px-4 sm:px-6 lg:px-8 pb-5 sm:pb-6 text-white/80 text-sm sm:text-base leading-relaxed border-t border-white/[0.04] pt-4">
-                      {faq.a}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={singaporeFaqs}
+      heading={<>Frequently Asked <span className="text-[#00CE44]">Questions</span></>}
+    />
   )
 }

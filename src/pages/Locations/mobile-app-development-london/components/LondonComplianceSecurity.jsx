@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 function CheckCircleFill({ className = 'w-5 h-5' }) {
@@ -11,6 +11,58 @@ function CheckCircleFill({ className = 'w-5 h-5' }) {
 
 export default function LondonComplianceSecurity() {
   const [activeTab, setActiveTab] = useState(0)
+  const tabsRef = useRef(null)
+  const isDraggingRef = useRef(false)
+  const startXRef = useRef(0)
+  const scrollLeftRef = useRef(0)
+  const hasMovedRef = useRef(false)
+
+  const handleMouseDown = (e) => {
+    isDraggingRef.current = true
+    hasMovedRef.current = false
+    startXRef.current = e.pageX - (tabsRef.current ? tabsRef.current.offsetLeft : 0)
+    scrollLeftRef.current = tabsRef.current ? tabsRef.current.scrollLeft : 0
+  }
+
+  const handleMouseMove = (e) => {
+    if (!isDraggingRef.current || !tabsRef.current) return
+    const x = e.pageX - tabsRef.current.offsetLeft
+    const walk = (x - startXRef.current) * 1.5
+    if (Math.abs(walk) > 4) {
+      hasMovedRef.current = true
+    }
+    tabsRef.current.scrollLeft = scrollLeftRef.current - walk
+  }
+
+  const handleMouseUp = () => {
+    isDraggingRef.current = false
+  }
+
+  const handleWheel = (e) => {
+    if (tabsRef.current && tabsRef.current.scrollWidth > tabsRef.current.clientWidth) {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        tabsRef.current.scrollLeft += e.deltaY * 0.8
+      }
+    }
+  }
+
+  const handleTabClick = (idx, e) => {
+    if (hasMovedRef.current) {
+      return
+    }
+    setActiveTab(idx)
+    if (tabsRef.current && e?.currentTarget) {
+      const container = tabsRef.current
+      const target = e.currentTarget
+      const targetLeft = target.offsetLeft
+      const targetWidth = target.offsetWidth
+      const containerWidth = container.offsetWidth
+      container.scrollTo({
+        left: targetLeft - containerWidth / 2 + targetWidth / 2,
+        behavior: 'smooth',
+      })
+    }
+  }
 
   const tabs = [
     {
@@ -153,9 +205,15 @@ export default function LondonComplianceSecurity() {
           </p>
         </div>
 
-        {/* 5 Horizontal Pill Tabs: Single line, hidden-scrollbar horizontal scroll on smaller devices */}
+        {/* 5 Horizontal Tabs: Single line full width on desktop (5-col grid), draggable hidden-scrollbar horizontal scroll on smaller devices */}
         <div
-          className="w-full flex flex-nowrap items-center justify-start lg:justify-between gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar py-2 mb-12 select-none scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          ref={tabsRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onWheel={handleWheel}
+          className="w-full max-w-full flex lg:grid lg:grid-cols-5 items-center gap-2.5 sm:gap-3 lg:gap-3 overflow-x-auto no-scrollbar py-2 mb-12 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {tabs.map((tab, idx) => {
@@ -164,10 +222,10 @@ export default function LondonComplianceSecurity() {
               <button
                 key={tab.title}
                 type="button"
-                onClick={() => setActiveTab(idx)}
-                className={`rounded-full shrink-0 lg:flex-1 py-3 px-5 text-sm sm:text-[15px] text-center transition-all duration-200 cursor-pointer border-0 whitespace-nowrap ${
+                onClick={(e) => handleTabClick(idx, e)}
+                className={`rounded-none shrink-0 lg:shrink min-w-[210px] sm:min-w-[230px] lg:min-w-0 lg:w-full py-3.5 px-4 sm:px-5 text-xs sm:text-sm text-center transition-all duration-200 cursor-pointer border-0 whitespace-nowrap font-medium ${
                   isActive
-                    ? 'bg-[#00CE44] text-black font-bold shadow-none'
+                    ? 'bg-[#00CE44] text-black font-semibold shadow-none'
                     : 'bg-[#14151a] hover:bg-[#1e2028] text-white/90 font-medium'
                 }`}
               >

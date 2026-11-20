@@ -78,7 +78,7 @@ export default function SFHero() {
                 <img
                   src={badge.src}
                   alt={badge.alt}
-                  className="h-9 sm:h-11 w-auto object-contain"
+                  className="h-10 sm:h-13 w-auto object-contain select-none"
                 />
               </a>
             ))}

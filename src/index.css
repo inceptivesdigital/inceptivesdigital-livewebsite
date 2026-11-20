@@ -173,3 +173,24 @@ p Link {
   scrollbar-width: none !important;
 }
 
+/* ==========================================================================
+   Selective Solid Fill for Simple Single-Silhouette Lucide Icons
+   (Detailed multi-part icons stay crisp stroke; custom solid SVGs stay full-fill)
+   ========================================================================== */
+svg.lucide[class*="lucide-star"],
+svg.lucide[class*="lucide-heart"],
+svg.lucide[class*="lucide-zap"],
+svg.lucide[class*="lucide-flame"],
+svg.lucide[class*="lucide-sparkles"],
+svg.lucide[class*="lucide-bookmark"],
+svg.lucide[class*="lucide-play"],
+svg.lucide[class*="lucide-cloud"],
+svg.lucide[class*="lucide-bell"],
+svg.lucide[class*="lucide-tag"],
+svg.lucide[class*="lucide-message-square"],
+svg.lucide[class*="lucide-plane"] {
+  fill: currentColor;
+  fill-opacity: 0.92;
+}
+
+

@@ -1,10 +1,6 @@
-import { useState } from 'react'
-import { Plus, Minus } from 'lucide-react'
+import FAQSection from '../../../../components/FAQSection'
 
-export default function CompanyFaqs() {
-  const [openIdx, setOpenIdx] = useState(0)
-
-  const faqs = [
+const faqs = [
     {
       q: '1. What does Inceptives Digital do?',
       a: 'Inceptives Digital is a digital product studio that combines strategy, design, engineering, and AI to build digital products for businesses. The studio focuses on solving real business problems rather than delivering code alone.',
@@ -47,61 +43,11 @@ export default function CompanyFaqs() {
     },
   ]
 
-  const toggle = (i) => {
-    setOpenIdx(openIdx === i ? -1 : i)
-  }
-
+export default function CompanyFaqs() {
   return (
-    <section className="py-20 sm:py-28 bg-[#0a0a0a] relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Header */}
-        <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20">
-          <div className="text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-widest mb-3">
-            Company FAQs
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white text-center tracking-tight leading-[1.18] mb-4">
-            Frequently Asked <span className="text-[#00CE44]">Questions</span>
-          </h2>
-          <p className="text-white/70 text-sm sm:text-base text-center leading-relaxed font-normal max-w-2xl mx-auto">
-            Everything you need to know about Inceptives Digital, our engineering process, global team, and client relationships.
-          </p>
-        </div>
-
-        {/* Accordion List */}
-        <div className="max-w-4xl mx-auto space-y-4">
-          {faqs.map((faq, i) => {
-            const isOpen = openIdx === i
-            return (
-              <div
-                key={i}
-                className="rounded-[18px] bg-[#141414] overflow-hidden border border-white/5 transition-colors"
-              >
-                <button
-                  onClick={() => toggle(i)}
-                  className="w-full p-6 sm:p-7 flex items-center justify-between text-left gap-4 hover:bg-[#1a1a1a] transition-colors"
-                >
-                  <span className="text-base sm:text-lg lg:text-[19px] font-bold text-white tracking-tight leading-snug">
-                    {faq.q}
-                  </span>
-                  <div className="w-8 h-8 rounded-full bg-[#202020] flex items-center justify-center shrink-0 text-[#00CE44]">
-                    {isOpen ? (
-                      <Minus className="w-4 h-4 text-[#00CE44]" />
-                    ) : (
-                      <Plus className="w-4 h-4 text-white/80" />
-                    )}
-                  </div>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-1 text-white/80 text-sm sm:text-base leading-relaxed font-normal border-t border-white/5">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+    <FAQSection
+      faqs={faqs}
+      heading={<>Frequently Asked <span className="text-[#00CE44]">Questions</span></>}
+    />
   )
 }

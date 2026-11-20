@@ -202,11 +202,14 @@ export default function Footer() {
               <ul className="space-y-2 text-[13px]">
                 <li><Link to="/healthcare-app-development" className="text-white hover:text-[#00CE44] transition-colors">Healthcare</Link></li>
                 <li><Link to="/fitness-app-development" className="text-white hover:text-[#00CE44] transition-colors">Fitness</Link></li>
+                <li><Link to="/fintech-app-development" className="text-white hover:text-[#00CE44] transition-colors">FinTech</Link></li>
                 <li><Link to="/dating-app-development-company" className="text-white hover:text-[#00CE44] transition-colors">Dating</Link></li>
                 <li><Link to="/education-app-development-company" className="text-white hover:text-[#00CE44] transition-colors">Education</Link></li>
                 <li><Link to="/real-estate-app-development-company" className="text-white hover:text-[#00CE44] transition-colors">Real Estate</Link></li>
                 <li><Link to="/travel-app-development-company" className="text-white hover:text-[#00CE44] transition-colors">Travel</Link></li>
                 <li><Link to="/food-delivery-app-development" className="text-white hover:text-[#00CE44] transition-colors">Food Delivery</Link></li>
+                <li><Link to="/ecommerce-app-development-company" className="text-white hover:text-[#00CE44] transition-colors">eCommerce</Link></li>
+                <li><Link to="/startup-app-development-company" className="text-white hover:text-[#00CE44] transition-colors">Startup</Link></li>
               </ul>
             </div>
 

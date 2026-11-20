@@ -142,7 +142,7 @@ export default function NYProcess() {
           From early validation to App Store release, each stage defines decisions, owners, and acceptance criteria. New York teams gain visibility into delivery without trading careful engineering for speed.
         </p>
 
-        {/* Process Tabs: Full width on desktop, horizontal scroll on small devices, 14px/15px font size matching Homepage */}
+        {/* Process Tabs: Full width 5-col grid on desktop, draggable hidden-scrollbar horizontal scroll on small devices */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -150,7 +150,7 @@ export default function NYProcess() {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className="w-full max-w-full flex items-center justify-start lg:justify-between gap-2.5 sm:gap-3 lg:gap-3.5 overflow-x-auto no-scrollbar py-2 mb-10 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="w-full max-w-full flex lg:grid lg:grid-cols-5 items-center gap-2.5 sm:gap-3 lg:gap-3.5 overflow-x-auto no-scrollbar py-2 mb-10 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {steps.map((step, index) => {
@@ -160,7 +160,7 @@ export default function NYProcess() {
                 key={step.num}
                 type="button"
                 onClick={(e) => handleTabClick(index, e)}
-                className={`rounded-full shrink-0 lg:flex-1 flex items-center justify-start gap-2.5 py-2.5 pl-2.5 pr-4 transition-all duration-200 cursor-pointer border-0 select-none ${
+                className={`rounded-full shrink-0 lg:shrink min-w-[200px] lg:min-w-0 lg:w-full flex items-center justify-start gap-2.5 py-2.5 pl-2.5 pr-4 transition-all duration-200 cursor-pointer border-0 select-none ${
                   isActive
                     ? 'bg-[#00CE44] text-black'
                     : 'bg-[#1e2025] hover:bg-[#272931] text-white/90'

@@ -61,10 +61,10 @@ export const sfTechCategories = [
     name: 'AI & Intelligent Features',
     items: [
       { name: 'OpenAI APIs', img: '/assets/mobile-app/openai.png' },
-      { name: 'Google Gemini', img: '/assets/mobile-app/gemini-2.png' },
-      { name: 'Anthropic Claude', img: '/assets/mobile-app/claude-ai.png' },
-      { name: 'Core ML', img: '/assets/mobile-app/core-ml.jpg' },
-      { name: 'TensorFlow Lite', img: '/assets/mobile-app/tensorflow-lite.jpg' },
+      { name: 'Google Gemini', img: '/assets/fitness/tech/google_ml.png' },
+      { name: 'Anthropic Claude', img: '/assets/mobile-app/openai.png' },
+      { name: 'Core ML', img: '/assets/mobile-app/pytorch.png' },
+      { name: 'TensorFlow Lite', img: '/assets/mobile-app/tensorFlow.jpg' },
     ],
   },
 ]

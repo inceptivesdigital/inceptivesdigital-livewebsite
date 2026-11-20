@@ -11,7 +11,7 @@ const androidTechCategories = [
       },
       {
         name: 'Java',
-        img: '/assets/mobile-app/java.jpg',
+        img: '/assets/react-native/java.jpg',
       },
       {
         name: 'Android SDK',
@@ -40,7 +40,7 @@ const androidTechCategories = [
       },
       {
         name: 'Java/Spring Boot',
-        img: '/assets/mobile-app/spring-boot.jpg',
+        img: '/assets/react-native/spring-boot.jpg',
       },
       {
         name: 'REST APIs',
@@ -90,7 +90,7 @@ const androidTechCategories = [
       },
       {
         name: 'Microsoft Azure',
-        img: '/assets/mobile-app/microsoft-azure.jpg',
+        img: '/assets/react-native/microsoft-azure.jpg',
       },
       {
         name: 'Docker',
@@ -107,7 +107,7 @@ const androidTechCategories = [
     items: [
       {
         name: 'JUnit',
-        img: '/assets/mobile-app/java.jpg',
+        img: '/assets/react-native/java.jpg',
       },
       {
         name: 'Espresso',
@@ -159,7 +159,7 @@ export default function AndroidTechStackTabs() {
             Chosen Around Product Requirements
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-            As an Android app development company with 8+ years of experience, Inceptives Digital selects Kotlin, Java, Android SDK, backend services, cloud infrastructure, APIs, databases, testing tools, and security technologies around each product’s architecture, integrations, performance requirements, and long-term roadmap.
+            As an Android app development company with 8+ years of experience, Inceptives Digital selects Kotlin, Java, Android SDK, backend services, cloud infrastructure, APIs, databases, testing tools, and security technologies around each productâ€™s architecture, integrations, performance requirements, and long-term roadmap.
           </p>
         </div>
 
@@ -167,7 +167,7 @@ export default function AndroidTechStackTabs() {
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
           {/* Left Green Panel: Category List */}
-          <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-between border-0 shadow-none">
+          <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-start gap-1 border-0 shadow-none">
             {androidTechCategories.map((cat, idx) => {
               const isActive = activeCategory === idx
               return (
