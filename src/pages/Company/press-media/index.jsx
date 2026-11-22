@@ -6,9 +6,10 @@ export default function PressMediaPage() {
   useEffect(() => {
     const seoTitle = 'Press Releases & Media | Inceptives Digital'
     const seoDesc =
-      'Read official press releases, awards, and industry editorial coverage highlighting Inceptives Digital product engineering excellence.'
+      'Official updates covering company milestones, product launches, strategic partnerships, industry recognition, and business developments from Inceptives Digital.'
 
     document.title = seoTitle
+    window.scrollTo(0, 0)
 
     const setMeta = (selector, attrName, attrValue, content) => {
       let el = document.querySelector(selector)
@@ -32,15 +33,15 @@ export default function PressMediaPage() {
       canonical.setAttribute('rel', 'canonical')
       document.head.appendChild(canonical)
     }
-    canonical.setAttribute('href', 'https://inceptivesdigital.com/press-media')
+    canonical.setAttribute('href', 'https://inceptivesdigital.com/press-release')
   }, [])
 
   return (
-    <div className="bg-black text-white selection:bg-[#00CE44] selection:text-black">
-      {/* 1. Hero */}
+    <div className="bg-white text-[#0F172A] selection:bg-[#00CE44] selection:text-black">
+      {/* 1. Light Hero ("In the News") + Dark Media Logo Strip */}
       <PressHero />
 
-      {/* 2. Press Releases List */}
+      {/* 2. Live WordPress Press Releases Grid (Category ID 53) */}
       <PressList />
     </div>
   )

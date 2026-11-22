@@ -146,9 +146,6 @@ export default function BlogSection() {
                     src="/images/blog/sparkle.png"
                     alt=""
                     className="w-full h-full object-contain"
-                    onError={(e) => {
-                      e.currentTarget.src = 'https://nextincep.wpenginepowered.com/wp-content/uploads/2026/08/sparkle.png';
-                    }}
                   />
                 </div>
               </div>

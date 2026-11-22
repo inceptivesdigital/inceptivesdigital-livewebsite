@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
@@ -9,6 +10,15 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
 import CaseStudyDetail from './pages/CaseStudyDetail'
+import StateOfTheArtChiropractic from './pages/Portfolio/StateOfTheArtChiropractic'
+import DpsAirem from './pages/Portfolio/DpsAirem'
+import HalwarConnect from './pages/Portfolio/HalwarConnect'
+import FamilyEntertainmentGroup from './pages/Portfolio/FamilyEntertainmentGroup'
+import ZoomRead from './pages/Portfolio/ZoomRead'
+import PulseCheckTimer from './pages/Portfolio/PulseCheckTimer'
+import MyTangoEvent from './pages/Portfolio/MyTangoEvent'
+import WordSmithPro from './pages/Portfolio/WordSmithPro'
+import PetsB4Profit from './pages/Portfolio/PetsB4Profit'
 import StaffAugmentation from './pages/StaffAugmentation'
 import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment'
 import PrivacyPolicy from './pages/PrivacyPolicy'
@@ -65,17 +75,23 @@ import MobileAppSingapore from './pages/Locations/mobile-app-development-singapo
 // Company Pages (company/ ke 8 dedicated pages apne apne components ke saath)
 import AboutUs from './pages/Company/about-us'
 import Blogs from './pages/Company/blogs'
+import BlogDetail from './pages/Company/blogs/BlogDetail'
+import CategoryPage from './pages/Company/blogs/CategoryPage'
 import PressMedia from './pages/Company/press-media'
+import PressReleaseDetail from './pages/Company/press-media/PressReleaseDetail'
 import Partnership from './pages/Company/partnership'
 import LifeAtInceptives from './pages/Company/life-at-inceptives-digital'
 import Leadership from './pages/Company/leadership'
 import FoundersLetter from './pages/Company/founders-letter'
 import ContactUs from './pages/Company/contact-us'
+import NotFound from './pages/NotFound'
 
-// Contact pages already carry the full contact form, so skip the universal pre-footer form there.
-function PreFooterCTA() {
+// Contact pages and 404 skip the universal pre-footer form.
+function PreFooterCTA({ isNotFound }) {
   const { pathname } = useLocation()
   if (
+    isNotFound ||
+    pathname === '/404' ||
     pathname === '/contact-us' ||
     pathname === '/company/contact-us' ||
     pathname === '/leadership' ||
@@ -89,6 +105,8 @@ function PreFooterCTA() {
 }
 
 export default function App() {
+  const [isNotFound, setIsNotFound] = useState(false)
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -103,6 +121,15 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/state-of-the-art-chiropractic" element={<StateOfTheArtChiropractic />} />
+            <Route path="/portfolio/dps-airem" element={<DpsAirem />} />
+            <Route path="/portfolio/halwar-connect" element={<HalwarConnect />} />
+            <Route path="/portfolio/family-entertainment-group" element={<FamilyEntertainmentGroup />} />
+            <Route path="/portfolio/zoom-read" element={<ZoomRead />} />
+            <Route path="/portfolio/pulse-check-timer" element={<PulseCheckTimer />} />
+            <Route path="/portfolio/my-tango-event" element={<MyTangoEvent />} />
+            <Route path="/portfolio/wordsmith-pro" element={<WordSmithPro />} />
+            <Route path="/portfolio/pets-b4-profit" element={<PetsB4Profit />} />
             <Route path="/portfolio/:slug" element={<CaseStudyDetail />} />
             <Route path="/staff-augmentation" element={<StaffAugmentation />} />
             <Route path="/custom-software-development" element={<CustomSoftwareDevelopment />} />
@@ -223,10 +250,15 @@ export default function App() {
 
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blog" element={<Blogs />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="/blogs/:slug" element={<BlogDetail />} />
+            <Route path="/category/:slug" element={<CategoryPage />} />
             <Route path="/company/blogs" element={<Blogs />} />
 
             <Route path="/press-media" element={<PressMedia />} />
             <Route path="/press-release" element={<PressMedia />} />
+            <Route path="/press-release/:slug" element={<PressReleaseDetail />} />
+            <Route path="/press-media/:slug" element={<PressReleaseDetail />} />
             <Route path="/company/press-media" element={<PressMedia />} />
 
             <Route path="/partnership" element={<Partnership />} />
@@ -244,13 +276,14 @@ export default function App() {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/company/contact-us" element={<ContactUs />} />
 
-            {/* Catch-all */}
-            <Route path="*" element={<Home />} />
+            {/* 404 & Catch-all */}
+            <Route path="/404" element={<NotFound onMountChange={setIsNotFound} />} />
+            <Route path="*" element={<NotFound onMountChange={setIsNotFound} />} />
           </Routes>
         </main>
 
         {/* Universal Pre-Footer Contact Section */}
-        <PreFooterCTA />
+        <PreFooterCTA isNotFound={isNotFound} />
 
         {/* Universal Footer */}
         <Footer />

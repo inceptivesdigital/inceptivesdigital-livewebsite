@@ -1,4 +1,10 @@
 import { useState, useRef } from 'react'
+import tab1Icon from '../assets/process/tab-1.png'
+import tab2Icon from '../assets/process/tab-2.png'
+import tab3Icon from '../assets/process/tab-3.png'
+import tab4Icon from '../assets/process/tab-4.png'
+import tab5Icon from '../assets/process/tab-5.png'
+import tab6Icon from '../assets/process/tab-6.png'
 
 export default function ProcessSection() {
   const [activeTab, setActiveTab] = useState(0)
@@ -59,48 +65,48 @@ export default function ProcessSection() {
     {
       num: '01.',
       tabTitle: 'Product Intelligence',
-      tabIcon: '/assets/process/tab-1.png',
-      cardIcon: '/assets/process/card-1.png',
+      tabIcon: tab1Icon,
+      cardIcon: tab1Icon,
       cardTitle: 'Product Intelligence',
       cardDesc: 'CTO-led analysis of your business model, user psychology, and market landscape before anything else. Where AI can solve a problem better than conventional logic, we identify that early. The output is a roadmap with real opinions, grounded in evidence.'
     },
     {
       num: '02.',
       tabTitle: 'Design',
-      tabIcon: '/assets/process/tab-2.png',
-      cardIcon: '/assets/process/card-2.png',
+      tabIcon: tab2Icon,
+      cardIcon: tab2Icon,
       cardTitle: 'Design with Intent',
       cardDesc: 'Every screen is stress-tested against real user behaviour before development begins. Designed for clarity, the person using it for the first time should never have to think twice.'
     },
     {
       num: '03.',
       tabTitle: 'Engineering',
-      tabIcon: '/assets/process/tab-3.png',
-      cardIcon: '/assets/process/card-3.png',
+      tabIcon: tab3Icon,
+      cardIcon: tab3Icon,
       cardTitle: 'Precision Engineering',
       cardDesc: 'Senior engineers own the core. Architecture decisions made on day one are the ones your product lives with for years. Clean, documented, built to be handed over.'
     },
     {
       num: '04.',
       tabTitle: 'Testing',
-      tabIcon: '/assets/process/tab-4.png',
-      cardIcon: '/assets/process/card-4.svg',
+      tabIcon: tab4Icon,
+      cardIcon: tab4Icon,
       cardTitle: 'Adversarial Testing',
       cardDesc: 'Edge cases, stress loads, and unexpected inputs are tested before your users encounter them. Every failure mode we can anticipate gets found in our environment, not yours.'
     },
     {
       num: '05.',
       tabTitle: 'Launch',
-      tabIcon: '/assets/process/tab-5.png',
-      cardIcon: '/assets/process/card-5.svg',
+      tabIcon: tab5Icon,
+      cardIcon: tab5Icon,
       cardTitle: 'Precision Launch',
       cardDesc: 'Launch day is an engineering event, managed with the same rigour as the build itself. Infrastructure, configuration, and production stability were handed over cleanly and stably.'
     },
     {
       num: '06.',
       tabTitle: 'Partnership',
-      tabIcon: '/assets/process/tab-6.png',
-      cardIcon: '/assets/process/card-6.svg',
+      tabIcon: tab6Icon,
+      cardIcon: tab6Icon,
       cardTitle: 'Continuous Partnership',
       cardDesc: 'The most important version of your product is the one shaped by real users after launch. We stay in, monitoring, refining, and evolving as the business changes.'
     }
@@ -194,8 +200,11 @@ export default function ProcessSection() {
             {/* Left: Green Circle with exact matching Tab Icon (Zero shadow, black icon) */}
             <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#00CE44] flex items-center justify-center shrink-0 shadow-none">
               <img
+                key={current.num}
                 src={current.tabIcon}
                 alt={current.cardTitle}
+                loading="eager"
+                decoding="sync"
                 className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain brightness-0"
               />
             </div>

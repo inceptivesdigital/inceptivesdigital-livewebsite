@@ -1,19 +1,65 @@
-export default function BlogsHero() {
+import { useState, useEffect } from 'react'
+import { Search, X } from 'lucide-react'
+
+export default function BlogsHero({ searchValue = '', onSearchSubmit }) {
+  const [inputValue, setInputValue] = useState(searchValue)
+
+  useEffect(() => {
+    setInputValue(searchValue)
+  }, [searchValue])
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (onSearchSubmit) onSearchSubmit(inputValue.trim())
+  }
+
+  const handleClear = () => {
+    setInputValue('')
+    if (onSearchSubmit) onSearchSubmit('')
+  }
+
   return (
-    <section className="relative min-h-[480px] flex items-center pt-32 sm:pt-40 pb-16 lg:pb-20 bg-black overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
-        <div className="max-w-3xl text-left">
-          <span className="text-[#00CE44] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3">
-            Articles & Insights
+    <section className="w-full bg-white text-[#111111] pt-32 sm:pt-36 lg:pt-40 pb-14 sm:pb-16 lg:pb-20">
+      <div className="w-full max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-[36px] sm:text-[46px] lg:text-[54px] font-medium leading-[1.15] tracking-tight text-[#111111]">
+          Insights That
+          <span className="block text-[#00CE44] font-bold mt-1">
+            Shape the Future
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black text-white tracking-tight leading-[1.12] mb-6">
-            Insights That <br />
-            <span className="text-[#00CE44]">Shape Digital Products</span>
-          </h1>
-          <p className="text-white/80 text-sm sm:text-base lg:text-[17px] leading-relaxed font-normal max-w-2xl">
-            In-depth guides, architectural blueprints, and engineering analyses from Inceptives Digital on mobile development, SaaS scalability, AI workflows, and product strategy.
-          </p>
-        </div>
+        </h1>
+
+        {/* Live WordPress Search Bar */}
+        <form
+          onSubmit={handleSubmit}
+          className="mt-8 max-w-xl mx-auto relative flex items-center"
+          role="search"
+        >
+          <Search className="w-4 h-4 text-[#666666] absolute left-4 pointer-events-none" />
+          <input
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Search blogs, guides, cost breakdowns..."
+            aria-label="Search blogs"
+            className="w-full pl-11 pr-24 py-3 rounded-full bg-[#F6F8F7] border border-[#DCE6DF] text-[#111111] placeholder-[#777777] text-sm focus:outline-none focus:border-[#00CE44] transition-colors"
+          />
+          {inputValue && (
+            <button
+              type="button"
+              onClick={handleClear}
+              aria-label="Clear search"
+              className="absolute right-[84px] p-1 text-[#777777] hover:text-[#111111] cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+          <button
+            type="submit"
+            className="absolute right-1.5 px-4 py-1.5 rounded-full bg-[#00CE44] hover:bg-[#00b83d] text-black text-xs sm:text-sm font-medium transition-colors cursor-pointer"
+          >
+            Search
+          </button>
+        </form>
       </div>
     </section>
   )
