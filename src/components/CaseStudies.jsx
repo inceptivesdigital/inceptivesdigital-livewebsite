@@ -214,7 +214,7 @@ export default function CaseStudies({
 
   return (
     <section id="case-studies" className="py-16 sm:py-24 lg:py-28 bg-black relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1440px]">
         
         {/* Top Header Row: Headline on Left, Green CTA on Right */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-14">
@@ -423,20 +423,22 @@ export default function CaseStudies({
           
           {/* Previous Arrow Button */}
           <button
+            type="button"
             onClick={prevSlide}
             aria-label="Previous Case Study"
-            className="w-12 h-12 rounded-full bg-transparent text-white border border-white hover:bg-[#00CE44] hover:border-[#00CE44] hover:text-black flex items-center justify-center transition-all duration-300 ease-in-out active:scale-95 cursor-pointer"
+            className="w-12 h-12 p-0 shrink-0 rounded-full bg-transparent text-white border border-white hover:bg-[#00CE44] hover:border-[#00CE44] hover:text-black flex items-center justify-center transition-all duration-300 ease-in-out active:scale-95 cursor-pointer"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5 shrink-0" strokeWidth={2.2} />
           </button>
 
           {/* Next Arrow Button */}
           <button
+            type="button"
             onClick={nextSlide}
             aria-label="Next Case Study"
-            className="w-12 h-12 rounded-full bg-transparent text-white border border-white hover:bg-[#00CE44] hover:border-[#00CE44] hover:text-black flex items-center justify-center transition-all duration-300 ease-in-out active:scale-95 cursor-pointer"
+            className="w-12 h-12 p-0 shrink-0 rounded-full bg-transparent text-white border border-white hover:bg-[#00CE44] hover:border-[#00CE44] hover:text-black flex items-center justify-center transition-all duration-300 ease-in-out active:scale-95 cursor-pointer"
           >
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 shrink-0" strokeWidth={2.2} />
           </button>
 
         </div>

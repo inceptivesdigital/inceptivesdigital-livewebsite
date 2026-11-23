@@ -117,7 +117,7 @@ export default function GenerativeTechStack() {
             ))}
           </div>
 
-          <div className="lg:col-span-8 rounded-2xl bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8 min-h-[320px]">
+          <div className="lg:col-span-8 rounded-2xl bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8">
             {categories[activeCategory].items.map((tech) => (
               <div key={tech.name} className="flex flex-col items-center w-24 sm:w-28 text-center">
                 <div className="w-24 sm:w-28 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 mb-2.5">

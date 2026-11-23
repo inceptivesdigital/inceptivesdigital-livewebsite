@@ -73,7 +73,7 @@ export default function BusinessProcessTechStack() {
             id="business-process-tech-panel"
             role="tabpanel"
             aria-labelledby={`business-process-tech-tab-${activeCategory}`}
-            className="grid min-h-[300px] grid-cols-2 content-start gap-3 rounded-2xl bg-[#00CE44] p-5 sm:grid-cols-3 sm:gap-4 sm:p-7 lg:col-span-8 lg:grid-cols-4 lg:p-8"
+            className="grid grid-cols-2 content-start gap-3 rounded-2xl bg-[#00CE44] p-5 sm:grid-cols-3 sm:gap-4 sm:p-7 lg:col-span-8 lg:grid-cols-4 lg:p-8"
           >
             {active.items.map((technology) => (
               <div

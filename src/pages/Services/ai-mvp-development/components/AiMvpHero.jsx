@@ -14,12 +14,20 @@ export default function AiMvpHero() {
           <p className="w-full text-white/85 text-[15px] sm:text-[16px] leading-[1.65] max-w-[620px] mb-7">
             Rapid AI MVP development helps startups and growing businesses validate the direction before committing to full-scale AI development. Scope defined, risks identified, proof delivered.
           </p>
-          <a
+          <div className="flex flex-wrap items-center gap-4 mb-3">
+              <a
             href="#contact"
-            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] md:text-[16px] px-7 py-3.5 transition-colors duration-200 mb-3"
+            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] md:text-[16px] px-7 py-3.5 transition-colors duration-200"
           >
             Discuss Your Idea
           </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
           <p className="text-white/70 text-sm mb-8">Bring the idea. Know if it&apos;s feasible.</p>
           <HeroTrustBadges />
         </div>

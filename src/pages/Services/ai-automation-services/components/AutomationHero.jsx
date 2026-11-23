@@ -21,12 +21,20 @@ export default function AutomationHero() {
           <p className="mb-7 max-w-[620px] text-[15px] leading-relaxed text-white/85 sm:text-base">
             Business process automation, workflow intelligence, and decision automation are built for businesses that need operational processes to run themselves, not just run faster.
           </p>
-          <a
+          <div className="flex flex-wrap items-center gap-4 mb-3">
+              <a
             href="#contact"
-            className="mb-3 inline-flex min-h-12 items-center justify-center bg-[#00CE44] px-7 py-3.5 text-center text-sm font-semibold text-black transition-colors hover:bg-[#00e04b] sm:text-base"
+            className=" inline-flex min-h-12 items-center justify-center bg-[#00CE44] px-7 py-3.5 text-center text-sm font-semibold text-black transition-colors hover:bg-[#00e04b] sm:text-base"
           >
             Discuss Your Automation Project
           </a>
+              <a
+                href="#contact"
+                className="inline-flex min-h-12 items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
           <p className="mb-8 text-sm text-white/75">Show us the process. We will automate it.</p>
           <HeroTrustBadges className="gap-5 sm:gap-8" />
         </div>

@@ -255,10 +255,10 @@ export default function ZoomRead() {
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end self-end">
               <img
-                src="/assets/portfolio/zoom-read/zoom-mobile.png"
+                src="/assets/portfolio/zoom-read/zoom-mobilefull.png"
                 alt="Zoom Read Reader Mobile Application"
                 loading="lazy"
-                className="w-full max-w-[340px] lg:max-w-[400px] h-auto block object-contain select-none"
+                className="w-full max-w-[300px] lg:max-w-[340px] h-auto block object-contain select-none"
               />
             </div>
           </div>
@@ -362,16 +362,19 @@ export default function ZoomRead() {
       </section>
 
       {/* 6. MONETISATION ARCHITECTURE */}
-      <section className="w-full bg-[#151515] pt-6 sm:pt-10 pb-16 sm:pb-24">
+      <section className="w-full bg-[#151515] py-0 overflow-hidden">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 text-left space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 text-left space-y-6 py-12 lg:py-16">
               <div>
                 <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] leading-[1.18] mb-3">
                   Monetisation Architecture
                 </h2>
+                <p className="text-white/90 text-[16px] sm:text-[18px] leading-relaxed mb-3">
+                  The business model required multiple revenue streams to operate simultaneously without creating a fragmented user experience.
+                </p>
                 <p className="text-white/90 text-[16px] sm:text-[18px] leading-relaxed">
-                  The business model required multiple revenue streams to operate simultaneously without creating a fragmented user experience. Three monetisation layers were built directly into the product architecture.
+                  Three monetisation layers were built directly into the product architecture.
                 </p>
               </div>
 
@@ -405,12 +408,12 @@ export default function ZoomRead() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end self-end">
               <img
-                src="/assets/portfolio/zoom-read/zoom-mobilefull.png"
-                alt="Zoom Read Monetisation & Reading Interface"
+                src="/assets/portfolio/zoom-read/zoom-mobile.png"
+                alt="Zoom Read Purchase History and Monetisation Interface"
                 loading="lazy"
-                className="w-full max-w-[540px] h-auto object-contain select-none"
+                className="w-full max-w-[460px] lg:max-w-[520px] h-auto block object-contain select-none"
               />
             </div>
           </div>

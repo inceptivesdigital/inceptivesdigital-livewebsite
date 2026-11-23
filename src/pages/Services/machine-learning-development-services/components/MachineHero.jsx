@@ -23,12 +23,20 @@ export default function MachineHero() {
             </a>{' '}
             for companies that need machine learning to do real work, not demonstrate potential.
           </p>
-          <a
+          <div className="flex flex-wrap items-center gap-4 mb-3">
+              <a
             href="#contact"
-            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] md:text-[16px] px-7 py-3.5 transition-colors duration-200 mb-3"
+            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] md:text-[16px] px-7 py-3.5 transition-colors duration-200"
           >
             Book a Machine Learning Consultation
           </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
           <p className="text-white/70 text-sm mb-8">
             30 minutes. Focused insight. ML is designed to deliver.
           </p>

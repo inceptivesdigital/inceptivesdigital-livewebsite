@@ -370,10 +370,10 @@ export default function DpsAirem() {
       </section>
 
       {/* 6. THE SOLUTION */}
-      <section className="w-full bg-[#151515] pt-8 sm:pt-12 pb-16 sm:pb-20">
+      <section className="w-full bg-[#151515] pt-8 sm:pt-12 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 text-left space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 text-left space-y-6 pb-14 lg:pb-20">
               <div>
                 <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] leading-[1.18] mb-3">
                   The Solution
@@ -402,12 +402,12 @@ export default function DpsAirem() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end self-end">
               <img
                 src="/assets/portfolio/dps-airem/solution-mobile.png"
                 alt="DPS Airem Mobile Application Interface"
                 loading="lazy"
-                className="w-full max-w-[540px] h-auto object-contain select-none"
+                className="w-full max-w-[540px] h-auto block object-contain select-none"
               />
             </div>
           </div>
@@ -462,19 +462,19 @@ export default function DpsAirem() {
       </section>
 
       {/* 8. MANAGEMENT DASHBOARD */}
-      <section className="w-full bg-[#151515] pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20">
+      <section className="w-full bg-[#151515] pt-16 sm:pt-20 lg:pt-24 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 flex justify-center lg:justify-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-start self-end">
               <img
                 src="/assets/portfolio/dps-airem/dashboard-mockup.png"
                 alt="DPS Airem Management Dashboard"
                 loading="lazy"
-                className="w-full max-w-[580px] h-auto object-contain select-none"
+                className="w-full max-w-[580px] h-auto block object-contain select-none"
               />
             </div>
 
-            <div className="lg:col-span-6 text-left">
+            <div className="lg:col-span-6 text-left pb-14 lg:pb-20">
               <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] leading-[1.18] mb-4">
                 Management Dashboard
               </h2>

@@ -403,19 +403,19 @@ export default function HalwarConnect() {
       </section>
 
       {/* 6. MARKETPLACE OPERATIONS DASHBOARD */}
-      <section className="w-full bg-[#151515] pt-8 sm:pt-12 pb-16 sm:pb-24">
+      <section className="w-full bg-[#151515] pt-8 sm:pt-12 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 flex justify-center lg:justify-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-start self-end">
               <img
                 src="/assets/portfolio/halwar-connect/halwar-lap.png"
                 alt="Halwar Connect Marketplace Operations Dashboard"
                 loading="lazy"
-                className="w-full max-w-[580px] h-auto object-contain select-none"
+                className="w-full max-w-[580px] h-auto block object-contain select-none"
               />
             </div>
 
-            <div className="lg:col-span-6 text-left">
+            <div className="lg:col-span-6 text-left pb-14 lg:pb-24">
               <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] leading-[1.18] mb-4">
                 Marketplace Operations Dashboard
               </h2>

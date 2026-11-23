@@ -343,10 +343,10 @@ export default function MyTangoEvent() {
       </section>
 
       {/* 5. PLATFORM ADMINISTRATION CONSOLE */}
-      <section className="w-full bg-[#151515] py-14 sm:py-18 lg:py-20">
+      <section className="w-full bg-[#151515] pt-14 sm:pt-18 lg:pt-20 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-5 text-left space-y-5">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-5 text-left space-y-5 pb-14 lg:pb-20">
               <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-[#00CE44] leading-[1.18]">
                 Platform Administration Console
               </h2>
@@ -366,7 +366,7 @@ export default function MyTangoEvent() {
               </ul>
             </div>
 
-            <div className="lg:col-span-7 flex justify-center lg:justify-end">
+            <div className="lg:col-span-7 flex justify-center lg:justify-end self-end">
               <img
                 src="/assets/portfolio/my-tango-event/trango-section.png"
                 alt="My Tango Event Platform Administration Console"

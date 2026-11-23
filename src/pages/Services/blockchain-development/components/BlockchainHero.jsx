@@ -43,12 +43,20 @@ export default function BlockchainHero() {
               Our industry-leading blockchain development services are supported by 150+ experienced developers and 8+ years of industry experience. As a prominent blockchain development company, we provide secure, scalable, and custom solutions, including smart contracts, DeFi, DApps, NFT platforms, decentralized applications &amp; enterprise-level integrations, that will ultimately enable trust, transparency, and growth in the digital economy.
             </p>
 
-            <a
+            <div className="flex flex-wrap items-center gap-4">
+              <a
               href="#contact"
               className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] sm:text-[16px] px-9 py-4 rounded-none transition-colors duration-200"
             >
               Get A Call Now!
             </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-[15px] md:text-[16px] transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
           </div>
         </div>
       </section>

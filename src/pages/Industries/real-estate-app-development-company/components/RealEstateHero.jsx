@@ -20,6 +20,21 @@ export default function RealEstateHero() {
               Custom real estate applications for agencies, proptech startups, and property marketplaces. Property management systems, listing platforms, virtual tours, CRM integrations, and AI-powered analytics built to MLS and GDPR compliance standards from the architecture stage.
             </p>
 
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
+              >
+                Get a Free Quote
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-[15px] md:text-[16px] transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
+
             {/* CTA & Review Badges Row */}
             <HeroTrustBadges className="pt-4" />
           </div>

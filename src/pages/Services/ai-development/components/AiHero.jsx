@@ -44,6 +44,7 @@ export default function AiHero() {
 
             {/* CTA Button */}
             <div className="mb-8 sm:mb-10 lg:mb-12">
+              <div className="flex flex-wrap items-center gap-4">
               <button
                 type="button"
                 onClick={scrollToContact}
@@ -51,6 +52,14 @@ export default function AiHero() {
               >
                 Book an AI Consultation
               </button>
+              <button
+                type="button"
+                onClick={scrollToContact}
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors cursor-pointer"
+              >
+                Schedule A Call
+              </button>
+            </div>
             </div>
 
             {/* Review Badges */}

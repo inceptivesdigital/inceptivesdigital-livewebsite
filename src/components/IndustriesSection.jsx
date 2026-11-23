@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 
-export default function IndustriesSection() {
+export default function IndustriesSection({
+  heading = 'Digital Products Designed Around Industry Realities',
+  subtitle = null,
+  showDesc = true,
+} = {}) {
   const industries = [
     {
       title: 'Healthcare',
@@ -79,20 +83,29 @@ export default function IndustriesSection() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         
         {/* Top Heading: H2, 40px bold, text-center */}
-        <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-12 sm:mb-16 max-w-4xl mx-auto">
-          Digital Products Designed Around Industry Realities
-        </h2>
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight">
+            {heading}
+          </h2>
+          {subtitle && (
+            <p className="text-white/80 text-sm sm:text-base lg:text-[17px] leading-relaxed mt-3">
+              {subtitle}
+            </p>
+          )}
+        </div>
 
         {/* 10-Cards 5-Column Grid: Equal Heights & Clean Borders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-stretch gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
           {industries.map((ind) => (
             <Link
               key={ind.title}
               to={ind.link}
-              className="group p-6 sm:p-7 xl:p-8 flex flex-col justify-start bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 cursor-pointer min-h-[300px] lg:min-h-[330px] h-full select-none"
+              className={`group p-6 sm:p-7 xl:p-8 flex flex-col bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 cursor-pointer h-full select-none ${
+                showDesc ? 'justify-start' : 'justify-center'
+              }`}
             >
               {/* Icon (35px x 35px) */}
-              <div className="w-[35px] h-[35px] mb-6 sm:mb-8 flex items-center justify-start shrink-0">
+              <div className={`w-[35px] h-[35px] ${showDesc ? 'mb-6 sm:mb-8' : 'mb-4'} flex items-center justify-start shrink-0`}>
                 <img
                   src={ind.icon}
                   alt={ind.alt}
@@ -101,15 +114,17 @@ export default function IndustriesSection() {
                 />
               </div>
 
-              {/* Title: H3 tag, 25px font-size bold */}
-              <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
+              {/* Title: H3 tag, white by default, black on hover */}
+              <h3 className={`text-[20px] sm:text-[23px] font-bold text-white group-hover:text-black transition-colors duration-300 leading-tight ${showDesc ? 'mb-3' : 'mb-0'}`}>
                 {ind.title}
               </h3>
 
               {/* Description: 16px font-size */}
-              <p className="text-[15px] sm:text-[16px] text-slate-300 group-hover:text-black transition-colors duration-300 leading-relaxed font-normal">
-                {ind.desc}
-              </p>
+              {showDesc && (
+                <p className="text-[15px] sm:text-[16px] text-slate-300 group-hover:text-black transition-colors duration-300 leading-relaxed font-normal">
+                  {ind.desc}
+                </p>
+              )}
             </Link>
           ))}
         </div>

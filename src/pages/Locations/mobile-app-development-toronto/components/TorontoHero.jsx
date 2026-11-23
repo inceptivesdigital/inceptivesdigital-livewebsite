@@ -42,6 +42,12 @@ export default function TorontoHero() {
             >
               Schedule a Discovery Call
             </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-[15px] md:text-[16px] transition-colors"
+              >
+                Schedule A Call
+              </a>
           </div>
 
           {/* Social Proof Review Badges from Live Link */}

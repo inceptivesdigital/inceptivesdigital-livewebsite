@@ -25,12 +25,20 @@ export default function GenerativeHero() {
             </a>{' '}
             are built into generative AI systems for businesses that need accurate, secure, and maintainable AI in production.
           </p>
-          <a
+          <div className="flex flex-wrap items-center gap-4 mb-3">
+              <a
             href="#contact"
-            className="mb-3 inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] md:text-[16px] px-7 py-3.5 transition-colors duration-200"
+            className=" inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-[15px] md:text-[16px] px-7 py-3.5 transition-colors duration-200"
           >
             Book a Generative AI Consultation
           </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
           <p className="text-white/70 text-sm mb-8">
             Bring the use case. Leave with a direction.
           </p>

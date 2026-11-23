@@ -52,7 +52,7 @@ export default function LondonTechStack() {
           </div>
 
           {/* Right Green Panel: White Tech Logo Boxes */}
-          <div className="lg:col-span-8 rounded-[16px] bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8 min-h-[360px] border-0 shadow-none">
+          <div className="lg:col-span-8 rounded-[16px] bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8 border-0 shadow-none">
             {techStackCategories[activeCategory].items.map((tech) => (
               <div key={tech.name} className="flex flex-col items-center w-24 sm:w-28 text-center">
                 <div className="w-24 sm:w-28 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 mb-2.5 border-0 shadow-none">

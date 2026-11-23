@@ -38,12 +38,20 @@ export default function EcommerceHero() {
             Custom ecommerce applications for retail businesses, D2C brands, and multi-vendor marketplaces. Dynamic product catalogs, AI-powered recommendations, secure payment gateways, inventory synchronisation, and analytics dashboards built for high-traffic production environments.
           </p>
 
-          <a
+          <div className="flex flex-wrap items-center gap-4 mb-9">
+              <a
             href="#contact"
-            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200 mb-9"
+            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
           >
             Start Your eCommerce App Project
           </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-[15px] md:text-[16px] transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
 
           {/* Trust Badges Row */}
           <HeroTrustBadges />

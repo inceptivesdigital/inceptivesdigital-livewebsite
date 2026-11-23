@@ -399,10 +399,10 @@ export default function FamilyEntertainmentGroup() {
       </section>
 
       {/* 6. PRODUCT IMPACT */}
-      <section className="w-full bg-[#151515] pt-6 sm:pt-10 pb-16 sm:pb-20">
+      <section className="w-full bg-[#151515] pt-6 sm:pt-10 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 text-left space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 text-left space-y-4 pb-14 lg:pb-20">
               <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] leading-[1.18] mb-2">
                 Product Impact
               </h2>
@@ -417,12 +417,12 @@ export default function FamilyEntertainmentGroup() {
               </p>
             </div>
 
-            <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end self-end">
               <img
                 src="/assets/portfolio/feg/family-mobile.png"
                 alt="Family Entertainment Group Guest Highlight Video"
                 loading="lazy"
-                className="w-full max-w-[520px] h-auto object-contain select-none"
+                className="w-full max-w-[520px] h-auto block object-contain select-none"
               />
             </div>
           </div>
@@ -430,19 +430,19 @@ export default function FamilyEntertainmentGroup() {
       </section>
 
       {/* 7. OPERATIONS DASHBOARD */}
-      <section className="w-full bg-[#151515] pt-8 sm:pt-12 pb-16 sm:pb-24">
+      <section className="w-full bg-[#151515] pt-14 sm:pt-20 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 flex justify-center lg:justify-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 flex justify-center lg:justify-start self-end">
               <img
                 src="/assets/portfolio/feg/family-lap.png"
                 alt="Family Entertainment Group Operations Dashboard"
                 loading="lazy"
-                className="w-full max-w-[580px] h-auto object-contain select-none"
+                className="w-full max-w-[580px] h-auto block object-contain select-none"
               />
             </div>
 
-            <div className="lg:col-span-6 text-left">
+            <div className="lg:col-span-6 text-left pb-14 lg:pb-24">
               <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] leading-[1.18] mb-4">
                 Operations Dashboard
               </h2>

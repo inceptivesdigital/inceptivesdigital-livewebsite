@@ -373,15 +373,15 @@ export default function WordSmithPro() {
       </section>
 
       {/* 6. PLATFORM ARCHITECTURE */}
-      <section className="w-full bg-[#151515] py-14 sm:py-20">
+      <section className="w-full bg-[#151515] pt-14 sm:pt-20 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8 space-y-16 sm:space-y-24">
           <h2 className="text-[30px] sm:text-[40px] lg:text-[46px] font-bold text-[#00CE44] text-center leading-[1.18]">
             Platform Architecture
           </h2>
 
           {/* Writer Application */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-6 flex justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-6 flex justify-center self-end">
               <img
                 src="/assets/portfolio/wordsmith-pro/wordsmith-mobile.png"
                 alt="WordSmith Pro Writer Mobile Application"
@@ -390,7 +390,7 @@ export default function WordSmithPro() {
               />
             </div>
 
-            <div className="lg:col-span-6 text-left space-y-5">
+            <div className="lg:col-span-6 text-left space-y-5 pb-6 lg:pb-10">
               <h3 className="text-[26px] sm:text-[34px] font-bold text-[#00CE44] leading-[1.2]">
                 Writer Application
               </h3>
@@ -412,8 +412,8 @@ export default function WordSmithPro() {
           </div>
 
           {/* Platform Administration Dashboard */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-5 text-left space-y-5 order-2 lg:order-1">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+            <div className="lg:col-span-5 text-left space-y-5 order-2 lg:order-1 pb-14 lg:pb-20">
               <h3 className="text-[26px] sm:text-[34px] font-bold text-[#00CE44] leading-[1.2]">
                 Platform Administration Dashboard
               </h3>
@@ -433,7 +433,7 @@ export default function WordSmithPro() {
               </ul>
             </div>
 
-            <div className="lg:col-span-7 flex justify-center lg:justify-end order-1 lg:order-2">
+            <div className="lg:col-span-7 flex justify-center lg:justify-end order-1 lg:order-2 self-end">
               <img
                 src="/assets/portfolio/wordsmith-pro/word-lap.png"
                 alt="WordSmith Pro Platform Administration Dashboard"

@@ -98,7 +98,7 @@ export default function AiMvpTechStack() {
               </button>
             ))}
           </div>
-          <div className="lg:col-span-8 rounded-2xl bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-4 sm:gap-5 min-h-[320px]">
+          <div className="lg:col-span-8 rounded-2xl bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-4 sm:gap-5">
             {categories[activeCategory].items.map((technology) => (
               <div key={technology.name} className="flex flex-col items-center w-28 sm:w-32 text-center">
                 <div className="w-28 sm:w-32 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-3 mb-2">

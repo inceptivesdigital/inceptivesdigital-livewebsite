@@ -1,4 +1,6 @@
-export default function ClientMarquee() {
+export default function ClientMarquee({
+  heading = 'Trusted By High-Growth Startups & Global Enterprises',
+} = {}) {
   // Exact 6 core partner logos in the live website order
   const logos = [
     {
@@ -41,7 +43,7 @@ export default function ClientMarquee() {
       {/* Title */}
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] mb-10 sm:mb-14 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
-          Trusted By High-Growth Startups &amp; Global Enterprises
+          {heading}
         </h2>
       </div>
 

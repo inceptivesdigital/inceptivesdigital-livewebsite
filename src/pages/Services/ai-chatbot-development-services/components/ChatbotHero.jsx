@@ -28,12 +28,20 @@ export default function ChatbotHero() {
               , machine learning, LLMs, and RAG architectures integrated into chatbots built for customer support, lead qualification, enterprise knowledge access, and workflow automation.
             </p>
 
-            <a
+            <div className="flex flex-wrap items-center gap-4 mb-10">
+              <a
               href="#contact"
-              className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-[15px] md:text-[16px] px-7 py-3.5 rounded-none transition-colors duration-200 mb-10"
+              className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-[15px] md:text-[16px] px-7 py-3.5 rounded-none transition-colors duration-200"
             >
               Book an AI Consultation
             </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
 
             {/* Trust Badges */}
             <HeroTrustBadges />

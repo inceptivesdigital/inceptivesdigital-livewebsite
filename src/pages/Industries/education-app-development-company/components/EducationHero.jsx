@@ -26,12 +26,20 @@ export default function EducationHero() {
           </p>
 
           {/* Single Centered Solid Green Button */}
-          <Link
+          <div className="flex flex-wrap items-center gap-4">
+              <Link
             to="/contact-us"
             className="inline-flex items-center justify-center px-8 py-3.5 bg-[#00CE44] text-black font-medium text-sm sm:text-base rounded-none hover:bg-[#00e04b] transition-all duration-200 cursor-pointer shadow-none"
           >
             Let&apos;s Schedule A Call
           </Link>
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </Link>
+            </div>
         </div>
       </div>
     </section>

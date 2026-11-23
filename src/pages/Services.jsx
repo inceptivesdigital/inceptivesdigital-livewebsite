@@ -96,12 +96,20 @@ export default function Services() {
                 Inceptives Digital helps businesses turn product ideas, operational problems, and AI opportunities into useful digital products through strategy, design, engineering, and post-launch support under one studio.
               </p>
 
+              <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-white text-[#202020] hover:text-[#00CE44] border border-[#00CE44] font-medium text-[15px] sm:text-[16px] px-9 py-4 rounded-none transition-colors duration-200 mb-10"
+                className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-white text-[#202020] hover:text-[#00CE44] border border-[#00CE44] font-medium text-[15px] sm:text-[16px] px-9 py-4 rounded-none transition-colors duration-200"
               >
                 Book a Session
               </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-[15px] md:text-[16px] transition-colors"
+              >
+                Schedule A Call
+              </a>
+            </div>
 
               {/* 3 Review Badges Row */}
               <HeroTrustBadges />

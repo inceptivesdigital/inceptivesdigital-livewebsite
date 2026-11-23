@@ -63,6 +63,12 @@ export default function SFHero() {
             >
               Book a Product Strategy Call
             </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+              >
+                Schedule A Call
+              </a>
           </div>
 
           {/* Trust Badges */}

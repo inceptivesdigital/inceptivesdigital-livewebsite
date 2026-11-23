@@ -19,6 +19,7 @@ import PulseCheckTimer from './pages/Portfolio/PulseCheckTimer'
 import MyTangoEvent from './pages/Portfolio/MyTangoEvent'
 import WordSmithPro from './pages/Portfolio/WordSmithPro'
 import PetsB4Profit from './pages/Portfolio/PetsB4Profit'
+import StakBread from './pages/Portfolio/StakBread'
 import StaffAugmentation from './pages/StaffAugmentation'
 import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment'
 import PrivacyPolicy from './pages/PrivacyPolicy'
@@ -26,6 +27,13 @@ import TermsAndConditions from './pages/TermsAndConditions'
 
 // Services Pages (services/ me sirf services ke pages)
 import MobileAppDevelopment from './pages/Services/mobile-app-development'
+import DigitalProductDevelopment from './pages/Services/digital-product-development'
+import DiscoverySprint from './pages/Services/discovery-sprint'
+import MvpDevelopment from './pages/Services/mvp-development'
+import ProductRescueScaling from './pages/Services/product-rescue-scaling'
+import ProductStrategyConsulting from './pages/Services/product-strategy-consulting'
+import UiUxDesign from './pages/Services/ui-ux-design'
+import InteractivePrototyping from './pages/Services/interactive-prototyping'
 import IosAppDevelopment from './pages/Services/ios-app-development'
 import AndroidAppDevelopment from './pages/Services/android-app-development'
 import ReactNativeAppDevelopment from './pages/Services/react-native-app-development'
@@ -130,13 +138,29 @@ export default function App() {
             <Route path="/portfolio/my-tango-event" element={<MyTangoEvent />} />
             <Route path="/portfolio/wordsmith-pro" element={<WordSmithPro />} />
             <Route path="/portfolio/pets-b4-profit" element={<PetsB4Profit />} />
+            <Route path="/portfolio/stakbread" element={<StakBread />} />
             <Route path="/portfolio/:slug" element={<CaseStudyDetail />} />
             <Route path="/staff-augmentation" element={<StaffAugmentation />} />
             <Route path="/custom-software-development" element={<CustomSoftwareDevelopment />} />
+            <Route path="/services/custom-software-development" element={<CustomSoftwareDevelopment />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-condition" element={<TermsAndConditions />} />
 
             {/* Services Routes */}
+            <Route path="/digital-product-development" element={<DigitalProductDevelopment />} />
+            <Route path="/services/digital-product-development" element={<DigitalProductDevelopment />} />
+            <Route path="/discovery-sprint" element={<DiscoverySprint />} />
+            <Route path="/services/discovery-sprint" element={<DiscoverySprint />} />
+            <Route path="/mvp-development" element={<MvpDevelopment />} />
+            <Route path="/services/mvp-development" element={<MvpDevelopment />} />
+            <Route path="/product-rescue-scaling" element={<ProductRescueScaling />} />
+            <Route path="/services/product-rescue-scaling" element={<ProductRescueScaling />} />
+            <Route path="/product-strategy-consulting" element={<ProductStrategyConsulting />} />
+            <Route path="/services/product-strategy-consulting" element={<ProductStrategyConsulting />} />
+            <Route path="/ui-ux-design" element={<UiUxDesign />} />
+            <Route path="/services/ui-ux-design" element={<UiUxDesign />} />
+            <Route path="/interactive-prototyping" element={<InteractivePrototyping />} />
+            <Route path="/services/interactive-prototyping" element={<InteractivePrototyping />} />
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/ios-app-development" element={<IosAppDevelopment />} />
