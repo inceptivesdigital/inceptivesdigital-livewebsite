@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import kmpSchema from '../../../schemas/kotlin-multiplatform-development.json'
 import KmpHero from './components/KmpHero'
 import KmpTrustedLogos from './components/KmpTrustedLogos'
 import KmpArchitectureChoice from './components/KmpArchitectureChoice'
@@ -9,12 +11,13 @@ import KmpCaseStudies from './components/KmpCaseStudies'
 import KmpTestimonials from './components/KmpTestimonials'
 import KmpWhyChooseUs from './components/KmpWhyChooseUs'
 import KmpProcess from './components/KmpProcess'
-import KmpTechStack from './components/KmpTechStack'
 import KmpArchitectureTable from './components/KmpArchitectureTable'
+import KmpTechStack from './components/KmpTechStack'
 import KmpCostSection from './components/KmpCostSection'
 import KmpFAQs from './components/KmpFAQs'
 
 export default function KotlinMultiplatformAppDevelopmentPage() {
+  useJsonLdSchema(kmpSchema, 'schema-kotlin-multiplatform-development')
   useEffect(() => {
     const seoTitle = 'Kotlin Multiplatform App Development Services | Inceptives Digital'
     const seoDesc =
@@ -44,7 +47,7 @@ export default function KotlinMultiplatformAppDevelopmentPage() {
       canonical.setAttribute('rel', 'canonical')
       document.head.appendChild(canonical)
     }
-    canonical.setAttribute('href', 'https://inceptivesdigital.com/kotlin-multiplatform-app-development')
+    canonical.setAttribute('href', 'https://inceptivesdigital.com/kotlin-multiplatform-development')
   }, [])
 
   return (
@@ -52,43 +55,43 @@ export default function KotlinMultiplatformAppDevelopmentPage() {
       {/* 1. Hero Section */}
       <KmpHero />
 
-      {/* 2. Trusted by Product Teams Shipping on Kotlin Multiplatform */}
+      {/* 2. Trusted by Teams Across Mobile and Multiplatform Development */}
       <KmpTrustedLogos />
 
       {/* 3. Why Are Experienced Product Teams Moving to KMP? + Is Kotlin Multiplatform the Right Architecture for Your Product? */}
       <KmpArchitectureChoice />
 
-      {/* 4. Our Wide Range of Kotlin Multiplatform App Development Services (6 Cards + Discovery CTA) */}
+      {/* 4. Our Wide Range of Kotlin Multiplatform App Development Services */}
       <KmpServicesGrid />
 
-      {/* 5. Proof Metrics Bar (150+ Developers | 20+ Industries Served | 99% Infrastructure Uptime | 8+ Years Building Products) */}
+      {/* 5. Proof Metrics Bar (150+ Developers | 20+ Industries Served | 8+ Years Building Products) */}
       <KmpStatsAndCTA />
 
-      {/* 6. Industries We Build KMP Solutions For (9 Homepage Box Cards) */}
+      {/* 6. Industries We Build KMP Solutions For */}
       <KmpIndustries />
 
-      {/* 7. Our Portfolio of Production-Grade KMP Products */}
+      {/* 7. Our Portfolio in Custom Mobile Product Engineering */}
       <KmpCaseStudies />
 
-      {/* 8. What Clients Say About Smarter Cross-Platform Engineering */}
+      {/* 8. Hear From the Businesses We've Built Products For */}
       <KmpTestimonials />
 
-      {/* 9. Ready to See If KMP Fits Your Architecture? CTA + Why Choose Inceptives Digital (6 Cards) */}
+      {/* 9. Bring Your KMP Project CTA + Why Choose Inceptives Digital + Award-Winning Expertise */}
       <KmpWhyChooseUs />
 
-      {/* 10. Our Kotlin Multiplatform Development Process (6 Circular Icon Steps) */}
+      {/* 10. Our Kotlin Multiplatform Development Process */}
       <KmpProcess />
 
-      {/* 11. Tools That Hold Every KMP Build at Scale (8 Tech Categories) */}
-      <KmpTechStack />
-
-      {/* 12. How Kotlin Multiplatform Works: Architecture Overview (Table) */}
+      {/* 11. How Kotlin Multiplatform Works: Architecture Overview (Table) */}
       <KmpArchitectureTable />
 
-      {/* 13. The Cost of Getting KMP Architecture Right (3 Tier Cards + Custom Estimate CTA) */}
+      {/* 12. Tools That Hold Every KMP Build at Scale + Technology Partnerships */}
+      <KmpTechStack />
+
+      {/* 13. How Much Do Kotlin Multiplatform Development Services Cost? + Quote CTA */}
       <KmpCostSection />
 
-      {/* 14. Kotlin Multiplatform App Development FAQs (12 FAQs) */}
+      {/* 14. Kotlin Multiplatform App Development FAQs */}
       <KmpFAQs />
     </div>
   )

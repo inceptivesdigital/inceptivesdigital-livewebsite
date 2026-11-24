@@ -50,7 +50,7 @@ export default function AndroidCostSection() {
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
             <a
               href="https://inceptivesdigital.com/blog/android-app-development-cost"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               Android app development cost
             </a>{' '}

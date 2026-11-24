@@ -70,7 +70,7 @@ export default function LondonCostSection() {
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
             <Link
               to="/blog/mobile-app-development-cost"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               Mobile app development cost
             </Link>{' '}

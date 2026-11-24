@@ -1,5 +1,5 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
-import React from 'react';
+import React from 'react'
 
 export default function RealEstateHero() {
   return (
@@ -13,11 +13,11 @@ export default function RealEstateHero() {
             </h1>
 
             <h2 className="text-[32px] sm:text-[42px] md:text-[48px] xl:text-[54px] font-bold leading-[1.12] text-white mb-6 tracking-tight max-w-[820px]">
-              Property Management, Listing Platforms, and AI Analytics Built for Real Estate Scale
+              Turn Property Discovery Into Qualified Sales Opportunities With Custom Real Estate Apps
             </h2>
 
             <p className="text-white/85 text-[15px] sm:text-[17px] md:text-[18px] leading-[1.65] max-w-[740px] mb-10 font-normal">
-              Custom real estate applications for agencies, proptech startups, and property marketplaces. Property management systems, listing platforms, virtual tours, CRM integrations, and AI-powered analytics built to MLS and GDPR compliance standards from the architecture stage.
+              Bring your real estate app to market with Inceptives Digital. We provide custom real estate app development services for brokerages, property managers, and PropTech businesses across the USA. Our developers build mobile-first platforms with intuitive property search and MLS/IDX integrations that support your real estate operations.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-6">
@@ -25,7 +25,7 @@ export default function RealEstateHero() {
                 href="#contact"
                 className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
               >
-                Get a Free Quote
+                Consult Our Real Estate App Experts
               </a>
               <a
                 href="#contact"
@@ -50,5 +50,5 @@ export default function RealEstateHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

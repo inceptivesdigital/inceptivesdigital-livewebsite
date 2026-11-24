@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import blockchainSchema from '../../../schemas/blockchain-development.json'
 import BlockchainHero from './components/BlockchainHero'
 import BlockchainValueSection from './components/BlockchainValueSection'
 import BlockchainServicesTabs from './components/BlockchainServicesTabs'
@@ -15,6 +17,7 @@ import BlockchainProcess from './components/BlockchainProcess'
 import BlockchainFAQs from './components/BlockchainFAQs'
 
 export default function BlockchainDevelopmentPage() {
+  useJsonLdSchema(blockchainSchema, 'schema-blockchain-development')
   useEffect(() => {
     const seoTitle = 'Blockchain Development Services | Inceptives Digital'
     const seoDesc =

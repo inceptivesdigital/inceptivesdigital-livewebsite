@@ -17,7 +17,7 @@ export default function PostLaunchWhyChooseUs() {
           Post-launch issues surface differently on iOS, Android, and the web. The team reads platform-specific behavioral and performance signals fluently, then builds{' '}
           <Link
             to="/custom-software-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             custom software development
           </Link>{' '}
@@ -48,7 +48,7 @@ export default function PostLaunchWhyChooseUs() {
           Short-term fixes produce short-term results. The{' '}
           <Link
             to="/product-rescue-scaling"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             product rescue scaling
           </Link>{' '}

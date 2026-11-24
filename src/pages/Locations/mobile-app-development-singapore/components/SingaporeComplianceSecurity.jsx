@@ -130,7 +130,7 @@ export default function SingaporeComplianceSecurity() {
             Mobile app development in Singapore requires careful consideration of data protection, financial regulations, healthcare requirements, and application security. Inceptives Digital incorporates applicable regulatory controls into product architecture, following{' '}
             <Link
               to="/blog/mobile-app-security-best-practices"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               app security best practices
             </Link>

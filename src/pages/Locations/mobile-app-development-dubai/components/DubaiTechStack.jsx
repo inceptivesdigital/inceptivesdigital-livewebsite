@@ -22,7 +22,7 @@ export default function DubaiTechStack() {
             Technology decisions influence far more than the development phase. The languages, frameworks, databases, and cloud infrastructure below form a{' '}
             <Link
               to="/blog/mobile-app-tech-stack"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app tech stack
             </Link>{' '}

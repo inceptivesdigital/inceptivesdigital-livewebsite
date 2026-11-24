@@ -74,7 +74,7 @@ export default function LondonServicesGrid() {
       desc: (
         <>
           Native development offers greater control over security and performance in customer-facing applications. Our{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ios-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             iOS app development
           </Link>{' '}
           in London uses Swift and Apple frameworks, adding Apple Pay, Face ID, or other device capabilities when they serve a defined, commercially relevant product need for users.
@@ -88,7 +88,7 @@ export default function LondonServicesGrid() {
       desc: (
         <>
           Device diversity makes consistent performance essential for Android applications. Kotlin and Jetpack Compose support{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/android-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Android app development
           </Link>{' '}
           for London businesses, covering different screen sizes, hardware capabilities, and growing user demand.

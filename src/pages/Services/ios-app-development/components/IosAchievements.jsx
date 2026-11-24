@@ -41,7 +41,7 @@ export default function IosAchievements() {
                 Inceptives Digital was recognized by Clutch as a Top iPhone App Development Company in the United States for 2026, reinforcing the engineering standards behind our iOS and mobile development practice. That recognition is supported by additional distinctions from Clutch for app development, UX, and design, along with recognition from RightFirms, SoftwareSuggest, and SoftwareWorld across mobile development,{' '}
                 <a
                   href="https://inceptivesdigital.com/ai-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   artificial intelligence development
                 </a>
@@ -52,14 +52,14 @@ export default function IosAchievements() {
                 Our iOS app development services are built around the same standards these recognitions reflect: disciplined{' '}
                 <a
                   href="https://inceptivesdigital.com/product-strategy-consulting"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   product strategy consulting
                 </a>
                 , native Swift and SwiftUI engineering, Apple compliance, secure architecture, and accountable post-launch support. From custom iPhone applications to enterprise iOS platforms backed by broader{' '}
                 <Link
                   to="/custom-software-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   custom software development
                 </Link>{' '}
@@ -69,23 +69,18 @@ export default function IosAchievements() {
           </div>
 
           {/* Right Column: 4 Award Badges Grid */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-5 sm:gap-6">
+          <div className="lg:col-span-5 grid grid-cols-2 gap-6 sm:gap-8 items-center justify-items-center">
             {badges.map((b) => (
               <div
                 key={b.title}
-                className="p-6 rounded-[16px] bg-[#292929] flex flex-col items-center text-center justify-between border-0 shadow-none"
+                className="h-24 sm:h-28 lg:h-32 flex items-center justify-center transition-transform duration-300 hover:scale-105"
               >
-                <div className="h-24 sm:h-28 flex items-center justify-center mb-3.5">
-                  <img
-                    src={b.src}
-                    alt={b.title}
-                    className="max-h-full max-w-[125px] w-auto h-auto object-contain select-none"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-white/90 text-xs font-medium leading-snug">
-                  {b.title}
-                </p>
+                <img
+                  src={b.src}
+                  alt={b.title}
+                  className="max-h-full max-w-[140px] w-auto h-auto object-contain select-none"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

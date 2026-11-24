@@ -3,16 +3,16 @@ import { ArrowRight } from 'lucide-react'
 
 export default function EducationCta3() {
   return (
-    <section className="py-16 lg:py-20 bg-[#000000] text-white relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-[#111111] text-white relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-7 text-left">
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight leading-[1.18] mb-4">
-              Ready to Impact{' '}
-              <span className="text-[#00CE44]">Thousands of Learners</span> Every Day?
+              Ready to Reach More Learners With Your{' '}
+              <span className="text-[#00CE44]">Education App?</span>
             </h2>
             <p className="text-white/85 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-              Building for learner retention is not a design decision. It is an architecture decision made before the first screen is drawn.
+              Partner with Inceptives Digital to develop a custom education app that supports your learning model and growth plans.
             </p>
             <Link
               to="/contact-us"

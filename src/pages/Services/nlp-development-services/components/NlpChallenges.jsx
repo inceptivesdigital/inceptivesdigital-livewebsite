@@ -13,7 +13,7 @@ const challenges = [
     description: (
       <>
         NLP systems are only as accurate as the text data behind them. We clean, structure, and prepare language datasets before{' '}
-        <a className="text-[#00CE44] underline hover:text-white transition-colors" href="https://inceptivesdigital.com/ai-development">
+        <a className="text-[#00CE44] underline hover:opacity-80 transition-colors" href="https://inceptivesdigital.com/ai-development">
           AI development
         </a>{' '}
         and model training begin.
@@ -38,7 +38,7 @@ const challenges = [
     description: (
       <>
         NLP outputs need{' '}
-        <a className="text-[#00CE44] underline hover:text-white transition-colors" href="https://inceptivesdigital.com/system-integration-api-automation">
+        <a className="text-[#00CE44] underline hover:opacity-80 transition-colors" href="https://inceptivesdigital.com/system-integration-api-automation">
           system integration and API automation
         </a>{' '}
         to connect language intelligence with the systems that act on it without disrupting existing workflows.
@@ -67,7 +67,7 @@ export default function NlpChallenges() {
               href="https://inceptivesdigital.com/blog/common-reasons-digital-products-fail"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               digital products fail
             </a>{' '}

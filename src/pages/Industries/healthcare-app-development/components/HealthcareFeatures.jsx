@@ -201,7 +201,7 @@ export default function HealthcareFeatures() {
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.18] mb-4">
             <Link
               to="/blog/must-have-features-healthcare-app"
-              className="text-[#00CE44] hover:underline"
+              className="text-[#00CE44] underline underline-offset-4"
             >
               Healthcare App Features
             </Link>{' '}

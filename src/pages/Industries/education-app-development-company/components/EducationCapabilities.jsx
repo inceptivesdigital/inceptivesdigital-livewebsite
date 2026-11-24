@@ -1,67 +1,80 @@
-export default function EducationCapabilities() {
-  const capabilities = [
-    {
-      title: 'Adaptive Learning Engines',
-      icon: '/assets/healthcare/Al-Chatbots-And-Virtual-Assistant-Apps.svg',
-      desc: 'AI models that customise content delivery, monitor learning behaviour, and adjust difficulty levels in real time. Built for platforms where one-size-fits-all instruction is the problem, not the solution.',
-    },
-    {
-      title: 'High-Performance Architecture',
-      icon: '/assets/healthcare/mHealth-App-Development.svg',
-      desc: 'Secure, scalable backend systems that handle high concurrent user volumes, deliver content without latency, and support multi-device access without performance degradation.',
-    },
-    {
-      title: 'Immersive Technology Integration',
-      icon: '/assets/healthcare/Electronic-Health-Record-Software.svg',
-      desc: 'AR, VR, and interactive simulations are built into education platforms where complex concepts require experiential learning rather than passive content consumption.',
-    },
-    {
-      title: 'LMS and Third-Party Compatibility',
-      icon: '/assets/healthcare/Telemedicine-App-Development.svg',
-      desc: 'Education platforms integrated with existing LMS tools, authentication systems, and cloud services. Built for institutions that need new capabilities without replacing existing infrastructure.',
-    },
-    {
-      title: 'Actionable Learning Analytics',
-      icon: '/assets/healthcare/Laboratory-Information-Management-Systems.svg',
-      desc: 'Real-time dashboards that give educators and administrators visibility into engagement, progress, and performance trends. Data that informs instruction rather than just reporting it.',
-    },
-  ]
+import { Link } from 'react-router-dom'
 
+const reasons = [
+  {
+    title: 'Built for Your Learning Model',
+    description:
+      'Subscription-based learning platforms and institutional systems require different architectures. Our engineers shape each product around its learning workflows and business requirements.',
+  },
+  {
+    title: 'Advanced EdTech Engineering Expertise',
+    description:
+      'Complex education platforms often require specialized functionality. Our engineers develop custom backend systems and advanced learning capabilities suited to your product.',
+  },
+  {
+    title: 'Unified Mobile and Web Development',
+    description: (
+      <>
+        Student apps and administrative dashboards must work together. Our mobile and{' '}
+        <Link
+          to="/web-app-development-company"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          web app development
+        </Link>{' '}
+        teams build connected platforms within a coordinated development scope.
+      </>
+    ),
+  },
+  {
+    title: 'Integration With Existing Systems',
+    description:
+      'Protect your existing technology investment through careful integration planning. We assess compatible academic systems before recommending new development.',
+  },
+  {
+    title: 'High-Quality Learning Experience Design',
+    description:
+      'Our developers build education apps with accessible navigation and screen reader support, helping institutions serve learners with different abilities.',
+  },
+  {
+    title: 'Long-Term Product Engineering Support',
+    description:
+      'Education platforms evolve with changing learning requirements. Our development teams maintain technical continuity through agreed updates and future releases.',
+  },
+]
+
+export default function EducationCapabilities() {
   return (
-    <section className="py-20 lg:py-24 bg-[#151515] text-white relative">
+    <section className="py-16 sm:py-24 bg-[#111111] text-white">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
-        <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.2] mb-4">
-            <span className="text-[#00CE44]">Education App Development Capabilities</span>{' '}
-            That Go Beyond Content Delivery
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.18] mb-4">
+            Why EdTech Businesses Choose Our{' '}
+            <span className="text-[#00CE44]">Education App Development Services</span>
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
-            Every capability below exists because learner engagement without measurable outcomes is not a product worth building.
+            With 8+ years of experience and 70+ digital products delivered, Inceptives Digital brings established{' '}
+            <Link
+              to="/digital-product-development"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              digital product development
+            </Link>{' '}
+            expertise to education app development. Our teams align technical decisions with your learning model and commercial priorities.
           </p>
         </div>
 
-        {/* Centered 3 + 2 Grid */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {capabilities.map((cap, idx) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch auto-rows-fr">
+          {reasons.map((item) => (
             <div
-              key={idx}
-              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-[#202020] rounded-[20px] p-7 sm:p-8 flex flex-col justify-start border border-[#2B2B2B] hover:border-[#00CE44]/60 transition-all duration-300 text-left"
+              key={item.title}
+              className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 text-left transition-colors duration-200 h-full"
             >
-              <div className="w-12 h-12 flex items-center justify-start mb-5">
-                <img
-                  src={cap.icon}
-                  alt={cap.title}
-                  className="max-h-12 max-w-12 object-contain select-none"
-                  loading="lazy"
-                />
-              </div>
-
-              <h3 className="text-xl sm:text-[22px] font-bold text-[#00CE44] tracking-tight leading-snug mb-3">
-                {cap.title}
+              <h3 className="text-[#00CE44] group-hover:text-black text-[19px] sm:text-[21px] font-bold leading-snug mb-3 transition-colors duration-200">
+                {item.title}
               </h3>
-
-              <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed font-normal">
-                {cap.desc}
+              <p className="text-white/85 group-hover:text-black/90 text-[14.5px] sm:text-[15.5px] leading-[1.68] font-normal transition-colors duration-200">
+                {item.description}
               </p>
             </div>
           ))}

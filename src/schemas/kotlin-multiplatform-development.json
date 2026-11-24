@@ -1,0 +1,199 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://inceptivesdigital.com/#organization",
+      "name": "Inceptives Digital",
+      "legalName": "IT Core Solutions LLC",
+      "url": "https://inceptivesdigital.com/",
+      "logo": "https://inceptivesdigital.com/wp-content/uploads/2026/07/logo.png",
+      "description": "Inceptives Digital builds mobile applications, digital products, and AI-powered systems for businesses.",
+      "telephone": "+1-469-788-8527",
+      "email": "info@inceptivesdigital.com",
+      "sameAs": [
+        "https://clutch.co/profile/inceptives-digital",
+        "https://www.trustpilot.com/review/inceptivesdigital.com",
+        "https://www.bark.com/en/us/b/inceptives-digital/Pww4ae/",
+        "https://www.linkedin.com/company/inceptivesdigital/",
+        "https://www.facebook.com/inceptivesdigital",
+        "https://www.instagram.com/inceptivesdigital/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://inceptivesdigital.com/#website",
+      "url": "https://inceptivesdigital.com/",
+      "name": "Inceptives Digital",
+      "publisher": {
+        "@id": "https://inceptivesdigital.com/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#webpage",
+      "url": "https://inceptivesdigital.com/kotlin-multiplatform-development",
+      "name": "Kotlin Multiplatform App Development Services | Inceptives Digital",
+      "description": "Discover Inceptives Digital, a leader in Kotlin multiplatform app development. We create production-grade KMP products with shared business logic and native UI.",
+      "isPartOf": {
+        "@id": "https://inceptivesdigital.com/#website"
+      },
+      "publisher": {
+        "@id": "https://inceptivesdigital.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#service"
+      },
+      "hasPart": {
+        "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#faq"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://inceptivesdigital.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mobile App Development",
+          "item": "https://inceptivesdigital.com/mobile-app-development"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kotlin Multiplatform App Development",
+          "item": "https://inceptivesdigital.com/kotlin-multiplatform-development"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#service",
+      "name": "Kotlin Multiplatform App Development Services",
+      "serviceType": "Custom Kotlin Multiplatform Application Development",
+      "description": "Kotlin Multiplatform app development services for iOS and Android, including shared Kotlin business logic, native SwiftUI and Jetpack Compose interfaces, KMP architecture, incremental migration, API integration, shared-module testing, performance optimization, and ongoing application maintenance. Services also support web and desktop targets where project requirements permit.",
+      "url": "https://inceptivesdigital.com/kotlin-multiplatform-development",
+      "provider": {
+        "@id": "https://inceptivesdigital.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://inceptivesdigital.com/kotlin-multiplatform-development#faq",
+      "url": "https://inceptivesdigital.com/kotlin-multiplatform-development",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Kotlin Multiplatform production-ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. JetBrains released a stable version of Kotlin Multiplatform, and global enterprises including Netflix, Philips, and VMware rely on it in production. Core libraries like Ktor and SQLDelight operate at full stable maturity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Kotlin Multiplatform and Compose Multiplatform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kotlin Multiplatform shares business logic, networking, and data layers across platforms while keeping UI native. Compose Multiplatform extends code sharing directly to the user interface layer across Android, iOS, web, and desktop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does KMP require rewriting an existing Android app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. KMP supports incremental adoption. Teams can move authentication, networking, or data models into a shared module while the rest of the application remains untouched, protecting your existing release cadence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does KMP on iOS still require Swift developers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. KMP shares domain logic, but the iOS user interface is built in Swift using SwiftUI or UIKit. The framework eliminates the need to rewrite business logic in Swift, saving hundreds of engineering hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the current limitations of KMP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kotlin Multiplatform has limitations with libraries that lack cross-platform support and features that require native development. Compose Multiplatform supports Android, iOS, and desktop, while web support remains in beta. Businesses should assess these compatibility requirements before choosing KMP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "KMP vs Flutter: How should a team decide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose KMP when your product demands native UI behavior, complex business logic, and deep OS integration. Choose Flutter when maximum UI consistency across platforms and rapid single-team delivery matter more than native controls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can KMP target web and desktop or only mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. KMP targets iOS, Android, web via Kotlin/Wasm, and desktop via Compose Multiplatform. The core business logic module runs across all platforms, while web and desktop require platform-specific UI configurations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a KMP project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A focused KMP project typically takes 8–14 weeks, while a full product with native platform interfaces requires 16–28 weeks. Migration timelines depend on the existing codebase, shared-module scope, and integration requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if a KMP bug affects both platforms simultaneously?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A bug in shared Kotlin code can affect multiple platforms. Our engineers test shared modules and run automated checks across supported targets to identify issues early, while platform-specific testing helps catch integration problems before release."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ongoing engineering support available after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Post-launch retainers cover feature expansion, dependency updates, platform OS compatibility maintenance, and mobile app performance optimization. Maintaining continuity with the original engineering team protects architectural integrity over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Kotlin Multiplatform project typically cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A focused KMP shared module starts around $25,000, while full product builds span $55,000 to $120,000+. Total pricing scales with shared module scope, platform target count, and whether the project is greenfield or migration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a KMP team need separate Android and iOS developers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Successful KMP projects require Android and iOS engineers alongside a shared-module specialist. Android teams build the Jetpack Compose layer, iOS teams build the SwiftUI layer, and both consume shared business logic."
+          }
+        }
+      ]
+    }
+  ]
+}

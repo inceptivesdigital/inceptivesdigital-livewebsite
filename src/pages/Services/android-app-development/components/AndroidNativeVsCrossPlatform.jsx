@@ -14,7 +14,7 @@ export default function AndroidNativeVsCrossPlatform() {
             Native Kotlin fits heavy hardware integration and top-tier performance.{' '}
             <a
               href="https://inceptivesdigital.com/cross-platform-app-development"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               Cross-platform app development
             </a>{' '}
@@ -50,7 +50,7 @@ export default function AndroidNativeVsCrossPlatform() {
                   <span>
                     <a
                       href="https://inceptivesdigital.com/ai-app-development-services"
-                      className="underline text-[#00CE44] hover:text-white transition-colors"
+                      className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                     >
                       On-device AI
                     </a>{' '}
@@ -92,21 +92,21 @@ export default function AndroidNativeVsCrossPlatform() {
                 Launch on Android and{' '}
                 <Link
                   to="/ios-app-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   iOS
                 </Link>{' '}
                 with shared application code.{' '}
                 <Link
                   to="/flutter-app-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   Flutter
                 </Link>{' '}
                 and{' '}
                 <Link
                   to="/react-native-app-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   React Native
                 </Link>{' '}
@@ -135,7 +135,7 @@ export default function AndroidNativeVsCrossPlatform() {
                   <span>
                     <Link
                       to="/kotlin-multiplatform-app-development"
-                      className="underline text-[#00CE44] hover:text-white transition-colors"
+                      className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                     >
                       Kotlin Multiplatform
                     </Link>{' '}

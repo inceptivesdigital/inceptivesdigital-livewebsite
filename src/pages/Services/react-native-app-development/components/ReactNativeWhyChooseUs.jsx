@@ -4,34 +4,73 @@ export default function ReactNativeWhyChooseUs() {
   const pillars = [
     {
       title: 'Performance-Driven React Native Engineering',
-      desc: 'Our React Native engineers optimize JavaScript execution and native integrations to maintain responsive mobile app performance. Targeted performance testing helps identify bottlenecks before they affect critical user interactions.',
+      desc: (
+        <>
+          Our React Native engineers optimize JavaScript execution and native integrations to maintain responsive{' '}
+          <Link
+            to="/blog/mobile-app-performance-optimization"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            mobile app performance
+          </Link>
+          . Targeted performance testing helps identify bottlenecks before they affect critical user interactions.
+        </>
+      ),
     },
     {
       title: 'One Codebase, Platform-Specific Precision',
       desc: (
         <>
-          Reduce{' '}
           <Link
-            to="/services/mobile-app-development"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            to="/blog/how-to-reduce-mobile-app-development-cost"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
-            mobile app development costs
+            Reduce mobile app development costs
           </Link>{' '}
-          without sacrificing essential iOS and Android functionality. Through shared architecture and platform-specific integrations, our react native mobile app developers maintain consistent experiences while addressing each product's native requirements.
+          without sacrificing essential iOS and Android functionality. Through shared architecture and platform-specific integrations, our react native mobile app developers maintain consistent experiences while addressing each product&apos;s native requirements.
         </>
       ),
     },
     {
       title: '150+ Engineers Across Product Disciplines',
-      desc: 'With 150+ engineers spanning mobile and backend development, Inceptives Digital brings cross-functional expertise to complex React Native projects. Clients gain coordinated technical support without managing multiple development vendors.',
+      desc: (
+        <>
+          With 150+ engineers spanning mobile and{' '}
+          <Link
+            to="/backend-api-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            backend development
+          </Link>
+          , Inceptives Digital brings cross-functional expertise to complex React Native projects. Clients gain coordinated technical support without managing multiple development vendors.
+        </>
+      ),
     },
     {
       title: 'Transparent Agile Delivery',
-      desc: 'Track your React Native project\'s progress through two-week agile sprints and working build demonstrations. Our engineers incorporate feedback throughout development, giving you direct visibility into deliverables and milestone completion.',
+      desc: "Track your React Native project's progress through two-week agile sprints and working build demonstrations. Our engineers incorporate feedback throughout development, giving you direct visibility into deliverables and milestone completion.",
     },
     {
       title: 'Security and Compliance-Focused Development',
-      desc: 'For applications handling sensitive data, our engineers integrate mobile app security best practices into the development architecture. OWASP-aligned practices and applicable HIPAA or PCI DSS controls guide implementation according to each product’s regulatory scope.',
+      desc: (
+        <>
+          For applications handling sensitive data, our engineers integrate{' '}
+          <Link
+            to="/blog/mobile-app-security-best-practices"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            mobile app security best practices
+          </Link>{' '}
+          into the development architecture. OWASP-aligned practices and applicable{' '}
+          <Link
+            to="/blog/hipaa-compliant-app-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            HIPAA
+          </Link>{' '}
+          or PCI DSS controls guide implementation according to each product’s regulatory scope.
+        </>
+      ),
     },
     {
       title: 'Post-Launch Performance Accountability',
@@ -39,8 +78,8 @@ export default function ReactNativeWhyChooseUs() {
         <>
           Beyond the initial release, our React Native support focuses on protecting application stability as platform requirements evolve. Engineers monitor production performance through{' '}
           <Link
-            to="/services/post-launch-analytics-iteration"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            to="/post-launch-analytics-iteration"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             post-launch analytics
           </Link>{' '}
@@ -50,9 +89,28 @@ export default function ReactNativeWhyChooseUs() {
     },
   ]
 
+  const awardBadges = [
+    {
+      label: 'Clutch Top App Development Company, San Francisco 2026',
+      src: '/assets/awards-images/award-clutch-austin.png',
+    },
+    {
+      label: 'Clutch Top Android App Development Company, San Francisco 2026',
+      src: '/assets/awards-images/award-top-developers.png',
+    },
+    {
+      label: 'Clutch Top iPhone App Development Company, United States 2026',
+      src: '/assets/ios-app/iPhone_App_Development_Companies_in_the_United_States.png',
+    },
+    {
+      label: 'RightFirms Top Mobile App Development 2026',
+      src: '/assets/ios-app/rf-badge-top-mobile-app-development-2026-982x1024.png',
+    },
+  ]
+
   return (
     <>
-      {/* Ready to Launch Your App? CTA Banner */}
+      {/* Let's Put Your React Native Project in Experienced Engineering Hands CTA Banner */}
       <section className="py-12 sm:py-16 bg-[#000000]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
           <div
@@ -92,7 +150,7 @@ export default function ReactNativeWhyChooseUs() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
                 <img
                   src="/assets/react-native/cta-mobile.png"
-                  alt="Ready to Launch Your App? Let's Build It Together!"
+                  alt="Let's Put Your React Native Project in Experienced Engineering Hands"
                   className="w-full max-w-[240px] sm:max-w-[290px] lg:max-w-[330px] xl:max-w-[360px] h-auto object-contain block select-none"
                   loading="lazy"
                 />
@@ -141,29 +199,37 @@ export default function ReactNativeWhyChooseUs() {
         </div>
       </section>
 
-      {/* Awards & Recognition We've Earned */}
+      {/* Awards & Recognition We’ve Earned */}
       <section className="py-16 sm:py-20 bg-[#141414] border-t border-white/10">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-tight mb-4">
-            Awards & Recognition <span className="text-[#00CE44]">We’ve Earned</span>
+            Awards &amp; Recognition <span className="text-[#00CE44]">We’ve Earned</span>
           </h2>
           <p className="text-white/80 text-[16px] leading-relaxed font-normal max-w-3xl mx-auto mb-12">
-            Our achievements in mobile app development reflect extensive engineering experience across iOS and Android. Recognition from leading platforms reinforces our expertise and established presence in the industry.
+            Our achievements in{' '}
+            <Link
+              to="/mobile-app-development"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+            >
+              mobile app development
+            </Link>{' '}
+            reflect extensive engineering experience across iOS and Android. Recognition from leading platforms reinforces our expertise and established presence in the industry.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-16">
-            <div className="h-24 sm:h-28 flex items-center justify-center transition-transform hover:scale-105">
-              <img src="/assets/awards-images/award-clutch-austin.png" alt="Clutch Top App Development Company, San Francisco 2026" className="max-h-full w-auto object-contain select-none" loading="lazy" />
-            </div>
-            <div className="h-24 sm:h-28 flex items-center justify-center transition-transform hover:scale-105">
-              <img src="/assets/awards-images/award-top-developers.png" alt="Clutch Top Android App Development Company, San Francisco 2026" className="max-h-full w-auto object-contain select-none" loading="lazy" />
-            </div>
-            <div className="h-24 sm:h-28 flex items-center justify-center transition-transform hover:scale-105">
-              <img src="/assets/awards-images/award-clutch-gaming.png" alt="Clutch Top iPhone App Development Company, United States 2026" className="max-h-full w-auto object-contain select-none" loading="lazy" />
-            </div>
-            <div className="h-24 sm:h-28 flex items-center justify-center transition-transform hover:scale-105">
-              <img src="/assets/awards-images/award-rightfirms.png" alt="RightFirms Top Mobile App Development 2026" className="max-h-full w-auto object-contain select-none" loading="lazy" />
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-20">
+            {awardBadges.map((b) => (
+              <div
+                key={b.label}
+                className="h-24 sm:h-28 lg:h-32 w-auto max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
+              >
+                <img
+                  src={b.src}
+                  alt={b.label}
+                  className="max-h-full max-w-full w-auto h-auto object-contain select-none"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

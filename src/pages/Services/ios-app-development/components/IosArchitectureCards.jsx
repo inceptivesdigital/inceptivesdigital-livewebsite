@@ -9,7 +9,7 @@ export default function IosArchitectureCards() {
           SwiftUI and UIKit, the core{' '}
           <a
             href="https://inceptivesdigital.com/blog/ios-app-development-frameworks"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             iOS app development frameworks
           </a>
@@ -31,7 +31,7 @@ export default function IosArchitectureCards() {
         <>
           <a
             href="https://inceptivesdigital.com/backend-api-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Backend API development
           </a>{' '}
@@ -47,7 +47,7 @@ export default function IosArchitectureCards() {
         <>
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-performance-optimization"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Mobile app performance optimization
           </a>{' '}

@@ -49,7 +49,7 @@ export default function TorontoAdvancedTech() {
           AI &amp;{' '}
           <Link
             to="/machine-learning-development-services"
-            className="text-[#00CE44] hover:underline"
+            className="text-[#00CE44] underline underline-offset-4"
           >
             Machine Learning
           </Link>
@@ -60,7 +60,7 @@ export default function TorontoAdvancedTech() {
           Businesses benefit from AI when personalization, forecasting, or decisions are made faster than a person can make by hand, powering recommendation engines, fraud detection, and support{' '}
           <Link
             to="/business-process-automation"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             automation
           </Link>{' '}
@@ -80,7 +80,7 @@ export default function TorontoAdvancedTech() {
         <>
           <Link
             to="/blog/ar-vr-in-fitness-apps"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             AR and VR
           </Link>{' '}

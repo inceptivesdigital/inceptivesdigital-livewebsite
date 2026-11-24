@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 export default function EducationTechStack() {
@@ -29,7 +30,7 @@ export default function EducationTechStack() {
       ],
     },
     {
-      name: 'Databases & Storage',
+      name: 'Database & Storage',
       items: [
         { name: 'MySQL', img: '/assets/healthcare/tech/mySql.jpg' },
         { name: 'PostgreSQL', img: '/assets/healthcare/tech/postgreSQL.jpg' },
@@ -40,7 +41,7 @@ export default function EducationTechStack() {
       ],
     },
     {
-      name: 'Cloud & DevOps',
+      name: 'Cloud & Hosting',
       items: [
         { name: 'AWS', img: '/assets/healthcare/tech/aws.jpg' },
         { name: 'Google Cloud', img: '/assets/healthcare/tech/goole-cloud-platform.jpg' },
@@ -75,7 +76,7 @@ export default function EducationTechStack() {
       items: [
         { name: 'Phaser.js', img: '/assets/education/tech/phaser.jpg' },
         { name: 'Cocos2d', img: '/assets/education/tech/Cocos2d.jpg' },
-        { name: 'Custom Game', img: '/assets/education/tech/arkit.jpg' },
+        { name: 'Custom Game Engines', img: '/assets/education/tech/arkit.jpg' },
       ],
     },
     {
@@ -86,6 +87,17 @@ export default function EducationTechStack() {
         { name: 'Firebase Analytics', img: '/assets/healthcare/tech/firebase.jpg' },
         { name: 'Tableau', img: '/assets/education/tech/Tableau.jpg' },
         { name: 'Power BI', img: '/assets/healthcare/tech/powerbi.jpg' },
+      ],
+    },
+    {
+      name: 'Security & Compliance',
+      items: [
+        { name: 'OAuth 2.0', img: '/assets/healthcare/hippa-icon.webp' },
+        { name: 'JWT', img: '/assets/healthcare/hippa-icon.webp' },
+        { name: 'SSL/TLS', img: '/assets/healthcare/hippa-icon.webp' },
+        { name: 'GDPR', img: '/assets/healthcare/hippa-icon.webp' },
+        { name: 'FERPA', img: '/assets/healthcare/hippa-icon.webp' },
+        { name: 'Role-Based Access Control', img: '/assets/healthcare/hippa-icon.webp' },
       ],
     },
   ]
@@ -100,11 +112,18 @@ export default function EducationTechStack() {
             on Proven Technologies
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
-            The frameworks, tools, and infrastructure behind learning platforms that perform across devices, scale with institutions, and meet compliance standards.
+            The{' '}
+            <Link
+              to="/blog/mobile-app-tech-stack"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              mobile app tech stack
+            </Link>{' '}
+            behind learning platforms that perform across devices, scale with institutions, and meet compliance standards.
           </p>
         </div>
 
-        {/* Two Solid Green Panels with Tight Left Sidebar Stacking */}
+        {/* Two Solid Green Panels */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-start gap-1 border-0 shadow-none">
             {categories.map((cat, idx) => {

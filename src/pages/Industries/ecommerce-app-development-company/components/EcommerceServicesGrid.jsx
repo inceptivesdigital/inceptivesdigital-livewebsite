@@ -1,70 +1,121 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
-  Globe,
+  Code2,
+  Smartphone,
+  TabletSmartphone,
+  Layers,
   Store,
   Briefcase,
+  ShoppingCart,
   ShoppingBag,
-  Smartphone,
-  Users,
-  Sparkles,
-  Code2,
   Wrench,
 } from 'lucide-react'
 
 const services = [
   {
-    icon: Globe,
-    title: 'eCommerce Website Development',
+    icon: Code2,
+    title: '1. Custom eCommerce App Development',
     description:
-      'Responsive, high-performance web stores with PCI-compliant payment gateways, organised product catalogs, and optimised checkout flows. Built for businesses that need a secure, scalable storefront that performs under high-volume traffic.',
-  },
-  {
-    icon: Store,
-    title: 'eCommerce Marketplace Development',
-    description:
-      'Multi-vendor marketplace platforms with live inventory management, vendor dashboards, and advanced order tracking. Built for businesses connecting buyers and sellers across multiple product categories at scale.',
-  },
-  {
-    icon: Briefcase,
-    title: 'B2B eCommerce Development',
-    description:
-      'Custom B2B platforms with role-based access control, tiered pricing engines, and bulk order processing. Built for wholesalers, distributors, and enterprise buyers who need complex procurement workflows without manual coordination.',
-  },
-  {
-    icon: ShoppingBag,
-    title: 'Retail eCommerce Development',
-    description:
-      'High-volume retail applications with live inventory management, dynamic pricing, personalised promotions, and omnichannel integrations. Built for retail businesses managing large product catalogs and high transaction volumes simultaneously.',
+      'Build custom shopping applications around your catalog structure, checkout rules, and customer journeys. Our custom eCommerce app developers engineer scalable backend services, secure payment integrations, and smooth inventory workflows that accommodate your business operations.',
   },
   {
     icon: Smartphone,
-    title: 'Cross-Platform eCommerce App Development',
-    description:
-      'Single-codebase ecommerce applications that deliver native-quality performance across iOS and Android. API-driven integrations and consistent user experience across devices without two separate development budgets.',
+    title: '2. iOS eCommerce App Development',
+    description: (
+      <>
+        For brands targeting Apple customers, our native{' '}
+        <Link
+          to="/ios-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          iOS app development
+        </Link>{' '}
+        expertise supports polished shopping journeys and deep platform integration. Swift and SwiftUI power responsive storefronts with Apple Pay, secure authentication, and personalized discovery.
+      </>
+    ),
   },
   {
-    icon: Users,
-    title: 'Multi-Vendor eCommerce App Development',
-    description:
-      'Marketplace applications with unique vendor dashboards, centralised order processing, commission calculation, and live inventory synchronisation. Built for platforms where multiple vendors operate independently within a single commerce ecosystem.',
+    icon: TabletSmartphone,
+    title: '3. Android eCommerce App Development',
+    description: (
+      <>
+        Android shoppers expect reliable experiences across phones, tablets, and varied screen sizes. Using Kotlin and Jetpack Compose, our{' '}
+        <Link
+          to="/android-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          Android app development
+        </Link>{' '}
+        engineers build commerce apps with Google Pay, optimized browsing, and real-time order notifications.
+      </>
+    ),
   },
   {
-    icon: Sparkles,
-    title: 'eCommerce Fashion App Development',
-    description:
-      'Fashion retail applications with multimedia product catalogs, sophisticated search, recommendation engines, size and variant management, and AR-based virtual try-on. Built for fashion businesses where product discovery and visual experience drive purchase decisions.',
+    icon: Layers,
+    title: '4. Cross-Platform eCommerce App Development',
+    description: (
+      <>
+        Our eCommerce expertise in{' '}
+        <Link
+          to="/cross-platform-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          cross-platform app development
+        </Link>{' '}
+        helps businesses launch on iOS and Android with shared Flutter or React Native codebases. We engineer responsive shopping interfaces, secure checkout integrations, and consistent app performance.
+      </>
+    ),
   },
   {
-    icon: Code2,
-    title: 'Custom eCommerce App Development',
+    icon: Store,
+    title: '5. eCommerce Marketplace App Development',
     description:
-      'Modular ecommerce architecture with secure checkout workflows, real-time inventory synchronisation, payment gateway integrations, CRM connectivity, and analytics tools. Built around your specific business model, not a generic commerce template.',
+      'Managing multiple sellers requires reliable transaction controls and independent vendor operations. We engineer multi-vendor marketplace applications with seller onboarding, commission management, automated payout workflows, and centralized order administration.',
+  },
+  {
+    icon: Briefcase,
+    title: '6. B2B eCommerce Application Development',
+    description: (
+      <>
+        Supporting wholesalers and distributors with B2B eCommerce applications featuring contract pricing, bulk ordering, account permissions, and approval workflows. ERP{' '}
+        <Link
+          to="/system-integration-api-automation"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          system integration
+        </Link>{' '}
+        helps purchasing teams manage procurement without duplicating inventory or customer records.
+      </>
+    ),
+  },
+  {
+    icon: ShoppingCart,
+    title: '7. Shopify and Headless Commerce App Development',
+    description:
+      'Protect your existing commerce investment while extending it to mobile. We connect custom storefronts to Shopify and compatible headless platforms through APIs that synchronize products, customer accounts, checkout sessions, and orders.',
+  },
+  {
+    icon: ShoppingBag,
+    title: '8. Retail eCommerce App Development',
+    description:
+      'Retailers managing digital and physical sales need accurate information across channels. Our retail app developers integrate POS systems, inventory availability, loyalty programs, promotions, and fulfillment workflows to support connected shopping experiences.',
   },
   {
     icon: Wrench,
-    title: 'eCommerce App Maintenance and Support',
-    description:
-      'Ongoing version updates, security improvements, performance monitoring, and bug resolution. Built for ecommerce businesses that need their platform to remain reliable, secure, and competitive after launch.',
+    title: '9. eCommerce App Maintenance and Modernization',
+    description: (
+      <>
+        Keep existing shopping applications compatible with platform updates and changing commerce requirements. Our{' '}
+        <Link
+          to="/blog/mobile-app-maintenance-cost"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          mobile app maintenance
+        </Link>{' '}
+        team handles performance improvements, dependency upgrades, security fixes, and feature enhancements to maintain application reliability.
+      </>
+    ),
   },
 ]
 
@@ -75,11 +126,12 @@ export default function EcommerceServicesGrid() {
         {/* Heading */}
         <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            Reliable Ecommerce Development Services for{' '}
-            <span className="text-[#00CE44]">High-Performing Online Stores</span>
+            All-Inclusive Custom{' '}
+            <span className="text-[#00CE44]">eCommerce App Development Services</span>{' '}
+            We Offer
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Custom ecommerce applications designed for retail businesses, marketplaces, and enterprise commerce operations across every platform and business model.
+            Inceptives Digital provides eCommerce app development services for businesses with distinct sales models and operational requirements. Whether you need a standalone shopping app or a mobile storefront connected to an existing commerce platform, our engineering teams design the application architecture around your catalog complexity, transaction volumes, and integration needs.
           </p>
         </div>
 
@@ -90,7 +142,7 @@ export default function EcommerceServicesGrid() {
             return (
               <div
                 key={service.title}
-                className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200 cursor-pointer"
+                className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200"
               >
                 <Icon
                   className="w-9 h-9 text-[#00CE44] group-hover:text-black mb-5 transition-colors duration-200"

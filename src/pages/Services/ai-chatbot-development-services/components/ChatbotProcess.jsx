@@ -13,7 +13,7 @@ const steps = [
           href="https://inceptivesdigital.com/product-strategy-consulting"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           product strategy consulting
         </a>{' '}
@@ -35,7 +35,7 @@ const steps = [
       <>
         <Link
           to="/ai-development"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           AI development
         </Link>{' '}
@@ -44,7 +44,7 @@ const steps = [
           href="https://inceptivesdigital.com/generative-ai-development-company"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           generative AI development
         </a>{' '}
@@ -67,7 +67,7 @@ const steps = [
         Deployed on AWS SageMaker, Google Vertex AI, or Azure ML. MLflow tracks performance and detects drift.{' '}
         <Link
           to="/post-launch-analytics-iteration"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           Post-launch analytics and iteration
         </Link>{' '}
@@ -93,7 +93,7 @@ export default function ChatbotProcess() {
             href="https://inceptivesdigital.com/digital-product-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             digital product development
           </a>{' '}

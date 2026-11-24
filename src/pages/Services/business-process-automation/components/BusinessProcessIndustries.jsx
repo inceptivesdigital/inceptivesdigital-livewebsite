@@ -73,7 +73,7 @@ export default function BusinessProcessIndustries() {
             Every industry runs structured workflows. We automate the processes that still depend on manual execution across tools and teams.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
           {industries.map(({ icon, alt, title, items }) => (
             <article
               key={title}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function RevenueIcon({ name, className }) {
   const props = {
@@ -53,39 +54,49 @@ function RevenueIcon({ name, className }) {
 const models = [
   {
     icon: 'b2c',
-    title: 'B2C — Business to Consumer',
+    title: 'B2C eCommerce',
     description:
-      'Consumer-facing applications with fast checkouts, personalised recommendations, loyalty programmes, and high-volume transaction management. Built for businesses selling directly to end consumers at scale.',
+      'Consumer-focused shopping applications simplify purchasing journeys, support personalized promotions, and create opportunities for stronger customer retention.',
   },
   {
     icon: 'b2b',
-    title: 'B2B — Business to Business',
+    title: 'B2B eCommerce',
     description:
-      'Bulk ordering, contractual pricing, role-based access control, and multi-tier approval workflows. Built for wholesalers, distributors, and enterprise buyers where procurement complexity is the operational norm.',
+      'Wholesale operations require flexible purchasing workflows. Our B2B applications accommodate negotiated pricing, bulk orders, and enterprise procurement.',
   },
   {
     icon: 'd2c',
-    title: 'D2C — Direct to Consumer',
+    title: 'D2C Commerce',
     description:
-      'Subscription models, targeted promotions, and integrated fulfilment systems built for brands selling directly to consumers without retail intermediaries. Built for businesses that want to own the customer relationship and the margin that comes with it.',
+      'For brands selling directly to consumers, dedicated commerce applications provide greater control over customer relationships and repeat purchases.',
   },
   {
     icon: 'marketplace',
-    title: 'Multi-Vendor Marketplace',
+    title: 'Multi-Vendor Marketplaces',
     description:
-      'Vendor onboarding, commission engines, centralised order management, and secure payment distribution are built into a single platform. Built for businesses creating ecosystems where multiple sellers operate independently under one roof.',
+      'Our marketplace solutions connect independent sellers with buyers through centralized operations and flexible commission-based revenue models.',
   },
   {
     icon: 'subscription',
-    title: 'Subscription-Based eCommerce',
-    description:
-      'Recurring billing, automated renewal systems, usage-based pricing, and subscription lifecycle management. Built for businesses that need predictable revenue streams and automated customer retention without manual intervention.',
+    title: 'Subscription Commerce',
+    description: (
+      <>
+        Recurring purchases become easier to manage with automated billing, flexible{' '}
+        <Link
+          to="/blog/mobile-app-monetization-strategies"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          subscription plans
+        </Link>
+        , and convenient customer account controls.
+      </>
+    ),
   },
   {
     icon: 'omnichannel',
     title: 'Omnichannel Retail',
     description:
-      'Unified inventory, pricing, and customer records are maintained across mobile applications, web platforms, and physical retail locations. Built for retailers that need consistent operations and reporting regardless of where the transaction happens.',
+      'Retail businesses can connect physical stores with digital sales channels through synchronized inventory and flexible fulfillment options.',
   },
 ]
 
@@ -99,11 +110,11 @@ export default function EcommerceRevenueModels() {
             Business Models
           </span>
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            Revenue Models Powered by Our{' '}
-            <span className="text-[#00CE44]">Ecommerce App Development Company</span>
+            eCommerce Applications for{' '}
+            <span className="text-[#00CE44]">Different Business Models</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            The commerce model you choose determines the architecture beneath it. Every revenue structure below requires different technical decisions to be made before development begins.
+            Every commerce model has distinct purchasing patterns and revenue requirements. Our eCommerce developers build applications that support your sales operations and customer expectations.
           </p>
         </div>
 
@@ -112,7 +123,7 @@ export default function EcommerceRevenueModels() {
           {models.map((model) => (
             <div
               key={model.title}
-              className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200 cursor-pointer"
+              className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200"
             >
               <RevenueIcon
                 name={model.icon}

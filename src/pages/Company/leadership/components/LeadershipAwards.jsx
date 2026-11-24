@@ -29,36 +29,14 @@ export default function LeadershipAwards() {
           </p>
         </div>
 
-        {/* Authentic 8-Badge Composite Grid Image (Attachment 7) */}
-        <div className="mb-12 rounded-2xl overflow-hidden border border-white/10 bg-[#121316] shadow-2xl p-2 sm:p-4">
+        {/* Authentic 8-Badge Composite Grid Image (Clean, No Border/BG, No Text Cards Below) */}
+        <div className="flex items-center justify-center">
           <img
             src="/assets/leadership/awards-grid.png"
             alt="Awards and Recognition Earned Along the Way - Inceptives Digital"
-            className="w-full h-auto object-contain rounded-xl select-none"
+            className="w-full h-auto object-contain select-none"
             loading="lazy"
           />
-        </div>
-
-        {/* Awards Badges Metadata List (4x2 on desktop) */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-left">
-          {awards.map((a, i) => (
-            <div
-              key={i}
-              className="p-5 bg-[#121316] border border-white/10 hover:border-[#00CE44]/40 transition-colors flex flex-col justify-between"
-            >
-              <div className="text-xs font-mono text-[#00CE44] mb-2 font-bold">
-                0{i + 1} // AWARD
-              </div>
-              <div>
-                <h4 className="text-base sm:text-lg font-bold text-white tracking-tight mb-1">
-                  {a.title}
-                </h4>
-                <p className="text-xs text-white/60 font-medium">
-                  {a.category}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

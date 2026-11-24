@@ -27,7 +27,7 @@ export default function TorontoHero() {
             A mobile app shapes how a business operates, serves customers, and creates new revenue opportunities. Inceptives Digital is a{' '}
             <Link
               to="/mobile-app-development"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app development company
             </Link>{' '}

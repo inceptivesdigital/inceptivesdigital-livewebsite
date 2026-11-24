@@ -3,8 +3,13 @@ import Testimonials from '../../../../components/Testimonials'
 export default function RealEstateTestimonials() {
   return (
     <Testimonials
-      heading={<>Trusted by Real Estate Leaders, Brokerages & PropTech Innovators</>}
-      subtitle={<>Discover how property agencies, marketplace founders, and commercial real estate enterprises scale transactions with our custom platforms.</>}
+      heading={
+        <>
+          What Clients Say About Our{' '}
+          <span className="text-[#00CE44]">Engineering Work</span>
+        </>
+      }
+      subtitle="Hear how business founders describe their experience working with Inceptives Digital throughout development."
     />
   )
 }

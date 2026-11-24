@@ -118,7 +118,7 @@ export default function TorontoTechPartners() {
             Inceptives Digital builds every mobile app on trusted platforms and{' '}
             <Link
               to="/blog/ios-app-development-frameworks"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               modern frameworks
             </Link>{' '}

@@ -12,7 +12,7 @@ export default function EducationCta1() {
               <span className="text-[#00CE44]">EdTech?</span>
             </h2>
             <p className="text-white/85 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-              From adaptive learning systems to immersive AR experiences, we scope every education app engagement around your specific learners, curriculum, and compliance requirements.
+              From custom LMS platforms to AI-powered learning apps, our developers can help define the right approach for your education product.
             </p>
             <Link
               to="/contact-us"

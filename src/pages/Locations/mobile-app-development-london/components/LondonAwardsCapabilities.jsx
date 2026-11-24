@@ -91,21 +91,18 @@ export default function LondonAwardsCapabilities() {
                 </h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
                 {awards.map((a) => (
                   <div
                     key={a.title}
-                    className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-[#1b1c22] border-0 shadow-none"
+                    className="h-20 sm:h-24 flex items-center justify-center transition-transform duration-300 hover:scale-105"
                   >
                     <img
                       src={a.logo}
                       alt={a.title}
-                      className="h-12 w-12 object-contain shrink-0 select-none"
+                      className="max-h-full max-w-[130px] w-auto h-auto object-contain select-none"
                       loading="lazy"
                     />
-                    <span className="text-sm sm:text-base font-bold text-white leading-snug">
-                      {a.title}
-                    </span>
                   </div>
                 ))}
               </div>

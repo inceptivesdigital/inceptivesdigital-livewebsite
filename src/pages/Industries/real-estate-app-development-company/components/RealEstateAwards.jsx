@@ -1,56 +1,53 @@
-import React from 'react';
+import React from 'react'
 
 const awards = [
   {
-    img: '/assets/mobile-app/new-review-icon-add2.webp',
-    alt: 'Clutch Top App Developers',
+    title: 'Clutch Top App Development Company, San Francisco 2026',
+    src: '/assets/ios-app/top-mobile-app-development-company-2025.png',
   },
   {
-    img: '/assets/mobile-app/badge-top-mobile-app-developers-2025.png',
-    alt: 'Top Mobile App Developers 2025',
+    title: 'Clutch Top iPhone App Development Company, United States 2026',
+    src: '/assets/ios-app/iPhone_App_Development_Companies_in_the_United_States.png',
   },
   {
-    img: '/assets/mobile-app/new-review-icon-add6.png',
-    alt: 'DesignRush Accredited Agency',
+    title: 'Clutch Top Android App Development Company, San Francisco 2026',
+    src: '/assets/ios-app/top-rated-logo-1024x1024.png',
   },
   {
-    img: '/assets/mobile-app/rightfirms-badge-company.png',
-    alt: 'RightFirms Top App Development Company',
+    title: 'RightFirms Top Mobile App Development Company 2026',
+    src: '/assets/ios-app/rf-badge-top-mobile-app-development-2026-982x1024.png',
   },
-  {
-    img: '/assets/mobile-app/new-review-icon-add4.png',
-    alt: 'Top Rated Development Partner',
-  },
-];
+]
 
 export default function RealEstateAwards() {
   return (
-    <section className="w-full bg-[#111111] text-white py-14 md:py-20 border-t border-white/10">
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
-        <div className="text-center max-w-[820px] mx-auto mb-10">
-          <h2 className="text-[26px] sm:text-[34px] md:text-[40px] font-bold leading-tight text-white mb-3">
-            Recognized by Leading Global Review Platforms
-          </h2>
-          <p className="text-white/75 text-[15px] sm:text-[16px] leading-relaxed font-normal">
-            Award-winning mobile, web, and PropTech software engineering trusted by high-growth real estate brands worldwide.
-          </p>
-        </div>
+    <section className="py-16 sm:py-24 bg-[#000000] text-white border-y border-white/10">
+      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 text-center">
+        <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold text-white tracking-tight leading-tight mb-4">
+          Industry Recognition for Our{' '}
+          <span className="text-[#00CE44]">Excellence in Mobile Engineering</span>
+        </h2>
+        <p className="text-white/80 text-[15px] sm:text-[17px] leading-relaxed font-normal max-w-3xl mx-auto mb-12 sm:mb-16">
+          Awards reinforce the broader engineering expertise we bring to complex digital products across the US.
+        </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
-          {awards.map((award, idx) => (
+        <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-14 lg:gap-20">
+          {awards.map((award) => (
             <div
-              key={idx}
-              className="flex items-center justify-center h-[120px] sm:h-[140px]"
+              key={award.title}
+              className="h-28 sm:h-32 lg:h-36 w-auto max-w-[160px] sm:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
+              title={award.title}
             >
               <img
-                src={award.img}
-                alt={award.alt}
-                className="max-h-[95px] sm:max-h-[110px] w-auto object-contain select-none"
+                src={award.src}
+                alt={award.title}
+                className="max-h-full max-w-full w-auto h-auto object-contain select-none"
+                loading="lazy"
               />
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

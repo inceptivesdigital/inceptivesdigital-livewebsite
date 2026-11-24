@@ -37,7 +37,7 @@ const faqs = [
           Yes. In-app surveys, user interviews, and support ticket analysis run alongside behavioral data throughout, adding the interpretive context that analytics alone cannot provide. The{' '}
           <Link
             to="/blog/the-role-of-ui-ux-design-in-mobile-app-success"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             role of UI/UX design in mobile app success
           </Link>{' '}
@@ -56,7 +56,7 @@ const faqs = [
           Development capacity is built into the Iterate and Accelerate tiers. If a Stabilize engagement surfaces bigger issues, the scope gets adjusted through{' '}
           <Link
             to="/business-process-automation"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             business process automation
           </Link>{' '}
@@ -71,14 +71,14 @@ const faqs = [
           Both. Early-stage products benefit from strong analytics habits and{' '}
           <Link
             to="/mvp-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             MVP development
           </Link>
           , while established products often carry accumulated UX and technical debt that a structured audit quickly surfaces and prioritizes. Early-stage budgeting can also be benchmarked against typical{' '}
           <Link
             to="/blog/mvp-development-cost"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             MVP development cost
           </Link>{' '}
@@ -93,14 +93,14 @@ const faqs = [
           Book a session with the team. The first conversation covers your product, its current performance, and exactly what a post-launch engagement would focus on and cost. Where discoverability is part of the issue,{' '}
           <Link
             to="/blog/app-store-optimization-aso"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             app store optimization and ASO
           </Link>
           , and{' '}
           <Link
             to="/blog/effective-marketing-strategies-for-mobile-apps"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             effective marketing strategies for mobile apps
           </Link>{' '}

@@ -43,7 +43,7 @@ export default function HealthcareWhyChooseUs() {
             What Sets Our{' '}
             <Link
               to="/blog/healthcare-mobile-app-development-guide"
-              className="text-[#00CE44] hover:underline"
+              className="text-[#00CE44] underline underline-offset-4"
             >
               Healthcare App Development
             </Link>{' '}

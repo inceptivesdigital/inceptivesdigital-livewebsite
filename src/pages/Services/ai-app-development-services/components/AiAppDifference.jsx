@@ -19,7 +19,7 @@ export default function AiAppDifference() {
               href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               AI app builders
             </a>{' '}

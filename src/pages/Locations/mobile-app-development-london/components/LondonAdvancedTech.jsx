@@ -49,7 +49,7 @@ export default function LondonAdvancedTech() {
         <>
           <Link
             to="/ai-app-development-services"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             AI app development services
           </Link>{' '}
@@ -79,7 +79,7 @@ export default function LondonAdvancedTech() {
         <>
           <Link
             to="/blockchain-development"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             Blockchain development
           </Link>{' '}

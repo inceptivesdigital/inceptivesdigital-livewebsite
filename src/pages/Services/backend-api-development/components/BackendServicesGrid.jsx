@@ -15,7 +15,7 @@ export default function BackendServicesGrid() {
             href="https://inceptivesdigital.com/system-integration-api-automation"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             system integration API automation
           </a>{' '}
@@ -43,7 +43,7 @@ export default function BackendServicesGrid() {
             href="https://inceptivesdigital.com/blog/mobile-app-performance-optimization"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             mobile app performance optimization
           </a>
@@ -61,7 +61,7 @@ export default function BackendServicesGrid() {
             href="https://inceptivesdigital.com/product-rescue-scaling"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             product rescue scaling
           </a>{' '}

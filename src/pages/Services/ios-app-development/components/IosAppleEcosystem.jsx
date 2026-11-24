@@ -42,7 +42,7 @@ export default function IosAppleEcosystem() {
             Our iPhone and iPad app development services sit within our wider{' '}
             <Link
               to="/mobile-app-development"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               mobile app development
             </Link>{' '}

@@ -8,14 +8,14 @@ export default function IosServicesGrid() {
           Have an iPhone{' '}
           <a
             href="https://inceptivesdigital.com/blog/how-to-validate-your-mobile-app-idea"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             app idea
           </a>{' '}
           but need a clear development plan? Our iOS consultants examine your product requirements and recommend the appropriate Apple frameworks. A{' '}
           <a
             href="https://inceptivesdigital.com/discovery-sprint"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             discovery sprint
           </a>{' '}
@@ -31,7 +31,7 @@ export default function IosServicesGrid() {
           Our iOS{' '}
           <a
             href="https://inceptivesdigital.com/ui-ux-design"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             UI/UX design
           </a>{' '}
@@ -56,14 +56,14 @@ export default function IosServicesGrid() {
           Business iPhone apps frequently depend on external software. Our iOS application developers handle{' '}
           <a
             href="https://inceptivesdigital.com/system-integration-api-automation"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             system integration and API automation
           </a>
           , connecting CRM systems and custom backends through secure APIs. For applications offering digital purchases, StoreKit supports Apple’s in-app payment and subscription{' '}
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-monetization-strategies"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             monetization
           </a>{' '}
@@ -79,7 +79,7 @@ export default function IosServicesGrid() {
           Legacy Objective-C applications can struggle with changes to Apple&apos;s SDKs and newer iOS releases. Our iPhone app development services include Swift migration, targeted UIKit modernization, and{' '}
           <a
             href="https://inceptivesdigital.com/product-rescue-scaling"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             product rescue
           </a>
@@ -95,7 +95,7 @@ export default function IosServicesGrid() {
           An iOS development company needs to account for Apple&apos;s review requirements before the final build reaches App Store Connect. Our engineers use TestFlight for beta distribution, review Apple’s submission guidelines before you{' '}
           <a
             href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             publish and update an app on the App Store
           </a>

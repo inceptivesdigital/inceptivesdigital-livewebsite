@@ -267,7 +267,7 @@ export default function TechStackTabs() {
             Every technology decision shapes your product&apos;s future. We build on a proven{' '}
             <a
               href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               mobile app tech stack
             </a>{' '}

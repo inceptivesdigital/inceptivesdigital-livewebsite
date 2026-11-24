@@ -40,7 +40,7 @@ export default function AsoHero() {
               The Apple App Store holds over 1.8 million apps. Google Play holds more than 3.5 million. Visibility inside those stores does not happen by accident; it gets built, measured, and refined. Inceptives Digital is a digital product studio that treats App Store Optimization services as a discipline within a wider{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 mobile app development company
               </Link>{' '}

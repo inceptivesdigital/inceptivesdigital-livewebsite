@@ -9,7 +9,7 @@ export default function SingaporeWhyChooseUs() {
           Every engagement is led by senior product strategists, solution architects, and engineering leads who stay involved from discovery through launch, not handed off once the contract is signed, which settles the{' '}
           <Link
             to="/blog/in-house-development-vs-app-development-partner"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             in-house vs development partner
           </Link>{' '}
@@ -29,7 +29,7 @@ export default function SingaporeWhyChooseUs() {
           Scalable cloud infrastructure and modern microservices, backed by{' '}
           <Link
             to="/blog/mobile-app-performance-optimization"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             mobile app performance optimization
           </Link>
@@ -49,7 +49,7 @@ export default function SingaporeWhyChooseUs() {
           24/7 performance monitoring, security patching, and scheduled feature releases keep the product stable long after ship date, and a clear view of{' '}
           <Link
             to="/blog/mobile-app-maintenance-cost"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             mobile app maintenance cost
           </Link>{' '}
@@ -69,7 +69,7 @@ export default function SingaporeWhyChooseUs() {
           We address PDPA-aligned data handling and MAS-aware architecture for regulated builds in fintech, healthcare, and other sensitive industries at the architecture stage, using{' '}
           <Link
             to="/blog/app-development-risk-management"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             app development risk management
           </Link>
@@ -100,7 +100,7 @@ export default function SingaporeWhyChooseUs() {
             Strong engineering is only part of a successful product, and knowing how to{' '}
             <Link
               to="/blog/how-to-choose-the-right-mobile-app-development-company"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               choose the right company
             </Link>{' '}

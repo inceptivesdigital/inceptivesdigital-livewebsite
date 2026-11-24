@@ -35,7 +35,7 @@ export default function NYHero() {
             In New York, a strong app idea is only the starting point. Product decisions must account for demanding users, established competitors, and the systems a business already runs. Inceptives Digital is a{' '}
             <Link
               to="/mobile-app-development"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile application development company
             </Link>{' '}

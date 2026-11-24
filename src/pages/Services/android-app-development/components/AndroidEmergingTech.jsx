@@ -10,7 +10,7 @@ export default function AndroidEmergingTech() {
           Bring on-device{' '}
           <a
             href="https://inceptivesdigital.com/machine-learning-development-services"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             machine learning
           </a>{' '}
@@ -31,7 +31,7 @@ export default function AndroidEmergingTech() {
           Create immersive{' '}
           <a
             href="https://inceptivesdigital.com/blog/android-ar-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Android AR
           </a>{' '}
@@ -52,7 +52,7 @@ export default function AndroidEmergingTech() {
           Support Android products with{' '}
           <Link
             to="/blockchain-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             blockchain development
           </Link>{' '}

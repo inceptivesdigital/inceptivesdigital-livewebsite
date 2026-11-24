@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom'
+
 export default function ReactNativeTechPartnerships() {
   const partners = [
-    { name: 'AWS', src: '/assets/ios-app/awsas-icon.png' },
-    { name: 'Microsoft Azure', src: '/assets/react-native/microsoft-azure.jpg' },
-    { name: 'Google Cloud', src: '/assets/ios-app/googlecloud-img.png' },
-    { name: 'Firebase', src: '/assets/ios-app/firebasedlogo2.png' },
-    { name: 'Stripe', src: '/assets/ios-app/strip-png.png' },
-    { name: 'OpenAI', src: '/assets/ios-app/aws_partnership_logo_7ad34e2ac8asd.png' },
+    { name: 'AWS', src: '/assets/ios-app/aws-2.svg' },
+    { name: 'Microsoft Azure', src: '/assets/ios-app/Microsoft_Azure_Logo.svg' },
+    { name: 'Google Cloud', src: '/assets/ios-app/Google_Cloud_logo.svg' },
+    { name: 'Firebase', src: '/assets/ios-app/New_Firebase_logo.svg' },
+    { name: 'Stripe', src: '/assets/ios-app/Stripe_Logo_revised_2016.svg' },
+    { name: 'OpenAI', src: '/assets/mobile-app/openai.png' },
   ]
 
   return (
@@ -18,11 +20,18 @@ export default function ReactNativeTechPartnerships() {
             <span className="text-[#00CE44]">React Native Engineering</span>
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
-            Our technology partnerships strengthen React Native development across iOS and Android. Through established platforms and integration expertise, we engineer scalable mobile applications for evolving business requirements.
+            Our{' '}
+            <Link
+              to="/partnership"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+            >
+              technology partnerships
+            </Link>{' '}
+            strengthen React Native development across iOS and Android. Through established platforms and integration expertise, we engineer scalable mobile applications for evolving business requirements.
           </p>
         </div>
 
-        {/* 6 Partner Logos Grid (6 Columns on Desktop) — dark cards matching live style */}
+        {/* 6 Partner Logos Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
           {partners.map((p) => (
             <div

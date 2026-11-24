@@ -52,7 +52,7 @@ export default function NYWhyChooseUs() {
           A mobile app should not become a technical constraint as the business grows. Inceptives Digital builds with maintainable architecture, scalable backends, and a sound{' '}
           <Link
             to="/blog/mobile-app-tech-stack"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             mobile app tech stack
           </Link>{' '}
@@ -81,7 +81,7 @@ export default function NYWhyChooseUs() {
             New York’s technology market moves quickly, but speed alone does not make a mobile product successful. Inceptives Digital helps businesses invest in{' '}
             <Link
               to="/blog/why-invest-in-custom-mobile-app-development"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               custom mobile app development
             </Link>{' '}

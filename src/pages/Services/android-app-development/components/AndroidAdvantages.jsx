@@ -11,7 +11,7 @@ export default function AndroidAdvantages() {
           New features shouldn&apos;t require major architectural changes with every update. Our Android developers build Kotlin-based applications around existing business systems, keeping the architecture flexible enough to support future{' '}
           <a
             href="https://inceptivesdigital.com/system-integration-api-automation"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             API integrations
           </a>
@@ -30,7 +30,7 @@ export default function AndroidAdvantages() {
           Protect sensitive business data with{' '}
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-security-best-practices"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             mobile app security best practices
           </a>{' '}
@@ -45,7 +45,7 @@ export default function AndroidAdvantages() {
           Every milestone in the{' '}
           <a
             href="https://inceptivesdigital.com/blog/app-development-timeline"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             app development timeline
           </a>{' '}

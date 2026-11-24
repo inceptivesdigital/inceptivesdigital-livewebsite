@@ -8,7 +8,7 @@ export default function SingaporeAdvancedTech() {
         <>
           <Link
             to="/generative-ai-development-company"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             Generative AI
           </Link>{' '}
@@ -27,7 +27,7 @@ export default function SingaporeAdvancedTech() {
         <>
           <Link
             to="/ai-agent-development"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             AI agents
           </Link>{' '}
@@ -47,7 +47,7 @@ export default function SingaporeAdvancedTech() {
           The right data becomes more valuable when it influences future decisions. Products with growing user bases can use predictive analytics and personalization from{' '}
           <Link
             to="/machine-learning-development-services"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             machine learning development services
           </Link>{' '}
@@ -95,7 +95,7 @@ export default function SingaporeAdvancedTech() {
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
             <Link
               to="/ai-app-development-services"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               AI app development services
             </Link>{' '}

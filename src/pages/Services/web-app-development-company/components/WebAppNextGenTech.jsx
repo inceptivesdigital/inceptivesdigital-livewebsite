@@ -10,7 +10,7 @@ export default function WebAppNextGenTech() {
             href="https://inceptivesdigital.com/blog/artificial-intelligence-mvp-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             AI-powered MVP development
           </a>{' '}
@@ -43,7 +43,7 @@ export default function WebAppNextGenTech() {
             href="https://inceptivesdigital.com/blog/iot-in-healthcare-applications-benefits-and-future-trends"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             IoT in healthcare applications
           </a>{' '}
@@ -61,7 +61,7 @@ export default function WebAppNextGenTech() {
             href="https://inceptivesdigital.com/blog/blockchain-in-software-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             blockchain in software development
           </a>{' '}

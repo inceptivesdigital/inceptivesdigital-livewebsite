@@ -67,7 +67,7 @@ export default function SFAdvancedTech() {
       renderDesc: () => (
         <span>
           Apply{' '}
-          <Link to="/machine-learning-development-services" className="underline text-[#00CE44] hover:text-white transition-colors">
+          <Link to="/machine-learning-development-services" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
             machine learning
           </Link>{' '}
           and LLM capabilities where they solve measurable product challenges, automate repetitive work, improve user experiences, and deliver smarter decisions.

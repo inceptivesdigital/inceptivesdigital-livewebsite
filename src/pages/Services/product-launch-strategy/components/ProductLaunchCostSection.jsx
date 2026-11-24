@@ -11,7 +11,7 @@ export default function ProductLaunchCostSection() {
           Product launch strategy engagements typically range from $10,000 for focused{' '}
           <Link
             to="/mvp-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             MVP development
           </Link>{' '}
@@ -35,7 +35,7 @@ export default function ProductLaunchCostSection() {
           A comprehensive launch strategy for products with a defined audience and growth targets, covering deep market research, multi-channel campaign planning,{' '}
           <Link
             to="/blog/mobile-app-marketing-cost"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             mobile app marketing costs
           </Link>

@@ -96,15 +96,15 @@ export default function WebAppComparisonTable() {
 
         <p className="mt-6 text-sm sm:text-[15px] text-white/75 leading-relaxed">
           Need native mobile performance or cross-platform mobile reach alongside your web app? Explore our{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-normal">
+          <Link to="/ios-app-development" className="text-[#00CE44] underline hover:opacity-80 transition-colors font-normal">
             iOS app development
           </Link>
           ,{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-normal">
+          <Link to="/android-app-development" className="text-[#00CE44] underline hover:opacity-80 transition-colors font-normal">
             Android app development
           </Link>
           , and{' '}
-          <Link to="/flutter-app-development" className="text-[#00CE44] underline hover:text-white transition-colors font-normal">
+          <Link to="/flutter-app-development" className="text-[#00CE44] underline hover:opacity-80 transition-colors font-normal">
             Flutter app development
           </Link>{' '}
           services.

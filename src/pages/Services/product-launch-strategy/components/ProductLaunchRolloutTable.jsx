@@ -15,14 +15,14 @@ export default function ProductLaunchRolloutTable() {
           Validate your{' '}
           <Link
             to="/blog/how-to-validate-your-mobile-app-idea"
-            className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             mobile app idea
           </Link>
           , fix bugs, and test{' '}
           <Link
             to="/blog/mobile-app-monetization-strategies"
-            className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             mobile app monetization strategies
           </Link>{' '}
@@ -51,7 +51,7 @@ export default function ProductLaunchRolloutTable() {
           Early testing helps avoid{' '}
           <Link
             to="/blog/app-store-optimization-mistakes"
-            className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             app store optimization mistakes
           </Link>{' '}
@@ -63,7 +63,7 @@ export default function ProductLaunchRolloutTable() {
           Demands proven{' '}
           <Link
             to="/blog/10-aso-strategies-to-increase-your-app-store-rankings"
-            className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             ASO strategies to increase app store rankings
           </Link>{' '}

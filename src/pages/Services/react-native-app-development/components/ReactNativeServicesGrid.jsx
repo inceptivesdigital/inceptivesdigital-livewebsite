@@ -5,33 +5,62 @@ export default function ReactNativeServicesGrid() {
     {
       title: 'React Native App Consultation',
       icon: '/assets/ios-app/serivces1.svg',
-      desc: 'Before development begins, React Native consulting services help establish a clear technical direction for the product. Our consultants assess platform requirements and integration dependencies to define a practical roadmap aligned with the project\'s investment.',
-    },
-    {
-      title: 'React Native UI/UX Design',
-      icon: '/assets/ios-app/serivces2.svg',
-      desc: 'Give your application an intuitive mobile user experience that respects the interaction standards of both platforms. React Native UI/UX designers develop user flows and interactive prototypes that support usability across iOS and Android.',
-    },
-    {
-      title: 'Custom React Native App Development',
-      icon: '/assets/ios-app/serivces3.svg',
       desc: (
         <>
-          Build around the requirements that make your mobile product distinct. Our{' '}
+          Before development begins,{' '}
           <Link
-            to="/services/cross-platform-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            to="/product-strategy-consulting"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
-            custom React Native app development
+            React Native consulting services
           </Link>{' '}
-          services use modular architecture and native integrations to build reliable iOS and Android applications with room for future expansion.
+          help establish a clear technical direction for the product. Our consultants assess platform requirements and integration dependencies to define a practical roadmap aligned with the project&apos;s investment.
         </>
       ),
     },
     {
+      title: 'React Native UI/UX Design',
+      icon: '/assets/ios-app/serivces2.svg',
+      desc: (
+        <>
+          Give your application an intuitive mobile{' '}
+          <Link
+            to="/blog/the-role-of-ui-ux-design-in-mobile-app-success"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            user experience
+          </Link>{' '}
+          that respects the interaction standards of both platforms. React Native{' '}
+          <Link
+            to="/ui-ux-design"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            UI/UX designers
+          </Link>{' '}
+          develop user flows and interactive prototypes that support usability across iOS and Android.
+        </>
+      ),
+    },
+    {
+      title: 'Custom React Native App Development',
+      icon: '/assets/ios-app/serivces3.svg',
+      desc: 'Build around the requirements that make your mobile product distinct. Our custom React Native app development services use modular architecture and native integrations to build reliable iOS and Android applications with room for future expansion.',
+    },
+    {
       title: 'React Native App Migration',
       icon: '/assets/ios-app/serivces4.svg',
-      desc: 'Legacy applications require careful assessment before moving to a shared mobile architecture. React Native app migration services address native dependencies and existing integrations, with product rescue helping businesses modernize without disrupting critical workflows.',
+      desc: (
+        <>
+          Legacy applications require careful assessment before moving to a shared mobile architecture. React Native app migration services address native dependencies and existing integrations, with{' '}
+          <Link
+            to="/product-rescue-scaling"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            product rescue
+          </Link>{' '}
+          helping businesses modernize without disrupting critical workflows.
+        </>
+      ),
     },
     {
       title: 'Dual-Platform Deployment and ASO',
@@ -40,15 +69,15 @@ export default function ReactNativeServicesGrid() {
         <>
           Bring your React Native application to market through a coordinated{' '}
           <Link
-            to="/services/product-launch-strategy"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            to="/product-launch-strategy"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             product launch strategy
           </Link>{' '}
           across iOS and Android. Our deployment team manages store submissions, while targeted{' '}
           <Link
-            to="/services/app-store-optimization"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            to="/app-store-optimization"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             app store optimization (ASO)
           </Link>{' '}
@@ -61,14 +90,14 @@ export default function ReactNativeServicesGrid() {
       icon: '/assets/ios-app/serivces6.svg',
       desc: (
         <>
-          As mobile platforms evolve,{' '}
+          As mobile platforms evolve, React Native{' '}
           <Link
-            to="/services/post-launch-analytics-iteration"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            to="/blog/mobile-app-maintenance-cost"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
-            React Native maintenance services
+            maintenance
           </Link>{' '}
-          help businesses keep their applications compatible with changing OS requirements. Engineers address performance issues and support planned enhancements to maintain product reliability after launch.
+          services help businesses keep their applications compatible with changing OS requirements. Engineers address performance issues and support planned enhancements to maintain product reliability after launch.
         </>
       ),
     },
@@ -85,12 +114,12 @@ export default function ReactNativeServicesGrid() {
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
             Our React Native app development services cover the complete product lifecycle, from consultation through post-launch support. An experienced{' '}
             <Link
-              to="/services/cross-platform-app-development"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              to="/cross-platform-app-development"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
             >
-              cross-platform app development team
+              cross-platform app development
             </Link>{' '}
-            manages each engagement with shared engineering oversight, keeping delivery consistent as you build an app across iOS and Android.
+            team manages each engagement with shared engineering oversight, keeping delivery consistent as you build an app across iOS and Android.
           </p>
         </div>
 

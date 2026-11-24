@@ -27,14 +27,14 @@ export default function DubaiHero() {
             Mobile applications have become the operating layer behind Dubai&apos;s fastest-growing businesses. That is where Inceptives Digital adds value, working with founders, scale-ups, and SMBs on{' '}
             <Link
               to="/mobile-app-development"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app development
             </Link>{' '}
             that engineers custom iOS, Android, cross-platform, and AI-powered applications shaped by product strategy from the outset. The product-first approach, backed by{' '}
             <Link
               to="/product-strategy-consulting"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               product strategy consulting
             </Link>

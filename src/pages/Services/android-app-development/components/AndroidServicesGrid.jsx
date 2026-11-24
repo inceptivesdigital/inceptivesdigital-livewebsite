@@ -8,7 +8,7 @@ export default function AndroidServicesGrid() {
           Make informed investment decisions before Android development begins. Our{' '}
           <a
             href="https://inceptivesdigital.com/product-strategy-consulting"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             product strategy consultants
           </a>{' '}
@@ -24,7 +24,7 @@ export default function AndroidServicesGrid() {
           Android{' '}
           <a
             href="https://inceptivesdigital.com/ui-ux-design"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             UI/UX design
           </a>{' '}
@@ -45,7 +45,7 @@ export default function AndroidServicesGrid() {
           Reliable Android applications must perform consistently beyond the development environment. Our Android{' '}
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-testing-strategies"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             app testing strategies
           </a>{' '}
@@ -61,7 +61,7 @@ export default function AndroidServicesGrid() {
           Take your Android application from a completed build to a production-ready release. Our Google Play Store deployment services handle everything required for submission, including Android App Bundle preparation and Play Console setup. Before expanding availability, a staged{' '}
           <a
             href="https://inceptivesdigital.com/product-launch-strategy"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             product launch strategy
           </a>{' '}
@@ -77,7 +77,7 @@ export default function AndroidServicesGrid() {
           Keep your Android application compatible with newer OS releases without replacing a product that still serves your business. Maintenance addresses outdated SDK dependencies and recurring performance issues. When legacy architecture restricts new functionality, Android app modernization and{' '}
           <a
             href="https://inceptivesdigital.com/product-rescue-scaling"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             product rescue
           </a>{' '}

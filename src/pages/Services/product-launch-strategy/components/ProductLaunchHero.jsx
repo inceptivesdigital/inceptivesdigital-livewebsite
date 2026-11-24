@@ -40,21 +40,21 @@ export default function ProductLaunchHero() {
               Product launch is now faster than ever. The average time from idea to app store dropped to under 12 weeks for teams with the right{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 mobile app development company
               </Link>
               , yet most products still miss their window. Inceptives Digital runs launch engagements end-to-end, combining{' '}
               <Link
                 to="/product-strategy-consulting"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 product strategy consulting
               </Link>
               ,{' '}
               <Link
                 to="/ui-ux-design"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 UI/UX design
               </Link>

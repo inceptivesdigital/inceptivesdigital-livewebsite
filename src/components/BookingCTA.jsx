@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { submitFormToSeo } from '../utils/submitFormToSeo'
 
 export default function BookingCTA() {
+  const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -14,9 +17,28 @@ export default function BookingCTA() {
     marketingConsent: false,
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (sending) return
+    setSending(true)
+    await submitFormToSeo({
+      formName: 'Pre-Footer Get In Touch Form',
+      subject: `Website Contact - ${formData.firstName} ${formData.lastName}`.trim(),
+      replyTo: formData.email,
+      fields: {
+        'First Name': formData.firstName,
+        'Last Name': formData.lastName,
+        Email: formData.email,
+        Phone: formData.phone,
+        Subject: formData.subject || 'General Inquiry',
+        Message: formData.message,
+        'Transactional SMS Consent': formData.transactionalConsent ? 'Yes' : 'No',
+        'Marketing SMS Consent': formData.marketingConsent ? 'Yes' : 'No',
+      },
+    })
+    setSending(false)
     setSubmitted(true)
+    navigate('/thank-you')
   }
 
   return (

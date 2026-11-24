@@ -23,7 +23,7 @@ const faqs = [
       renderA: () => (
         <p>
           Yes. Nontechnical founders can develop mobile applications with an experienced development partner. Inceptives Digital handles{' '}
-          <Link to="/discovery-sprint" className="underline text-[#00CE44] hover:text-white transition-colors">
+          <Link to="/discovery-sprint" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
             product discovery
           </Link>
           , technical architecture, UI/UX design, engineering, and launch planning while clients retain control over product decisions.
@@ -35,7 +35,7 @@ const faqs = [
       renderA: () => (
         <p>
           Validate your app idea through customer interviews, competitor research, and a focused{' '}
-          <Link to="/mvp-development" className="underline text-[#00CE44] hover:text-white transition-colors">
+          <Link to="/mvp-development" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
             minimum viable product (MVP)
           </Link>
           . San Francisco startups can also use design-partner pilots to test essential workflows before committing to full-scale development.
@@ -71,7 +71,7 @@ const faqs = [
       renderA: () => (
         <p>
           Prioritize relevant case studies, verified client reviews, technical expertise, and transparent project estimates. Confirm source code ownership, security practices, development milestones, and{' '}
-          <Link to="/product-rescue-scaling" className="underline text-[#00CE44] hover:text-white transition-colors">
+          <Link to="/product-rescue-scaling" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
             rescue and scaling
           </Link>{' '}
           before selecting a San Francisco mobile app development partner.
@@ -95,7 +95,7 @@ const faqs = [
             href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             App Store deployment
           </a>

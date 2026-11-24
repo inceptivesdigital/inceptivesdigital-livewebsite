@@ -40,7 +40,7 @@ export default function PostLaunchHero() {
               Most digital products go live with strong builds and weak post-launch plans. The product works. The code is clean. However, without a structured analytics and iteration process, behavioral signals pile up unread, and conversion problems quietly compound. Inceptives Digital operates as a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 mobile app development company
               </Link>{' '}

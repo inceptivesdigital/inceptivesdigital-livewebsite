@@ -26,7 +26,7 @@ export default function SFProcess() {
             A focused{' '}
             <Link
               to="/product-strategy-consulting"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               product strategy
             </Link>{' '}
@@ -45,7 +45,7 @@ export default function SFProcess() {
             User journeys, wireframes, and{' '}
             <Link
               to="/interactive-prototyping"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               interactive prototypes
             </Link>{' '}
@@ -84,7 +84,7 @@ export default function SFProcess() {
               href="https://inceptivesdigital.com/blog/mobile-app-testing-strategies"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               testing strategies
             </a>{' '}

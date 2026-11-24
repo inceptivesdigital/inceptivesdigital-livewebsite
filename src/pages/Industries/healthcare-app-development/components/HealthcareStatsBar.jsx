@@ -31,18 +31,18 @@ export default function HealthcareStatsBar() {
               key={idx}
               className="flex flex-col items-center text-center group"
             >
-              <div className="h-12 w-12 flex items-center justify-center mb-3">
+              <div className="w-11 h-11 mb-3 flex items-center justify-center">
                 <img
                   src={st.icon}
                   alt={st.label}
-                  className="max-h-11 max-w-11 object-contain select-none"
+                  className="w-11 h-11 object-contain select-none"
                   loading="lazy"
                 />
               </div>
-              <div className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#00CE44] tracking-tight leading-none mb-2">
+              <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                 {st.value}
               </div>
-              <div className="text-sm sm:text-base font-medium text-white/95">
+              <div className="text-white text-[14px] sm:text-[15px] font-medium">
                 {st.label}
               </div>
             </div>

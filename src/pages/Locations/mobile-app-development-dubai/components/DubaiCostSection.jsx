@@ -64,7 +64,7 @@ export default function DubaiCostSection() {
             No two mobile products demand the same level of investment, which the{' '}
             <Link
               to="/blog/mobile-app-development-cost-dubai"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app development cost in Dubai
             </Link>{' '}

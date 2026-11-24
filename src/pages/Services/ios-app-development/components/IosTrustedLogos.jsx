@@ -36,12 +36,12 @@ export default function IosTrustedLogos() {
           </h2>
         </div>
 
-        {/* 6 App Squircle Logos matching live site */}
-        <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl mx-auto">
+        {/* 6 App Squircle Logos — single line on >=768px, wraps only on small screens */}
+        <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 xl:gap-10 w-full mx-auto">
           {clients.map((client) => (
             <div
               key={client.name}
-              className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto transition-all duration-300 hover:-translate-y-2.5 hover:scale-110 cursor-pointer shrink-0"
+              className="w-24 sm:w-28 md:w-28 lg:w-32 xl:w-36 h-auto transition-all duration-300 hover:-translate-y-2.5 hover:scale-110 cursor-pointer shrink min-w-0"
             >
               <img
                 src={client.src}

@@ -57,11 +57,11 @@ export default function NlpIndustries() {
         <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] text-center max-w-[960px] mx-auto mb-12 sm:mb-16">
           Every industry has different language patterns, document types, and accuracy requirements. We build for the specific context.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map(({ icon: Icon, name, bullets }) => (
             <article
               key={name}
-              className="group p-6 sm:p-7 xl:p-8 flex flex-col bg-[#18191d] hover:bg-[#00CE44] transition-colors duration-300 min-h-[280px]"
+              className="group p-6 sm:p-7 xl:p-8 flex flex-col bg-[#18191d] hover:bg-[#00CE44] transition-colors duration-300 min-h-[280px] h-full"
             >
               <Icon className="w-9 h-9 text-[#00CE44] group-hover:text-black mb-6 transition-colors" strokeWidth={1.7} aria-hidden="true" />
               <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] group-hover:text-black transition-colors leading-tight mb-3">

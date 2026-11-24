@@ -163,11 +163,11 @@ export default function PostLaunchIndustries() {
         </div>
 
         {/* 9 Industries Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch auto-rows-fr">
           {industries.map((ind, i) => (
             <div
               key={i}
-              className="group p-8 rounded-[24px] bg-[#141414] hover:bg-[#00CE44] transition-all duration-300 flex flex-col justify-between text-left border-0 shadow-none cursor-pointer"
+              className="group p-8 rounded-[24px] bg-[#141414] hover:bg-[#00CE44] transition-all duration-300 flex flex-col justify-between text-left border-0 shadow-none cursor-pointer h-full"
             >
               <div>
                 <div className="mb-6">

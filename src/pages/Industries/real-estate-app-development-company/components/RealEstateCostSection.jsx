@@ -1,55 +1,54 @@
-import React from 'react';
+import React from 'react'
 
 const tiers = [
   {
+    badge: 'Foundation',
     title: 'Foundation App',
     subtitle:
-      'For real estate businesses launching a focused platform for property search, lead generation, or property management.',
+      'Ideal for startups and brokerages launching a focused property search app or MVP with essential functionality and straightforward backend requirements.',
     cost: '$25,000 to $60,000',
     timeline: '8 to 14 weeks',
     includes: [
       'Property listings and search',
-      'Agent and user profiles',
-      'Appointment scheduling',
-      'Lead capture and management',
-      'Admin dashboard',
+      'Customer and agent profiles',
+      'Viewing appointments',
+      'Inquiry management',
+      'Basic admin dashboard',
     ],
-    footer:
-      'A focused real estate product built to validate the concept before investing in a larger platform.',
   },
   {
+    badge: 'Advanced',
     title: 'Advanced Real Estate Platform',
     subtitle:
-      'For agencies, brokerages, and property businesses managing transactions, sales operations, and marketplace functionality.',
+      'Built for growing brokerages and PropTech businesses requiring advanced listing capabilities and integrations with existing real estate systems.',
     cost: '$60,000 to $140,000',
     timeline: '14 to 24 weeks',
     includes: [
-      'Property management workflows',
-      'CRM and sales automation',
-      'Interactive maps and advanced search',
-      'Digital contracts and e-signatures',
-      'Marketplace and communication features',
+      'Advanced property discovery',
+      'CRM integration',
+      'Agent management workflows',
+      'Authorized MLS/IDX connectivity',
+      'Digital documentation features',
+      'Extended admin reporting',
     ],
-    footer:
-      'Where property operations, transaction management, and customer engagement come together in one production-ready platform.',
   },
   {
+    badge: 'Enterprise',
     title: 'Enterprise Real Estate Platform',
     subtitle:
-      'For real estate enterprises building data-driven platforms with advanced analytics, automation, and connected infrastructure.',
+      'Designed for established real estate businesses requiring custom platform architecture, with advanced analytics, automation, and connected infrastructure.',
     cost: '$140,000 to $250,000+',
-    timeline: '20 to 32 weeks',
+    timeline: '32+ weeks',
     includes: [
-      'AI-powered valuation and analytics',
-      'AR/VR property experiences',
-      'Smart building and IoT integrations',
-      'Predictive market intelligence',
-      'Enterprise system integrations',
+      'Multi-role platform architecture',
+      'Enterprise data integrations',
+      'AI-powered valuation capabilities',
+      'Investment analytics',
+      'Specialized property visualization',
+      'Scalable infrastructure',
     ],
-    footer:
-      'Built for real estate organizations where automation, data intelligence, and operational scale are the baseline requirements.',
   },
-];
+]
 
 export default function RealEstateCostSection() {
   return (
@@ -58,10 +57,11 @@ export default function RealEstateCostSection() {
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Real Estate App Development Cost Estimates
+            Real Estate App Development Costs{' '}
+            <span className="text-[#00CE44]">by Project Scope</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Every real estate platform has different integration requirements, user workflows, and feature complexity. These ranges reflect typical project scope and are defined precisely in the Discovery Sprint.
+            Plan your real estate app development investment around the product you intend to launch. Our estimates reflect the application&apos;s functional scope and the engineering effort required for its integrations.
           </p>
         </div>
 
@@ -70,9 +70,12 @@ export default function RealEstateCostSection() {
           {tiers.map((tier, idx) => (
             <div
               key={idx}
-              className="bg-[#2a2a2a] rounded-[16px] p-7 sm:p-8 flex flex-col justify-between border border-white/10"
+              className="bg-[#2a2a2a] rounded-[16px] p-7 sm:p-8 flex flex-col justify-between border border-white/10 text-left"
             >
               <div>
+                <span className="text-[#00CE44] text-xs font-semibold uppercase tracking-widest block mb-2">
+                  {tier.badge}
+                </span>
                 <h3 className="text-[#00CE44] text-[22px] md:text-[24px] font-bold leading-snug mb-3">
                   {tier.title}
                 </h3>
@@ -84,7 +87,7 @@ export default function RealEstateCostSection() {
 
                 <div className="space-y-2 text-[15px] md:text-[16px]">
                   <p className="text-white font-bold">
-                    Estimated Cost: <span className="font-bold">{tier.cost}</span>
+                    Estimated Cost: <span className="font-bold text-[#00CE44]">{tier.cost}</span>
                   </p>
                   <p className="text-white font-bold">
                     Timeline: <span className="font-bold">{tier.timeline}</span>
@@ -103,16 +106,18 @@ export default function RealEstateCostSection() {
                 </ul>
               </div>
 
-              <div>
-                <hr className="my-5 border-white/15" />
-                <p className="text-white/80 text-[14px] md:text-[15px] leading-[1.6] font-normal">
-                  {tier.footer}
-                </p>
+              <div className="mt-8 pt-4">
+                <a
+                  href="#contact"
+                  className="w-full inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] px-6 py-3.5 rounded-none transition-colors duration-200"
+                >
+                  Request Custom Estimate
+                </a>
               </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

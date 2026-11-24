@@ -64,7 +64,7 @@ export default function WebAppProcess() {
             href="https://inceptivesdigital.com/discovery-sprint"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Discovery Sprint
           </a>{' '}
@@ -86,7 +86,7 @@ export default function WebAppProcess() {
             href="https://inceptivesdigital.com/blog/common-ui-ux-design-mistakes"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             common UI/UX design mistakes
           </a>{' '}

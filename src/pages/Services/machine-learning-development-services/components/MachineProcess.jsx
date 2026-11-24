@@ -10,7 +10,7 @@ const steps = [
     desc: (
       <>
         Business problem defined, data sources identified, data quality evaluated, and ML feasibility confirmed. As outlined in our{' '}
-        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           AI MVP development guide
         </a>
         , this stage creates a clear build plan with defined performance targets before a model is selected.
@@ -52,7 +52,7 @@ const steps = [
     imageAlt: 'Machine learning monitoring and drift detection',
     desc: (
       <>
-        <a href="https://inceptivesdigital.com/post-launch-analytics-iteration" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/post-launch-analytics-iteration" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Post-launch analytics and iteration
         </a>{' '}
         track model performance with MLflow after deployment. Drift is detected before it affects business outcomes. Models are retrained on updated data when performance degrades.

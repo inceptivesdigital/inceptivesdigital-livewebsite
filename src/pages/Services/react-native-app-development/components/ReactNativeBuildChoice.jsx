@@ -17,14 +17,14 @@ export default function ReactNativeBuildChoice() {
               React Native offers a practical development advantage for businesses targeting both{' '}
               <Link
                 to="/ios-app-development"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
               >
                 iOS
               </Link>{' '}
               and{' '}
               <Link
                 to="/android-app-development"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
               >
                 Android
               </Link>{' '}

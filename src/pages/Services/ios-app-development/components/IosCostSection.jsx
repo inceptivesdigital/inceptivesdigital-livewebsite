@@ -8,7 +8,7 @@ export default function IosCostSection() {
           Launching an iPhone MVP? This range covers native{' '}
           <a
             href="https://inceptivesdigital.com/mvp-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             MVP development
           </a>{' '}
@@ -23,7 +23,7 @@ export default function IosCostSection() {
           App Store submission and{' '}
           <a
             href="https://inceptivesdigital.com/blog/app-store-optimization-aso"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             ASO
           </a>{' '}
@@ -41,7 +41,7 @@ export default function IosCostSection() {
         <span key="2">
           <a
             href="https://inceptivesdigital.com/backend-api-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Backend connectivity
           </a>{' '}
@@ -62,7 +62,7 @@ export default function IosCostSection() {
         <span key="3">
           <a
             href="https://inceptivesdigital.com/blog/hipaa-compliant-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             HIPAA-compliant
           </a>
@@ -71,7 +71,7 @@ export default function IosCostSection() {
         <span key="4">
           <a
             href="https://inceptivesdigital.com/post-launch-analytics-iteration"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Post-launch optimization
           </a>{' '}
@@ -95,7 +95,7 @@ export default function IosCostSection() {
             Every business deserves to know what they&apos;re paying before development begins. At Inceptives Digital, we provide transparent{' '}
             <a
               href="https://inceptivesdigital.com/blog/ios-app-development-cost"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               iOS app development cost
             </a>{' '}

@@ -72,7 +72,7 @@ export default function FlutterIndustries() {
         </div>
 
         {/* Exact Homepage Box Cards Grid (#26282d 1px Hairline Borders, #18191d -> Hover #00CE44) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map((ind) => (
             <div
               key={ind.name}
@@ -95,7 +95,7 @@ export default function FlutterIndustries() {
                     href={ind.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#00CE44] group-hover:text-black transition-colors"
+                    className="text-[#00CE44] group-hover:text-black transition-colors underline underline-offset-4"
                   >
                     {ind.name}
                   </a>

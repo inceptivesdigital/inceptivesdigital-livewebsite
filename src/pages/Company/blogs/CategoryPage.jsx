@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useParams, useSearchParams, Link } from 'react-router-dom'
+import { getCachedList, setCachedList, seedCachedPosts } from '../../../utils/wpCache'
 
 const WP_API_BASE = 'https://nextincep.wpenginepowered.com/wp-json/wp/v2'
 
@@ -36,9 +37,10 @@ function stripAndTrimWords(html = '', maxWords = 20) {
 function formatWpPost(p) {
   const media = p._embedded?.['wp:featuredmedia']?.[0]
   const featuredImage =
-    media?.source_url ||
-    media?.media_details?.sizes?.large?.source_url ||
     media?.media_details?.sizes?.medium_large?.source_url ||
+    media?.media_details?.sizes?.large?.source_url ||
+    media?.media_details?.sizes?.medium?.source_url ||
+    media?.source_url ||
     ''
 
   const terms = (p._embedded?.['wp:term']?.[0] || []).map((t) => ({
@@ -153,32 +155,44 @@ export default function CategoryPage() {
       const controller = new AbortController()
       abortRef.current = controller
 
-      if (!silent) {
+      const listCacheKey = `cat:${slug}:${currentPage}:${perPage}`
+      const cached = getCachedList(listCacheKey)
+
+      if (cached && cached.category) {
+        setCategory(cached.category)
+        setPosts(cached.posts || [])
+        setTotalPages(cached.totalPages || 1)
+        setLoading(false)
+        setNotFound(false)
+        applyCategoryYoastSeo(cached.category, slug, currentPage)
+      } else if (!silent) {
         setLoading(true)
         setNotFound(false)
       }
 
       try {
-        // 1. Resolve category live from WordPress REST API
+        // 1. Resolve category from WordPress REST API
         const catRes = await fetch(
-          `${WP_API_BASE}/categories?slug=${encodeURIComponent(slug)}&_cb=${Date.now()}`,
-          { cache: 'no-store', signal: controller.signal }
+          `${WP_API_BASE}/categories?slug=${encodeURIComponent(slug)}`,
+          { signal: controller.signal }
         )
         if (!catRes.ok) throw new Error(`Category API ${catRes.status}`)
         const cats = await catRes.json()
         const matchedCat = Array.isArray(cats) ? cats[0] : null
 
         if (!matchedCat) {
-          setCategory(null)
-          setPosts([])
-          setNotFound(true)
+          if (!cached) {
+            setCategory(null)
+            setPosts([])
+            setNotFound(true)
+          }
           return
         }
 
         setCategory(matchedCat)
         applyCategoryYoastSeo(matchedCat, slug, currentPage)
 
-        // 2. Fetch live posts for this category
+        // 2. Fetch posts for this category
         const params = new URLSearchParams({
           _embed: '1',
           categories: String(matchedCat.id),
@@ -187,11 +201,9 @@ export default function CategoryPage() {
           status: 'publish',
           orderby: 'date',
           order: 'desc',
-          _cb: String(Date.now()),
         })
 
         const postsRes = await fetch(`${WP_API_BASE}/posts?${params.toString()}`, {
-          cache: 'no-store',
           signal: controller.signal,
         })
 
@@ -206,6 +218,7 @@ export default function CategoryPage() {
 
         const totalPagesHeader = parseInt(postsRes.headers.get('X-WP-TotalPages') || '1', 10)
         const rawPosts = await postsRes.json()
+        seedCachedPosts(rawPosts)
         const formatted = (Array.isArray(rawPosts) ? rawPosts : []).map(formatWpPost)
 
         formatted.sort((a, b) => {
@@ -213,12 +226,18 @@ export default function CategoryPage() {
           return new Date(b.date) - new Date(a.date)
         })
 
+        const resolvedTotal = Math.max(1, Number.isNaN(totalPagesHeader) ? 1 : totalPagesHeader)
         setPosts(formatted)
-        setTotalPages(Math.max(1, Number.isNaN(totalPagesHeader) ? 1 : totalPagesHeader))
+        setTotalPages(resolvedTotal)
+        setCachedList(listCacheKey, {
+          category: matchedCat,
+          posts: formatted,
+          totalPages: resolvedTotal,
+        })
         setNotFound(false)
       } catch (err) {
         if (err.name === 'AbortError') return
-        if (!silent) setNotFound(true)
+        if (!silent && !cached) setNotFound(true)
       } finally {
         if (!controller.signal.aborted && !silent) setLoading(false)
       }
@@ -234,7 +253,7 @@ export default function CategoryPage() {
     }
   }, [fetchCategoryAndPosts])
 
-  // Instant reflection on tab focus / visibility return + 15s background sync
+  // Refresh silently on tab focus
   useEffect(() => {
     const refreshSilently = () => {
       if (document.visibilityState === 'visible') {
@@ -243,11 +262,9 @@ export default function CategoryPage() {
     }
     window.addEventListener('focus', refreshSilently)
     document.addEventListener('visibilitychange', refreshSilently)
-    const interval = setInterval(refreshSilently, 15000)
     return () => {
       window.removeEventListener('focus', refreshSilently)
       document.removeEventListener('visibilitychange', refreshSilently)
-      clearInterval(interval)
     }
   }, [fetchCategoryAndPosts])
 

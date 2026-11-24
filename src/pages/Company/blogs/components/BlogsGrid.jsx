@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { getCachedList, setCachedList, seedCachedPosts } from '../../../../utils/wpCache'
 
 const WP_API_BASE = 'https://nextincep.wpenginepowered.com/wp-json/wp/v2'
 
@@ -58,9 +59,10 @@ function stripAndTrimWords(html = '', maxWords = 20) {
 function formatWpPost(p) {
   const media = p._embedded?.['wp:featuredmedia']?.[0]
   const featuredImage =
-    media?.source_url ||
-    media?.media_details?.sizes?.large?.source_url ||
     media?.media_details?.sizes?.medium_large?.source_url ||
+    media?.media_details?.sizes?.large?.source_url ||
+    media?.media_details?.sizes?.medium?.source_url ||
+    media?.source_url ||
     ''
 
   const terms = (p._embedded?.['wp:term']?.[0] || []).map((t) => ({
@@ -117,14 +119,22 @@ export default function BlogsGrid({
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // Live zero-cache fetch from WordPress REST API
+  // Fast cached + live fetch from WordPress REST API
   const fetchLivePosts = useCallback(
     async ({ silent = false } = {}) => {
       if (abortRef.current) abortRef.current.abort()
       const controller = new AbortController()
       abortRef.current = controller
 
-      if (!silent) {
+      const listCacheKey = `blogs:${activeCategory}:${searchQuery}:${currentPage}:${perPage}`
+      const cached = getCachedList(listCacheKey)
+
+      if (cached && cached.posts?.length) {
+        setPosts(cached.posts)
+        setTotalPages(cached.totalPages || 1)
+        setLoading(false)
+        setError(null)
+      } else if (!silent) {
         setLoading(true)
         setError(null)
       }
@@ -141,7 +151,6 @@ export default function BlogsGrid({
           categories: catIds.join(','),
           orderby: 'date',
           order: 'desc',
-          _cb: String(Date.now()),
         })
 
         if (searchQuery) {
@@ -150,7 +159,6 @@ export default function BlogsGrid({
 
         const res = await fetch(`${WP_API_BASE}/posts?${params.toString()}`, {
           method: 'GET',
-          cache: 'no-store',
           signal: controller.signal,
         })
 
@@ -167,6 +175,7 @@ export default function BlogsGrid({
         const totalPagesHeader = parseInt(res.headers.get('X-WP-TotalPages') || '1', 10)
         const rawPosts = await res.json()
 
+        seedCachedPosts(rawPosts)
         const formatted = (Array.isArray(rawPosts) ? rawPosts : []).map(formatWpPost)
 
         // Sort pinned/sticky posts first while preserving newest-first order
@@ -175,12 +184,14 @@ export default function BlogsGrid({
           return new Date(b.date) - new Date(a.date)
         })
 
+        const resolvedTotal = Math.max(1, Number.isNaN(totalPagesHeader) ? 1 : totalPagesHeader)
         setPosts(formatted)
-        setTotalPages(Math.max(1, Number.isNaN(totalPagesHeader) ? 1 : totalPagesHeader))
+        setTotalPages(resolvedTotal)
+        setCachedList(listCacheKey, { posts: formatted, totalPages: resolvedTotal })
         setError(null)
       } catch (err) {
         if (err.name === 'AbortError') return
-        if (!silent) {
+        if (!silent && !cached) {
           setError('Unable to load latest blogs from WordPress right now. Please try again.')
         }
       } finally {
@@ -200,7 +211,7 @@ export default function BlogsGrid({
     }
   }, [fetchLivePosts])
 
-  // Instant reflection on tab focus / visibility return + background 15s live sync
+  // Refresh silently on tab focus
   useEffect(() => {
     const refreshSilently = () => {
       if (document.visibilityState === 'visible') {
@@ -209,11 +220,9 @@ export default function BlogsGrid({
     }
     window.addEventListener('focus', refreshSilently)
     document.addEventListener('visibilitychange', refreshSilently)
-    const interval = setInterval(refreshSilently, 15000)
     return () => {
       window.removeEventListener('focus', refreshSilently)
       document.removeEventListener('visibilitychange', refreshSilently)
-      clearInterval(interval)
     }
   }, [fetchLivePosts])
 

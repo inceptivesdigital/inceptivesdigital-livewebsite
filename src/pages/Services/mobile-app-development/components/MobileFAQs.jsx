@@ -10,7 +10,7 @@ const faqs = [
             href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             mobile app development costs
           </a>{' '}
@@ -27,7 +27,7 @@ const faqs = [
             href="https://inceptivesdigital.com/blog/app-development-timeline"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             app development timeline
           </a>{' '}
@@ -52,7 +52,7 @@ const faqs = [
             href="https://inceptivesdigital.com/blog/mvp-mobile-app-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             MVP
           </a>{' '}
@@ -75,7 +75,7 @@ const faqs = [
             href="https://inceptivesdigital.com/blog/mobile-app-security-best-practices"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             mobile app security best practices
           </a>{' '}
@@ -120,7 +120,7 @@ const faqs = [
             href="https://inceptivesdigital.com/blog/how-to-hire-a-mobile-app-development-company"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             hiring a product studio
           </a>{' '}

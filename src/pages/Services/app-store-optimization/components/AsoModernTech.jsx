@@ -19,7 +19,7 @@ export default function AsoModernTech() {
           Google&apos;s native dashboard exposes store listing performance, acquisition breakdown, and conversion data by traffic source, mirroring the platform-specific depth behind{' '}
           <Link
             to="/android-app-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             Android app development
           </Link>{' '}
@@ -35,7 +35,7 @@ export default function AsoModernTech() {
           Machine learning tools surface keyword patterns and content gaps at a scale that manual analysis cannot match efficiently, an extension of the same techniques behind broader{' '}
           <Link
             to="/ai-app-development-services"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             AI app development services
           </Link>
@@ -51,7 +51,7 @@ export default function AsoModernTech() {
           Both platforms offer native A/B testing for creative assets, the same experiments that matter most once you{' '}
           <Link
             to="/blog/publish-update-an-app-on-app-store-google-play"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             publish or update an app on the App Store and Google Play
           </Link>
@@ -76,7 +76,7 @@ export default function AsoModernTech() {
           Paid search data informs organic strategy by revealing which keywords drive intent and convert under pressure, and weighing that spend against overall{' '}
           <Link
             to="/blog/mobile-app-marketing-cost"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             mobile app marketing cost
           </Link>{' '}

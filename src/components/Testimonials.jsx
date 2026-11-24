@@ -75,9 +75,19 @@ export default function Testimonials({
             </h2>
 
             {/* Description Text */}
-            <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed mb-8 sm:mb-10">
+            <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed mb-7">
               {subtitle}
             </p>
+
+            {/* Primary CTA Button */}
+            <div className="mb-8 sm:mb-10">
+              <a
+                href="#contact"
+                className="getintouch inline-flex items-center justify-center px-8 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-semibold text-sm sm:text-base transition-colors border-0"
+              >
+                Get A Call Now!
+              </a>
+            </div>
 
             {/* Trust Badges Row with Banner-style Links */}
             <div className="flex items-center gap-6 sm:gap-8 flex-wrap">

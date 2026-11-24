@@ -87,7 +87,7 @@ export default function SFTechStack() {
               href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               mobile app technology stack
             </a>{' '}

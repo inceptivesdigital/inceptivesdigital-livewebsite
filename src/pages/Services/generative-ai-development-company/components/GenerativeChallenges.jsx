@@ -26,7 +26,7 @@ const challenges = [
           href="https://inceptivesdigital.com/ai-development"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           AI development
         </a>{' '}
@@ -73,7 +73,7 @@ const challenges = [
           href="https://inceptivesdigital.com/post-launch-analytics-iteration"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           Post-launch analytics and iteration
         </a>{' '}

@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import reactNativeSchema from '../../../schemas/react-native-app-development.json'
 import ReactNativeHero from './components/ReactNativeHero'
 import ReactNativeTrustedLogos from './components/ReactNativeTrustedLogos'
 import ReactNativeBuildChoice from './components/ReactNativeBuildChoice'
-// import ReactNativeVsFlutterTable from './components/ReactNativeVsFlutterTable'
+import ReactNativeVsFlutterTable from './components/ReactNativeVsFlutterTable'
 import ReactNativeServicesGrid from './components/ReactNativeServicesGrid'
 import ReactNativeStatsAndCTA from './components/ReactNativeStatsAndCTA'
 import ReactNativeIndustries from './components/ReactNativeIndustries'
@@ -17,6 +19,7 @@ import ReactNativeCostSection from './components/ReactNativeCostSection'
 import ReactNativeFAQs from './components/ReactNativeFAQs'
 
 export default function ReactNativeAppDevelopmentPage() {
+  useJsonLdSchema(reactNativeSchema, 'schema-react-native-app-development')
   useEffect(() => {
     const seoTitle = 'React Native App Development Company | Inceptives Digital'
     const seoDesc =
@@ -54,40 +57,40 @@ export default function ReactNativeAppDevelopmentPage() {
       {/* 1. Hero Section */}
       <ReactNativeHero />
 
-      {/* 2. The Studio Behind Global React Native Product Launches */}
+      {/* 2. Brands Building Their React Native Apps With Us */}
       <ReactNativeTrustedLogos />
 
       {/* 3. Why Businesses Choose React Native for Mobile App Development */}
       <ReactNativeBuildChoice />
 
-      {/* 4. Comparison Table - Hidden/Commented as not present in doc */}
-      {/* <ReactNativeVsFlutterTable /> */}
+      {/* 4. React Native vs Flutter: Which Framework Fits Your Product? (Comparison Table) */}
+      <ReactNativeVsFlutterTable />
 
       {/* 5. Custom React Native App Development Services We Offer (6 Cards) */}
       <ReactNativeServicesGrid />
 
-      {/* 6. 4 Stats Counters + Stop Building Twice CTA */}
+      {/* 6. 4 Stats Counters (70+ | 150+ | 3M+ | 4.7) */}
       <ReactNativeStatsAndCTA />
 
       {/* 7. Industries We Build React Native Apps For (9 Box Cards) */}
       <ReactNativeIndustries />
 
-      {/* 8. React Native Applications We've Developed (4 Case Studies) */}
+      {/* 8. React Native Applications We've Developed */}
       <ReactNativeCaseStudies />
 
       {/* 9. What Clients Say After Launching With Us */}
       <ReactNativeTestimonials />
 
-      {/* 10. Collaborate CTA + Inside a React Native Mobile App Development Company (6 Cards + Awards) */}
+      {/* 10. Collaborate CTA + Why Choose Inceptives Digital (6 Cards + Awards) */}
       <ReactNativeWhyChooseUs />
 
       {/* 11. From Discovery to Deployment, Our React Native App Development Process (5 Steps) */}
       <ReactNativeProcess />
 
-      {/* 12. Tools Selected for React Native. Refined Across Deliveries. (8 Tech Categories) */}
+      {/* 12. Tools Selected for React Native. Refined Across Deliveries. */}
       <ReactNativeTechStack />
 
-      {/* 13. Technology Partnerships Behind Our React Native Engineering (Black BG) */}
+      {/* 13. Technology Partnerships Behind Our React Native Engineering */}
       <ReactNativeTechPartnerships />
 
       {/* 14. Future-Ready React Native Products Through Emerging Technology (6 Cards) */}

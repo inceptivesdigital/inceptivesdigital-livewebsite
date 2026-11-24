@@ -47,7 +47,7 @@ export default function AiMvpComparison() {
         </p>
         <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
           <span className="text-white/80 text-sm sm:text-base">Not sure which one fits? That is what the Discovery Sprint is for.</span>
-          <a href="#contact" className="text-[#00CE44] font-semibold hover:text-white transition-colors">
+          <a href="#contact" className="text-[#00CE44] font-semibold hover:opacity-80 transition-colors underline underline-offset-4">
             Book a Discovery Sprint <span aria-hidden="true">→</span>
           </a>
         </div>

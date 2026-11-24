@@ -20,7 +20,7 @@ export default function TorontoCostSection() {
           Ideal for{' '}
           <Link
             to="/blog/how-to-validate-your-mobile-app-idea"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             validating app ideas
           </Link>
@@ -81,7 +81,7 @@ export default function TorontoCostSection() {
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
             <Link
               to="/blog/mobile-app-development-cost"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               Mobile app development costs
             </Link>{' '}

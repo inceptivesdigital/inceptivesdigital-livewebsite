@@ -19,7 +19,7 @@ export default function SingaporeTechStack() {
             Swift, Kotlin, Flutter, React Native, Node.js, Python, Firebase, AWS, Google Cloud, and Azure form the foundation of our{' '}
             <Link
               to="/blog/mobile-app-tech-stack"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app tech stack
             </Link>

@@ -30,7 +30,7 @@ export default function ProductLaunchStatsBar() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-center">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col items-center justify-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 flex items-center justify-center">
+                <div className="w-11 h-11 mb-3 flex items-center justify-center">
                   <img
                     src={s.icon}
                     alt={s.label}
@@ -38,10 +38,10 @@ export default function ProductLaunchStatsBar() {
                     loading="lazy"
                   />
                 </div>
-                <div className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#00CE44] tracking-tight leading-none mb-2">
+                <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                   {s.value}
                 </div>
-                <div className="text-white text-xs sm:text-sm font-medium">
+                <div className="text-white text-[14px] sm:text-[15px] font-medium">
                   {s.label}
                 </div>
               </div>

@@ -19,7 +19,7 @@ export default function ProductLaunchNecessity() {
               The market has already shifted. 72% of marketers have adopted AI tools, 69% of digital ad spend happens on mobile, and global app install spend hit $94 billion in 2026. A{' '}
               <Link
                 to="/digital-product-development"
-                className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+                className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
               >
                 digital product development
               </Link>{' '}

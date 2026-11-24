@@ -66,7 +66,7 @@ export default function AndroidDevelopmentProcess() {
           The process starts with a{' '}
           <a
             href="https://inceptivesdigital.com/discovery-sprint"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             discovery sprint
           </a>{' '}
@@ -84,7 +84,7 @@ export default function AndroidDevelopmentProcess() {
           With the product direction established, UI/UX turns requirements into navigable Android experiences.{' '}
           <a
             href="https://inceptivesdigital.com/interactive-prototyping"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Interactive prototyping
           </a>{' '}

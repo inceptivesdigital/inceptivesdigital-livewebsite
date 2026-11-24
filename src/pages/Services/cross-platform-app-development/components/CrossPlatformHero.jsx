@@ -23,11 +23,18 @@ export default function CrossPlatformHero() {
   ]
 
   return (
-    <section className="relative min-h-[640px] lg:min-h-[88vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-16 lg:pb-24 bg-[#000000] overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-28 sm:pt-32 pb-12 lg:pb-16 bg-[#000000] overflow-hidden">
+      {/* Desktop Right-Bottom Flush Banner Image (Slightly Larger) */}
+      <div
+        className="hidden lg:block absolute right-0 bottom-0 lg:w-[46%] xl:w-[46%] max-w-[760px] lg:h-[84%] xl:h-[90%] max-h-[860px] bg-contain bg-right-bottom bg-no-repeat pointer-events-none select-none z-[1]"
+        style={{ backgroundImage: 'url("/assets/cross-platform/crossnew-banner.png")' }}
+        aria-hidden="true"
+      />
+
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column */}
-          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-start text-left z-10">
+          <div className="lg:col-span-6 lg:pr-6 flex flex-col items-start text-left z-10">
             <h1 className="text-[#00CE44] text-sm sm:text-base lg:text-[17px] font-bold block mb-3">
               Cross-Platform App Development Company
             </h1>
@@ -40,21 +47,21 @@ export default function CrossPlatformHero() {
               Launch your app on iOS and Android without managing two separate development projects. Inceptives Digital is a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 cross-platform mobile app development company
               </Link>{' '}
               with 8+ years of experience building custom applications using{' '}
               <Link
                 to="/flutter-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 Flutter
               </Link>{' '}
               and{' '}
               <Link
                 to="/react-native-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 React Native
               </Link>
@@ -97,16 +104,14 @@ export default function CrossPlatformHero() {
             </div>
           </div>
 
-          {/* Right Column: App Preview */}
-          <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end items-center relative">
-            <div className="w-full max-w-[460px] sm:max-w-[500px] lg:max-w-[540px] xl:max-w-[600px] flex justify-center lg:justify-end">
-              <img
-                src="/assets/cross-platform/crossnew-banner.png"
-                alt="Cross-Platform App Development Company Preview"
-                className="w-full h-auto object-contain max-h-[520px] lg:max-h-[580px] xl:max-h-[620px] select-none"
-                loading="eager"
-              />
-            </div>
+          {/* Mobile Right-Bottom App Preview */}
+          <div className="lg:hidden flex justify-end items-end -mr-4 sm:-mr-6 -mb-12 pt-4">
+            <img
+              src="/assets/cross-platform/crossnew-banner.png"
+              alt="Cross-Platform App Development Company Preview"
+              className="w-full max-w-[440px] sm:max-w-[500px] h-auto object-contain object-right-bottom select-none"
+              loading="eager"
+            />
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ export default function MachineIndustries() {
         <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] text-center max-w-[960px] mx-auto mb-12 sm:mb-16">
           Every industry has different data structures, operational requirements, and performance standards. We build for the specific context, not a generic template.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map(({ icon: Icon, name, bullets }) => (
             <article
               key={name}

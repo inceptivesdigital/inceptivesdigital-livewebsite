@@ -64,7 +64,7 @@ export default function SingaporeProcess() {
       desc: (
         <>
           A{' '}
-          <Link to="/discovery-sprint" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/discovery-sprint" className="text-[#00CE44] font-medium underline underline-offset-4">
             discovery sprint
           </Link>{' '}
           combines business analysis, competitor research, user persona mapping, and feature prioritization to deliver a clear product roadmap and technical blueprint aligned with commercial objectives before a single screen gets designed.
@@ -77,7 +77,7 @@ export default function SingaporeProcess() {
       cardTitle: '2. Design and Validation',
       desc: (
         <>
-          <Link to="/interactive-prototyping" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/interactive-prototyping" className="text-[#00CE44] font-medium underline underline-offset-4">
             Interactive prototyping
           </Link>{' '}
           puts prototypes in front of real users before development starts, validating user journeys, platform consistency, and accessibility compliance. Costly revisions get caught early, before they become expensive engineering problems.
@@ -91,7 +91,7 @@ export default function SingaporeProcess() {
       desc: (
         <>
           Two-week sprints with continuous integration and automated deployment pipelines keep the{' '}
-          <Link to="/blog/app-development-timeline" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/app-development-timeline" className="text-[#00CE44] font-medium underline underline-offset-4">
             app development timeline
           </Link>{' '}
           predictable. Every milestone reduces uncertainty before the next investment decision, so progress stays visible instead of arriving as one big reveal.
@@ -105,7 +105,7 @@ export default function SingaporeProcess() {
       desc: (
         <>
           Our{' '}
-          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] font-medium underline underline-offset-4">
             mobile app testing strategies
           </Link>{' '}
           cover functionality, usability, security, performance, API reliability, and cross-device compatibility against production standards before anything reaches a real user.
@@ -119,7 +119,7 @@ export default function SingaporeProcess() {
       desc: (
         <>
           Full App Store and Google Play release management with{' '}
-          <Link to="/app-store-optimization" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
             app store optimization
           </Link>
           , cloud configuration, and the first 30 days of post-launch support included. Ongoing monitoring, patching, and feature releases are covered under What Makes Us Different, below.

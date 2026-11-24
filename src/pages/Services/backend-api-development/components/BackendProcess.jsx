@@ -100,7 +100,7 @@ export default function BackendProcess() {
             href="https://inceptivesdigital.com/post-launch-analytics-iteration"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             post-launch analytics iteration
           </a>{' '}

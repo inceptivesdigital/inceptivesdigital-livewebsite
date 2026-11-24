@@ -64,7 +64,7 @@ export default function NYProcess() {
       desc: (
         <>
           Every project begins with a{' '}
-          <Link to="/discovery-sprint" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/discovery-sprint" className="text-[#00CE44] font-medium underline underline-offset-4">
             discovery sprint
           </Link>
           , competitive analysis, and product planning aligned with your business goals. We validate priorities, technical requirements, and growth assumptions before development starts.
@@ -78,7 +78,7 @@ export default function NYProcess() {
       desc: (
         <>
           User journeys, wireframes, and{' '}
-          <Link to="/interactive-prototyping" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/interactive-prototyping" className="text-[#00CE44] font-medium underline underline-offset-4">
             interactive prototyping
           </Link>{' '}
           bring the product vision into focus early. This allows teams to refine workflows and approve experiences before engineering investment begins.
@@ -92,7 +92,7 @@ export default function NYProcess() {
       desc: (
         <>
           Development progresses through transparent sprint cycles with regular demos and progress reviews that keep the{' '}
-          <Link to="/blog/app-development-timeline" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/app-development-timeline" className="text-[#00CE44] font-medium underline underline-offset-4">
             app development timeline
           </Link>{' '}
           visible. Working software is delivered continuously, giving you visibility from the first sprint onward.
@@ -106,7 +106,7 @@ export default function NYProcess() {
       desc: (
         <>
           Every release is tested for performance, security, usability, and platform compatibility using proven{' '}
-          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] font-medium underline underline-offset-4">
             mobile app testing strategies
           </Link>
           . Issues are identified and resolved before they impact users or app store performance.
@@ -120,7 +120,7 @@ export default function NYProcess() {
       desc: (
         <>
           App Store and Google Play submissions backed by{' '}
-          <Link to="/app-store-optimization" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
             app store optimization
           </Link>
           , launch monitoring, and early fixes prepare the product for public use. Ongoing mobile app maintenance in NYC extends beyond launch, covering compatibility updates, security patches, and improvements based on actual usage.

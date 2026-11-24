@@ -165,7 +165,7 @@ export default function SFServicesGrid() {
                   {item.linkText ? (
                     <>
                       {item.descBefore}
-                      <Link to={item.link} className="underline text-[#00CE44] hover:text-white transition-colors">
+                      <Link to={item.link} className="underline text-[#00CE44] hover:opacity-80 transition-colors">
                         {item.linkText}
                       </Link>
                       {item.descAfter}

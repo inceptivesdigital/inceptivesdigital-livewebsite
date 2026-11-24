@@ -104,7 +104,7 @@ export default function DubaiD33Agenda() {
               Dubai&apos;s Economic Agenda D33 aims to double the emirate&apos;s economy by 2033, with digital transformation projects targeted to contribute AED 100 billion annually. This long-term investment creates opportunities for mobile app development in Dubai, particularly across{' '}
               <Link
                 to="/fintech-app-development"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 fintech app development
               </Link>

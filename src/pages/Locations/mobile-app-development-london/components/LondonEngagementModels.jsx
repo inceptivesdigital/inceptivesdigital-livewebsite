@@ -48,7 +48,7 @@ export default function LondonEngagementModels() {
       desc: (
         <>
           A defined project with agreed deliverables, pricing, and payment milestones. Suitable for{' '}
-          <Link to="/mvp-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/mvp-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             MVP development
           </Link>{' '}
           and mobile applications with established requirements, where scope changes follow a documented approval process.
@@ -68,7 +68,7 @@ export default function LondonEngagementModels() {
           Additional engineering expertise, a common option in the{' '}
           <Link
             to="/blog/in-house-development-vs-app-development-partner"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             in-house vs development partner
           </Link>{' '}
@@ -88,7 +88,7 @@ export default function LondonEngagementModels() {
         <>
           <Link
             to="/product-rescue-scaling"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             Product rescue scaling
           </Link>{' '}

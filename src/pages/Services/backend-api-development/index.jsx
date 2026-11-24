@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import backendApiSchema from '../../../schemas/backend-api-development.json'
 import BackendHero from './components/BackendHero'
 import BackendTrustedLogos from './components/BackendTrustedLogos'
 import BackendArchitectureOutcomes from './components/BackendArchitectureOutcomes'
@@ -16,6 +18,7 @@ import BackendCostSection from './components/BackendCostSection'
 import BackendFAQs from './components/BackendFAQs'
 
 export default function BackendApiDevelopmentPage() {
+  useJsonLdSchema(backendApiSchema, 'schema-backend-api-development')
   useEffect(() => {
     const seoTitle = 'Backend & API Development Services | Inceptives Digital'
     const seoDesc =

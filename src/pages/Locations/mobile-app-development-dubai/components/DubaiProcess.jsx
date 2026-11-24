@@ -64,7 +64,7 @@ export default function DubaiProcess() {
       desc: (
         <>
           Every successful product starts with understanding the business behind it. A{' '}
-          <Link to="/discovery-sprint" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/discovery-sprint" className="text-[#00CE44] font-medium underline underline-offset-4">
             discovery sprint
           </Link>{' '}
           brings product goals, user needs, feature priorities, technical constraints, and integration requirements together to define a realistic roadmap before development begins. Where applicable, early planning also considers UAE PDPL requirements and regional platform integrations.
@@ -77,11 +77,11 @@ export default function DubaiProcess() {
       cardTitle: '2. UX and UI Design',
       desc: (
         <>
-          <Link to="/ui-ux-design" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ui-ux-design" className="text-[#00CE44] font-medium underline underline-offset-4">
             UI/UX design
           </Link>
           , wireframes, and prototypes bring product ideas into a tangible experience before engineering begins. In this phase,{' '}
-          <Link to="/interactive-prototyping" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/interactive-prototyping" className="text-[#00CE44] font-medium underline underline-offset-4">
             interactive prototyping
           </Link>{' '}
           lets us explore user flows, interface decisions, and interaction patterns to create a stronger foundation for development that feels natural from the first release.
@@ -105,7 +105,7 @@ export default function DubaiProcess() {
       desc: (
         <>
           Every release undergoes validation beyond functional testing, using proven{' '}
-          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] font-medium underline underline-offset-4">
             mobile app testing strategies
           </Link>
           . Performance, security, device compatibility, payment workflows, and user journeys are assessed under conditions that reflect real-world usage before deployment across the UAE&apos;s diverse device ecosystem.
@@ -119,11 +119,11 @@ export default function DubaiProcess() {
       desc: (
         <>
           This is where engineering comes together for launch. Platform submissions supported by{' '}
-          <Link to="/app-store-optimization" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
             app store optimization
           </Link>
           , production configuration, and monitoring create a predictable rollout. Post-launch, performance tracking,{' '}
-          <Link to="/post-launch-analytics-iteration" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/post-launch-analytics-iteration" className="text-[#00CE44] font-medium underline underline-offset-4">
             analytics iteration
           </Link>
           , and security updates keep the product aligned with evolving user expectations and long-term expansion goals.

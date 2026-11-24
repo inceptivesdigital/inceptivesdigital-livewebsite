@@ -39,7 +39,7 @@ const modelTypes = [
           href="https://inceptivesdigital.com/generative-ai-development-company"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           generative AI development
         </a>{' '}
@@ -55,7 +55,7 @@ const modelTypes = [
           href="https://inceptivesdigital.com/ai-chatbot-development-services"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           AI chatbots
         </a>

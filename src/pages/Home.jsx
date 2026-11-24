@@ -15,6 +15,7 @@ import SuccessSection from '../components/SuccessSection'
 import Testimonials from '../components/Testimonials'
 import FAQSection from '../components/FAQSection'
 import BlogSection from '../components/BlogSection'
+import HomeBottomCTA from '../components/HomeBottomCTA'
 
 export default function Home() {
   useEffect(() => {
@@ -55,6 +56,7 @@ export default function Home() {
       <SuccessSection />
       <BlogSection />
       <FAQSection />
+      <HomeBottomCTA />
     </>
   )
 }

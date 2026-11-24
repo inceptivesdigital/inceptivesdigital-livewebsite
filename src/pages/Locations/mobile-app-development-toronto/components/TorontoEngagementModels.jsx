@@ -57,7 +57,7 @@ export default function TorontoEngagementModels() {
             Every project needs a different level of support, so our engagement models for app development in Toronto adapt to how you actually work. Choose{' '}
             <Link
               to="/blog/in-house-development-vs-app-development-partner"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               in-house or an app development partner
             </Link>{' '}

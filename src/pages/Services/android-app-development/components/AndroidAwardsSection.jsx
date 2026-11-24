@@ -41,7 +41,7 @@ export default function AndroidAwardsSection() {
                 Clutch recognized Inceptives Digital as a top Android app development company in Fort Worth, Texas, alongside recognition for design services in Dallas. These achievements strengthen the company&apos;s credibility among US businesses seeking an experienced{' '}
                 <Link
                   to="/mobile-app-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   mobile app development
                 </Link>{' '}
@@ -52,21 +52,21 @@ export default function AndroidAwardsSection() {
                 With a presence in{' '}
                 <a
                   href="https://inceptivesdigital.com/mobile-app-development-austin"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   Austin
                 </a>
                 ,{' '}
                 <a
                   href="https://inceptivesdigital.com/mobile-app-development-new-york"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   New York
                 </a>
                 ,{' '}
                 <a
                   href="https://inceptivesdigital.com/mobile-app-development-san-francisco"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
                 >
                   San Francisco
                 </a>
@@ -85,23 +85,18 @@ export default function AndroidAwardsSection() {
           </div>
 
           {/* Right Column: 4 Award Badges Grid */}
-          <div className="lg:col-span-5 grid grid-cols-2 gap-5 sm:gap-6">
+          <div className="lg:col-span-5 grid grid-cols-2 gap-6 sm:gap-8 items-center justify-items-center">
             {badges.map((b) => (
               <div
                 key={b.title}
-                className="p-6 rounded-[16px] bg-[#292929] flex flex-col items-center text-center justify-between border-0 shadow-none"
+                className="h-24 sm:h-28 lg:h-32 flex items-center justify-center transition-transform duration-300 hover:scale-105"
               >
-                <div className="h-24 sm:h-28 flex items-center justify-center mb-3.5">
-                  <img
-                    src={b.src}
-                    alt={b.title}
-                    className="max-h-full max-w-[125px] w-auto h-auto object-contain select-none"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-white/90 text-xs font-medium leading-snug">
-                  {b.title}
-                </p>
+                <img
+                  src={b.src}
+                  alt={b.title}
+                  className="max-h-full max-w-[140px] w-auto h-auto object-contain select-none"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

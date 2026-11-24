@@ -2,37 +2,27 @@ import { Link } from 'react-router-dom'
 
 export default function KmpArchitectureChoice() {
   const kmpPoints = [
-    'Your team has stronger Dart or JavaScript proficiency than Kotlin',
-    'A product carrying significant business logic, financial calculations, offline sync, health data processing, or custom algorithms must behave identically across platforms',
-    'An existing native Android codebase needs to extend to iOS without a full rewrite',
-    'Platform-specific UI, OS integrations, and accessibility compliance are non-negotiable',
-    'The product targets iOS, Android, web, and desktop from a single shared module',
+    'Your product needs consistent business logic across Android and iOS.',
+    'You want to extend an existing Android app to iOS without a full rewrite.',
+    'Native interfaces, OS integrations, and accessibility requirements are priorities.',
+    'Your application handles financial calculations, health data, or offline synchronization.',
+    'You plan to share Kotlin code across mobile, web, or desktop.',
   ]
 
   const flutterRnPoints = [
-    'Speed to market and UI consistency matter more than platform-native behavior',
-    'Budget constraints require sharing UI code as well as logic',
-    <>
-      Teams evaluating{' '}
-      <a
-        href="https://inceptivesdigital.com/blog/why-choose-flutter"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline text-[#00CE44] hover:text-white transition-colors"
-      >
-        why choose Flutter
-      </a>{' '}
-      against KMP should weigh UI sharing against native platform control.
-    </>,
+    'Your development team already specializes in Dart or JavaScript.',
+    'You need consistent interfaces across Android and iOS.',
+    'Your budget favors sharing UI code alongside business logic.',
+    'You need faster delivery of UI-heavy applications.',
   ]
 
   return (
     <>
-      {/* Part A: Why Are Experienced Product Teams Moving to KMP? (Container 9596463) */}
+      {/* Part A: Why Are Experienced Product Teams Moving to KMP? */}
       <section className="py-14 sm:py-20 bg-[#191919]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-            {/* Left Column Heading (40px) */}
+            {/* Left Column Heading */}
             <div className="lg:col-span-5 text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2]">
                 Why Are{' '}
@@ -40,24 +30,31 @@ export default function KmpArchitectureChoice() {
               </h2>
             </div>
 
-            {/* Right Column Description (16px) */}
+            {/* Right Column Description */}
             <div className="lg:col-span-7 text-left">
               <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
-                KMP reached stable release in November 2023, backed by JetBrains and Google. The architecture it offers has no credible alternative for teams that need shared business logic without surrendering native UI control on any platform. With Netflix and VMware among the engineering teams that have committed to it at production scale, adoption has increased threefold, from 7% to over 20%. Inceptives Digital applies the same level of architectural accuracy to each KMP project.
+                Kotlin Multiplatform is a{' '}
+                <Link
+                  to="/cross-platform-app-development"
+                  className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+                >
+                  cross-platform app development
+                </Link>{' '}
+                approach that lets businesses share application logic while retaining native Android and iOS interfaces, reducing duplicated development effort. This architectural advantage has attracted established engineering teams, including Netflix and VMware, which use KMP in production. According to JetBrains, KMP adoption among cross-platform developers rose from 7% in 2024 to 18% in 2025, reflecting its growing use in production.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Part B: Is Kotlin Multiplatform the Right Architecture for Your Product? (Container 6d4a1d3 with kotline-bg-scaled.webp cover) */}
+      {/* Part B: Is Kotlin Multiplatform the Right Architecture for Your Product? */}
       <section
         className="relative py-16 sm:py-20 bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{
           backgroundImage: "url('/assets/kmp-app/kotline-bg-scaled.webp')",
         }}
       >
-        {/* 80% Dark Overlay matching Elementor --overlay-opacity: 0.8 */}
+        {/* 80% Dark Overlay */}
         <div className="absolute inset-0 bg-[#191919]/80 pointer-events-none" />
 
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
@@ -68,14 +65,12 @@ export default function KmpArchitectureChoice() {
 
             <p className="text-white/95 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-6">
               The choice between KMP and{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/native-vs-hybrid-vs-cross-platform-app-development"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[#00CE44] hover:text-white transition-colors"
+              <Link
+                to="/blog/native-vs-hybrid-vs-cross-platform-app-development"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
               >
                 native vs hybrid vs cross-platform app development
-              </a>{' '}
+              </Link>{' '}
               depends on how much logic, UI, and platform behavior should be shared.
             </p>
 
@@ -98,14 +93,14 @@ export default function KmpArchitectureChoice() {
             <h3 className="text-xl sm:text-[25px] font-bold text-white leading-snug mt-2 mb-4">
               <Link
                 to="/flutter-app-development"
-                className="underline text-white hover:text-[#00CE44] transition-colors"
+                className="underline underline-offset-4 text-white hover:text-[#00CE44] transition-colors"
               >
                 Flutter App Development
               </Link>{' '}
               or{' '}
               <Link
                 to="/react-native-app-development"
-                className="underline text-white hover:text-[#00CE44] transition-colors"
+                className="underline underline-offset-4 text-white hover:text-[#00CE44] transition-colors"
               >
                 React Native App Development
               </Link>{' '}
@@ -123,16 +118,7 @@ export default function KmpArchitectureChoice() {
             </ul>
 
             <p className="text-white/95 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-7">
-              If you are not certain which{' '}
-              <a
-                href="https://inceptivesdigital.com/cross-platform-app-development"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[#00CE44] hover:text-white transition-colors"
-              >
-                cross-platform app development
-              </a>{' '}
-              architecture fits your product constraints, we will tell you directly, including when we would recommend a different path.
+              Still unsure whether Kotlin Multiplatform development fits your product? Our engineers assess your platform requirements and recommend the architecture that best supports them.
             </p>
 
             <a

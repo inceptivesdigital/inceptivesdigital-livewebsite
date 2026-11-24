@@ -49,35 +49,19 @@ export default function SingaporeAwards() {
           </p>
         </div>
 
-        {/* 5-Card Grid: Real Award Logos, Zero Shadow, Zero Hover Lift */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center">
+        {/* Clean Floating Award Badges Row */}
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-18 xl:gap-20">
           {awards.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#12141a] rounded-[22px] p-7 sm:p-9 border-0 shadow-none flex flex-col justify-between text-left"
+              className="h-24 sm:h-28 lg:h-32 w-auto max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
             >
-              <div>
-                <div className="h-16 sm:h-20 mb-6 flex items-center justify-start">
-                  <img
-                    src={item.logoSrc}
-                    alt={`${item.org} ${item.title}`}
-                    className="max-h-full max-w-[180px] w-auto object-contain select-none brightness-100"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className="inline-block px-3 py-1 rounded-none bg-white/5 text-[#00CE44] text-xs font-semibold uppercase tracking-wider mb-3">
-                  {item.org}
-                </div>
-
-                <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug mb-3">
-                  {item.title}
-                </h3>
-
-                <p className="text-white/80 text-sm sm:text-base leading-relaxed font-normal">
-                  {item.desc}
-                </p>
-              </div>
+              <img
+                src={item.logoSrc}
+                alt={`${item.org} ${item.title}`}
+                className="max-h-full max-w-full w-auto h-auto object-contain select-none brightness-100"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

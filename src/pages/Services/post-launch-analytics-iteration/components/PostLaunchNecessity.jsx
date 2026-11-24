@@ -21,7 +21,7 @@ export default function PostLaunchNecessity() {
               Without structured analytics after launch, the{' '}
               <Link
                 to="/blog/common-reasons-digital-products-fail"
-                className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+                className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
               >
                 common reasons digital products fail
               </Link>{' '}

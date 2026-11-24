@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import mobileAppSchema from '../../../schemas/mobile-app-development.json'
 import MobileHero from './components/MobileHero'
 import MobileMarquee from './components/MobileMarquee'
 import CustomMobileServices from './components/CustomMobileServices'
@@ -22,6 +24,7 @@ import AwardsRecognitions from './components/AwardsRecognitions'
 import MobileFAQs from './components/MobileFAQs'
 
 export default function MobileAppDevelopmentPage() {
+  useJsonLdSchema(mobileAppSchema, 'schema-mobile-app-development')
   useEffect(() => {
     const seoTitle = 'Custom Mobile App Development Services | Inceptives Digital'
     const seoDesc =

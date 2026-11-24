@@ -21,7 +21,7 @@ export default function DubaiWhyChooseUs() {
           Our portfolio of more than 70 delivered products across 20 industries provides practical engineering experience rather than isolated case studies. That consistency is reflected in independently verified client reviews and products that continue to evolve beyond launch, which helps you{' '}
           <Link
             to="/blog/how-to-choose-the-right-mobile-app-development-company"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             choose the right company
           </Link>

@@ -9,7 +9,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           Native iOS applications demand close attention to performance, security, and Apple&apos;s evolving ecosystem. Swift and SwiftUI power{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ios-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             iOS app development
           </Link>{' '}
           for Dubai businesses, supporting responsive iPhone and iPad experiences, device-specific integrations, and seamless compatibility with Apple’s latest platform capabilities.
@@ -23,7 +23,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           Device diversity makes consistent performance a priority across the Android ecosystem. Kotlin and Jetpack Compose provide the technical foundation for{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/android-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Android app development
           </Link>{' '}
           in Dubai, supporting device compatibility, native functionality, and applications designed for sustained use across different operating environments.
@@ -37,7 +37,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           When product timelines demand faster iteration across platforms,{' '}
-          <Link to="/react-native-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/react-native-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             React Native app development
           </Link>{' '}
           provides a practical balance between delivery speed and application quality. A shared codebase reduces unnecessary engineering duplication while maintaining the performance required for continuous product advancement.
@@ -51,7 +51,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           Maintaining a consistent experience across platforms requires more than replicating screens.{' '}
-          <Link to="/flutter-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/flutter-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Flutter app development
           </Link>{' '}
           enables teams to build unified interfaces with smooth performance, allowing products to preserve visual quality, accelerate iteration, and evolve efficiently across iOS and Android.
@@ -65,7 +65,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           The right platform strategy depends on product goals, release timelines, and future maintenance requirements.{' '}
-          <Link to="/cross-platform-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/cross-platform-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Cross platform app development
           </Link>{' '}
           creates a shared foundation for iOS and Android applications while helping teams improve delivery efficiency without sacrificing scalability or product quality.
@@ -79,7 +79,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           Some products require shared engineering efficiency while preserving fully native experiences.{' '}
-          <Link to="/kotlin-multiplatform-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/kotlin-multiplatform-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Kotlin Multiplatform app development
           </Link>{' '}
           allows teams to share core business logic across platforms while maintaining platform-specific interfaces, creating a flexible architecture built for long-term evolution.
@@ -93,7 +93,7 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           Mobile products often require connected web experiences for customers, teams, and business operations. Web applications from a{' '}
-          <Link to="/web-app-development-company" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/web-app-development-company" className="text-[#00CE44] font-medium underline underline-offset-4">
             web app development company
           </Link>
           , built alongside shared APIs and scalable architecture, keep digital ecosystems aligned while enabling consistent functionality across every customer touchpoint.
@@ -107,11 +107,11 @@ export default function DubaiServicesGrid() {
       desc: (
         <>
           Enterprise applications often depend on existing payment, identity, and operational systems.{' '}
-          <Link to="/backend-api-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/backend-api-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Backend api development
           </Link>{' '}
           in Dubai connects mobile products with authorised UAE PASS integrations, regional payment gateways, and business software where required. Secure infrastructure and{' '}
-          <Link to="/system-integration-api-automation" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/system-integration-api-automation" className="text-[#00CE44] font-medium underline underline-offset-4">
             system integration api automation
           </Link>{' '}
           keep data exchange controlled and support future system expansion.

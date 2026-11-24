@@ -11,7 +11,7 @@ const points = [
           href="https://inceptivesdigital.com/ai-agent-development"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           AI agents
         </a>{' '}
@@ -29,7 +29,7 @@ const points = [
           href="https://inceptivesdigital.com/blog/common-reasons-digital-products-fail"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           digital products fail
         </a>{' '}
@@ -59,7 +59,7 @@ export default function MachineDifference() {
               href="https://inceptivesdigital.com/blog/will-ai-really-replace-app-developers"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               AI replacing app developers
             </a>.

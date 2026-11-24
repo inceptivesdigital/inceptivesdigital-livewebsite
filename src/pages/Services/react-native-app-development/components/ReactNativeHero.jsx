@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function ReactNativeHero() {
   const trustBadges = [
     {
@@ -39,24 +37,10 @@ export default function ReactNativeHero() {
             </h2>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
-              Inceptives Digital brings eight years of mobile engineering experience to React Native application development for{' '}
-              <Link
-                to="/services/ios-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
-              >
-                iOS
-              </Link>{' '}
-              and{' '}
-              <Link
-                to="/services/android-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
-              >
-                Android
-              </Link>
-              . Backed by 150+ developers, the studio delivers custom React Native applications with native integrations and architecture that supports future product growth.
+              Inceptives Digital brings eight years of mobile engineering experience to React Native application development for iOS and Android. Backed by 150+ developers, the studio delivers custom React Native applications with native integrations and architecture that supports future product growth.
             </p>
 
-            {/* Rectangular CTA Button (Sharp Corners, Zero Shadow) */}
+            {/* Rectangular CTA Button */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#contact"
@@ -92,7 +76,7 @@ export default function ReactNativeHero() {
             </div>
           </div>
 
-          {/* Right Column: Mobile/Tablet fallback image (Desktop uses full-height right-aligned banner background) */}
+          {/* Right Column: Mobile/Tablet fallback image */}
           <div className="lg:hidden flex justify-center w-full">
             <img
               src="/assets/react-native/reactnative.png"

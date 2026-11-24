@@ -58,7 +58,7 @@ export default function NYAdvancedTech() {
           AI earns its place when it removes friction, improves decisions, or increases retention. We integrate AI through{' '}
           <Link
             to="/machine-learning-development-services"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             machine learning development services
           </Link>{' '}
@@ -88,7 +88,7 @@ export default function NYAdvancedTech() {
         <>
           <Link
             to="/blockchain-development"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             Blockchain development
           </Link>{' '}

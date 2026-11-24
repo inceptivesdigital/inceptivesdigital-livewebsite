@@ -3,9 +3,14 @@ import FullWidthCtaSection from '../../../../components/FullWidthCtaSection'
 export default function RealEstateCta2() {
   return (
     <FullWidthCtaSection
-      heading={<>Ready to Build Your Next Real Estate App?</>}
-      description={<>From property management systems to AI-powered marketplaces, every real estate application we build starts with your specific workflow and ends with a platform your users actually transact on.</>}
-      ctaText="Let’s Build Your Real Estate App Today"
+      heading={
+        <>
+          Get a{' '}
+          <span className="text-[#00CE44]">Real Estate App Development Quote</span> for Your Actual Scope
+        </>
+      }
+      description="Our engineers review your development requirements before preparing a cost estimate based on the proposed application."
+      ctaText="Request My Project Quote"
       bgImage="/assets/healthcare/health-cta.webp"
     />
   )

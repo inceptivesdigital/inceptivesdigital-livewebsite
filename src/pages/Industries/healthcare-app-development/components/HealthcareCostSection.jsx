@@ -54,7 +54,7 @@ export default function HealthcareCostSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.16] mb-4">
             <Link
               to="/blog/healthcare-app-development-cost"
-              className="text-[#00CE44] hover:underline"
+              className="text-[#00CE44] underline underline-offset-4"
             >
               Healthcare App Development Cost
             </Link>{' '}

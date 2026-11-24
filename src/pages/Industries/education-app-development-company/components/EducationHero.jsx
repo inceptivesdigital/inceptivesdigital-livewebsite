@@ -15,31 +15,31 @@ export default function EducationHero() {
             Education App Development Company
           </h1>
 
-          {/* Centered 2-Line Bold White Headline */}
+          {/* Centered Bold White Headline */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-extrabold text-white tracking-tight leading-[1.14] mb-4 max-w-4xl">
-            AI-Powered EdTech Apps Engineered Around Learner Behaviour and Real Outcomes
+            Shaping the Learning Experience with Custom EdTech App Development
           </h2>
 
           {/* Centered Subtitle */}
           <p className="text-white/90 text-sm sm:text-base lg:text-[16px] leading-relaxed font-normal mb-7 max-w-4xl">
-            Custom education applications for schools, EdTech startups, and corporate training organizations. AI-powered adaptive learning, LMS platforms, gamified experiences, and AR/VR simulations built to COPPA and FERPA compliance standards from the architecture stage.
+            Inceptives Digital provides education app development services for schools, EdTech businesses, and educational institutions across the US. Our developers engineer custom mobile learning platforms with connected academic workflows, supporting institutions launching new digital products or modernizing existing systems.
           </p>
 
-          {/* Single Centered Solid Green Button */}
-          <div className="flex flex-wrap items-center gap-4">
-              <Link
-            to="/contact-us"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-[#00CE44] text-black font-medium text-sm sm:text-base rounded-none hover:bg-[#00e04b] transition-all duration-200 cursor-pointer shadow-none"
-          >
-            Let&apos;s Schedule A Call
-          </Link>
-              <Link
-                to="/contact-us"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
-              >
-                Schedule A Call
-              </Link>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#00CE44] text-black font-medium text-sm sm:text-base rounded-none hover:bg-[#00e04b] transition-all duration-200 cursor-pointer shadow-none"
+            >
+              Consult Our EdTech Development Team
+            </a>
+            <Link
+              to="/contact-us"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
+            >
+              Schedule A Call
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -38,14 +38,14 @@ export default function BlockchainWhyChooseUs() {
               Inceptives Digital is a trusted{' '}
               <Link
                 to="/blockchain-development"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
+                className="text-[#00CE44] underline hover:opacity-80 transition-colors"
               >
                 blockchain development company
               </Link>{' '}
               with 8+ years of experience and the support of 150+ experienced blockchain developers. We have the potential to support you in any project, regardless of size and complexity. Be it{' '}
               <Link
                 to="/custom-software-development"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
+                className="text-[#00CE44] underline hover:opacity-80 transition-colors"
               >
                 custom software development
               </Link>

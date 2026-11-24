@@ -19,7 +19,7 @@ export default function AsoStrategyNecessity() {
               A user searching your category sees a handful of results and decides in 10 seconds. That decision happens above the fold because 90% of iOS visitors never scroll past the first 10% of a page. Pages built for conversion hit 33.7% on the App Store. Most apps sit well below that, and the pattern usually traces back to a handful of{' '}
               <Link
                 to="/blog/app-store-optimization-mistakes"
-                className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+                className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
               >
                 app store optimization mistakes
               </Link>{' '}

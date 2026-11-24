@@ -10,7 +10,7 @@ export default function AsoServicesGrid() {
           Keyword positions, conversion rates, creative performance, and metadata are measured against category benchmarks before any strategy is built, the same fundamentals covered in what{' '}
           <Link
             to="/blog/app-store-optimization-aso"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             app store optimization ASO
           </Link>{' '}
@@ -35,7 +35,7 @@ export default function AsoServicesGrid() {
           Rank means nothing if the page does not convert. Title, subtitle, and description are written to communicate product value within the 10-second decision window, following the same principles behind a strong{' '}
           <Link
             to="/blog/mobile-app-branding-guide"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             mobile app branding guide
           </Link>{' '}
@@ -69,7 +69,7 @@ export default function AsoServicesGrid() {
           A one-time optimization lifts numbers temporarily. Sustained ASO compounds, and that ongoing work is where{' '}
           <Link
             to="/post-launch-analytics-iteration"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             post-launch analytics & iteration
           </Link>{' '}
@@ -92,7 +92,7 @@ export default function AsoServicesGrid() {
             Every app competes in a category with its own search behavior, ranking dynamics, and conversion patterns, which is where most{' '}
             <Link
               to="/blog/10-aso-strategies-to-increase-your-app-store-rankings"
-              className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+              className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
             >
               ASO strategies to increase app store rankings
             </Link>{' '}

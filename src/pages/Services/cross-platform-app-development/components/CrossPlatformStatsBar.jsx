@@ -13,10 +13,10 @@ export default function CrossPlatformStatsBar() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat) => (
               <div key={stat.label} className="px-4 py-2">
-                <div className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#00CE44] tracking-tight mb-2">
+                <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm sm:text-base text-white/80 font-medium">
+                <div className="text-white text-[14px] sm:text-[15px] font-medium">
                   {stat.label}
                 </div>
               </div>

@@ -49,7 +49,7 @@ export default function SFHero() {
           {/* Subtitle / Paragraph with internal links */}
           <p className="text-white/90 text-sm sm:text-base lg:text-[17px] leading-relaxed mb-8 font-normal">
             Building successful apps requires decisions grounded in customers and goals. Inceptives Digital is a{' '}
-            <Link to="/mobile-app-development" className="underline text-[#00CE44] hover:text-white transition-colors">
+            <Link to="/mobile-app-development" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
               mobile app development company
             </Link>{' '}
             in San Francisco serving founders, SaaS operators, and enterprise teams launching custom iOS, Android, cross-platform, and AI-enabled products. Founders around Jackson Square and established downtown businesses expect sound architecture, clear scope, and accountability before engineering begins. Our mobile app developers in San Francisco address platform constraints, product adoption, and security requirements before writing code. Technical diligence and customer procurement shape critical decisions throughout development.

@@ -21,7 +21,7 @@ export default function WebAppGrowthOutcomes() {
                 href="https://inceptivesdigital.com/blog/website-development-guide"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-white transition-colors"
+                className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:opacity-80 transition-colors"
               >
                 web development guide
               </a>{' '}

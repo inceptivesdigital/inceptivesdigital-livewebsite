@@ -9,7 +9,7 @@ export default function PostLaunchServicesGrid() {
           Usage data, retention curves, funnel drop-offs, and error logs get measured against original KPIs before any iteration work begins. The audit directs effort toward problems that produce the most impact first, including opportunities for{' '}
           <Link
             to="/blog/mobile-app-performance-optimization"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             mobile app performance optimization
           </Link>
@@ -25,7 +25,7 @@ export default function PostLaunchServicesGrid() {
           Aggregate numbers show where users leave. Behavioral analysis explains why. Heatmaps, session recordings, and cohort breakdowns surface friction points that drive{' '}
           <Link
             to="/ui-ux-design"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             UI/UX design
           </Link>{' '}
@@ -50,7 +50,7 @@ export default function PostLaunchServicesGrid() {
           Pre-launch backlogs rarely survive contact with real user behavior. Post-launch analytics identify which planned features align with observed usage patterns and reorder the roadmap through{' '}
           <Link
             to="/product-strategy-consulting"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             product strategy consulting
           </Link>{' '}
@@ -75,7 +75,7 @@ export default function PostLaunchServicesGrid() {
           Speed regressions, API failures, and load issues compound quickly in live environments. Continuous monitoring and{' '}
           <Link
             to="/backend-api-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             backend API development
           </Link>{' '}
@@ -91,7 +91,7 @@ export default function PostLaunchServicesGrid() {
           Retaining a user costs far less than acquiring one. Post-launch retention work tracks onboarding completion rates, feature adoption depth, return-visit cadence, and{' '}
           <Link
             to="/blog/mobile-app-monetization-strategies"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             mobile app monetization strategies
           </Link>

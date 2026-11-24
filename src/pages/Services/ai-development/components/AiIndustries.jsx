@@ -104,7 +104,7 @@ export default function AiIndustries() {
         </div>
 
         {/* Homepage-Style Box Cards Grid: Clean 1px gap border, bg-[#18191d] hover:bg-[#00CE44] */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map((ind) => (
             <div
               key={ind.title}

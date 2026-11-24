@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url><loc>https://inceptivesdigital.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://inceptivesdigital.com/services</loc><priority>0.9</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio</loc><priority>0.9</priority></url>
+  <url><loc>https://inceptivesdigital.com/custom-software-development</loc><priority>0.9</priority></url>
+  <url><loc>https://inceptivesdigital.com/staff-augmentation</loc><priority>0.8</priority></url>
+
+  <!-- Digital Product & Strategy Services -->
+  <url><loc>https://inceptivesdigital.com/digital-product-development</loc><priority>0.9</priority></url>
+  <url><loc>https://inceptivesdigital.com/discovery-sprint</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mvp-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/product-rescue-scaling</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/product-strategy-consulting</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ui-ux-design</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/interactive-prototyping</loc><priority>0.8</priority></url>
+
+  <!-- Mobile, Web & Backend Engineering Services -->
+  <url><loc>https://inceptivesdigital.com/mobile-app-development</loc><priority>0.9</priority></url>
+  <url><loc>https://inceptivesdigital.com/ios-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/android-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/react-native-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/flutter-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/kotlin-multiplatform-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/cross-platform-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/web-app-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/backend-api-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/blockchain-development</loc><priority>0.8</priority></url>
+
+  <!-- Product Launch & Post-Launch Growth Services -->
+  <url><loc>https://inceptivesdigital.com/product-launch-strategy</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/app-store-optimization</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/post-launch-analytics-iteration</loc><priority>0.8</priority></url>
+
+  <!-- AI, ML & Intelligent Automation Services -->
+  <url><loc>https://inceptivesdigital.com/ai-development</loc><priority>0.9</priority></url>
+  <url><loc>https://inceptivesdigital.com/ai-development/ai-cost-estimator</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ai-app-development-services</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ai-chatbot-development-services</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ai-agent-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/generative-ai-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/machine-learning-development-services</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/nlp-development-services</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ai-mvp-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ai-automation-services</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/business-process-automation</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/rpa-development-services</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/system-integration-api-automation</loc><priority>0.8</priority></url>
+
+  <!-- Industries (10 Pages) -->
+  <url><loc>https://inceptivesdigital.com/healthcare-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/fitness-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/fintech-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/education-app-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/real-estate-app-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/dating-app-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/travel-app-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/food-delivery-app-development</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/ecommerce-app-development-company</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/startup-app-development-company</loc><priority>0.8</priority></url>
+
+  <!-- Locations (7 Pages) -->
+  <url><loc>https://inceptivesdigital.com/mobile-app-development-san-francisco</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mobile-app-development-austin</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mobile-app-development-new-york</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mobile-apps-development-company-in-toronto-canada</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mobile-app-development-company-london-uk</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mobile-app-development-company-dubai-uae</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/mobile-app-development-company-singapore</loc><priority>0.8</priority></url>
+
+  <!-- Portfolio Case Studies (10 Inner Pages) -->
+  <url><loc>https://inceptivesdigital.com/portfolio/state-of-the-art-chiropractic</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/dps-airem</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/halwar-connect</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/family-entertainment-group</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/zoom-read</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/pulse-check-timer</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/my-tango-event</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/wordsmith-pro</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/pets-b4-profit</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/portfolio/stakbread</loc><priority>0.7</priority></url>
+
+  <!-- Company Pages (8 Pages) -->
+  <url><loc>https://inceptivesdigital.com/about-us</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/leadership</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/founders-letter</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/life-at-inceptives-digital</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/partnership</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/blogs</loc><priority>0.8</priority></url>
+  <url><loc>https://inceptivesdigital.com/press-media</loc><priority>0.7</priority></url>
+  <url><loc>https://inceptivesdigital.com/contact-us</loc><priority>0.8</priority></url>
+
+  <!-- Legal Pages (2 Pages) -->
+  <url><loc>https://inceptivesdigital.com/privacy-policy</loc><priority>0.5</priority></url>
+  <url><loc>https://inceptivesdigital.com/terms-and-condition</loc><priority>0.5</priority></url>
+</urlset>

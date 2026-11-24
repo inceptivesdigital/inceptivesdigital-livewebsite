@@ -95,7 +95,7 @@ export default function NYComparisonTable() {
             If you're comparing speed, cost, flexibility, and long-term reliability, the right choice depends on what you're building. AI app builders can help with simple prototypes, as the debate over{' '}
             <Link
               to="/blog/ai-app-builders-vs-human-developers"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               app builders vs. developers
             </Link>{' '}

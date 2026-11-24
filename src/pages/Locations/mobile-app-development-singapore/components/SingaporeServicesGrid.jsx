@@ -9,7 +9,7 @@ export default function SingaporeServicesGrid() {
       desc: (
         <>
           Apple users expect precision across every interaction. Inceptives Digital builds native{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ios-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             iOS app development
           </Link>{' '}
           applications for Singapore businesses using Swift and SwiftUI, with engineering decisions shaped by Apple&apos;s platform conventions, device capabilities, and future product requirements.
@@ -23,7 +23,7 @@ export default function SingaporeServicesGrid() {
       desc: (
         <>
           An Android product may reach customers through smartphones, tablets, and devices running different OS versions. Our{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/android-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Android app development
           </Link>{' '}
           work for Singapore businesses accounts for these differences early, with Kotlin-based engineering focused on reliable functionality and maintainable code.
@@ -37,7 +37,7 @@ export default function SingaporeServicesGrid() {
       desc: (
         <>
           React Native works well for products that need efficient multi-platform expansion without sacrificing user experience.{' '}
-          <Link to="/react-native-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/react-native-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             React Native app development
           </Link>{' '}
           engineering decisions around shared components and native capabilities help maintain application quality while keeping future iterations more manageable.
@@ -51,7 +51,7 @@ export default function SingaporeServicesGrid() {
       desc: (
         <>
           Flutter is particularly useful when a product&apos;s interface needs to behave consistently across iOS and Android.{' '}
-          <Link to="/flutter-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/flutter-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Flutter app development
           </Link>{' '}
           rendering approach gives designers greater control over visual details, while a shared codebase keeps platform-specific differences from complicating routine updates.
@@ -65,7 +65,7 @@ export default function SingaporeServicesGrid() {
       desc: (
         <>
           Not every application benefits from the same cross-platform architecture.{' '}
-          <Link to="/cross-platform-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/cross-platform-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Cross platform app development
           </Link>{' '}
           assesses performance demands, device integrations, release schedules, and maintenance requirements before recommending a framework. The decision follows what the product needs to accomplish.
@@ -79,7 +79,7 @@ export default function SingaporeServicesGrid() {
       desc: (
         <>
           A mobile interface is only as reliable as the systems supporting it.{' '}
-          <Link to="/backend-api-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/backend-api-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Backend and API development
           </Link>{' '}
           and cloud infrastructure receive the same level of attention as the application layer to ensure products remain secure, scalable, and ready for future growth.
@@ -126,7 +126,7 @@ export default function SingaporeServicesGrid() {
               <div className="p-6 sm:p-7 text-left flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="text-xl sm:text-[22px] font-bold text-white mb-3 leading-snug">
-                    <Link to={svc.link} className="hover:text-[#00CE44] transition-colors">
+                    <Link to={svc.link} className="hover:text-[#00CE44] transition-colors underline underline-offset-4">
                       {svc.title}
                     </Link>
                   </h3>

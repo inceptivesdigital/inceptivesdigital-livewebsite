@@ -17,7 +17,7 @@ export default function MachineHero() {
               href="https://inceptivesdigital.com/business-process-automation"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               business process automation
             </a>{' '}

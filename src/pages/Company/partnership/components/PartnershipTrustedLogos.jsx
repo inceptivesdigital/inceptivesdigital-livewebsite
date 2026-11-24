@@ -15,7 +15,7 @@ export default function PartnershipTrustedLogos() {
           Recognized Across Growth-Focused Partner Networks
         </h3>
 
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:gap-10">
+        <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-4 sm:gap-6 lg:gap-10">
           {brands.map((brand, index) => (
             <div
               key={index}

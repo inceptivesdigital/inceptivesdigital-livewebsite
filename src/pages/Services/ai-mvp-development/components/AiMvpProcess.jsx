@@ -9,7 +9,7 @@ const steps = [
     imageAlt: 'AI MVP discovery and scoping',
     desc: (
       <>
-        <a href="https://inceptivesdigital.com/product-launch-strategy" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/product-launch-strategy" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Product strategy consulting
         </a>{' '}
         defines the business problem, success criteria, and MVP boundaries before development begins. We leave this stage with one clearly scoped AI use case, not three, not five. One. The one worth proving.
@@ -64,7 +64,7 @@ const steps = [
     desc: (
       <>
         The MVP learnings become the foundation for{' '}
-        <a href="https://inceptivesdigital.com/digital-product-development" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/digital-product-development" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           digital product development
         </a>{' '}
         and the full build plan that follows. Architecture blueprint, data requirements, team structure, timeline, and investment are defined. The full build starts here, not from scratch.

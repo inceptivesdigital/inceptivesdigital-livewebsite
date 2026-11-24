@@ -70,7 +70,7 @@ export default function TorontoProcess() {
       desc: (
         <>
           With a focused{' '}
-          <Link to="/discovery-sprint" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/discovery-sprint" className="text-[#00CE44] font-medium underline underline-offset-4">
             Discovery Sprint
           </Link>
           , we define business goals, users, technical requirements, and competitive opportunities. The outcome is a focused roadmap that prioritizes valuable features and creates alignment before engineering begins.
@@ -83,11 +83,11 @@ export default function TorontoProcess() {
       cardTitle: '3. UX/UI Design & Prototyping',
       desc: (
         <>
-          <Link to="/ui-ux-design" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ui-ux-design" className="text-[#00CE44] font-medium underline underline-offset-4">
             UX/UI Design
           </Link>{' '}
           transforms ideas into experiences. User journeys, wireframes, and{' '}
-          <Link to="/interactive-prototyping" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/interactive-prototyping" className="text-[#00CE44] font-medium underline underline-offset-4">
             interactive prototypes
           </Link>{' '}
           help teams test concepts, refine interactions, and create intuitive products before development starts.
@@ -106,7 +106,7 @@ export default function TorontoProcess() {
       cardTitle: '5. Quality Assurance & Optimization',
       desc: (
         <>
-          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] font-medium underline underline-offset-4">
             Testing strategies
           </Link>{' '}
           cover functionality, performance, security, and usability across real devices. Automated and manual QA processes identify issues early and help deliver stable, production-ready applications.
@@ -120,7 +120,7 @@ export default function TorontoProcess() {
       desc: (
         <>
           Through structured{' '}
-          <Link to="/product-launch-strategy" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/product-launch-strategy" className="text-[#00CE44] font-medium underline underline-offset-4">
             Product Launch
           </Link>{' '}
           planning, we manage App Store and Google Play deployment, release preparation, and early monitoring. Post-launch performance data and user feedback guide subsequent product updates.

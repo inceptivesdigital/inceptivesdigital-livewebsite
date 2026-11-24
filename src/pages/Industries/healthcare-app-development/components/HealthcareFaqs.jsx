@@ -17,7 +17,7 @@ const faqs = [
           Look for a studio with verified healthcare domain knowledge, demonstrated compliance experience, and a portfolio of production healthcare applications. Explore our guide on{' '}
           <Link
             to="/blog/how-to-choose-the-right-healthcare-app-development-company"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             how to choose the right healthcare app development company
           </Link>{' '}
@@ -32,7 +32,7 @@ const faqs = [
           It depends on your target users and clinical requirements.{' '}
           <Link
             to="/blog/why-choose-flutter"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Flutter
           </Link>{' '}

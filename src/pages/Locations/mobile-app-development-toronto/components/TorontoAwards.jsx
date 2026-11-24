@@ -41,31 +41,19 @@ export default function TorontoAwards() {
           </p>
         </div>
 
-        {/* 5-Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {/* Clean Floating Award Badges Row */}
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-18 xl:gap-20">
           {awards.map((item) => (
             <div
               key={item.title}
-              className="p-7 rounded-[20px] bg-[#14151a] border-0 transition-all duration-300 flex flex-col items-center justify-between text-center hover:-translate-y-1 group shadow-none"
+              className="h-24 sm:h-28 lg:h-32 w-auto max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
             >
-              <div className="flex flex-col items-center">
-                <div className="h-20 flex items-center justify-center mb-5">
-                  <img
-                    src={item.logoSrc}
-                    alt={item.title}
-                    className="max-h-16 max-w-[140px] w-auto h-auto object-contain select-none group-hover:scale-105 transition-transform duration-300 shadow-none"
-                    loading="lazy"
-                  />
-                </div>
-
-                <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#00CE44] mb-2">
-                  {item.year}
-                </span>
-
-                <h3 className="text-base sm:text-[17px] font-bold text-white group-hover:text-[#00CE44] transition-colors leading-snug">
-                  {item.title}
-                </h3>
-              </div>
+              <img
+                src={item.logoSrc}
+                alt={item.title}
+                className="max-h-full max-w-full w-auto h-auto object-contain select-none"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

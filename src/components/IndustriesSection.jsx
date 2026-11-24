@@ -95,7 +95,7 @@ export default function IndustriesSection({
         </div>
 
         {/* 10-Cards 5-Column Grid: Equal Heights & Clean Borders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-stretch gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-stretch gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl auto-rows-fr">
           {industries.map((ind) => (
             <Link
               key={ind.title}

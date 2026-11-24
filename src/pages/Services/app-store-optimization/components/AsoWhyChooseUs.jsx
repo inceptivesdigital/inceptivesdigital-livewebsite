@@ -15,7 +15,7 @@ export default function AsoWhyChooseUs() {
           The App Store and Google Play rank apps differently, surface them differently, and convert users differently, much like the platform-level decisions behind{' '}
           <Link
             to="/ios-app-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             iOS app development
           </Link>{' '}

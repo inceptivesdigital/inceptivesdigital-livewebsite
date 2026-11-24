@@ -27,14 +27,14 @@ export default function SingaporeHero() {
             Growth rarely comes from an application alone. It comes from building the right product with the right strategy behind it. Inceptives Digital is a{' '}
             <Link
               to="/mobile-app-development"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               custom mobile app development company
             </Link>{' '}
             in Singapore that brings together product thinking, design, and engineering. Every iOS, Android, and AI-powered application starts with{' '}
             <Link
               to="/product-strategy-consulting"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               product strategy consulting
             </Link>{' '}

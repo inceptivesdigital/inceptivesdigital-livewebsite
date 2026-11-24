@@ -3,157 +3,157 @@ import React, { useState } from 'react'
 const tabs = [
   {
     id: 'customer',
-    label: 'Customer-Focused Features',
+    label: '1. Customer App Features',
     subtitle:
-      'Helping shoppers browse, purchase, and manage orders with complete convenience.',
+      'Give shoppers a convenient way to discover products, complete purchases, and manage orders directly from their mobile devices.',
     image: '/assets/ecommerce/tabs/customer-tab.jpg',
     features: [
       {
         title: 'User Registration & Social Login',
         description:
-          'Sign up quickly using email, phone, or popular social accounts.',
+          'Enable account creation through email, phone, or supported social authentication providers.',
       },
       {
         title: 'Advanced Product Search',
         description:
-          'Find products faster with filters, sorting, and intelligent search options.',
+          'Help customers find relevant products with category filters, sorting options, and intelligent search functionality.',
       },
       {
         title: 'Wishlist & Shopping Cart',
         description:
-          'Save favourite products and manage purchases before checkout.',
+          'Allow shoppers to save products, review cart contents, and continue purchases across sessions.',
       },
       {
-        title: 'Secure Checkout',
+        title: 'Secure Checkout & Payments',
         description:
-          'Complete purchases safely through multiple trusted payment gateways.',
+          'Support card payments, digital wallets, and checkout workflows through integrated payment providers.',
       },
       {
         title: 'Real-Time Order Tracking',
         description:
-          'Track every order from confirmation to doorstep delivery.',
+          'Keep customers informed with order status updates and push notifications throughout fulfillment.',
       },
       {
         title: 'Ratings & Reviews',
         description:
-          'Share product feedback to help other shoppers make informed decisions.',
+          'Collect verified purchase feedback to support product evaluation and customer confidence.',
       },
     ],
   },
   {
     id: 'website',
-    label: 'Website Features',
+    label: '2. eCommerce Website Features',
     subtitle:
-      'Creating fast, discoverable, and conversion-focused ecommerce experiences.',
+      'Extend product discovery and purchasing to a web storefront connected with your mobile commerce infrastructure.',
     image: '/assets/ecommerce/tabs/website-tab.jpg',
     features: [
       {
-        title: 'SEO-Optimized Product Pages',
+        title: 'SEO-Friendly Product Pages',
         description:
-          'Improve search visibility with structured, search-friendly product listings.',
+          'Structure product information and metadata to support search visibility and product indexing.',
       },
       {
-        title: 'Category Management',
+        title: 'Product Category Management',
         description:
-          'Organize products through clear categories and subcategories.',
+          'Organize large catalogs through category hierarchies and configurable navigation.',
       },
       {
-        title: 'Responsive User Interface',
+        title: 'Responsive Storefront Design',
         description:
-          'Deliver a consistent shopping experience across every screen size.',
+          'Adapt browsing and checkout interfaces to desktop, tablet, and mobile screen sizes.',
       },
       {
-        title: 'Dynamic Pricing & Discounts',
+        title: 'Dynamic Pricing & Promotions',
         description:
-          'Apply promotional offers and pricing rules automatically.',
+          'Configure product discounts, promotional campaigns, and pricing rules through centralized controls.',
       },
       {
         title: 'Guest Checkout',
         description:
-          'Allow customers to complete purchases without creating an account.',
+          'Allow customers to complete eligible purchases without mandatory account registration.',
       },
       {
-        title: 'Content Management System',
+        title: 'Content Management',
         description:
-          'Manage products, pages, blogs, and promotional content with ease.',
+          'Update storefront content, landing pages, and promotional material without routine developer intervention.',
       },
     ],
   },
   {
     id: 'admin',
-    label: 'Admin-Focused Features',
+    label: '3. Admin Dashboard Features',
     subtitle:
-      'Giving administrators complete control over products, users, and business operations.',
+      'Give commerce operators centralized oversight of products, transactions, customer accounts, and business performance.',
     image: '/assets/ecommerce/tabs/admin-tab.jpg',
     features: [
       {
         title: 'Product & Catalog Management',
         description:
-          'Create, organize, and update product listings from one dashboard.',
+          'Create product listings, manage variants, and coordinate catalog changes across connected channels.',
       },
       {
         title: 'Inventory Management',
         description:
-          'Monitor stock levels and prevent overselling through real-time updates.',
+          'Monitor stock availability and synchronize inventory updates to reduce overselling.',
       },
       {
-        title: 'Order Management',
+        title: 'Order & Fulfillment Management',
         description:
-          'Track and manage every order throughout the fulfillment process.',
+          'Manage transaction statuses, returns, refunds, and fulfillment activity through defined workflows.',
       },
       {
-        title: 'User & Vendor Management',
+        title: 'Customer & Staff Management',
         description:
-          'Control customer, vendor, and staff accounts with ease.',
+          'Control user accounts and configure administrative permissions according to operational responsibilities.',
       },
       {
         title: 'Sales Analytics & Reporting',
         description:
-          'Monitor revenue, customer behaviour, and overall business performance.',
+          'Track sales performance, order trends, and product-level revenue through reporting dashboards.',
       },
       {
         title: 'Role-Based Access Control',
         description:
-          'Assign secure permissions for different teams and administrative roles.',
+          'Restrict sensitive operational functions according to staff roles and assigned permissions.',
       },
     ],
   },
   {
     id: 'vendor',
-    label: 'Vendor-Focused Features',
+    label: '4. Vendor Dashboard Features',
     subtitle:
-      'Helping marketplace vendors manage products, sales, and business performance independently.',
+      'Support independent marketplace sellers with dedicated tools for managing listings, orders, and commercial activity.',
     image: '/assets/ecommerce/tabs/vendor-tab.jpg',
     features: [
       {
         title: 'Vendor Onboarding & Verification',
         description:
-          'Simplify registration with secure onboarding and KYC verification.',
+          'Manage seller registration and verification requirements before enabling marketplace access.',
       },
       {
         title: 'Product Listing Management',
         description:
-          'Add, update, and manage products individually or in bulk.',
+          'Give vendors control over product submissions, descriptions, and catalog updates.',
       },
       {
         title: 'Stock & Pricing Control',
         description:
-          'Keep inventory and pricing accurate across every product.',
+          'Allow sellers to maintain inventory availability and update prices within marketplace rules.',
       },
       {
         title: 'Order Fulfillment Tracking',
         description:
-          'Manage incoming orders from processing through successful delivery.',
+          'Help vendors process incoming orders and manage their fulfillment responsibilities.',
       },
       {
-        title: 'Revenue & Performance Reports',
+        title: 'Vendor Performance Reports',
         description:
-          'Track sales, commissions, and overall store performance.',
+          'Display sales activity, commission deductions, and seller-level performance information.',
       },
       {
         title: 'Payout & Settlement Management',
         description:
-          'Review payout history and monitor payment settlements transparently.',
+          'Provide transaction records and payout visibility through integrated marketplace payment services.',
       },
     ],
   },
@@ -176,10 +176,10 @@ export default function EcommerceKeyFeatures() {
         <div className="text-center max-w-[980px] mx-auto mb-10">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
             Key Features of Our{' '}
-            <span className="text-[#00CE44]">Custom Ecommerce App Development Services</span>
+            <span className="text-[#00CE44]">Custom eCommerce App Development Services</span>
           </h2>
           <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Our ecommerce app development services provide a suite of panels, an app, and a website with defined features to handle transactions, traffic, inventory, and marketplace workflows.
+            Every commerce application needs features that match its users and operating model. Our eCommerce developers build connected customer, storefront, administrative, and vendor interfaces to support purchasing and day-to-day commerce operations.
           </p>
         </div>
 
@@ -209,7 +209,7 @@ export default function EcommerceKeyFeatures() {
           {current.subtitle}
         </p>
 
-        {/* Left: All 6 Feature Cards (2-Col Grid) | Right: Dynamic Per-Tab AI Mockup Image */}
+        {/* Left: All 6 Feature Cards (2-Col Grid) | Right: Dynamic Per-Tab Mockup Image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-12">
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {current.features.map((feat) => (
@@ -236,16 +236,6 @@ export default function EcommerceKeyFeatures() {
               loading="lazy"
             />
           </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="flex justify-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
-          >
-            Book a Consultation
-          </a>
         </div>
       </div>
     </section>

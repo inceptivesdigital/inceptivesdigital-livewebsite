@@ -75,7 +75,7 @@ export default function DubaiComplianceSecurity() {
             Compliance is a core part of how we build apps. From planning and architecture to deployment, our team follows industry-specific regulations and{' '}
             <Link
               to="/blog/mobile-app-security-best-practices"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               app security best practices
             </Link>{' '}

@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import flutterAppSchema from '../../../schemas/flutter-app-development.json'
 import FlutterHero from './components/FlutterHero'
 import FlutterTrustedLogos from './components/FlutterTrustedLogos'
 import FlutterRealImpact from './components/FlutterRealImpact'
@@ -15,6 +17,7 @@ import FlutterCostSection from './components/FlutterCostSection'
 import FlutterFAQs from './components/FlutterFAQs'
 
 export default function FlutterAppDevelopmentPage() {
+  useJsonLdSchema(flutterAppSchema, 'schema-flutter-app-development')
   useEffect(() => {
     const seoTitle = 'Flutter App Development Company | Inceptives Digital'
     const seoDesc =

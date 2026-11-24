@@ -42,7 +42,7 @@ export default function AsoCostSection() {
           Multi-market localization, full creative production, continuous testing, review management, and attribution integration across acquisition channels, especially where{' '}
           <Link
             to="/blog/mobile-app-monetization-strategies"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             mobile app monetization strategies
           </Link>{' '}
@@ -72,7 +72,7 @@ export default function AsoCostSection() {
             ASO pricing ranges from $1,500 per month for foundation work to $12,000 and above, depending on scope, platforms covered, and whether creative production is included, a range worth comparing against general{' '}
             <Link
               to="/blog/mobile-app-development-cost"
-              className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+              className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
             >
               mobile app development cost
             </Link>{' '}

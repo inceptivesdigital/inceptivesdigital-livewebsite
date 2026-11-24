@@ -66,7 +66,7 @@ export default function IosDevelopmentProcess() {
           Business objectives, user profiles, and technical constraints are documented before development begins. The output is a defined product scope,{' '}
           <a
             href="https://inceptivesdigital.com/blog/app-development-timeline"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             app development timeline
           </a>
@@ -84,14 +84,14 @@ export default function IosDevelopmentProcess() {
           As the scope is confirmed, wireframes and high-fidelity prototypes are built through{' '}
           <a
             href="https://inceptivesdigital.com/interactive-prototyping"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             interactive prototyping
           </a>{' '}
           against Apple’s Human Interface Guidelines and accessibility standards. Every screen is reviewed and approved, so{' '}
           <a
             href="https://inceptivesdigital.com/blog/common-ui-ux-design-mistakes"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             common UI/UX design mistakes
           </a>{' '}
@@ -109,7 +109,7 @@ export default function IosDevelopmentProcess() {
           With a validated design foundation in place, development runs in structured two-week sprints. A working build is shared at each cycle close, so feedback shapes the product throughout the engagement and helps avoid{' '}
           <a
             href="https://inceptivesdigital.com/blog/common-mobile-app-development-mistakes"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             common mobile app development mistakes
           </a>
@@ -127,7 +127,7 @@ export default function IosDevelopmentProcess() {
           Once the build is finished,{' '}
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-testing-strategies"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             functional, performance, and security testing
           </a>{' '}
@@ -145,7 +145,7 @@ export default function IosDevelopmentProcess() {
           After Apple&apos;s review,{' '}
           <a
             href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             App Store assets and metadata
           </a>{' '}

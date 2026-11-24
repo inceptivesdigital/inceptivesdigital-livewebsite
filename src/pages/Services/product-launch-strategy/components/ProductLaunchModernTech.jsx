@@ -9,7 +9,7 @@ export default function ProductLaunchModernTech() {
         <>
           <Link
             to="/ai-development"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             AI development
           </Link>{' '}
@@ -24,7 +24,7 @@ export default function ProductLaunchModernTech() {
         <>
           <Link
             to="/machine-learning-development-services"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             Machine learning development services
           </Link>{' '}

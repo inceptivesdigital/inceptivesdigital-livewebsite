@@ -37,13 +37,13 @@ export default function EcommerceStatsBar() {
                 className="flex flex-col items-center text-center"
               >
                 <Icon
-                  className="w-10 h-10 text-[#00CE44] mb-3"
+                  className="w-11 h-11 text-[#00CE44] mb-3"
                   strokeWidth={1.8}
                 />
-                <div className="text-[#00CE44] text-[30px] sm:text-[36px] md:text-[40px] font-bold leading-none mb-2">
+                <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                   {item.value}
                 </div>
-                <div className="text-white text-[14px] sm:text-[15px] md:text-[16px] font-medium">
+                <div className="text-white text-[14px] sm:text-[15px] font-medium">
                   {item.label}
                 </div>
               </div>

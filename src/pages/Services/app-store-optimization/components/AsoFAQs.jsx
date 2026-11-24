@@ -45,7 +45,7 @@ const faqs = [
           Both. Early-stage products benefit from getting the store presence right before launch, often as part of a wider{' '}
           <Link
             to="/startup-product-development"
-            className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             startup product development
           </Link>{' '}
@@ -64,7 +64,7 @@ const faqs = [
           Book a session with the team, the same first step outlined in{' '}
           <Link
             to="/blog/how-to-choose-the-right-mobile-app-development-company"
-            className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             how to choose the right mobile app development company
           </Link>

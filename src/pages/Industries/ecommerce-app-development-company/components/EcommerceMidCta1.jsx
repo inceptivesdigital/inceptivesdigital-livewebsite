@@ -3,11 +3,16 @@ import FullWidthCtaSection from '../../../../components/FullWidthCtaSection'
 export default function EcommerceMidCta1() {
   return (
     <FullWidthCtaSection
-      heading={<>Join the Multi-Trillion-Dollar{' '} <span className="text-[#00CE44]">Ecommerce App Revolution</span></>}
-      description={<>Join the booming ecommerce app industry and scale your business with our expert ecommerce app development services, delivering results that drive growth and conversions.</>}
-      ctaText="Get Your Ecommerce App Consultation"
+      heading={
+        <>
+          Planning a Custom{' '}
+          <span className="text-[#00CE44]">eCommerce App</span> to Grow Your Retail Business?
+        </>
+      }
+      description="Get your application requirements reviewed by our eCommerce developers and identify the right engineering approach for your business model."
+      ctaText="Book a Free Consultation"
       img="/assets/ecommerce/ecommerces-section.png"
-      imgAlt="eCommerce Mobile App Revolution"
+      imgAlt="Planning a Custom eCommerce App"
     />
   )
 }

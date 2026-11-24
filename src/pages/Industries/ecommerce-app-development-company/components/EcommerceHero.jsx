@@ -26,16 +26,16 @@ export default function EcommerceHero() {
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="w-full lg:w-[54%] xl:w-[52%] flex flex-col items-start text-left lg:pb-24">
           <h1 className="text-[36px] sm:text-[46px] md:text-[52px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-white mb-4">
-            eCommerce App Development{' '}
-            <span className="text-[#00CE44]">Company</span>
+            eCommerce App{' '}
+            <span className="text-[#00CE44]">Development Services</span>
           </h1>
 
           <h2 className="text-[19px] sm:text-[22px] md:text-[24px] font-semibold leading-[1.35] text-white/95 mb-5 max-w-[660px]">
-            Ecommerce Infrastructure That Sells While You Sleep and Scales While You Grow
+            Build eCommerce Apps That Turn Shopping Into Sales
           </h2>
 
           <p className="text-white/80 text-[15px] sm:text-[16px] md:text-[17px] leading-[1.68] font-normal max-w-[650px] mb-8">
-            Custom ecommerce applications for retail businesses, D2C brands, and multi-vendor marketplaces. Dynamic product catalogs, AI-powered recommendations, secure payment gateways, inventory synchronisation, and analytics dashboards built for high-traffic production environments.
+            Inceptives Digital is an eCommerce app development company building custom iOS, Android, and cross-platform applications for retailers, D2C brands, and online marketplaces. Our developers engineer secure checkout flows, real-time inventory synchronization, and commerce integrations that support your business operations as order volumes grow.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 mb-9">
@@ -43,7 +43,7 @@ export default function EcommerceHero() {
             href="#contact"
             className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
           >
-            Start Your eCommerce App Project
+            Consult our eCommerce app experts
           </a>
               <a
                 href="#contact"

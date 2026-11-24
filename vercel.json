@@ -1,0 +1,32 @@
+{
+  "rewrites": [
+    {
+      "source": "/custom-mobile-application-development",
+      "destination": "/custom-mobile-application-development/index.html"
+    },
+    {
+      "source": "/custom-mobile-application-development/",
+      "destination": "/custom-mobile-application-development/index.html"
+    },
+    {
+      "source": "/reviews",
+      "destination": "/reviews/index.html"
+    },
+    {
+      "source": "/reviews/",
+      "destination": "/reviews/index.html"
+    },
+    {
+      "source": "/email-signature",
+      "destination": "/email-signature/index.html"
+    },
+    {
+      "source": "/email-signature/",
+      "destination": "/email-signature/index.html"
+    },
+    {
+      "source": "/((?!assets/|images/|fonts/|custom-mobile-application-development/|reviews/|email-signature/|sitemap\\.xml).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -9,10 +9,17 @@ export default function ReactNativeEmergingTech() {
         <>
           Our React Native engineers integrate{' '}
           <Link
-            to="/services/ai-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            to="/ai-app-development-services"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
-            AI and machine learning
+            AI
+          </Link>{' '}
+          and{' '}
+          <Link
+            to="/machine-learning-development-services"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            machine learning
           </Link>{' '}
           models using TensorFlow Lite and ML Kit to support intelligent mobile features and on-device processing where appropriate.
         </>
@@ -35,8 +42,8 @@ export default function ReactNativeEmergingTech() {
         <>
           For products that need{' '}
           <Link
-            to="/services/blockchain-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            to="/blockchain-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             blockchain development
           </Link>

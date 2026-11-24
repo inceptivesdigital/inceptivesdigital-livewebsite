@@ -19,7 +19,7 @@ export default function LondonTechStack() {
             The{' '}
             <Link
               to="/blog/mobile-app-tech-stack"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app tech stack
             </Link>{' '}

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function KmpCostSection() {
   const tiers = [
     {
@@ -6,7 +8,16 @@ export default function KmpCostSection() {
       bullets: [
         'Core business logic, networking, and data layer',
         'iOS and Android integration included',
-        'Suited to startups launching on both platforms',
+        <>
+          Suited to startups taking on{' '}
+          <Link
+            to="/mvp-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            MVP development
+          </Link>{' '}
+          on both platforms
+        </>,
         'Eight to fourteen weeks',
       ],
     },
@@ -36,27 +47,25 @@ export default function KmpCostSection() {
     <>
       <section className="py-16 sm:py-24 bg-[#191919]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-          {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+          {/* Section Header */}
           <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
-              The Cost of Getting{' '}
-              <span className="text-[#00CE44]">KMP Architecture Right</span>
+              How Much Do{' '}
+              <span className="text-[#00CE44]">Kotlin Multiplatform Development Services</span> Cost?
             </h2>
             <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-              Kotlin Multiplatform projects vary significantly in scope depending on the size of the shared module, the number of platform targets, whether we are building greenfield or migrating an existing codebase, and the complexity of platform-specific integrations. Like broader{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
+              Kotlin Multiplatform development services start at $25,000. Final{' '}
+              <Link
+                to="/blog/mobile-app-development-cost"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
               >
                 mobile app development cost
-              </a>
-              , KMP pricing is driven by architecture and scope. The tiers below represent transparent costs for every engagement type.
+              </Link>{' '}
+              depends on shared-module complexity, native integrations, and whether your project involves a new application or an existing codebase.
             </p>
           </div>
 
-          {/* 3 Equal Flat Dark Gray Lined Cards (Container d9fd21a -> #323232) */}
+          {/* 3 Equal Flat Dark Gray Lined Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch w-full mb-10">
             {tiers.map((tier) => (
               <div
@@ -77,8 +86,8 @@ export default function KmpCostSection() {
 
                 {/* 3. Bullet List */}
                 <ul className="space-y-3 text-sm sm:text-[15px] font-normal text-white/90 leading-relaxed">
-                  {tier.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2.5">
+                  {tier.bullets.map((b, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
                       <span className="text-[#00CE44] font-bold mt-0.5 shrink-0">✓</span>
                       <span>{b}</span>
                     </li>
@@ -92,31 +101,29 @@ export default function KmpCostSection() {
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed">
               The final{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/app-development-timeline"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
+              <Link
+                to="/blog/app-development-timeline"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
               >
                 app development timeline
-              </a>{' '}
+              </Link>{' '}
               depends on platform count, migration depth, and shared module complexity.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Bottom Estimate CTA Banner (Container 5467e61: full-width #232323 with kotlin-cta.png aligned bottom right) */}
+      {/* Bottom Estimate CTA Banner */}
       <section className="pt-12 sm:pt-14 pb-0 bg-[#232323] overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             <div className="lg:col-span-6 pb-8 lg:pb-12 text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-[1.2] mb-4 max-w-2xl">
-                Get a <span className="text-[#00CE44]">Custom Estimate</span> for Your KMP Project
+                Get a <span className="text-[#00CE44]">Development Quote</span> for Your Kotlin Multiplatform Project
               </h2>
 
               <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-7 max-w-2xl">
-                Share your product context, and the right engagement gets scoped around your architecture, timeline, and budget.
+                Have a budget and project requirements in mind? Share your product scope with our engineers for an estimate covering the intended platforms and development effort.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -124,7 +131,7 @@ export default function KmpCostSection() {
                   href="#contact"
                   className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
                 >
-                  Talk to Our Engineering Team
+                  Scope My KMP Cost
                 </a>
               </div>
             </div>
@@ -132,7 +139,7 @@ export default function KmpCostSection() {
             <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-end">
               <img
                 src="/assets/kmp-app/kotlin-cta.png"
-                alt="Get a Custom Estimate for Your KMP Project"
+                alt="Get a Development Quote for Your Kotlin Multiplatform Project"
                 className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[500px] h-auto object-contain block select-none"
                 loading="lazy"
               />

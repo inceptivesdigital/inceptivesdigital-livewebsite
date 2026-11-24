@@ -120,7 +120,7 @@ export default function PostLaunchProcess() {
           Cycle results feed directly back into the product roadmap, shifting priorities based on what the data confirmed or contradicted. The roadmap stays a working document throughout rather than a fixed plan built before launch, keeping the{' '}
           <Link
             to="/blog/app-development-timeline"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             app development timeline
           </Link>{' '}

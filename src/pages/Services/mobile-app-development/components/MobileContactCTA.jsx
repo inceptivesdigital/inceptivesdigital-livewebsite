@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { submitFormToSeo } from '../../../../utils/submitFormToSeo'
 
 export default function MobileContactCTA() {
+  const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -14,9 +17,28 @@ export default function MobileContactCTA() {
     marketingConsent: false,
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (sending) return
+    setSending(true)
+    await submitFormToSeo({
+      formName: 'Mobile App Development Contact Form',
+      subject: `Mobile App Development Inquiry - ${formData.firstName} ${formData.lastName}`.trim(),
+      replyTo: formData.email,
+      fields: {
+        'First Name': formData.firstName,
+        'Last Name': formData.lastName,
+        Email: formData.email,
+        Phone: formData.phone,
+        Subject: formData.subject || 'Mobile App Development',
+        Message: formData.message,
+        'Transactional SMS Consent': formData.transactionalConsent ? 'Yes' : 'No',
+        'Marketing SMS Consent': formData.marketingConsent ? 'Yes' : 'No',
+      },
+    })
+    setSending(false)
     setSubmitted(true)
+    navigate('/thank-you')
   }
 
   return (
@@ -166,11 +188,11 @@ export default function MobileContactCTA() {
 
                 {/* Privacy Policy | Terms of Services */}
                 <div className="text-center pt-1 text-white text-xs font-medium space-x-2">
-                  <Link to="/privacy-policy" className="hover:text-[#00CE44] transition-colors">
+                  <Link to="/privacy-policy" className="hover:text-[#00CE44] transition-colors underline underline-offset-4">
                     Privacy Policy
                   </Link>
                   <span>|</span>
-                  <Link to="/terms-and-condition" className="hover:text-[#00CE44] transition-colors">
+                  <Link to="/terms-and-condition" className="hover:text-[#00CE44] transition-colors underline underline-offset-4">
                     Terms of Services
                   </Link>
                 </div>

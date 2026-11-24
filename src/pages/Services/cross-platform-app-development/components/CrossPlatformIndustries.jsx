@@ -71,11 +71,11 @@ export default function CrossPlatformIndustries() {
         </div>
 
         {/* 9 Industry Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch auto-rows-fr">
           {industries.map((ind) => (
             <div
               key={ind.name}
-              className="p-7 sm:p-8 rounded-[20px] bg-[#15161a] border border-white/5 hover:border-[#00CE44]/60 transition-all duration-300 flex flex-col justify-start text-left group"
+              className="p-7 sm:p-8 rounded-[20px] bg-[#15161a] border border-white/5 hover:border-[#00CE44]/60 transition-all duration-300 flex flex-col justify-start text-left group h-full"
             >
               <div className="mb-5 shrink-0 flex items-center">
                 <img

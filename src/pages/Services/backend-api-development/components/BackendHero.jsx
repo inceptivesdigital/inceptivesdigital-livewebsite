@@ -40,7 +40,7 @@ export default function BackendHero() {
               The backend determines what a product can become. Database structure, API design, and service boundaries set the ceiling on speed, scale, and integration long before a user ever sees a screen. Inceptives Digital, a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 mobile app development company
               </Link>

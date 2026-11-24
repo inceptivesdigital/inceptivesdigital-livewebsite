@@ -7,7 +7,7 @@ export default function ProductModelsSection() {
         Start with focused{' '}
         <a
           href="https://inceptivesdigital.com/mvp-development"
-          className="underline text-[#00CE44] hover:text-white transition-colors"
+          className="underline text-[#00CE44] hover:opacity-80 transition-colors"
         >
           MVP development
         </a>{' '}

@@ -1,61 +1,63 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const platforms = [
   {
     name: 'Shopify',
-    badgeText: 'shopify',
-    badgeColor: '#95BF47',
+    logo: '/assets/ecommerce/platforms/shopify.svg',
     description:
-      'Scalable, modifiable digital stores with user-centric interfaces and a flexible theme system. Seamless integrations and secure payment options built for businesses that need rapid, reliable ecommerce deployment without sacrificing customisation.',
+      'Extend Shopify storefronts into mobile shopping apps through supported commerce APIs, preserving product data and existing order operations.',
   },
   {
     name: 'WooCommerce',
-    badgeText: 'WooCommerce',
-    badgeColor: '#96588A',
+    logo: '/assets/ecommerce/platforms/woocommerce.svg',
     description:
-      'WordPress-based ecommerce stores with extensive plugin ecosystems, responsive design support, and mobile app compatibility. Built for businesses that need flexible, feature-rich commerce functionality within an existing WordPress infrastructure.',
+      'Connect WordPress-based stores with custom mobile interfaces while maintaining catalog synchronization and compatible checkout workflows.',
   },
   {
     name: 'Adobe Commerce (Magento)',
-    badgeText: 'Adobe Commerce',
-    badgeColor: '#FA0F00',
+    logo: '/assets/ecommerce/platforms/magento.svg',
     description:
-      'Enterprise-grade online stores with advanced customisation, complex product catalog management, and multi-store operations. Built for businesses with sophisticated commerce requirements that outgrow standard platform capabilities.',
+      'Support complex product catalogs, customer-specific pricing, and multi-store operations through enterprise commerce integrations.',
   },
   {
     name: 'BigCommerce',
-    badgeText: 'BIGCOMMERCE',
-    badgeColor: '#121118',
+    logo: '/assets/ecommerce/platforms/bigcommerce.svg',
     description:
-      'Flexible online stores with built-in SEO optimisation, multi-channel selling, and efficient system integrations. Built for businesses expanding customer reach across multiple devices and sales channels without platform limitations.',
+      'Build mobile storefronts connected to BigCommerce product catalogs and commerce services through available platform APIs.',
   },
   {
     name: 'Salesforce Commerce Cloud',
-    badgeText: 'salesforce commerce cloud',
-    badgeColor: '#00A1E0',
+    logo: '/assets/ecommerce/platforms/salesforce.svg',
     description:
-      'AI-powered personalised shopping experiences with advanced customisation and enterprise-grade scalability. Built for businesses that need intelligent commerce capabilities integrated with existing Salesforce infrastructure.',
+      'Integrate custom commerce experiences with existing Salesforce commerce infrastructure and enterprise customer workflows.',
   },
   {
     name: 'Shopware',
-    badgeText: 'shopware',
-    badgeColor: '#189EFF',
+    logo: '/assets/ecommerce/platforms/shopware.svg',
     description:
-      'Customisable and expandable ecommerce solutions with flexible system design and sophisticated personalisation capabilities. Built for businesses that need engaging, tailored shopping experiences beyond what standard platforms offer.',
+      "Develop connected shopping applications around Shopware's API-driven commerce capabilities and customizable product management systems.",
   },
 ]
 
 export default function EcommercePlatforms() {
   return (
-    <section className="w-full bg-[#111111] text-white py-16 md:py-24">
+    <section className="w-full bg-[#000000] text-white py-16 md:py-24">
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         {/* Heading */}
         <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            <span className="text-[#00CE44]">Popular Platforms We Use</span> in Our Ecommerce App Development Services
+            <span className="text-[#00CE44]">Popular eCommerce Platforms</span> We Integrate With Mobile Applications
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Our ecommerce app development services leverage robust platforms to provide customized features that align with your business requirements and objectives.
+            We integrate custom eCommerce mobile applications with established commerce platforms, extending your existing storefront capabilities to iOS and Android. Our developers handle{' '}
+            <Link
+              to="/backend-api-development"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              backend API
+            </Link>{' '}
+            connectivity and data synchronization around your current business infrastructure.
           </p>
         </div>
 
@@ -66,13 +68,13 @@ export default function EcommercePlatforms() {
               key={platform.name}
               className="bg-[#1b1c21] border border-white/10 rounded-[18px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200 hover:border-[#00CE44]/50"
             >
-              <div className="inline-flex items-center justify-center bg-white rounded-xl px-4 py-2.5 mb-6 min-h-[48px]">
-                <span
-                  className="text-[17px] sm:text-[19px] font-extrabold tracking-tight"
-                  style={{ color: platform.badgeColor }}
-                >
-                  {platform.badgeText}
-                </span>
+              <div className="h-12 w-full max-w-[200px] p-0 bg-transparent border-0 mb-5 flex items-center justify-start shrink-0">
+                <img
+                  src={platform.logo}
+                  alt={`${platform.name} Logo`}
+                  className="h-11 w-auto max-w-full object-contain object-left select-none p-0 border-0 bg-transparent"
+                  loading="lazy"
+                />
               </div>
 
               <h3 className="text-[#00CE44] text-[19px] sm:text-[21px] font-bold leading-snug mb-3">

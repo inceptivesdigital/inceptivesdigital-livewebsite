@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Testimonials from '../../../../components/Testimonials'
 
 export default function EcommerceTestimonials() {
@@ -5,11 +6,22 @@ export default function EcommerceTestimonials() {
     <Testimonials
       heading={
         <>
-          What Our Clients Say{' '}
-          <span className="text-[#00CE44]">About Building With Us</span>
+          What Other Clients{' '}
+          <span className="text-[#00CE44]">Have to Say</span>
         </>
       }
-      subtitle="Every successful ecommerce product starts with alignment between the people building it and the people who need it. These stories reflect the collaboration, trust, and product decisions behind our work."
+      subtitle={
+        <>
+          Read{' '}
+          <Link
+            to="/testimonial"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+          >
+            client testimonials
+          </Link>{' '}
+          from across different industries describing their experience working with Inceptives Digital, from technical collaboration to project delivery.
+        </>
+      }
     />
   )
 }

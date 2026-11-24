@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import StandardTechStack from '../../../../components/StandardTechStack'
 
 const categories = [
@@ -67,10 +68,21 @@ export default function EcommerceTechStack() {
     <StandardTechStack
       heading={
         <>
-          <span className="text-[#00CE44]">Core Technologies</span> Powering Our Ecommerce App Development Services
+          <span className="text-[#00CE44]">Technologies Powering</span> Our Ecommerce App Development Services
         </>
       }
-      subtitle="Being one of the best ecommerce app development companies, we use cutting-edge technologies combined with extensive ecommerce expertise to deliver state-of-the-art e-commerce app development services."
+      subtitle={
+        <>
+          Being one of the best ecommerce app development companies, we build on a modern{' '}
+          <Link
+            to="/blog/mobile-app-tech-stack"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+          >
+            mobile app tech stack
+          </Link>{' '}
+          combined with extensive ecommerce expertise to deliver state-of-the-art e-commerce app development services.
+        </>
+      }
       categories={categories}
     />
   )

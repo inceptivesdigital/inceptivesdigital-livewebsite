@@ -75,7 +75,7 @@ export default function NYServicesGrid() {
       desc: (
         <>
           Premium iOS experiences suit businesses where trust, retention, and customer lifetime value matter. For{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ios-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             iOS app development
           </Link>{' '}
           in New York, Swift and SwiftUI support polished iPhone applications with Apple ecosystem integration, secure authentication, and the performance expected of financial, healthcare, and subscription products.
@@ -89,7 +89,7 @@ export default function NYServicesGrid() {
       desc: (
         <>
           Native Android applications designed for scale across devices, customer segments, and operating environments. For{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/android-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             Android app development
           </Link>{' '}
           in NYC, Kotlin and Jetpack Compose support broader device coverage while maintaining consistent performance and usability.
@@ -103,7 +103,7 @@ export default function NYServicesGrid() {
       desc: (
         <>
           When speed to market matters as much as platform reach,{' '}
-          <Link to="/cross-platform-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/cross-platform-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             cross-platform app development
           </Link>{' '}
           in New York offers businesses a practical way to reach iOS and Android users. A shared codebase can reduce duplicate engineering work without sacrificing essential platform functionality.
@@ -117,7 +117,7 @@ export default function NYServicesGrid() {
       desc: (
         <>
           For teams managing frequent releases across iOS and Android, React Native offers a practical development approach.{' '}
-          <Link to="/react-native-app-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/react-native-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             React Native app development
           </Link>{' '}
           in NYC supports shared components, faster product updates, and native integrations where platform-specific functionality matters.
@@ -143,7 +143,7 @@ export default function NYServicesGrid() {
       desc: (
         <>
           Behind every reliable mobile application sits an infrastructure that handles data, authentication, and business operations. Our mobile{' '}
-          <Link to="/backend-api-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/backend-api-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             backend api development
           </Link>{' '}
           services connect payment gateways, CRM platforms, enterprise systems, and third-party APIs while keeping the architecture scalable and maintainable.
@@ -157,11 +157,11 @@ export default function NYServicesGrid() {
       desc: (
         <>
           Intelligent search, personalized recommendations, and automated workflows are changing how customers interact with digital products.{' '}
-          <Link to="/ai-app-development-services" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ai-app-development-services" className="text-[#00CE44] font-medium underline underline-offset-4">
             AI app development
           </Link>{' '}
           in New York requires a clear use case, whether that means integrating AI into an existing application or building an{' '}
-          <Link to="/ai-mvp-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ai-mvp-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             AI MVP
           </Link>{' '}
           to validate new functionality before a broader launch.

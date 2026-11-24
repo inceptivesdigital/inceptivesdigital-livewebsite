@@ -123,7 +123,7 @@ export default function ChatbotTypesGrid() {
             Each one is built through{' '}
             <Link
               to="/custom-software-development"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               custom software development
             </Link>{' '}

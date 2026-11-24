@@ -20,12 +20,12 @@ export default function StartupStatsBar() {
             >
               <SolidIcon
                 name={item.icon}
-                className="w-10 h-10 text-[#00CE44] mb-3"
+                className="w-11 h-11 text-[#00CE44] mb-3"
               />
-              <div className="text-[#00CE44] text-[26px] sm:text-[34px] md:text-[38px] font-bold leading-none mb-2">
+              <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                 {item.value}
               </div>
-              <div className="text-white text-[14px] sm:text-[15px] md:text-[16px] font-medium">
+              <div className="text-white text-[14px] sm:text-[15px] font-medium">
                 {item.label}
               </div>
             </div>

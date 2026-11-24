@@ -35,7 +35,7 @@ export default function GenerativeDifference() {
               href="https://inceptivesdigital.com/blog/will-ai-really-replace-app-developers"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               AI replacing developers
             </a>{' '}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   BrainCircuit,
   Blocks,
@@ -6,51 +7,64 @@ import {
   BarChart3,
   Cloud,
   View,
-  Orbit,
 } from 'lucide-react'
 
 const advancedFeatures = [
   {
     icon: BrainCircuit,
-    title: 'AI-Powered Personalisation',
-    description:
-      'Personalised product recommendations, dynamic pricing, predictive analytics, and behaviour-based marketing built on machine learning models. Algorithms that analyse purchase history and browsing behaviour to increase conversion rates, average order value, and customer lifetime value.',
+    title: 'AI-Powered Shopping Personalization',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/ai-app-development-services"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          AI app development services
+        </Link>{' '}
+        include recommendation engines that analyze customer behavior to deliver relevant product suggestions, improve product discovery, and create more personalized shopping experiences.
+      </>
+    ),
   },
   {
     icon: Blocks,
-    title: 'Blockchain for Secure Commerce',
-    description:
-      'Transparent transactions, decentralised order tracking, and automated vendor settlements through smart contracts. Data integrity, fraud prevention, and trust are built into multi-vendor platforms where financial accountability across multiple parties is non-negotiable.',
+    title: 'Blockchain for Commerce Transactions',
+    description: (
+      <>
+        For marketplaces requiring decentralized transaction records, we provide{' '}
+        <Link
+          to="/blockchain-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          blockchain development
+        </Link>{' '}
+        with smart contracts to support transparent settlements and verifiable transaction histories.
+      </>
+    ),
   },
   {
     icon: Cpu,
-    title: 'IoT for Smart Retail',
+    title: 'IoT-Enabled Retail Operations',
     description:
-      'IoT devices connected for inventory tracking, shipment monitoring, and physical-to-digital store integration. Supply chain visibility, automated stock replenishment, and operational efficiency are built for retailers managing both online and physical commerce simultaneously.',
+      'Connected IoT systems provide retailers with real-time inventory visibility and automated stock updates across warehouses and physical stores.',
   },
   {
     icon: BarChart3,
     title: 'Business Intelligence and Analytics',
     description:
-      'Real-time sales dashboards, customer behaviour analysis, and inventory performance reporting built for retailers making data-driven merchandising and marketing decisions. Insights that turn raw commerce data into actionable growth strategies.',
+      'We integrate analytics solutions that turn sales activity and customer behavior into actionable insights for inventory planning and merchandising decisions.',
   },
   {
     icon: Cloud,
-    title: 'Scalable Cloud Architecture',
+    title: 'Scalable Cloud Infrastructure',
     description:
-      'AWS, Azure, and Google Cloud infrastructure with auto-scaling capabilities built for peak traffic events, product launches, seasonal sales, and promotional campaigns, without performance degradation or downtime.',
+      'Our cloud engineers design infrastructure with automated scaling and performance monitoring to support seasonal traffic spikes and growing transaction volumes.',
   },
   {
     icon: View,
-    title: 'Augmented Reality Shopping',
+    title: 'Augmented Reality Shopping Experiences',
     description:
-      'Product visualisation in real environments is built for categories where seeing the product in context reduces return rates and increases purchase confidence. AR experiences that close the gap between online browsing and in-store conviction.',
-  },
-  {
-    icon: Orbit,
-    title: 'Metaverse-Ready Commerce',
-    description:
-      'Virtual showrooms, 3D product interactions, and immersive shopping experiences built for brands preparing for the next generation of digital commerce. Built for businesses that want to establish a presence before the market matures.',
+      'AR shopping features allow customers to visualize products in their surroundings before purchasing, particularly for furniture and home décor applications.',
   },
 ]
 
@@ -69,22 +83,22 @@ function CornerStar({ positionClass }) {
 
 export default function EcommerceAdvancedFeatures() {
   return (
-    <section className="w-full bg-[#000000] text-white py-16 md:py-24">
+    <section className="w-full bg-[#111111] text-white py-16 md:py-24">
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
             Revolutionizing Online Retail with{' '}
-            <span className="text-[#00CE44]">Advanced Features in Ecommerce App Development</span>
+            <span className="text-[#00CE44]">Advanced Technologies</span> in Our Ecommerce App Development Services
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Our ecommerce app development services use modern technologies to create robust applications with multiple features that increase conversion rates and improve user satisfaction while making online business operations more efficient.
+            Our ecommerce app development services use modern technologies to create robust applications with multiple features that improve user satisfaction and increase conversion rates for businesses.
           </p>
         </div>
 
-        {/* First 6 Items in 3x2 Bordered Grid with Corner Concave Stars */}
+        {/* 6 Items in 3x2 Bordered Grid with Corner Concave Stars */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-white/15">
-          {advancedFeatures.slice(0, 6).map((item, idx) => {
+          {advancedFeatures.map((item, idx) => {
             const Icon = item.icon
             const isTopRow = idx < 3
             const isNotRightCol = idx % 3 !== 2
@@ -116,28 +130,6 @@ export default function EcommerceAdvancedFeatures() {
             )
           })}
         </div>
-
-        {/* 7th Featured Item (Metaverse-Ready Commerce) */}
-        {(() => {
-          const last = advancedFeatures[6]
-          const LastIcon = last.icon
-          return (
-            <div className="border-b border-white/15 p-7 sm:p-9 text-left flex flex-col md:flex-row md:items-start gap-6">
-              <LastIcon
-                className="w-10 h-10 text-[#00CE44] shrink-0"
-                strokeWidth={1.8}
-              />
-              <div>
-                <h3 className="text-[#00CE44] text-[19px] sm:text-[21px] font-bold leading-snug mb-2.5">
-                  {last.title}
-                </h3>
-                <p className="text-white/80 text-[14px] sm:text-[15px] leading-[1.68] font-normal max-w-4xl">
-                  {last.description}
-                </p>
-              </div>
-            </div>
-          )
-        })()}
       </div>
     </section>
   )

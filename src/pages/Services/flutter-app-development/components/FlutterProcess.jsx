@@ -45,11 +45,8 @@ export default function FlutterProcess() {
     if (tabsRef.current && e?.currentTarget) {
       const container = tabsRef.current
       const target = e.currentTarget
-      const targetLeft = target.offsetLeft
-      const targetWidth = target.offsetWidth
-      const containerWidth = container.offsetWidth
       container.scrollTo({
-        left: targetLeft - containerWidth / 2 + targetWidth / 2,
+        left: target.offsetLeft - container.offsetWidth / 2 + target.offsetWidth / 2,
         behavior: 'smooth',
       })
     }
@@ -57,88 +54,59 @@ export default function FlutterProcess() {
 
   const steps = [
     {
-      num: '01.',
-      tabTitle: 'Discovery',
-      tabIcon: '/assets/process/tab-1.png',
-      cardTitle: 'Discovery and Strategy',
-      cardDesc: (
-        <>
-          Business goals, user requirements, technical constraints, and competitive context are mapped out. Features are prioritized, the tech stack is confirmed, and the scope is locked before any design work begins, typically against a realistic{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-development-timeline"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
-          >
-            app development timeline
-          </a>{' '}
-          agreed with the client upfront.
-        </>
-      ),
+      num: '01',
+      tabTitle: 'Discovery and Strategy',
+      cardTitle: '1. Discovery and Strategy',
+      cardDesc:
+        "We first establish what your product needs to achieve and where Flutter fits the requirements. Our consultants examine platform constraints and integration feasibility before defining the development scope. You'll have a clear roadmap with delivery priorities and realistic timelines.",
     },
     {
-      num: '02.',
+      num: '02',
       tabTitle: 'UI/UX Design',
-      tabIcon: '/assets/process/tab-2.png',
-      cardTitle: 'UI/UX Design',
+      cardTitle: '2. UI/UX Design',
       cardDesc:
-        'High-fidelity prototypes built in Figma show exactly how the product will look and behave across every screen size. Design is reviewed, refined, and signed off on before development starts.',
+        'Product requirements take shape through interactive Figma prototypes, giving clients an early view of the intended experience. Our designers refine screen behavior for supported devices and establish the visual system that guides Flutter widget development.',
     },
     {
-      num: '03.',
-      tabTitle: 'Development',
-      tabIcon: '/assets/process/tab-3.png',
-      cardTitle: 'Flutter Development',
+      num: '03',
+      tabTitle: 'Flutter Development',
+      cardTitle: '3. Flutter Development',
       cardDesc:
-        "Production-grade Dart code, modular architecture, and backend integrations built to the product's actual requirements. Every build is structured so that future development does not require revisiting foundational decisions.",
+        'Using the approved interface system, our Flutter engineers develop application functionality in Dart. Reusable widgets support consistent screen behavior, while state management handles interactions across the product. Clients review functional builds as development progresses.',
     },
     {
-      num: '04.',
-      tabTitle: 'QA & Testing',
-      tabIcon: '/assets/process/tab-4.png',
-      cardTitle: 'Quality Assurance and Deployment',
+      num: '04',
+      tabTitle: 'QA & Deployment',
+      cardTitle: '4. Quality Assurance and Deployment',
       cardDesc:
-        'Every feature is tested across devices and real-world conditions before release. The full deployment pipeline across iOS, Android, and web is handled end-to-end, including store submissions and post-launch monitoring.',
+        "Testing covers actual device behavior alongside Flutter's rendering performance. Our QA engineers run widget and integration tests, then check supported screen sizes and OS versions. Once the application meets release criteria, the team prepares production builds for deployment.",
     },
     {
-      num: '05.',
+      num: '05',
       tabTitle: 'Ongoing Support',
-      tabIcon: '/assets/process/tab-5.png',
-      cardTitle: 'Ongoing Support',
-      cardDesc: (
-        <>
-          Bugs, updates, new features, and platform changes are handled as a continuous engagement, closer to a predictable{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-maintenance-cost"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
-          >
-            mobile app maintenance cost
-          </a>{' '}
-          than a surprise bill. The product stays current, stable, and competitive as the market and the business evolve.
-        </>
-      ),
+      cardTitle: '5. Ongoing Support',
+      cardDesc:
+        'Flutter SDK releases and platform updates can affect existing application behavior. Through ongoing maintenance, our engineers review dependency compatibility and resolve production issues. Future enhancements follow the product roadmap and agreed support scope.',
     },
   ]
 
   const current = steps[activeTab]
 
   return (
-    <section id="process" className="py-20 lg:py-28 bg-[#0c0d10] relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Top Heading: H2, 40px bold, text-center */}
-        <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight max-w-4xl mx-auto">
-          How Inceptives Digital Takes a{' '}
-          <span className="text-[#00CE44]">Flutter App From Idea to Launch</span>
-        </h2>
+    <section id="process" className="py-20 lg:py-24 bg-[#000000] text-white relative">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
+        {/* Section Header */}
+        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.16] mb-4">
+            How We Approach{' '}
+            <span className="text-[#00CE44]">Flutter App Development From Strategy to Launch</span>
+          </h2>
+          <p className="text-white/85 text-sm sm:text-base leading-relaxed font-normal">
+            Each Flutter project brings different interface requirements and technical considerations. Our development process accounts for these early, giving businesses a practical route from product planning to a production-ready application.
+          </p>
+        </div>
 
-        {/* Bottom Text: 16px font-size, 400 font-weight, text-center */}
-        <p className="mt-3 sm:mt-4 text-white/90 text-[16px] font-normal text-center max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
-          There are multiple benefits of Flutter app development, but they are only useful when the process behind it is structured to deliver them. Here is how every product gets built.
-        </p>
-
-        {/* Interactive Step Navigation Tabs (5 Steps): Exact Clone of Homepage / MobileApp ProcessSection */}
+        {/* Single-Line Pill Tabs Bar */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -146,83 +114,41 @@ export default function FlutterProcess() {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className="w-full max-w-full flex lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-8 overflow-x-auto lg:overflow-visible no-scrollbar mb-10 sm:mb-14 pt-4 pb-4 lg:pt-3 lg:pb-0 scroll-smooth cursor-grab active:cursor-grabbing select-none"
+          className="w-full max-w-full flex lg:grid lg:grid-cols-5 items-center gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar pb-4 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
-          {steps.map((st, idx) => {
+          {steps.map((step, idx) => {
             const isActive = activeTab === idx
             return (
               <button
-                key={st.tabTitle}
+                key={step.num}
                 type="button"
                 onClick={(e) => handleTabClick(idx, e)}
-                className="shrink-0 min-w-[125px] sm:min-w-[140px] lg:min-w-0 group flex flex-col items-center text-center focus:outline-none cursor-pointer transition-all duration-300 pt-1"
+                className={`rounded-full shrink-0 lg:shrink min-w-[180px] lg:min-w-0 lg:w-full flex items-center justify-start gap-3 py-1.5 pl-1.5 pr-5 transition-all duration-200 cursor-pointer border-0 select-none ${
+                  isActive
+                    ? 'bg-[#00CE44] text-white font-semibold'
+                    : 'bg-[#2c2c2c] hover:bg-[#383838] text-white/90 font-medium'
+                }`}
               >
-                {/* Circular Icon with Number Badge (No shadow on icon) */}
-                <div
-                  className={`w-14 h-14 sm:w-16 sm:h-16 relative flex items-center justify-center rounded-full mb-3.5 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-[#00CE44] scale-105'
-                      : 'bg-[#202125] hover:bg-[#282a30] hover:scale-105'
-                  }`}
-                >
-                  <img
-                    src={st.tabIcon}
-                    alt={st.tabTitle}
-                    className={`w-7 h-7 sm:w-8 sm:h-8 object-contain transition-all duration-300 ${
-                      isActive ? 'brightness-0' : ''
-                    }`}
-                  />
-
-                  {/* Step Number Badge with 50px border-radius */}
-                  <span
-                    className={`absolute -top-1 -right-3.5 sm:-right-4.5 z-10 text-[11px] sm:text-[12px] font-mono font-medium px-2 sm:px-2.5 py-0.5 rounded-[50px] border whitespace-nowrap transition-colors ${
-                      isActive
-                        ? 'bg-black text-[#00CE44] border-[#00CE44]'
-                        : 'bg-black text-[#00CE44] border-[#00CE44]/60 group-hover:border-[#00CE44]'
-                    }`}
-                  >
-                    {st.num}
-                  </span>
-                </div>
-
-                {/* Tab Label */}
-                <span
-                  className={`text-[14px] sm:text-[15px] font-normal transition-colors duration-200 whitespace-nowrap ${
-                    isActive
-                      ? 'text-white'
-                      : 'text-slate-400 group-hover:text-slate-200'
-                  }`}
-                >
-                  {st.tabTitle}
+                <span className="w-8 h-8 rounded-full bg-white text-black font-extrabold text-xs sm:text-sm flex items-center justify-center shrink-0">
+                  {step.num}
+                </span>
+                <span className="text-sm sm:text-[15px] whitespace-nowrap lg:truncate">
+                  {step.tabTitle}
                 </span>
               </button>
             )
           })}
         </div>
 
-        {/* Content Card Box: Exact Clone of Homepage ProcessSection.jsx (Zero Borders, Zero Shadows) */}
-        <div className="bg-[#1b1c20] border-0 rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 lg:p-11 shadow-none transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 lg:gap-10">
-            {/* Left: Green Circle with exact matching Tab Icon (Zero shadow, black icon) */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-[#00CE44] flex items-center justify-center shrink-0 shadow-none">
-              <img
-                src={current.tabIcon}
-                alt={current.cardTitle}
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain brightness-0"
-              />
-            </div>
-
-            {/* Right: Heading H3 (25px) + Text P (16px) */}
-            <div className="text-left flex-1">
-              <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] leading-tight mb-2.5 sm:mb-3">
-                {current.cardTitle}
-              </h3>
-              <p className="text-[15px] sm:text-[16px] text-slate-300 leading-relaxed font-normal max-w-4xl">
-                {current.cardDesc}
-              </p>
-            </div>
-          </div>
+        {/* Single Wide Dark Grey Content Panel */}
+        <div className="bg-[#333333] rounded-[14px] px-7 sm:px-10 lg:px-12 py-10 sm:py-12 min-h-[210px] flex flex-col justify-center text-left border-0">
+          <h3 className="text-2xl sm:text-[26px] font-bold text-[#00CE44] tracking-tight mb-3">
+            {current.cardTitle}
+          </h3>
+          <p className="text-white/90 text-sm sm:text-base leading-relaxed font-normal max-w-5xl">
+            {current.cardDesc}
+          </p>
         </div>
       </div>
     </section>

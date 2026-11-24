@@ -47,7 +47,7 @@ export default function TorontoWhyChooseUs() {
           We do not start with a framework. As a custom mobile app development company in Toronto, we start every engagement with the product goal rather than the technology stack. Whether the right approach is native development,{' '}
           <Link
             to="/blog/native-vs-hybrid-vs-cross-platform-app-development"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             Flutter, React Native, or a custom architecture
           </Link>

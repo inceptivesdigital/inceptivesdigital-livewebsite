@@ -171,7 +171,7 @@ export default function AustinServicesGrid() {
                   <p className="text-white/75 text-sm sm:text-[15px] leading-relaxed">
                     {s.descBefore}
                     {s.link ? (
-                      <Link to={s.link} className="underline text-[#00CE44] hover:text-white transition-colors">
+                      <Link to={s.link} className="underline text-[#00CE44] hover:opacity-80 transition-colors">
                         {s.linkText}
                       </Link>
                     ) : (

@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import postLaunchSchema from '../../../schemas/post-launch-analytics-iteration.json'
 import PostLaunchHero from './components/PostLaunchHero'
 import PostLaunchTrustedLogos from './components/PostLaunchTrustedLogos'
 import PostLaunchNecessity from './components/PostLaunchNecessity'
@@ -17,6 +19,7 @@ import PostLaunchCostSection from './components/PostLaunchCostSection'
 import PostLaunchFAQs from './components/PostLaunchFAQs'
 
 export default function PostLaunchAnalyticsIterationPage() {
+  useJsonLdSchema(postLaunchSchema, 'schema-post-launch-analytics-iteration')
   useEffect(() => {
     const seoTitle = 'Post-Launch Analytics & Iteration Services — Inceptives Digital'
     const seoDesc =

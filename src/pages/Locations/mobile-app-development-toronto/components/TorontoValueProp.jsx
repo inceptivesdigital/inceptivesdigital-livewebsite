@@ -59,21 +59,21 @@ export default function TorontoValueProp() {
               Toronto stands as one of North America&apos;s fastest-growing technology hubs, driving innovation across financial services, healthcare,{' '}
               <Link
                 to="/ai-development"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 AI
               </Link>
               , SaaS, and{' '}
               <Link
                 to="/custom-software-development"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 enterprise software
               </Link>
               . Inceptives Digital partners with ambitious businesses navigating different customer expectations, legacy systems, and operational demands. Projects range from early-stage{' '}
               <Link
                 to="/digital-product-development"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 digital products
               </Link>{' '}

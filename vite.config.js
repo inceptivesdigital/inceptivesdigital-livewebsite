@@ -183,12 +183,39 @@ function applyRouteSeoToHtml(html, seo) {
     )
 }
 
+function createPublicSubdirMiddleware(rootDir) {
+  return (req, res, next) => {
+    if (!req.url || (req.method !== 'GET' && req.method !== 'HEAD')) {
+      return next()
+    }
+    const [pathname, query] = req.url.split('?')
+    const cleanPath = pathname.replace(/^\/+|\/+$/g, '')
+    if (!cleanPath || cleanPath.includes('.')) {
+      return next()
+    }
+    const candidateHtml = path.join(rootDir, cleanPath, 'index.html')
+    if (fs.existsSync(candidateHtml) && fs.statSync(candidateHtml).isFile()) {
+      req.url = `/${cleanPath}/index.html${query ? `?${query}` : ''}`
+    }
+    next()
+  }
+}
+
 function routeSeoPlugin() {
   return {
     name: 'route-seo-html-plugin',
+    configureServer(server) {
+      const publicDir = path.resolve(process.cwd(), 'public')
+      server.middlewares.use(createPublicSubdirMiddleware(publicDir))
+    },
+    configurePreviewServer(server) {
+      const distDir = path.resolve(process.cwd(), 'dist')
+      server.middlewares.use(createPublicSubdirMiddleware(distDir))
+    },
     transformIndexHtml: {
       order: 'pre',
       handler(html, ctx) {
+        if (!html.includes('id="root"')) return html
         const rawUrl = ctx?.originalUrl || ctx?.path || '/'
         const cleanPath = rawUrl.split('?')[0].replace(/\/+$/, '') || '/'
         const seo = SEO_ROUTES[cleanPath]
@@ -202,9 +229,11 @@ function routeSeoPlugin() {
       const baseHtml = fs.readFileSync(baseHtmlPath, 'utf-8')
       for (const [routePath, seo] of Object.entries(SEO_ROUTES)) {
         const routeDir = path.join(distDir, routePath.replace(/^\/+/, ''))
+        const targetIndex = path.join(routeDir, 'index.html')
+        if (fs.existsSync(targetIndex)) continue
         fs.mkdirSync(routeDir, { recursive: true })
         fs.writeFileSync(
-          path.join(routeDir, 'index.html'),
+          targetIndex,
           applyRouteSeoToHtml(baseHtml, seo),
           'utf-8'
         )
@@ -220,4 +249,14 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'icons-vendor': ['lucide-react'],
+        },
+      },
+    },
+  },
 })

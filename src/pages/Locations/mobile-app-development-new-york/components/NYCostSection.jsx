@@ -13,7 +13,7 @@ export default function NYCostSection() {
           For New York startups pursuing{' '}
           <Link
             to="/mvp-development"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             MVP development
           </Link>{' '}
@@ -57,7 +57,7 @@ export default function NYCostSection() {
           For New York enterprises modernizing legacy applications through{' '}
           <Link
             to="/product-rescue-scaling"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             product rescue scaling
           </Link>
@@ -103,7 +103,7 @@ export default function NYCostSection() {
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
             <Link
               to="/blog/mobile-app-development-cost"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               Mobile app development pricing
             </Link>{' '}
@@ -193,7 +193,7 @@ export default function NYCostSection() {
               The right development expertise matters more than the hourly rate. Compare technical experience, delivery expectations, and total project costs before you{' '}
               <Link
                 to="/blog/how-to-choose-the-right-mobile-app-development-company"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 hire a company
               </Link>

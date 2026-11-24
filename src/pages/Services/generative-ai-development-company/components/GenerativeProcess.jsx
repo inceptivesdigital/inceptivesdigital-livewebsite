@@ -10,11 +10,11 @@ const steps = [
     desc: (
       <>
         Following the{' '}
-        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           AI MVP development guide
         </a>
         , we map business objectives, identify workflows where generative AI creates leverage, define user roles, and review data sources before development begins. This{' '}
-        <a href="https://inceptivesdigital.com/product-strategy-consulting" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/product-strategy-consulting" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           product strategy consulting
         </a>{' '}
         stage creates a clear build plan before a line of code is written.
@@ -57,7 +57,7 @@ const steps = [
     desc: (
       <>
         Prompt performance, retrieval accuracy, and operating costs are tracked post-launch. Models, datasets, and workflows are updated as requirements change.{' '}
-        <a href="https://inceptivesdigital.com/product-rescue-scaling" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/product-rescue-scaling" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Product scaling
         </a>{' '}
         keeps infrastructure aligned as usage and generative AI workloads grow.

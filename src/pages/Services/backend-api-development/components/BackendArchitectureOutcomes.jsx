@@ -19,7 +19,7 @@ export default function BackendArchitectureOutcomes() {
                 href="https://inceptivesdigital.com/custom-software-development"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-[#00CE44] hover:text-white transition-colors"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 custom software development
               </a>{' '}

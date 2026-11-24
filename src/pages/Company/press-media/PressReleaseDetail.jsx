@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Calendar } from 'lucide-react'
+import { getCachedPost, setCachedPost } from '../../../utils/wpCache'
 import './press-release-detail.css'
 
 const WP_API_BASE = 'https://nextincep.wpenginepowered.com/wp-json/wp/v2'
@@ -88,55 +89,74 @@ export default function PressReleaseDetail() {
 
   const bodyRef = useRef(null)
 
+  const formatRawRelease = useCallback((p) => {
+    const media = p._embedded?.['wp:featuredmedia']?.[0]
+    return {
+      id: p.id,
+      slug: p.slug,
+      title: decodeHtml(p.title?.rendered || ''),
+      content: p.content?.rendered || '',
+      date: p.date
+        ? new Date(p.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })
+        : '',
+      image:
+        media?.media_details?.sizes?.large?.source_url ||
+        media?.media_details?.sizes?.medium_large?.source_url ||
+        media?.source_url ||
+        '',
+    }
+  }, [])
+
   const fetchRelease = useCallback(
     async ({ silent = false } = {}) => {
       if (!slug) return
-      if (!silent) {
+
+      const cachedRaw = getCachedPost(slug)
+      if (cachedRaw) {
+        const instantFormatted = formatRawRelease(cachedRaw)
+        setPost(instantFormatted)
+        setNotFound(false)
+        setLoading(false)
+        applyYoastSeo(cachedRaw, instantFormatted)
+      } else if (!silent) {
         setLoading(true)
         setNotFound(false)
       }
 
       try {
         const res = await fetch(
-          `${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed=1&_cb=${Date.now()}`,
-          { cache: 'no-store' }
+          `${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed=1`
         )
         if (!res.ok) throw new Error(`Status ${res.status}`)
         const data = await res.json()
 
         if (!Array.isArray(data) || data.length === 0) {
-          setPost(null)
-          setNotFound(true)
+          if (!cachedRaw) {
+            setPost(null)
+            setNotFound(true)
+          }
           return
         }
 
         const p = data[0]
-        const media = p._embedded?.['wp:featuredmedia']?.[0]
-        const formatted = {
-          id: p.id,
-          slug: p.slug,
-          title: decodeHtml(p.title?.rendered || ''),
-          content: p.content?.rendered || '',
-          date: p.date
-            ? new Date(p.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })
-            : '',
-          image: media?.source_url || '',
-        }
+        setCachedPost(slug, p)
+        const formatted = formatRawRelease(p)
 
         setPost(formatted)
         setNotFound(false)
+        setLoading(false)
         applyYoastSeo(p, formatted)
       } catch {
-        if (!silent) setNotFound(true)
+        if (!silent && !cachedRaw) setNotFound(true)
       } finally {
         if (!silent) setLoading(false)
       }
     },
-    [slug]
+    [slug, formatRawRelease]
   )
 
   useEffect(() => {

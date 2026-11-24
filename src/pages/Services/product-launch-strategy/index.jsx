@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import productLaunchSchema from '../../../schemas/product-launch-strategy.json'
 import ProductLaunchHero from './components/ProductLaunchHero'
 import ProductLaunchTrustedLogos from './components/ProductLaunchTrustedLogos'
 import ProductLaunchNecessity from './components/ProductLaunchNecessity'
@@ -16,6 +18,7 @@ import ProductLaunchCostSection from './components/ProductLaunchCostSection'
 import ProductLaunchFAQs from './components/ProductLaunchFAQs'
 
 export default function ProductLaunchStrategyPage() {
+  useJsonLdSchema(productLaunchSchema, 'schema-product-launch-strategy')
   useEffect(() => {
     const seoTitle = 'Product Launch Strategy & Consulting Services| Inceptives Digital'
     const seoDesc =

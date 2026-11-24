@@ -27,7 +27,7 @@ export default function SingaporeInfrastructure() {
           Existing business systems often need to exchange information with customer-facing applications through{' '}
           <Link
             to="/system-integration-api-automation"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             system integration api automation
           </Link>

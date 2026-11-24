@@ -9,7 +9,7 @@ export default function WebAppWhyChooseUs() {
             href="https://inceptivesdigital.com/blog/software-development-for-startups"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             software development for startups
           </a>{' '}
@@ -30,7 +30,7 @@ export default function WebAppWhyChooseUs() {
             href="https://inceptivesdigital.com/blog/in-house-development-vs-app-development-partner"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             in-house development vs. an app development partner
           </a>{' '}

@@ -3,42 +3,37 @@ import { Link } from 'react-router-dom'
 export default function ReactNativeVsFlutterTable() {
   const rows = [
     {
-      req: 'Language',
-      rn: 'JavaScript and TypeScript',
+      factor: 'Language',
+      rn: 'JavaScript, TypeScript',
       flutter: 'Dart',
     },
     {
-      req: 'Rendering',
-      rn: 'Native components via bridge or Fabric',
-      flutter: 'Custom rendering engine (Skia)',
+      factor: 'UI',
+      rn: 'Native platform components',
+      flutter: 'Impeller rendering engine',
     },
     {
-      req: 'Performance',
-      rn: 'Native-grade with Hermes and Turbo Modules',
-      flutter: 'Consistent but renders its own UI layer',
+      factor: 'Performance',
+      rn: 'Native-level performance',
+      flutter: 'Consistent rendering performance',
     },
     {
-      req: 'Native Module Access',
-      rn: 'Deep, mature ecosystem',
-      flutter: 'Growing, less extensive',
+      factor: 'Device access',
+      rn: 'Extensive libraries, custom modules',
+      flutter: 'Plugins and platform channels',
     },
     {
-      req: 'Talent Availability',
-      rn: 'Larger pool, JavaScript-based',
-      flutter: 'Smaller pool, Dart-specific',
+      factor: 'Talent pool',
+      rn: 'Larger JavaScript pool',
+      flutter: 'Smaller Dart pool',
     },
     {
-      req: 'UI Consistency',
-      rn: 'Platform-native look and feel',
-      flutter: 'Identical UI across platforms',
+      factor: 'Best suited to',
+      rn: 'Deep device integration',
+      flutter: 'Identical, custom visuals',
     },
     {
-      req: 'Best For',
-      rn: 'Apps needing deep device integration and faster team scaling',
-      flutter: 'Apps prioritising pixel-perfect visual consistency',
-    },
-    {
-      req: 'Proven At Scale',
+      factor: 'Examples',
       rn: 'Facebook, Instagram, Shopify',
       flutter: 'Google Pay, BMW',
     },
@@ -53,33 +48,17 @@ export default function ReactNativeVsFlutterTable() {
             <span className="text-[#00CE44]">React Native vs Flutter:</span> Which Framework Fits Your Product?
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
-            Both frameworks deliver cross-platform efficiency, but they solve the problem differently, and the decision usually comes down to how{' '}
-            <Link
-              to="/flutter-app-development"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
-            >
-              Flutter app development
-            </Link>{' '}
-            compares against React Native on the specific product at hand. Factors such as rendering approach, developer ecosystem, native module access, and long-term maintenance all matter when evaluating{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/why-choose-flutter-for-app-development"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
-            >
-              why businesses choose Flutter
-            </a>{' '}
-            or React Native. The right choice depends on what the product needs to do.
+            Both frameworks deliver cross-platform efficiency, but they solve the problem differently, so your product goals decide the fit.
           </p>
         </div>
 
         {/* Comparison Table */}
-        <div className="overflow-x-auto no-scrollbar rounded-[18px] bg-[#202020] border border-white/10 mb-10">
+        <div className="overflow-x-auto no-scrollbar rounded-[18px] bg-[#202020] border border-white/10 mb-8">
           <table className="w-full text-left border-collapse min-w-[680px]">
             <thead>
               <tr className="bg-[#00CE44] text-black">
                 <th className="py-4 px-6 text-sm sm:text-base font-bold w-1/4">
-                  Requirements
+                  Factor
                 </th>
                 <th className="py-4 px-6 text-sm sm:text-base font-bold w-[37.5%] border-l border-black/15">
                   React Native
@@ -92,16 +71,16 @@ export default function ReactNativeVsFlutterTable() {
             <tbody className="divide-y divide-white/10 text-xs sm:text-sm">
               {rows.map((row, idx) => (
                 <tr
-                  key={row.req}
+                  key={row.factor}
                   className={idx % 2 === 0 ? 'bg-[#1c1c1c]' : 'bg-[#242424]'}
                 >
                   <td className="py-4 px-6 font-bold text-[#00CE44]">
-                    {row.req}
+                    {row.factor}
                   </td>
-                  <td className="py-4 px-6 text-white font-medium border-l border-white/10">
+                  <td className="py-4 px-6 text-white font-medium border-l border-white/10 leading-relaxed">
                     {row.rn}
                   </td>
-                  <td className="py-4 px-6 text-white/80 font-normal border-l border-white/10">
+                  <td className="py-4 px-6 text-white/90 font-normal border-l border-white/10 leading-relaxed">
                     {row.flutter}
                   </td>
                 </tr>
@@ -110,18 +89,16 @@ export default function ReactNativeVsFlutterTable() {
           </table>
         </div>
 
-        {/* Footer Paragraph */}
-        <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-4xl mx-auto">
-          For businesses that need native-grade performance and deep device integration, React Native remains the stronger commercial decision, a distinction that becomes clearer when comparing{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/native-vs-hybrid-vs-cross-platform-app-development"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+        {/* Footer Note */}
+        <p className="text-white/90 text-[15px] sm:text-[16px] text-center max-w-3xl mx-auto leading-relaxed">
+          We build with both, including{' '}
+          <Link
+            to="/flutter-app-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
-            native vs hybrid vs cross-platform app development
-          </a>
-          . It is the framework Inceptives Digital has engineered to its full potential for eight years.
+            Flutter app development
+          </Link>
+          , so our recommendation follows your product requirements.
         </p>
       </div>
     </section>

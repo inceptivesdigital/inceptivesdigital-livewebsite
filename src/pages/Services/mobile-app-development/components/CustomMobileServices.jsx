@@ -19,7 +19,7 @@ export default function CustomMobileServices() {
           Native{' '}
           <Link
             to="/ios-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             iOS app development
           </Link>{' '}
@@ -35,7 +35,7 @@ export default function CustomMobileServices() {
           Custom{' '}
           <Link
             to="/android-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Android app development
           </Link>{' '}
@@ -51,7 +51,7 @@ export default function CustomMobileServices() {
           Launch iOS and Android applications through one shared development architecture. Our{' '}
           <a
             href="https://inceptivesdigital.com/cross-platform-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             cross-platform app development services
           </a>{' '}
@@ -67,14 +67,14 @@ export default function CustomMobileServices() {
           Integrate LLM-powered{' '}
           <a
             href="https://inceptivesdigital.com/ai-chatbot-development-services"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             chatbots
           </a>{' '}
           and intelligent assistants into commercial mobile applications. Our{' '}
           <a
             href="https://inceptivesdigital.com/ai-app-development-services"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             AI app development
           </a>{' '}
@@ -90,7 +90,7 @@ export default function CustomMobileServices() {
           Enterprise mobile app development connects existing business infrastructure with custom mobile workflows. API-first engineering supports CRM and ERP{' '}
           <a
             href="https://inceptivesdigital.com/system-integration-api-automation"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             system integration
           </a>
@@ -106,7 +106,7 @@ export default function CustomMobileServices() {
           Our mobile app{' '}
           <a
             href="https://inceptivesdigital.com/ui-ux-design"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             UI/UX design services
           </a>{' '}
@@ -122,7 +122,7 @@ export default function CustomMobileServices() {
           Modernize legacy mobile applications without replacing functionality that still serves the business. Our app modernization and{' '}
           <a
             href="https://inceptivesdigital.com/product-rescue-scaling"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             product rescue services
           </a>{' '}
@@ -138,7 +138,7 @@ export default function CustomMobileServices() {
           Mobile app development{' '}
           <a
             href="https://inceptivesdigital.com/product-strategy-consulting"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             consulting
           </a>{' '}
@@ -154,7 +154,7 @@ export default function CustomMobileServices() {
           Keep production mobile applications compatible with evolving iOS and Android requirements. Our{' '}
           <a
             href="https://inceptivesdigital.com/blog/mobile-app-maintenance-cost"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             mobile app maintenance
           </a>{' '}

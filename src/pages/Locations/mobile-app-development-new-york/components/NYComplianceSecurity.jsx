@@ -67,7 +67,7 @@ export default function NYComplianceSecurity() {
             New York businesses face specific requirements for protecting customer information, securing financial systems, and handling automated decisions. Inceptives Digital considers applicable NYC and New York State regulations during mobile app architecture and development, following{' '}
             <Link
               to="/blog/mobile-app-security-best-practices"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               app security best practices
             </Link>

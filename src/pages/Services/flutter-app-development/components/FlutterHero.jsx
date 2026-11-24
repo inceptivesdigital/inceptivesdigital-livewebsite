@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function FlutterHero() {
   const trustBadges = [
     {
@@ -29,31 +27,25 @@ export default function FlutterHero() {
           {/* Left Column */}
           <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-start text-left">
             <h1 className="text-[#00CE44] text-sm sm:text-base lg:text-[17px] font-bold block mb-3">
-              Flutter App Development Company
+              Flutter App Development Services
             </h1>
 
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.18] mb-5 max-w-2xl">
-              Where Complex Flutter Apps Are Engineered With Precision
+              Distinctive App Experiences Backed by{' '}
+              <span className="text-[#00CE44]">Custom Flutter Development</span>
             </h2>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
-              Flutter now powers apps used by more than 500 million people worldwide, and the companies behind those products chose it for the same reasons: one codebase, consistent performance, and faster time to market. Inceptives Digital is a digital product studio built around Flutter engineering as part of a broader{' '}
-              <Link
-                to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
-              >
-                mobile app development
-              </Link>{' '}
-              practice spanning every major platform. The portfolio covers 70+ shipped products across multiple industries, ranging from early-stage MVPs to enterprise-scale platforms.
+              Bring your Flutter product to market with engineering that reflects its actual business requirements. Inceptives Digital combines eight years of mobile development experience with Dart expertise to engineer custom Flutter application experiences. Our Flutter app developers support iOS and Android delivery, with web and desktop development where platform constraints and product requirements justify them.
             </p>
 
-            {/* Rectangular Buttons (Sharp Corners, Zero Shadow) */}
+            {/* Rectangular Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
               >
-                Start a Conversation
+                Discuss Your Flutter Project
               </a>
 
               <a
@@ -89,7 +81,7 @@ export default function FlutterHero() {
             <div className="w-full max-w-[460px] lg:max-w-[540px] flex items-center justify-center">
               <img
                 src="/assets/flutter-app/comflutter-banner.webp"
-                alt="Flutter App Development Company"
+                alt="Flutter App Development Services"
                 className="w-full h-auto object-contain block select-none"
                 loading="eager"
               />

@@ -7,7 +7,7 @@ export const torontoFaqs = [
     a: (
       <>
         Mobile app development in Toronto typically ranges from CAD $25,000–$45,000 for an{' '}
-        <Link to="/mvp-development" className="text-[#00CE44] hover:underline font-medium">
+        <Link to="/mvp-development" className="text-[#00CE44] font-medium underline underline-offset-4">
           MVP
         </Link>
         , CAD $45,000–$90,000 for a standard business application, and CAD $90,000–$180,000+ for enterprise platforms. The final investment depends on features, integrations, complexity, security requirements, and product goals.
@@ -19,7 +19,7 @@ export const torontoFaqs = [
     a: (
       <>
         The{' '}
-        <Link to="/blog/app-development-timeline" className="text-[#00CE44] hover:underline font-medium">
+        <Link to="/blog/app-development-timeline" className="text-[#00CE44] font-medium underline underline-offset-4">
           development timeline
         </Link>{' '}
         depends on the type of app. Most MVPs fall around 8–12 weeks, while standard business apps usually require 3–5 months. Larger enterprise platforms with advanced workflows, integrations, and security requirements may take 6–12+ months.
@@ -61,16 +61,16 @@ export const torontoFaqs = [
         Yes. We support the complete{' '}
         <Link
           to="/blog/publish-update-an-app-on-app-store-google-play"
-          className="text-[#00CE44] hover:underline font-medium"
+          className="text-[#00CE44] font-medium underline underline-offset-4"
         >
           publish the app
         </Link>{' '}
         release process, including store preparation, compliance requirements, testing,{' '}
-        <Link to="/app-store-optimization" className="text-[#00CE44] hover:underline font-medium">
+        <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
           app store optimization
         </Link>
         , submission, and deployment.{' '}
-        <Link to="/post-launch-analytics-iteration" className="text-[#00CE44] hover:underline font-medium">
+        <Link to="/post-launch-analytics-iteration" className="text-[#00CE44] font-medium underline underline-offset-4">
           Post-launch
         </Link>
         , we monitor performance and help address early product improvements.
@@ -98,7 +98,7 @@ export const torontoFaqs = [
     a: (
       <>
         Yes. We understand that early{' '}
-        <Link to="/product-strategy-consulting" className="text-[#00CE44] hover:underline font-medium">
+        <Link to="/product-strategy-consulting" className="text-[#00CE44] font-medium underline underline-offset-4">
           product ideas
         </Link>
         , business models, and technical concepts require confidentiality. We are comfortable signing NDAs and maintaining secure processes throughout strategy, design, development, and ongoing product support.

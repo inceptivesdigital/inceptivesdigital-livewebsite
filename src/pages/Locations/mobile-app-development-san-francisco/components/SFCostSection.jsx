@@ -72,7 +72,7 @@ export default function SFCostSection() {
               href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               cost of mobile app development
             </a>{' '}

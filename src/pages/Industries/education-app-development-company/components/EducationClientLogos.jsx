@@ -28,11 +28,11 @@ export default function EducationClientLogos() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {clients.map((client) => (
             <div
               key={client.name}
-              className="w-[calc(50%-8px)] sm:w-[220px] lg:w-[240px] h-24 sm:h-28 bg-white rounded-[18px] p-4 flex items-center justify-center transition-transform duration-300 hover:scale-[1.03] border-0 shadow-none"
+              className="w-full h-24 sm:h-28 bg-white rounded-[18px] p-4 flex items-center justify-center transition-transform duration-300 hover:scale-[1.03] border-0 shadow-none"
             >
               <img
                 src={client.src}

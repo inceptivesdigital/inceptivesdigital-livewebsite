@@ -35,7 +35,7 @@ const steps = [
         Deployed on AWS SageMaker, Google Vertex AI, or Azure ML. Containerised with Docker, orchestrated with Kubernetes. MLflow tracks model performance and detects drift{' '}
         <Link
           to="/post-launch-analytics-iteration"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           post-launch
         </Link>

@@ -63,7 +63,7 @@ export default function CrossPlatformServicesGrid() {
                 href="https://inceptivesdigital.com/product-strategy-consulting"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-[#00CE44] hover:text-white transition-colors"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 product strategy
               </a>

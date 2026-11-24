@@ -59,7 +59,7 @@ export default function NYValueProp() {
               Inceptives Digital works with New York businesses at different stages of growth, from founders testing their first MVP to SMBs expanding their reach through apps. Projects cover custom mobile development, third-party integrations, and backend systems, with{' '}
               <Link
                 to="/product-strategy-consulting"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 product strategy consulting
               </Link>{' '}

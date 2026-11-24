@@ -1,35 +1,63 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const reasons = [
   {
-    title: 'eCommerce Domain Expertise',
+    title: '8+ Years of Development Experience',
     description:
-      'Modern shopping behaviour, secure payment architecture, inventory management complexity, and multi-vendor operational requirements are understood before development begins. Products built around genuine commerce workflows rather than generic app templates adapted for retail.',
+      'Our experience across native and cross-platform development helps businesses select technologies suited to their product requirements and long-term plans.',
   },
   {
-    title: 'Conversion-Focused Engineering',
+    title: 'Proven Commerce Application Experience',
     description:
-      'Every technical decision, page load speed, checkout flow design, search accuracy, and recommendation relevance is evaluated against one metric: does it increase the probability of a completed purchase? Performance is not a post-launch optimisation. It is an architectural commitment.',
+      'Projects like StakBread demonstrate our experience with marketplace transactions, customer-facing applications, and complex vendor operations.',
   },
   {
-    title: 'Seamless Third-Party Integrations',
-    description:
-      'Payment gateways, ERP systems, CRM platforms, shipping APIs, and marketing tools are connected into a unified commerce ecosystem. No data silos. No manual reconciliation between systems that should communicate automatically.',
+    title: 'Cost-Conscious Technical Planning',
+    description: (
+      <>
+        We assess existing commerce platforms before recommending custom development, helping you{' '}
+        <Link
+          to="/blog/how-to-reduce-mobile-app-development-cost"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          reduce mobile app development costs
+        </Link>{' '}
+        and avoid unnecessary infrastructure changes.
+      </>
+    ),
   },
   {
-    title: 'Custom Over Template',
-    description:
-      'Every ecommerce solution is built around your specific business model, product catalog, and target audience. No Shopify theme dressed up as a custom build. No generic marketplace template repurposed for your category.',
+    title: 'Native and Cross-Platform Expertise',
+    description: (
+      <>
+        Our developers build with Swift and Kotlin, and deliver{' '}
+        <Link
+          to="/flutter-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          Flutter app development
+        </Link>{' '}
+        and{' '}
+        <Link
+          to="/react-native-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          React Native app development
+        </Link>{' '}
+        to support different platform requirements and mobile application architectures.
+      </>
+    ),
   },
   {
-    title: 'Transparent Development Process',
+    title: 'Transparent Project Delivery Process',
     description:
-      'Defined milestones, documented decisions, and regular progress updates from discovery through deployment. Every stage visible. No surprise scope additions at the delivery stage.',
+      'Defined milestones and regular development reviews give clients visibility into project progress, requirements, and decisions affecting delivery.',
   },
   {
-    title: 'Post-Launch Growth Partnership',
+    title: 'Ongoing Technical Support Services',
     description:
-      'Performance monitoring, feature updates, security patches, and platform scaling are provided continuously after launch. The ecommerce platform that launches is the starting point for a business that grows — not a finished product handed over and forgotten.',
+      'Our support teams maintain platform compatibility, address technical issues, and implement agreed enhancements as your commerce application evolves.',
   },
 ]
 
@@ -40,11 +68,11 @@ export default function EcommerceWhyChooseUs() {
         {/* Heading */}
         <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            Why Choose Inceptives Digital’s{' '}
-            <span className="text-[#00CE44]">eCommerce App Development Services</span>
+            Why Choose Inceptives Digital as Your{' '}
+            <span className="text-[#00CE44]">eCommerce App Development Company?</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Any studio can build a product page and a checkout flow. Here is what we build that determines whether the platform grows, converts, and operates without constant manual intervention.
+            With 8+ years of experience and 70+ projects delivered across industries, Inceptives Digital brings established mobile engineering expertise to eCommerce development. Our teams align technical decisions with your business requirements and existing infrastructure.
           </p>
         </div>
 
@@ -53,7 +81,7 @@ export default function EcommerceWhyChooseUs() {
           {reasons.map((item) => (
             <div
               key={item.title}
-              className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 text-left transition-colors duration-200 cursor-pointer"
+              className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 text-left transition-colors duration-200"
             >
               <h3 className="text-[#00CE44] group-hover:text-black text-[19px] sm:text-[21px] font-bold leading-snug mb-3 transition-colors duration-200">
                 {item.title}

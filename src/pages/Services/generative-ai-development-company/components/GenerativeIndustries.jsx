@@ -48,7 +48,7 @@ export default function GenerativeIndustries() {
           Every industry has different data structures, compliance requirements, and content workflows. We build for the specific context, not a generic template.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map(({ name, image, href, bullets }) => (
             <a
               key={name}

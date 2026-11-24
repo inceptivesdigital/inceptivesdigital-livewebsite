@@ -19,7 +19,7 @@ export default function TorontoTechStack() {
             Every{' '}
             <Link
               to="/blog/mobile-app-tech-stack"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               technology stack
             </Link>{' '}

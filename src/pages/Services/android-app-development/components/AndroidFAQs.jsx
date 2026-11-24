@@ -16,7 +16,7 @@ const faqs = [
           Yes. Inceptives Digital provides dedicated Android developers who extend your{' '}
           <a
             href="https://inceptivesdigital.com/blog/in-house-development-vs-app-development-partner"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             in-house team
           </a>
@@ -31,7 +31,7 @@ const faqs = [
           Hire a freelancer for a limited Android development task with clear requirements.{' '}
           <a
             href="https://inceptivesdigital.com/blog/how-to-choose-the-right-mobile-app-development-company"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Choose an Android app development company
           </a>{' '}
@@ -46,7 +46,7 @@ const faqs = [
           Kotlin is the recommended choice for most new Android applications because Google prioritizes Kotlin support and modern{' '}
           <a
             href="https://inceptivesdigital.com/blog/android-app-development-tools"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Android development tools
           </a>
@@ -61,7 +61,7 @@ const faqs = [
           Choose native Kotlin for Android-specific integrations, demanding performance requirements, or deeper platform control.{' '}
           <a
             href="https://inceptivesdigital.com/blog/flutter-vs-react-native-android-app-development"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Flutter or React Native
           </a>{' '}
@@ -80,7 +80,7 @@ const faqs = [
           Yes. Custom Android applications can integrate with CRM, ERP, and other enterprise systems through supported{' '}
           <a
             href="https://inceptivesdigital.com/backend-api-development"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             backend APIs
           </a>
@@ -94,7 +94,7 @@ const faqs = [
         <>
           <a
             href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Publishing on Google Play
           </a>{' '}
@@ -113,14 +113,14 @@ const faqs = [
           Yes. Inceptives Digital offers{' '}
           <a
             href="https://inceptivesdigital.com/app-store-optimization"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             App Store Optimization
           </a>{' '}
           for Google Play and{' '}
           <a
             href="https://inceptivesdigital.com/post-launch-analytics-iteration"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             post-launch analytics
           </a>{' '}

@@ -1,24 +1,35 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { UserPlus, Users, SlidersHorizontal } from 'lucide-react'
 
 const models = [
   {
     icon: UserPlus,
-    title: '1. Staff Augmentation',
-    description:
-      'Specialised ecommerce developers integrated directly into your existing team. Mobile, web, and backend expertise added on demand to fill skill gaps, accelerate delivery, and meet deadlines without permanent hiring overhead.',
+    title: 'Staff Augmentation',
+    description: (
+      <>
+        Extend your{' '}
+        <Link
+          to="/blog/in-house-development-vs-app-development-partner"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          in-house development team
+        </Link>{' '}
+        with experienced eCommerce app developers who work within your existing workflows. Access specialized engineering expertise without the overhead of permanent recruitment.
+      </>
+    ),
   },
   {
     icon: Users,
-    title: '2. Dedicated Developers',
+    title: 'Dedicated Development Team',
     description:
-      'A development team working exclusively on your ecommerce project. Complete control over priorities, direct communication, and full accountability from discovery through deployment. Built for projects that need consistent focus and deep product context over time.',
+      'For projects requiring continuous development, our dedicated team works exclusively on your application. You set priorities and maintain direct communication with engineers throughout the engagement.',
   },
   {
     icon: SlidersHorizontal,
-    title: '3. Flex Team',
+    title: 'Flexible Team Engagement',
     description:
-      'A multi-disciplinary team that scales with your project requirements. Frontend, backend, UI/UX, and QA resources are adjusted as scope evolves. Built for ecommerce businesses whose feature roadmap changes faster than a fixed team can accommodate.',
+      'Development needs can change as your commerce platform evolves. Our flexible team model lets you adjust engineering capacity according to upcoming releases, integration requirements, and project workload.',
   },
 ]
 
@@ -29,11 +40,11 @@ export default function EcommerceCollaborationModels() {
         {/* Heading */}
         <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            Collaboration Models Our{' '}
-            <span className="text-[#00CE44]">Ecommerce App Development Company</span> Offers
+            Choose How You Work with Our{' '}
+            <span className="text-[#00CE44]">eCommerce App Developers</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            The right engagement model depends on whether you need to extend an existing team, dedicate resources exclusively to your project, or maintain flexibility as requirements evolve.
+            Inceptives Digital offers flexible engagement models based on your project scope and internal development capacity. Choose the arrangement that gives your business the right engineering expertise and control over delivery.
           </p>
         </div>
 
@@ -44,7 +55,7 @@ export default function EcommerceCollaborationModels() {
             return (
               <div
                 key={item.title}
-                className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[18px] p-8 flex flex-col items-start text-left transition-colors duration-200 cursor-pointer"
+                className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[18px] p-8 flex flex-col items-start text-left transition-colors duration-200"
               >
                 <Icon
                   className="w-10 h-10 text-[#00CE44] group-hover:text-black mb-5 transition-colors duration-200"

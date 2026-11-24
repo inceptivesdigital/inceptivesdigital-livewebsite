@@ -9,7 +9,7 @@ export default function BackendWhyChooseUs() {
             href="https://inceptivesdigital.com/discovery-sprint"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             discovery sprint
           </a>

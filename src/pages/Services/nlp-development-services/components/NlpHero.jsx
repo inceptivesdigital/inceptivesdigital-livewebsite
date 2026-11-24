@@ -17,7 +17,7 @@ export default function NlpHero() {
               href="https://inceptivesdigital.com/digital-product-development"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               digital product development
             </a>

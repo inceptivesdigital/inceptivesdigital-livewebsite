@@ -91,9 +91,9 @@ export default function AiMvpIndustries() {
             Every industry has different validation requirements, compliance considerations, and data constraints. We scope the MVP around the specific context.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch auto-rows-fr">
           {industries.map(({ icon: Icon, title, items }) => (
-            <article key={title} className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-2xl p-6 sm:p-7 transition-colors duration-200">
+            <article key={title} className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-2xl p-6 sm:p-7 transition-colors duration-200 h-full">
               <Icon className="w-9 h-9 text-[#00CE44] group-hover:text-black mb-5 transition-colors" strokeWidth={1.7} aria-hidden="true" />
               <h3 className="text-[#00CE44] group-hover:text-black text-xl sm:text-2xl font-bold mb-4 transition-colors leading-tight">
                 {title}

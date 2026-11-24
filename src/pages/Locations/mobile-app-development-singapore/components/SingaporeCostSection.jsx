@@ -9,7 +9,7 @@ export default function SingaporeCostSection() {
       desc: (
         <>
           A focused starting point for Singapore startups using{' '}
-          <Link to="/mvp-development" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/mvp-development" className="text-[#00CE44] font-medium underline underline-offset-4">
             MVP development
           </Link>{' '}
           to test essential functionality and customer demand.
@@ -64,7 +64,7 @@ export default function SingaporeCostSection() {
             At Inceptives Digital, we scope{' '}
             <Link
               to="/blog/mobile-app-development-cost"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app development cost
             </Link>{' '}

@@ -69,7 +69,7 @@ export default function RpaIndustries() {
             Every industry has different processes, compliance requirements, and system architectures. We build automation for the specific operational context.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
           {industries.map(({ icon: Icon, title, items }) => (
             <article
               key={title}

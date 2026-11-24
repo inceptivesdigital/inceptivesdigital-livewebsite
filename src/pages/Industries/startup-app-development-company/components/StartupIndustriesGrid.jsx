@@ -30,10 +30,10 @@ export default function StartupIndustriesGrid() {
         </div>
 
         {/* 10 Vertical Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 mb-12">
+        <div className="flex flex-wrap justify-center gap-5 sm:gap-6 items-stretch">
           {markets.map((m) => {
             const cardClass =
-              'bg-[#1b1c21] hover:bg-[#22242a] rounded-[16px] p-6 flex flex-col items-center justify-center text-center transition-all duration-200 group'
+              'bg-[#1b1c21] hover:bg-[#22242a] rounded-[16px] p-6 flex flex-col items-center justify-center text-center transition-all duration-200 group h-full'
             const inner = (
               <>
                 <SolidIcon

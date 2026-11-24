@@ -37,7 +37,7 @@ export default function AiAppHero() {
               href="https://inceptivesdigital.com/ai-agent-development"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               AI agents
             </a>
@@ -46,7 +46,7 @@ export default function AiAppHero() {
               href="https://inceptivesdigital.com/nlp-development-services"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               NLP
             </a>

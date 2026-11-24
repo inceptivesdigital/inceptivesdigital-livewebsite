@@ -38,28 +38,28 @@ export default function CrossPlatformFrameworks() {
                 href="https://inceptivesdigital.com/blog/5-cross-platform-frameworks-for-mobile-app-development"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-[#00CE44] hover:text-white transition-colors"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 proven framework
               </a>{' '}
               at production scale. Inceptives Digital works in{' '}
               <Link
                 to="/flutter-app-development"
-                className="underline text-[#00CE44] hover:text-white transition-colors"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 Flutter
               </Link>
               ,{' '}
               <Link
                 to="/react-native-app-development"
-                className="underline text-[#00CE44] hover:text-white transition-colors"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 React Native
               </Link>
               , and{' '}
               <Link
                 to="/kotlin-multiplatform-app-development"
-                className="underline text-[#00CE44] hover:text-white transition-colors"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 Kotlin Multiplatform
               </Link>

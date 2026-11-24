@@ -1,105 +1,882 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { submitFormToSeo, SEO_RECIPIENT_EMAIL } from '../../../../utils/submitFormToSeo'
 
-export default function IosArchitectureQuiz() {
-  const [step, setStep] = useState(0) // 0..3 = questions, 4 = lead form, 5 = result
-  const [answers, setAnswers] = useState({})
-  const [formData, setFormData] = useState({
-    fullName: '',
-    workEmail: '',
-    company: '',
-  })
+const QUIZ_QUESTIONS = [
+  {
+    key: 'platform',
+    question: 'What platforms are you launching first?',
+    options: [
+      'iPhone only',
+      'iPhone first, Android later',
+      'iOS and Android simultaneously',
+    ],
+  },
+  {
+    key: 'hardware',
+    question: 'Does your app require Apple-specific hardware?',
+    options: [
+      'Yes (ARKit, LiDAR, HealthKit, Apple Intelligence)',
+      'Maybe one or two standard device features',
+      'No, standard cloud features only',
+    ],
+  },
+  {
+    key: 'performance',
+    question: 'What are your core performance demands?',
+    options: [
+      'High performance',
+      'Standard consumer UX with smooth scrolling',
+      'Content-driven forms or business dashboards',
+    ],
+  },
+  {
+    key: 'timeline',
+    question: 'What is your target market launch timeline?',
+    options: ['6+ months', '3 to 6 months', 'Under 3 months'],
+  },
+]
 
-  const questions = [
-    {
-      num: 1,
-      question: '1. What platforms are you launching first?',
-      options: [
-        { key: 'A', label: 'A) iPhone only' },
-        { key: 'B', label: 'B) iOS and Android simultaneously' },
-        { key: 'C', label: 'C) iOS + Web' },
-      ],
-    },
-    {
-      num: 2,
-      question: '2. Does your app require Apple-specific hardware?',
-      options: [
-        { key: 'A', label: 'A) Yes (ARKit, LiDAR, HealthKit, Apple Intelligence)' },
-        { key: 'B', label: 'B) Maybe one or two standard device features' },
-        { key: 'C', label: 'C) No, standard cloud features only' },
-      ],
-    },
-    {
-      num: 3,
-      question: '3. What are your core performance demands?',
-      options: [
-        { key: 'A', label: 'A) Critical: performance is core to the app' },
-        { key: 'B', label: 'B) Moderate: Smooth consumer UX with smooth scrolling' },
-        { key: 'C', label: 'C) Standard: forms, dashboards, or bookings' },
-      ],
-    },
-    {
-      num: 4,
-      question: '4. What is your target market launch timeline?',
-      options: [
-        { key: 'A', label: 'A) 6+ months' },
-        { key: 'B', label: 'B) 3 to 6 months' },
-        { key: 'C', label: 'C) Within 3 months' },
-      ],
-    },
+function calculateIosScore(a) {
+  const p = a.platform || ''
+  const h = a.hardware || ''
+  const f = a.performance || ''
+  const t = a.timeline || ''
+
+  let n = 35
+  let c = 35
+
+  if (p === 'iPhone only') {
+    n += 25
+    c -= 5
+  } else if (p === 'iPhone first, Android later') {
+    n += 12
+    c += 13
+  } else {
+    c += 25
+  }
+
+  if (h.startsWith('Yes (')) {
+    n += 25
+    c -= 8
+  } else if (h.startsWith('Maybe')) {
+    n += 8
+    c += 4
+  } else {
+    c += 18
+  }
+
+  if (f === 'High performance') {
+    n += 18
+    c -= 7
+  } else if (f.includes('smooth scrolling')) {
+    n += 7
+    c += 9
+  } else {
+    c += 17
+  }
+
+  if (t === '6+ months') {
+    n += 5
+  } else if (t === '3 to 6 months') {
+    n += 2
+    c += 3
+  } else {
+    c += 7
+  }
+
+  n = Math.max(5, Math.min(99, n))
+  c = Math.max(5, Math.min(99, c))
+
+  const isNative =
+    (p === 'iPhone only' && (h.startsWith('Yes (') || f === 'High performance')) ||
+    (p === 'iPhone only' &&
+      h.startsWith('Maybe') &&
+      f.includes('smooth scrolling') &&
+      t !== 'Under 3 months')
+
+  const isCross =
+    p === 'iOS and Android simultaneously' &&
+    h === 'No, standard cloud features only' &&
+    f !== 'High performance'
+
+  const kind = isNative ? 'native' : isCross ? 'cross' : 'review'
+
+  const texts = {
+    native: [
+      'Native iOS Development Is Your Stronger Starting Point',
+      'Your Apple integration and performance priorities make native iOS worth assessing first. Swift and SwiftUI provide direct access to the capabilities your product may require.',
+    ],
+    cross: [
+      'Cross-Platform Development Is Worth Prioritizing',
+      'Your platform plans and feature requirements suggest Flutter or React Native could support shared development. Platform-specific integrations still require review.',
+    ],
+    review: [
+      'Your App Needs a Closer Architecture Review',
+      'Your answers contain competing requirements. A short questionnaire cannot settle the choice between native iOS and cross-platform development.',
+    ],
+  }
+
+  const reasons = [
+    `Launch: ${p}`,
+    `Apple capabilities: ${h}`,
+    `Performance: ${f}`,
+    `Timeline: ${t}`,
   ]
 
-  const handleSelectOption = (qIdx, key) => {
-    const updated = { ...answers, [qIdx]: key }
-    setAnswers(updated)
-    if (qIdx < 3) {
-      setStep(qIdx + 1)
-    } else {
-      setStep(4)
+  return {
+    kind,
+    title: texts[kind][0],
+    body: texts[kind][1],
+    native: n,
+    cross: c,
+    reasons,
+  }
+}
+
+const QUIZ_CSS = `
+#id-ios-quiz-root {
+  --g: #00ce44;
+  --bg: #151c17;
+  --panel: #222c25;
+  --bd: #3a493e;
+  --text: #f6fff7;
+  --muted: #b7c8bb;
+  color: var(--text);
+  font: inherit;
+  width: 100%;
+}
+#id-ios-quiz-root * {
+  box-sizing: border-box;
+}
+#id-ios-quiz-root .id-ios-card {
+  border-radius: 18px;
+  padding: clamp(18px, 4vw, 34px);
+  background: radial-gradient(circle at 100% 0%, #174126, transparent 46%), var(--bg);
+  border: 1px solid var(--bd);
+}
+#id-ios-quiz-root .id-ios-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+#id-ios-quiz-root .id-ios-top strong {
+  color: var(--g);
+  white-space: nowrap;
+}
+#id-ios-quiz-root .id-ios-track {
+  height: 7px;
+  background: #35443a;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 14px 0 26px;
+}
+#id-ios-quiz-root .id-ios-progress {
+  width: 20%;
+  height: 100%;
+  background: var(--g);
+  border-radius: 30px;
+  transition: width 0.4s ease;
+}
+#id-ios-quiz-root fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+#id-ios-quiz-root legend {
+  font-size: clamp(18px, 2.5vw, 23px) !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  color: #ffffff !important;
+  margin-bottom: 19px;
+  padding: 0;
+  display: block;
+}
+#id-ios-quiz-root .id-ios-options {
+  display: grid;
+  gap: 11px;
+}
+#id-ios-quiz-root .id-ios-option {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  min-height: 57px;
+  background: var(--panel);
+  border: 1.5px solid var(--bd);
+  border-radius: 11px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+#id-ios-quiz-root .id-ios-option.is-checked,
+#id-ios-quiz-root .id-ios-option:has(input:checked) {
+  background: #193d27;
+  border-color: var(--g);
+}
+#id-ios-quiz-root .id-ios-option:hover {
+  border-color: var(--g);
+}
+#id-ios-quiz-root .id-ios-option input {
+  accent-color: var(--g);
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+}
+#id-ios-quiz-root .id-ios-option span {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.5;
+}
+#id-ios-quiz-root .id-ios-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+#id-ios-quiz-root .id-ios-contact label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+#id-ios-quiz-root .id-ios-contact label:last-child {
+  grid-column: 1 / -1;
+}
+#id-ios-quiz-root .id-ios-contact input {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  border: 1px solid var(--bd);
+  border-radius: 9px;
+  padding: 0 13px;
+  background: var(--panel);
+  color: white;
+  font-size: 15px;
+}
+#id-ios-quiz-root .id-ios-contact input::placeholder {
+  color: #9eada2;
+}
+#id-ios-quiz-root input:focus-visible,
+#id-ios-quiz-root button:focus-visible {
+  outline: 2px solid var(--g);
+  outline-offset: 3px;
+}
+#id-ios-quiz-root .id-ios-privacy {
+  color: var(--muted) !important;
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  margin: 17px 0 0;
+}
+#id-ios-quiz-root .id-ios-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-top: 22px;
+}
+#id-ios-quiz-root .id-ios-buttons button,
+#id-ios-quiz-root .id-ios-result button,
+#id-ios-quiz-root .id-ios-result a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  padding: 10px 20px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  width: auto;
+  border: 1px solid #526658;
+  background: #29382e;
+  color: white;
+}
+#id-ios-quiz-root .id-ios-buttons .id-ios-next,
+#id-ios-quiz-root .id-ios-buttons .id-ios-send,
+#id-ios-quiz-root .id-ios-result .id-ios-download {
+  background: var(--g);
+  border-color: var(--g);
+  color: #061b0b;
+}
+#id-ios-quiz-root button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+#id-ios-quiz-root .id-ios-error {
+  color: #ffb5b5;
+  font-size: 13px;
+  margin-top: 13px;
+  min-height: 18px;
+}
+#id-ios-quiz-root .id-ios-result h2 {
+  font-size: clamp(23px, 3vw, 35px) !important;
+  line-height: 1.15 !important;
+  color: white !important;
+  margin: 10px 0 !important;
+}
+#id-ios-quiz-root .id-ios-result p {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  color: var(--muted) !important;
+}
+#id-ios-quiz-root .id-ios-result .id-ios-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--g);
+  text-transform: uppercase;
+}
+#id-ios-quiz-root .id-ios-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 22px 0;
+}
+#id-ios-quiz-root .id-ios-metric {
+  padding: 15px;
+  border: 1px solid var(--bd);
+  border-radius: 11px;
+  background: var(--panel);
+}
+#id-ios-quiz-root .id-ios-metric strong {
+  display: block;
+  color: var(--g);
+  font-size: 24px;
+  margin: 6px 0;
+}
+#id-ios-quiz-root .id-ios-metric .id-ios-track {
+  margin: 0;
+}
+#id-ios-quiz-root .id-ios-summary {
+  background: #1c2b21;
+  border: 1px solid #35523c;
+  border-radius: 11px;
+  padding: 17px;
+  margin: 17px 0;
+}
+#id-ios-quiz-root .id-ios-summary h3 {
+  font-size: 16px !important;
+  color: white !important;
+  margin: 0 0 12px !important;
+}
+#id-ios-quiz-root .id-ios-summary ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #c9ddce;
+  font-size: 13px;
+  line-height: 1.8;
+  list-style: disc;
+}
+#id-ios-quiz-root .id-ios-result-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+#id-ios-quiz-root .id-ios-footnote {
+  font-size: 11px !important;
+  color: #9aafa0 !important;
+  margin-top: 18px !important;
+}
+@media (max-width: 900px) {
+  #id-ios-quiz-root .id-ios-card {
+    padding: 24px;
+  }
+}
+@media (max-width: 600px) {
+  #id-ios-quiz-root .id-ios-option {
+    padding: 13px;
+    min-height: 50px;
+  }
+  #id-ios-quiz-root .id-ios-option span {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+  #id-ios-quiz-root .id-ios-top {
+    flex-wrap: wrap;
+  }
+  #id-ios-quiz-root .id-ios-contact {
+    grid-template-columns: 1fr;
+  }
+  #id-ios-quiz-root .id-ios-contact label:last-child {
+    grid-column: auto;
+  }
+  #id-ios-quiz-root .id-ios-metrics {
+    grid-template-columns: 1fr;
+  }
+  #id-ios-quiz-root .id-ios-buttons button {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  #id-ios-quiz-root .id-ios-result-actions {
+    flex-direction: column;
+  }
+  #id-ios-quiz-root .id-ios-result-actions > * {
+    width: 100% !important;
+  }
+}
+@media (max-width: 380px) {
+  #id-ios-quiz-root .id-ios-card {
+    padding: 14px;
+  }
+  #id-ios-quiz-root legend {
+    font-size: 17px !important;
+  }
+  #id-ios-quiz-root .id-ios-buttons {
+    gap: 8px;
+  }
+}
+`
+
+export default function IosArchitectureQuiz() {
+  const [step, setStep] = useState(0) // 0..3 = questions, 4 = contact form
+  const [answers, setAnswers] = useState({
+    platform: '',
+    hardware: '',
+    performance: '',
+    timeline: '',
+  })
+  const [contact, setContact] = useState({
+    full_name: '',
+    email: '',
+    company: '',
+  })
+  const [error, setError] = useState('')
+  const [sending, setSending] = useState(false)
+  const [submittedData, setSubmittedData] = useState(null)
+  const [pdfDownloading, setPdfDownloading] = useState(false)
+  const [pdfError, setPdfError] = useState('')
+  const resultRef = useRef(null)
+
+  const handleSelectOption = (key, value) => {
+    setAnswers((prev) => ({ ...prev, [key]: value }))
+    setError('')
+  }
+
+  const handleNext = () => {
+    const currentKey = QUIZ_QUESTIONS[step]?.key
+    if (!currentKey || !answers[currentKey]) {
+      setError('Please select an answer to continue.')
+      return
+    }
+    setError('')
+    setStep((s) => s + 1)
+  }
+
+  const handlePrev = () => {
+    if (step > 0) {
+      setError('')
+      setStep((s) => s - 1)
     }
   }
 
-  const handleFormSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setStep(5)
+    for (const q of QUIZ_QUESTIONS) {
+      if (!answers[q.key]) {
+        setError('Please complete all four questions.')
+        return
+      }
+    }
+    const trimmedName = contact.full_name.trim()
+    const trimmedEmail = contact.email.trim()
+    const trimmedCompany = contact.company.trim()
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+    if (
+      !trimmedName ||
+      trimmedName.length > 120 ||
+      !emailRegex.test(trimmedEmail) ||
+      trimmedCompany.length > 120
+    ) {
+      setError('Enter a valid name and email address.')
+      return
+    }
+
+    setSending(true)
+    setError('')
+
+    const fit = calculateIosScore(answers)
+
+    try {
+      await submitFormToSeo({
+        formName: 'iOS APP DEVELOPMENT Architecture Quiz',
+        subject: `iOS APP DEVELOPMENT Page - ${trimmedName}`,
+        replyTo: trimmedEmail,
+        wpAction: 'id_ios_quiz_submit',
+        fields: {
+          'Full Name': trimmedName,
+          Email: trimmedEmail,
+          Company: trimmedCompany || 'Not provided',
+          '1. What platforms are you launching first?': answers.platform,
+          '2. Does your app require Apple-specific hardware?': answers.hardware,
+          '3. What are your core performance demands?': answers.performance,
+          '4. What is your target market launch timeline?': answers.timeline,
+          Recommendation: fit.title,
+          Explanation: fit.body,
+          'Native iOS fit': `${fit.native} / 99`,
+          'Cross-platform fit': `${fit.cross} / 99`,
+          full_name: trimmedName,
+          email: trimmedEmail,
+          company: trimmedCompany,
+          platform: answers.platform,
+          hardware: answers.hardware,
+          performance: answers.performance,
+          timeline: answers.timeline,
+        },
+      })
+
+      const outData = {
+        result: fit,
+        answers: { ...answers },
+        contact: {
+          name: trimmedName,
+          email: trimmedEmail,
+          company: trimmedCompany,
+        },
+      }
+      setSubmittedData(outData)
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }, 60)
+    } catch (err) {
+      setError(err?.message || 'Submission failed. Please retry.')
+    } finally {
+      setSending(false)
+    }
   }
 
-  const getRecommendation = () => {
-    const vals = Object.values(answers)
-    const countA = vals.filter((v) => v === 'A').length
-    const countB = vals.filter((v) => v === 'B').length
-    const countC = vals.filter((v) => v === 'C').length
+  const handleDownloadPDF = async () => {
+    if (!submittedData) return
+    setPdfDownloading(true)
+    setPdfError('')
 
-    if (countA >= 2 && countA > countB && countA > countC) {
-      return {
-        badge: 'Mostly A',
-        title: 'Native iOS app development in Swift and SwiftUI fits best.',
+    try {
+      const r = submittedData.result
+      const a = submittedData.answers
+      const c = submittedData.contact
+      const logoURL = '/assets/ID-logo.jpg'
+
+      const clean = (v) =>
+        String(v == null ? '' : v)
+          .normalize('NFKD')
+          .replace(/[\u2018\u2019]/g, "'")
+          .replace(/[\u2013\u2014]/g, '-')
+          .replace(/[^\x20-\x7e]/g, '')
+      const pdfEsc = (v) =>
+        clean(v).replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)')
+      const date = new Intl.DateTimeFormat('en-GB', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }).format(new Date())
+
+      let jpg = null
+      try {
+        const img = new Image()
+        img.crossOrigin = 'anonymous'
+        img.src = logoURL
+        await new Promise((ok, fail) => {
+          img.onload = ok
+          img.onerror = fail
+          if (img.complete && img.naturalWidth) ok()
+        })
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+        const scale = Math.min(1, 500 / img.naturalWidth, 500 / img.naturalHeight)
+        const width = Math.max(1, Math.round(img.naturalWidth * scale))
+        const height = Math.max(1, Math.round(img.naturalHeight * scale))
+        canvas.width = width
+        canvas.height = height
+        ctx.fillStyle = '#ffffff'
+        ctx.fillRect(0, 0, width, height)
+        ctx.drawImage(img, 0, 0, width, height)
+        const encoded = canvas.toDataURL('image/jpeg', 0.87).split(',')[1]
+        const binary = atob(encoded)
+        const bytes = new Uint8Array(binary.length)
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i)
+        jpg = { bytes, width, height }
+      } catch (err) {
+        console.warn('Site logo not available for PDF; using wordmark', err)
       }
-    }
-    if (countB >= 2 && countB > countA && countB > countC) {
-      return {
-        badge: 'Mostly B',
-        title: 'Start native on iOS, then add Android with Flutter or React Native.',
+
+      const enc = new TextEncoder()
+      const parts = []
+      const offsets = [0]
+      let byteLength = 0
+      const push = (x) => {
+        const bytes = typeof x === 'string' ? enc.encode(x) : x
+        parts.push(bytes)
+        byteLength += bytes.length
       }
-    }
-    if (countC >= 2 && countC > countA && countC > countB) {
-      return {
-        badge: 'Mostly C',
-        title: 'Cross-platform development on Flutter or React Native fits best.',
+      let objNum = 0
+      const entries = []
+      const alloc = () => {
+        entries.push(null)
+        return ++objNum
       }
-    }
-    return {
-      badge: 'Mixed answers',
-      title: 'A short discovery sprint with an iOS engineer settles it.',
+      const put = (id, content) => {
+        entries[id - 1] = content
+      }
+      const rootId = alloc()
+      const pagesId = alloc()
+      const regular = alloc()
+      const bold = alloc()
+      let imageId = null
+      if (jpg) {
+        imageId = alloc()
+        put(imageId, [
+          '<< /Type /XObject /Subtype /Image /Width ' +
+            jpg.width +
+            ' /Height ' +
+            jpg.height +
+            ' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ' +
+            jpg.bytes.length +
+            ' >>\nstream\n',
+          jpg.bytes,
+          '\nendstream',
+        ])
+      }
+      put(regular, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>')
+      put(bold, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>')
+
+      const W = 595
+      const H = 842
+      const LM = 42
+      const RIGHT = 553
+      const TABLE = 511
+      const pages = []
+      let page
+
+      const rgb = (hex) => {
+        const h = hex.replace('#', '')
+        return [0, 2, 4].map((i) => (parseInt(h.slice(i, i + 2), 16) / 255).toFixed(3))
+      }
+      const addText = (str, x, y, size = 10, boldFlag = false, color = '#222222') => {
+        const col = rgb(color)
+        page.ops.push(
+          col.join(' ') +
+            ' rg BT /' +
+            (boldFlag ? 'F2' : 'F1') +
+            ' ' +
+            size +
+            ' Tf ' +
+            x +
+            ' ' +
+            y +
+            ' Td (' +
+            pdfEsc(str) +
+            ') Tj ET'
+        )
+      }
+      const rect = (x, y, w, h, fill, stroke) => {
+        page.ops.push(rgb(fill).join(' ') + ' rg ' + x + ' ' + y + ' ' + w + ' ' + h + ' re f')
+        if (stroke)
+          page.ops.push(
+            rgb(stroke).join(' ') + ' RG 0.6 w ' + x + ' ' + y + ' ' + w + ' ' + h + ' re S'
+          )
+      }
+      const line = (x1, y1, x2, y2, color = '#dddddd') =>
+        page.ops.push(rgb(color).join(' ') + ' RG 0.7 w ' + x1 + ' ' + y1 + ' m ' + x2 + ' ' + y2 + ' l S')
+
+      const startPage = () => {
+        page = { ops: [], annotations: [] }
+        pages.push(page)
+        rect(0, 0, W, H, '#ffffff')
+
+        if (imageId) {
+          const maxLogoW = 150
+          const maxLogoH = 48
+          const scale = Math.min(maxLogoW / jpg.width, maxLogoH / jpg.height)
+          const logoW = jpg.width * scale
+          const logoH = jpg.height * scale
+          const logoX = 43
+          const logoTop = H - 30
+          const logoY = logoTop - logoH
+          page.ops.push(
+            'q ' + logoW + ' 0 0 ' + logoH + ' ' + logoX + ' ' + logoY + ' cm /Logo Do Q'
+          )
+        } else {
+          addText('INCEPTIVES DIGITAL', LM, 782, 17, true, '#202020')
+        }
+
+        addText('iOS APP DEVELOPMENT', LM, 735, 12, true, '#202020')
+        addText('Generated: ' + date, RIGHT - 175, 742, 9, false, '#555555')
+        line(LM, 733, RIGHT, 733, '#d8d8d8')
+        line(LM, 52, RIGHT, 52, '#d6d6d6')
+        addText(
+          '(c) ' + new Date().getFullYear() + ' Inceptives Digital. All rights reserved.',
+          LM,
+          37,
+          8,
+          false,
+          '#606060'
+        )
+        const priv = 'Privacy Policy: inceptivesdigital.com/privacy-policy'
+        addText(priv, LM, 23, 8, false, '#333333')
+        const ann = alloc()
+        page.annotations.push(ann)
+        put(
+          ann,
+          '<< /Type /Annot /Subtype /Link /Rect [42 18 300 35] /Border [0 0 0] /A << /S /URI /URI (https://inceptivesdigital.com/privacy-policy) >> >>'
+        )
+        addText('Page ' + pages.length, 515, 37, 8, false, '#606060')
+        page.y = 700
+      }
+
+      const ensure = (height) => {
+        if (page.y - height < 75) startPage()
+      }
+      const wrap = (value, limit = 60) => {
+        const words = clean(value).split(/\s+/)
+        const lines = []
+        let ln = ''
+        for (const word of words) {
+          if (!word) continue
+          if ((ln + ' ' + word).trim().length > limit && ln) {
+            lines.push(ln)
+            ln = word
+          } else {
+            ln = (ln + ' ' + word).trim()
+          }
+        }
+        lines.push(ln)
+        return lines
+      }
+      const section = (title) => {
+        ensure(49)
+        addText(title.toUpperCase(), LM, page.y, 12, true, '#252525')
+        page.y -= 12
+        line(LM, page.y, RIGHT, page.y)
+        page.y -= 16
+      }
+      const row = (key, value) => {
+        const left = wrap(key, 24)
+        const right = wrap(value, 61)
+        const count = Math.max(left.length, right.length)
+        const height = Math.max(34, 14 + count * 13)
+        ensure(height + 5)
+        rect(LM, page.y - height, 155, height, '#f3f3f3', '#dadada')
+        rect(LM + 155, page.y - height, TABLE - 155, height, '#ffffff', '#dadada')
+        left.forEach((v, i) => addText(v, LM + 10, page.y - 17 - i * 13, 9, true))
+        right.forEach((v, i) => addText(v, LM + 165, page.y - 17 - i * 13, 9, false))
+        page.y -= height
+      }
+
+      startPage()
+      section('Contact Details')
+      row('Full Name', c.name)
+      row('Email', c.email)
+      row('Company', c.company || 'Not provided')
+      page.y -= 18
+
+      section('Assessment Questions & Answers')
+      QUIZ_QUESTIONS.forEach((q, i) => row(`${i + 1}. ${q.question}`, a[q.key] || ''))
+      page.y -= 18
+
+      section('Architecture Recommendation')
+      row('Recommended approach', r.title)
+      row('Explanation', r.body)
+      row('Native iOS fit', `${r.native} / 99 (indicative)`)
+      row('Cross-platform fit', `${r.cross} / 99 (indicative)`)
+      page.y -= 18
+
+      section('Assessment Summary')
+      ;(r.reasons || []).forEach((reason, i) => row(`Factor ${i + 1}`, reason))
+      ensure(45)
+      page.y -= 15
+      wrap(
+        'Scores are rule-based indicators, not probabilities. Confirm final architecture during technical discovery.',
+        95
+      ).forEach((lineText) => {
+        addText(lineText, LM, page.y, 9, false, '#666666')
+        page.y -= 13
+      })
+
+      const kids = []
+      pages.forEach((p) => {
+        const stream = p.ops.join('\n') + '\n'
+        const contentsId = alloc()
+        const pageId = alloc()
+        put(
+          contentsId,
+          '<< /Length ' + enc.encode(stream).length + ' >>\nstream\n' + stream + 'endstream'
+        )
+        const resources =
+          '<< /Font << /F1 ' +
+          regular +
+          ' 0 R /F2 ' +
+          bold +
+          ' 0 R >>' +
+          (imageId ? ' /XObject << /Logo ' + imageId + ' 0 R >>' : '') +
+          ' >>'
+        put(
+          pageId,
+          '<< /Type /Page /Parent ' +
+            pagesId +
+            ' 0 R /MediaBox [0 0 595 842] /Resources ' +
+            resources +
+            ' /Annots [' +
+            p.annotations.map((id) => id + ' 0 R').join(' ') +
+            '] /Contents ' +
+            contentsId +
+            ' 0 R >>'
+        )
+        kids.push(pageId + ' 0 R')
+      })
+
+      put(pagesId, '<< /Type /Pages /Count ' + kids.length + ' /Kids [' + kids.join(' ') + '] >>')
+      put(rootId, '<< /Type /Catalog /Pages ' + pagesId + ' 0 R >>')
+      push('%PDF-1.4\n%INCEPTIVES\n')
+      entries.forEach((value, i) => {
+        offsets.push(byteLength)
+        push(i + 1 + ' 0 obj\n')
+        if (Array.isArray(value)) value.forEach(push)
+        else push(value)
+        push('\nendobj\n')
+      })
+      const xref = byteLength
+      push('xref\n0 ' + (entries.length + 1) + '\n0000000000 65535 f \n')
+      offsets.slice(1).forEach((n) => push(String(n).padStart(10, '0') + ' 00000 n \n'))
+      push(
+        'trailer\n<< /Size ' +
+          (entries.length + 1) +
+          ' /Root ' +
+          rootId +
+          ' 0 R >>\nstartxref\n' +
+          xref +
+          '\n%%EOF'
+      )
+
+      const blob = new Blob(parts, { type: 'application/pdf' })
+      const url = URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = url
+      link.download = 'Inceptives-iOS-Architecture-Assessment.pdf'
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      setTimeout(() => URL.revokeObjectURL(url), 60000)
+    } catch (err) {
+      console.error('PDF generation failed', err)
+      setPdfError('PDF download failed: ' + (err?.message || 'Please retry.'))
+    } finally {
+      setPdfDownloading(false)
     }
   }
-
-  const rec = getRecommendation()
 
   return (
     <section className="py-16 sm:py-24 bg-[#141414]">
+      <style>{QUIZ_CSS}</style>
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
           {/* Left Column: Copy & Internal Links */}
           <div className="lg:col-span-6 text-left">
             <span className="text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-wider block mb-2.5">
@@ -107,229 +884,266 @@ export default function IosArchitectureQuiz() {
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2] mb-5">
               Native iOS App Development or Cross-Platform?{' '}
-              <span className="text-[#00CE44]">4 Questions to Get Your iPhone App Architecture Right</span>
+              <span className="text-[#00CE44]">
+                4 Questions to Get Your iPhone App Architecture Right
+              </span>
             </h2>
 
             <div className="space-y-4 text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
               <p>
-                When planning a new product, choosing the right foundational framework dictates your long-term success. While many mobile app development companies push whichever tech stack is easiest to sell, our architects at Inceptives Digital evaluate your exact roadmap first.
+                When planning a new product, choosing the right foundational framework dictates your
+                long-term success. While many mobile app development companies push whichever tech
+                stack is easiest to sell, our architects at Inceptives Digital evaluate your exact
+                roadmap first.
               </p>
               <p>
-                Native iOS development is essential when your product requires maximum processing speed, tight hardware integrations (ARKit, LiDAR, HealthKit, Apple Intelligence), or deep integration across the Apple ecosystem (watchOS, visionOS).
+                Native iOS development is essential when your product requires maximum processing
+                speed, tight hardware integrations (ARKit, LiDAR, HealthKit, Apple Intelligence), or
+                deep integration across the Apple ecosystem (watchOS, visionOS).
               </p>
               <p>
-                <a
-                  href="https://inceptivesdigital.com/cross-platform-app-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                <Link
+                  to="/cross-platform-app-development"
+                  className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
                 >
                   Cross-platform app development
-                </a>{' '}
-                is best reserved for lightweight MVPs, where launching on both iOS and Android simultaneously with a single team outweighs native performance needs.
+                </Link>{' '}
+                is best reserved for lightweight MVPs, where launching on both iOS and Android
+                simultaneously with a single team outweighs native performance needs.
               </p>
               <p>
                 Not sure whether{' '}
-                <a
-                  href="https://inceptivesdigital.com/blog/native-vs-hybrid-vs-cross-platform-app-development"
-                  className="underline text-[#00CE44] hover:text-white transition-colors"
+                <Link
+                  to="/blog/native-vs-hybrid-vs-cross-platform-app-development"
+                  className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
                 >
                   native iOS app development or cross-platform
-                </a>{' '}
-                tools best align with your commercial targets? Answer four quick questions to identify the optimal path for your software.
+                </Link>{' '}
+                tools best align with your commercial targets? Answer four quick questions to
+                identify the optimal path for your software.
               </p>
             </div>
           </div>
 
-          {/* Right Column: Interactive 4-Question + Form + Result Card */}
+          {/* Right Column: Converted PHP Shortcode [ios_architecture_form] */}
           <div className="lg:col-span-6">
-            <div className="p-7 sm:p-9 rounded-[20px] bg-[#202020] border border-white/10 text-left">
-              
-              {/* Progress Indicator */}
-              {step <= 4 && (
-                <div className="mb-6">
-                  <div className="flex items-center justify-between text-xs text-white/70 mb-2 font-medium">
-                    <span>
-                      {step < 4 ? `Question ${step + 1} of 4` : 'Final Step'}
-                    </span>
-                    <span>{Math.round(((step + 1) / 5) * 100)}%</span>
-                  </div>
-                  <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-[#00CE44] transition-all duration-300"
-                      style={{ width: `${((step + 1) / 5) * 100}%` }}
-                    />
-                  </div>
+            <div
+              id="id-ios-quiz-root"
+              className="id-ios-quiz"
+              aria-label="iOS APP DEVELOPMENT"
+              ref={resultRef}
+            >
+              <div className="id-ios-card">
+                <div className="id-ios-top">
+                  <span>
+                    {submittedData ? 'YOUR RECOMMENDATION' : 'IOS APP DEVELOPMENT'}
+                  </span>
+                  <strong className="id-ios-count">
+                    {submittedData ? 'COMPLETE' : `STEP ${step + 1} OF 5`}
+                  </strong>
                 </div>
-              )}
 
-              {/* Steps 0..3: The 4 Questions */}
-              {step < 4 && (
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-5 leading-snug">
-                    {questions[step].question}
-                  </h3>
+                <div className="id-ios-track">
+                  <div
+                    className="id-ios-progress"
+                    style={{
+                      width: submittedData ? '100%' : `${(step + 1) * 20}%`,
+                    }}
+                  />
+                </div>
 
-                  <div className="space-y-3">
-                    {questions[step].options.map((opt) => {
-                      const isSelected = answers[step] === opt.key
-                      return (
+                {!submittedData ? (
+                  <form noValidate className="id-ios-form" onSubmit={handleSubmit}>
+                    {step < 4 && (
+                      <fieldset className="id-ios-step" data-step={step}>
+                        <legend>
+                          {step + 1}. {QUIZ_QUESTIONS[step].question}
+                        </legend>
+                        <div className="id-ios-options">
+                          {QUIZ_QUESTIONS[step].options.map((option) => {
+                            const key = QUIZ_QUESTIONS[step].key
+                            const isChecked = answers[key] === option
+                            return (
+                              <label
+                                key={option}
+                                className={`id-ios-option${isChecked ? ' is-checked' : ''}`}
+                              >
+                                <input
+                                  type="radio"
+                                  name={key}
+                                  value={option}
+                                  checked={isChecked}
+                                  onChange={() => handleSelectOption(key, option)}
+                                  required
+                                />
+                                <span>{option}</span>
+                              </label>
+                            )
+                          })}
+                        </div>
+                      </fieldset>
+                    )}
+
+                    {step === 4 && (
+                      <fieldset className="id-ios-step" data-step={4}>
+                        <legend>5. Where should we send your assessment?</legend>
+                        <div className="id-ios-contact">
+                          <label>
+                            Full Name
+                            <input
+                              name="full_name"
+                              type="text"
+                              autoComplete="name"
+                              maxLength={120}
+                              placeholder="Full name"
+                              value={contact.full_name}
+                              onChange={(e) =>
+                                setContact((prev) => ({ ...prev, full_name: e.target.value }))
+                              }
+                              required
+                            />
+                          </label>
+                          <label>
+                            Email
+                            <input
+                              name="email"
+                              type="email"
+                              autoComplete="email"
+                              maxLength={254}
+                              placeholder="Email address"
+                              value={contact.email}
+                              onChange={(e) =>
+                                setContact((prev) => ({ ...prev, email: e.target.value }))
+                              }
+                              required
+                            />
+                          </label>
+                          <label>
+                            Company Name
+                            <input
+                              name="company"
+                              type="text"
+                              autoComplete="organization"
+                              maxLength={120}
+                              placeholder="Company (optional)"
+                              value={contact.company}
+                              onChange={(e) =>
+                                setContact((prev) => ({ ...prev, company: e.target.value }))
+                              }
+                            />
+                          </label>
+                        </div>
+                        <p className="id-ios-privacy">
+                          Your answers and contact information will be emailed to our team (
+                          {SEO_RECIPIENT_EMAIL}). After submission, you can download your complete
+                          assessment as a PDF.
+                        </p>
+                      </fieldset>
+                    )}
+
+                    <div className="id-ios-buttons">
+                      {step > 0 && (
                         <button
-                          key={opt.key}
+                          className="id-ios-back"
                           type="button"
-                          onClick={() => handleSelectOption(step, opt.key)}
-                          className={`w-full text-left px-5 py-4 rounded-none text-xs sm:text-sm font-medium transition-all cursor-pointer flex items-center justify-between border ${
-                            isSelected
-                              ? 'bg-[#00CE44] text-black border-[#00CE44] font-bold'
-                              : 'bg-[#2a2a2a] text-white border-white/10 hover:border-[#00CE44]'
-                          }`}
+                          onClick={handlePrev}
+                          disabled={sending}
                         >
-                          <span>{opt.label}</span>
-                          <span
-                            className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
-                              isSelected ? 'border-black bg-black text-[#00CE44]' : 'border-white/40'
-                            }`}
-                          >
-                            {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44]" />}
-                          </span>
+                          Previous
                         </button>
-                      )
-                    })}
-                  </div>
+                      )}
 
-                  {step > 0 && (
-                    <div className="mt-6 flex items-center justify-between">
+                      {step < 4 && (
+                        <button
+                          className="id-ios-next"
+                          type="button"
+                          onClick={handleNext}
+                        >
+                          Next
+                        </button>
+                      )}
+
+                      {step === 4 && (
+                        <button
+                          className="id-ios-send"
+                          type="submit"
+                          disabled={sending}
+                        >
+                          {sending ? 'Sending...' : 'Send & View Result'}
+                        </button>
+                      )}
+                    </div>
+
+                    <div className="id-ios-error" role="alert" aria-live="polite">
+                      {error}
+                    </div>
+                  </form>
+                ) : (
+                  <div className="id-ios-result" aria-live="polite">
+                    <div className="id-ios-eyebrow">Assessment submitted successfully</div>
+                    <h2>{submittedData.result.title}</h2>
+                    <p>{submittedData.result.body}</p>
+
+                    <div className="id-ios-metrics">
+                      {[
+                        ['Native iOS', submittedData.result.native],
+                        ['Cross-platform', submittedData.result.cross],
+                      ].map(([label, score]) => (
+                        <div key={label} className="id-ios-metric">
+                          <span>{label}</span>
+                          <strong>{score}</strong>
+                          <div className="id-ios-track">
+                            <div
+                              className="id-ios-progress"
+                              style={{ width: `${score}%` }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="id-ios-summary">
+                      <h3>Your submitted answers</h3>
+                      <ul>
+                        {submittedData.result.reasons.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="id-ios-result-actions">
                       <button
                         type="button"
-                        onClick={() => setStep(step - 1)}
-                        className="text-xs sm:text-sm text-white/80 hover:text-[#00CE44] font-medium cursor-pointer"
+                        className="id-ios-download"
+                        onClick={handleDownloadPDF}
+                        disabled={pdfDownloading}
                       >
-                        ← Back
+                        {pdfDownloading ? 'Preparing branded PDF...' : 'Download Complete PDF'}
                       </button>
+                      <a
+                        href="tel:(469)-788-8527"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Talk to an iOS architect
+                      </a>
                     </div>
-                  )}
-                </div>
-              )}
 
-              {/* Step 4: Lead Capture Form */}
-              {step === 4 && (
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
-                    Where should we send your iOS recommendation?
-                  </h3>
-                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed mb-4">
-                    Get a personalized PDF with the recommended development approach for your iOS app.
-                  </p>
+                    {pdfError && (
+                      <p className="id-ios-error" role="alert">
+                        {pdfError}
+                      </p>
+                    )}
 
-                  <div>
-                    <label className="block text-xs font-medium text-white/80 mb-1.5">
-                      Full name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Full name"
-                      value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-[10px] bg-[#141414] border border-white/15 text-white text-sm focus:outline-none focus:border-[#00CE44]"
-                    />
+                    <p className="id-ios-footnote">
+                      Scores are indicative rule-based fit values, not probabilities. Confirm the
+                      technical approach during discovery.
+                    </p>
                   </div>
-
-                  <div>
-                    <label className="block text-xs font-medium text-white/80 mb-1.5">
-                      Work email
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="Work email"
-                      value={formData.workEmail}
-                      onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
-                      className="w-full px-4 py-3 rounded-[10px] bg-[#141414] border border-white/15 text-white text-sm focus:outline-none focus:border-[#00CE44]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-medium text-white/80 mb-1.5">
-                      Company (optional)
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Company (optional)"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-[10px] bg-[#141414] border border-white/15 text-white text-sm focus:outline-none focus:border-[#00CE44]"
-                    />
-                  </div>
-
-                  <div className="pt-3 flex flex-wrap items-center justify-between gap-4">
-                    <button
-                      type="button"
-                      onClick={() => setStep(3)}
-                      className="px-5 py-3 rounded-none bg-transparent border border-white/25 text-white text-xs sm:text-sm font-medium hover:border-white cursor-pointer"
-                    >
-                      Back
-                    </button>
-
-                    <button
-                      type="submit"
-                      className="px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-xs sm:text-sm transition-colors cursor-pointer"
-                    >
-                      Show my recommendation
-                    </button>
-                  </div>
-                </form>
-              )}
-
-              {/* Step 5: Recommendation Result */}
-              {step === 5 && (
-                <div className="space-y-5">
-                  <div className="inline-block px-3 py-1 rounded-full bg-[#00CE44]/15 text-[#00CE44] text-xs font-bold">
-                    Your result — {rec.badge}
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
-                    {rec.title}
-                  </h3>
-
-                  <div className="p-4 rounded-[12px] bg-[#161616] border border-white/10 space-y-2 text-xs sm:text-sm text-white/80">
-                    <div>
-                      <strong className="text-[#00CE44]">Mostly A:</strong> Native iOS app development in Swift and SwiftUI fits best.
-                    </div>
-                    <div>
-                      <strong className="text-[#00CE44]">Mostly B:</strong> Start native on iOS, then add Android with Flutter or React Native.
-                    </div>
-                    <div>
-                      <strong className="text-[#00CE44]">Mostly C:</strong> Cross-platform development on Flutter or React Native fits best.
-                    </div>
-                    <div>
-                      <strong className="text-[#00CE44]">Mixed answers:</strong> A short discovery sprint with an iOS engineer settles it.
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setAnswers({})
-                        setStep(0)
-                      }}
-                      className="text-xs sm:text-sm text-white/70 hover:text-white underline cursor-pointer"
-                    >
-                      Retake Quiz
-                    </button>
-
-                    <a
-                      href="#contact"
-                      className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-xs sm:text-sm transition-colors"
-                    >
-                      Discuss With an iOS Architect
-                    </a>
-                  </div>
-                </div>
-              )}
-
+                )}
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

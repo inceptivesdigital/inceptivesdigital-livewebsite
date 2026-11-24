@@ -32,7 +32,7 @@ export default function AsoStatsBar() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-center">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col items-center justify-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 flex items-center justify-center p-0 border-0 bg-transparent">
+                <div className="w-11 h-11 mb-3 flex items-center justify-center">
                   <img
                     src={s.icon}
                     alt={s.label}
@@ -40,10 +40,10 @@ export default function AsoStatsBar() {
                     loading="lazy"
                   />
                 </div>
-                <div className="text-3xl sm:text-4xl lg:text-[46px] font-black text-[#00CE44] tracking-tight leading-none mb-3">
+                <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                   {s.value}
                 </div>
-                <div className="text-white text-sm sm:text-[15px] lg:text-base font-medium tracking-normal">
+                <div className="text-white text-[14px] sm:text-[15px] font-medium">
                   {s.label}
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function AsoStatsBar() {
                     90% of App Store visitors never scroll past the first 10% of a page. That is where installs get decided, and it is the same window a solid{' '}
                     <Link
                       to="/product-launch-strategy"
-                      className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+                      className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
                     >
                       product launch strategy
                     </Link>{' '}

@@ -75,7 +75,7 @@ export default function DevelopmentProcess() {
           With the product scope in place, designers translate critical user journeys into{' '}
           <a
             href="https://inceptivesdigital.com/interactive-prototyping"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             interactive Figma prototypes
           </a>
@@ -93,7 +93,7 @@ export default function DevelopmentProcess() {
           Once the team approves the designs, our developers begin native or cross-platform engineering in two-week sprints. Our{' '}
           <a
             href="https://inceptivesdigital.com/backend-api-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             backend API development
           </a>{' '}
@@ -119,7 +119,7 @@ export default function DevelopmentProcess() {
           Following QA approval, the release team prepares production builds for{' '}
           <a
             href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Apple App Store and Google Play submission
           </a>

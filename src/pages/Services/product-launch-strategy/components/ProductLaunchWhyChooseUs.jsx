@@ -15,7 +15,7 @@ export default function ProductLaunchWhyChooseUs() {
           The average{' '}
           <Link
             to="/blog/app-development-timeline"
-            className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
           >
             app development timeline
           </Link>{' '}

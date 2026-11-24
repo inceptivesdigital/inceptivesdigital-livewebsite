@@ -1,32 +1,40 @@
 export default function FlutterCostSection() {
   const tiers = [
     {
-      name: 'Simple Apps',
-      price: '$15k to $40k',
-      desc: (
-        <>
-          A focused MVP or single-purpose app with core screens, light integrations, and a straightforward user flow, priced closer to the lower end of typical{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mvp-development-cost"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
-          >
-            MVP development cost
-          </a>{' '}
-          figures. Built for teams that need to validate an idea quickly without overbuilding from the start.
-        </>
-      ),
+      name: '1. Simple Flutter Apps',
+      price: '$15K–$40K',
+      desc: 'Launch a focused Flutter application that validates your core product concept.',
+      features: [
+        'Essential screens and core user flow',
+        'Standard user authentication',
+        'Basic API integrations',
+        'iOS and Android deployment',
+      ],
     },
     {
-      name: 'Moderate Apps',
-      price: '$40k to $80k',
-      desc: 'Multi-flow products with richer UI, standard third-party integrations, authentication, and consistent performance across iOS and Android. Suited for businesses moving beyond MVP into a production-ready product.',
+      name: '2. Moderate Flutter Apps',
+      price: '$40K–$80K',
+      desc: 'Develop a production-focused Flutter application with richer functionality and connected business workflows.',
+      features: [
+        'Custom UI and multi-role workflows',
+        'Backend and payment integrations',
+        'Push notifications',
+        'Cross-device QA',
+        'App store release support',
+      ],
     },
     {
-      name: 'Complex Apps',
-      price: '$80k to $150k+',
-      desc: 'Highly complex products with custom backend architecture, real-time features, advanced security, AI or IoT integrations, and ongoing optimization requirements. Built for products that need to perform at scale from launch.',
+      name: '3. Complex Flutter Apps',
+      price: '$80K–$150K+',
+      desc: 'Engineer complex Flutter products around demanding platform requirements and advanced operational workflows.',
+      features: [
+        'Custom backend architecture',
+        'Real-time data synchronization',
+        'Advanced native integrations',
+        'Applicable security controls',
+        'Performance profiling',
+        'Multi-platform release planning',
+      ],
     },
   ]
 
@@ -34,23 +42,14 @@ export default function FlutterCostSection() {
     <>
       <section className="py-16 sm:py-24 bg-[#000000]">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-          {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+          {/* Section Header */}
           <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
               How Much Does{' '}
               <span className="text-[#00CE44]">Flutter App Development</span> Cost?
             </h2>
             <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-              Flutter app development cost runs from $15,000 for simple apps to $150,000 and above for enterprise-grade products with complex backend and integration requirements, and the same{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/factors-affecting-app-development-cost"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#00CE44] underline hover:text-white transition-colors"
-              >
-                factors affecting app development cost
-              </a>{' '}
-              apply whether the build is Flutter, native, or something hybrid.
+              Flutter app development costs at Inceptives Digital start at $15,000 and exceed $150,000 for complex platforms. Our engineers tailor estimates to your product&apos;s scope and platform requirements.
             </p>
           </div>
 
@@ -61,38 +60,32 @@ export default function FlutterCostSection() {
                 key={tier.name}
                 className="p-8 sm:p-9 rounded-[20px] bg-[#242424] text-left flex flex-col justify-start border-0 shadow-none"
               >
-                {/* 1. Heading */}
                 <h3 className="text-xl sm:text-2xl font-bold text-white pb-5 mb-5 border-b border-white/25">
                   {tier.name}
                 </h3>
 
-                {/* 2. Price */}
                 <div className="pb-5 mb-5 border-b border-white/25">
-                  <div className="text-lg sm:text-xl lg:text-[22px] font-bold text-[#00CE44] tracking-tight">
+                  <div className="text-lg sm:text-xl lg:text-[24px] font-bold text-[#00CE44] tracking-tight">
                     {tier.price}
                   </div>
                 </div>
 
-                {/* 3. Description */}
-                <p className="text-sm sm:text-[15px] font-normal text-white/90 leading-relaxed">
-                  {tier.desc}
-                </p>
+                <div className="pb-5 mb-5 border-b border-white/25">
+                  <p className="text-xs sm:text-sm font-normal text-white/90 leading-relaxed">
+                    {tier.desc}
+                  </p>
+                </div>
+
+                <ul className="space-y-2.5 text-white/90 text-xs sm:text-sm leading-relaxed">
+                  {tier.features.map((feat) => (
+                    <li key={feat} className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
-          </div>
-
-          {/* Footer Note + Centered Primary CTA */}
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed mb-7">
-              Tell us what you are building and get a scoped Flutter app development cost.
-            </p>
-
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
-            >
-              Get a Scoped Estimate
-            </a>
           </div>
         </div>
       </section>
@@ -117,21 +110,11 @@ export default function FlutterCostSection() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
               <div className="lg:col-span-7 text-left">
                 <h2 className="text-2xl sm:text-3xl lg:text-[35px] font-bold text-white tracking-tight leading-[1.2] mb-4 max-w-2xl">
-                  <span className="text-[#00CE44]">Let&apos;s Launch Your App</span>{' '}
-                  Across Every Device With a Single Codebase
+                  Get a <span className="text-[#00CE44]">Flutter Development Quote</span> Based on Your Scope
                 </h2>
 
                 <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-7 max-w-2xl">
-                  Bring the idea. We handle the scope, the build, and the estimate, starting with the same{' '}
-                  <a
-                    href="https://inceptivesdigital.com/product-launch-strategy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#00CE44] underline hover:text-white transition-colors"
-                  >
-                    product launch strategy
-                  </a>{' '}
-                  work that shapes every engagement here. Everything needed to make a confident decision before the build starts.
+                  Have the features and target platforms in mind? Our Flutter team can review your requirements and prepare a development estimate reflecting the engineering work your product demands.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4">
@@ -139,7 +122,7 @@ export default function FlutterCostSection() {
                     href="#contact"
                     className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
                   >
-                    Let&apos;s Get Started
+                    Estimate My Flutter App Cost
                   </a>
                 </div>
               </div>
@@ -147,7 +130,7 @@ export default function FlutterCostSection() {
               <div className="lg:col-span-5 flex justify-center lg:justify-end items-center">
                 <img
                   src="/assets/flutter-app/comp-flutercta.png"
-                  alt="Let's Launch Your App Across Every Device With a Single Codebase"
+                  alt="Get a Flutter Development Quote Based on Your Scope"
                   className="w-full max-w-[260px] sm:max-w-[310px] lg:max-w-[360px] xl:max-w-[400px] h-auto object-contain block select-none"
                   loading="lazy"
                 />

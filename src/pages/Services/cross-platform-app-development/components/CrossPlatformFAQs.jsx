@@ -62,7 +62,7 @@ const faqs = [
             href="https://inceptivesdigital.com/food-delivery-app-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             on-demand
           </a>
@@ -71,7 +71,7 @@ const faqs = [
             href="https://inceptivesdigital.com/education-app-development-company"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             education
           </a>{' '}

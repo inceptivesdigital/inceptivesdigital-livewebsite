@@ -23,7 +23,7 @@ export default function BlockchainTechStack() {
             Our blockchain development services are powered by a diverse and advanced tech stack. As a promising{' '}
             <Link
               to="/mobile-app-development"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
             >
               mobile app development company,
             </Link>{' '}

@@ -15,17 +15,18 @@ export default function EcommerceFinalCta() {
           {/* Left Copy */}
           <div className="lg:col-span-6 flex flex-col items-start text-left">
             <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.16] text-white mb-5">
-              10X Your Sales &amp; Scale Faster with Our{' '}
-              <span className="text-[#00CE44]">Ecommerce Development Services</span>
+              Hire{' '}
+              <span className="text-[#00CE44]">eCommerce App Developers</span>{' '}
+              for Your Next Commerce Project
             </h2>
             <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.68] font-normal max-w-[600px] mb-8">
-              Launch a custom ecommerce app designed to boost conversions, improve user engagement, and capture your share of the $5T global ecommerce market.
+              Bring your shopping app or marketplace requirements to Inceptives Digital and discuss the engineering team needed to deliver your product.
             </p>
             <a
               href="#contact"
               className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
             >
-              Build Your Ecommerce App
+              Hire Our eCommerce Developers
             </a>
           </div>
 
@@ -34,7 +35,7 @@ export default function EcommerceFinalCta() {
             <div className="sm:col-span-7 flex justify-center">
               <img
                 src="/assets/ecommerce/ecommerces-section.png"
-                alt="10X Your Sales with Custom Ecommerce App Development"
+                alt="Hire eCommerce App Developers for Your Next Commerce Project"
                 className="w-full max-w-[340px] h-auto object-contain drop-shadow-[0_24px_50px_rgba(0,206,68,0.18)]"
                 loading="lazy"
               />

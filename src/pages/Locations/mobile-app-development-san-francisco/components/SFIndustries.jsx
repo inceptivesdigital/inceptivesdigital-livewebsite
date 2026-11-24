@@ -69,12 +69,12 @@ export default function SFIndustries() {
         </div>
 
         {/* 10 Industry Cards: Clean grid, NO paragraph text, filled green icons with NO bg/border/padding */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 justify-center">
+        <div className="flex flex-wrap justify-center gap-5 sm:gap-6 items-stretch">
           {industries.map((ind) => (
             <Link
               key={ind.title}
               to={ind.link}
-              className="p-6 sm:p-7 rounded-[18px] bg-[#15161b] border border-white/5 hover:border-[#00CE44]/50 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1 group"
+              className="group w-[calc(50%-10px)] sm:w-[calc(33.333%-16px)] lg:w-[calc(20%-20px)] px-6 py-8 sm:py-9 rounded-[18px] bg-[#1c1d20] hover:bg-[#222429] border border-white/[0.08] hover:border-[#00CE44]/60 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1 self-stretch select-none"
             >
               {/* Clean Icon */}
               <div className="w-12 h-12 mb-4 flex items-center justify-center shrink-0">

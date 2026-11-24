@@ -1,16 +1,18 @@
+import { Link } from 'react-router-dom'
+
 export default function KmpIndustries() {
   const industries = [
     {
       name: 'Fintech',
       desc: 'Deterministic financial calculations, encrypted transactions, and multi-currency ledger logic shared identically across iOS and Android.',
       icon: '/assets/industries-icons/industries-fintech.svg',
-      url: 'https://inceptivesdigital.com/fintech-app-development',
+      url: '/fintech-app-development',
     },
     {
       name: 'Healthtech',
       desc: 'HIPAA-aligned clinical workflows, medical data processing, and offline-first patient records with native iOS and Android interfaces.',
       icon: '/assets/industries-icons/industries-healthcare.svg',
-      url: 'https://inceptivesdigital.com/healthcare-app-development',
+      url: '/healthcare-app-development',
     },
     {
       name: 'Enterprise SaaS',
@@ -31,7 +33,7 @@ export default function KmpIndustries() {
       name: 'EdTech',
       desc: 'Adaptive learning algorithms, offline course synchronization, and real-time assessment scoring unified in one Kotlin module.',
       icon: '/assets/industries-icons/industries-education.svg',
-      url: 'https://inceptivesdigital.com/education-app-development-company',
+      url: '/education-app-development-company',
     },
     {
       name: 'Media',
@@ -47,7 +49,7 @@ export default function KmpIndustries() {
       name: 'Real Estate',
       desc: 'Property valuation models, mortgage calculation engines, and offline inspection sync paired with native SwiftUI and Jetpack Compose UI.',
       icon: '/assets/industries-icons/industries-realstate.svg',
-      url: 'https://inceptivesdigital.com/real-estate-app-development-company',
+      url: '/real-estate-app-development-company',
     },
   ]
 
@@ -57,7 +59,7 @@ export default function KmpIndustries() {
       className="py-20 lg:py-28 bg-[#0d0e11] relative overflow-hidden"
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+        {/* Section Header */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-tight mb-4">
             Industries We Build{' '}
@@ -68,14 +70,13 @@ export default function KmpIndustries() {
           </p>
         </div>
 
-        {/* Exact Homepage Box Cards Grid (#26282d 1px Hairline Borders, #18191d -> Hover #00CE44) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        {/* Homepage Box Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map((ind) => (
             <div
               key={ind.name}
               className="group p-6 sm:p-7 xl:p-8 flex flex-col justify-start bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 min-h-[280px] lg:min-h-[300px] h-full select-none text-left"
             >
-              {/* Icon (35px x 35px): Green by default, Solid Black on Card Hover */}
               <div className="w-[35px] h-[35px] mb-6 sm:mb-8 flex items-center justify-start shrink-0">
                 <img
                   src={ind.icon}
@@ -85,23 +86,19 @@ export default function KmpIndustries() {
                 />
               </div>
 
-              {/* Title: H3 tag, 23px font-size bold */}
               <h3 className="text-[20px] sm:text-[23px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
                 {ind.url ? (
-                  <a
-                    href={ind.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#00CE44] group-hover:text-black transition-colors"
+                  <Link
+                    to={ind.url}
+                    className="text-[#00CE44] group-hover:text-black transition-colors underline underline-offset-4"
                   >
                     {ind.name}
-                  </a>
+                  </Link>
                 ) : (
                   ind.name
                 )}
               </h3>
 
-              {/* Description: 16px font-size */}
               <p className="text-[15px] sm:text-[16px] text-slate-300 group-hover:text-black transition-colors duration-300 leading-relaxed font-normal">
                 {ind.desc}
               </p>

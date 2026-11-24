@@ -73,7 +73,7 @@ export default function SystemIndustries() {
             Every industry depends on connected systems. We build integrations that remove manual data transfer and unify operations across platforms and tools.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
           {industries.map(({ icon, alt, title, items }) => (
             <article
               key={title}

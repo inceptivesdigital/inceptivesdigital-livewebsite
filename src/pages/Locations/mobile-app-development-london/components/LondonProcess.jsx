@@ -64,7 +64,7 @@ export default function LondonProcess() {
       desc: (
         <>
           We{' '}
-          <Link to="/blog/how-to-validate-your-mobile-app-idea" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/how-to-validate-your-mobile-app-idea" className="text-[#00CE44] font-medium underline underline-offset-4">
             validate your app idea
           </Link>{' '}
           by testing the assumptions it rests on, starting with the riskiest. Confirming direction early keeps a course correction to the cost of a conversation.
@@ -78,7 +78,7 @@ export default function LondonProcess() {
       desc: (
         <>
           A{' '}
-          <Link to="/discovery-sprint" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/discovery-sprint" className="text-[#00CE44] font-medium underline underline-offset-4">
             discovery sprint
           </Link>{' '}
           maps what to keep and what to set aside for later. A focused roadmap of the features that carry real weight sets the order of work from day one.
@@ -91,7 +91,7 @@ export default function LondonProcess() {
       cardTitle: '3. UX/UI Design & Prototyping',
       desc: (
         <>
-          <Link to="/ui-ux-design" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/ui-ux-design" className="text-[#00CE44] font-medium underline underline-offset-4">
             UI/UX design
           </Link>{' '}
           shapes the experience before development begins. Flows, wireframes, and clickable prototypes show how the product works and smooth rough edges while changes stay cheap.
@@ -105,7 +105,7 @@ export default function LondonProcess() {
       desc: (
         <>
           Engineering moves in short cycles that keep the{' '}
-          <Link to="/blog/app-development-timeline" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/app-development-timeline" className="text-[#00CE44] font-medium underline underline-offset-4">
             app development timeline
           </Link>{' '}
           on track, on an architecture built to grow. Working software arrives early and often, keeping the product close to real feedback and the original intent.
@@ -119,7 +119,7 @@ export default function LondonProcess() {
       desc: (
         <>
           Our{' '}
-          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/blog/mobile-app-testing-strategies" className="text-[#00CE44] font-medium underline underline-offset-4">
             mobile app testing strategies
           </Link>{' '}
           reflect how people actually use the product on real devices under real conditions. We resolve performance, security, and edge cases here, and the experience holds from launch day.
@@ -133,7 +133,7 @@ export default function LondonProcess() {
       desc: (
         <>
           Launch marks a milestone, and the work continues past it. The release goes to the App Store and Google Play with{' '}
-          <Link to="/app-store-optimization" className="text-[#00CE44] hover:underline font-medium">
+          <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
             app store optimization
           </Link>
           , and then we monitor performance closely to guide the next round of improvements.

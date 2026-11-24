@@ -152,7 +152,7 @@ export default function IosIndustries() {
         </div>
 
         {/* Homepage-Style Box Cards Grid (8 Cards, 4 Columns on Desktop, Equal Heights & Clean 1px Borders) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#26282d] border border-[#26282d] rounded-none overflow-hidden shadow-2xl items-stretch auto-rows-fr">
           {industries.map((ind) => (
             <div
               key={ind.title}

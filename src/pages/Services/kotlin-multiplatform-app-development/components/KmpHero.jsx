@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function KmpHero() {
   const trustBadges = [
     {
@@ -37,23 +35,16 @@ export default function KmpHero() {
             </h2>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
-              KMP consolidates your business logic into one shared Kotlin module, giving Android, iOS, web, and desktop a unified foundation, while each platform still runs its own native UI. That architecture only holds at scale when the module boundaries and platform interfaces are defined correctly from the start, which is precisely where Inceptives Digital, as a{' '}
-              <Link
-                to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
-              >
-                mobile app development company
-              </Link>
-              , begins and engineers production-grade KMP systems.
+              Keep your native app experiences while reducing duplicated development effort. Inceptives Digital&apos;s Kotlin Multiplatform development services bring shared business logic into Android and iOS products through carefully designed architecture. Our engineers account for platform-specific requirements from the outset, keeping your product ready for future development without compromising native functionality.
             </p>
 
-            {/* Rectangular Buttons (Sharp Corners, Zero Shadow) */}
+            {/* Rectangular Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
               >
-                Start Your KMP Project
+                Consult Our KMP Engineers
               </a>
 
               <a
@@ -84,7 +75,7 @@ export default function KmpHero() {
             </div>
           </div>
 
-          {/* Right Column: Mobile/Tablet fallback image (Desktop uses right-bottom banner background) */}
+          {/* Right Column: Mobile/Tablet fallback image */}
           <div className="lg:hidden flex justify-center w-full">
             <img
               src="/assets/kmp-app/com-kotlin-banner.webp"

@@ -1,134 +1,193 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const tabs = [
   {
     id: 'customer',
-    label: 'Customer App Features',
+    label: '1. Customer App Features',
+    subtitle:
+      'Give buyers and renters a direct way to explore listings and connect with agents through a convenient mobile experience.',
     items: [
       {
         title: 'Login and Registration',
         description:
-          'Secure onboarding via email, mobile, or social logins (Google, Apple ID).',
+          'Sign up securely using email, phone number, Google, or Apple ID.',
       },
       {
         title: 'User Profile Management',
         description:
-          'Save preferences, search history, and favorite properties to personalize your experience.',
-      },
-      {
-        title: 'AI-Powered Chatbot Assistance',
-        description:
-          'Instant support for property searches, bookings, and app navigation.',
+          'Manage personal information, search preferences, and favorite properties.',
       },
       {
         title: 'Filter and Sort Properties',
         description:
-          'Refine listings with filters like price, bedrooms, location, and property type.',
+          'Find properties by location, price range, size, or property type.',
       },
       {
-        title: 'List View & Map View',
+        title: 'List View and Map View',
         description:
-          'Explore properties via a list or an interactive map with detailed info and pricing.',
+          'Browse property listings in a list or explore available locations on an interactive map.',
+      },
+      {
+        title: 'Saved Searches and Favorites',
+        description:
+          'Save preferred searches and property listings for quick access later.',
+      },
+      {
+        title: 'Property Comparison',
+        description:
+          'Compare selected properties based on pricing, amenities, and listing details.',
       },
       {
         title: 'Push Notifications',
         description:
-          'Receive alerts for new listings, price changes, status updates, or scheduled viewings.',
+          'Receive alerts for new listings, price changes, or upcoming property visits.',
       },
       {
-        title: 'Recently Viewed Properties',
+        title: 'In-App Booking and Scheduling',
         description:
-          'Quickly revisit previously explored properties without repeating searches.',
+          'Schedule property viewings with agents through available appointment slots.',
       },
       {
-        title: 'In-App Booking & Scheduling',
+        title: 'Agent Messaging',
         description:
-          'Schedule property visits or request callbacks directly through the app.',
+          'Contact agents directly to ask questions or discuss available properties.',
       },
     ],
   },
   {
     id: 'agent',
-    label: 'Agent App Features',
+    label: '2. Agent App Features',
+    subtitle:
+      'Give real estate agents direct access to their leads, property listings, and scheduled appointments.',
     items: [
       {
         title: 'Agent Dashboard',
         description:
-          'Track leads, appointments, and property listings in one place.',
+          'View active listings, assigned leads, and upcoming appointments in one place.',
       },
       {
         title: 'Lead Management',
         description:
-          'Capture, assign, and follow up on leads efficiently with automated workflows.',
+          'Capture property inquiries, assign follow-ups, and monitor lead status.',
       },
       {
         title: 'Property Listing Management',
         description:
-          'Add, edit, and update listings with photos, videos, pricing, and details.',
+          'Add or update property details, images, pricing, and availability.',
       },
       {
-        title: 'Client Communication Tools',
+        title: 'Client Communication',
         description:
-          'Chat, call, or email clients directly from the app for faster responses.',
+          'Contact prospective buyers through in-app messaging or integrated communication tools.',
       },
       {
-        title: 'Task & Appointment Scheduling',
+        title: 'Task and Appointment Scheduling',
         description:
-          'Manage daily tasks, property showings, and meeting reminders efficiently.',
+          'Manage property showings, follow-up tasks, and meeting reminders.',
+      },
+      {
+        title: 'CRM Integration',
+        description:
+          'Access customer records and inquiry histories from connected CRM platforms.',
       },
       {
         title: 'Performance Analytics',
         description:
-          'View leads, conversions, and sales reports to measure individual and team performance.',
-      },
-      {
-        title: 'Push Notifications & Alerts',
-        description:
-          'Stay updated on client inquiries, scheduled visits, and follow-up reminders.',
+          'Track lead activity, viewing appointments, and sales pipeline performance.',
       },
     ],
   },
   {
     id: 'admin',
-    label: 'Admin Panel Features',
+    label: '3. Admin Panel Features',
+    subtitle:
+      'Manage platform activity and maintain control over users, listings, and business operations.',
     items: [
       {
-        title: 'User & Agent Management',
+        title: 'User and Agent Management',
         description:
-          'Administer users, agents, and roles with full access control.',
+          'Create accounts, manage agent profiles, and assign access permissions.',
       },
       {
-        title: 'Property Management',
+        title: 'Property Listing Management',
         description:
-          'Approve or reject listings, monitor updates, and maintain quality control.',
+          'Review submitted listings, approve changes, and manage published property information.',
       },
       {
-        title: 'Analytics & Reporting',
+        title: 'Lead and Inquiry Management',
         description:
-          'Gain insights into user activity, property trends, and revenue reports.',
+          'Monitor incoming inquiries and track lead assignments across agents.',
       },
       {
-        title: 'Lead & Inquiry Management',
+        title: 'MLS Data Synchronization',
         description:
-          'Track all inquiries, assign leads to agents, and monitor follow-ups.',
+          'Monitor authorized MLS listing updates and identify synchronization issues.',
       },
       {
-        title: 'Content & Marketing Management',
+        title: 'Analytics and Reporting',
         description:
-          'Manage promotional banners, announcements, and marketing campaigns.',
+          'Review platform activity, listing performance, and lead conversion reports.',
       },
       {
-        title: 'Transaction Oversight',
+        title: 'Role-Based Access Control',
         description:
-          'Monitor bookings, payments, and transaction history securely in one place.',
+          'Assign permissions to administrators, brokerage managers, and other authorized staff.',
+      },
+      {
+        title: 'Transaction Management',
+        description:
+          'Review transaction records and related documents where the application supports property transactions.',
       },
     ],
   },
-];
+  {
+    id: 'specialized',
+    label: '4. Specialized Real Estate Features',
+    subtitle:
+      'Add functionality for rental management, investment platforms, or property development projects based on business requirements.',
+    items: [
+      {
+        title: 'Tenant and Lease Management',
+        description:
+          'Manage tenant records, lease agreements, and renewal information.',
+      },
+      {
+        title: 'Rent Payment Management',
+        description:
+          'Collect rent through supported payment gateways and maintain payment histories.',
+      },
+      {
+        title: 'Maintenance Request Tracking',
+        description:
+          'Allow tenants to submit maintenance requests and track their status.',
+      },
+      {
+        title: 'Investment Portfolio Management',
+        description:
+          'Monitor property investments, asset values, and portfolio performance.',
+      },
+      {
+        title: 'Property Valuation and Rental Yield',
+        description:
+          'Calculate estimated property values and rental returns using available financial data.',
+      },
+      {
+        title: 'Unit Inventory Management',
+        description:
+          'Track available, reserved, and sold units across development projects.',
+      },
+      {
+        title: 'Buyer Reservation Management',
+        description:
+          'Manage unit reservations and track buyer interest across active developments.',
+      },
+    ],
+  },
+]
 
 export default function RealEstateKeyFeatures() {
-  const [activeTab, setActiveTab] = useState('customer');
-  const currentTab = tabs.find((t) => t.id === activeTab) || tabs[0];
+  const [activeTab, setActiveTab] = useState('customer')
+  const currentTab = tabs.find((t) => t.id === activeTab) || tabs[0]
 
   return (
     <section
@@ -140,25 +199,26 @@ export default function RealEstateKeyFeatures() {
     >
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 relative z-10">
         {/* Heading */}
-        <div className="text-center max-w-[960px] mx-auto mb-12">
+        <div className="text-center max-w-[960px] mx-auto mb-10">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Key Features of Our Real Estate App Development Services
+            Real Estate App Features Across{' '}
+            <span className="text-[#00CE44]">Every User Interface</span>
           </h2>
           <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Every feature is designed around the specific needs of buyers, agents, and administrators operating within a real estate platform.
+            Our real estate app developers create user-specific interfaces that support property discovery and day-to-day business operations. Each application includes functionality appropriate to its users and commercial requirements.
           </p>
         </div>
 
-        {/* Single-Line Pill Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12">
+        {/* Pill Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6">
           {tabs.map((tab) => {
-            const isActive = tab.id === activeTab;
+            const isActive = tab.id === activeTab
             return (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-7 py-3.5 rounded-full text-[15px] md:text-[16px] font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                className={`px-6 py-3.5 rounded-full text-[14px] md:text-[15px] font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                   isActive
                     ? 'bg-[#00CE44] text-black shadow-lg'
                     : 'bg-[#262626] text-white hover:bg-[#333333] border border-white/10'
@@ -166,16 +226,21 @@ export default function RealEstateKeyFeatures() {
               >
                 {tab.label}
               </button>
-            );
+            )
           })}
         </div>
 
+        {/* Active Tab Subtitle */}
+        <p className="text-center text-white/85 text-[15px] sm:text-[16px] max-w-2xl mx-auto mb-10">
+          {currentTab.subtitle}
+        </p>
+
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 items-stretch auto-rows-fr">
           {currentTab.items.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#1b1b1b]/95 border border-white/10 rounded-[16px] p-6 md:p-7 flex flex-col justify-start hover:border-[#00CE44]/50 transition-colors duration-200"
+              className="bg-[#1b1b1b]/95 border border-white/10 rounded-[16px] p-6 md:p-7 flex flex-col justify-start text-left hover:border-[#00CE44]/50 transition-colors duration-200 h-full"
             >
               <h3 className="text-[#00CE44] text-[18px] md:text-[20px] font-bold leading-snug mb-2.5">
                 {item.title}
@@ -188,5 +253,5 @@ export default function RealEstateKeyFeatures() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -43,7 +43,14 @@ main > div > section:first-of-type {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
   html body footer section > div[class*="max-w-"],
-  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]) {
+  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body .id-blog .id-blog-wrap,
+  html body .id-pr .id-pr-wrap,
+  html body #ai-cost-estimator-page .wrap,
+  html body #privacy-policy-page .pp-hero-inner,
+  html body #privacy-policy-page .pp-body-inner,
+  html body #terms-conditions-page .tc-hero-inner,
+  html body #terms-conditions-page .tc-body-inner {
     max-width: 1600px !important;
     width: 100%;
     margin-left: auto;
@@ -55,7 +62,14 @@ main > div > section:first-of-type {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
   html body footer section > div[class*="max-w-"],
-  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]) {
+  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body .id-blog .id-blog-wrap,
+  html body .id-pr .id-pr-wrap,
+  html body #ai-cost-estimator-page .wrap,
+  html body #privacy-policy-page .pp-hero-inner,
+  html body #privacy-policy-page .pp-body-inner,
+  html body #terms-conditions-page .tc-hero-inner,
+  html body #terms-conditions-page .tc-body-inner {
     max-width: 1280px !important;
     width: 100%;
     margin-left: auto;
@@ -411,5 +425,94 @@ html body main section:first-of-type h1:has(+ h2) {
   html body main section:first-of-type h1 + h2 {
     font-size: 20px !important;
     line-height: 1.25 !important;
+  }
+}
+
+/* ==========================================================================
+   8. Inline Text Links: Inherit Surrounding Text Color + Underline Only
+   ========================================================================== */
+html body main p a:not([class*="bg-"]):not([class*="inline-flex"]):not([class*="flex"]),
+html body main li a:not([class*="bg-"]):not([class*="inline-flex"]):not([class*="flex"]),
+html body main td a:not([class*="bg-"]):not([class*="inline-flex"]):not([class*="flex"]),
+html body main dd a:not([class*="bg-"]):not([class*="inline-flex"]):not([class*="flex"]),
+html body main blockquote a:not([class*="bg-"]):not([class*="inline-flex"]):not([class*="flex"]) {
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
+
+/* ==========================================================================
+   9. Unified Equal Height for All CTA Buttons Site-Wide
+   Ensures primary (green/solid) and secondary (outline/Schedule A Call)
+   buttons sitting side-by-side or across pages always share the exact same
+   height at every viewport width.
+   ========================================================================== */
+html body main a[href="#contact"]:not([class*="rounded-full"]),
+html body main a.getintouch:not([class*="rounded-full"]),
+html body main button.getintouch:not([class*="rounded-full"]),
+html body main a.openpop-shedule:not([class*="rounded-full"]),
+html body main button.openpop-shedule:not([class*="rounded-full"]),
+html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not(.thank-home-btn),
+html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not([aria-expanded]),
+html body main a[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]),
+html body main button[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]):not([aria-expanded]),
+html body main button[type="submit"]:not([class*="rounded-full"]) {
+  box-sizing: border-box !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.2 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+@media (max-width: 1599px) {
+  html body main a[href="#contact"]:not([class*="rounded-full"]),
+  html body main a.getintouch:not([class*="rounded-full"]),
+  html body main button.getintouch:not([class*="rounded-full"]),
+  html body main a.openpop-shedule:not([class*="rounded-full"]),
+  html body main button.openpop-shedule:not([class*="rounded-full"]),
+  html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not(.thank-home-btn),
+  html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not([aria-expanded]),
+  html body main a[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]),
+  html body main button[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]):not([aria-expanded]),
+  html body main button[type="submit"]:not([class*="rounded-full"]) {
+    height: 46px !important;
+    min-height: 46px !important;
+  }
+}
+
+@media (max-width: 1279px) {
+  html body main a[href="#contact"]:not([class*="rounded-full"]),
+  html body main a.getintouch:not([class*="rounded-full"]),
+  html body main button.getintouch:not([class*="rounded-full"]),
+  html body main a.openpop-shedule:not([class*="rounded-full"]),
+  html body main button.openpop-shedule:not([class*="rounded-full"]),
+  html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not(.thank-home-btn),
+  html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not([aria-expanded]),
+  html body main a[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]),
+  html body main button[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]):not([aria-expanded]),
+  html body main button[type="submit"]:not([class*="rounded-full"]) {
+    height: 44px !important;
+    min-height: 44px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body main a[href="#contact"]:not([class*="rounded-full"]),
+  html body main a.getintouch:not([class*="rounded-full"]),
+  html body main button.getintouch:not([class*="rounded-full"]),
+  html body main a.openpop-shedule:not([class*="rounded-full"]),
+  html body main button.openpop-shedule:not([class*="rounded-full"]),
+  html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not(.thank-home-btn),
+  html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]):not([aria-expanded]),
+  html body main a[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]),
+  html body main button[class*="inline-flex"][class*="items-center"][class*="justify-center"][class*="border"]:not([class*="rounded-full"]):not([aria-expanded]),
+  html body main button[type="submit"]:not([class*="rounded-full"]) {
+    height: 42px !important;
+    min-height: 42px !important;
   }
 }

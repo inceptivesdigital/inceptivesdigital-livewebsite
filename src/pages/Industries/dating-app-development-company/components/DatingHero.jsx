@@ -42,17 +42,17 @@ export default function DatingHero() {
               aria-label="Breadcrumb"
               className="flex flex-wrap items-center gap-2 text-[13px] sm:text-[14px] text-white/70 mb-5"
             >
-              <Link to="/" className="hover:text-[#00CE44] transition-colors">
+              <Link to="/" className="hover:text-[#00CE44] transition-colors underline underline-offset-4">
                 Home
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-white/40" />
-              <Link to="/services" className="hover:text-[#00CE44] transition-colors">
+              <Link to="/services" className="hover:text-[#00CE44] transition-colors underline underline-offset-4">
                 Services
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-white/40" />
               <Link
                 to="/mobile-app-development"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 Mobile App Development
               </Link>

@@ -54,7 +54,7 @@ export default function AustinHero() {
           {/* Subtitle / Paragraph */}
           <p className="text-white/80 text-sm sm:text-base lg:text-[16px] leading-relaxed mb-8 font-normal">
             A Texas-headquartered{' '}
-            <Link to="/mobile-app-development" className="underline text-[#00CE44] hover:text-white transition-colors">
+            <Link to="/mobile-app-development" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
               mobile app development company
             </Link>{' '}
             building iOS, Android, and cross-platform applications for Austin startups and scale-ups. Platform selection, compliance architecture, and system design are confirmed before development begins. The decisions separate a product built to last from one that needs rebuilding at the worst possible moment.

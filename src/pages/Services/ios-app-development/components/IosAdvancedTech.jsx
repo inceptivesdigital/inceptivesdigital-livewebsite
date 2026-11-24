@@ -8,7 +8,7 @@ export default function IosAdvancedTech() {
           Connect iPhone and iPad applications with smart devices through Core Bluetooth and Bluetooth Low Energy (BLE). Our iOS developers support{' '}
           <a
             href="https://inceptivesdigital.com/blog/iot-in-healthcare-applications-benefits-and-future-trends"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             IoT in healthcare applications
           </a>
@@ -34,7 +34,7 @@ export default function IosAdvancedTech() {
           Apple&apos;s latest Foundation Models framework brings language understanding and structured generation into supported iPhone applications. Our{' '}
           <a
             href="https://inceptivesdigital.com/ai-app-development-services"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             AI app development
           </a>{' '}
@@ -50,7 +50,7 @@ export default function IosAdvancedTech() {
           For iOS fintech applications requiring{' '}
           <a
             href="https://inceptivesdigital.com/blog/blockchain-integration-mobile-apps"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             blockchain integration in mobile apps
           </a>
@@ -78,7 +78,7 @@ export default function IosAdvancedTech() {
             Today&apos;s iPhone applications increasingly rely on capabilities beyond standard mobile functionality. Inceptives Digital brings Apple’s latest frameworks into custom iOS development, helping businesses adopt the latest{' '}
             <a
               href="https://inceptivesdigital.com/blog/ios-app-development-trends"
-              className="underline text-[#00CE44] hover:text-white transition-colors"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
             >
               iOS app development trends
             </a>{' '}

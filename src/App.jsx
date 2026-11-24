@@ -1,98 +1,115 @@
-import { useState } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
 import BookingCTA from './components/BookingCTA'
 import Footer from './components/Footer'
+import ScheduleCallModal from './components/ScheduleCallModal'
+import ContactPopupModal from './components/ContactPopupModal'
+
+// Eager Homepage for 0ms initial load; lazy-load all other 75+ routes for 90%+ smaller initial bundle
+import Home from './pages/Home'
 
 // Core Pages
-import Home from './pages/Home'
-import Services from './pages/Services'
-import Portfolio from './pages/Portfolio'
-import CaseStudyDetail from './pages/CaseStudyDetail'
-import StateOfTheArtChiropractic from './pages/Portfolio/StateOfTheArtChiropractic'
-import DpsAirem from './pages/Portfolio/DpsAirem'
-import HalwarConnect from './pages/Portfolio/HalwarConnect'
-import FamilyEntertainmentGroup from './pages/Portfolio/FamilyEntertainmentGroup'
-import ZoomRead from './pages/Portfolio/ZoomRead'
-import PulseCheckTimer from './pages/Portfolio/PulseCheckTimer'
-import MyTangoEvent from './pages/Portfolio/MyTangoEvent'
-import WordSmithPro from './pages/Portfolio/WordSmithPro'
-import PetsB4Profit from './pages/Portfolio/PetsB4Profit'
-import StakBread from './pages/Portfolio/StakBread'
-import StaffAugmentation from './pages/StaffAugmentation'
-import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import TermsAndConditions from './pages/TermsAndConditions'
+const Services = lazy(() => import('./pages/Services'))
+const Portfolio = lazy(() => import('./pages/Portfolio'))
+const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'))
+const StateOfTheArtChiropractic = lazy(() => import('./pages/Portfolio/StateOfTheArtChiropractic'))
+const DpsAirem = lazy(() => import('./pages/Portfolio/DpsAirem'))
+const HalwarConnect = lazy(() => import('./pages/Portfolio/HalwarConnect'))
+const FamilyEntertainmentGroup = lazy(() => import('./pages/Portfolio/FamilyEntertainmentGroup'))
+const ZoomRead = lazy(() => import('./pages/Portfolio/ZoomRead'))
+const PulseCheckTimer = lazy(() => import('./pages/Portfolio/PulseCheckTimer'))
+const MyTangoEvent = lazy(() => import('./pages/Portfolio/MyTangoEvent'))
+const WordSmithPro = lazy(() => import('./pages/Portfolio/WordSmithPro'))
+const PetsB4Profit = lazy(() => import('./pages/Portfolio/PetsB4Profit'))
+const StakBread = lazy(() => import('./pages/Portfolio/StakBread'))
+const StaffAugmentation = lazy(() => import('./pages/StaffAugmentation'))
+const CustomSoftwareDevelopment = lazy(() => import('./pages/CustomSoftwareDevelopment'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'))
 
-// Services Pages (services/ me sirf services ke pages)
-import MobileAppDevelopment from './pages/Services/mobile-app-development'
-import DigitalProductDevelopment from './pages/Services/digital-product-development'
-import DiscoverySprint from './pages/Services/discovery-sprint'
-import MvpDevelopment from './pages/Services/mvp-development'
-import ProductRescueScaling from './pages/Services/product-rescue-scaling'
-import ProductStrategyConsulting from './pages/Services/product-strategy-consulting'
-import UiUxDesign from './pages/Services/ui-ux-design'
-import InteractivePrototyping from './pages/Services/interactive-prototyping'
-import IosAppDevelopment from './pages/Services/ios-app-development'
-import AndroidAppDevelopment from './pages/Services/android-app-development'
-import ReactNativeAppDevelopment from './pages/Services/react-native-app-development'
-import FlutterAppDevelopment from './pages/Services/flutter-app-development'
-import KotlinMultiplatformAppDevelopment from './pages/Services/kotlin-multiplatform-app-development'
-import BackendApiDevelopment from './pages/Services/backend-api-development'
-import WebAppDevelopmentCompany from './pages/Services/web-app-development-company'
-import CrossPlatformAppDevelopment from './pages/Services/cross-platform-app-development'
-import ProductLaunchStrategy from './pages/Services/product-launch-strategy'
-import AppStoreOptimization from './pages/Services/app-store-optimization'
-import PostLaunchAnalyticsIteration from './pages/Services/post-launch-analytics-iteration'
-import BlockchainDevelopment from './pages/Services/blockchain-development'
-import AiDevelopment from './pages/Services/ai-development'
-import AiAppDevelopmentServices from './pages/Services/ai-app-development-services'
-import AiChatbotDevelopmentServices from './pages/Services/ai-chatbot-development-services'
-import AiAgentDevelopment from './pages/Services/ai-agent-development'
-import GenerativeAiDevelopment from './pages/Services/generative-ai-development-company'
-import MachineLearningDevelopment from './pages/Services/machine-learning-development-services'
-import NlpDevelopment from './pages/Services/nlp-development-services'
-import AiMvpDevelopment from './pages/Services/ai-mvp-development'
-import AiAutomationServices from './pages/Services/ai-automation-services'
-import SystemIntegrationApiAutomation from './pages/Services/system-integration-api-automation'
-import BusinessProcessAutomation from './pages/Services/business-process-automation'
-import RpaDevelopmentServices from './pages/Services/rpa-development-services'
+// Services Pages
+const MobileAppDevelopment = lazy(() => import('./pages/Services/mobile-app-development'))
+const MobileGameDevelopment = lazy(() => import('./pages/Services/mobile-game-development'))
+const ArAppDevelopment = lazy(() => import('./pages/Services/ar-app-development'))
+const VirtualRealityDevelopment = lazy(() => import('./pages/Services/virtual-reality-development'))
+const IotDevelopment = lazy(() => import('./pages/Services/iot-development'))
+const DigitalProductDevelopment = lazy(() => import('./pages/Services/digital-product-development'))
+const DiscoverySprint = lazy(() => import('./pages/Services/discovery-sprint'))
+const MvpDevelopment = lazy(() => import('./pages/Services/mvp-development'))
+const ProductRescueScaling = lazy(() => import('./pages/Services/product-rescue-scaling'))
+const ProductStrategyConsulting = lazy(() => import('./pages/Services/product-strategy-consulting'))
+const UiUxDesign = lazy(() => import('./pages/Services/ui-ux-design'))
+const InteractivePrototyping = lazy(() => import('./pages/Services/interactive-prototyping'))
+const IosAppDevelopment = lazy(() => import('./pages/Services/ios-app-development'))
+const AndroidAppDevelopment = lazy(() => import('./pages/Services/android-app-development'))
+const ReactNativeAppDevelopment = lazy(() => import('./pages/Services/react-native-app-development'))
+const FlutterAppDevelopment = lazy(() => import('./pages/Services/flutter-app-development'))
+const KotlinMultiplatformAppDevelopment = lazy(() => import('./pages/Services/kotlin-multiplatform-app-development'))
+const BackendApiDevelopment = lazy(() => import('./pages/Services/backend-api-development'))
+const WebAppDevelopmentCompany = lazy(() => import('./pages/Services/web-app-development-company'))
+const CrossPlatformAppDevelopment = lazy(() => import('./pages/Services/cross-platform-app-development'))
+const ProductLaunchStrategy = lazy(() => import('./pages/Services/product-launch-strategy'))
+const AppStoreOptimization = lazy(() => import('./pages/Services/app-store-optimization'))
+const PostLaunchAnalyticsIteration = lazy(() => import('./pages/Services/post-launch-analytics-iteration'))
+const BlockchainDevelopment = lazy(() => import('./pages/Services/blockchain-development'))
+const AiDevelopment = lazy(() => import('./pages/Services/ai-development'))
+const AiCostEstimator = lazy(() => import('./pages/Services/ai-development/ai-cost-estimator'))
+const AiAppDevelopmentServices = lazy(() => import('./pages/Services/ai-app-development-services'))
+const AiChatbotDevelopmentServices = lazy(() => import('./pages/Services/ai-chatbot-development-services'))
+const AiAgentDevelopment = lazy(() => import('./pages/Services/ai-agent-development'))
+const GenerativeAiDevelopment = lazy(() => import('./pages/Services/generative-ai-development-company'))
+const MachineLearningDevelopment = lazy(() => import('./pages/Services/machine-learning-development-services'))
+const NlpDevelopment = lazy(() => import('./pages/Services/nlp-development-services'))
+const AiMvpDevelopment = lazy(() => import('./pages/Services/ai-mvp-development'))
+const AiAutomationServices = lazy(() => import('./pages/Services/ai-automation-services'))
+const SystemIntegrationApiAutomation = lazy(() => import('./pages/Services/system-integration-api-automation'))
+const BusinessProcessAutomation = lazy(() => import('./pages/Services/business-process-automation'))
+const RpaDevelopmentServices = lazy(() => import('./pages/Services/rpa-development-services'))
 
 // Industries Pages
-import HealthcareAppDevelopment from './pages/Industries/healthcare-app-development'
-import FitnessAppDevelopment from './pages/Industries/fitness-app-development'
-import FintechAppDevelopment from './pages/Industries/fintech-app-development'
-import EducationAppDevelopment from './pages/Industries/education-app-development-company'
-import RealEstateAppDevelopment from './pages/Industries/real-estate-app-development-company'
-import DatingAppDevelopment from './pages/Industries/dating-app-development-company'
-import TravelAppDevelopment from './pages/Industries/travel-app-development-company'
-import FoodDeliveryAppDevelopment from './pages/Industries/food-delivery-app-development'
-import EcommerceAppDevelopment from './pages/Industries/ecommerce-app-development-company'
-import StartupAppDevelopment from './pages/Industries/startup-app-development-company'
+const HealthcareAppDevelopment = lazy(() => import('./pages/Industries/healthcare-app-development'))
+const FitnessAppDevelopment = lazy(() => import('./pages/Industries/fitness-app-development'))
+const FintechAppDevelopment = lazy(() => import('./pages/Industries/fintech-app-development'))
+const EducationAppDevelopment = lazy(() => import('./pages/Industries/education-app-development-company'))
+const RealEstateAppDevelopment = lazy(() => import('./pages/Industries/real-estate-app-development-company'))
+const DatingAppDevelopment = lazy(() => import('./pages/Industries/dating-app-development-company'))
+const TravelAppDevelopment = lazy(() => import('./pages/Industries/travel-app-development-company'))
+const FoodDeliveryAppDevelopment = lazy(() => import('./pages/Industries/food-delivery-app-development'))
+const EcommerceAppDevelopment = lazy(() => import('./pages/Industries/ecommerce-app-development-company'))
+const StartupAppDevelopment = lazy(() => import('./pages/Industries/startup-app-development-company'))
 
 // Location Pages
-import MobileAppSanFrancisco from './pages/Locations/mobile-app-development-san-francisco'
-import MobileAppAustin from './pages/Locations/mobile-app-development-austin'
-import MobileAppNewYork from './pages/Locations/mobile-app-development-new-york'
-import MobileAppToronto from './pages/Locations/mobile-app-development-toronto'
-import MobileAppLondon from './pages/Locations/mobile-app-development-london'
-import MobileAppDubai from './pages/Locations/mobile-app-development-dubai'
-import MobileAppSingapore from './pages/Locations/mobile-app-development-singapore'
+const MobileAppSanFrancisco = lazy(() => import('./pages/Locations/mobile-app-development-san-francisco'))
+const MobileAppAustin = lazy(() => import('./pages/Locations/mobile-app-development-austin'))
+const MobileAppNewYork = lazy(() => import('./pages/Locations/mobile-app-development-new-york'))
+const MobileAppToronto = lazy(() => import('./pages/Locations/mobile-app-development-toronto'))
+const MobileAppLondon = lazy(() => import('./pages/Locations/mobile-app-development-london'))
+const MobileAppDubai = lazy(() => import('./pages/Locations/mobile-app-development-dubai'))
+const MobileAppSingapore = lazy(() => import('./pages/Locations/mobile-app-development-singapore'))
 
-// Company Pages (company/ ke 8 dedicated pages apne apne components ke saath)
-import AboutUs from './pages/Company/about-us'
-import Blogs from './pages/Company/blogs'
-import BlogDetail from './pages/Company/blogs/BlogDetail'
-import CategoryPage from './pages/Company/blogs/CategoryPage'
-import PressMedia from './pages/Company/press-media'
-import PressReleaseDetail from './pages/Company/press-media/PressReleaseDetail'
-import Partnership from './pages/Company/partnership'
-import LifeAtInceptives from './pages/Company/life-at-inceptives-digital'
-import Leadership from './pages/Company/leadership'
-import FoundersLetter from './pages/Company/founders-letter'
-import ContactUs from './pages/Company/contact-us'
-import NotFound from './pages/NotFound'
+// Company Pages
+const AboutUs = lazy(() => import('./pages/Company/about-us'))
+const Blogs = lazy(() => import('./pages/Company/blogs'))
+const BlogDetail = lazy(() => import('./pages/Company/blogs/BlogDetail'))
+const CategoryPage = lazy(() => import('./pages/Company/blogs/CategoryPage'))
+const PressMedia = lazy(() => import('./pages/Company/press-media'))
+const PressReleaseDetail = lazy(() => import('./pages/Company/press-media/PressReleaseDetail'))
+const Partnership = lazy(() => import('./pages/Company/partnership'))
+const LifeAtInceptives = lazy(() => import('./pages/Company/life-at-inceptives-digital'))
+const Leadership = lazy(() => import('./pages/Company/leadership'))
+const FoundersLetter = lazy(() => import('./pages/Company/founders-letter'))
+const ContactUs = lazy(() => import('./pages/Company/contact-us'))
+const ThankYou = lazy(() => import('./pages/ThankYou'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+
+function StaticPublicFolder({ dir }) {
+  useEffect(() => {
+    window.location.replace(`/${dir}/index.html${window.location.search}${window.location.hash}`)
+  }, [dir])
+  return null
+}
 
 // Contact pages and 404 skip the universal pre-footer form.
 function PreFooterCTA({ isNotFound }) {
@@ -107,7 +124,8 @@ function PreFooterCTA({ isNotFound }) {
     pathname === '/founders-letter' ||
     pathname === '/company/founders-letter' ||
     pathname === '/ai-development' ||
-    pathname === '/services/ai-development'
+    pathname === '/services/ai-development' ||
+    pathname === '/thank-you'
   ) return null
   return <BookingCTA />
 }
@@ -124,7 +142,8 @@ export default function App() {
 
         {/* Dynamic Route Content */}
         <main className="flex-grow">
-          <Routes>
+          <Suspense fallback={<div className="min-h-screen bg-[#07080b]" />}>
+            <Routes>
             {/* General Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
@@ -145,6 +164,7 @@ export default function App() {
             <Route path="/services/custom-software-development" element={<CustomSoftwareDevelopment />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-condition" element={<TermsAndConditions />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
             {/* Services Routes */}
             <Route path="/digital-product-development" element={<DigitalProductDevelopment />} />
@@ -163,6 +183,14 @@ export default function App() {
             <Route path="/services/interactive-prototyping" element={<InteractivePrototyping />} />
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route path="/mobile-game-development" element={<MobileGameDevelopment />} />
+            <Route path="/services/mobile-game-development" element={<MobileGameDevelopment />} />
+            <Route path="/ar-app-development" element={<ArAppDevelopment />} />
+            <Route path="/services/ar-app-development" element={<ArAppDevelopment />} />
+            <Route path="/virtual-reality-development" element={<VirtualRealityDevelopment />} />
+            <Route path="/services/virtual-reality-development" element={<VirtualRealityDevelopment />} />
+            <Route path="/iot-development" element={<IotDevelopment />} />
+            <Route path="/services/iot-development" element={<IotDevelopment />} />
             <Route path="/ios-app-development" element={<IosAppDevelopment />} />
             <Route path="/services/ios-app-development" element={<IosAppDevelopment />} />
             <Route path="/android-app-development" element={<AndroidAppDevelopment />} />
@@ -174,6 +202,8 @@ export default function App() {
             <Route path="/services/flutter-app-development" element={<FlutterAppDevelopment />} />
             <Route path="/kotlin-multiplatform-app-development" element={<KotlinMultiplatformAppDevelopment />} />
             <Route path="/services/kotlin-multiplatform-app-development" element={<KotlinMultiplatformAppDevelopment />} />
+            <Route path="/kotlin-multiplatform-development" element={<KotlinMultiplatformAppDevelopment />} />
+            <Route path="/services/kotlin-multiplatform-development" element={<KotlinMultiplatformAppDevelopment />} />
             <Route path="/backend-api-development" element={<BackendApiDevelopment />} />
             <Route path="/services/backend-api-development" element={<BackendApiDevelopment />} />
             <Route path="/web-app-development-company" element={<WebAppDevelopmentCompany />} />
@@ -190,6 +220,10 @@ export default function App() {
             <Route path="/services/blockchain-development" element={<BlockchainDevelopment />} />
             <Route path="/ai-development" element={<AiDevelopment />} />
             <Route path="/services/ai-development" element={<AiDevelopment />} />
+            <Route path="/ai-development/ai-cost-estimator" element={<AiCostEstimator />} />
+            <Route path="/services/ai-development/ai-cost-estimator" element={<AiCostEstimator />} />
+            <Route path="/ai-cost-estimator" element={<AiCostEstimator />} />
+            <Route path="/services/ai-cost-estimator" element={<AiCostEstimator />} />
             <Route path="/ai-app-development-services" element={<AiAppDevelopmentServices />} />
             <Route path="/services/ai-app-development-services" element={<AiAppDevelopmentServices />} />
             <Route path="/ai-chatbot-development-services" element={<AiChatbotDevelopmentServices />} />
@@ -299,11 +333,27 @@ export default function App() {
 
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/company/contact-us" element={<ContactUs />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+
+            {/* Static Public Folder Routes (/custom-mobile-application-development, /reviews, /email-signature) */}
+            <Route
+              path="/custom-mobile-application-development/*"
+              element={<StaticPublicFolder dir="custom-mobile-application-development" />}
+            />
+            <Route
+              path="/reviews/*"
+              element={<StaticPublicFolder dir="reviews" />}
+            />
+            <Route
+              path="/email-signature/*"
+              element={<StaticPublicFolder dir="email-signature" />}
+            />
 
             {/* 404 & Catch-all */}
             <Route path="/404" element={<NotFound onMountChange={setIsNotFound} />} />
             <Route path="*" element={<NotFound onMountChange={setIsNotFound} />} />
           </Routes>
+          </Suspense>
         </main>
 
         {/* Universal Pre-Footer Contact Section */}
@@ -311,6 +361,12 @@ export default function App() {
 
         {/* Universal Footer */}
         <Footer />
+
+        {/* Global Calendly Schedule Popup (activates on every "Schedule A ..." CTA & .openpop-shedule) */}
+        <ScheduleCallModal />
+
+        {/* Global Contact Popup (Get in touch, #contact CTAs, and green banner buttons) */}
+        <ContactPopupModal />
       </div>
     </BrowserRouter>
   )

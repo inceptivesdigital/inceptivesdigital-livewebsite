@@ -28,14 +28,14 @@ export default function LondonHero() {
             A mobile product has to work for its customers and the business behind it. Inceptives Digital is a{' '}
             <Link
               to="/mobile-app-development"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               mobile app development company
             </Link>{' '}
             in the UK, developing custom iOS, Android, and cross-platform applications for London startups and SMBs. Planning, backed by{' '}
             <Link
               to="/product-strategy-consulting"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               product strategy consulting
             </Link>

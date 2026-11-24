@@ -197,7 +197,7 @@ export default function LondonComplianceSecurity() {
             Mobile apps serving London businesses must address applicable UK privacy, security, accessibility, and industry regulations. Inceptives Digital considers these requirements during product architecture and development, following{' '}
             <Link
               to="/blog/mobile-app-security-best-practices"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               app security best practices
             </Link>{' '}

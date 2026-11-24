@@ -2,46 +2,48 @@ import React from 'react'
 
 const tiers = [
   {
-    name: '1. Starter Ecommerce App',
+    name: '1. Starter eCommerce App',
     description:
-      "It's great for enterprises with Linux-based systems that want to take advantage of Magento's extensive functionality.",
-    cost: '$20,000 – $60,000+',
+      'For startups and retailers launching a focused shopping application with essential purchasing features. This range assumes a limited initial scope and an existing or straightforward commerce backend.',
+    cost: '$20,000–$60,000',
     timeline: '6–10 weeks',
     includes: [
-      'User registration and account management',
-      'Product catalog with categories and filters',
+      'Customer registration and account management',
+      'Product catalog with search and filters',
       'Shopping cart and secure checkout',
       'Payment gateway integration',
       'Basic order management dashboard',
+      'App deployment support',
     ],
   },
   {
-    name: '2. Growth Ecommerce App',
+    name: '2. Growth eCommerce App',
     description:
-      'Created to support business growth through advanced features, automation capabilities, and performance enhancement tools',
-    cost: '$60,000 – $160,000+',
+      'For growing eCommerce businesses expanding their mobile capabilities and connecting existing retail operations. This tier supports more advanced customer experiences and business system integrations.',
+    cost: '$60,000–$160,000',
     timeline: '10–16 weeks',
     includes: [
-      'Basic order management dashboard',
-      'Advanced search with smart filters',
-      'Real-time order tracking and notifications',
-      'Multi-vendor or multi-store management',
-      'Promotions, discounts, and loyalty programs',
-      'Analytics dashboard with sales and user insights',
+      'Advanced search and product discovery',
+      'Real-time order tracking',
+      'Inventory synchronization',
+      'Loyalty programs and promotions',
+      'ERP or CRM integration',
+      'Sales analytics and reporting',
     ],
   },
   {
-    name: '3. Enterprise Ecommerce App',
+    name: '3. Enterprise eCommerce App',
     description:
-      'Designed to serve large businesses and busy online marketplaces that require sophisticated system connections and automated processes, as well as enterprise-level system capabilities.',
-    cost: '$160,000 – $350,000+',
+      'For established retailers and marketplace operators requiring custom application architecture, complex integrations, or multi-role commerce workflows.',
+    cost: '$160,000–$350,000+',
     timeline: '16–24+ weeks',
     includes: [
-      'AI-powered product recommendations',
-      'ERP, CRM, and third-party API integrations',
-      'Multi-role admin and vendor dashboards',
-      'Advanced security and fraud detection systems',
-      'Cloud-based infrastructure with high availability and disaster recovery',
+      'Multi-vendor or multi-store functionality',
+      'Enterprise ERP and commerce integrations',
+      'Custom pricing and transaction workflows',
+      'Advanced security controls',
+      'Scalable cloud infrastructure',
+      'Specialized AI or analytics capabilities',
     ],
   },
 ]
@@ -59,10 +61,11 @@ export default function EcommerceCostTiers() {
         {/* Heading */}
         <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            <span className="text-[#00CE44]">Flexible Ecommerce Development Cost</span> for Every Business Stage
+            How Much Does{' '}
+            <span className="text-[#00CE44]">eCommerce App Development Cost?</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Underscoping an ecommerce platform saves money in week one and costs twice as much in month six. These ranges exist to set accurate expectations before development begins.
+            Our eCommerce app development pricing reflects the technical scope of your project. Explore the estimated investment and delivery timelines for each development tier below.
           </p>
         </div>
 
@@ -78,11 +81,7 @@ export default function EcommerceCostTiers() {
                   {tier.name}
                 </h3>
 
-                <p className="text-white/85 text-[14px] sm:text-[15px] leading-[1.65] font-normal mb-6">
-                  {tier.description}
-                </p>
-
-                <ul className="space-y-2.5 mb-6 text-[15px] text-white">
+                <ul className="space-y-2.5 mb-5 text-[15px] text-white">
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
                     <span>
@@ -93,15 +92,19 @@ export default function EcommerceCostTiers() {
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
                     <span>
-                      <strong className="font-bold">Timeline:</strong>{' '}
+                      <strong className="font-bold">Estimated Timeline:</strong>{' '}
                       <span className="text-white/90">{tier.timeline}</span>
                     </span>
                   </li>
                 </ul>
 
+                <p className="text-white/85 text-[14px] sm:text-[15px] leading-[1.65] font-normal mb-6">
+                  {tier.description}
+                </p>
+
                 <div className="pt-4 border-t border-white/10">
                   <h4 className="text-white font-bold text-[15px] mb-3">
-                    Includes:
+                    Typical Scope:
                   </h4>
                   <ul className="space-y-2.5 text-white/85 text-[14px] sm:text-[15px]">
                     {tier.includes.map((inc) => (

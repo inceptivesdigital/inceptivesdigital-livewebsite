@@ -41,15 +41,15 @@ export default function KmpTrustedLogos() {
   return (
     <section className="py-20 lg:py-28 bg-[#1d1d1d] relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Section Heading: H2, 40px, bold, centered */}
+        {/* Section Heading */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight text-center">
             Trusted by{' '}
-            <span className="text-[#00CE44]">Product Teams Shipping</span> on Kotlin Multiplatform
+            <span className="text-[#00CE44]">Teams Across Mobile and Multiplatform</span> Development
           </h2>
         </div>
 
-        {/* Exact Same Logos & CSS as Homepage "From Startups to Growing Enterprises" (ClientGridSection.jsx) */}
+        {/* Client Logos Grid */}
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-4 lg:gap-5 w-full">
           {clients.map((client) => (
             <div

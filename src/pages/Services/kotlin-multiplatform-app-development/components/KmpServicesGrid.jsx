@@ -12,14 +12,14 @@ export default function KmpServicesGrid() {
       icon: '/assets/ios-app/serivces2.svg',
       desc: (
         <>
-          Networking, persistence, domain models, use cases, and state management are built into a single shared Kotlin module.{' '}
+          Our Kotlin app development services bring networking and business logic into a shared module that works cleanly with your{' '}
           <Link
             to="/backend-api-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
-            Backend API development
-          </Link>{' '}
-          connects shared services cleanly across targets. Every component is tested at the shared layer before it reaches a platform target, ensuring the bugs are caught before the UI is ever built on top of it.
+            backend API development
+          </Link>
+          . Engineers structure reusable components around your product&apos;s requirements while retaining essential platform-specific functionality. Every component is tested at the shared layer before it reaches a platform target, ensuring the bugs are caught before the UI is ever built on top of it.
         </>
       ),
     },
@@ -30,19 +30,17 @@ export default function KmpServicesGrid() {
         <>
           <Link
             to="/ios-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             iOS app development
           </Link>{' '}
           integration is the most technically demanding layer in any KMP product. At Inceptives Digital, the interop layer, Kotlin/Swift type mapping, coroutine-to-async bridging, and framework configuration are owned end to end so the iOS codebase stays fully idiomatic. The same principles that shape{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/guide-to-custom-ios-app-development-for-businesses"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+          <Link
+            to="/blog/guide-to-custom-ios-app-development-for-businesses"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             custom iOS app development for businesses
-          </a>{' '}
+          </Link>{' '}
           still apply at the native UI layer.
         </>
       ),
@@ -55,19 +53,17 @@ export default function KmpServicesGrid() {
           The{' '}
           <Link
             to="/android-app-development"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             Android app development
           </Link>{' '}
           layer consumes the shared module directly with zero translation overhead. Jetpack Compose UIs bind cleanly to shared ViewModels and domain layers, keeping Android-specific code thin, purposeful, and architecturally aligned from the first commit to the last. Understanding{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/what-is-android-app-development"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+          <Link
+            to="/blog/what-is-android-app-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             what Android app development involves
-          </a>{' '}
+          </Link>{' '}
           remains important because KMP does not remove Android-specific UI and OS responsibilities.
         </>
       ),
@@ -75,10 +71,21 @@ export default function KmpServicesGrid() {
     {
       title: 'Compose Multiplatform (UI Sharing)',
       icon: '/assets/ios-app/serivces5.svg',
-      desc: 'For teams that want to extend code sharing beyond business logic into the UI layer, Compose Multiplatform enables shared Compose UI targeting Android, iOS (beta), web, and desktop. We advise on where this makes sense and where native UI remains the stronger call.',
+      desc: (
+        <>
+          Extend your product across platforms with custom{' '}
+          <Link
+            to="/ui-ux-design"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
+          >
+            UI/UX design
+          </Link>{' '}
+          built using Compose Multiplatform. Our Kotlin engineers develop shared UI for Android, iOS, and desktop, reducing duplicate interface development. Web support remains in beta, so we assess its suitability against your product requirements.
+        </>
+      ),
     },
     {
-      title: 'Native-to-KMP Migration',
+      title: 'Kotlin Multiplatform Migration Services',
       icon: '/assets/ios-app/serivces6.svg',
       desc: 'Have an existing Android and iOS codebase and want to consolidate toward a shared module incrementally? Plan and execute the migration without disrupting your current release cadence. We start with the highest-value shared layers and expand scope in phases.',
     },
@@ -87,7 +94,7 @@ export default function KmpServicesGrid() {
   return (
     <section className="py-16 sm:py-24 bg-[#1d1d1d]">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+        {/* Section Header */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
             Our Wide Range of{' '}
@@ -99,7 +106,7 @@ export default function KmpServicesGrid() {
         </div>
 
         {/* 6 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((svc) => (
             <div
               key={svc.title}
@@ -119,26 +126,6 @@ export default function KmpServicesGrid() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA Bar */}
-        <div className="p-7 sm:p-9 rounded-[16px] bg-[#292929] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-0 shadow-none">
-          <div className="text-left max-w-2xl">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-              Ready to Scope Your KMP Project?
-            </h3>
-            <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed">
-              Define your shared module boundaries and multiplatform roadmap with our KMP engineering architects.
-            </p>
-          </div>
-          <div className="shrink-0">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
-            >
-              Book a Technical Discovery Call
-            </a>
-          </div>
         </div>
       </div>
     </section>

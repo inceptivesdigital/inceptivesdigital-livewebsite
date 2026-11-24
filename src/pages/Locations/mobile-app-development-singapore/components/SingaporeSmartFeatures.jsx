@@ -69,14 +69,14 @@ export default function SingaporeSmartFeatures() {
               Our Singapore mobile app developers design apps that meet the expectations of a{' '}
               <Link
                 to="/blog/singapore-businesses-mobile-apps-user-experience"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 tech-savvy, fast-moving audience
               </Link>
               . Each feature, shaped by{' '}
               <Link
                 to="/ui-ux-design"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 UI/UX design
               </Link>

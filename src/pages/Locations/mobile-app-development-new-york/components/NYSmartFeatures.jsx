@@ -68,7 +68,7 @@ export default function NYSmartFeatures() {
               Users expect mobile products to work quickly, whether they are making payments, checking appointments, or managing work on the move. Secure authentication, real-time updates, offline access, and responsive workflows, shaped by{' '}
               <Link
                 to="/ui-ux-design"
-                className="text-[#00CE44] hover:underline font-medium"
+                className="text-[#00CE44] font-medium underline underline-offset-4"
               >
                 UI/UX design
               </Link>

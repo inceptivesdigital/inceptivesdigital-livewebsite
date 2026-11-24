@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 
 const stats = [
   {
+    value: '8+',
+    label: 'Years of Experience',
+    icon: '/assets/mobile-app/rating.svg',
+  },
+  {
     value: '70+',
-    label: 'Projects Completed',
+    label: 'Apps Launched',
     icon: '/assets/mobile-app/apps-launch.svg',
   },
   {
-    value: '100%',
-    label: 'Client Success Rate',
+    value: '3M+',
+    label: 'App Downloads',
+    icon: '/assets/mobile-app/app-downloads.svg',
+  },
+  {
+    value: '20+',
+    label: 'Industries Served',
     icon: '/assets/mobile-app/active-developer.svg',
   },
-  {
-    value: '3M+',
-    label: 'Active Users',
-    icon: '/assets/healthcare/developer-resize.png',
-  },
-  {
-    value: 'MLS / GDPR',
-    label: 'Compliance Ready',
-    icon: '/assets/healthcare/hippa-icon.webp',
-  },
-];
+]
 
 export default function RealEstateStatsBar() {
   return (
@@ -30,18 +30,18 @@ export default function RealEstateStatsBar() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {stats.map((stat, idx) => (
             <div key={idx} className="flex flex-col items-center text-center group">
-              <div className="h-12 w-12 flex items-center justify-center mb-3">
+              <div className="w-11 h-11 mb-3 flex items-center justify-center">
                 <img
                   src={stat.icon}
                   alt={stat.label}
-                  className="max-h-11 max-w-11 object-contain select-none"
+                  className="w-full h-full object-contain select-none p-0 border-0 bg-transparent"
                   loading="lazy"
                 />
               </div>
-              <div className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#00CE44] tracking-tight leading-none mb-2">
+              <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm sm:text-base font-medium text-white/95">
+              <div className="text-white text-[14px] sm:text-[15px] font-medium">
                 {stat.label}
               </div>
             </div>
@@ -49,5 +49,5 @@ export default function RealEstateStatsBar() {
         </div>
       </div>
     </section>
-  );
+  )
 }

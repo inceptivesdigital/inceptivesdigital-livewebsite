@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 
 const steps = [
   {
-    num: '01.',
+    num: '01',
     tabTitle: 'Discovery & Strategy',
     cardTitle: 'Discovery & Strategy',
     bullets: [
@@ -21,7 +21,7 @@ const steps = [
     ],
   },
   {
-    num: '02.',
+    num: '02',
     tabTitle: 'Development',
     cardTitle: 'Development',
     bullets: [
@@ -40,7 +40,7 @@ const steps = [
     ],
   },
   {
-    num: '03.',
+    num: '03',
     tabTitle: 'Deployment',
     cardTitle: 'Deployment',
     bullets: [
@@ -59,7 +59,7 @@ const steps = [
     ],
   },
   {
-    num: '04.',
+    num: '04',
     tabTitle: 'Ongoing Support',
     cardTitle: 'Ongoing Support',
     bullets: [
@@ -130,18 +130,18 @@ export default function BlockchainProcess() {
   }
 
   return (
-    <section className="w-full bg-[#202020] text-white py-16 md:py-24">
-      <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
-        <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
-          <h2 className="text-[28px] sm:text-[38px] lg:text-[44px] font-bold leading-[1.18] text-white mb-4">
+    <section className="w-full bg-[#000000] text-white py-20 lg:py-24 relative">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.16] mb-4">
             Comprehensive Blockchain Development Process We Follow
           </h2>
-          <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
+          <p className="text-white/85 text-sm sm:text-base leading-relaxed font-normal">
             We deliver top-notch blockchain software development services through a structured, transparent, and client-focused approach that ensures measurable business value.
           </p>
         </div>
 
-        {/* 4 Single-Line Numbered Step Pills (Full Container Width on Desktop, Hidden-Scrollbar Scroll on Mobile) */}
+        {/* Single-Line Pill Tabs Bar (Exact Industries Style) */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -149,7 +149,7 @@ export default function BlockchainProcess() {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className="w-full flex lg:grid lg:grid-cols-4 gap-4 mb-8 overflow-x-auto lg:overflow-visible no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden scroll-smooth cursor-grab active:cursor-grabbing select-none"
+          className="w-full max-w-full flex lg:grid lg:grid-cols-4 items-center gap-2.5 sm:gap-3 overflow-x-auto no-scrollbar pb-4 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {steps.map((step, idx) => {
@@ -159,16 +159,16 @@ export default function BlockchainProcess() {
                 key={step.num}
                 type="button"
                 onClick={(e) => handleTabClick(idx, e)}
-                className={`flex-1 shrink-0 min-w-max lg:min-w-0 lg:shrink flex items-center gap-3.5 px-5 py-4 rounded-[16px] transition-all duration-200 cursor-pointer border-0 focus:outline-none text-left whitespace-nowrap lg:w-full ${
+                className={`rounded-full shrink-0 lg:shrink min-w-[200px] lg:min-w-0 lg:w-full flex items-center justify-start gap-3 py-1.5 pl-1.5 pr-5 transition-all duration-200 cursor-pointer border-0 select-none ${
                   isActive
-                    ? 'bg-[#00CE44] text-black font-bold'
-                    : 'bg-[#333333] hover:bg-[#3e3e3e] text-white font-medium'
+                    ? 'bg-[#00CE44] text-white font-semibold'
+                    : 'bg-[#2c2c2c] hover:bg-[#383838] text-white/90 font-medium'
                 }`}
               >
-                <span className="w-9 h-9 rounded-full bg-white text-black font-extrabold text-[13px] flex items-center justify-center shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white text-black font-extrabold text-xs sm:text-sm flex items-center justify-center shrink-0">
                   {step.num}
                 </span>
-                <span className="text-[15px] sm:text-[16px] leading-snug">
+                <span className="text-sm sm:text-[15px] whitespace-nowrap">
                   {step.tabTitle}
                 </span>
               </button>
@@ -176,17 +176,17 @@ export default function BlockchainProcess() {
           })}
         </div>
 
-        {/* Wide Dark Detail Card */}
-        <div className="w-full bg-[#2b2b2b] rounded-[24px] p-8 sm:p-10 lg:p-12 text-left border border-white/10">
-          <h3 className="text-white text-[26px] sm:text-[32px] font-bold leading-tight mb-6">
+        {/* Single Wide Dark Grey Content Panel (Exact Industries Style) */}
+        <div className="bg-[#333333] rounded-[14px] px-7 sm:px-10 lg:px-12 py-10 sm:py-12 min-h-[210px] flex flex-col justify-center text-left border-0">
+          <h3 className="text-2xl sm:text-[26px] font-bold text-[#00CE44] tracking-tight mb-4">
             {activeStep.cardTitle}
           </h3>
 
-          <ul className="space-y-4">
+          <ul className="space-y-3.5">
             {activeStep.bullets.map((b) => (
               <li
                 key={b.lead}
-                className="flex items-start gap-3 text-[15px] sm:text-[17px] leading-relaxed"
+                className="flex items-start gap-3 text-sm sm:text-base leading-relaxed"
               >
                 <span className="w-2.5 h-2.5 rounded-full bg-[#00CE44] mt-2 shrink-0" />
                 <span className="text-white/90">

@@ -47,29 +47,34 @@ export default function Hero() {
         <div className="block lg:hidden">
           {/* Centered Heading */}
           <h1 className="text-2xl sm:text-4xl font-extrabold text-white text-center tracking-tight leading-[1.25] max-w-xl mx-auto">
-            Engineering AI-Powered Digital Systems for Scalable Businesses
+            Engineering AI-Powered Digital Products for Scalable Businesses
           </h1>
 
           {/* Centered Subtitle */}
           <p className="mt-3.5 sm:mt-4 text-slate-300 text-xs sm:text-sm leading-relaxed text-center max-w-lg mx-auto font-normal">
-            From strategy to launch, we create custom apps for iOS, Android, and beyond — using Flutter, React Native, and native tech stacks.
+            Inceptives Digital helps businesses define, design, and build mobile apps, digital products, and AI-powered systems through product strategy, user-focused design, and senior engineering.
           </p>
 
           {/* Centered Dual Action Buttons */}
-          <div className="mt-6 flex flex-wrap justify-center items-center gap-3">
-            <a
-              href="#schedule"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-[#00CE44] hover:bg-[#00b53c] text-black font-semibold text-sm transition-colors active:scale-95 shadow-none"
-            >
-              Get A Call Now!
-            </a>
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <div className="flex flex-wrap justify-center items-center gap-3">
+              <a
+                href="#contact"
+                className="getintouch inline-flex items-center justify-center min-w-[165px] h-[46px] px-6 py-3 rounded-none border border-[#00CE44] bg-[#00CE44] hover:bg-[#00b53c] text-black font-semibold text-sm transition-colors active:scale-95 shadow-none"
+              >
+                Start My Product Roadmap
+              </a>
 
-            <a
-              href="#schedule"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-semibold text-sm transition-colors active:scale-95 shadow-none"
-            >
-              Schedule A Call
-            </a>
+              <a
+                href="#contact"
+                className="openpop-shedule inline-flex items-center justify-center min-w-[165px] h-[46px] px-6 py-3 rounded-none bg-transparent hover:bg-white/10 border border-white text-white font-semibold text-sm transition-colors active:scale-95 shadow-none"
+              >
+                Schedule A Call
+              </a>
+            </div>
+            <span className="text-slate-400 text-xs font-medium tracking-wide">
+              30-min. Pure Value.
+            </span>
           </div>
 
           {/* Video Container (Below Buttons) */}
@@ -151,7 +156,7 @@ export default function Hero() {
             {/* Content Top Zone */}
             <div className="w-full max-w-[62%]">
               <h1 className="text-[32px] xl:text-[38px] 2xl:text-[42px] font-black tracking-tight text-black leading-[1.25] break-words">
-                Engineering AI-Powered Digital Systems for Scalable Businesses
+                Engineering AI-Powered Digital Products for Scalable Businesses
               </h1>
 
               <p className="mt-4 xl:mt-5 text-black/90 text-[14px] xl:text-[15px] leading-relaxed font-medium">
@@ -159,20 +164,25 @@ export default function Hero() {
               </p>
 
               {/* Action Buttons */}
-              <div className="mt-6 xl:mt-7 flex flex-wrap items-center gap-3">
-                <a
-                  href="#schedule"
-                  className="inline-flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-none bg-black hover:bg-[#1a1a1a] text-white font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
-                >
-                  Get A Call Now!
-                </a>
+              <div className="mt-6 xl:mt-7 flex flex-col items-start gap-2">
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="#contact"
+                    className="getintouch inline-flex items-center justify-center min-w-[170px] h-[48px] px-6 py-3 rounded-none border-2 border-black bg-black hover:bg-[#1a1a1a] text-white font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
+                  >
+                    Start My Product Roadmap
+                  </a>
 
-                <a
-                  href="#schedule"
-                  className="inline-flex items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-none border-2 border-black hover:bg-black/10 text-black font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
-                >
-                  Schedule A Call
-                </a>
+                  <a
+                    href="#contact"
+                    className="openpop-shedule inline-flex items-center justify-center min-w-[170px] h-[48px] px-6 py-3 rounded-none border-2 border-black bg-transparent hover:bg-black/10 text-black font-medium text-sm tracking-tight transition-all active:scale-95 shadow-none"
+                  >
+                    Schedule A Call
+                  </a>
+                </div>
+                <span className="text-black/80 text-xs sm:text-[13px] font-semibold tracking-wide">
+                  30-min. Pure Value.
+                </span>
               </div>
             </div>
 

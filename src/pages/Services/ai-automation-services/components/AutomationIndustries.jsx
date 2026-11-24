@@ -68,7 +68,7 @@ export default function AutomationIndustries() {
         <h2 className="mx-auto mb-12 max-w-4xl text-center text-3xl font-bold leading-tight tracking-tight sm:mb-16 sm:text-4xl lg:text-[40px]">
           Industries Where Our AI Automation Services Deliver Operational Impact
         </h2>
-        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px overflow-hidden border border-[#26282d] bg-[#26282d] shadow-2xl sm:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
           {industries.map(({ icon, alt, title, items }) => (
             <article
               key={title}

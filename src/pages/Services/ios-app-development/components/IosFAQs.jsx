@@ -16,7 +16,7 @@ const faqs = [
           Choose native iOS development for applications requiring advanced Apple integrations, such as HealthKit or ARKit. Cross-platform development, including{' '}
           <a
             href="https://inceptivesdigital.com/kotlin-multiplatform-app-development"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             Kotlin Multiplatform app development
           </a>
@@ -51,7 +51,7 @@ const faqs = [
           Yes. Our{' '}
           <a
             href="https://inceptivesdigital.com/ai-development"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             AI development
           </a>{' '}
@@ -66,7 +66,7 @@ const faqs = [
           We begin{' '}
           <a
             href="https://inceptivesdigital.com/blog/guide-to-custom-ios-app-development-for-businesses"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             custom iOS app development
           </a>{' '}

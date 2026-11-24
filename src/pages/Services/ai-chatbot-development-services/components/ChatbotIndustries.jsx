@@ -86,7 +86,7 @@ export default function ChatbotIndustries() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-stretch auto-rows-fr">
           {industries.map((ind) => {
             const Icon = ind.icon
             const inner = (
@@ -112,7 +112,7 @@ export default function ChatbotIndustries() {
               </>
             )
             const cls =
-              'group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200'
+              'group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 sm:p-8 flex flex-col items-start text-left transition-colors duration-200 h-full'
 
             return ind.to.startsWith('#') ? (
               <a key={ind.title} href={ind.to} className={cls}>

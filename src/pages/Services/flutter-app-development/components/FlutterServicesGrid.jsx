@@ -3,59 +3,46 @@ export default function FlutterServicesGrid() {
     {
       title: 'Flutter App Consultation',
       icon: '/assets/ios-app/serivces1.svg',
-      desc: 'Before a line of code is written, the right questions get asked. Discovery covers business model, users, technical constraints, and competitive landscape, producing a validated product plan before work begins.',
+      desc: 'Before investing in Flutter development, get clarity on the architecture your product actually needs. Our consultants assess platform suitability and technical dependencies to establish a realistic development scope aligned with your business priorities.',
     },
     {
       title: 'Flutter App UI/UX Design',
       icon: '/assets/ios-app/serivces2.svg',
-      desc: 'The design phase maps how real users move through the product. High-fidelity prototypes in Figma and Adobe XD, built to platform guidelines and refined until the interface earns its way into the build.',
+      desc: "Our Flutter UI/UX designers shape custom interfaces around how users interact with your product. Through Figma prototypes and Flutter's widget capabilities, we establish a consistent experience that reflects your application requirements.",
     },
     {
-      title: 'Flutter App Development',
+      title: 'Custom Flutter App Development',
       icon: '/assets/ios-app/serivces3.svg',
-      desc: (
-        <>
-          Production-grade Dart code, modular architecture, and backend integrations built to the product&apos;s actual requirements, the kind of decision that separates{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/native-vs-hybrid-vs-cross-platform-app-development"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
-          >
-            native vs hybrid vs cross-platform app development
-          </a>{' '}
-          outcomes more than the framework choice itself. The result is an application that performs under load, adapts to change, and stays maintainable as the product grows.
-        </>
-      ),
+      desc: "Our Flutter developers engineer custom applications around the workflows that define each product. Dart and Flutter's widget architecture give businesses precise control over interface behavior while supporting consistent experiences across iOS and Android.",
     },
     {
       title: 'Flutter App Migration',
       icon: '/assets/ios-app/serivces4.svg',
-      desc: 'Existing iOS and Android codebases consolidated into a single Flutter build without disrupting users or sacrificing performance. eBay Motors completed the same process and launched a beta in three months, achieving 98.3% code sharing between platforms.',
+      desc: 'Planning to move an existing application to Flutter? Our migration engineers evaluate the current codebase and native dependencies to establish a transition strategy that protects essential functionality and limits operational disruption.',
     },
     {
       title: 'Flutter Web App Development',
       icon: '/assets/ios-app/serivces5.svg',
-      desc: 'The same codebase and design system are extended to the browser without having to rebuild from scratch. Fast, visually consistent web experiences that carry the same quality as the mobile product.',
+      desc: 'Bring existing Flutter product experiences to the browser without rebuilding every interface from scratch. Our web development specialists assess code-sharing opportunities and browser requirements to define a practical implementation approach.',
     },
     {
       title: 'Flutter App Maintenance and Support',
       icon: '/assets/ios-app/serivces6.svg',
-      desc: 'Bugs, updates, performance monitoring, and new features are handled as part of a continuous support model. The product stays current and stable well beyond launch day.',
+      desc: "Keep your Flutter application current as platform requirements and business priorities change. Our maintenance engineers manage SDK upgrades and compatibility issues while supporting enhancements that extend the product's useful life.",
     },
   ]
 
   return (
     <section className="py-16 sm:py-24 bg-[#1d1d1d]">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
+        {/* Section Header */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
-            <span className="text-[#00CE44]">Flutter App Development Services,</span>{' '}
-            Scoped Around Your Product
+            <span className="text-[#00CE44]">Custom Flutter App Development Services</span>{' '}
+            for Mobile and Web
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
-            Every engagement is structured around your product goals, not a templated delivery model. Here is what that looks like in practice.
+            Our Flutter app development services help businesses turn product requirements into applications that work across their intended platforms. Experienced Flutter developers bring technical judgment to each engagement, keeping engineering decisions aligned with commercial priorities.
           </p>
         </div>
 
@@ -86,10 +73,10 @@ export default function FlutterServicesGrid() {
         <div className="p-7 sm:p-9 rounded-[16px] bg-[#292929] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-0 shadow-none">
           <div className="text-left max-w-2xl">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-              Get in Touch, and We Will Figure It Out Together
+              Bring Your Next Product to Top Flutter Mobile App Developers
             </h3>
             <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed">
-              Book a session with our studio. The Flutter mobile app development services begin with understanding what the product needs to succeed.
+              Ready to move forward with your Flutter application? Connect with our engineers to discuss your development requirements and take the next step toward production.
             </p>
           </div>
           <div className="shrink-0">
@@ -97,7 +84,7 @@ export default function FlutterServicesGrid() {
               href="#contact"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
             >
-              Get in Touch
+              Consult Our Flutter Developers
             </a>
           </div>
         </div>

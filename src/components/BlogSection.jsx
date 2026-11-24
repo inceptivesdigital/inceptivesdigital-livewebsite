@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import initialPosts from '../data/blogPosts.json';
+import { seedCachedPosts } from '../utils/wpCache';
 
 // Known reviewers map for the approving author metadata from WordPress API
 const KNOWN_REVIEWERS = {
@@ -27,13 +28,19 @@ export default function BlogSection() {
         const liveData = await res.json();
         if (!Array.isArray(liveData) || liveData.length === 0) return;
 
+        seedCachedPosts(liveData);
+
         const formatted = liveData.map(p => {
           const reviewerId = p.meta?._flow_reviewer_id || null;
           const reviewer = reviewerId && KNOWN_REVIEWERS[reviewerId] 
             ? KNOWN_REVIEWERS[reviewerId] 
             : (reviewerId ? { id: reviewerId, name: 'Muhammad Usman' } : null);
 
-          const featuredMedia = p._embedded?.['wp:featuredmedia']?.[0]?.source_url;
+          const media = p._embedded?.['wp:featuredmedia']?.[0];
+          const featuredMedia =
+            media?.media_details?.sizes?.medium_large?.source_url ||
+            media?.media_details?.sizes?.large?.source_url ||
+            media?.source_url;
 
           return {
             id: p.id,
@@ -105,10 +112,11 @@ export default function BlogSection() {
         {/* Section Heading & Subtitle */}
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold tracking-tight leading-tight text-white">
-            Your Go-To Business <span className="text-[#00CE44]">Growth Blog!</span>
+            Product Thinking for a{' '}
+            <span className="text-[#00CE44]">Changing Digital World</span>
           </h2>
           <p className="text-[16px] text-[#A0A0A0] text-center max-w-3xl mx-auto mt-3 sm:mt-4 leading-relaxed font-normal">
-            Explore expert tips, tools, and stories to help your business grow—whether you&apos;re just starting out, scaling up, or managing a large team.
+            Explore expert perspectives on product development, AI, user experience, and the technology decisions behind modern businesses.
           </p>
         </div>
 

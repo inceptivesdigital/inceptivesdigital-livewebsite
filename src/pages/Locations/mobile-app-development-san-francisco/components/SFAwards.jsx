@@ -52,32 +52,19 @@ export default function SFAwards() {
           </p>
         </div>
 
-        {/* 6-Card Grid: Original Award Logos, NO pills/numbers, NO generic vector icons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Clean Floating Award Badges Row */}
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-18 xl:gap-20">
           {awards.map((item) => (
             <div
               key={item.title + item.org}
-              className="p-7 sm:p-8 rounded-[20px] bg-[#14151a] border border-white/5 hover:border-[#00CE44]/40 transition-all duration-300 flex flex-col justify-between text-left hover:-translate-y-1 group"
+              className="h-24 sm:h-28 lg:h-32 w-auto max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
             >
-              <div>
-                {/* Original Award Logo */}
-                <div className="h-16 sm:h-20 flex items-center justify-start mb-6">
-                  <img
-                    src={item.logoSrc}
-                    alt={`${item.org} - ${item.title}`}
-                    className="max-h-14 sm:max-h-16 max-w-[160px] sm:max-w-[180px] w-auto h-auto object-contain select-none group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </div>
-
-                <h3 className="text-xl font-bold text-white group-hover:text-[#00CE44] transition-colors mb-3 leading-snug">
-                  {item.title}
-                </h3>
-
-                <p className="text-white/75 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  {item.desc}
-                </p>
-              </div>
+              <img
+                src={item.logoSrc}
+                alt={`${item.org} - ${item.title}`}
+                className="max-h-full max-w-full w-auto h-auto object-contain select-none"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

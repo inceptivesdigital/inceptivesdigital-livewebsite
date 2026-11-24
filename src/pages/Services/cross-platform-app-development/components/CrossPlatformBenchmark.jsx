@@ -19,14 +19,14 @@ export default function CrossPlatformBenchmark() {
               Over 40% of all mobile applications shipped today run from a single cross-platform foundation. The market has moved, and the businesses performing best within it chose their engineering partner carefully. Inceptives Digital is the cross-platform app development company that ensures every product holds its ground on iOS and Android equally. Being supported by 150+ engineers operating across{' '}
               <Link
                 to="/flutter-app-development"
-                className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-white transition-colors"
+                className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:opacity-80 transition-colors"
               >
                 Flutter
               </Link>{' '}
               and{' '}
               <Link
                 to="/react-native-app-development"
-                className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-white transition-colors"
+                className="font-normal text-[#00CE44] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:opacity-80 transition-colors"
               >
                 React Native
               </Link>

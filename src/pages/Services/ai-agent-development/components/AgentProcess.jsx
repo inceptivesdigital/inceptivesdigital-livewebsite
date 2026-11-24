@@ -14,7 +14,7 @@ const steps = [
           href="https://inceptivesdigital.com/product-strategy-consulting"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           product strategy consulting
         </a>{' '}
@@ -44,7 +44,7 @@ const steps = [
           href="https://inceptivesdigital.com/nlp-development-services"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           NLP
         </a>{' '}
@@ -74,7 +74,7 @@ const steps = [
           href="https://inceptivesdigital.com/post-launch-analytics-iteration"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#00CE44] underline hover:text-white transition-colors"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
         >
           Post-launch analytics and iteration
         </a>{' '}
@@ -100,7 +100,7 @@ export default function AgentProcess() {
             href="https://inceptivesdigital.com/digital-product-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            className="text-[#00CE44] underline hover:opacity-80 transition-colors"
           >
             digital product development
           </a>{' '}

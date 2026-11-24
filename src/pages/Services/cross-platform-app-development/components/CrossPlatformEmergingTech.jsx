@@ -10,7 +10,7 @@ export default function CrossPlatformEmergingTech() {
             href="https://inceptivesdigital.com/ai-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             AI development
           </a>{' '}
@@ -33,7 +33,7 @@ export default function CrossPlatformEmergingTech() {
             href="https://inceptivesdigital.com/blockchain-development"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             blockchain development
           </a>{' '}

@@ -10,7 +10,7 @@ const steps = [
     desc: (
       <>
         As outlined in our{' '}
-        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           AI MVP development guide
         </a>
         , business problems are defined, language data sources identified, data quality evaluated, and NLP feasibility confirmed before development. A clear build plan is created before a model is selected.
@@ -34,7 +34,7 @@ const steps = [
     imageAlt: 'NLP model development and training',
     desc: (
       <>
-        <a href="https://inceptivesdigital.com/machine-learning-development-services" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/machine-learning-development-services" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Machine learning development
         </a>{' '}
         for NLP starts with an architecture selected for the specific task, using transformer models, custom pipelines, or fine-tuned LLMs validated against real business language data.
@@ -58,7 +58,7 @@ const steps = [
     imageAlt: 'NLP monitoring and language drift detection',
     desc: (
       <>
-        <a href="https://inceptivesdigital.com/post-launch-analytics-iteration" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:text-white transition-colors">
+        <a href="https://inceptivesdigital.com/post-launch-analytics-iteration" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Post-launch analytics and iteration
         </a>{' '}
         track model performance and detect language drift before it affects accuracy. Models are retrained as business language and terminology evolve.

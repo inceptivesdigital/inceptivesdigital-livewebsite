@@ -43,15 +43,15 @@ export default function SuccessSection() {
       // Ease out cubic
       const easeOut = 1 - Math.pow(1 - progress, 3)
 
-      setCount1(Math.min(70, Math.round(easeOut * 70)))
-      setCount2(Math.min(150, Math.round(easeOut * 150)))
-      setCount3(Math.min(3, Math.round(easeOut * 3)))
+      setCount1(Math.min(8, Math.round(easeOut * 8)))
+      setCount2(Math.min(60, Math.round(easeOut * 60)))
+      setCount3(Math.min(70, Math.round(easeOut * 70)))
 
       if (frame >= totalFrames) {
         clearInterval(timer)
-        setCount1(70)
-        setCount2(150)
-        setCount3(3)
+        setCount1(8)
+        setCount2(60)
+        setCount3(70)
       }
     }, frameRate)
 
@@ -85,35 +85,35 @@ export default function SuccessSection() {
               {/* Grid for Top 2 Stat Boxes */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-4 sm:mb-5 mt-2">
                 
-                {/* Stat 1: 70+ Applications Launched */}
+                {/* Stat 1: 8+ Years */}
                 <div className="bg-[#00CE44]/[0.08] hover:bg-[#00CE44]/[0.12] transition-colors rounded-[22px] sm:rounded-[25px] p-6 sm:p-7 flex flex-col items-center justify-center text-center">
-                  <div className="text-4xl sm:text-5xl lg:text-[60px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
-                    {count1}+
+                  <div className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
+                    {count1}+ Years
                   </div>
-                  <h4 className="text-[15px] sm:text-[16px] font-medium text-[#00CE44] tracking-tight leading-normal">
-                    Applications Launched!!
+                  <h4 className="text-[14px] sm:text-[15px] font-medium text-white/90 tracking-tight leading-normal">
+                    Product development experience
                   </h4>
                 </div>
 
-                {/* Stat 2: 150+ Active Developers */}
+                {/* Stat 2: 60+ Team Members */}
                 <div className="bg-[#00CE44]/[0.08] hover:bg-[#00CE44]/[0.12] transition-colors rounded-[22px] sm:rounded-[25px] p-6 sm:p-7 flex flex-col items-center justify-center text-center">
-                  <div className="text-4xl sm:text-5xl lg:text-[60px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
+                  <div className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
                     {count2}+
                   </div>
-                  <h4 className="text-[15px] sm:text-[16px] font-medium text-[#00CE44] tracking-tight leading-normal">
-                    Active Developers
+                  <h4 className="text-[14px] sm:text-[15px] font-medium text-white/90 tracking-tight leading-normal">
+                    Team Members — Product, design, and engineering specialists
                   </h4>
                 </div>
 
               </div>
 
-              {/* Stat 3: 3 Million Downloads on App Store! */}
+              {/* Stat 3: 70+ Clients */}
               <div className="bg-[#00CE44]/[0.08] hover:bg-[#00CE44]/[0.12] transition-colors rounded-[22px] sm:rounded-[25px] p-6 sm:p-8 flex flex-col items-center justify-center text-center">
-                <div className="text-4xl sm:text-5xl lg:text-[65px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
-                  {count3} Million
+                <div className="text-4xl sm:text-5xl lg:text-[60px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
+                  {count3}+ Clients
                 </div>
-                <h4 className="text-[15px] sm:text-[16px] font-medium text-[#00CE44] tracking-tight leading-normal">
-                  Downloads on App Store!
+                <h4 className="text-[15px] sm:text-[16px] font-medium text-white/90 tracking-tight leading-normal">
+                  Supporting businesses across industries
                 </h4>
               </div>
 

@@ -22,8 +22,8 @@ export default function ReactNativeCostSection() {
         <>
           For businesses building a production-ready product beyond the{' '}
           <Link
-            to="/services/mobile-app-development"
-            className="text-[#00CE44] underline hover:text-white transition-colors"
+            to="/mvp-development"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
           >
             MVP development
           </Link>{' '}

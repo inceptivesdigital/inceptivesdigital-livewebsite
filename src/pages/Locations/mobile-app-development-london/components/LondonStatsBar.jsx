@@ -1,9 +1,9 @@
 export default function LondonStatsBar() {
   const stats = [
-    { value: '70+', label: 'Digital Products Delivered' },
-    { value: '3M+', label: 'Downloads' },
-    { value: '8+', label: 'Years of Product Engineering' },
-    { value: '4.7★', label: 'Clutch Rating' },
+    { value: '70+', label: 'Digital Products Delivered', icon: '/assets/mobile-app/apps-launch.svg' },
+    { value: '3M+', label: 'Downloads', icon: '/assets/mobile-app/app-downloads.svg' },
+    { value: '8+', label: 'Years of Product Engineering', icon: '/assets/mobile-app/active-developer.svg' },
+    { value: '4.7★', label: 'Clutch Rating', icon: '/assets/mobile-app/rating.svg' },
   ]
 
   return (
@@ -12,10 +12,18 @@ export default function LondonStatsBar() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((item) => (
             <div key={item.label} className="flex flex-col items-center justify-center">
-              <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#00CE44] tracking-tight mb-2">
+              <div className="w-11 h-11 mb-3 flex items-center justify-center">
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className="w-full h-full object-contain select-none"
+                  loading="lazy"
+                />
+              </div>
+              <span className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                 {item.value}
               </span>
-              <span className="text-white/80 text-xs sm:text-sm font-medium tracking-wide">
+              <span className="text-white text-[14px] sm:text-[15px] font-medium">
                 {item.label}
               </span>
             </div>

@@ -49,7 +49,7 @@ export default function WebAppServicesGrid() {
           When off-the-shelf options no longer serve the product, we build web{' '}
           <Link
             to="/custom-software-development"
-            className="underline font-semibold text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-semibold text-[#00CE44] hover:opacity-80 transition-colors"
           >
             custom software
           </Link>{' '}

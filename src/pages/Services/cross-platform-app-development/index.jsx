@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import { useJsonLdSchema } from '../../../utils/useJsonLdSchema'
+import crossPlatformSchema from '../../../schemas/cross-platform-app-development.json'
 import CrossPlatformHero from './components/CrossPlatformHero'
 import CrossPlatformAwards from './components/CrossPlatformAwards'
 import CrossPlatformAdvantages from './components/CrossPlatformAdvantages'
@@ -19,6 +21,7 @@ import CrossPlatformLocations from './components/CrossPlatformLocations'
 import CrossPlatformFAQs from './components/CrossPlatformFAQs'
 
 export default function CrossPlatformAppDevelopmentPage() {
+  useJsonLdSchema(crossPlatformSchema, 'schema-cross-platform-app-development')
   useEffect(() => {
     const seoTitle = 'Cross-Platform App Development Company USA | Inceptives Digital'
     const seoDesc =

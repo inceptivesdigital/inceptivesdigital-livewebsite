@@ -41,7 +41,7 @@ export default function AsoComparisonTable() {
             Three different growth levers, three different cost models, and choosing between them often overlaps with broader{' '}
             <Link
               to="/blog/effective-marketing-strategies-for-mobile-apps"
-              className="text-[#00CE44] underline font-normal hover:text-white transition-colors"
+              className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
             >
               effective marketing strategies for mobile apps
             </Link>

@@ -40,7 +40,7 @@ export default function WebAppHero() {
               As a{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
               >
                 mobile app development company
               </Link>

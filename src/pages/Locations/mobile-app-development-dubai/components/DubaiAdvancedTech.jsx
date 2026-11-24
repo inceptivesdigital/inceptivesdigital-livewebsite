@@ -76,7 +76,7 @@ export default function DubaiAdvancedTech() {
           Personalization engines, fraud detection, and predictive analytics from{' '}
           <Link
             to="/machine-learning-development-services"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             machine learning development services
           </Link>{' '}
@@ -97,7 +97,7 @@ export default function DubaiAdvancedTech() {
           Our{' '}
           <Link
             to="/generative-ai-development-company"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             generative AI development company
           </Link>{' '}
@@ -120,14 +120,14 @@ export default function DubaiAdvancedTech() {
             AI belongs in a mobile product when it improves a specific workflow or customer interaction, as these{' '}
             <Link
               to="/blog/ai-powered-mobile-apps-uae-business-operations"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               AI-powered apps in the UAE
             </Link>{' '}
             show. Inceptives Digital offers{' '}
             <Link
               to="/ai-app-development-services"
-              className="text-[#00CE44] hover:underline font-medium"
+              className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               AI app development services
             </Link>{' '}

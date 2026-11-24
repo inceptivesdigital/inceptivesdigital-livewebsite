@@ -97,14 +97,14 @@ export default function AiAppIndustries() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-stretch auto-rows-fr">
           {industries.map((ind) => {
             const Icon = ind.icon
             return (
               <Link
                 key={ind.title}
                 to={ind.to}
-                className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 flex flex-col items-start text-left transition-colors duration-200"
+                className="group bg-[#1b1c21] hover:bg-[#00CE44] rounded-[16px] p-7 flex flex-col items-start text-left transition-colors duration-200 h-full"
               >
                 <Icon
                   className="w-9 h-9 text-[#00CE44] group-hover:text-black mb-5 transition-colors duration-200"

@@ -109,8 +109,8 @@ export default function ReactNativeTechStack() {
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
             The right{' '}
             <Link
-              to="/services/mobile-app-development"
-              className="text-[#00CE44] underline hover:text-white transition-colors"
+              to="/blog/mobile-app-tech-stack"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-colors"
             >
               mobile app tech stack
             </Link>{' '}

@@ -28,7 +28,7 @@ export default function ProductLaunchServicesGrid() {
           Clear, audience-focused{' '}
           <Link
             to="/blog/mobile-app-branding-guide"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             mobile app branding
           </Link>{' '}
@@ -44,7 +44,7 @@ export default function ProductLaunchServicesGrid() {
           Multi-channel{' '}
           <Link
             to="/blog/effective-marketing-strategies-for-mobile-apps"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             marketing strategies for mobile apps
           </Link>{' '}
@@ -60,7 +60,7 @@ export default function ProductLaunchServicesGrid() {
           Keyword targeting, metadata optimization, conversion-focused copy, and visual asset recommendations support an effective{' '}
           <Link
             to="/blog/app-store-optimization-aso"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             app store optimization strategy
           </Link>{' '}
@@ -76,7 +76,7 @@ export default function ProductLaunchServicesGrid() {
           Performance tracking, retention planning, and{' '}
           <Link
             to="/post-launch-analytics-iteration"
-            className="underline font-normal text-[#00CE44] hover:text-white transition-colors"
+            className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
           >
             post-launch analytics iteration
           </Link>{' '}

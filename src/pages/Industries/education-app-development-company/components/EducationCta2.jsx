@@ -19,7 +19,7 @@ export default function EducationCta2() {
           </h2>
 
           <p className="text-white/90 text-base sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
-            From planning to deployment, we build apps that simplify learning and maximize engagement. Let&apos;s make your vision a reality.
+            Get a tailored education app development cost estimate based on your platform&apos;s features, user roles, and integration requirements.
           </p>
 
           <div className="flex justify-center">
@@ -27,7 +27,7 @@ export default function EducationCta2() {
               to="/contact-us"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00CE44] text-black font-medium text-base rounded-none hover:bg-[#00e04b] transition-all duration-200 cursor-pointer shadow-none"
             >
-              <span>Talk to Our Experts</span>
+              <span>Get My Education App Estimate</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

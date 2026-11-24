@@ -1,8 +1,36 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { getCachedPost, setCachedPost } from '../../../utils/wpCache'
 import './blog-inner-template.css'
 
 const WP_API_BASE = 'https://nextincep.wpenginepowered.com/wp-json/wp/v2'
+
+const KNOWN_REVIEWERS = {
+  6: {
+    id: 6,
+    name: 'Muhammad Usman',
+    bio: 'Editorial reviewer at Inceptives Digital.',
+    avatar: '/assets/ID-logo.jpg',
+  },
+  14: {
+    id: 14,
+    name: 'Atif Zaidy',
+    bio: 'Editorial reviewer at Inceptives Digital.',
+    avatar: '/assets/ID-logo.jpg',
+  },
+  7: {
+    id: 7,
+    name: 'Noshaba Noor',
+    bio: 'Editorial reviewer at Inceptives Digital.',
+    avatar: '/assets/ID-logo.jpg',
+  },
+  10: {
+    id: 10,
+    name: 'Soha Shakeel',
+    bio: 'Editorial reviewer at Inceptives Digital.',
+    avatar: '/assets/ID-logo.jpg',
+  },
+}
 
 function decodeHtml(html = '') {
   if (!html) return ''
@@ -123,60 +151,110 @@ export default function BlogDetailPage() {
   const articleBodyRef = useRef(null)
   const desktopTocRef = useRef(null)
 
+  const formatRawPost = useCallback((p, reviewerOverride = null) => {
+    const media = p._embedded?.['wp:featuredmedia']?.[0]
+    const authorObj = p._embedded?.author?.[0]
+    const terms = (p._embedded?.['wp:term']?.[0] || []).map((t) => ({
+      id: t.id,
+      slug: t.slug,
+      name: decodeHtml(t.name),
+    }))
+
+    const flowApproved = p.meta?._flow_review_status === 'approved'
+    const flowReviewerId = Number(p.meta?._flow_reviewer_id || 0)
+    const manualApproved = p.meta?._id_approved === '1'
+    const manualReviewerId = Number(p.meta?._id_reviewer || 0)
+    const reviewerId =
+      flowApproved && flowReviewerId
+        ? flowReviewerId
+        : manualApproved && manualReviewerId
+        ? manualReviewerId
+        : 0
+
+    const fallbackReviewer = reviewerId ? KNOWN_REVIEWERS[reviewerId] || null : null
+
+    const heroImage =
+      media?.media_details?.sizes?.large?.source_url ||
+      media?.media_details?.sizes?.medium_large?.source_url ||
+      media?.source_url ||
+      ''
+
+    return {
+      id: p.id,
+      slug: p.slug,
+      title: decodeHtml(p.title?.rendered || ''),
+      content: p.content?.rendered || '',
+      wpUrl: p.link || `https://inceptivesdigital.com/blog/${p.slug}`,
+      date: p.date
+        ? new Date(p.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })
+        : '',
+      author: {
+        name: authorObj?.name || 'Inceptives Digital',
+        bio: authorObj?.description || 'Contributor at Inceptives Digital.',
+        avatar:
+          authorObj?.avatar_urls?.['96'] ||
+          authorObj?.avatar_urls?.['48'] ||
+          '/assets/ID-logo.jpg',
+      },
+      reviewer: reviewerOverride || fallbackReviewer,
+      reviewerId,
+      image: heroImage,
+      category: terms[0] || null,
+      categories: terms,
+    }
+  }, [])
+
   const fetchPost = useCallback(
     async ({ silent = false } = {}) => {
       if (!slug) return
-      if (!silent) {
+
+      const cachedRaw = getCachedPost(slug)
+      if (cachedRaw) {
+        const instantFormatted = formatRawPost(cachedRaw)
+        setPost(instantFormatted)
+        setNotFound(false)
+        setLoading(false)
+        applyYoastSeoToHead(cachedRaw, instantFormatted)
+      } else if (!silent) {
         setLoading(true)
         setNotFound(false)
       }
 
       try {
         const res = await fetch(
-          `${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed=1&_cb=${Date.now()}`,
-          { cache: 'no-store' }
+          `${WP_API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed=1`
         )
         if (!res.ok) throw new Error(`Status ${res.status}`)
         const data = await res.json()
 
         if (!Array.isArray(data) || data.length === 0) {
-          setPost(null)
-          setNotFound(true)
+          if (!cachedRaw) {
+            setPost(null)
+            setNotFound(true)
+          }
           return
         }
 
         const p = data[0]
-        const media = p._embedded?.['wp:featuredmedia']?.[0]
-        const authorObj = p._embedded?.author?.[0]
-        const terms = (p._embedded?.['wp:term']?.[0] || []).map((t) => ({
-          id: t.id,
-          slug: t.slug,
-          name: decodeHtml(t.name),
-        }))
+        setCachedPost(slug, p)
 
-        // Live fetch Flow / Editorial approved reviewer from WordPress Users REST API
-        let reviewer = null
-        const flowApproved = p.meta?._flow_review_status === 'approved'
-        const flowReviewerId = Number(p.meta?._flow_reviewer_id || 0)
-        const manualApproved = p.meta?._id_approved === '1'
-        const manualReviewerId = Number(p.meta?._id_reviewer || 0)
-        const reviewerId =
-          flowApproved && flowReviewerId
-            ? flowReviewerId
-            : manualApproved && manualReviewerId
-            ? manualReviewerId
-            : 0
+        const formatted = formatRawPost(p)
+        setPost(formatted)
+        setNotFound(false)
+        setLoading(false)
+        applyYoastSeoToHead(p, formatted)
 
-        if (reviewerId > 0) {
-          try {
-            const revRes = await fetch(
-              `${WP_API_BASE}/users/${reviewerId}?_cb=${Date.now()}`,
-              { cache: 'no-store' }
-            )
-            if (revRes.ok) {
-              const revData = await revRes.json()
+        // Fetch full reviewer bio asynchronously without blocking article render
+        if (formatted.reviewerId > 0) {
+          fetch(`${WP_API_BASE}/users/${formatted.reviewerId}`)
+            .then((revRes) => (revRes.ok ? revRes.json() : null))
+            .then((revData) => {
               if (revData?.name) {
-                reviewer = {
+                const fullReviewer = {
                   id: revData.id,
                   name: decodeHtml(revData.name),
                   bio: revData.description || 'Editorial reviewer at Inceptives Digital.',
@@ -185,50 +263,20 @@ export default function BlogDetailPage() {
                     revData.avatar_urls?.['48'] ||
                     '/assets/ID-logo.jpg',
                 }
+                setPost((prev) =>
+                  prev && prev.id === p.id ? { ...prev, reviewer: fullReviewer } : prev
+                )
               }
-            }
-          } catch {
-            // Reviewer optional
-          }
+            })
+            .catch(() => {})
         }
-
-        const formatted = {
-          id: p.id,
-          slug: p.slug,
-          title: decodeHtml(p.title?.rendered || ''),
-          content: p.content?.rendered || '',
-          wpUrl: p.link || `https://inceptivesdigital.com/blog/${p.slug}`,
-          date: p.date
-            ? new Date(p.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })
-            : '',
-          author: {
-            name: authorObj?.name || 'Inceptives Digital',
-            bio: authorObj?.description || 'Contributor at Inceptives Digital.',
-            avatar:
-              authorObj?.avatar_urls?.['96'] ||
-              authorObj?.avatar_urls?.['48'] ||
-              '/assets/ID-logo.jpg',
-          },
-          reviewer,
-          image: media?.source_url || '',
-          category: terms[0] || null,
-          categories: terms,
-        }
-
-        setPost(formatted)
-        setNotFound(false)
-        applyYoastSeoToHead(p, formatted)
       } catch {
-        if (!silent) setNotFound(true)
+        if (!silent && !cachedRaw) setNotFound(true)
       } finally {
         if (!silent) setLoading(false)
       }
     },
-    [slug]
+    [slug, formatRawPost]
   )
 
   // Live fetch + silent auto-refresh on focus/visibility return

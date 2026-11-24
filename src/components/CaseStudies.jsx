@@ -27,27 +27,27 @@ export default function CaseStudies({
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#8A3FFC] hover:bg-[#7b34e5]',
       buttonTextCol: 'text-white',
-      link: '/portfolio',
+      link: '/portfolio/state-of-the-art-chiropractic',
       mockup: '/assets/case-studies/chiropractic-mockup.png',
       mockupAlt: 'State of the Art Chiropractic App Screens',
       alt: 'State of the Art Chiropractic App Screens'
     },
-    // Slide 2: WordSmith
+    // Slide 2: WordSmith Pro
     {
       id: 'wordsmith',
       type: 'standard',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
-      brand: 'WordSmith',
+      brand: 'WordSmith Pro',
       logo: '/assets/case-studies/wordsmith-logo.png',
       logoAlt: 'WordSmith Pro Logo',
       titleColor: 'text-[#E88B13]',
-      subtitle: 'AI Writing Improvement Platform',
-      desc: 'Writing intelligence platform analyzing grammar, tone, clarity, and structure with personalized, actionable feedback.',
+      subtitle: 'AI Writing Intelligence Platform',
+      desc: 'An AI-powered writing intelligence platform that delivers real-time grammar, tone, clarity, and structure analysis with personalized feedback to help users improve their writing over time.',
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#E88B13] hover:bg-[#d47d0e]',
       buttonTextCol: 'text-white',
-      link: '/portfolio',
+      link: '/portfolio/wordsmith-pro',
       mockup: '/assets/case-studies/wordsmith-mockup.png',
       mockupAlt: 'WordSmith Pro App Screens',
       alt: 'WordSmith Pro App Screens'
@@ -73,7 +73,7 @@ export default function CaseStudies({
         { value: '1,000+', label: 'Security personnel managed' }
       ],
       appStoreBadge: '/assets/case-studies/app-store.png',
-      link: '/portfolio',
+      link: '/portfolio/pulse-check-timer',
       mockup: '/assets/case-studies/pulse-mockup.svg',
       mockupAlt: 'Pulse Check Timer App Screens',
       alt: 'Pulse Check Timer App Screens'
@@ -100,7 +100,7 @@ export default function CaseStudies({
       buttonBg: 'bg-[#151515] hover:bg-[#252525]',
       buttonTextCol: 'text-white',
       playStoreBadge: '/assets/case-studies/play-store.png',
-      link: '/portfolio',
+      link: '/portfolio/dps-airem',
       mockup: '/assets/case-studies/dps-mockup.svg',
       mockupAlt: 'DPS Airem App Screens',
       alt: 'DPS Airem App Screens'
@@ -111,16 +111,16 @@ export default function CaseStudies({
       type: 'standard',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
-      brand: 'Family Entertainment Group',
+      brand: 'FEG — Family Entertainment Group',
       logo: '/assets/case-studies/feg-logo.png',
       logoAlt: 'Family Entertainment Group (FEG) Logo',
       titleColor: 'text-[#0066CC]',
       subtitle: 'Automated Experience Capture And Delivery',
-      desc: 'IoT-powered video platform using synchronized cameras, automated processing, and instant memory delivery.',
+      desc: 'An IoT-powered video capture and memory delivery platform with synchronized cameras, automated video processing, and instant content delivery, creating a seamless end-to-end experience from hardware to final delivery.',
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#0066CC] hover:bg-[#0052a3]',
       buttonTextCol: 'text-white',
-      link: '/portfolio',
+      link: '/portfolio/family-entertainment-group',
       mockup: '/assets/case-studies/feg-mockup.png',
       mockupAlt: 'Family Entertainment Group (FEG) App Screens',
       alt: 'Family Entertainment Group (FEG) App Screens'
@@ -135,12 +135,12 @@ export default function CaseStudies({
       logo: '/assets/case-studies/stakbread-logo.png',
       logoAlt: 'StakBread Logo',
       titleColor: 'text-[#16A34A]',
-      subtitle: 'Real-Time Workforce Operations Platform',
+      subtitle: 'Creator Commerce Platform',
       desc: 'A creator commerce platform that enables creators to grow audiences, sell digital products, and monetize content through a scalable, production-ready architecture.',
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#16A34A] hover:bg-[#15803d]',
       buttonTextCol: 'text-white',
-      link: '/portfolio',
+      link: '/portfolio/stakbread',
       mockup: '/assets/case-studies/stakbread-mockup.png',
       mockupAlt: 'StakBread App Screens',
       alt: 'StakBread App Screens'
@@ -160,30 +160,30 @@ export default function CaseStudies({
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#8B008B] hover:bg-[#700070]',
       buttonTextCol: 'text-white',
-      link: '/portfolio',
+      link: '/portfolio/my-tango-event',
       mockup: '/assets/case-studies/mytango-mockup.png',
       mockupAlt: 'My Tango Event App Screens',
       alt: 'My Tango Event App Screens'
     },
-    // Slide 8: Pets B4 Profit
+    // Slide 8: Pets Before Profit
     {
       id: 'pets',
       type: 'standard',
       cardBg: 'bg-white',
       textColor: 'text-[#111215]',
-      brand: 'Pets B4 Profit',
+      brand: 'Pets Before Profit',
       logo: '/assets/case-studies/pets-logo.png',
-      logoAlt: 'Pets B4 Profit Logo',
+      logoAlt: 'Pets Before Profit Logo',
       titleColor: 'text-[#6B46C1]',
-      subtitle: 'Automated Experience Capture And Delivery',
+      subtitle: 'AI-Assisted Veterinary Intelligence Platform',
       desc: 'An AI-assisted veterinary intelligence platform that analyzes pet medical bills, explains treatment costs, and provides healthcare insights to improve pricing transparency for pet owners.',
       buttonText: 'View Case Study →',
       buttonBg: 'bg-[#6B46C1] hover:bg-[#553c9a]',
       buttonTextCol: 'text-white',
-      link: '/portfolio',
+      link: '/portfolio/pets-b4-profit',
       mockup: '/assets/case-studies/pets-mockup.png',
-      mockupAlt: 'Pets B4 Profit App Screens',
-      alt: 'Pets B4 Profit App Screens'
+      mockupAlt: 'Pets Before Profit App Screens',
+      alt: 'Pets Before Profit App Screens'
     }
   ]
 
@@ -260,11 +260,11 @@ export default function CaseStudies({
                 <div className="w-full lg:w-[42%] xl:w-[38%] p-6 sm:p-8 lg:p-9 xl:p-12 xl:pl-16 flex flex-col justify-center text-left shrink-0 z-10">
                   
                   {/* Brand Logo */}
-                  <div className="h-10 sm:h-12 lg:h-12 mb-3 sm:mb-4 lg:mb-5 flex items-center justify-start">
+                  <div className="h-14 sm:h-16 lg:h-[72px] mb-4 sm:mb-5 flex items-center justify-start">
                     <img
                       src={slide.logo}
                       alt={slide.logoAlt || slide.brand}
-                      className="max-h-9 sm:max-h-11 lg:max-h-12 w-auto object-contain select-none"
+                      className="max-h-12 sm:max-h-14 lg:max-h-[68px] max-w-[200px] sm:max-w-[220px] w-auto object-contain select-none"
                       loading="lazy"
                     />
                   </div>

@@ -24,21 +24,21 @@ export default function PartnershipStandard() {
               The standard applied does not shift based on how the engagement originated: the same senior involvement, scope discipline, and delivery accountability apply whether the client came in directly or through a partner introduction across our{' '}
               <Link
                 to="/mobile-app-development"
-                className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+                className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
               >
                 mobile app development
               </Link>
               ,{' '}
               <Link
                 to="/backend-api-development"
-                className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+                className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
               >
                 backend API development
               </Link>
               , and{' '}
               <Link
                 to="/custom-software-development"
-                className="underline text-[#00CE44] font-normal hover:text-white transition-colors"
+                className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
               >
                 custom software development
               </Link>{' '}

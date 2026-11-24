@@ -40,10 +40,10 @@ export default function PostLaunchStatsBar() {
                   loading="lazy"
                 />
               </div>
-              <div className="text-3xl sm:text-4xl lg:text-[44px] font-black text-[#00CE44] tracking-tight leading-none mb-2">
+              <div className="text-[19px] font-bold text-[#00CE44] leading-[1.32] mb-2">
                 {stat.value}
               </div>
-              <div className="text-white text-xs sm:text-sm lg:text-[15px] font-medium tracking-tight">
+              <div className="text-white text-[14px] sm:text-[15px] font-medium">
                 {stat.label}
               </div>
             </div>

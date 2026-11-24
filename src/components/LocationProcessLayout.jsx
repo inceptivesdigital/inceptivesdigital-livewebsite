@@ -101,27 +101,23 @@ export default function LocationProcessLayout({
         >
           {steps.map((step, index) => {
             const isActive = index === activeIndex
-            const numLabel = step.num || `0${index + 1}.`
+            const numLabel = String(step.num || `0${index + 1}`).replace(/\.$/, '')
             const tabLabel = step.tabTitle || step.title
             return (
               <button
                 key={numLabel + tabLabel}
                 type="button"
                 onClick={(e) => handleTabClick(index, e)}
-                className={`flex-1 shrink-0 min-w-max lg:min-w-0 lg:shrink flex items-center gap-2.5 px-4 lg:px-3.5 py-2.5 rounded-full transition-all duration-200 cursor-pointer border-0 focus:outline-none text-left whitespace-nowrap lg:w-full ${
+                className={`rounded-full shrink-0 lg:shrink min-w-[180px] lg:min-w-0 lg:w-full flex items-center justify-start gap-3 py-1.5 pl-1.5 pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
                   isActive
-                    ? 'bg-[#00CE44] text-black'
-                    : 'bg-[#1e2025] hover:bg-[#272931] text-white/90'
+                    ? 'bg-[#00CE44] text-white font-semibold'
+                    : 'bg-[#2c2c2c] hover:bg-[#383838] text-white/90 font-medium'
                 }`}
               >
-                <span className="w-7 h-7 rounded-full bg-white text-black font-extrabold text-[11px] sm:text-xs flex items-center justify-center shrink-0">
+                <span className="w-8 h-8 rounded-full bg-white text-black font-extrabold text-xs sm:text-sm flex items-center justify-center shrink-0">
                   {numLabel}
                 </span>
-                <span
-                  className={`text-xs xl:text-[13px] tracking-tight leading-snug lg:truncate ${
-                    isActive ? 'font-bold text-black' : 'font-medium text-white/90'
-                  }`}
-                >
+                <span className="text-sm sm:text-[15px] whitespace-nowrap lg:truncate">
                   {tabLabel}
                 </span>
               </button>
@@ -131,12 +127,12 @@ export default function LocationProcessLayout({
 
         {/* Content Card */}
         <div
-          className={`w-full bg-[#1b1c20] rounded-[24px] sm:rounded-[28px] p-7 sm:p-10 lg:p-12 text-left ${
+          className={`w-full bg-[#333333] rounded-[14px] px-7 sm:px-10 lg:px-12 py-10 sm:py-12 min-h-[210px] flex flex-col justify-center text-left border-0 ${
             activeStep.image ? 'grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_160px] gap-8 items-center' : ''
           }`}
         >
           <div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+            <h3 className="text-2xl sm:text-[26px] font-bold text-[#00CE44] tracking-tight mb-3">
               {activeStep.cardTitle || activeStep.title}
             </h3>
             <p className="text-white/85 text-base sm:text-[17px] leading-relaxed font-normal max-w-4xl">

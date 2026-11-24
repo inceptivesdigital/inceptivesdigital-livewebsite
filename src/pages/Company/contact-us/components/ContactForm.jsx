@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { submitFormToSeo } from '../../../../utils/submitFormToSeo'
 
 const inputClass =
   'w-full pb-3 bg-transparent border-b border-white/40 text-white placeholder-white/75 text-xs sm:text-sm focus:outline-none focus:border-[#00CE44]'
 
 // Same form (fields, consent copy, submit state) as the site-wide Contact Us form.
 export default function ContactForm() {
+  const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -21,9 +24,28 @@ export default function ContactForm() {
   const update = (key) => (e) => setFormData({ ...formData, [key]: e.target.value })
   const toggle = (key) => (e) => setFormData({ ...formData, [key]: e.target.checked })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (sending) return
+    setSending(true)
+    await submitFormToSeo({
+      formName: 'Contact Us Page Form',
+      subject: `Contact Us Page - ${formData.firstName} ${formData.lastName}`.trim(),
+      replyTo: formData.email,
+      fields: {
+        'First Name': formData.firstName,
+        'Last Name': formData.lastName,
+        Email: formData.email,
+        Phone: formData.phone,
+        Subject: formData.subject || 'General Inquiry',
+        Message: formData.message,
+        'Transactional SMS Consent': formData.transactionalConsent ? 'Yes' : 'No',
+        'Marketing SMS Consent': formData.marketingConsent ? 'Yes' : 'No',
+      },
+    })
+    setSending(false)
     setSubmitted(true)
+    navigate('/thank-you')
   }
 
   if (submitted) {

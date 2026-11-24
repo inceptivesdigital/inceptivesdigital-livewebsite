@@ -42,7 +42,7 @@ export default function LondonWhyChooseUs() {
           London’s market moves quickly, and businesses need products that can adapt as they grow. We help startups, scale-ups, and established companies across industries such as fintech, healthcare, SaaS, and consumer technology invest in{' '}
           <Link
             to="/blog/why-invest-in-custom-mobile-app-development"
-            className="text-[#00CE44] hover:underline font-medium"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
           >
             custom mobile app development
           </Link>{' '}

@@ -21,7 +21,7 @@ export default function SFWhyChooseUs() {
             href="https://inceptivesdigital.com/blog/app-development-timeline"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:text-white transition-colors"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
           >
             Development planning
           </a>{' '}

@@ -1,8 +1,12 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ArrowRight, CheckCircle2, Shield, Clock } from 'lucide-react'
+import { submitFormToSeo } from '../../../../utils/submitFormToSeo'
 
 export default function LeadershipConsultation() {
+  const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -12,9 +16,25 @@ export default function LeadershipConsultation() {
     captcha: '',
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    if (sending) return
+    setSending(true)
+    await submitFormToSeo({
+      formName: 'Leadership Strategy Consultation Form',
+      subject: `Leadership Consultation - ${formData.fullName}`,
+      replyTo: formData.email,
+      fields: {
+        'Full Name': formData.fullName,
+        Email: formData.email,
+        'Contact Number': formData.phone,
+        'Budget Range': formData.budget || 'Not specified',
+        'Project Description': formData.message,
+      },
+    })
+    setSending(false)
     setSubmitted(true)
+    navigate('/thank-you')
   }
 
   return (

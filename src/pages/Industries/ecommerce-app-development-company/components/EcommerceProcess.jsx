@@ -1,35 +1,111 @@
+import { Link } from 'react-router-dom'
 import LocationProcessLayout from '../../../../components/LocationProcessLayout'
 
 const steps = [
   {
     num: '01.',
     tabTitle: 'Discovery',
-    cardTitle: 'Discovery and Requirement Analysis',
-    desc: 'Business model, revenue structure, user roles, integration requirements, compliance needs, and feature scope are defined before development begins. Every architectural decision is documented before a line of code is written.',
+    cardTitle: '1. Discovery & Requirements Analysis',
+    desc: (
+      <>
+        We run a{' '}
+        <Link
+          to="/discovery-sprint"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          discovery sprint
+        </Link>{' '}
+        to review your business model and existing commerce systems and establish the application&apos;s scope. The team identifies user roles, purchasing workflows, and integration dependencies before preparing the development roadmap.
+      </>
+    ),
   },
   {
     num: '02.',
     tabTitle: 'Architecture',
-    cardTitle: 'Architecture and Technology Planning',
-    desc: 'Core feature set, tech stack, database schemas, and API integration plan are defined in a blueprint that ensures the platform is expandable, secure, and capable of handling large transaction volumes from day one.',
+    cardTitle: '2. Architecture & Technical Planning',
+    desc: (
+      <>
+        Our architects define how the mobile application will connect with payment gateways and existing commerce infrastructure. Database design, API specifications, and{' '}
+        <Link
+          to="/blog/mobile-app-security-best-practices"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          mobile app security best practices
+        </Link>{' '}
+        guide the technical blueprint before development begins.
+      </>
+    ),
   },
   {
     num: '03.',
     tabTitle: 'UI/UX Design',
-    cardTitle: 'UI/UX and Prototyping',
-    desc: 'Wireframes and interactive prototypes built for navigation workflows, checkout processes, and product discovery flows in Figma and Adobe XD. Design validated before development begins to eliminate costly redesigns mid-build.',
+    cardTitle: '3. UI/UX Design & Prototyping',
+    desc: (
+      <>
+        Expert{' '}
+        <Link
+          to="/ui-ux-design"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          UI/UX designers
+        </Link>{' '}
+        map customer journeys from product discovery through checkout, then translate approved workflows into{' '}
+        <Link
+          to="/interactive-prototyping"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          interactive prototypes
+        </Link>{' '}
+        in Figma. We review usability and navigation with stakeholders before finalizing the application designs.
+      </>
+    ),
   },
   {
     num: '04.',
     tabTitle: 'Development',
-    cardTitle: 'Development and Integration',
-    desc: 'Frontend and backend were built in agile sprints. Payment gateways, inventory systems, CRM and ERP integrations, vendor modules, and analytics tools built with clean, modular code throughout.',
+    cardTitle: '4. eCommerce App Development & Integration',
+    desc: 'Development begins in planned sprints, with working features reviewed against agreed requirements. Our engineers build the application modules and connect payment services, inventory systems, and commerce APIs as development progresses.',
   },
   {
     num: '05.',
-    tabTitle: 'Launch & Scale',
-    cardTitle: 'Testing, Deployment and Optimisation',
-    desc: 'Performance, security, and cross-device compatibility are tested before deployment. Post-launch performance is monitored, issues are resolved, and regular updates are delivered to keep the platform competitive and reliable.',
+    tabTitle: 'QA & Deployment',
+    cardTitle: '5. Quality Assurance & Deployment',
+    desc: (
+      <>
+        QA engineers apply{' '}
+        <Link
+          to="/blog/mobile-app-testing-strategies"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          mobile app testing strategies
+        </Link>{' '}
+        to checkout transactions, payment failures, and inventory synchronization across supported devices. After resolving critical issues and completing release checks, we prepare the application to{' '}
+        <Link
+          to="/blog/publish-update-an-app-on-app-store-google-play"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          publish on the App Store and Google Play
+        </Link>
+        .
+      </>
+    ),
+  },
+  {
+    num: '06.',
+    tabTitle: 'Maintenance',
+    cardTitle: '6. Post-Launch Maintenance & Optimization',
+    desc: (
+      <>
+        Once the application goes live, our team monitors performance through{' '}
+        <Link
+          to="/post-launch-analytics-iteration"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          post-launch analytics
+        </Link>{' '}
+        and resolves issues within the agreed support scope. Subsequent releases address platform updates and enhancements informed by operational feedback.
+      </>
+    ),
   },
 ]
 
@@ -38,11 +114,10 @@ export default function EcommerceProcess() {
     <LocationProcessLayout
       heading={
         <>
-          Our Ecommerce App Development Company’s{' '}
-          <span className="text-[#00CE44]">Proven Process</span>
+          Our <span className="text-[#00CE44]">eCommerce App Development Process</span>
         </>
       }
-      subtitle="Getting an ecommerce platform to launch is straightforward. Getting it to handle peak sale traffic, vendor disputes, and payment failures without breaking requires a different kind of process."
+      subtitle="Every eCommerce project starts with understanding how the business operates and what the application needs to support. Our eCommerce mobile app development process follows a defined workflow, with clear technical decisions and deliverables from discovery through launch."
       steps={steps}
     />
   )
