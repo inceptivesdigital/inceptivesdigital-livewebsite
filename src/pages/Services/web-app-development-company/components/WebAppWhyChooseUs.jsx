@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function WebAppWhyChooseUs() {
   const pillars = [
     {
@@ -5,14 +7,12 @@ export default function WebAppWhyChooseUs() {
       desc: (
         <>
           Your web application is architected for where the business is headed, not just the MVP, spanning everything from{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/software-development-for-startups"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          <Link
+            to="/blog/software-development-for-startups"
+            className="text-inherit underline underline-offset-4 hover:opacity-80 transition-opacity"
           >
             software development for startups
-          </a>{' '}
+          </Link>{' '}
           to enterprise web app development. Multi-user platforms, growing databases, new modules, and increasing traffic are planned into the architecture from the beginning, reducing expensive redevelopment as the product grows.
         </>
       ),
@@ -26,21 +26,19 @@ export default function WebAppWhyChooseUs() {
       desc: (
         <>
           The team that plans the product is the same team that builds it. Strategy, design, and engineering move as one, so the product that ships reflects exactly what was planned from the first conversation. It is also the approach we recommend when weighing{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/in-house-development-vs-app-development-partner"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          <Link
+            to="/blog/in-house-development-vs-app-development-partner"
+            className="text-inherit underline underline-offset-4 hover:opacity-80 transition-opacity"
           >
             in-house development vs. an app development partner
-          </a>{' '}
+          </Link>{' '}
           for a new build.
         </>
       ),
     },
     {
       title: 'Seamless Integrations',
-      desc: 'Modern businesses rely on CRMs, ERPs, payment gateways, accounting software, communication platforms, and third-party APIs. We build web applications that connect seamlessly with your existing technology stack, eliminating manual work and fragmented data.',
+      desc: 'Modern businesses rely on CRMs, ERPs, payment gateways, accounting software, communication platforms, and third-party APIs. We build web applications that connect seamlessly with your existing technology stack through system integration and API automation, eliminating manual work and fragmented data.',
     },
     {
       title: 'Post-Launch Support',
@@ -62,7 +60,6 @@ export default function WebAppWhyChooseUs() {
           </h2>
         </div>
 
-        {/* 6 Cards Grid matching mobile-app WhyChooseUs.jsx */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pillars.map((p) => (
             <div
@@ -78,7 +75,7 @@ export default function WebAppWhyChooseUs() {
               <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-2.5 leading-snug">
                 {p.title}
               </h3>
-              <p className="text-white/90 text-xs sm:text-[13.5px] leading-relaxed font-normal">
+              <p className="text-white/90 text-xs sm:text-[14px] leading-relaxed font-normal">
                 {p.desc}
               </p>
             </div>

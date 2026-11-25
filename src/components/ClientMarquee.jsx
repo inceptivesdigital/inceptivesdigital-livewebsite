@@ -67,6 +67,9 @@ export default function ClientMarquee({
                 <img
                   src={logo.src}
                   alt={logo.name}
+                  width={180}
+                  height={52}
+                  decoding="async"
                   className={`w-auto max-w-[88%] object-contain select-none pointer-events-none ${logo.className}`}
                   loading="lazy"
                 />
@@ -84,6 +87,9 @@ export default function ClientMarquee({
                 <img
                   src={logo.src}
                   alt={logo.name}
+                  width={180}
+                  height={52}
+                  decoding="async"
                   className={`w-auto max-w-[88%] object-contain select-none pointer-events-none ${logo.className}`}
                   loading="lazy"
                 />

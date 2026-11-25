@@ -2,10 +2,13 @@ import { useState, useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
-import BookingCTA from './components/BookingCTA'
-import Footer from './components/Footer'
-import ScheduleCallModal from './components/ScheduleCallModal'
-import ContactPopupModal from './components/ContactPopupModal'
+import ThirdPartyRouteTracker from './components/ThirdPartyRouteTracker'
+
+// Lazy-load below-the-fold chrome & interactive modals to shrink initial JS payload
+const BookingCTA = lazy(() => import('./components/BookingCTA'))
+const Footer = lazy(() => import('./components/Footer'))
+const ScheduleCallModal = lazy(() => import('./components/ScheduleCallModal'))
+const ContactPopupModal = lazy(() => import('./components/ContactPopupModal'))
 
 // Eager Homepage for 0ms initial load; lazy-load all other 75+ routes for 90%+ smaller initial bundle
 import Home from './pages/Home'
@@ -136,6 +139,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ThirdPartyRouteTracker />
       <div className="min-h-screen bg-[#07080b] text-slate-100 selection:bg-[#00CE44] selection:text-black flex flex-col justify-between">
         {/* Universal Top Navigation */}
         <Navbar />
@@ -356,17 +360,13 @@ export default function App() {
           </Suspense>
         </main>
 
-        {/* Universal Pre-Footer Contact Section */}
-        <PreFooterCTA isNotFound={isNotFound} />
-
-        {/* Universal Footer */}
-        <Footer />
-
-        {/* Global Calendly Schedule Popup (activates on every "Schedule A ..." CTA & .openpop-shedule) */}
-        <ScheduleCallModal />
-
-        {/* Global Contact Popup (Get in touch, #contact CTAs, and green banner buttons) */}
-        <ContactPopupModal />
+        {/* Universal Pre-Footer Contact Section, Footer & Modals */}
+        <Suspense fallback={null}>
+          <PreFooterCTA isNotFound={isNotFound} />
+          <Footer />
+          <ScheduleCallModal />
+          <ContactPopupModal />
+        </Suspense>
       </div>
     </BrowserRouter>
   )

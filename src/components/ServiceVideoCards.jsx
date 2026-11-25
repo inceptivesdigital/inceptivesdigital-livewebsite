@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function ServiceVideoCards() {
@@ -66,8 +66,12 @@ export default function ServiceVideoCards() {
 
 function VideoCard({ card }) {
   const videoRef = useRef(null)
+  const [videoActivated, setVideoActivated] = useState(false)
 
   const handleMouseEnter = () => {
+    if (!videoActivated) {
+      setVideoActivated(true)
+    }
     if (videoRef.current) {
       videoRef.current.currentTime = 0
       videoRef.current.play().catch(() => {})
@@ -87,17 +91,20 @@ function VideoCard({ card }) {
       onMouseLeave={handleMouseLeave}
       className="home-container-sty group relative rounded-[20px] overflow-hidden bg-[#202125] border-0 shadow-none min-h-[440px] sm:min-h-[450px] lg:h-[460px] 2xl:h-[490px] p-6 sm:p-7 lg:p-8 flex flex-col justify-start transition-all duration-500 cursor-pointer"
     >
-      {/* Background Holographic Green Laser Video */}
-      <video
-        ref={videoRef}
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"
-      >
-        <source src="/assets/home-video-con.mp4" type="video/mp4" />
-      </video>
+      {/* Background Holographic Green Laser Video — loaded on first hover so 21+ MB isn't downloaded on initial load */}
+      {videoActivated && (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"
+        >
+          <source src="/assets/home-video-con.mp4" type="video/mp4" />
+        </video>
+      )}
 
       {/* Dark Subtle Vignette on Hover to ensure text contrast */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#202125]/85 via-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-[1]" />

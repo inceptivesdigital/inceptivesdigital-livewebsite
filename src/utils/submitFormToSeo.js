@@ -1,8 +1,16 @@
+import { trackGhlLeadSubmission } from './ghlTracking'
+import { notifyCallRailFormCapture } from './callrail'
+import { trackLeadSubmitted } from './conversionTracking'
+
 export const SEO_RECIPIENT_EMAIL = 'seo@inceptivesdigital.com'
 
 /**
  * Universal form submission helper for all forms across Inceptives Digital.
- * Delivers structured table submissions to seo@inceptivesdigital.com.
+ * Follows the accepted conversion flow from THIRD_PARTY_INTEGRATIONS.md:
+ *   1. Email delivery to seo@inceptivesdigital.com (table format)
+ *   2. GoHighLevel / LeadConnector external-tracking acknowledgement
+ *   3. CallRail form capture handling
+ *   4. Website `lead_submitted` dataLayer event (triggers GTM GA4 generate_lead, Meta Lead, OpenAI lead_created)
  */
 export async function submitFormToSeo({
   formName = 'Website Form',
@@ -64,6 +72,31 @@ export async function submitFormToSeo({
     }
   }
 
+  // 3. GoHighLevel / LeadConnector external tracking acknowledgement (capped at 2.5s)
+  requests.push(
+    trackGhlLeadSubmission({
+      formName,
+      pageUrl,
+      fields,
+    }).catch(() => null)
+  )
+
   await Promise.allSettled(requests)
+
+  // 4. CallRail form capture handling (uses GTM-loaded CallTrk SDK)
+  notifyCallRailFormCapture({
+    formName,
+    pageUrl,
+    fields,
+  })
+
+  // 5. Emit canonical `lead_submitted` dataLayer event for GTM (GA4, Meta, OpenAI)
+  trackLeadSubmitted({
+    formName,
+    pageUrl,
+    subject: emailSubject,
+    fields,
+  })
+
   return { ok: true, recipient: SEO_RECIPIENT_EMAIL }
 }

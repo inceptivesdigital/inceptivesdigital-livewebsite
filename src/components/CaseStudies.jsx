@@ -219,7 +219,7 @@ export default function CaseStudies({
         {/* Top Header Row: Headline on Left, Green CTA on Right */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10 sm:mb-14">
           <div className="max-w-3xl text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[31px] xl:text-[35px] font-bold text-white tracking-tight leading-tight">
               {heading}
             </h2>
             {subtitle && (

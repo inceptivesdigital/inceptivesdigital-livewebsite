@@ -243,7 +243,7 @@ const QUIZ_CSS = `
   display: grid;
   gap: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
 }
 #id-ios-quiz-root .id-ios-contact label:last-child {
@@ -259,9 +259,11 @@ const QUIZ_CSS = `
   background: var(--panel);
   color: white;
   font-size: 15px;
+  font-weight: 400;
 }
 #id-ios-quiz-root .id-ios-contact input::placeholder {
   color: #9eada2;
+  font-weight: 400;
 }
 #id-ios-quiz-root input:focus-visible,
 #id-ios-quiz-root button:focus-visible {
@@ -1120,13 +1122,9 @@ export default function IosArchitectureQuiz() {
                       >
                         {pdfDownloading ? 'Preparing branded PDF...' : 'Download Complete PDF'}
                       </button>
-                      <a
-                        href="tel:(469)-788-8527"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <Link to="/thank-you">
                         Talk to an iOS architect
-                      </a>
+                      </Link>
                     </div>
 
                     {pdfError && (

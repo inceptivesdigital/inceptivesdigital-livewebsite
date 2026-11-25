@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 export default function WebAppHero() {
   const trustBadges = [
     {
@@ -33,27 +31,20 @@ export default function WebAppHero() {
             </h1>
 
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-white tracking-tight leading-[1.18] mb-5 max-w-2xl">
-              Your Vision for Web Application Engineered Into Reality
+              Move Your Operations Into One Secure, Custom-Built Web Platform
             </h2>
 
             <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl font-normal">
-              As a{' '}
-              <Link
-                to="/mobile-app-development"
-                className="underline font-normal text-[#00CE44] hover:opacity-80 transition-colors"
-              >
-                mobile app development company
-              </Link>
-              , Inceptives Digital builds web apps for the future. With 8 years of experience spanning web application development and more than 70 products delivered, our team approaches each project with long-term growth in mind, ensuring products remain scalable, maintainable, and ready for the demands that follow the initial release. The goal is to drive success from the day your web application launches.
+              Are disconnected tools holding your business back? Not anymore. Inceptives Digital provides custom web application development services that consolidate your operations into one platform. Our web app developers bring 8+ years of experience to SaaS platforms and customer portals built around how your business operates. Each web application is architected and documented to scale with your product and integrate with the systems you already use. That architecture-first approach has carried us through 70+ products from initial scope to stable production.
             </p>
 
-            {/* Rectangular Button (Sharp Corners, Zero Shadow) */}
+            {/* Rectangular CTA Button */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
               >
-                Start a Conversation
+                Consult our Experts
               </a>
               <a
                 href="#contact"

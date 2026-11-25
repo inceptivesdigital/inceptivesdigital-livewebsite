@@ -64,16 +64,19 @@ export default function Navbar() {
           }`}
         >
           {/* Left Brand Logo */}
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5" aria-label="Inceptives Digital Home">
             <img
               src="/assets/update-logo.png"
               alt="Inceptives Digital"
+              width={160}
+              height={32}
+              decoding="sync"
               className="h-7 sm:h-8 w-auto object-contain brightness-110"
             />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8">
             <Link
               to="/services"
               onMouseEnter={() => setActiveMenu('services')}
@@ -130,8 +133,30 @@ export default function Navbar() {
             </button>
           </nav>
 
-          {/* Right Action: Button & Hamburger Icon together with EXACT 15px gap (NO phone number) */}
-          <div className="flex items-center gap-[15px]">
+          {/* Right Action: Phone Number, Button & Hamburger Icon */}
+          <div className="flex items-center gap-3.5 xl:gap-6">
+            <a
+              href="tel:+14697888527"
+              className="hidden lg:inline-flex items-center gap-2 text-white hover:text-[#00CE44] text-[14px] xl:text-[15px] font-medium tracking-tight transition-colors whitespace-nowrap shrink-0"
+            >
+              <svg
+                className="w-[18px] h-[18px] text-white shrink-0"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z" />
+                <path
+                  d="M14.5 4.5a5 5 0 0 1 5 5M14.5 7.5a2 2 0 0 1 2 2M14.5 1.5a8 8 0 0 1 8 8"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <span>(469) 788-8527</span>
+            </a>
+
             <Link
               to="/contact-us"
               className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-xs sm:text-sm tracking-tight transition-all duration-150 active:scale-95 cursor-pointer shadow-none whitespace-nowrap"
@@ -152,7 +177,7 @@ export default function Navbar() {
 
         {/* MEGA MENU: SERVICES (Desktop) */}
         {activeMenu === 'services' && (
-          <div className="hidden lg:grid grid-cols-12 w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 animate-in fade-in duration-150 max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
+          <div className="hidden lg:grid grid-cols-12 w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 mega-menu-dropdown max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
             {/* Column 1: Leftmost Sidebar Title with Arrow */}
             <div className="col-span-2 p-5 2xl:p-7 border-r border-[#37393d] bg-[#232528] rounded-bl-2xl">
               <Link
@@ -192,6 +217,10 @@ export default function Navbar() {
                 <li><Link to="/web-app-development-company" className="hover:text-white transition">Web App Development</Link></li>
                 <li><Link to="/backend-api-development" className="hover:text-white transition">Backend and API</Link></li>
                 <li><Link to="/cross-platform-app-development" className="hover:text-white transition">Cross-Platform Development</Link></li>
+                <li><Link to="/ar-app-development" className="hover:text-white transition">AR App Development</Link></li>
+                <li><Link to="/virtual-reality-development" className="hover:text-white transition">VR App Development</Link></li>
+                <li><Link to="/iot-development" className="hover:text-white transition">IoT App Development</Link></li>
+                <li><Link to="/mobile-game-development" className="hover:text-white transition">Mobile Game Development</Link></li>
               </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
@@ -266,7 +295,7 @@ export default function Navbar() {
 
         {/* MEGA MENU: INDUSTRIES (Desktop) */}
         {activeMenu === 'industries' && (
-          <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 animate-in fade-in duration-150 overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
+          <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 mega-menu-dropdown overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
             <div className="w-56 shrink-0 p-6 2xl:p-8 border-r border-white/10 flex items-start bg-[#232528]/80">
               <div className="inline-flex items-center gap-2.5 text-[16px] 2xl:text-[20px] font-bold text-[#00CE44]">
                 <span>Industries</span>
@@ -305,7 +334,7 @@ export default function Navbar() {
 
         {/* MEGA MENU: LOCATIONS (Desktop) */}
         {activeMenu === 'locations' && (
-          <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 animate-in fade-in duration-150 overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
+          <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 mega-menu-dropdown overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
             <div className="w-56 shrink-0 p-6 2xl:p-8 border-r border-white/10 flex items-start bg-[#232528]/80">
               <div className="inline-flex items-center gap-2.5 text-[16px] 2xl:text-[20px] font-bold text-[#00CE44]">
                 <span>Locations</span>
@@ -341,7 +370,7 @@ export default function Navbar() {
 
         {/* MEGA MENU: COMPANY (Desktop) */}
         {activeMenu === 'company' && (
-          <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 animate-in fade-in duration-150 overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
+          <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 mega-menu-dropdown overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
             <div className="w-56 shrink-0 p-6 2xl:p-8 border-r border-white/10 flex items-start bg-[#232528]/80">
               <Link
                 to="/about-us"
@@ -516,6 +545,34 @@ export default function Navbar() {
                           className="block hover:text-white transition-colors"
                         >
                           Cross-Platform Development
+                        </Link>
+                        <Link
+                          to="/ar-app-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          AR App Development
+                        </Link>
+                        <Link
+                          to="/virtual-reality-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          VR App Development
+                        </Link>
+                        <Link
+                          to="/iot-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          IoT App Development
+                        </Link>
+                        <Link
+                          to="/mobile-game-development"
+                          onClick={() => setMobileOpen(false)}
+                          className="block hover:text-white transition-colors"
+                        >
+                          Mobile Game Development
                         </Link>
                       </div>
 
@@ -812,10 +869,24 @@ export default function Navbar() {
             {/* Bottom Action Row: Phone Number & Get In Touch button in ONE row side-by-side */}
             <div className="border-t border-white/[0.08] pt-3.5 mt-2 flex items-center justify-between gap-2 sm:gap-4 shrink-0">
               <a
-                href="tel:(469) 788-8527"
+                href="tel:+14697888527"
                 className="inline-flex items-center gap-2 text-white hover:text-[#00CE44] text-[13px] sm:text-[15px] font-medium transition-colors shrink-0 whitespace-nowrap py-1"
               >
-                <Phone className="w-4 h-4 text-white shrink-0" />
+                <svg
+                  className="w-4 h-4 text-white shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z" />
+                  <path
+                    d="M14.5 4.5a5 5 0 0 1 5 5M14.5 7.5a2 2 0 0 1 2 2M14.5 1.5a8 8 0 0 1 8 8"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                  />
+                </svg>
                 <span>(469) 788-8527</span>
               </a>
 

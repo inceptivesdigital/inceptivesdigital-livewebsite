@@ -57,22 +57,21 @@ export default function WebAppTechStack() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Header Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 text-left">
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white leading-[1.2] tracking-tight">
-              Tech Stack We Use for{' '}
-              <span className="text-[#00CE44]">Modern Web Application</span> Development
+              Web App Development{' '}
+              <span className="text-[#00CE44]">Technologies We Build With</span>
             </h2>
           </div>
-          <div className="lg:col-span-7">
-            <p className="text-white/85 text-[16px] leading-relaxed font-normal">
+          <div className="lg:col-span-7 text-left">
+            <p className="text-white/85 text-[15px] sm:text-[16px] leading-relaxed font-normal">
               React, Next.js, and Vue on the front-end. Node.js, Python, and Go on the backend. AWS, Google Cloud, and Azure for infrastructure. PostgreSQL, MongoDB, and Redis for data. CI/CD pipelines, containerization, and observability tooling are built into every delivery process from day one.
             </p>
           </div>
         </div>
 
-        {/* Two Solid Green Panels Matching Site-Wide TechStack Layout */}
+        {/* Two Solid Green Panels */}
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          {/* Left Green Panel: Category List */}
           <div className="lg:col-span-4 rounded-[16px] bg-[#00CE44] p-4 flex flex-col justify-start gap-1 border-0 shadow-none">
             {TECH_CATEGORIES.map((cat, idx) => {
               const isActive = activeCategory === idx
@@ -94,7 +93,6 @@ export default function WebAppTechStack() {
             })}
           </div>
 
-          {/* Right Green Panel: White Tech Logo Boxes */}
           <div className="lg:col-span-8 rounded-[16px] bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8 border-0 shadow-none">
             {TECH_CATEGORIES[activeCategory].items.map((tech) => (
               <div key={tech.name} className="flex flex-col items-center w-24 sm:w-28 text-center">

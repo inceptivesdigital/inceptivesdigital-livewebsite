@@ -38,12 +38,13 @@ main > div > section:first-of-type {
   height: auto;
 }
 
-/* 4. Consistent Container Width: 1600px on Desktop (>1600px), 1280px on <=1600px */
-@media (min-width: 1601px) {
+/* 4. Consistent Container Width with Balanced Left/Right Side Gap Across All Desktop & Laptop Screens */
+@media (min-width: 1800px) {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
   html body footer section > div[class*="max-w-"],
   html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body section#case-studies > div[class*="max-w-"],
   html body .id-blog .id-blog-wrap,
   html body .id-pr .id-pr-wrap,
   html body #ai-cost-estimator-page .wrap,
@@ -55,14 +56,17 @@ main > div > section:first-of-type {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
-@media (max-width: 1600px) {
+@media (min-width: 1600px) and (max-width: 1799px) {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
   html body footer section > div[class*="max-w-"],
   html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body section#case-studies > div[class*="max-w-"],
   html body .id-blog .id-blog-wrap,
   html body .id-pr .id-pr-wrap,
   html body #ai-cost-estimator-page .wrap,
@@ -70,47 +74,82 @@ main > div > section:first-of-type {
   html body #privacy-policy-page .pp-body-inner,
   html body #terms-conditions-page .tc-hero-inner,
   html body #terms-conditions-page .tc-body-inner {
-    max-width: 1280px !important;
+    max-width: min(1360px, 84vw) !important;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
-/* Case Studies container: 1440px on desktop */
-@media (min-width: 1280px) {
-  html body section#case-studies > div[class*="max-w-"] {
-    max-width: 1440px !important;
+@media (min-width: 1440px) and (max-width: 1599px) {
+  html body header > div[class*="max-w-"],
+  html body footer > div[class*="max-w-"],
+  html body footer section > div[class*="max-w-"],
+  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body section#case-studies > div[class*="max-w-"],
+  html body .id-blog .id-blog-wrap,
+  html body .id-pr .id-pr-wrap,
+  html body #ai-cost-estimator-page .wrap,
+  html body #privacy-policy-page .pp-hero-inner,
+  html body #privacy-policy-page .pp-body-inner,
+  html body #terms-conditions-page .tc-hero-inner,
+  html body #terms-conditions-page .tc-body-inner {
+    max-width: min(1240px, 84vw) !important;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
-@media (min-width: 1536px) {
+@media (min-width: 1280px) and (max-width: 1439px) {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
-  html body section > div[class*="max-w-"] {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1535px) {
-  html body header > div[class*="max-w-"],
-  html body footer > div[class*="max-w-"],
-  html body section > div[class*="max-w-"] {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  html body footer section > div[class*="max-w-"],
+  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body section#case-studies > div[class*="max-w-"],
+  html body .id-blog .id-blog-wrap,
+  html body .id-pr .id-pr-wrap,
+  html body #ai-cost-estimator-page .wrap,
+  html body #privacy-policy-page .pp-hero-inner,
+  html body #privacy-policy-page .pp-body-inner,
+  html body #terms-conditions-page .tc-hero-inner,
+  html body #terms-conditions-page .tc-body-inner {
+    max-width: 86vw !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
-  html body section > div[class*="max-w-"] {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+  html body footer section > div[class*="max-w-"],
+  html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body section#case-studies > div[class*="max-w-"],
+  html body .id-blog .id-blog-wrap,
+  html body .id-pr .id-pr-wrap,
+  html body #ai-cost-estimator-page .wrap,
+  html body #privacy-policy-page .pp-hero-inner,
+  html body #privacy-policy-page .pp-body-inner,
+  html body #terms-conditions-page .tc-hero-inner,
+  html body #terms-conditions-page .tc-body-inner {
+    max-width: 90vw !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  html body header nav {
+    gap: 1.15rem;
   }
 }
 
@@ -118,8 +157,12 @@ main > div > section:first-of-type {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
   html body section > div[class*="max-w-"] {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    max-width: 94vw !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
@@ -127,9 +170,16 @@ main > div > section:first-of-type {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
   html body section > div[class*="max-w-"] {
+    max-width: 100% !important;
+    width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+/* Prevent grid children from ever causing horizontal overflow inside narrower side-gapped containers */
+html body main section div[class*="grid"] > * {
+  min-width: 0;
 }
 
 /* ==========================================================================

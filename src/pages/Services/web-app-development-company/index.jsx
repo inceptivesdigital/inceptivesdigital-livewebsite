@@ -1,17 +1,25 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import WebAppHero from './components/WebAppHero'
 import WebAppTrustedLogos from './components/WebAppTrustedLogos'
 import WebAppGrowthOutcomes from './components/WebAppGrowthOutcomes'
+import WebAppBusinessSizes from './components/WebAppBusinessSizes'
 import WebAppServicesGrid from './components/WebAppServicesGrid'
 import WebAppStatsBar from './components/WebAppStatsBar'
-import WebAppComparisonTable from './components/WebAppComparisonTable'
+import WebAppTypesAccordion from './components/WebAppTypesAccordion'
 import WebAppIndustries from './components/WebAppIndustries'
 import WebAppCaseStudies from './components/WebAppCaseStudies'
-import WebAppTestimonials from './components/WebAppTestimonials'
-import WebAppWhyChooseUs from './components/WebAppWhyChooseUs'
+import WebAppMidCtaBanner from './components/WebAppMidCtaBanner'
 import WebAppProcess from './components/WebAppProcess'
 import WebAppTechStack from './components/WebAppTechStack'
 import WebAppNextGenTech from './components/WebAppNextGenTech'
+import WebAppTechPartners from './components/WebAppTechPartners'
+import WebAppComparisonTable from './components/WebAppComparisonTable'
+import WebAppTestimonials from './components/WebAppTestimonials'
+import WebAppAwards from './components/WebAppAwards'
+import WebAppRegions from './components/WebAppRegions'
+import WebAppWhyChooseUs from './components/WebAppWhyChooseUs'
+import WebAppSecurity from './components/WebAppSecurity'
 import WebAppCostAndCTA from './components/WebAppCostAndCTA'
 import WebAppFAQs from './components/WebAppFAQs'
 
@@ -314,50 +322,93 @@ export default function WebAppDevelopmentCompanyPage() {
   }, [])
 
   return (
-    <div className="bg-[#000000] text-white selection:bg-[#00CE44] selection:text-black">
+    <div className="bg-[#000000] text-white selection:bg-[#00CE44] selection:text-black overflow-x-clip">
       {/* 1. Hero Section */}
       <WebAppHero />
 
-      {/* 2. Trusted by Companies Turning Vision Into Scalable Products */}
+      {/* 2. Trusted by Businesses Building Their Next Web Application */}
       <WebAppTrustedLogos />
 
-      {/* 3. 60% of Businesses Grew With the Right Web Application */}
+      {/* 3. Our Custom Web Applications, Engineered Around Real Operations */}
       <WebAppGrowthOutcomes />
 
-      {/* 4. Custom Web App Development Services Scoped Around What Your Product Actually Needs */}
+      {/* 4. Web App Development for Startups, SMBs, and Enterprises */}
+      <WebAppBusinessSizes />
+
+      {/* 5. Web Application Development Services for Every Stage of Your Product */}
       <WebAppServicesGrid />
 
-      {/* 5. Stats & Mid CTA */}
+      {/* 6. Stats Bar */}
       <WebAppStatsBar />
 
-      {/* 6. Web Apps vs Native Apps: Choosing the Right Approach */}
-      <WebAppComparisonTable />
+      {/* 7. Types of Custom Web Applications We Build for Different Business Demands */}
+      <WebAppTypesAccordion />
 
-      {/* 7. Industries Our Team Has Shipped Web Products Across */}
+      {/* 8. Shipping Web Products Across 20+ Industries */}
       <WebAppIndustries />
 
-      {/* 8. Selected Case Studies of Web Products We Developed */}
+      {/* 9. Explore Our Portfolio as a Top Web App Development Company */}
       <WebAppCaseStudies />
 
-      {/* 9. Testimonials */}
-      <WebAppTestimonials />
+      {/* 10. Mid CTA 1 */}
+      <WebAppMidCtaBanner
+        heading="Ready to Build the Web Application Your Business Will Be Known For?"
+        description={
+          <>
+            From customer portals and SaaS platforms to enterprise web app development, every successful web application starts with the right foundation and a clear{' '}
+            <Link
+              to="/product-launch-strategy"
+              className="text-inherit underline underline-offset-4 hover:opacity-80 transition-opacity"
+            >
+              product launch strategy
+            </Link>
+            . Let&apos;s build a product that drives growth long after launch.
+          </>
+        }
+        buttonText="Start Your Project"
+      />
 
-      {/* 10. Why Businesses Choose Inceptives for Web App Development */}
-      <WebAppWhyChooseUs />
-
-      {/* 11. The Framework Behind Successful Web Applications */}
+      {/* 11. Web Application Development Process */}
       <WebAppProcess />
 
-      {/* 12. Tech Stack We Use for Modern Web Application Development */}
+      {/* 12. Web App Development Technologies We Build With */}
       <WebAppTechStack />
 
-      {/* 13. Technologies Powering the Next Generation of Web Applications */}
+      {/* 13. Future-Forward Web App Development Services, Woven With Next-Gen Technology */}
       <WebAppNextGenTech />
 
-      {/* 14. How Much Does Web Application Development Cost? + Bottom CTA */}
+      {/* 14. Backed by Technology Partners */}
+      <WebAppTechPartners />
+
+      {/* 15. Web Apps vs Native Apps: Choosing the Right Approach */}
+      <WebAppComparisonTable />
+
+      {/* 16. Mid CTA 2 */}
+      <WebAppMidCtaBanner
+        heading="Tell Us Your Web Application Idea, and We Will Bring It to Life"
+        description="Share your idea with the team today. We will scope it, plan it, and build it into a product that lasts."
+        buttonText="Start the Conversation"
+      />
+
+      {/* 17. Testimonials */}
+      <WebAppTestimonials />
+
+      {/* 18. Recognized as a Web App Development Company That Delivers */}
+      <WebAppAwards />
+
+      {/* 19. Web App Development Company Based in 7 Tech Regions */}
+      <WebAppRegions />
+
+      {/* 20. Why Businesses Choose Inceptives for Web App Development */}
+      <WebAppWhyChooseUs />
+
+      {/* 21. Security Isn't a Feature at Inceptives Digital. It's the Foundation */}
+      <WebAppSecurity />
+
+      {/* 22. How Much Does Web Application Development Cost? + Bottom CTA */}
       <WebAppCostAndCTA />
 
-      {/* 15. FAQs */}
+      {/* 23. FAQs about Web App Development Services */}
       <WebAppFAQs />
     </div>
   )

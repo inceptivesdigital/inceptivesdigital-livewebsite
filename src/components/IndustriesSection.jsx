@@ -100,7 +100,7 @@ export default function IndustriesSection({
             <Link
               key={ind.title}
               to={ind.link}
-              className={`group p-6 sm:p-7 xl:p-8 flex flex-col bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 cursor-pointer h-full select-none ${
+              className={`group p-[25px] flex flex-col bg-[#18191d] hover:bg-[#00CE44] transition-all duration-300 cursor-pointer h-full select-none ${
                 showDesc ? 'justify-start' : 'justify-center'
               }`}
             >
