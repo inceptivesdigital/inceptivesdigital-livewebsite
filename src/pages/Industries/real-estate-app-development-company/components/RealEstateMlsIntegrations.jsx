@@ -14,7 +14,7 @@ const integrations = [
     num: '02',
     title: 'RESO Web API Integration',
     description:
-      "We implement compatible RESO Web API connections with property field mapping that accommodates the participating MLS's data structure.",
+      "We handle backend API development for compatible RESO Web API connections, with property field mapping that accommodates the participating MLS's data structure.",
   },
   {
     icon: Users,
@@ -61,7 +61,7 @@ export default function RealEstateMlsIntegrations() {
               <span className="text-[#00CE44]">MLS, IDX and Existing Systems</span>
             </h2>
             <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.68] font-normal max-w-xl">
-              Our real estate app developers handle integration requirements across authorized listing networks and established business platforms. We account for existing data structures before connecting your application to external systems.
+              Our real estate app developers handle integration requirements across authorized listing networks and established business platforms. We plan system integration around existing data structures before connecting your application to external systems.
             </p>
           </div>
 

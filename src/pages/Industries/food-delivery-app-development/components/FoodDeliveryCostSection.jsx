@@ -1,46 +1,57 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const tiers = [
   {
-    title: 'Starter App',
-    subtitle:
-      'Ideal for startups or restaurants looking to launch a basic food delivery app.',
+    title: '1. Restaurant Ordering MVP',
+    subtitle: (
+      <>
+        Launch a branded restaurant ordering app through{' '}
+        <Link
+          to="/mvp-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          MVP development
+        </Link>{' '}
+        with essential checkout and order management functionality.
+      </>
+    ),
     cost: '$15,000 - $50,000+',
     timeline: '6–8 weeks',
     includes: [
-      'User signup and profile management',
-      'Restaurant listing and menu browsing',
-      'Cart and order placement',
-      'Basic payment integration',
-      'Admin dashboard for order control',
+      'Customer registration',
+      'Restaurant menu management',
+      'Cart and checkout',
+      'Payment gateway integration',
+      'Basic order dashboard',
     ],
   },
   {
-    title: 'Growth App',
+    title: '2. Multi-Restaurant Delivery Platform',
     subtitle:
-      'Designed for expanding food delivery businesses looking to increase orders, users, and operational control.',
+      'Expand restaurant partnerships with integrated delivery management and real-time order tracking capabilities.',
     cost: '$50,000 - $150,000+',
     timeline: '10–14 weeks',
     includes: [
-      'Real-time order tracking and notifications',
       'Multi-restaurant management',
-      'Driver assignment and delivery tracking',
-      'Offers, coupons, and promo codes',
-      'Advanced admin analytics and reporting',
+      'Live delivery tracking',
+      'Driver dispatch',
+      'Promotions and offers',
+      'Operational reporting',
     ],
   },
   {
-    title: 'Enterprise App',
+    title: '3. Enterprise Food Delivery Marketplace',
     subtitle:
-      'Built for large-scale food delivery enterprises that demand high-end performance and innovation.',
+      'For established delivery operators investing in multi-vendor marketplaces with custom dispatch requirements and enterprise system integrations.',
     cost: '$150,000 - $300,000+',
-    timeline: '16–24 weeks',
+    timeline: '16–24+ weeks',
     includes: [
-      'AI-based order recommendations',
-      'Route optimization and smart dispatch',
-      'Multi-role dashboards (admin, vendor, driver)',
-      'POS, ERP, and third-party API integrations',
-      'High-traffic cloud infrastructure with 99.9% uptime',
+      'Multi-vendor architecture',
+      'Custom dispatch systems',
+      'Commission management',
+      'POS and ERP integrations',
+      'High-volume cloud infrastructure',
     ],
   },
 ];
@@ -53,15 +64,22 @@ export default function FoodDeliveryCostSection() {
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
             Food Delivery App Development{' '}
-            <span className="text-[#00CE44]">Cost Estimates For Every Type</span>
+            <span className="text-[#00CE44]">Cost by Business Model</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            A basic ordering app and a platform managing hundreds of restaurants, thousands of drivers, and real-time logistics across multiple cities are not the same investment. Here is the difference broken down.
+            Food delivery{' '}
+            <Link
+              to="/blog/mobile-app-development-cost"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              mobile app development cost
+            </Link>{' '}
+            varies with the ordering model, platform complexity, and integration requirements. Inceptives Digital provides scope-based estimates for restaurant startups and established delivery operators planning their next investment.
           </p>
         </div>
 
         {/* 3 Equal Cost Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mb-12">
           {tiers.map((tier, idx) => (
             <div
               key={idx}
@@ -95,6 +113,22 @@ export default function FoodDeliveryCostSection() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Centered CTA Footer */}
+        <div className="text-center max-w-[780px] mx-auto">
+          <h3 className="text-[20px] sm:text-[24px] font-bold text-white mb-3">
+            Get a Development Quote for Your Food Delivery App
+          </h3>
+          <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] mb-6 font-normal">
+            Know what your platform will cost before committing. Request a quote covering your specific development requirements.
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
+          >
+            Request My Food Delivery App Quote
+          </a>
         </div>
       </div>
     </section>

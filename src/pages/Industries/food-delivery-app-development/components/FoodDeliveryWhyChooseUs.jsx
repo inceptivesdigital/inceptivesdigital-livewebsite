@@ -1,30 +1,56 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const reasons = [
   {
-    title: 'End-to-End Platform Ownership',
+    title: 'Proven Multi-Vendor Platform Experience',
     description:
-      'Every component of the food delivery ecosystem, customer app, driver app, restaurant panel, admin dashboard, payment infrastructure, and analytics, is built and delivered as a single integrated product. No third-party module gaps. No accountability handoffs between vendors.',
+      'Our experience developing multi-sided marketplaces brings practical engineering expertise to food delivery platforms with complex vendor operations.',
   },
   {
-    title: 'Food Delivery Domain Knowledge',
-    description:
-      'Quick-service restaurants, multi-branch cloud kitchens, grocery delivery, and speciality food businesses each operate differently. Domain knowledge is applied before architecture decisions are made, not learned during your project.',
+    title: 'End-to-End Mobile Product Engineering',
+    description: (
+      <>
+        One development team handles your customer apps and{' '}
+        <Link
+          to="/backend-api-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          backend API development
+        </Link>
+        , keeping critical food delivery workflows connected throughout development.
+      </>
+    ),
   },
   {
-    title: 'AI Built for Food Delivery Behaviour',
+    title: 'Marketplace Payment Architecture',
     description:
-      'Recommendation systems, dynamic pricing engines, and demand forecasting models built specifically for food ordering behaviour. Not generic personalisation logic applied to a food delivery context.',
+      'Our experience with marketplace payments supports custom checkout and vendor settlement workflows across multi-restaurant food delivery platforms.',
   },
   {
-    title: 'Real-Time Infrastructure That Holds Under Pressure',
+    title: 'Seamless Restaurant POS Connectivity',
     description:
-      'Order processing, GPS tracking, driver dispatch, and payment confirmation are happening simultaneously across thousands of concurrent users. Infrastructure built for that specific operational reality from the architecture stage.',
+      'Already using restaurant management software? Our engineers assess POS compatibility to connect new ordering apps with existing operations.',
   },
   {
-    title: 'Post-Launch Growth Partnership',
+    title: 'Product Strategy Before Development',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/product-strategy-consulting"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          product strategy consulting
+        </Link>{' '}
+        team defines your food delivery app&apos;s initial scope around commercial priorities, preventing unnecessary development investment.
+      </>
+    ),
+  },
+  {
+    title: 'Long-Term Engineering Support',
     description:
-      'Performance monitoring, feature updates, route optimisation improvements, and platform scaling are provided continuously after launch. The platform that launches is the starting point, not the finished state.',
+      'Expansion into new delivery markets often requires platform updates. Our engineers maintain development continuity through agreed support engagements.',
   },
 ];
 
@@ -35,11 +61,18 @@ export default function FoodDeliveryWhyChooseUs() {
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Why Choose Inceptives Digital’s{' '}
-            <span className="text-[#00CE44]">Food Delivery App Development Services</span>
+            Why Choose Inceptives Digital as Your{' '}
+            <span className="text-[#00CE44]">Food Delivery App Development Company?</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            A food delivery platform that cannot handle the Friday night dinner rush is not a platform. It is a liability. Here is what we build instead.
+            Inceptives Digital brings experience in mobile commerce and multi-sided marketplaces to custom food delivery development. With 70+{' '}
+            <Link
+              to="/digital-product-development"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              digital projects
+            </Link>{' '}
+            delivered, our engineers understand the technical demands of building connected products for businesses with complex operations.
           </p>
         </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const reviewBadges = [
   {
@@ -33,11 +34,18 @@ export default function FoodDeliveryHero() {
             </h1>
 
             <h2 className="text-[32px] sm:text-[42px] md:text-[48px] xl:text-[54px] font-bold leading-[1.12] text-white mb-6 tracking-tight max-w-[820px]">
-              Built for the Moment a Customer Opens Your App Hungry and Expects Everything to Work Perfectly
+              Engineer a Better Food Ordering Experience With Custom Delivery Software
             </h2>
 
             <p className="text-white/85 text-[15px] sm:text-[17px] md:text-[18px] leading-[1.65] max-w-[740px] mb-10 font-normal">
-              Custom food delivery applications for startups, restaurant chains, and multi-vendor platforms. Real-time order processing, GPS tracking, driver dispatch, secure payments, and AI-powered recommendations built for high-traffic production environments.
+              Inceptives Digital develops custom food delivery platforms for businesses entering or expanding the online ordering market. Our food delivery app development services bring experienced{' '}
+              <Link
+                to="/mobile-app-development"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+              >
+                mobile app development
+              </Link>{' '}
+              to your ordering operations, with architecture tailored to your delivery model and existing business systems. Tell us how you plan to handle orders and deliveries, and we&apos;ll help define the right scope for your launch.
             </p>
 
             {/* CTA & Review Badges Row */}
@@ -46,7 +54,7 @@ export default function FoodDeliveryHero() {
                 href="#contact"
                 className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
               >
-                Let’s Build Your Food App
+                Consult Our Food Delivery App Experts
               </a>
               <a
                 href="#contact"

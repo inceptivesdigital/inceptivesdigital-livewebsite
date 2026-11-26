@@ -8,16 +8,16 @@ export default function FoodDeliveryCta3() {
           {/* Left Copy */}
           <div className="lg:col-span-6 flex flex-col items-start text-left pb-10 lg:pb-16">
             <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.16] text-white mb-4">
-              Ready to Capture A Share of the $69B+ U.S. Food Delivery Market?
+              Hire Food Delivery App Developers With Proven Mobile Experience
             </h2>
             <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] mb-8 max-w-[600px] font-normal">
-              We build scalable, high-performance food delivery apps that optimize deliveries, boost retention, and maximize revenue.
+              Commission your food delivery platform with Inceptives Digital&apos;s engineering team, backed by experience delivering complex mobile products.
             </p>
             <a
               href="#contact"
               className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
             >
-              Get Your App Estimate
+              Hire Our Food Delivery Developers
             </a>
           </div>
 

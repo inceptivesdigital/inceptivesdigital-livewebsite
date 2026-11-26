@@ -414,6 +414,8 @@ export default function Footer() {
               <img
                 src="/assets/flags/dmca.png"
                 alt="DMCA Protected"
+                loading="lazy"
+                decoding="async"
                 className="h-5 w-auto object-contain"
               />
             </a>
@@ -428,6 +430,7 @@ export default function Footer() {
           muted
           loop
           playsInline
+          preload="none"
           className="w-full h-auto block object-cover"
         >
           <source src="/assets/footer.mp4" type="video/mp4" />

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import StandardTechStack from '../../../../components/StandardTechStack'
 
 const categories = [
@@ -73,7 +74,18 @@ export default function TravelTechStack() {
           <span className="text-[#00CE44]">Travel App Development Services</span>
         </>
       }
-      subtitle="Travel platforms process real-time flight data, handle high-volume bookings, and serve users across time zones simultaneously. Every tool below is selected for those specific demands."
+      subtitle={
+        <>
+          Travel platforms process real-time flight data, handle high-volume bookings, and serve users across time zones simultaneously. Every{' '}
+          <Link
+            to="/blog/mobile-app-tech-stack"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+          >
+            tech stack
+          </Link>{' '}
+          below is selected for those specific demands.
+        </>
+      }
       categories={categories}
     />
   )

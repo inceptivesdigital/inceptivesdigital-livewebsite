@@ -3,23 +3,23 @@ import React from 'react';
 const awards = [
   {
     img: '/assets/awards-images/award-designrush.webp',
-    alt: 'DesignRush Top Mobile App Development Companies award badge',
+    alt: 'Clutch Top iPhone App Development Company, United States 2026',
   },
   {
     img: '/assets/awards-images/award-top-developers.png',
-    alt: 'Top Mobile App Developers 2025 Award',
+    alt: 'Clutch Top App Development Company, Plano 2026',
   },
   {
     img: '/assets/awards-images/award-clutch-austin.png',
-    alt: 'Top Application Management and Support Company 2025 Clutch award badge',
+    alt: 'Clutch Top User Experience Company, Plano 2026',
   },
   {
     img: '/assets/awards-images/award-rightfirms.png',
-    alt: 'Top Service Provider Award Badge by RightFirms',
+    alt: 'RightFirms Top Mobile App Development Company 2026',
   },
   {
     img: '/assets/awards-images/award-clutch-gaming.png',
-    alt: 'Clutch Top Software Developers award badge',
+    alt: 'RightFirms Artificial Intelligence 2026',
   },
 ];
 
@@ -29,8 +29,11 @@ export default function TravelAwards() {
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="text-center max-w-[820px] mx-auto mb-12">
           <h2 className="text-[26px] sm:text-[34px] md:text-[40px] font-bold leading-tight text-white mb-3">
-            Awards And <span className="text-[#00CE44]">Recognitions</span>
+            Recognition for Our <span className="text-[#00CE44]">Mobile App Development Expertise</span>
           </h2>
+          <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
+            Inceptives Digital&apos;s industry recognition spans mobile engineering, user experience design, and AI development. These credentials reflect the technical expertise we bring to custom travel applications and booking platforms.
+          </p>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-18 xl:gap-20">

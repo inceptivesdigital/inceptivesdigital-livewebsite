@@ -114,6 +114,8 @@ function VideoCard({ card }) {
         <img
           src={card.icon}
           alt={card.iconAlt || card.title}
+          loading="lazy"
+          decoding="async"
           className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
         />
       </div>

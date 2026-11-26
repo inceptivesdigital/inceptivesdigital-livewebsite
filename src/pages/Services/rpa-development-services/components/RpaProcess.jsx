@@ -114,9 +114,9 @@ export default function RpaProcess() {
 
   return (
     <section className="bg-[#111214] py-16 text-white sm:py-24">
-      <div className="mx-auto max-w-[1150px] px-6 sm:px-10">
+      <div className="mx-auto max-w-[1440px] px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="mx-auto mb-12 max-w-4xl text-center sm:mb-14">
-          <h2 className="mb-4 text-[28px] font-bold leading-tight tracking-tight sm:text-[36px] lg:text-[40px]">
+          <h2 className="mb-4 text-[28px] font-semibold leading-tight tracking-tight sm:text-[36px] lg:text-[40px]">
             How Our RPA Development Company Builds and Deploys Workflow Automation Systems
           </h2>
           <p className="text-[15px] leading-relaxed text-white/80 sm:text-[17px]">

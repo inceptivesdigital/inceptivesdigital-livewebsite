@@ -154,6 +154,7 @@ const SEO_ROUTES = {
 function applyRouteSeoToHtml(html, seo) {
   if (!seo) return html
   return html
+    .replace(/<link\s+rel="preload"[^>]*\/assets\/(?:hero-banner-full\.jpg|green-banner-shape\.png)[^>]*>\s*/gi, '')
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${seo.title}</title>`)
     .replace(
       /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/i,
@@ -260,7 +261,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  esbuild: {
+    drop: ['debugger'],
+  },
   build: {
+    target: 'es2020',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {

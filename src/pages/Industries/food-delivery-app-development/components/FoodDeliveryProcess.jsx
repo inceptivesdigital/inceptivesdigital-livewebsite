@@ -1,35 +1,58 @@
+import { Link } from 'react-router-dom'
 import LocationProcessLayout from '../../../../components/LocationProcessLayout'
 
 const steps = [
   {
     num: '01.',
     tabTitle: 'Discovery',
-    cardTitle: 'Discovery and Planning',
-    desc: 'Business model, target audience, and competitive landscape are analysed before development begins. Critical features, user journeys, backend architecture, and multi-vendor requirements are defined through structured discovery before a line of code is written.',
+    cardTitle: '1. Discovery and Planning',
+    desc: (
+      <>
+        Your restaurant operations and delivery business model shape the development roadmap. Through a{' '}
+        <Link
+          to="/discovery-sprint"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          discovery sprint
+        </Link>
+        , we assess existing systems to establish the application scope and identify required integrations before engineering begins.
+      </>
+    ),
   },
   {
     num: '02.',
     tabTitle: 'UI/UX Design',
-    cardTitle: 'UI/UX Design',
-    desc: 'Intuitive, responsive interfaces designed for customer ordering flows, driver navigation, and restaurant management panels. Every design decision is made to reduce friction between intent and completed action.',
+    cardTitle: '2. UI/UX Design',
+    desc: 'With the scope approved, our designers map customer ordering journeys and restaurant workflows. Interactive Figma prototypes give your team a clear view of the platform before engineering begins.',
   },
   {
     num: '03.',
     tabTitle: 'Development',
-    cardTitle: 'Development and Integration',
-    desc: 'Cross-platform food delivery applications built on scalable cloud infrastructure with real-time tracking, secure payment gateways, push notifications, and third-party API integrations built in during development.',
+    cardTitle: '3. Development and Integration',
+    desc: 'Approved prototypes guide the development of customer apps and connected backend systems. Our food delivery app developers implement real-time order processing and payment gateway integrations through planned development sprints.',
   },
   {
     num: '04.',
     tabTitle: 'Testing & QA',
-    cardTitle: 'Testing and QA',
-    desc: 'Functionality, security, load performance, and usability were tested across every user panel before deployment. Fast load times, minimal bugs, and optimised responsiveness are confirmed for customers, drivers, and restaurant partners.',
+    cardTitle: '4. Testing and QA',
+    desc: (
+      <>
+        As working modules come together, QA engineers apply{' '}
+        <Link
+          to="/blog/mobile-app-testing-strategies"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          mobile app testing strategies
+        </Link>{' '}
+        to test complete ordering journeys across supported interfaces. Payment failures and driver reassignment scenarios receive particular attention before release approval.
+      </>
+    ),
   },
   {
     num: '05.',
     tabTitle: 'Deployment',
-    cardTitle: 'Deployment and Support',
-    desc: 'iOS and Android store deployment is managed end-to-end. Performance monitored, architecture scaled, and continuous updates delivered after launch to keep the platform reliable and competitive.',
+    cardTitle: '5. Deployment and Support',
+    desc: 'Once testing is complete, we prepare the production environment and manage applicable app store submissions. Post-launch support addresses technical issues within the agreed scope as your delivery operations evolve.',
   },
 ]
 
@@ -42,7 +65,7 @@ export default function FoodDeliveryProcess() {
           <span className="text-[#00CE44]">Food Delivery App Development Process</span>
         </>
       }
-      subtitle="A food delivery platform built without a disciplined process ships fast and breaks faster. Every stage below exists because we have seen what happens when it is skipped."
+      subtitle="Our food delivery app development process follows defined milestones around your ordering model and delivery operations. Each stage addresses the technical requirements of your platform, from initial scope to production release."
       steps={steps}
     />
   )

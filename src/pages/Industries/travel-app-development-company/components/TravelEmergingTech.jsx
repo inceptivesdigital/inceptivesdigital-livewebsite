@@ -1,40 +1,61 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const technologies = [
   {
-    title: 'AI Personalisation Engine',
+    title: 'AI-Powered Travel Recommendations',
     description:
-      'Machine learning models that customise flight options, hotel recommendations, and itinerary updates for each traveller. Algorithms that optimise with every search, booking, and completed trip to increase engagement and long-term retention.',
+      'Personalize hotel suggestions through AI models that use traveler preferences and available inventory to improve search relevance.',
     icon: '/assets/healthcare/health-ai-icon.svg',
   },
   {
-    title: 'IoT-Enabled Travel Connectivity',
-    description:
-      'Wearables, luggage trackers, and location-aware travel devices are connected through IoT integrations. Real-time notifications, movement tracking, and cross-device syncing are built into a single connected travel ecosystem.',
-    icon: '/assets/mobile-app/Internet-Of-Things-1.svg',
-  },
-  {
-    title: 'AR and VR Interactive Experiences',
-    description:
-      '3D destination previews, AR navigation overlays, and virtual hotel tours built for travel platforms where users need to visualise a destination before committing to a booking. Conversion driven by experience rather than static images.',
+    title: 'AR and VR Travel Experiences',
+    description: (
+      <>
+        Let travelers explore destinations before booking through immersive hotel previews and interactive AR experiences built through{' '}
+        <Link
+          to="/ar-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          AR app development
+        </Link>{' '}
+        for compatible devices.
+      </>
+    ),
     icon: '/assets/react-native/Augmented-Virtual-Reality-2.svg',
   },
   {
-    title: 'Predictive Analytics and Traveller Insights',
+    title: 'Predictive Travel Analytics',
     description:
-      'Booking pattern forecasting, personalised recommendations, and behavioural analytics built for travel platforms that need to understand user intent before users express it. Marketing made smarter. User lifetime value increased.',
+      'Anticipate booking demand using historical reservation data. Forecasting models support capacity planning across travel businesses with changing demand.',
     icon: '/assets/healthcare/big-data.svg',
   },
   {
-    title: 'Blockchain-Powered Payment Security',
-    description:
-      'Encrypted transactions and immutable booking records are built into payment flows for flights, subscriptions, and insurance add-ons. User trust is built into every transaction without friction at the checkout stage.',
+    title: 'Smart Travel Assistance',
+    description: (
+      <>
+        Introduce AI-powered travel assistants, built with{' '}
+        <Link
+          to="/generative-ai-development-company"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          generative AI development
+        </Link>
+        , that answer itinerary questions using connected booking information, with access controls suited to your platform.
+      </>
+    ),
     icon: '/assets/mobile-app/blockchain.svg',
   },
   {
-    title: 'Gamified Travel Engagement',
+    title: 'Connected Travel Technologies',
     description:
-      'In-app badges, challenges, reward points, and activity trackers built for travel platforms that need to turn occasional bookers into loyal, returning users. Engagement mechanics that make the app worth opening between trips.',
+      'Extend your travel app to compatible luggage trackers or wearable devices through IoT integrations suited to your service offering.',
+    icon: '/assets/mobile-app/Internet-Of-Things-1.svg',
+  },
+  {
+    title: 'Offline Travel Experience Engineering',
+    description:
+      'Keep essential trip information accessible when connectivity drops. Our engineers develop local data storage with synchronization for supported travel workflows.',
     icon: '/assets/mobile-app/Cloud-Integration-1.svg',
   },
 ];
@@ -62,11 +83,11 @@ export default function TravelEmergingTech() {
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            The High-Tech Core of Our{' '}
-            <span className="text-[#00CE44]">Travel App Development Company</span>
+            Redefining Travel App Development Solutions with{' '}
+            <span className="text-[#00CE44]">Future-Forward Technologies</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Advanced technologies selected to improve booking, personalization, security, and traveler engagement.
+            Give your travel platform a competitive edge with emerging technologies. Our developers bring the expertise to support smarter booking experiences and changing traveler expectations.
           </p>
         </div>
 

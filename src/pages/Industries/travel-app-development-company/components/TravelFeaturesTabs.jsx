@@ -1,117 +1,171 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const featureTabs = [
   {
     id: 'booking',
-    label: 'Flight & Hotel Booking Apps',
+    label: '1. Travel Booking Panel',
     subtitle:
-      'Core transaction capabilities that make finding, comparing, and booking travel seamless for users anywhere in the world.',
+      'Develop a booking experience that connects travelers with live supplier inventory while keeping reservation workflows aligned with your business requirements.',
     items: [
       {
-        title: 'Search and Filter Functionality',
+        title: 'Flight and Hotel Search',
         description:
-          'Advanced search algorithms and dynamic filtering let users sort available options by destination, dates, guests, price range, and property type through real-time API connections.',
+          'Compatible travel APIs bring flight and hotel inventory into one booking experience.',
       },
       {
-        title: 'Booking and Payment Integration',
+        title: 'Live Prices and Availability',
         description:
-          'PCI DSS-compliant payment gateways with multi-currency support, digital wallets, and automatic invoice generation. Users book flights and hotels directly through the app without leaving to complete the transaction.',
+          'Keep booking options current through supplier feeds that reflect available rates.',
       },
       {
-        title: 'Itinerary Management',
+        title: 'Booking Changes and Cancellations',
         description:
-          'A unified dashboard that updates all travel information in real time. Flight times, hotel bookings, boarding passes, and reservations are organised and accessible in one place.',
+          'Travelers can modify eligible bookings through workflows aligned with supplier reservation policies.',
       },
       {
-        title: 'Push Notifications',
+        title: 'Multi-Currency Payments',
         description:
-          'Flight status updates, delays, hotel check-ins, price drops, and reminders delivered through event-driven triggers. Users stay informed without being overwhelmed.',
+          'Multi-currency payment integrations support transactions across your target travel markets.',
       },
       {
-        title: 'Customer Support Access',
+        title: 'Digital Tickets and Travel Documents',
         description:
-          'AI-powered chat assistance, ticketing systems, and click-to-call features are built in for travellers who need quick support. Every interaction is logged for service improvement.',
+          'Confirmed bookings provide access to digital tickets through supported supplier connections.',
       },
       {
-        title: 'Review and Rating System',
+        title: 'Booking Status Updates',
         description:
-          'A verified review system that lets travellers rate flights, hotels, and experiences. Feedback feeds directly into recommendation algorithms to improve personalisation over time.',
+          'Supplier responses update reservation statuses across customer interfaces and booking records.',
       },
     ],
   },
   {
     id: 'planning',
-    label: 'Planning, Navigation, & Destination Apps',
+    label: '2. Trip Planning Panel',
     subtitle:
-      'Tools that help travellers plan, navigate on the ground, and discover what each destination has to offer.',
+      'Extend your travel platform beyond reservations with planning features that give customers greater flexibility throughout their trips.',
     items: [
       {
-        title: 'Custom Travel Itinerary Creation',
+        title: 'Custom Trip Planner',
         description:
-          'Drag-and-drop interfaces with smart recommendations and real-time device syncing. Changes made on one device reflect instantly across all platforms.',
+          'Flexible itinerary tools accommodate schedule changes without requiring travelers to rebuild plans.',
       },
       {
-        title: 'Route and Navigation Assistance',
+        title: 'Multi-Destination Route Planning',
         description:
-          'GPS navigation, offline maps, geofencing, and live routing combine for precise directions, whether users are walking, driving, or using public transport.',
+          'Integrate mapping services that support route planning across complex travel itineraries.',
       },
       {
-        title: 'Destination Recommendations',
+        title: 'Offline Trip Access',
         description:
-          'Machine learning models that deliver personalised suggestions for sightseeing, dining, events, and local activities based on behaviour, location, and preferences.',
+          'Downloaded trip details remain accessible when travelers lose internet connectivity.',
       },
       {
-        title: 'Real-Time Location Sharing',
+        title: 'Flight Delay Alerts',
         description:
-          'Encrypted location sharing via live feeds and messages. Built for group travel safety and keeping travel companions connected throughout the journey.',
+          'Real-time flight data powers timely alerts about delays and schedule changes.',
       },
       {
-        title: 'Offline Access',
+        title: 'Local Activities and Attractions',
         description:
-          'Maps, itineraries, tickets, and emergency contacts are stored locally so users retain access to critical information without an internet connection.',
+          'Offer relevant local experiences through destination-aware recommendations and supported activity inventory.',
       },
       {
-        title: 'Weather and Local Event Updates',
+        title: 'Group Trip Planning',
         description:
-          'Weather APIs, event listings, and localised alerts are integrated so travellers can plan and adjust in real time.',
+          'Shared planning tools keep group travel arrangements accessible to participating travelers.',
       },
     ],
   },
   {
     id: 'assistance',
-    label: 'Assistance Apps',
+    label: '3. Traveler Assistance Panel',
     subtitle:
-      'Safety, support, and communication tools that keep travellers informed and connected wherever they are.',
+      'Add specialized travel support capabilities that help your business serve customers after booking, including during international trips.',
     items: [
       {
-        title: 'Emergency Services Integration',
+        title: 'Travel Safety Alerts',
         description:
-          "Instant connection to local emergency numbers, embassies, hospitals, and police stations dynamically mapped to the user's current location.",
+          'Connected information services deliver destination-specific advisories through your travel platform.',
       },
       {
-        title: 'Local Concierge Assistance',
+        title: 'Nearby Emergency Services',
         description:
-          'AI-driven suggestions and live support for booking taxis, restaurants, and activities. A digital concierge available at every stage of the trip.',
+          'Location-aware search helps travelers find available emergency assistance in unfamiliar destinations.',
       },
       {
-        title: 'Health and Safety Alerts',
+        title: 'Travel Insurance Support',
         description:
-          "Real-time notifications for travel risks, health advisories, and safety concerns specific to the user's current location.",
+          'Supported insurance APIs connect policy information with claim submission workflows.',
       },
       {
-        title: 'Language Translation Services',
+        title: 'AI Travel Assistant',
         description:
-          'NLP-powered text and speech translation built in for menus, conversations, and signs. Communication without language barriers in any destination.',
+          'Give travelers contextual assistance through AI models connected to relevant trip information.',
       },
       {
-        title: 'Travel Insurance Assistance',
-        description:
-          'In-app insurance policy management, instant quotes, claims submission, and progress tracking through secure API integrations.',
+        title: 'Language Translation',
+        description: (
+          <>
+            Integrated translation services, built on multilingual{' '}
+            <Link
+              to="/nlp-development-services"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              NLP development
+            </Link>
+            , support communication across different travel languages.
+          </>
+        ),
       },
       {
-        title: 'Lost and Found Support',
+        title: 'Live Location Sharing',
         description:
-          'An intelligent tracking system for reporting lost items, uploading details, and connecting with local authorities or support groups for recovery assistance.',
+          'Authorized location sharing keeps selected travel companions informed during active trips.',
+      },
+    ],
+  },
+  {
+    id: 'admin',
+    label: '4. Travel Admin Panel',
+    subtitle:
+      'Bring booking administration into one management environment, with controls suited to your supplier network.',
+    items: [
+      {
+        title: 'Travel Supplier Management',
+        description:
+          'Centralized inventory tools give operators visibility across connected travel suppliers.',
+      },
+      {
+        title: 'Booking Record Verification',
+        description:
+          'Identify booking discrepancies through comparisons between platform records and supplier confirmations.',
+      },
+      {
+        title: 'Commission Management',
+        description:
+          'Configurable commission rules accommodate supplier agreements across your travel marketplace.',
+      },
+      {
+        title: 'Refund and Cancellation Management',
+        description:
+          'Refund workflows account for eligible cancellations under applicable supplier booking conditions.',
+      },
+      {
+        title: 'Supplier Connection Monitoring',
+        description:
+          'Integration monitoring flags failed supplier connections that require operational attention.',
+      },
+      {
+        title: 'Travel Sales Reports',
+        description:
+          'Review booking revenue and transaction performance through dedicated travel reporting dashboards.',
+      },
+      {
+        title: 'Corporate Travel Approvals',
+        description:
+          'Company-specific approval rules govern reservations across managed corporate travel accounts.',
       },
     ],
   },
@@ -135,11 +189,11 @@ export default function TravelFeaturesTabs() {
         {/* Heading */}
         <div className="text-center max-w-[960px] mx-auto mb-12">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Travel App Development Features{' '}
-            <span className="text-[#00CE44]">for Better Booking and Planning</span>
+            Making Every Trip Smoother with{' '}
+            <span className="text-[#00CE44]">Custom Travel App Features</span>
           </h2>
           <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            These travel mobile app development features ensure that your travel application operates flawlessly, has a faster loading time, and provides a more intelligent and connected experience for every traveler.
+            Our travel app development services cover customer-facing booking features and the systems behind commercial travel operations. Each panel supports a distinct part of your travel platform.
           </p>
         </div>
 

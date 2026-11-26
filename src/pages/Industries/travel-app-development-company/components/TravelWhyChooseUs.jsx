@@ -1,35 +1,56 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const reasons = [
   {
     title: 'End-to-End Travel Experiences',
     description:
-      'Booking, planning, navigation, on-trip assistance, and post-trip engagement are built into a single product. Travellers who find everything they need within one platform stay longer, book more, and return more consistently.',
+      'Our engineers develop connected travel platforms that bring booking workflows and trip management into one consistent customer experience.',
   },
   {
     title: 'Travel-Specific API Integrations',
     description:
-      'Amadeus, Skyscanner, Expedia, and real-time travel data providers are integrated with the depth that comes from having done it before. Connections that handle live inventory, dynamic pricing, and booking confirmation without latency or reliability issues.',
+      'Connect your platform with compatible travel inventory providers. Our engineers handle API integration requirements around availability and reservation workflows.',
   },
   {
-    title: 'AI-Powered Personalisation',
-    description:
-      'Recommendation systems, dynamic pricing engines, and itinerary personalisation are built on models trained for travel-specific user behaviour. Intelligence that improves with every interaction rather than applying generic personalisation logic to a travel context.',
+    title: 'AI-Powered Personalization',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/ai-app-development-services"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          AI app development services
+        </Link>{' '}
+        support travel recommendations tailored to customer preferences, using relevant booking information and available destination data.
+      </>
+    ),
   },
   {
     title: 'Offline-First Architecture',
     description:
-      'Critical travel information accessible without connectivity. Maps, itineraries, boarding passes, and emergency contacts are available when internet access is unavailable, which is precisely when travellers need them most.',
+      'Reliable travel apps should work beyond internet coverage. We engineer offline access to essential trip information across supported devices.',
   },
   {
     title: 'Security and Compliance',
-    description:
-      'GDPR and PCI DSS compliance were built into the payment and data architecture from day one. Every transaction and user data point is handled to the standard that international travel platforms require.',
+    description: (
+      <>
+        Protect sensitive traveler information through secure payment integrations and{' '}
+        <Link
+          to="/blog/mobile-app-security-best-practices"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          mobile app security best practices
+        </Link>{' '}
+        suited to your platform&apos;s compliance requirements.
+      </>
+    ),
   },
   {
-    title: 'Continuous Support and Optimisation',
+    title: 'Continuous Support and Optimization',
     description:
-      'Performance monitoring, feature updates, and platform optimisation are provided continuously after launch. Travel platforms that stay competitive require ongoing development, not a one-time build and handoff.',
+      'Your travel platform can evolve without changing development partners. Our engineers support product improvements through agreed post-launch engagements.',
   },
 ];
 
@@ -44,7 +65,7 @@ export default function TravelWhyChooseUs() {
             <span className="text-[#00CE44]">Travel App Development Company</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Travel applications built around booking reliability, traveller engagement, and long-term platform growth.
+            Inceptives Digital brings 8+ years of product engineering experience to custom travel app development. Our team combines mobile development expertise with the technical planning needed for booking platforms and travel businesses operating across different markets.
           </p>
         </div>
 

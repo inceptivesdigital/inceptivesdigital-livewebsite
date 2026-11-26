@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react'
+import { useState, useEffect, useRef, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
@@ -134,6 +134,80 @@ function PreFooterCTA({ isNotFound }) {
     pathname === '/thank-you'
   ) return null
   return <BookingCTA />
+}
+
+// Defer below-the-fold chrome (BookingCTA + Footer) until scroll/interaction/intersection
+// so initial page load only fetches above-the-fold code & assets.
+function DeferredChrome({ isNotFound }) {
+  const [ready, setReady] = useState(false)
+  const sentinelRef = useRef(null)
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (ready) return
+    if (hash === '#contact') {
+      setReady(true)
+      return
+    }
+    const trigger = () => setReady(true)
+    const events = ['scroll', 'pointerdown', 'touchstart', 'keydown']
+    events.forEach((evt) => window.addEventListener(evt, trigger, { once: true, passive: true }))
+
+    let obs
+    const el = sentinelRef.current
+    if (el && typeof IntersectionObserver !== 'undefined') {
+      obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) trigger()
+        },
+        { rootMargin: '600px' }
+      )
+      obs.observe(el)
+    }
+
+    const timer = window.setTimeout(trigger, 2500)
+    return () => {
+      events.forEach((evt) => window.removeEventListener(evt, trigger))
+      if (obs) obs.disconnect()
+      window.clearTimeout(timer)
+    }
+  }, [ready, hash])
+
+  if (!ready) {
+    return <div ref={sentinelRef} className="min-h-[320px]" aria-hidden="true" />
+  }
+
+  return (
+    <Suspense fallback={null}>
+      <PreFooterCTA isNotFound={isNotFound} />
+      <Footer />
+    </Suspense>
+  )
+}
+
+// Defer modal chunks until first user interaction or idle
+function DeferredModals() {
+  const [ready, setReady] = useState(false)
+
+  useEffect(() => {
+    if (ready) return
+    const trigger = () => setReady(true)
+    const events = ['pointerdown', 'keydown', 'touchstart', 'scroll']
+    events.forEach((evt) => window.addEventListener(evt, trigger, { once: true, passive: true }))
+    const timer = window.setTimeout(trigger, 3000)
+    return () => {
+      events.forEach((evt) => window.removeEventListener(evt, trigger))
+      window.clearTimeout(timer)
+    }
+  }, [ready])
+
+  if (!ready) return null
+  return (
+    <Suspense fallback={null}>
+      <ScheduleCallModal />
+      <ContactPopupModal />
+    </Suspense>
+  )
 }
 
 export default function App() {
@@ -374,13 +448,9 @@ export default function App() {
           </Suspense>
         </main>
 
-        {/* Universal Pre-Footer Contact Section, Footer & Modals */}
-        <Suspense fallback={null}>
-          <PreFooterCTA isNotFound={isNotFound} />
-          <Footer />
-          <ScheduleCallModal />
-          <ContactPopupModal />
-        </Suspense>
+        {/* Universal Pre-Footer Contact Section, Footer & Modals (deferred for faster initial load) */}
+        <DeferredChrome isNotFound={isNotFound} />
+        <DeferredModals />
       </div>
     </BrowserRouter>
   )

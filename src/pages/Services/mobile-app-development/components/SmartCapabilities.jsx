@@ -88,7 +88,7 @@ export default function SmartCapabilities() {
       </div>
 
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
           
           {/* Left Column (CTA H2 = 35px) */}
           <div className="lg:col-span-5 text-left">

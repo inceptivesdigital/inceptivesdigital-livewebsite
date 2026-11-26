@@ -357,10 +357,10 @@ export default function CustomSoftwareDevelopment() {
       >
         <div className="absolute inset-0 bg-black/80 pointer-events-none" />
         <div className="relative z-10 w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             {/* Left Column: White Heading + Dual CTAs */}
             <div className="lg:col-span-5 text-left space-y-6">
-              <h2 className="text-[28px] sm:text-[36px] lg:text-[40px] font-bold text-white leading-[1.16]">
+              <h2 className="text-[28px] sm:text-[36px] lg:text-[40px] font-semibold text-white leading-[1.16]">
                 Custom Software Development Across Multiple Domains
               </h2>
 
@@ -382,11 +382,11 @@ export default function CustomSoftwareDevelopment() {
             </div>
 
             {/* Right Column: 3x4 Grid of Green-Bordered Domain Cards */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-left">
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
               {DOMAINS.map((dom) => (
                 <div
                   key={dom.title}
-                  className="bg-black/75 rounded-[8px] px-4 py-4 border border-[#00CE44]/65 hover:border-[#00CE44] hover:bg-[#00CE44]/10 transition-colors flex items-center gap-3.5"
+                  className="bg-black/75 rounded-[14px] px-4 py-5 border border-[#00CE44]/65 hover:border-[#00CE44] hover:bg-[#00CE44]/10 transition-colors flex flex-col items-center justify-center text-center gap-2.5"
                 >
                   <img
                     src={dom.icon}
@@ -394,7 +394,7 @@ export default function CustomSoftwareDevelopment() {
                     loading="lazy"
                     className="w-8 h-8 object-contain shrink-0 select-none"
                   />
-                  <h3 className="text-[13.5px] sm:text-[14px] font-bold text-white leading-snug">
+                  <h3 className="text-[13px] sm:text-[14px] font-normal text-white leading-snug">
                     {dom.title}
                   </h3>
                 </div>
@@ -437,21 +437,22 @@ export default function CustomSoftwareDevelopment() {
         </div>
       </section>
 
-      {/* 5. 7-STAGE INTERACTIVE HORIZONTAL PROCESS TABS (Industries Process Pill Style) */}
-      <section className="w-full bg-[#000000] py-16 sm:py-20 lg:py-24">
-        <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
+      {/* 5. 7-STAGE INTERACTIVE HORIZONTAL PROCESS TABS (Full-Width Pill Style) */}
+      <section className="w-full bg-[#000000] py-20 lg:py-24">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
           <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-12 space-y-3">
-            <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-[#00CE44] leading-[1.18]">
-              Inceptives Digital&apos;s Process for Custom Software Development Solutions
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold text-white tracking-tight leading-[1.18]">
+              Inceptives Digital&apos;s Process for{' '}
+              <span className="text-[#00CE44]">Custom Software Development Solutions</span>
             </h2>
-            <p className="text-white/80 text-[14.5px] sm:text-[15.5px] leading-relaxed">
+            <p className="text-white/85 text-sm sm:text-base leading-relaxed font-normal">
               Every successful software product follows a process that reduces uncertainty, validates decisions, and builds for long-term scalability.
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto space-y-5">
+          <div className="w-full space-y-5">
             {/* Horizontal 7 Rounded-Full Pill Stepper */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-7 gap-2.5 sm:gap-3">
               {PROCESS_STAGES.map((st, idx) => {
                 const isActive = activeStage === idx
                 return (
@@ -466,16 +467,16 @@ export default function CustomSoftwareDevelopment() {
                         setActiveStage(idx)
                       }
                     }}
-                    className={`flex items-center gap-2.5 rounded-full p-1.5 pr-4 cursor-pointer select-none transition-colors ${
+                    className={`w-full flex items-center gap-2.5 rounded-full p-1.5 pr-4 cursor-pointer select-none transition-colors ${
                       isActive
-                        ? 'bg-[#00CE44] text-white'
-                        : 'bg-[#222222] text-white/85 hover:bg-[#2d2d2d]'
+                        ? 'bg-[#00CE44] text-black font-semibold'
+                        : 'bg-[#2c2c2c] text-white/90 hover:bg-[#383838] font-medium'
                     }`}
                   >
                     <span className="w-8 h-8 rounded-full bg-white text-black font-bold text-xs flex items-center justify-center shrink-0">
                       {st.num}
                     </span>
-                    <span className="text-[13.5px] sm:text-[14px] font-semibold truncate">
+                    <span className="text-xs sm:text-sm whitespace-nowrap truncate">
                       {st.tab}
                     </span>
                   </div>
@@ -484,11 +485,11 @@ export default function CustomSoftwareDevelopment() {
             </div>
 
             {/* Active Stage Detail Card */}
-            <div className="bg-[#333333] rounded-[14px] px-7 sm:px-10 py-9 sm:py-12 min-h-[200px] flex flex-col justify-center text-left border border-white/[0.06]">
-              <h3 className="text-[22px] sm:text-[26px] font-bold text-white mb-3">
+            <div className="w-full bg-[#333333] rounded-[14px] px-7 sm:px-10 lg:px-12 py-10 sm:py-12 min-h-[210px] flex flex-col justify-center text-left border-0">
+              <h3 className="text-2xl sm:text-[26px] font-bold text-[#00CE44] tracking-tight mb-3">
                 {PROCESS_STAGES[activeStage].title}
               </h3>
-              <p className="text-white/90 text-[15px] sm:text-[16px] leading-[1.7] max-w-4xl">
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed font-normal max-w-5xl">
                 {PROCESS_STAGES[activeStage].desc}
               </p>
             </div>

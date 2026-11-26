@@ -1,41 +1,80 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
-    title: 'On-Demand Food Delivery App Development',
+    title: '1. Custom Food Delivery App Development',
     description:
-      'Robust on-demand food delivery platforms with real-time ordering, live tracking, and secure payments. Built for startups and established businesses handling high order volumes without operational bottlenecks.',
+      'Bring your food delivery business online with a platform tailored to your operating model. Our custom food delivery app development expertise covers customer-facing applications backed by reliable order management systems.',
     icon: '/assets/healthcare/sector1.svg',
   },
   {
-    title: 'Milk Delivery App Development',
-    description:
-      'Scheduled delivery management with temperature monitoring, route optimisation, and automated delivery workflows. Built for businesses where consistency, quality assurance, and cost-efficient logistics determine customer retention.',
+    title: '2. Restaurant Ordering App Development',
+    description: (
+      <>
+        Own your restaurant&apos;s digital ordering channel without depending entirely on third-party marketplaces. We develop branded food ordering apps with POS{' '}
+        <Link
+          to="/system-integration-api-automation"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          system integration
+        </Link>
+        , supporting direct sales across individual restaurants and established chains.
+      </>
+    ),
     icon: '/assets/healthcare/sector2.svg',
   },
   {
-    title: 'Restaurant Food Delivery App Development',
+    title: '3. Multi-Vendor Food Delivery Marketplace Development',
     description:
-      'Custom delivery platforms for single restaurants and multi-branch chains. Menu management, POS integrations, and smooth checkout flows built around the specific operational requirements of restaurant delivery.',
+      'Build a multi-restaurant marketplace with independent vendor dashboards and centralized administration. Our engineers implement commission structures suited to your revenue model, giving platform operators greater control over restaurant partnerships.',
     icon: '/assets/healthcare/sector3.svg',
   },
   {
-    title: 'Meat Delivery App Development',
+    title: '4. On-Demand Food Delivery App Development',
     description:
-      'Cold-chain monitoring, delivery slot management, and regulatory compliance are built into meat delivery applications. Quality and freshness are maintained from dispatch to doorstep without manual quality checks at every stage.',
+      "Real-time dispatch is central to successful on-demand delivery operations. Our developers connect incoming orders with driver availability, providing live delivery visibility across your platform's active service areas and delivery network.",
     icon: '/assets/healthcare/sector4.svg',
   },
   {
-    title: 'Pet Food Delivery App Development',
+    title: '5. Cloud Kitchen App Development',
     description:
-      'Smart reordering, custom delivery intervals, and reliable order fulfilment built for pet food delivery businesses. Live delivery visibility and logistics reliability built to maintain customer trust and long-term retention.',
+      'Managing several virtual brands from one kitchen requires a connected ordering environment. Our cloud kitchen solutions support separate brand menus within shared preparation workflows, keeping kitchen operations under centralized control.',
     icon: '/assets/healthcare/sector5.svg',
   },
   {
-    title: 'Niche Food Delivery App Development',
+    title: '6. Grocery Delivery App Development',
     description:
-      'Custom delivery platforms for specialised markets, vegan, keto, locally sourced, and diet-specific food businesses. User experience and features built around the specific expectations of niche food audiences.',
+      'Supermarkets and online grocery businesses need dependable inventory visibility across their ordering platforms. Our grocery delivery app development services include stock synchronization and substitution workflows that support accurate customer fulfillment.',
     icon: '/assets/healthcare/sector6.svg',
+  },
+  {
+    title: '7. Meal Subscription App Development',
+    description:
+      'Recurring meal delivery needs more flexibility than standard checkout systems. We engineer subscription platforms with configurable meal plans and automated billing, supporting predictable ordering cycles for your food delivery business.',
+    icon: '/assets/healthcare/sector1.svg',
+  },
+  {
+    title: '8. Food Delivery Logistics App Development',
+    description:
+      "Efficient delivery operations depend on accurate driver allocation during busy ordering periods. Our logistics applications provide dispatch management and route planning capabilities suited to your fleet's coverage and daily delivery volume.",
+    icon: '/assets/healthcare/sector2.svg',
+  },
+  {
+    title: '9. Food Delivery App Modernization',
+    description: (
+      <>
+        Upgrade existing food delivery software without replacing the entire platform. Our engineers identify architecture limitations and modernize critical components through{' '}
+        <Link
+          to="/product-rescue-scaling"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          product rescue and scaling
+        </Link>
+        , extending application capabilities while maintaining continuity across established ordering operations.
+      </>
+    ),
+    icon: '/assets/healthcare/sector3.svg',
   },
 ];
 
@@ -46,11 +85,11 @@ export default function FoodDeliveryServicesGrid() {
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Food Delivery App Development Services{' '}
-            <span className="text-[#00CE44]">Built for Every Delivery Model</span>
+            Custom Food Delivery App Development Services{' '}
+            <span className="text-[#00CE44]">for Every Business Model</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Custom food delivery applications designed for startups, restaurant chains, and speciality food businesses across every delivery vertical.
+            Our food delivery app development services support restaurant businesses and delivery operators with different commercial requirements. From direct ordering platforms to multi-vendor marketplaces, we engineer applications around real operational needs.
           </p>
         </div>
 

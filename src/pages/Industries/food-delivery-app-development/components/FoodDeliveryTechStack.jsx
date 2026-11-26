@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import StandardTechStack from '../../../../components/StandardTechStack'
 
 const categories = [
@@ -68,11 +69,22 @@ export default function FoodDeliveryTechStack() {
     <StandardTechStack
       heading={
         <>
-          Technology Stack Behind Our{' '}
+          Tech Stack Powering Our{' '}
           <span className="text-[#00CE44]">Food Delivery App Development Services</span>
         </>
       }
-      subtitle="Food delivery platforms process thousands of concurrent orders, sync live GPS data, and handle secure payments simultaneously. Every tool below is selected for those specific demands."
+      subtitle={
+        <>
+          Be it a restaurant ordering app or an advanced delivery platform, the{' '}
+          <Link
+            to="/blog/mobile-app-tech-stack"
+            className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+          >
+            mobile app tech stack
+          </Link>{' '}
+          needs to support your operations. Our developers work with modern frameworks and proven backend systems, selecting the architecture around your product&apos;s technical requirements.
+        </>
+      }
       categories={categories}
     />
   )

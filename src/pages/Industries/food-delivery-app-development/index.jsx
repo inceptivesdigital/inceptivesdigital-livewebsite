@@ -28,7 +28,7 @@ export default function FoodDeliveryAppDevelopment() {
       document.head.appendChild(metaDescription);
     }
     metaDescription.content =
-      'Inceptives Digital, a premier food delivery app development company, crafts apps that streamline operations, increase orders, and delight users.';
+      'Choose Inceptives Digital for custom food delivery app development services, with engineering expertise in restaurant ordering and multi-vendor platforms.';
 
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {

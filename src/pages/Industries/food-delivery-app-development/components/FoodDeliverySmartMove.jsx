@@ -2,34 +2,24 @@ import React from 'react';
 
 const benefits = [
   {
-    title: 'Cut Third-Party Commission Costs',
+    title: 'More Control Over Direct Orders',
     description:
-      'Third-party delivery platforms charge 15 to 30 percent commission on every order. A branded platform eliminates that dependency and returns margin directly to the business on every transaction.',
+      'A branded ordering platform keeps customer purchases within your own digital channel, reducing reliance on third-party marketplaces.',
   },
   {
-    title: 'Own the Customer Relationship',
+    title: 'Stronger Customer Relationships',
     description:
-      'Third-party platforms own your customer data, reorder behaviour, and loyalty. A branded app returns all three, first-party data, direct communication, and retention control without intermediary dependency.',
+      'Own your customer experience through direct ordering access. Loyalty programs can support repeat purchases across your restaurant network.',
   },
   {
-    title: 'Unlock Multiple Revenue Streams',
+    title: 'Flexible Platform Revenue Models',
     description:
-      'Subscription plans, in-app promotions, premium restaurant placement, and loyalty programmes all become available when the platform is owned rather than rented. Revenue diversification that compounds as the user base grows.',
+      "Marketplace operators can introduce restaurant commissions or subscription plans according to their platform's commercial model.",
   },
   {
-    title: 'Increase Repeat Order Rate',
+    title: 'Greater Control Over Delivery Operations',
     description:
-      'Personalised recommendations, one-tap reordering, and loyalty rewards drive repeat purchases. Apps with personalised ordering experiences consistently outperform generic platforms on repeat order frequency and average order value.',
-  },
-  {
-    title: 'Reduce Customer Acquisition Cost',
-    description:
-      'Push notifications, in-app promotions, and referral programmes built into a branded platform cost a fraction of paid acquisition on third-party marketplaces. Users acquired directly stay longer and spend more.',
-  },
-  {
-    title: 'Scale Without Commission Scaling With You',
-    description:
-      'Every order on a third-party platform costs more as volume grows. Every order on an owned platform costs less per transaction as infrastructure costs amortise across a higher volume.',
+      'Dedicated dispatch tools give your business visibility into active orders, helping delivery teams coordinate fulfillment across service areas.',
   },
 ];
 
@@ -40,16 +30,16 @@ export default function FoodDeliverySmartMove() {
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Why Food Delivery App Development Is{' '}
-            <span className="text-[#00CE44]">a Smart Business Move</span>
+            What a Custom Food Delivery App{' '}
+            <span className="text-[#00CE44]">Brings to Your Business</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            The U.S. online food delivery sector is currently experiencing fast growth, which creates excellent business opportunities for companies willing to invest in food delivery app development.
+            A custom food delivery app gives restaurants greater control over their digital ordering operations. Marketplace operators can also build revenue models around their own delivery network.
           </p>
         </div>
 
-        {/* 3x2 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {benefits.map((item, idx) => (
             <div
               key={idx}

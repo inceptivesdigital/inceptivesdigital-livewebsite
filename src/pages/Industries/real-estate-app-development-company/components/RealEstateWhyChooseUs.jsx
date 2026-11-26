@@ -9,12 +9,12 @@ const reasons = [
   {
     title: 'Multi-Sided Marketplace Expertise',
     description:
-      'Our experience with multi-sided platforms brings practical engineering knowledge to marketplace operations, where independent agents and centralized administration must work together.',
+      'Our experience with multi-sided platforms like Halwar Connect brings practical engineering knowledge to marketplace operations, where independent agents and centralized administration must work together.',
   },
   {
     title: 'Native and Cross-Platform Specialists',
     description:
-      'Choose the right mobile architecture for your product requirements. Our Swift, Kotlin, Flutter, and React Native developers support both native and shared-codebase delivery.',
+      'Choose the right mobile architecture for your product requirements. Our Swift, Kotlin, Flutter, and React Native developers support both native and cross-platform app development delivery.',
   },
   {
     title: 'Specialized Real Estate Integrations',
@@ -44,7 +44,7 @@ export default function RealEstateWhyChooseUs() {
             <span className="text-[#00CE44]">Real Estate Mobile App Development Company</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            With 8+ years of experience and 70+ applications launched, Inceptives Digital brings established product engineering expertise to real estate projects. Our teams approach development with the technical depth and commercial judgment your investment demands.
+            With 8+ years of experience and 70+ applications launched, Inceptives Digital brings established digital product development expertise to real estate projects. Our teams approach development with the technical depth and commercial judgment your investment demands.
           </p>
         </div>
 

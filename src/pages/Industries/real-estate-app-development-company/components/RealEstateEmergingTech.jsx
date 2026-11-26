@@ -6,7 +6,7 @@ const capabilities = [
     icon: BrainCircuit,
     title: 'AI and Predictive Property Intelligence',
     description:
-      'Our engineers develop AI models for property valuation and market forecasting. Recommendation systems use relevant data to improve listing relevance.',
+      'Our machine learning development engineers build AI models for property valuation and market forecasting. Recommendation systems use relevant data to improve listing relevance.',
   },
   {
     icon: Box,
@@ -30,7 +30,7 @@ const capabilities = [
     icon: Cpu,
     title: 'Connected Building and IoT Technologies',
     description:
-      'Integrate compatible building sensors and access management systems through secure APIs, enabling centralized monitoring across connected real estate assets.',
+      'Our IoT app development work integrates compatible building sensors and access management systems through secure APIs, enabling centralized monitoring across connected real estate assets.',
   },
   {
     icon: SearchCheck,

@@ -2,23 +2,23 @@ export default function AustinStatsBar() {
   const stats = [
     {
       value: '70+',
-      label: 'Apps Launched',
+      label: 'Apps Shipped',
       icon: '/assets/mobile-app/app-downloads.svg',
     },
     {
-      value: '150+',
-      label: 'Active Developers',
+      value: '8+',
+      label: 'Years Building Products',
       icon: '/assets/mobile-app/active-developer.svg',
     },
     {
-      value: '3M+',
-      label: 'App Downloads',
-      icon: '/assets/mobile-app/apps-launch.svg',
+      value: '4.9',
+      label: 'on Clutch',
+      icon: '/assets/mobile-app/rating.svg',
     },
     {
-      value: '5.0',
-      label: 'Rating On Clutch',
-      icon: '/assets/mobile-app/rating.svg',
+      value: '100%',
+      label: 'Client Success Rate',
+      icon: '/assets/mobile-app/apps-launch.svg',
     },
   ]
 

@@ -1,10 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const tiers = [
   {
-    title: 'Foundation App',
-    subtitle:
-      'For startups and travel businesses launching a focused booking or itinerary platform.',
+    title: '1. Foundation App',
+    subtitle: (
+      <>
+        For startups and travel businesses launching a focused booking or itinerary platform through{' '}
+        <Link
+          to="/mvp-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          MVP development
+        </Link>
+        .
+      </>
+    ),
     cost: '$20,000 – $35,000',
     timeline: '6–8 weeks',
     includes: [
@@ -16,7 +27,7 @@ const tiers = [
     ],
   },
   {
-    title: 'Advanced Travel Platform',
+    title: '2. Advanced Travel Platform',
     subtitle:
       'For travel companies managing bookings, traveler engagement, and multi-service experiences.',
     cost: '$35,000 – $70,000',
@@ -30,7 +41,7 @@ const tiers = [
     ],
   },
   {
-    title: 'Enterprise App',
+    title: '3. Enterprise App',
     subtitle:
       'For travel enterprises building intelligent platforms with AI, automation, and large-scale integrations.',
     cost: '$80,000 – $160,000+',
@@ -56,7 +67,14 @@ export default function TravelCostSection() {
             <span className="text-[#00CE44]">Cost Estimates</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Every travel platform has different integration requirements, user workflows, and feature complexity. These ranges reflect typical project scope and are defined precisely in the discovery sprint.
+            Every travel platform has different integration requirements, user workflows, and feature complexity. These ranges reflect typical project scope and are defined precisely in the{' '}
+            <Link
+              to="/discovery-sprint"
+              className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+            >
+              discovery sprint
+            </Link>
+            .
           </p>
         </div>
 
@@ -99,14 +117,17 @@ export default function TravelCostSection() {
 
         {/* Centered CTA Footer */}
         <div className="text-center max-w-[780px] mx-auto">
+          <h3 className="text-[20px] sm:text-[24px] font-bold text-white mb-3">
+            Looking to Find Out What Your Travel Booking App Will Cost?
+          </h3>
           <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] mb-6 font-normal">
-            The right tier depends on your audience size, feature requirements, and integration complexity. The Discovery Sprint defines exactly where yours sits.
+            Get a project-specific quote for your flight, hotel, or tour booking platform. Our team will assess your required features and supplier integrations to estimate the development investment.
           </p>
           <a
             href="#contact"
             className="inline-flex items-center justify-center bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-[15px] md:text-[16px] px-8 py-4 rounded-none transition-colors duration-200"
           >
-            Get Your Travel App Started
+            Get a Custom Cost Estimate
           </a>
         </div>
       </div>

@@ -1,34 +1,61 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const technologies = [
   {
     title: 'Artificial Intelligence',
-    description:
-      'Delivery time prediction, personalised restaurant recommendations, and dynamic promotional offers built on machine learning models that improve with every order placed and completed on the platform.',
+    description: (
+      <>
+        Utilize{' '}
+        <Link
+          to="/ai-app-development-services"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          AI app development services
+        </Link>{' '}
+        for your food delivery operations with demand forecasting and intelligent dispatch models that respond to actual ordering patterns.
+      </>
+    ),
     icon: '/assets/healthcare/health-ai-icon.svg',
   },
   {
-    title: 'Blockchain',
+    title: 'Generative AI',
     description:
-      'Smart contracts, distributed ledger technology, and encrypted payment processing are built for food delivery platforms where transaction transparency and fraud prevention are operational requirements, not optional features.',
+      'Integrate AI-powered menu assistants and customer support tools using restaurant data, helping your platform handle product inquiries with greater accuracy.',
     icon: '/assets/mobile-app/blockchain.svg',
   },
   {
-    title: 'Internet of Things',
+    title: 'IoT Integration',
     description:
-      'GPS tracking, smart kitchen sensors, and temperature monitoring devices are connected for real-time delivery visibility and food quality assurance from preparation through doorstep delivery.',
+      'Cold-chain delivery businesses can monitor temperature-sensitive shipments through connected sensors, with alerts for conditions that require immediate attention.',
     icon: '/assets/mobile-app/Internet-Of-Things-1.svg',
   },
   {
-    title: 'Cloud Computing',
+    title: 'Intelligent Route Optimization',
     description:
-      'AWS, Azure, and Google Cloud with microservices architecture and auto-scaling infrastructure built to handle peak lunch and dinner order volumes without downtime or performance degradation.',
+      'Reduce unnecessary delivery mileage through routing systems that account for traffic conditions and changing delivery priorities across your network.',
     icon: '/assets/mobile-app/Cloud-Integration-1.svg',
+  },
+  {
+    title: 'Data Science',
+    description: (
+      <>
+        Use historical orders and{' '}
+        <Link
+          to="/machine-learning-development-services"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          machine learning development
+        </Link>{' '}
+        to forecast demand by location and time, giving restaurant operators stronger insight into expected activity.
+      </>
+    ),
+    icon: '/assets/healthcare/big-data.svg',
   },
   {
     title: 'Business Analytics',
     description:
-      'Real-time dashboards, KPI monitoring, and predictive delivery route optimisation are built for food delivery operators making data-driven decisions about fleet management, vendor performance, and customer retention.',
+      'Track order volumes, delivery performance, and restaurant revenue through custom dashboards that give operators clear visibility into business performance.',
     icon: '/assets/healthcare/big-data.svg',
   },
 ];
@@ -56,11 +83,11 @@ export default function FoodDeliveryEmergingTech() {
         {/* Heading */}
         <div className="text-center max-w-[980px] mx-auto mb-14">
           <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.18] text-white mb-4">
-            Advanced Technologies Used by Our{' '}
-            <span className="text-[#00CE44]">Food Delivery App Development Company</span>
+            Engineering Smarter Food Delivery App Development Solutions{' '}
+            <span className="text-[#00CE44]">With Emerging Technologies</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            As a top-tier food delivery app development company, we expertly integrate advanced technologies like AI, blockchain, and IoT to enable food delivery apps to track, automate, and scale.
+            As a top-tier food delivery app development company, we expertly integrate advanced technologies like AI, blockchain, and IoT to enable food delivery apps to scale.
           </p>
         </div>
 

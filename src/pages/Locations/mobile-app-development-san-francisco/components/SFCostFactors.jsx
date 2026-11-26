@@ -1,36 +1,85 @@
+import { Link } from 'react-router-dom'
+
 export default function SFCostFactors() {
   const factors = [
     {
-      title: 'Product Scope and Core Mobile Features',
-      desc: 'The difference between a focused MVP and an expansive product directly influences your budget. Simple user authentication, standard profiles, and structured listings require less development effort than multi-tenant permissions, real-time messaging, and workflow engines. San Francisco teams often begin with targeted functionality to test demand before expanding scope.',
+      title: 'MVP Scope and Funding Milestones',
+      renderDesc: () => (
+        <>
+          Seed-stage startups need a defined release scope that supports customer validation without exhausting their runway. Adding multi-role workflows, AI functionality, or enterprise features before a design-partner pilot increases engineering hours, QA requirements, and{' '}
+          <Link to="/blog/mvp-development-cost" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
+            MVP costs
+          </Link>
+          .
+        </>
+      ),
     },
     {
-      title: 'Platform Architecture: Native vs. Cross-Platform',
-      desc: 'Building separate native applications with Swift and Kotlin involves two distinct codebases, testing environments, and platform-specific deployments. Cross-platform frameworks like Flutter and React Native can reduce mobile app development costs by sharing business logic across iOS and Android.',
+      title: 'iOS, Android, and Cross-Platform Strategy',
+      renderDesc: () => (
+        <>
+          San Francisco consumer startups often evaluate iOS-first releases, while enterprise products may require both platforms. Android app development in San Francisco demands separate Kotlin engineering when native capabilities matter.{' '}
+          <Link to="/blog/flutter-vs-react-native-android-app-development" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
+            Flutter and React Native
+          </Link>{' '}
+          can reduce duplicated work when shared functionality suits the product.
+        </>
+      ),
     },
     {
-      title: 'UX/UI Design and Prototyping Complexity',
-      desc: 'Mobile applications designed for high user engagement require extensive UX research, wireframing, and interactive prototyping. Custom design systems, component libraries, and micro-interactions require dedicated design cycles before engineering begins, whereas standard interface patterns can be delivered more cost-effectively.',
+      title: 'Product Design and User Experience',
+      renderDesc: () => (
+        <>
+          A consumer subscription app requires different UX work than a complex SaaS dashboard. Custom onboarding, interactive prototypes, accessibility requirements, and platform-specific interfaces increase design effort. Products preparing for customer pilots also need usability validation before engineering commits to final workflows.
+        </>
+      ),
     },
     {
-      title: 'AI, LLMs, and Intelligent Capabilities',
-      desc: 'Adding AI features affects both development time and operational expense. Integrating model APIs requires authentication, prompt engineering, structured error handling, and API cost controls. Building custom machine learning models or on-device inference involves data preparation, model training, and performance tuning.',
+      title: 'AI Features and Model Operating Costs',
+      renderDesc: () => (
+        <>
+          AI-powered apps require more than an OpenAI, Gemini, or Claude integration. Retrieval systems, model evaluation, response latency, privacy safeguards, and{' '}
+          <Link to="/blog/ai-development-cost" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
+            inference costs
+          </Link>{' '}
+          affect the budget. Production AI features also require testing against actual user tasks and unexpected model responses.
+        </>
+      ),
     },
     {
-      title: 'Custom Backend and Enterprise API Integrations',
-      desc: 'Mobile apps require backend systems to manage accounts, data sync, and business logic. Integrating existing CRMs, ERPs, payment gateways, or proprietary databases introduces technical complexity. Documenting endpoints, mapping data models, and setting up staging environments all influence the timeline.',
+      title: 'Enterprise Software Integrations',
+      renderDesc: () => (
+        <>
+          Financial District enterprises and established SaaS operators often depend on existing CRM, ERP, identity, and billing systems. Integrating Salesforce, Microsoft Dynamics 365, or Stripe introduces authentication requirements, data mapping, vendor limitations, and additional testing.
+        </>
+      ),
     },
     {
-      title: 'Cloud Infrastructure, DevOps, and Scalability',
-      desc: 'A backend built for thousands of concurrent users requires cloud infrastructure designed for reliability. Containerization with Docker, orchestration with Kubernetes, CI/CD deployment pipelines, and multi-region failover contribute to initial setup investment while preventing downtime as user counts grow.',
+      title: 'Cloud Infrastructure and Scalability',
+      renderDesc: () => (
+        <>
+          AWS, Azure, and Google Cloud infrastructure costs depend on traffic, storage, database requirements, and workload patterns. Multi-tenant SaaS applications, real-time processing, and high-availability systems require more engineering than a focused MVP. Cloud consumption also affects the budget after launch.
+        </>
+      ),
     },
     {
-      title: 'Compliance, Data Privacy, and Security',
-      desc: 'Applications operating in California must meet state privacy standards under CCPA/CPRA, which require data access controls, opt-out mechanisms, and documented retention policies. Healthcare applications need HIPAA-compliant data handling, while FinTech products require SOC 2-aligned security controls.',
+      title: 'California Privacy and Industry Compliance',
+      renderDesc: () => (
+        <>
+          Applications handling California residents&apos; data must assess applicable CCPA/CPRA obligations. Healthcare and financial products introduce additional requirements, including HIPAA or PCI DSS where relevant. Security architecture, access controls, audit logs, privacy workflows, and independent assessments can increase project costs.
+        </>
+      ),
     },
     {
       title: 'Engineering Team Structure and Delivery Costs',
-      desc: 'Hiring senior mobile developers in San Francisco carries different cost considerations from engaging a distributed engineering team. Technical specialization, team composition, project management, and required collaboration hours influence pricing. Enterprise procurement and stakeholder reviews can also extend the delivery schedule.',
+      renderDesc: () => (
+        <>
+          <Link to="/blog/how-to-hire-a-mobile-app-development-company" className="underline text-[#00CE44] hover:opacity-80 transition-colors">
+            Hiring senior mobile developers
+          </Link>{' '}
+          in San Francisco carries different cost considerations from engaging a distributed engineering team. Technical specialization, team composition, project management, and required collaboration hours influence pricing. Enterprise procurement and stakeholder reviews can also extend the delivery schedule.
+        </>
+      ),
     },
   ]
 
@@ -60,7 +109,7 @@ export default function SFCostFactors() {
               </h3>
 
               <p className="text-white/70 text-xs sm:text-[14px] leading-relaxed font-normal">
-                {item.desc}
+                {item.renderDesc()}
               </p>
             </div>
           ))}

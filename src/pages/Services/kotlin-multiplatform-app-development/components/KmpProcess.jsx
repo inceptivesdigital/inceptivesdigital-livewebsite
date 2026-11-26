@@ -154,7 +154,7 @@ export default function KmpProcess() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight leading-[1.16] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-semibold text-white tracking-tight leading-[1.16] mb-4">
             Our{' '}
             <span className="text-[#00CE44]">Kotlin Multiplatform Development</span> Process
           </h2>

@@ -1,41 +1,100 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
-    title: 'Android Travel App Development',
-    description:
-      'High-performance Android travel applications built with Kotlin, Jetpack libraries, and secure APIs. Real-time flight data, hotel booking engines, GPS tracking, offline access, and AR navigation are integrated for a complete Android travel experience.',
+    title: '1. Custom Travel Mobile App Development',
+    description: (
+      <>
+        Our travel{' '}
+        <Link
+          to="/mobile-app-development"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          mobile app development services
+        </Link>{' '}
+        cover native iOS and Android applications alongside Flutter and React Native solutions. Get a mobile product engineered around your booking workflows and platform requirements.
+      </>
+    ),
     icon: '/assets/healthcare/sector1.svg',
   },
   {
-    title: 'iOS Travel App Development',
-    description:
-      'Performance-driven iOS travel applications built with Swift, SwiftUI, and Core Location. Dynamic itineraries, live fare updates, biometric login, push alerts, and personalised travel recommendations built to Apple design and security standards.',
+    title: '2. Flight Booking App Development',
+    description: (
+      <>
+        Bring flight search and reservations into your own booking platform. Our flight booking app developers handle{' '}
+        <Link
+          to="/system-integration-api-automation"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          system integration
+        </Link>{' '}
+        with supported airline inventory APIs to manage fare availability and booking workflows across your travel business.
+      </>
+    ),
     icon: '/assets/healthcare/sector2.svg',
   },
   {
-    title: 'Cross-Platform Travel App Development',
+    title: '3. Hotel Booking App Development',
     description:
-      'Single-codebase travel applications for Android and iOS built with Flutter and React Native. Cloud syncing, global maps, booking workflows, and native-quality performance across both platforms without two separate development budgets.',
+      "Direct hotel bookings require accurate room availability and dependable reservation management. We develop custom hotel booking apps with inventory synchronization suited to your property's existing systems and distribution requirements.",
     icon: '/assets/healthcare/sector3.svg',
   },
   {
-    title: 'AR Travel App Development',
+    title: '4. Online Travel Marketplace Development',
     description:
-      'Augmented reality travel experiences built with ARCore and ARKit. AR navigation, 3D landmark overlays, virtual hotel tours, and geolocation-based content that help travellers discover and navigate destinations on the ground.',
+      'Launch an online travel marketplace where multiple suppliers operate through one booking platform. Our engineers develop vendor management systems with configurable commission structures suited to your OTA business model.',
     icon: '/assets/healthcare/sector4.svg',
   },
   {
-    title: 'VR Travel App Development',
+    title: '5. Travel Itinerary Planning App Development',
     description:
-      'Virtual travel experiences built with Unity and Unreal Engine. 360-degree hotel tours, virtual destination previews, cultural immersions, and VR-assisted trip planning for users who need to see before they book.',
+      'Personalized trip planning gives travel businesses another way to serve their customers. Our itinerary app development expertise covers connected travel schedules and destination recommendations within a dedicated mobile experience.',
     icon: '/assets/healthcare/sector5.svg',
   },
   {
-    title: 'AI Travel App Development',
+    title: '6. Tour Booking App Development',
     description:
-      'Intelligent travel platforms built with ML, predictive models, NLP, and data analytics. AI-powered itineraries, dynamic pricing engines, conversational chatbots, forecasting tools, and recommendation systems that personalise every stage of the trip.',
+      'Tour operators can manage direct reservations through custom tour booking apps. Our developers connect activity availability with booking schedules, giving your business greater control over its online sales channel.',
     icon: '/assets/healthcare/sector6.svg',
+  },
+  {
+    title: '7. Travel Management App Development',
+    description: (
+      <>
+        Corporate travel management software needs to accommodate company booking policies, with{' '}
+        <Link
+          to="/business-process-automation"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          business process automation
+        </Link>{' '}
+        handling approval requirements. Our developers engineer centralized travel platforms that connect employee reservations with the oversight your organization requires.
+      </>
+    ),
+    icon: '/assets/healthcare/sector1.svg',
+  },
+  {
+    title: '8. AI-Powered Travel App Development',
+    description:
+      'Our AI travel app development expertise supports personalized itineraries and intelligent recommendations using relevant travel data. Integrate AI capabilities into your platform according to its booking model and customer requirements.',
+    icon: '/assets/healthcare/sector2.svg',
+  },
+  {
+    title: '9. Travel App Modernization Services',
+    description: (
+      <>
+        Outdated travel software can limit new integrations and slow platform improvements. Our engineers apply{' '}
+        <Link
+          to="/product-rescue-scaling"
+          className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+        >
+          product rescue and scaling
+        </Link>{' '}
+        to modernize existing travel apps through targeted architecture upgrades while maintaining continuity across established reservation workflows.
+      </>
+    ),
+    icon: '/assets/healthcare/sector3.svg',
   },
 ];
 
@@ -50,7 +109,7 @@ export default function TravelServicesGrid() {
             <span className="text-[#00CE44]">for Every Travel Use Case</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Custom travel applications designed for startups and established travel businesses across every platform and travel use case.
+            Inceptives Digital provides travel app development services for travel agencies, hospitality businesses, and travel technology companies. Our developers engineer custom booking platforms and mobile travel products around your business requirements.
           </p>
         </div>
 

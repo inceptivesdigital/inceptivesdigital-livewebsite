@@ -58,10 +58,10 @@ export default function DubaiSmartFeatures() {
       </div>
 
       <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Heading & Description matching Screenshot 9 */}
           <div className="lg:col-span-5 text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-white tracking-tight leading-[1.14] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white tracking-tight leading-[1.14] mb-6">
               Mobile Capabilities Built Around{' '}
               <span className="text-[#00CE44]">Real User Needs</span>
             </h2>

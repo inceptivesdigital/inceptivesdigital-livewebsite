@@ -11,7 +11,7 @@ const steps = [
     num: '02.',
     tabTitle: 'UI/UX Design',
     cardTitle: '2. UI/UX Design & Prototyping',
-    desc: 'With the scope agreed, our designers map user journeys and prepare wireframes. Interactive Figma prototypes then give you a working view of the interface before development begins.',
+    desc: 'With the scope agreed, our designers map user journeys and prepare wireframes. Interactive prototyping in Figma then gives you a working view of the interface before development begins.',
   },
   {
     num: '03.',
@@ -23,7 +23,7 @@ const steps = [
     num: '04.',
     tabTitle: 'QA & Testing',
     cardTitle: '4. Quality Assurance & Testing',
-    desc: 'As features take shape, QA engineers verify functionality against approved requirements. Before release, we test listing synchronization and critical user workflows across supported devices, then resolve identified issues.',
+    desc: 'As features take shape, QA engineers apply mobile app testing strategies to verify functionality against approved requirements. Before release, we test listing synchronization and critical user workflows across supported devices, then resolve identified issues.',
   },
   {
     num: '05.',
@@ -35,7 +35,7 @@ const steps = [
     num: '06.',
     tabTitle: 'Support',
     cardTitle: '6. Post-Launch Support & Optimization',
-    desc: 'Once your application goes live, we monitor performance and address technical issues within the agreed support scope. Future releases follow your product roadmap and operational priorities.',
+    desc: 'Once your application goes live, we monitor performance through post-launch analytics iteration and address technical issues within the agreed support scope. Future releases follow your product roadmap and operational priorities.',
   },
 ]
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TravelIntroCta() {
   return (
@@ -8,10 +9,17 @@ export default function TravelIntroCta() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <h2 className="text-[28px] sm:text-[36px] md:text-[44px] font-bold leading-[1.16] text-white mb-5">
               Build a Travel Platform{' '}
-              <span className="text-[#00CE44]">Designed Around Your Business</span>
+              <span className="text-[#00CE44]">Grounded in Real Product Engineering</span>
             </h2>
             <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] mb-8 max-w-[680px] font-normal">
-              As a leading travel app development company, we help you create apps that travelers actually use and love. From smooth booking to smart trip planning, we bring your ideas to life and make your app stand out.
+              Inceptives Digital brings 8+ years of{' '}
+              <Link
+                to="/digital-product-development"
+                className="underline underline-offset-4 text-inherit hover:opacity-80 transition-opacity"
+              >
+                digital product development
+              </Link>{' '}
+              experience to travel app development. Our engineers develop custom booking platforms around your business requirements, with the technical depth to support complex reservation workflows. Bring your next travel platform to a team that understands the engineering behind it.
             </p>
             <a
               href="#contact"

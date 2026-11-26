@@ -2,23 +2,23 @@ import React from 'react';
 
 const stats = [
   {
-    value: '70+',
-    label: 'Projects Completed',
+    value: '8+',
+    label: 'Years of Experience',
     icon: '/assets/mobile-app/apps-launch.svg',
   },
   {
-    value: '150+',
-    label: 'Active Developers',
+    value: '70+',
+    label: 'Apps Delivered',
     icon: '/assets/mobile-app/active-developer.svg',
   },
   {
-    value: '100%',
-    label: 'Client Success Rate',
+    value: '3M+',
+    label: 'App Downloads',
     icon: '/assets/healthcare/developer-resize.png',
   },
   {
-    value: 'GDPR/PCI-DSS',
-    label: 'Compliant',
+    value: '98%',
+    label: 'Success Rate',
     icon: '/assets/healthcare/hippa-icon.webp',
   },
 ];

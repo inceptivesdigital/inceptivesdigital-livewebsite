@@ -2,34 +2,40 @@ import React from 'react';
 
 const pillars = [
   {
-    title: 'Reusable Component Architecture',
+    title: 'Real-Time Order Processing',
     description:
-      'Pre-built, battle-tested modules for common food delivery functionality — order management, payment processing, driver tracking — reduce development time without reducing code quality or future flexibility.',
+      'Keep order statuses synchronized across customer apps and restaurant dashboards, even during high-volume ordering periods.',
     icon: '/assets/mobile-app/Cloud-Integration-1.svg',
   },
   {
-    title: 'Skilled In-House Engineering Team',
+    title: 'Automated Delivery Dispatch',
     description:
-      'Every stage of development handled internally. No external vendor dependencies, no handoff delays, and no gaps in accountability between design, development, and deployment.',
+      'Custom dispatch logic assigns delivery requests based on driver availability, service zones, and order requirements.',
     icon: '/assets/healthcare/mHealth-App-Development.svg',
   },
   {
-    title: 'Scalable System Design',
+    title: 'Restaurant POS Integration',
     description:
-      'Architecture built to handle business growth, peak order volumes, and new feature additions without requiring costly system redesigns at every growth stage.',
+      'Connect compatible POS systems with food ordering apps to synchronize incoming orders with restaurant operations.',
     icon: '/assets/healthcare/big-data.svg',
   },
   {
-    title: 'Cross-Platform Development',
+    title: 'Multi-Vendor Marketplace Architecture',
     description:
-      'Single-codebase applications built with Flutter or React Native deliver consistent performance across iOS and Android without the cost and timeline of two separate native builds.',
+      'Manage independent restaurant accounts through centralized vendor permissions and commission controls within one marketplace.',
     icon: '/assets/mobile-app/Real-Time-sync.svg',
   },
   {
-    title: 'Transparent Development Process',
+    title: 'Peak-Hour Performance Optimization',
     description:
-      'Clear milestone-based delivery with defined scope, documented decisions, and regular progress updates throughout the engagement. No hidden complexity. No surprise costs at deployment.',
+      'Load testing identifies system limits under expected traffic, helping maintain reliable checkout and order processing during peak hours.',
     icon: '/assets/healthcare/Telemedicine-App-Development.svg',
+  },
+  {
+    title: 'Delivery Performance Analytics',
+    description:
+      'Track fulfillment times and delivery performance through dashboards that give operators clear visibility into daily operations.',
+    icon: '/assets/healthcare/big-data.svg',
   },
 ];
 
@@ -44,7 +50,7 @@ export default function FoodDeliveryEfficiency() {
             <span className="text-[#00CE44]">Efficiency Without Cutting Corners</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            The technical and process decisions that allow us to build food delivery platforms faster, maintain them more easily, and scale them without disrupting what is already working.
+            Food delivery businesses depend on systems that keep orders moving during busy service periods. Our engineering capabilities address the operational demands of restaurant ordering platforms and multi-vendor delivery networks.
           </p>
         </div>
 

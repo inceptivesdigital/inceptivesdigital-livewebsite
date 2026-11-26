@@ -5,8 +5,8 @@ export default function TravelClientLogos() {
     <ClientGridSection
       heading={
         <>
-          Travel App Development Company{' '}
-          <span className="text-[#00CE44]">Driving Engagement Globally</span>
+          Businesses Who&apos;ve Trusted Our{' '}
+          <span className="text-[#00CE44]">Digital Engineering Capabilities</span>
         </>
       }
     />

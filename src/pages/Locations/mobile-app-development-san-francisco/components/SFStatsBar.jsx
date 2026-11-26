@@ -2,13 +2,8 @@ export default function SFStatsBar() {
   const stats = [
     {
       value: '70+',
-      label: 'Apps Launched',
+      label: 'Digital Products Delivered',
       icon: '/assets/mobile-app/app-downloads.svg',
-    },
-    {
-      value: '150+',
-      label: 'Active Developers',
-      icon: '/assets/mobile-app/active-developer.svg',
     },
     {
       value: '3M+',
@@ -16,8 +11,13 @@ export default function SFStatsBar() {
       icon: '/assets/mobile-app/apps-launch.svg',
     },
     {
-      value: '5.0',
-      label: 'Rating On Clutch',
+      value: '8+',
+      label: 'Years of Product Engineering',
+      icon: '/assets/mobile-app/active-developer.svg',
+    },
+    {
+      value: '20+ Industries',
+      label: 'Trusted Across',
       icon: '/assets/mobile-app/rating.svg',
     },
   ]

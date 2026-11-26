@@ -75,7 +75,7 @@ export default function RealEstateTechStack() {
           <span className="text-[#00CE44]">Real Estate Applications</span>
         </>
       }
-      subtitle="As a real estate app development company, Inceptives Digital stays current with modern engineering frameworks and evolving platform standards. Our developers combine deep technical expertise with proven technologies to deliver custom PropTech applications built for production demands."
+      subtitle="As a real estate app development company, Inceptives Digital stays current with modern engineering frameworks and evolving platform standards. Our developers combine deep technical expertise with a proven mobile app tech stack to deliver custom PropTech applications built for production demands."
       categories={categories}
     />
   )

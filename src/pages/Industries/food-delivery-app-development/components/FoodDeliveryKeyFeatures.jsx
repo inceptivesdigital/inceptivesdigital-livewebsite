@@ -6,116 +6,162 @@ const tabs = [
     label: 'Customer App Features',
     items: [
       {
-        title: 'Easy Food Ordering',
+        title: 'Food Ordering and Checkout',
         description:
-          'Users can browse menus to create their meals before they complete their orders with two quick taps.',
+          'Users can browse menus to customize their meals before completing orders in just a few taps.',
       },
       {
         title: 'Real-Time Order Tracking',
         description:
-          'Users can track their food delivery from the kitchen to their home.',
+          'Users can track their food delivery from kitchen preparation to doorstep arrival.',
       },
       {
         title: 'Secure Online Payments',
         description:
-          'Users can make secure payments through various payment methods, which provide immediate payment verification.',
+          'Users can make secure payments through supported payment methods with immediate payment verification.',
       },
       {
-        title: 'Ratings & Reviews',
+        title: 'Ratings and Reviews',
         description:
-          'Customers can evaluate food, delivery, and service quality to provide their feedback.',
+          'Customers can evaluate food, delivery, and service quality to provide verified feedback.',
       },
       {
         title: 'Push Notifications',
         description:
-          'Users receive immediate notifications about order progress, special offers, and delivery information.',
+          'Users receive timely alerts about order progress, special offers, and delivery updates.',
       },
       {
-        title: 'Favourites & Reorders',
+        title: 'Favorites and Quick Reorders',
         description:
-          'Users can store their preferred meals, which they can reorder with a single tap.',
+          'Users can save preferred meals and restaurants to reorder with a single tap.',
       },
       {
-        title: 'Offers & Discounts',
+        title: 'Offers and Discounts',
         description:
-          'Users can obtain special deals through coupons and seasonal offers.',
+          'Users can redeem promo codes, coupons, and seasonal restaurant offers at checkout.',
       },
     ],
   },
   {
     id: 'driver',
-    label: 'Driver App Features',
+    label: 'Driver App',
     items: [
       {
-        title: 'Driver Assignment',
+        title: 'Delivery Request Management',
         description:
-          'Automatically receives incoming orders while generating optimal route recommendations for the assigned drivers.',
+          'Receive incoming delivery requests and manage active assignments efficiently.',
       },
       {
-        title: 'Navigation & Route Optimization',
+        title: 'Pickup and Drop-Off Details',
         description:
-          'GPS provides turn-by-turn navigation directions, which help drivers reach their destinations more efficiently.',
+          'Access restaurant pickup instructions and customer drop-off details in one view.',
       },
       {
-        title: 'Real-Time Delivery Updates',
+        title: 'GPS Navigation',
         description:
-          'Provides instant delivery progress updates to customers through real-time delivery progress notifications.',
+          'Turn-by-turn GPS navigation directions help drivers reach destinations quickly.',
       },
       {
-        title: 'Earnings & Reports',
+        title: 'Live Delivery Status Updates',
         description:
-          'Enables users to monitor their daily delivery achievements and corresponding earnings, together with their performance metrics.',
+          'Provide instant delivery progress updates to customers and restaurant operators.',
       },
       {
-        title: 'Order History',
+        title: 'Driver Earnings Reports',
         description:
-          'Order history to view their previous deliveries, which serves both as a reference point and a means of establishing accountability.',
+          'Monitor daily delivery achievements, completed payouts, and performance metrics.',
       },
       {
-        title: 'Delivery Alerts & Notifications',
+        title: 'Delivery Order History',
         description:
-          'Provides users with delivery alerts that inform them about new orders and delivery delays, together with order cancellations.',
+          'Review completed deliveries for reference, payout reconciliation, and accountability.',
+      },
+      {
+        title: 'Delivery Alerts and Notifications',
+        description:
+          'Receive instant alerts for new delivery requests, route changes, and order updates.',
       },
     ],
   },
   {
     id: 'restaurant',
-    label: 'Restaurant Panel Features',
+    label: 'Restaurant Panel',
     items: [
       {
-        title: 'Order Management',
+        title: 'Order Acceptance and Management',
         description:
-          'Enables the restaurant to approve or deny orders while monitoring all orders through its kitchen operations.',
+          'Approve or manage incoming orders while monitoring active kitchen preparation.',
       },
       {
-        title: 'Menu Management',
+        title: 'Digital Menu Management',
         description:
-          'Provides the restaurant with the ability to update menu items through their editing and removal functions, while they also maintain control over pricing and item availability.',
+          'Update menu items, pricing, modifiers, and item availability in real time.',
       },
       {
-        title: 'Real-Time Notifications',
+        title: 'Order Status Notifications',
         description:
-          'Provides instant notifications to both drivers and customers when their orders reach completion.',
+          'Send instant notifications to drivers and customers as orders move through preparation.',
       },
       {
         title: 'Inventory Tracking',
         description:
-          'Enables restaurants to track their stock levels while they handle their ingredient management tasks.',
+          'Track stock levels and ingredient availability to prevent unfulfillable orders.',
       },
       {
-        title: 'Analytics & Reports',
+        title: 'Sales Analytics and Reports',
         description:
-          'Enables businesses to monitor their sales performance and track popular products while assessing their operational efficiency.',
+          'Monitor sales performance, popular menu items, and operational efficiency.',
       },
       {
         title: 'Customer Feedback Management',
         description:
-          'Enables users to track customer ratings and reviews while they handle feedback responses.',
+          'Track customer ratings and reviews while managing direct feedback responses.',
       },
       {
-        title: 'Offers & Promotions',
+        title: 'Restaurant Promotions',
         description:
-          'Enables businesses to create various discounts, seasonal promotions, and customer loyalty programs, which help increase their sales revenue.',
+          'Create targeted discounts, seasonal promotions, and loyalty offers to drive repeat orders.',
+      },
+    ],
+  },
+  {
+    id: 'admin',
+    label: 'Admin Dashboard',
+    items: [
+      {
+        title: 'Restaurant and Vendor Approvals',
+        description:
+          'Review new restaurant applications, verify onboarding details, and manage active vendor accounts.',
+      },
+      {
+        title: 'Customer and Driver Management',
+        description:
+          'Manage customer accounts, driver profiles, verification records, and access permissions.',
+      },
+      {
+        title: 'Commission Management',
+        description:
+          'Configure restaurant commission rates and marketplace fee structures across partners.',
+      },
+      {
+        title: 'Delivery Zone Configuration',
+        description:
+          'Define active service areas, delivery radii, and zone-based delivery fee rules.',
+      },
+      {
+        title: 'Order and Dispute Oversight',
+        description:
+          'Monitor live platform orders and resolve customer or vendor disputes from one dashboard.',
+      },
+      {
+        title: 'Payment Settlement Monitoring',
+        description:
+          'Track marketplace transactions, vendor payouts, and driver settlements accurately.',
+      },
+      {
+        title: 'Platform Analytics and Reporting',
+        description:
+          'Review overall order volume, revenue performance, and marketplace KPIs in real time.',
       },
     ],
   },
@@ -143,7 +189,7 @@ export default function FoodDeliveryKeyFeatures() {
             <span className="text-[#00CE44]">Food Delivery App Development Services</span>
           </h2>
           <p className="text-white/85 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
-            Every feature below exists because food delivery users, drivers, and restaurant partners each have different operational needs that a single generic interface cannot serve.
+            Our food delivery app developers build connected interfaces for customers, delivery partners, and restaurant operators. Each platform includes functionality suited to your ordering model and delivery operations.
           </p>
         </div>
 
