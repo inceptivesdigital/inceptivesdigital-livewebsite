@@ -158,26 +158,37 @@ p Link {
    Mega Menu Custom Scrollbar
    ========================================================================== */
 
-.megamenu-scroll {
+.megamenu-scroll,
+html,
+body {
   scrollbar-width: thin;
   scrollbar-color: #00CE44 #1b1b1b;
 }
 
-.megamenu-scroll::-webkit-scrollbar {
+.megamenu-scroll::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 
-.megamenu-scroll::-webkit-scrollbar-track {
+.megamenu-scroll::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
   background: #1b1b1b;
   border-radius: 8px;
 }
 
-.megamenu-scroll::-webkit-scrollbar-thumb {
+.megamenu-scroll::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
   background: #00CE44;
   border-radius: 8px;
 }
 
-.megamenu-scroll::-webkit-scrollbar-thumb:hover {
+.megamenu-scroll::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
   background: #00e04b;
 }
 

@@ -8,32 +8,32 @@ export default function AiCoreServices() {
     {
       title: 'AI App Development',
       desc: 'Web and mobile applications with AI built into the core for performance, scalability, and real-user load.',
-      link: '/ai-development/app/',
+      link: '/ai-app-development-services',
     },
     {
       title: 'AI Chatbot Development',
       desc: 'Conversational interfaces designed for your users, resolving, converting, and escalating with precision.',
-      link: '/ai-development/chatbot/',
+      link: '/ai-chatbot-development-services',
     },
     {
       title: 'AI Agent Development',
       desc: 'Autonomous agents embedded in workflows to execute multi-step tasks and interact with multiple systems.',
-      link: '/ai-development/agents/',
+      link: '/ai-agent-development',
     },
     {
       title: 'Generative AI Content',
       desc: 'Custom LLM and generative AI solutions for content creation, summarization, and knowledge generation.',
-      link: '/ai-development/generative-ai/',
+      link: '/generative-ai-development-company',
     },
     {
       title: 'Machine Learning',
       desc: 'Predictive, classification, recommendation, and anomaly detection models trained for operational use.',
-      link: '/ai-development/machine-learning/',
+      link: '/machine-learning-development-services',
     },
     {
       title: 'NLP Development',
       desc: 'Natural language processing for semantic search, entity extraction, sentiment analysis, and document understanding.',
-      link: '/ai-development/nlp/',
+      link: '/nlp-development-services',
     },
     {
       title: 'Computer Vision',
@@ -43,7 +43,7 @@ export default function AiCoreServices() {
     {
       title: 'AI MVP Development',
       desc: 'A focused build that validates the AI concept before full investment. Scope defined, risks identified, proof delivered in 8 to 12 weeks.',
-      link: '/ai-development/ai-mvp/',
+      link: '/ai-mvp-development',
     },
   ]
 
@@ -51,22 +51,22 @@ export default function AiCoreServices() {
     {
       title: 'AI Automation',
       desc: 'Workflow automation where AI makes decisions and humans handle exceptions in high-volume processes.',
-      link: '/ai-development/automation/',
+      link: '/ai-automation-services',
     },
     {
       title: 'System Integration & API Automation Services',
       desc: 'Connect applications, data sources, and third-party platforms through reliable API integrations that automate information flow and keep business systems working together.',
-      link: '/ai-development/api-automation/',
+      link: '/system-integration-api-automation',
     },
     {
       title: 'Business Process Automation Services',
       desc: 'Replace repetitive manual processes with intelligent automation that improves efficiency, reduces operational bottlenecks, and helps teams focus on higher-value work.',
-      link: '/ai-development/bpa/',
+      link: '/business-process-automation',
     },
     {
       title: 'RPA Development Services',
       desc: 'Develop robotic process automation solutions that handle repetitive, rule-based tasks across business systems with greater speed, accuracy, and consistency.',
-      link: '/ai-development/rpa/',
+      link: '/rpa-development-services',
     },
   ]
 

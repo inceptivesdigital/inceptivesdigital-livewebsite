@@ -4,7 +4,6 @@ import AiDifference from './components/AiDifference'
 import AiCoreServices from './components/AiCoreServices'
 import AiMidCta from './components/AiMidCta'
 import AiStages from './components/AiStages'
-import AiTools from './components/AiTools'
 import AiCaseStudies from './components/AiCaseStudies'
 import AiTestimonials from './components/AiTestimonials'
 import AiIndustries from './components/AiIndustries'
@@ -68,9 +67,6 @@ export default function AiDevelopmentPage() {
 
       {/* 06. By Business Size: Startups vs SMBs */}
       <AiStages />
-
-      {/* 07. Free AI Tools */}
-      <AiTools />
 
       {/* 08. Featured AI Case Studies */}
       <AiCaseStudies />

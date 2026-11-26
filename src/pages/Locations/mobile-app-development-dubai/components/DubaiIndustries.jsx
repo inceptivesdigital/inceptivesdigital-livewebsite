@@ -15,7 +15,7 @@ export default function DubaiIndustries() {
     {
       title: 'Logistics and Supply Chain',
       icon: '/assets/industries-icons/Food-Delivery.svg',
-      link: '/logistics-app-development',
+      link: '/custom-software-development',
     },
     {
       title: 'eCommerce and Retail',
@@ -40,7 +40,7 @@ export default function DubaiIndustries() {
     {
       title: 'Government and Smart City Services',
       icon: '/assets/industries-icons/industries-startup.svg',
-      link: '/enterprise-software-development',
+      link: '/custom-software-development',
     },
     {
       title: 'Fitness and Wellness',

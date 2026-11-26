@@ -40,7 +40,7 @@ export default function AiMidCta() {
               Our custom AI development services begin with a defined Discovery Sprint. Senior engineers shape the architecture around your critical workflows and existing data systems, so the first release validates value and future releases scale effortlessly.
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <button
                 type="button"
                 onClick={scrollToContact}
@@ -49,9 +49,6 @@ export default function AiMidCta() {
                 Book an AI Consultation
               </button>
             </div>
-            <p className="text-white/60 text-xs sm:text-sm font-normal">
-              30-min. Real answers. No sales process attached.
-            </p>
           </div>
 
           {/* Right Phones Image Column Aligned Flush to Section Bottom */}

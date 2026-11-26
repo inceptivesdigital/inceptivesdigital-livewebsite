@@ -70,19 +70,19 @@ export default function FlutterServicesGrid() {
         </div>
 
         {/* Bottom CTA Bar */}
-        <div className="p-7 sm:p-9 rounded-[16px] bg-[#292929] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-0 shadow-none">
-          <div className="text-left max-w-2xl">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+        <div className="w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 border-0 shadow-none">
+          <div className="text-left max-w-3xl">
+            <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
               Bring Your Next Product to Top Flutter Mobile App Developers
             </h3>
-            <p className="text-white/85 text-sm sm:text-[15px] leading-relaxed">
+            <p className="text-black/90 text-sm sm:text-base font-normal leading-relaxed">
               Ready to move forward with your Flutter application? Connect with our engineers to discuss your development requirements and take the next step toward production.
             </p>
           </div>
-          <div className="shrink-0">
+          <div className="shrink-0 self-start lg:self-auto">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-medium text-sm sm:text-base transition-colors border-0"
+              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-none bg-black hover:bg-[#181818] text-white font-semibold text-xs sm:text-sm tracking-tight whitespace-nowrap transition-all duration-150 border-0"
             >
               Consult Our Flutter Developers
             </a>

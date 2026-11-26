@@ -83,18 +83,18 @@ export default function AsoWhyChooseUs() {
         </div>
 
         {/* Mid Banner CTA */}
-        <div className="p-8 sm:p-10 rounded-[20px] bg-[#222222] border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+        <div className="w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 text-left">
+          <div className="max-w-3xl">
+            <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
               Your App&apos;s Store Performance Has Room to Move
             </h3>
-            <p className="text-white/80 text-sm sm:text-base font-normal max-w-2xl">
+            <p className="text-black/90 text-sm sm:text-base font-normal leading-relaxed">
               Schedule a session with the team. An honest look at where your app page stands and what it would take to move the numbers.
             </p>
           </div>
           <a
             href="#contact"
-            className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
+            className="shrink-0 inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-none bg-black hover:bg-[#181818] text-white font-semibold text-xs sm:text-sm tracking-tight whitespace-nowrap transition-all duration-150 border-0 self-start lg:self-auto"
           >
             Talk to an ASO Specialist
           </a>

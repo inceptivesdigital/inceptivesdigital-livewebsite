@@ -55,6 +55,7 @@ const newCaptcha = () => ({ a: 1 + Math.floor(Math.random() * 9), b: 1 + Math.fl
 function isContactTrigger(el) {
   if (!el) return false
   if (el.closest('#id-contact-popup, #schedulePopup')) return false
+  if (el.closest('[data-no-contact-popup]')) return false
   if (el.closest('form')) return false
 
   const label = (el.textContent || '').replace(/\s+/g, ' ').trim()

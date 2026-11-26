@@ -63,13 +63,13 @@ export default function WebAppCostAndCTA() {
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#141414] border border-white/10 p-6 sm:p-8 rounded-[16px]">
-            <p className="text-white text-base font-medium">
+          <div className="w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 text-left">
+            <p className="text-black text-base sm:text-lg font-bold leading-snug max-w-3xl">
               Share what you are building, and we will give you a clear, accurate estimate.
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors shrink-0"
+              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-none bg-black hover:bg-[#181818] text-white font-semibold text-xs sm:text-sm tracking-tight whitespace-nowrap transition-all duration-150 shrink-0 border-0 self-start lg:self-auto"
             >
               Get a Scoped Estimate
             </a>

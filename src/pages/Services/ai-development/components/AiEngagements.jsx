@@ -1,5 +1,3 @@
-import { ArrowRight } from 'lucide-react'
-
 export default function AiEngagements() {
   const scrollToContact = () => {
     const el =
@@ -73,18 +71,22 @@ export default function AiEngagements() {
           ))}
         </div>
 
-        {/* CTA Bar */}
-        <div className="mt-14 text-center max-w-3xl mx-auto p-6 sm:p-8 rounded-2xl bg-[#121814] border border-[#00CE44]/20 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="text-white/85 text-sm sm:text-base text-left font-normal">
-            Not sure which model fits? That is what the first conversation is for.
-          </p>
+        {/* CTA Bar matching Green Industry CTA */}
+        <div className="mt-12 sm:mt-16 w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8">
+          <div className="text-left max-w-3xl">
+            <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
+              Not sure which model fits?
+            </h3>
+            <p className="text-black/90 text-sm sm:text-base font-normal leading-relaxed">
+              That is what the first conversation is for.
+            </p>
+          </div>
           <button
             type="button"
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center px-6 py-3 rounded-none bg-[#00CE44] hover:bg-[#00ba3e] text-black font-semibold text-sm tracking-tight whitespace-nowrap cursor-pointer transition-colors shadow-md border-0 shrink-0"
+            className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-none bg-black hover:bg-[#181818] text-white font-semibold text-xs sm:text-sm tracking-tight whitespace-nowrap cursor-pointer transition-all duration-150 active:scale-95 border-0 shrink-0 self-start lg:self-auto"
           >
-            <span>Book an AI Consultation</span>
-            <ArrowRight className="w-4 h-4 ml-2" />
+            Book an AI Consultation
           </button>
         </div>
       </div>

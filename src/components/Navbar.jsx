@@ -301,6 +301,7 @@ export default function Navbar() {
                 <li><Link to="/product-rescue-scaling" className="hover:text-white transition">Product Rescue &amp; Scaling</Link></li>
                 <li><Link to="/product-strategy-consulting" className="hover:text-white transition">Product Strategy &amp; Consulting</Link></li>
                 <li><Link to="/custom-software-development" className="hover:text-white transition">Custom Software Development</Link></li>
+                <li><Link to="/staff-augmentation" className="hover:text-white transition">Staff Augmentation</Link></li>
               </ul>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
@@ -712,6 +713,7 @@ export default function Navbar() {
                           { name: 'Product Rescue & Scaling', to: '/product-rescue-scaling' },
                           { name: 'Product Strategy & Consulting', to: '/product-strategy-consulting' },
                           { name: 'Custom Software Development', to: '/custom-software-development' },
+                          { name: 'Staff Augmentation', to: '/staff-augmentation' },
                         ].map((item) => (
                           <Link
                             key={item.name}

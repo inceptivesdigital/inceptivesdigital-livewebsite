@@ -15,7 +15,7 @@ export default function SingaporeIndustries() {
     {
       title: 'Logistics & Supply Chain',
       icon: '/assets/industries-icons/Food-Delivery.svg',
-      link: '/logistics-app-development',
+      link: '/custom-software-development',
     },
     {
       title: 'eCommerce & Retail',
@@ -40,7 +40,7 @@ export default function SingaporeIndustries() {
     {
       title: 'Manufacturing',
       icon: '/assets/industries-icons/industries-startup.svg',
-      link: '/enterprise-software-development',
+      link: '/custom-software-development',
     },
     {
       title: 'Fitness',

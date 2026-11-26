@@ -49,8 +49,9 @@ header button[class*="bg-[#00CE44]"] {
   }
 }
 
-html body main > section:first-of-type:not(.idap-wrap):not(.category-archive-section),
-html body main > div > section:first-of-type:not(.idap-wrap):not(.category-archive-section) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section),
+html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section) {
   box-sizing: border-box !important;
   min-height: 100vh !important;
   min-height: 100svh !important;
@@ -59,9 +60,21 @@ html body main > div > section:first-of-type:not(.idap-wrap):not(.category-archi
   padding-top: var(--hero-header-clearance) !important;
 }
 
+/* Exact 100vh hero sections on Laptop & Desktop (1024px+) */
+@media (min-width: 1024px) {
+  html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.id-blog-hero):not(.id-pr-hero),
+  html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.id-blog-hero):not(.id-pr-hero),
+  html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.id-blog-hero):not(.id-pr-hero) {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+  }
+}
+
 /* Vertically center non-flex hero sections cleanly inside the 100vh frame */
-html body main > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
-html body main > div > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,8 +82,8 @@ html body main > div > section:first-of-type:not(.idap-wrap):not(.category-archi
 
 /* Keep bottom-flush desktop heroes (pb-0 with bottom-anchored mockups) flush at bottom on lg+ */
 @media (min-width: 1024px) {
-  html body main > section:first-of-type[class*="pb-0"]:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
-  html body main > div > section:first-of-type[class*="pb-0"]:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
+  html body main > section:first-child[class*="pb-0"]:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
+  html body main > div:first-child > section:first-of-type[class*="pb-0"]:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
     justify-content: flex-end;
   }
 }
@@ -251,19 +264,27 @@ html body main section div[class*="grid"] > * {
    5. Responsive Typography & CTA Scale (Pure px, Desktop H1 max 40px)
    ========================================================================== */
 
-/* Desktop XL: 1440px, 1520px, 1600px+ */
+/* Desktop 1920px+ (1800px and above): H2 = 45px */
+@media (min-width: 1800px) {
+  html body main h2 {
+    font-size: 45px !important;
+    line-height: 1.18 !important;
+  }
+}
+
+/* Desktop 1600px (1440px - 1799px): H2 = 35px */
+@media (min-width: 1440px) and (max-width: 1799px) {
+  html body main h2 {
+    font-size: 35px !important;
+    line-height: 1.22 !important;
+  }
+}
+
+/* Desktop XL shared (1440px+) */
 @media (min-width: 1440px) {
   html body main h1 {
     font-size: 44px !important;
     line-height: 1.14 !important;
-  }
-  html body main section:first-of-type h2 {
-    font-size: 19px !important;
-    line-height: 1.38 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
-    font-size: 32px !important;
-    line-height: 1.22 !important;
   }
   html body main section h3 {
     font-size: 19px !important;
@@ -289,12 +310,8 @@ html body main section div[class*="grid"] > * {
     font-size: 40px !important;
     line-height: 1.15 !important;
   }
-  html body main section:first-of-type h2 {
-    font-size: 18px !important;
-    line-height: 1.38 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
-    font-size: 30px !important;
+  html body main h2 {
+    font-size: 32px !important;
     line-height: 1.24 !important;
   }
   html body main section h3 {
@@ -321,11 +338,7 @@ html body main section div[class*="grid"] > * {
     font-size: 36px !important;
     line-height: 1.18 !important;
   }
-  html body main section:first-of-type h2 {
-    font-size: 17px !important;
-    line-height: 1.38 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
+  html body main h2 {
     font-size: 28px !important;
     line-height: 1.24 !important;
   }
@@ -353,12 +366,8 @@ html body main section div[class*="grid"] > * {
     font-size: 26px !important;
     line-height: 1.22 !important;
   }
-  html body main section:first-of-type h2 {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
-    font-size: 22px !important;
+  html body main h2 {
+    font-size: 24px !important;
     line-height: 1.25 !important;
   }
   html body main section h3 {
@@ -385,12 +394,8 @@ html body main section div[class*="grid"] > * {
     font-size: 24px !important;
     line-height: 1.22 !important;
   }
-  html body main section:first-of-type h2 {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
-    font-size: 20px !important;
+  html body main h2 {
+    font-size: 22px !important;
     line-height: 1.26 !important;
   }
   html body main section h3 {
@@ -417,12 +422,8 @@ html body main section div[class*="grid"] > * {
     font-size: 22px !important;
     line-height: 1.24 !important;
   }
-  html body main section:first-of-type h2 {
-    font-size: 14.5px !important;
-    line-height: 1.4 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
-    font-size: 19px !important;
+  html body main h2 {
+    font-size: 20px !important;
     line-height: 1.28 !important;
   }
   html body main section h3 {
@@ -449,11 +450,7 @@ html body main section div[class*="grid"] > * {
     font-size: 20px !important;
     line-height: 1.25 !important;
   }
-  html body main section:first-of-type h2 {
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-  }
-  html body main section:not(:first-of-type) h2 {
+  html body main h2 {
     font-size: 18px !important;
     line-height: 1.28 !important;
   }
@@ -642,10 +639,11 @@ html body main button[type="submit"]:not([class*="rounded-full"]) {
 }
 
 /* ==========================================================================
-   10. Process & Compliance Pill Tabs: Zero Overflow or Collision on Any Device
-   - Mobile (< 768px): smooth single-row horizontal swipe with full-width pills.
-   - Tablet/Laptop/Desktop (>= 768px): natural-width centered flex-wrap pills
-     so labels never bleed out of pills, collide, or truncate awkwardly.
+   10. Process & Compliance Pill Tabs: Full-Width on Desktop, Swipe on Mobile
+   - Mobile (< 768px): smooth single-row horizontal swipe with natural-width pills.
+   - Tablet (768px - 1023px): wrapping flex pills with equal growth.
+   - Laptop/Desktop (>= 1024px): full-width row matching the content card width
+     below, with each pill tab expanding equally (flex: 1 1 0%).
    ========================================================================== */
 html body main section div[class*="no-scrollbar"]:has(> button[class*="rounded-full"]) {
   display: flex !important;
@@ -653,6 +651,7 @@ html body main section div[class*="no-scrollbar"]:has(> button[class*="rounded-f
   align-items: center !important;
   overflow-x: auto !important;
   gap: 0.625rem !important;
+  width: 100% !important;
 }
 
 html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] {
@@ -672,9 +671,10 @@ html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"
   }
 
   html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] {
-    flex: 0 1 auto !important;
+    flex: 1 1 auto !important;
     width: auto !important;
     max-width: 100% !important;
+    justify-content: flex-start !important;
   }
 
   html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] > span:last-child {
@@ -682,6 +682,22 @@ html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  html body main section div[class*="no-scrollbar"]:has(> button[class*="rounded-full"]) {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
+
+  html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] {
+    flex: 1 1 0% !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    justify-content: flex-start !important;
   }
 }
 
@@ -730,4 +746,14 @@ html body footer div[class*="rounded"][class*="bg-[#18191d" i] {
 /* 11e. Preserve brand-green hover state on interactive dark cards */
 html body main section :is(div, article, a, li)[class*="hover:bg-[#00CE44]" i]:hover {
   background-color: #00CE44 !important;
+}
+
+/* ==========================================================================
+   12. Remove Top & Bottom Borders from All Page Sections Site-Wide
+   ========================================================================== */
+html body main section {
+  border-top-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-top-style: none !important;
+  border-bottom-style: none !important;
 }

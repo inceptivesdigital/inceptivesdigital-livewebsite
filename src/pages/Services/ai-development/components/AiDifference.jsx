@@ -22,7 +22,7 @@ export default function AiDifference() {
       title: 'We Built a Payroll Automation Platform',
       desc: 'Payroll Automation Platform: Live in production, automating end-to-end payroll while the finance team handles only exceptions. This is how we deliver AI that runs operations, not just supports them.',
       highlight: true,
-      link: '/work/payroll-platform/',
+      link: '/portfolio',
       linkText: 'See the full case study →',
     },
   ]

@@ -88,7 +88,7 @@ export default function LocationProcessLayout({
           )}
         </div>
 
-        {/* Single-Line Pill Tabs (Horizontal swipe on mobile, centered wrapping pills on md+) */}
+        {/* Single-Line Pill Tabs (Horizontal swipe on mobile, full-width equal pills on lg+) */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -96,7 +96,7 @@ export default function LocationProcessLayout({
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className="w-full flex flex-nowrap md:flex-wrap md:justify-center gap-3 mb-6 overflow-x-auto md:overflow-visible no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden scroll-smooth cursor-grab active:cursor-grabbing select-none"
+          className="w-full flex flex-nowrap md:flex-wrap lg:flex-nowrap md:justify-center lg:justify-between gap-3 mb-6 overflow-x-auto md:overflow-visible no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden scroll-smooth cursor-grab active:cursor-grabbing select-none"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {steps.map((step, index) => {
@@ -108,9 +108,9 @@ export default function LocationProcessLayout({
                 key={numLabel + tabLabel}
                 type="button"
                 onClick={(e) => handleTabClick(index, e)}
-                className={`rounded-full shrink-0 w-auto max-w-full overflow-hidden flex items-center justify-start gap-2.5 py-2 pl-2 pr-4 sm:pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
+                className={`rounded-full shrink-0 w-auto md:flex-1 lg:min-w-0 max-w-full overflow-hidden flex items-center justify-start gap-2.5 py-2 pl-2 pr-4 sm:pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
                   isActive
-                    ? 'bg-[#00CE44] text-white font-semibold'
+                    ? 'bg-[#00CE44] text-black font-semibold'
                     : 'bg-[#2c2c2c] hover:bg-[#383838] text-white/90 font-medium'
                 }`}
               >

@@ -1,83 +1,92 @@
-import { Users, Clock, ShieldCheck, CheckCircle2, ArrowRight } from 'lucide-react'
+import { useEffect } from 'react'
+import ClientMarquee from '../components/ClientMarquee'
+import Testimonials from '../components/Testimonials'
+import AwardsSection from '../components/AwardsSection'
+import FAQSection from '../components/FAQSection'
+import BlogSection from '../components/BlogSection'
 import BookingCTA from '../components/BookingCTA'
 
-export default function StaffAugmentation() {
-  const benefits = [
-    {
-      title: 'Top 3% Senior Talent Only',
-      desc: 'Skip months of recruiting. Every engineer undergoes rigorous algorithmic, architectural, and communication vetting.'
-    },
-    {
-      title: '48-Hour Rapid Onboarding',
-      desc: 'Seamless integration into your Slack, Jira, GitHub, and daily standups within 48 to 72 hours.'
-    },
-    {
-      title: 'Zero Overhead & Risk',
-      desc: 'Flexible month-to-month contracts. Scale engineering capacity up or down with 14-day notice.'
-    },
-    {
-      title: 'Direct Timezone Overlap',
-      desc: 'Our distributed squads work synchronized with US Eastern, Central, and Pacific timezones.'
-    }
-  ]
+import StaffHero from './StaffAugmentation/StaffHero'
+import StaffScaleSmarter from './StaffAugmentation/StaffScaleSmarter'
+import StaffBenefits from './StaffAugmentation/StaffBenefits'
+import StaffTeamBuilder from './StaffAugmentation/StaffTeamBuilder'
+import StaffRolesGrid from './StaffAugmentation/StaffRolesGrid'
+import StaffTechSections from './StaffAugmentation/StaffTechSections'
+import StaffToolsStack from './StaffAugmentation/StaffToolsStack'
+import StaffProcess from './StaffAugmentation/StaffProcess'
+import StaffWhyChoose from './StaffAugmentation/StaffWhyChoose'
 
-  const roles = [
-    'Senior React / Next.js Engineers',
-    'Senior iOS & Swift Developers',
-    'Senior Android & Kotlin Engineers',
-    'Flutter & Cross-Platform Specialists',
-    'Go & Node.js Backend Architects',
-    'Python & AI/ML Data Engineers',
-    'DevOps & Cloud Infrastructure Leads',
-    'QA Automation Engineers'
-  ]
+const STAFF_FAQS = [
+  {
+    q: 'How quickly can you provide us with the right IT professionals?',
+    a: "We understand that time is crucial for your projects. That's why we are here to connect you with our pre-vetted IT experts between 5 and 7 business days to avoid any delays in your delivery timelines.",
+  },
+  {
+    q: 'What types of IT roles can we augment through your services?',
+    a: 'Our pool of talents includes software developers, QA engineers, DevOps specialists, UI/UX designers, project managers, blockchain developers, and many more. Whatever your project needs, we will provide the expertise required.',
+  },
+  {
+    q: 'How do you ensure the quality of the professionals you provide?',
+    a: 'Every individual developer in our system goes through a very rigorous, multi-step selection process. We assess technical skills, communication, and cultural fit to ensure that they are able to harmoniously and promptly integrate into your team.',
+  },
+  {
+    q: 'Will we have the flexibility to scale up or down depending on the project needs?',
+    a: 'Absolutely, our staff augmentation model is fully flexible. We can scale up or down at any time with no long-term commitment, unlike what is involved with traditional hiring gains.',
+  },
+  {
+    q: 'How do your professionals integrate with our existing workflows?',
+    a: 'Our IT professionals are trained to adapt quickly to your tools, processes, and communication style, which allows smooth collaboration just like your in-house team.',
+  },
+  {
+    q: 'Is staff augmentation cheaper than hiring full-time employees?',
+    a: "Yes. Under our model, you save on recruitment, training, benefits, and all overhead costs. So, when you want talent, you pay for that talent only—it's an efficient money-saver.",
+  },
+  {
+    q: 'What ongoing support do we get once the professionals join our team?',
+    a: "We don't place talent and disappear. Our support management team provides continuous support by performing regular check-ins and performance checks to ensure all your projects run smoothly and expectations are met.",
+  },
+]
+
+export default function StaffAugmentation() {
+  useEffect(() => {
+    const title = 'IT Staff Augmentation Services USA | Hire Top IT Talent'
+    const description =
+      'Access skilled IT talent with our staff augmentation services quickly to scale your team, accelerate development, and meet project deadlines seamlessly.'
+
+    document.title = title
+
+    const setMeta = (selector, attr, value) => {
+      const el = document.querySelector(selector)
+      if (el) el.setAttribute(attr, value)
+    }
+
+    setMeta('meta[name="description"]', 'content', description)
+    setMeta('meta[property="og:title"]', 'content', title)
+    setMeta('meta[property="og:description"]', 'content', description)
+    setMeta('meta[name="twitter:title"]', 'content', title)
+    setMeta('meta[name="twitter:description"]', 'content', description)
+    setMeta('link[rel="canonical"]', 'href', 'https://inceptivesdigital.com/staff-augmentation')
+  }, [])
 
   return (
-    <div className="pb-20">
-      <section className="px-4 sm:px-8 mb-20">
-        <div className="w-full mx-auto xl:max-w-[1440px] 2xl:max-w-[1600px] text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#111419] border border-white/10 text-[#00CE44] text-xs font-semibold mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44]" />
-            Elite Engineering Capacity
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tight leading-[1.1]">
-            IT Staff Augmentation <span className="text-[#00CE44]">Services</span>
-          </h1>
-          <p className="mt-6 text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Access senior software engineers, mobile developers, and AI architects quickly to scale your sprint velocity and hit critical production deadlines.
-          </p>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="px-4 sm:px-8 mb-24">
-        <div className="w-full mx-auto xl:max-w-[1440px] 2xl:max-w-[1600px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((b) => (
-            <div key={b.title} className="p-7 rounded-2xl bg-[#0c0e12] border border-white/[0.08]">
-              <h3 className="text-xl font-bold text-white mb-2">{b.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{b.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Available Roles Matrix */}
-      <section className="px-4 sm:px-8 mb-24">
-        <div className="w-full mx-auto xl:max-w-[1440px] 2xl:max-w-[1600px] p-8 sm:p-12 rounded-3xl bg-[#0e1118] border border-white/10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-            Specialized Engineering Roles Available for Immediate Deployment
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {roles.map((r) => (
-              <div key={r} className="p-4 rounded-xl bg-[#141721] border border-white/5 flex items-center gap-3 text-sm text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-[#00CE44] shrink-0" />
-                <span>{r}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    <div className="bg-[#000000] text-white selection:bg-[#00CE44] selection:text-black">
+      <StaffHero />
+      <StaffScaleSmarter />
+      <ClientMarquee />
+      <StaffBenefits />
+      <StaffTeamBuilder />
+      <StaffRolesGrid />
+      <StaffTechSections />
+      <StaffToolsStack />
+      <StaffProcess />
+      <Testimonials
+        heading="Hear It From Our Clients!"
+        subtitle="We build products that work — and relationships that last. Our clients don't just launch with us, they scale with us. These reviews speak for themselves."
+      />
+      <StaffWhyChoose />
+      <AwardsSection />
+      <FAQSection faqs={STAFF_FAQS} heading="IT Staff Augmentation FAQs" />
+      <BlogSection />
       <BookingCTA />
     </div>
   )
