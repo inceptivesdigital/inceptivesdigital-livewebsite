@@ -419,9 +419,9 @@ export default function UiUxDesign() {
           {/* Mid-Page Callout Box */}
           <div className="bg-[#00CE44] rounded-[20px] px-6 sm:px-10 lg:px-12 py-8 sm:py-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="text-left space-y-1.5">
-              <h3 className="text-[24px] sm:text-[30px] lg:text-[34px] font-bold text-black leading-[1.18]">
+              <h2 className="cta-heading text-[24px] sm:text-[30px] lg:text-[34px] font-bold text-black leading-[1.18]">
                 Recognise one of these in your product?
-              </h3>
+              </h2>
               <p className="text-black/85 text-[15.5px] sm:text-[17px] font-medium">
                 We have probably solved it before.
               </p>

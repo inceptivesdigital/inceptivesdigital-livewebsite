@@ -48,10 +48,16 @@ export default function SmartCapabilities() {
     },
   ]
 
-  const renderBox = (cap) => (
+  const allCapabilities = [...row1, ...row2, ...row3]
+
+  const renderBox = (cap, mobileGrid = false) => (
     <div
       key={cap.title}
-      className="w-[130px] sm:w-[148px] h-[125px] sm:h-[138px] p-3.5 rounded-[16px] bg-[#111312]/90 border border-[#00CE44] flex flex-col items-center justify-center text-center shadow-none"
+      className={`${
+        mobileGrid
+          ? 'w-full min-h-[120px] sm:min-h-[130px]'
+          : 'w-[130px] sm:w-[148px] h-[125px] sm:h-[138px]'
+      } p-3.5 rounded-[16px] bg-[#111312]/90 border border-[#00CE44] flex flex-col items-center justify-center text-center shadow-none`}
     >
       <div className="w-8 h-8 mb-2 flex items-center justify-center shrink-0">
         <img
@@ -61,7 +67,7 @@ export default function SmartCapabilities() {
           loading="lazy"
         />
       </div>
-      <h3 className="text-white text-[11px] sm:text-[12px] font-normal leading-snug">
+      <h3 className="text-white text-[12px] sm:text-[13px] font-normal leading-snug">
         {cap.title}
       </h3>
     </div>
@@ -120,21 +126,29 @@ export default function SmartCapabilities() {
             </div>
           </div>
 
-          {/* Right Column: Staggered 3 - 4 - 3 Grid */}
-          <div className="lg:col-span-7 flex flex-col items-center gap-3.5">
-            {/* Row 1: 3 Boxes */}
-            <div className="flex flex-wrap justify-center gap-3.5">
-              {row1.map(renderBox)}
+          {/* Right Column: Clean 2-col Grid on Small Devices, Staggered 3 - 4 - 3 Grid on lg+ */}
+          <div className="lg:col-span-7 w-full">
+            {/* Mobile & Tablet (< lg): Balanced 2-column / 5-column grid (no orphan cards) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 lg:hidden">
+              {allCapabilities.map((cap) => renderBox(cap, true))}
             </div>
 
-            {/* Row 2: 4 Boxes */}
-            <div className="flex flex-wrap justify-center gap-3.5">
-              {row2.map(renderBox)}
-            </div>
+            {/* Desktop (lg+): Staggered 3 - 4 - 3 Grid */}
+            <div className="hidden lg:flex flex-col items-center gap-3.5">
+              {/* Row 1: 3 Boxes */}
+              <div className="flex flex-wrap justify-center gap-3.5">
+                {row1.map((cap) => renderBox(cap, false))}
+              </div>
 
-            {/* Row 3: 3 Boxes */}
-            <div className="flex flex-wrap justify-center gap-3.5">
-              {row3.map(renderBox)}
+              {/* Row 2: 4 Boxes */}
+              <div className="flex flex-wrap justify-center gap-3.5">
+                {row2.map((cap) => renderBox(cap, false))}
+              </div>
+
+              {/* Row 3: 3 Boxes */}
+              <div className="flex flex-wrap justify-center gap-3.5">
+                {row3.map((cap) => renderBox(cap, false))}
+              </div>
             </div>
           </div>
 

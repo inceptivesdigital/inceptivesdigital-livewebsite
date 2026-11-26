@@ -3,12 +3,12 @@ export default function TorontoLocationMap() {
     'https://www.google.com/maps/search/?api=1&query=2482+Yonge+Street+Toronto+ON+M4P+2H5+Canada'
 
   return (
-    <section className="w-full bg-[#000000] text-white relative overflow-hidden">
+    <section className="w-full bg-[#121317] text-white relative overflow-hidden">
       <div className="w-full">
-        <div className="relative bg-[#000000] border-0 overflow-hidden shadow-none">
+        <div className="relative bg-[#121317] border-0 overflow-hidden shadow-none">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             {/* Left Column: Details */}
-            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 xl:px-20 lg:py-20 flex flex-col justify-between text-left relative z-10 bg-[#000000]">
+            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 xl:px-20 lg:py-20 flex flex-col justify-between text-left relative z-10 bg-[#121317]/95">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.18] mb-4">
                   Powering Digital Innovation Across{' '}
@@ -41,20 +41,22 @@ export default function TorontoLocationMap() {
             </div>
 
             {/* Right Column: Interactive Live Google Map */}
-            <div className="lg:col-span-6 relative min-h-[420px] lg:min-h-[520px] overflow-hidden bg-[#181a20]">
+            <div className="lg:col-span-6 relative min-h-[400px] lg:min-h-[500px] overflow-hidden bg-[#181a20]">
               <iframe
                 title="Inceptives Digital Toronto Office - 2482 Yonge Street"
-                src="https://www.google.com/maps?q=43.7115,-79.3995&hl=en&z=15&output=embed"
+                src="https://maps.google.com/maps?q=43.7115,-79.3995+(Inceptives+Digital+Toronto)&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
                 style={{
                   border: 0,
                   filter: 'invert(90%) hue-rotate(180deg) contrast(95%)',
                 }}
                 allowFullScreen=""
-                loading="eager"
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 w-full h-full select-none"
+                className="w-full h-full min-h-[400px] lg:min-h-[500px] select-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-transparent to-transparent hidden lg:block pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#121317] via-transparent to-transparent hidden lg:block pointer-events-none" />
             </div>
           </div>
         </div>

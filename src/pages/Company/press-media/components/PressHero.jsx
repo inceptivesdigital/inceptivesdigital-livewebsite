@@ -12,7 +12,7 @@ export default function PressHero() {
     <>
       {/* Top White Hero with Subtle Mint-Green Glow */}
       <section
-        className="w-full pt-32 sm:pt-36 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 text-center"
+        className="compact-hero-45dvh w-full pt-28 sm:pt-32 lg:pt-36 pb-10 sm:pb-12 text-center"
         style={{
           background:
             'radial-gradient(ellipse at 85% 25%, rgba(0, 206, 68, 0.14) 0%, rgba(255, 255, 255, 0) 52%), #ffffff',

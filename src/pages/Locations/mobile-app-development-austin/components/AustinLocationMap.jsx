@@ -5,12 +5,12 @@ export default function AustinLocationMap() {
     'https://www.google.com/maps/search/?api=1&query=5900+Balcones+Drive+STE+100+Austin+Texas+78731'
 
   return (
-    <section className="w-full bg-[#000000] text-white relative overflow-hidden">
+    <section className="w-full bg-[#121317] text-white relative overflow-hidden">
       <div className="w-full">
-        <div className="relative bg-[#000000] border-0 overflow-hidden">
+        <div className="relative bg-[#121317] border-0 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             {/* Left Column: Details */}
-            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 xl:px-20 lg:py-20 flex flex-col justify-between text-left relative z-10 bg-[#000000]">
+            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 xl:px-20 lg:py-20 flex flex-col justify-between text-left relative z-10 bg-[#121317]/95">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18] mb-4">
                   Building Austin’s Most Resilient{' '}
@@ -41,20 +41,22 @@ export default function AustinLocationMap() {
             </div>
 
             {/* Right Column: Interactive Live Google Map */}
-            <div className="lg:col-span-6 relative min-h-[420px] lg:min-h-[520px] overflow-hidden bg-[#181a20]">
+            <div className="lg:col-span-6 relative min-h-[400px] lg:min-h-[500px] overflow-hidden bg-[#181a20]">
               <iframe
                 title="Inceptives Digital Austin Office - 5900 Balcones Drive"
-                src="https://www.google.com/maps?q=5900+Balcones+Drive+STE+100,+Austin,+Texas+78731&hl=en&z=14&output=embed"
+                src="https://maps.google.com/maps?q=5900+Balcones+Drive+STE+100,+Austin,+Texas+78731&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
                 style={{
                   border: 0,
                   filter: 'invert(90%) hue-rotate(180deg) contrast(95%)',
                 }}
                 allowFullScreen=""
-                loading="eager"
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 w-full h-full select-none"
+                className="w-full h-full min-h-[400px] lg:min-h-[500px] select-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-transparent to-transparent hidden lg:block pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#121317] via-transparent to-transparent hidden lg:block pointer-events-none" />
             </div>
           </div>
         </div>

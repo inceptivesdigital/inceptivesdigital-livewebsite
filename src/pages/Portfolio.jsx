@@ -207,6 +207,8 @@ const PORTFOLIO_CSS = `
 #portfolio-page .pf-media {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   border-radius: 25px;
   background-color: #383838;
   background-position: center center;
@@ -214,148 +216,37 @@ const PORTFOLIO_CSS = `
   background-size: cover;
   padding: 0;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
+  min-height: 460px;
   width: 100%;
   text-decoration: none !important;
 }
 
 #portfolio-page .pf-img-wrap {
   width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   line-height: 0;
+  padding: 24px 20px 0;
+  transform: none !important;
+  margin: 0 !important;
 }
 
 #portfolio-page .pf-img-wrap img {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+  display: block;
+  width: auto;
+  max-width: 92%;
+  height: 370px;
+  object-fit: contain;
+  object-position: bottom center;
   user-select: none;
 }
 
-/* Per-Card Media & Transform Rules (Desktop > 1600px default) */
-/* Card 1: State of the Art Chiropractic */
-#portfolio-page #e-c5a17a1 {
-  min-height: 700px;
-  overflow: visible;
-}
+/* Card 1: State of the Art Chiropractic — bottom-left phone showcase */
 #portfolio-page #e-36e15ac {
-  transform: translate(-183px, 342px);
-  margin: 0% 0% -9% 0%;
-  text-align: start;
-}
-
-/* Card 2: DPS Airem */
-#portfolio-page #e-6dee2e3 {
-  overflow: visible;
-}
-#portfolio-page #e-deebc68 {
-  margin: 30% 0% 0% 0%;
-  text-align: end;
-}
-
-/* Card 3: Halwar Connect */
-#portfolio-page #e-58e29db {
-  overflow: visible;
-}
-#portfolio-page #e-d4ae437 {
-  transform: translateX(20px);
-  margin: 30% 0% 0% 0%;
-  text-align: end;
-}
-
-/* Card 4: Family Entertainment Group */
-#portfolio-page #e-560ae46 {
-  overflow: visible;
-}
-#portfolio-page #e-522ec70 {
-  transform: translate(28px, 54px);
-  margin: 30% 0% 0% 0%;
-  text-align: end;
-}
-
-/* Card 5: Zoom Read */
-#portfolio-page #e-26d3435 {
-  overflow: visible;
-}
-#portfolio-page #e-4c0bf5b {
-  transform: translate(166px, 25px);
-  margin: 30% 0% 0% 0%;
-  text-align: end;
-}
-
-/* Card 6: Pulse Check Timer */
-#portfolio-page #e-478694b {
-  min-height: 0px;
-  overflow: visible;
-}
-#portfolio-page #e-855acbf {
-  transform: translate(28px, 75px);
-  margin: 0%;
-  text-align: end;
-}
-#portfolio-page #e-d8ac155 {
-  padding-top: 52px;
-}
-
-/* Card 7: My Tango Event */
-#portfolio-page #e-b5bf2c1 {
-  overflow: visible;
-}
-#portfolio-page #e-7bf0208 {
-  transform: translate(68px, 32px);
-  margin: 30% 0% 0% 0%;
-  text-align: end;
-}
-
-/* Card 8: WordSmith Pro */
-#portfolio-page #e-cc1d7fc {
-  min-height: 698px;
-  justify-content: flex-end;
-  align-items: center;
-  overflow: hidden;
-}
-#portfolio-page #e-70bed5c {
-  margin: 0%;
-  text-align: center;
-}
-#portfolio-page #e-70bed5c img {
-  width: 88%;
-}
-
-/* Card 9: StakBread */
-#portfolio-page #e-708c540 {
-  min-height: 691px;
-  justify-content: flex-end;
-  align-items: center;
-  overflow: hidden;
-}
-#portfolio-page #e-5060587 {
-  margin: 0%;
-  text-align: center;
-}
-#portfolio-page #e-5060587 img {
-  width: 83%;
-}
-
-/* Card 10: Pets B4 Profit — keep mobile mockups cleanly inside the pet background frame */
-#portfolio-page #e-b248e41 {
-  min-height: 620px;
-  justify-content: flex-end;
-  align-items: center;
-  overflow: hidden !important;
-}
-#portfolio-page #e-f8fedfc {
-  transform: none !important;
-  margin: 0%;
-  padding: 24px 16px 0;
-  text-align: center;
-}
-#portfolio-page #e-f8fedfc img {
-  width: 82%;
-  max-width: 100%;
-}
-#portfolio-page #e-2a5c3fd {
-  padding-top: 20px;
+  justify-content: flex-start;
+  padding: 24px 20px 0;
 }
 
 /* Shared Text Body */
@@ -420,59 +311,13 @@ const PORTFOLIO_CSS = `
   flex-shrink: 0;
 }
 
-/* Laptop / <= 1600px Breakpoint (post-10291.css) */
+/* Laptop / <= 1600px Breakpoint */
 @media (max-width: 1600px) {
-  #portfolio-page #e-c5a17a1 {
-    min-height: 454px;
+  #portfolio-page .pf-media {
+    min-height: 420px;
   }
-  #portfolio-page #e-36e15ac {
-    transform: translate(-110px, 200px);
-  }
-  #portfolio-page #e-deebc68 img {
-    width: 70%;
-  }
-  #portfolio-page #e-d4ae437 img {
-    width: 70%;
-  }
-  #portfolio-page #e-522ec70 img {
-    width: 59%;
-  }
-  #portfolio-page #e-4c0bf5b {
-    transform: translate(105px, 25px);
-  }
-  #portfolio-page #e-4c0bf5b img {
-    width: 70%;
-  }
-  #portfolio-page #e-855acbf {
-    transform: translate(28px, 59px);
-  }
-  #portfolio-page #e-855acbf img {
-    width: 70%;
-  }
-  #portfolio-page #e-7bf0208 {
-    transform: translate(100px, 20px);
-  }
-  #portfolio-page #e-cc1d7fc {
-    min-height: 490px;
-  }
-  #portfolio-page #e-70bed5c img {
-    width: 90%;
-  }
-  #portfolio-page #e-708c540 {
-    min-height: 490px;
-  }
-  #portfolio-page #e-5060587 img {
-    width: 90%;
-  }
-  #portfolio-page #e-b248e41 {
-    min-height: 460px;
-    overflow: hidden !important;
-  }
-  #portfolio-page #e-f8fedfc {
-    transform: none !important;
-  }
-  #portfolio-page #e-f8fedfc img {
-    width: 84%;
+  #portfolio-page .pf-img-wrap img {
+    height: 340px;
   }
   #portfolio-page .pf-title {
     font-size: 25px !important;
@@ -484,70 +329,23 @@ const PORTFOLIO_CSS = `
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1344px) {
-  #portfolio-page .case-stadie-last {
-    transform: none !important;
-  }
-}
-
 /* <= 1200px Breakpoint */
 @media (max-width: 1200px) {
-  #portfolio-page #e-4c0bf5b img {
-    width: 90%;
+  #portfolio-page .pf-media {
+    min-height: 360px;
   }
-  #portfolio-page #e-b5bf2c1 {
-    min-height: 350px;
-  }
-  #portfolio-page #e-cc1d7fc {
-    min-height: 0px;
-  }
-  #portfolio-page #e-708c540 {
-    min-height: 350px;
-  }
-  #portfolio-page #e-b248e41 {
-    min-height: 350px;
-    overflow: hidden !important;
-  }
-  #portfolio-page #e-f8fedfc {
-    transform: none !important;
-  }
-  #portfolio-page #e-f8fedfc img {
-    width: 80%;
-  }
-}
-
-/* <= 1024px Breakpoint */
-@media (max-width: 1024px) {
-  #portfolio-page #e-c5a17a1 {
-    min-height: 350px;
-  }
-  #portfolio-page #e-36e15ac {
-    transform: translate(-110px, 173px);
-  }
-  #portfolio-page #e-522ec70 {
-    transform: translate(28px, 30px);
+  #portfolio-page .pf-img-wrap img {
+    height: 290px;
   }
 }
 
 /* <= 880px Breakpoint */
 @media (max-width: 880px) {
-  #portfolio-page #e-c5a17a1 {
-    min-height: 290px;
+  #portfolio-page .pf-media {
+    min-height: 320px;
   }
-  #portfolio-page #e-36e15ac {
-    transform: translate(-80px, 124px);
-  }
-  #portfolio-page #e-522ec70 {
-    transform: translate(28px, 42px);
-  }
-  #portfolio-page #e-4c0bf5b {
-    transform: translate(56px, 25px);
-  }
-  #portfolio-page #e-ab52c69 {
-    margin-top: -40%;
-  }
-  #portfolio-page #e-f8fedfc {
-    transform: none !important;
+  #portfolio-page .pf-img-wrap img {
+    height: 260px;
   }
 }
 
@@ -564,56 +362,12 @@ const PORTFOLIO_CSS = `
     width: 100%;
     margin-top: 0% !important;
   }
-  #portfolio-page #e-deebc68 img {
-    width: 50%;
+  #portfolio-page .pf-media {
+    min-height: 290px;
   }
-  #portfolio-page #e-d4ae437 {
-    transform: translateX(10px);
-  }
-  #portfolio-page #e-d4ae437 img {
-    width: 50%;
-  }
-  #portfolio-page #e-df19883 {
-    padding-bottom: 20px;
-  }
-  #portfolio-page #e-522ec70 {
-    transform: translate(20px, 20px);
-  }
-  #portfolio-page #e-522ec70 img {
-    width: 50%;
-  }
-  #portfolio-page #e-4c0bf5b {
-    transform: translate(7px, 1px);
-  }
-  #portfolio-page #e-4c0bf5b img {
-    width: 50%;
-  }
-  #portfolio-page #e-855acbf {
-    transform: translate(0px, 35px);
-  }
-  #portfolio-page #e-855acbf img {
-    width: 50%;
-  }
-  #portfolio-page #e-7bf0208 {
-    transform: translate(0px, 107px);
-  }
-  #portfolio-page #e-7bf0208 img {
-    width: 50%;
-  }
-  #portfolio-page #e-cc1d7fc {
-    min-height: 350px;
-  }
-  #portfolio-page #e-70bed5c img {
-    width: 80%;
-  }
-  #portfolio-page #e-5060587 img {
-    width: 80%;
-  }
-  #portfolio-page #e-f8fedfc {
-    transform: translate(0px, 157px);
-  }
-  #portfolio-page #e-f8fedfc img {
-    width: 70%;
+  #portfolio-page .pf-img-wrap img {
+    height: 240px;
+    max-width: 90%;
   }
 }
 `

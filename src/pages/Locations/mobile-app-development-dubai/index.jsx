@@ -17,7 +17,6 @@ import DubaiTechStack from './components/DubaiTechStack'
 import DubaiTechPartners from './components/DubaiTechPartners'
 import DubaiAdvancedTech from './components/DubaiAdvancedTech'
 import DubaiLocationMap from './components/DubaiLocationMap'
-import DubaiOfficeMap from './components/DubaiOfficeMap'
 import DubaiCostSection from './components/DubaiCostSection'
 import DubaiEngagementModels from './components/DubaiEngagementModels'
 import DubaiWhyChooseUs from './components/DubaiWhyChooseUs'
@@ -67,7 +66,6 @@ export default function MobileAppDubai() {
       <DubaiTechPartners />
       <DubaiAdvancedTech />
       <DubaiLocationMap />
-      <DubaiOfficeMap />
       <DubaiCostSection />
       <DubaiEngagementModels />
       <DubaiWhyChooseUs />

@@ -149,9 +149,9 @@ export default function AiIndustries() {
         {/* Bottom Industry CTA Row (Matching media_1794895051688_e6fe6c00.png) */}
         <div className="mt-12 sm:mt-16 w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 shadow-2xl">
           <div className="text-left max-w-3xl">
-            <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
+            <h2 className="cta-heading text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
               Don&apos;t see your industry?
-            </h3>
+            </h2>
             <p className="text-black/90 text-sm sm:text-base font-normal leading-relaxed">
               The AI capability that works in one sector often applies directly to another. Let&apos;s talk about what it looks like.
             </p>

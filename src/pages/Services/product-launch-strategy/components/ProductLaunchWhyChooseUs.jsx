@@ -85,9 +85,9 @@ export default function ProductLaunchWhyChooseUs() {
         {/* Mid Banner CTA */}
         <div className="w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 text-left">
           <div className="max-w-3xl">
-            <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
+            <h2 className="cta-heading text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
               Take the First Step Toward a Successful Launch
-            </h3>
+            </h2>
             <p className="text-black/90 text-sm sm:text-base font-normal leading-relaxed">
               The right strategy, the right team, and the right timing are all within reach. The next move is yours.
             </p>

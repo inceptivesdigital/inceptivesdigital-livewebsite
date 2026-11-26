@@ -5,8 +5,6 @@ import ContactProcess from './components/ContactProcess'
 import ContactCtaBanner from './components/ContactCtaBanner'
 import ContactDelivered from './components/ContactDelivered'
 import ContactAwards from './components/ContactAwards'
-import ContactVideoTestimonials from './components/ContactVideoTestimonials'
-import ContactMap from './components/ContactMap'
 import ContactFaqs from './components/ContactFaqs'
 
 export default function ContactUsPage() {
@@ -54,8 +52,6 @@ export default function ContactUsPage() {
       />
       <ContactDelivered />
       <ContactAwards />
-      <ContactVideoTestimonials />
-      <ContactMap />
       <ContactFaqs />
     </div>
   )

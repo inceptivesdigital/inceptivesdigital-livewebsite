@@ -57,6 +57,14 @@ function isContactTrigger(el) {
   if (el.closest('#id-contact-popup, #schedulePopup')) return false
   if (el.closest('[data-no-contact-popup]')) return false
   if (el.closest('form')) return false
+  if (
+    el.getAttribute('role') === 'tab' ||
+    el.closest('[role="tablist"]') ||
+    el.hasAttribute('aria-selected') ||
+    el.hasAttribute('aria-pressed')
+  ) {
+    return false
+  }
 
   const label = (el.textContent || '').replace(/\s+/g, ' ').trim()
   // "Schedule A ..." and "Book a Free Strategy Consultation" buttons belong to the Calendly popup

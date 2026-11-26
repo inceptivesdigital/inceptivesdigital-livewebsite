@@ -14,10 +14,10 @@ export default function DiscoverySprintCTA() {
             Discovery sprint
           </span>
 
-          {/* Heading H3: 30px font-size */}
-          <h3 className="text-2xl sm:text-[30px] font-bold text-white tracking-tight leading-tight mb-5">
+          {/* Heading H2 */}
+          <h2 className="text-2xl sm:text-[30px] font-bold text-white tracking-tight leading-tight mb-5">
             Before Development Comes Product Clarity
-          </h3>
+          </h2>
 
           {/* Paragraph P: 18px font-size */}
           <p className="text-[16px] sm:text-[18px] text-slate-300 leading-relaxed font-normal mb-8 max-w-xl">

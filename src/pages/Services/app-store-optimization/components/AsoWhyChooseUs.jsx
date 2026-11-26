@@ -85,9 +85,9 @@ export default function AsoWhyChooseUs() {
         {/* Mid Banner CTA */}
         <div className="w-full mx-auto px-6 sm:px-10 lg:px-12 py-8 sm:py-10 rounded-[28px] sm:rounded-[36px] bg-[#00CE44] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 text-left">
           <div className="max-w-3xl">
-            <h3 className="text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
+            <h2 className="cta-heading text-2xl sm:text-3xl lg:text-[32px] font-black text-black tracking-tight leading-tight mb-2">
               Your App&apos;s Store Performance Has Room to Move
-            </h3>
+            </h2>
             <p className="text-black/90 text-sm sm:text-base font-normal leading-relaxed">
               Schedule a session with the team. An honest look at where your app page stands and what it would take to move the numbers.
             </p>

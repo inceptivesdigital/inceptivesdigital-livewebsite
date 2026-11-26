@@ -32,26 +32,29 @@ header button[class*="bg-[#00CE44]"] {
   white-space: nowrap;
 }
 
-/* 3. Universal 100vh Hero Sizing + Dynamic Header Clearance (All Devices) */
+/* 3. Universal Hero Sizing + Dynamic Header Clearance & Top/Bottom Gap (All Devices) */
 :root {
-  --hero-header-clearance: 100px;
+  --hero-header-clearance: 112px;
+  --hero-bottom-gap: 56px;
 }
 
 @media (min-width: 640px) {
   :root {
-    --hero-header-clearance: 112px;
+    --hero-header-clearance: 128px;
+    --hero-bottom-gap: 64px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --hero-header-clearance: 120px;
+    --hero-header-clearance: 144px;
+    --hero-bottom-gap: 80px;
   }
 }
 
-html body main > section:first-child:not(.idap-wrap):not(.category-archive-section),
-html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section),
-html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh),
+html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh) {
   box-sizing: border-box !important;
   min-height: 100vh !important;
   min-height: 100svh !important;
@@ -60,24 +63,38 @@ html body main > div:first-child > div:first-child > section:first-of-type:not(.
   padding-top: var(--hero-header-clearance) !important;
 }
 
-/* Exact 100vh hero sections on Laptop & Desktop (1024px+) */
-@media (min-width: 1024px) {
-  html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.id-blog-hero):not(.id-pr-hero),
-  html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.id-blog-hero):not(.id-pr-hero),
-  html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.id-blog-hero):not(.id-pr-hero) {
-    height: 100vh !important;
-    height: 100dvh !important;
-    min-height: 100vh !important;
-    min-height: 100dvh !important;
-  }
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="pb-0"]),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="pb-0"]),
+html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="pb-0"]) {
+  padding-bottom: var(--hero-bottom-gap) !important;
 }
 
 /* Vertically center non-flex hero sections cleanly inside the 100vh frame */
-html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
-html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="flex"]),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="flex"]) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Compact 45dvh Hero Override (Blog & Press Release pages only) */
+html body main section.compact-hero-45dvh {
+  box-sizing: border-box !important;
+  min-height: 45dvh !important;
+  height: auto !important;
+  padding-top: var(--hero-header-clearance) !important;
+  padding-bottom: 40px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 639px) {
+  html body main section.compact-hero-45dvh {
+    min-height: 45dvh !important;
+    padding-top: 108px !important;
+    padding-bottom: 32px !important;
+  }
 }
 
 /* Keep bottom-flush desktop heroes (pb-0 with bottom-anchored mockups) flush at bottom on lg+ */
@@ -231,20 +248,6 @@ html body main .id-pr .id-pr-hero {
   }
 }
 
-/* Hero section ONLY: keep outside centered container with 100px side margins across all pages */
-@media (min-width: 1280px) {
-  html body main > section:first-child:not(.idap-wrap):not(.category-archive-section) > div[class*="max-w-"],
-  html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section) > div[class*="max-w-"],
-  html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section) > div[class*="max-w-"] {
-    max-width: none !important;
-    width: auto !important;
-    margin-left: 100px !important;
-    margin-right: 100px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 1023px) {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],
@@ -275,35 +278,37 @@ html body main section div[class*="grid"] > * {
 }
 
 /* ==========================================================================
-   5. Responsive Typography & CTA Scale (Pure px, Desktop H1 max 40px)
+   5. Fluid Calculated Heading Scale (clamp + calc across 320px -> 1920px+)
+      & Responsive Body/CTA Scale
    ========================================================================== */
 
-/* Desktop 1920px+ (1800px and above): H2 = 45px */
-@media (min-width: 1800px) {
-  html body main h2 {
-    font-size: 45px !important;
-    line-height: 1.18 !important;
-  }
+html body main h1 {
+  font-size: clamp(22px, calc(15px + 1.65vw), 46px) !important;
+  line-height: 1.16 !important;
 }
 
-/* Desktop 1600px (1440px - 1799px): H2 = 35px */
-@media (min-width: 1440px) and (max-width: 1799px) {
-  html body main h2 {
-    font-size: 35px !important;
-    line-height: 1.22 !important;
-  }
+html body main h2 {
+  font-size: clamp(19px, calc(14px + 1.5vw), 44px) !important;
+  line-height: 1.2 !important;
+}
+
+html body main section h2.cta-heading {
+  font-size: clamp(18px, calc(15px + 0.45vw), 24px) !important;
+  line-height: 1.25 !important;
+}
+
+html body main section h3 {
+  font-size: clamp(15px, calc(13.5px + 0.38vw), 21px) !important;
+  line-height: 1.32 !important;
+}
+
+html body main section h4 {
+  font-size: clamp(14px, calc(13px + 0.25vw), 18px) !important;
+  line-height: 1.35 !important;
 }
 
 /* Desktop XL shared (1440px+) */
 @media (min-width: 1440px) {
-  html body main h1 {
-    font-size: 44px !important;
-    line-height: 1.14 !important;
-  }
-  html body main section h3 {
-    font-size: 19px !important;
-    line-height: 1.32 !important;
-  }
   html body main section p {
     font-size: 15px !important;
     line-height: 1.62 !important;
@@ -320,18 +325,6 @@ html body main section div[class*="grid"] > * {
 
 /* Laptop: 1280px, 1300px, 1380px, 1400px */
 @media (min-width: 1280px) and (max-width: 1439px) {
-  html body main h1 {
-    font-size: 40px !important;
-    line-height: 1.15 !important;
-  }
-  html body main h2 {
-    font-size: 32px !important;
-    line-height: 1.24 !important;
-  }
-  html body main section h3 {
-    font-size: 18px !important;
-    line-height: 1.32 !important;
-  }
   html body main section p {
     font-size: 14.5px !important;
     line-height: 1.6 !important;
@@ -348,18 +341,6 @@ html body main section div[class*="grid"] > * {
 
 /* Compact Laptop: 1080px, 1120px, 1202px */
 @media (min-width: 1024px) and (max-width: 1279px) {
-  html body main h1 {
-    font-size: 36px !important;
-    line-height: 1.18 !important;
-  }
-  html body main h2 {
-    font-size: 28px !important;
-    line-height: 1.24 !important;
-  }
-  html body main section h3 {
-    font-size: 17px !important;
-    line-height: 1.34 !important;
-  }
   html body main section p {
     font-size: 14px !important;
     line-height: 1.6 !important;
@@ -376,18 +357,6 @@ html body main section div[class*="grid"] > * {
 
 /* Tablet: 768px, 880px, 991px */
 @media (min-width: 768px) and (max-width: 1023px) {
-  html body main h1 {
-    font-size: 26px !important;
-    line-height: 1.22 !important;
-  }
-  html body main h2 {
-    font-size: 24px !important;
-    line-height: 1.25 !important;
-  }
-  html body main section h3 {
-    font-size: 15.5px !important;
-    line-height: 1.35 !important;
-  }
   html body main section p {
     font-size: 13.5px !important;
     line-height: 1.58 !important;
@@ -404,18 +373,6 @@ html body main section div[class*="grid"] > * {
 
 /* Large Mobile: 480px, 550px, 767px */
 @media (min-width: 480px) and (max-width: 767px) {
-  html body main h1 {
-    font-size: 24px !important;
-    line-height: 1.22 !important;
-  }
-  html body main h2 {
-    font-size: 22px !important;
-    line-height: 1.26 !important;
-  }
-  html body main section h3 {
-    font-size: 15px !important;
-    line-height: 1.35 !important;
-  }
   html body main section p {
     font-size: 13.5px !important;
     line-height: 1.56 !important;
@@ -432,18 +389,6 @@ html body main section div[class*="grid"] > * {
 
 /* Small Mobile: 360px, 400px */
 @media (min-width: 360px) and (max-width: 479px) {
-  html body main h1 {
-    font-size: 22px !important;
-    line-height: 1.24 !important;
-  }
-  html body main h2 {
-    font-size: 20px !important;
-    line-height: 1.28 !important;
-  }
-  html body main section h3 {
-    font-size: 14.5px !important;
-    line-height: 1.35 !important;
-  }
   html body main section p {
     font-size: 13px !important;
     line-height: 1.55 !important;
@@ -460,18 +405,6 @@ html body main section div[class*="grid"] > * {
 
 /* Extra-Small Mobile: 320px */
 @media (max-width: 359px) {
-  html body main h1 {
-    font-size: 20px !important;
-    line-height: 1.25 !important;
-  }
-  html body main h2 {
-    font-size: 18px !important;
-    line-height: 1.28 !important;
-  }
-  html body main section h3 {
-    font-size: 14px !important;
-    line-height: 1.35 !important;
-  }
   html body main section p {
     font-size: 12.5px !important;
     line-height: 1.54 !important;
@@ -489,15 +422,14 @@ html body main section div[class*="grid"] > * {
 /* ==========================================================================
    6. Hero Eyebrow H1 + Display H2 Pattern (Services Inner Pages)
    When a hero has H1 immediately followed by H2 (h1 + h2):
-   - H1 stays small eyebrow (14px-16px)
-   - H2 becomes the large display headline
-   Pages WITHOUT an H2 right after H1 keep their large H1 completely unchanged.
+   - H1 stays small eyebrow (fluid 13px-16px)
+   - H2 becomes the fluid display headline matching main H1 scale
    ========================================================================== */
 html body main section:first-of-type h1:has(+ h2),
 html body main section:first-of-type h1:has(+ h2) span,
 html body main section:first-of-type p[class*="text-[#00CE44]"]:has(+ h1),
 html body main section:first-of-type span[class*="text-[#00CE44]"]:has(+ h1) {
-  font-size: 15px !important;
+  font-size: clamp(13px, calc(12.2px + 0.2vw), 16px) !important;
   line-height: 1.35 !important;
   font-weight: 600 !important;
   color: #00CE44 !important;
@@ -505,62 +437,9 @@ html body main section:first-of-type span[class*="text-[#00CE44]"]:has(+ h1) {
   text-transform: none !important;
 }
 
-@media (max-width: 767px) {
-  html body main section:first-of-type h1:has(+ h2),
-  html body main section:first-of-type h1:has(+ h2) span,
-  html body main section:first-of-type p[class*="text-[#00CE44]"]:has(+ h1),
-  html body main section:first-of-type span[class*="text-[#00CE44]"]:has(+ h1) {
-    font-size: 13.5px !important;
-  }
-}
-
-@media (min-width: 1440px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 44px !important;
-    line-height: 1.14 !important;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1439px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 40px !important;
-    line-height: 1.15 !important;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 36px !important;
-    line-height: 1.18 !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 26px !important;
-    line-height: 1.22 !important;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 24px !important;
-    line-height: 1.22 !important;
-  }
-}
-
-@media (min-width: 360px) and (max-width: 479px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 22px !important;
-    line-height: 1.24 !important;
-  }
-}
-
-@media (max-width: 359px) {
-  html body main section:first-of-type h1 + h2 {
-    font-size: 20px !important;
-    line-height: 1.25 !important;
-  }
+html body main section:first-of-type h1 + h2 {
+  font-size: clamp(22px, calc(15px + 1.65vw), 46px) !important;
+  line-height: 1.16 !important;
 }
 
 /* ==========================================================================
@@ -770,4 +649,74 @@ html body main section {
   border-bottom-width: 0 !important;
   border-top-style: none !important;
   border-bottom-style: none !important;
+}
+
+/* ==========================================================================
+   13. Tech Stack & Vertical Sidebar Tabs -> Horizontal Scrollable on < lg
+   ========================================================================== */
+@media (max-width: 1023px) {
+  html body main section div[class*="lg:col-span-4"][class*="bg-[#00CE44]"]:has(> button) {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 0.5rem !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    padding: 0.75rem !important;
+  }
+
+  html body main section div[class*="lg:col-span-4"][class*="bg-[#00CE44]"]:has(> button)::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  html body main section div[class*="lg:col-span-4"][class*="bg-[#00CE44]"]:has(> button) > button {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    border-bottom: 0 !important;
+    border-radius: 10px !important;
+    padding: 0.625rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Tech Stack Right Panel: 3 balanced columns on mobile, 4 on tablet (no empty right-side gap) */
+  html body main section div[class*="lg:col-span-8"][class*="bg-[#00CE44]"][class*="flex-wrap"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.125rem 0.75rem !important;
+    padding: 1.25rem !important;
+    align-items: start !important;
+    align-content: start !important;
+  }
+
+  html body main section div[class*="lg:col-span-8"][class*="bg-[#00CE44]"][class*="flex-wrap"] > div {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  html body main section div[class*="lg:col-span-8"][class*="bg-[#00CE44]"][class*="flex-wrap"] > div > div:first-child {
+    width: 100% !important;
+    max-width: 104px !important;
+    height: 76px !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  html body main section div[class*="lg:col-span-8"][class*="bg-[#00CE44]"][class*="flex-wrap"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 1.25rem 1rem !important;
+    padding: 1.75rem !important;
+  }
+
+  html body main section div[class*="lg:col-span-8"][class*="bg-[#00CE44]"][class*="flex-wrap"] > div > div:first-child {
+    max-width: 112px !important;
+    height: 84px !important;
+  }
 }

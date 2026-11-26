@@ -19,7 +19,7 @@ export default function BlogsHero({ searchValue = '', onSearchSubmit }) {
   }
 
   return (
-    <section className="w-full bg-white text-[#111111] pt-32 sm:pt-36 lg:pt-40 pb-14 sm:pb-16 lg:pb-20">
+    <section className="compact-hero-45dvh w-full bg-white text-[#111111] pt-28 sm:pt-32 lg:pt-36 pb-10 sm:pb-12">
       <div className="w-full max-w-[1220px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-[36px] sm:text-[46px] lg:text-[54px] font-medium leading-[1.15] tracking-tight text-[#111111]">
           Insights That

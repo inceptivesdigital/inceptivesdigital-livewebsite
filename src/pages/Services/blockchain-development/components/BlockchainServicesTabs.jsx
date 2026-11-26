@@ -146,16 +146,22 @@ export default function BlockchainServicesTabs() {
 
         {/* 2-Column Split: Left Light-Gray Vertical 8-Tab Sidebar + Right Dark Detail Card */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch">
-          {/* Left Vertical Tab Menu */}
-          <div className="w-full lg:w-[30%] xl:w-[27%] bg-[#E6E6E6] rounded-[24px] p-3 sm:p-4 flex flex-col justify-start gap-1.5">
+          {/* Left Vertical Tab Menu (Horizontal Scroll on Small Devices) */}
+          <div
+            role="tablist"
+            data-no-contact-popup
+            className="w-full lg:w-[30%] xl:w-[27%] bg-[#E6E6E6] rounded-[18px] lg:rounded-[24px] p-2.5 sm:p-3 lg:p-4 flex flex-row lg:flex-col justify-start items-center lg:items-stretch gap-2 lg:gap-1.5 overflow-x-auto lg:overflow-x-visible no-scrollbar"
+          >
             {services.map((srv, idx) => {
               const isActive = idx === activeIndex
               return (
                 <button
                   key={srv.id}
                   type="button"
+                  role="tab"
+                  aria-selected={isActive}
                   onClick={() => setActiveIndex(idx)}
-                  className={`w-full flex items-center gap-3.5 px-4 py-3.5 rounded-[14px] text-left transition-all duration-200 cursor-pointer border-0 focus:outline-none ${
+                  className={`w-auto shrink-0 lg:w-full lg:shrink flex items-center gap-2.5 lg:gap-3.5 px-4 py-2.5 lg:py-3.5 rounded-[12px] lg:rounded-[14px] text-left whitespace-nowrap lg:whitespace-normal transition-all duration-200 cursor-pointer border-0 focus:outline-none ${
                     isActive
                       ? 'bg-[#00CE44] text-black font-bold shadow-sm'
                       : 'bg-transparent text-[#1a1a1a] hover:bg-black/5 font-medium'
