@@ -63,7 +63,7 @@ export default function AiHero() {
             </div>
 
             {/* Review Badges */}
-            <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 pt-4 sm:pt-6 border-t border-white/10">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 lg:gap-8 pt-4 sm:pt-6">
               <a
                 href="https://clutch.co/profile/inceptives-digital"
                 target="_blank"

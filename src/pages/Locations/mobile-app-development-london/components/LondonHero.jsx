@@ -59,7 +59,7 @@ export default function LondonHero() {
           </div>
 
           {/* Social Proof Review Badges */}
-          <HeroTrustBadges className="pt-4 border-t border-white/10" />
+          <HeroTrustBadges className="pt-4" />
         </div>
       </div>
     </section>
