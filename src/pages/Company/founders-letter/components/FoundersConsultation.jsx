@@ -34,7 +34,7 @@ export default function FoundersConsultation() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-[#00CE44]" />
-                <span>(469) 807-8028</span>
+                <span>(469) 788-8527</span>
               </div>
             </div>
 

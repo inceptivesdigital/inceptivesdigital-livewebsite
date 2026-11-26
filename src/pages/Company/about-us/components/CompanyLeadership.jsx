@@ -4,7 +4,7 @@ export default function CompanyLeadership() {
       name: 'Hannan Shahnoor',
       role: 'CEO & Co-Founder',
       bio: 'Leads global vision, product strategy, and client outcomes. Focuses on business-first digital architectures that deliver tangible commercial impact.',
-      img: '/assets/about-us/about-men.png',
+      img: '/assets/leadership/live/hannan-shahnoor.png',
       linkedin: 'https://www.linkedin.com/company/inceptives-digital',
     },
     {

@@ -3,7 +3,7 @@ import ContactForm from './ContactForm'
 export default function ContactHero() {
   const rows = [
     { icon: '/assets/contact-us/mail-icon.png', label: 'info@inceptivesdigital.com', href: 'mailto:info@inceptivesdigital.com' },
-    { icon: '/assets/contact-us/call-icon.png', label: '(469) 807-8028', href: 'tel:+14698078028' },
+    { icon: '/assets/contact-us/call-icon.png', label: '(469) 788-8527', href: 'tel:+14697888527' },
   ]
 
   const ratings = [

@@ -65,18 +65,11 @@ export default function CompanyRatingsBar() {
     },
   ]
 
-  const badges = [
-    { label: 'Clutch 4.8 / 83+ reviews', icon: '★' },
-    { label: 'Inc. 5000 / 2024', icon: '✦' },
-    { label: 'GoodFirms Leader', icon: '✦' },
-    { label: 'Deloitte Fast 50', icon: '✦' },
-  ]
-
   return (
     <section className="py-12 sm:py-16 bg-[#0c0c0c] border-t border-b border-white/10 relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Top 4 Original Review Badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-center justify-items-center text-center pb-10 border-b border-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-center justify-items-center text-center">
           {reviews.map((rev, i) => (
             <div key={i} className="flex flex-col items-center justify-center w-full max-w-[220px]">
               <a
@@ -94,19 +87,6 @@ export default function CompanyRatingsBar() {
                   {rev.sub}
                 </div>
               </a>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom Verification Badges */}
-        <div className="pt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-white/70 text-xs sm:text-sm font-semibold tracking-wide">
-          {badges.map((b, i) => (
-            <div key={i} className="flex items-center gap-2 hover:text-[#00CE44] transition-colors">
-              <span className="text-[#00CE44]">{b.icon}</span>
-              <span>{b.label}</span>
-              {i < badges.length - 1 && (
-                <span className="hidden sm:inline-block ml-6 text-white/20">|</span>
-              )}
             </div>
           ))}
         </div>

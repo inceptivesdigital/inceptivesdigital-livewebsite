@@ -15,15 +15,6 @@ export default function CompanyClientLogos() {
     { name: 'Aura', src: '/assets/Product Builds & Clients/Aura.webp' },
   ]
 
-  const awards = [
-    { title: 'Industry Change Makers', label: 'Tech Leader' },
-    { title: 'Deloitte Fast 50', label: 'Technology India' },
-    { title: 'Entrepreneur Awards 2026', label: 'App Development Company of the Year' },
-    { title: 'ET Leadership Awards', label: 'Excellence Winner' },
-    { title: 'Times Business Awards', label: 'Tech Company of the Year' },
-    { title: 'TIME Statista 2026', label: 'Fastest Growing' },
-  ]
-
   return (
     <section className="py-14 sm:py-20 bg-[#0d0d0d] border-t border-b border-white/10 relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] mb-10 text-center">
@@ -36,7 +27,7 @@ export default function CompanyClientLogos() {
       </div>
 
       {/* Row 1: Client Logos Slide Show Marquee */}
-      <div className="relative w-full overflow-hidden mb-10 flex items-center">
+      <div className="relative w-full overflow-hidden flex items-center">
         {/* Soft edge fades */}
         <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#0d0d0d] via-[#0d0d0d]/90 to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#0d0d0d] via-[#0d0d0d]/90 to-transparent z-10 pointer-events-none" />
@@ -53,25 +44,6 @@ export default function CompanyClientLogos() {
                 className="max-h-10 sm:max-h-12 w-auto max-w-[85%] object-contain"
                 loading="lazy"
               />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Row 2: Recognition / Awards Ribbon */}
-      <div className="relative w-full overflow-hidden pt-6 border-t border-white/5">
-        <div className="flex items-center gap-8 sm:gap-12 animate-marquee-reverse whitespace-nowrap">
-          {[...awards, ...awards, ...awards].map((award, i) => (
-            <div
-              key={i}
-              className="inline-flex flex-col items-start px-5 py-2.5 rounded-lg bg-white/[0.03] border border-white/5 text-left select-none"
-            >
-              <span className="text-white font-bold text-xs sm:text-sm tracking-tight">
-                {award.title}
-              </span>
-              <span className="text-[#00CE44] text-[11px] font-medium tracking-wide">
-                {award.label}
-              </span>
             </div>
           ))}
         </div>

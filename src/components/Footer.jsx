@@ -125,10 +125,10 @@ export default function Footer() {
                 info@inceptivesdigital.com
               </a>
               <a
-                href="tel:(469) 517-3636"
+                href="tel:+14697888527"
                 className="block text-white hover:text-[#00CE44] text-[13px] transition-colors"
               >
-                (469) 517-3636
+                (469) 788-8527
               </a>
             </div>
 

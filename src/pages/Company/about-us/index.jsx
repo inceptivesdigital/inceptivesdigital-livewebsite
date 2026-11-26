@@ -3,14 +3,11 @@ import CompanyHero from './components/CompanyHero'
 import CompanyClientLogos from './components/CompanyClientLogos'
 import CompanyMindset from './components/CompanyMindset'
 import CompanyRatingsBar from './components/CompanyRatingsBar'
-import CompanyJourney from './components/CompanyJourney'
 import CompanyValues from './components/CompanyValues'
 import CompanyCeoQuote from './components/CompanyCeoQuote'
 import CompanyRecognition from './components/CompanyRecognition'
 import CompanyTestimonials from './components/CompanyTestimonials'
 import CompanyTechPartners from './components/CompanyTechPartners'
-import CompanyLeadership from './components/CompanyLeadership'
-import CompanyOfficeGallery from './components/CompanyOfficeGallery'
 import CompanyCtaBanner from './components/CompanyCtaBanner'
 import CompanyFaqs from './components/CompanyFaqs'
 
@@ -61,9 +58,6 @@ export default function CompanyPage() {
       {/* 4. Clutch, Bark, Trustpilot Ratings & Verification Bar */}
       <CompanyRatingsBar />
 
-      {/* 5. Our Journey: Interactive Milestones (2018 - 2026) */}
-      <CompanyJourney />
-
       {/* 6. Our Values: The Principles We Never Compromise On (5 Cards) */}
       <CompanyValues />
 
@@ -78,12 +72,6 @@ export default function CompanyPage() {
 
       {/* 10. Partnered with Technology Leaders (Moving Stripes) */}
       <CompanyTechPartners />
-
-      {/* 11. Leadership: CEO, CTO, COO with LinkedIn Links */}
-      <CompanyLeadership />
-
-      {/* 12. A Peek Inside Inceptives Digital Office Collage */}
-      <CompanyOfficeGallery />
 
       {/* 13. Pre-FAQ Bottom CTA Banner */}
       <CompanyCtaBanner />

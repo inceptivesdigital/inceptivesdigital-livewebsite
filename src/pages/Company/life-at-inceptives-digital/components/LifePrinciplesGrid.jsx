@@ -83,7 +83,7 @@ export default function LifePrinciplesGrid() {
       </section>
 
       {/* 2. Growth Begins Before The Next Title */}
-      <section className="py-16 sm:py-20 bg-black relative overflow-hidden">
+      <section className="py-16 sm:py-20 bg-[#181818] relative overflow-hidden">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 text-left">

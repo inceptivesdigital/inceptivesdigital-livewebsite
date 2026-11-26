@@ -1,13 +1,6 @@
 import { useEffect } from 'react'
 import LifeHero from './components/LifeHero'
-import LifeEventsFestivals from './components/LifeEventsFestivals'
-import LifeWorkdayTimeline from './components/LifeWorkdayTimeline'
-import LifeAmenities from './components/LifeAmenities'
-import LifeDiversity from './components/LifeDiversity'
-import LifeRecreation from './components/LifeRecreation'
-import LifePerksBenefits from './components/LifePerksBenefits'
 import LifePrinciplesGrid from './components/LifePrinciplesGrid'
-import LifeTestimonials from './components/LifeTestimonials'
 import LifeBottomCta from './components/LifeBottomCta'
 
 export default function LifeAtInceptivesPage() {
@@ -45,34 +38,13 @@ export default function LifeAtInceptivesPage() {
 
   return (
     <div className="bg-black text-white selection:bg-[#00CE44] selection:text-black">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section: Work That Builds People and Products */}
       <LifeHero />
 
-      {/* 2. Celebrate Life with Inceptives Digital (Events & Festivals) */}
-      <LifeEventsFestivals />
-
-      {/* 3. From Login to Logout (A Day in the Life Timeline) */}
-      <LifeWorkdayTimeline />
-
-      {/* 4. What's the Catch (Spaces & Amenities) */}
-      <LifeAmenities />
-
-      {/* 5. We Believe in Diversity (The People Who Keep It Moving) */}
-      <LifeDiversity />
-
-      {/* 6. Break The Corporate Walls and Live A Little (Recreation) */}
-      <LifeRecreation />
-
-      {/* 7. The Things That Make the Week Better (Perks & Commute Support) */}
-      <LifePerksBenefits />
-
-      {/* 8. Culture Principles, Growth & Focus Without Pressure */}
+      {/* 2-5. Culture Principles, Growth Begins Before The Next Title, Focus Without Pressure, Shared Work */}
       <LifePrinciplesGrid />
 
-      {/* 9. Words From The People We Work With (Testimonials) */}
-      <LifeTestimonials />
-
-      {/* 10. Think This Could Be Your Kind of Workplace? (Bottom CTA) */}
+      {/* 6. Responsibility Creates Room to Grow */}
       <LifeBottomCta />
     </div>
   )

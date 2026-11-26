@@ -52,9 +52,9 @@ header button[class*="bg-[#00CE44]"] {
   }
 }
 
-html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh),
-html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh),
-html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh),
+html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh) {
   box-sizing: border-box !important;
   min-height: 100vh !important;
   min-height: 100svh !important;
@@ -63,21 +63,21 @@ html body main > div:first-child > div:first-child > section:first-of-type:not(.
   padding-top: var(--hero-header-clearance) !important;
 }
 
-html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="pb-0"]),
-html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="pb-0"]),
-html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="pb-0"]) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh):not([class*="pb-0"]),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh):not([class*="pb-0"]),
+html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh):not([class*="pb-0"]) {
   padding-bottom: var(--hero-bottom-gap) !important;
 }
 
 /* Vertically center non-flex hero sections cleanly inside the 100vh frame */
-html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="flex"]),
-html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not([class*="flex"]) {
+html body main > section:first-child:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh):not([class*="flex"]),
+html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not(.compact-hero-45dvh):not(.compact-hero-50dvh):not([class*="flex"]) {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Compact 45dvh Hero Override (Blog & Press Release pages only) */
+/* Compact 45dvh & 50dvh Hero Overrides (Blog, Press Release & Life at Inceptives Digital) */
 html body main section.compact-hero-45dvh {
   box-sizing: border-box !important;
   min-height: 45dvh !important;
@@ -89,11 +89,28 @@ html body main section.compact-hero-45dvh {
   justify-content: center !important;
 }
 
+html body main section.compact-hero-50dvh {
+  box-sizing: border-box !important;
+  min-height: 50dvh !important;
+  height: auto !important;
+  padding-top: var(--hero-header-clearance) !important;
+  padding-bottom: 48px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
 @media (max-width: 639px) {
   html body main section.compact-hero-45dvh {
     min-height: 45dvh !important;
     padding-top: 108px !important;
     padding-bottom: 32px !important;
+  }
+
+  html body main section.compact-hero-50dvh {
+    min-height: 50dvh !important;
+    padding-top: 108px !important;
+    padding-bottom: 36px !important;
   }
 }
 

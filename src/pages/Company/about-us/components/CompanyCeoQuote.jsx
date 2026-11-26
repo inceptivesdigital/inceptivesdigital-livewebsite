@@ -1,3 +1,5 @@
+import hannanAvatar from '../../../../assets/hannan-shahnoor-avatar.png'
+
 export default function CompanyCeoQuote() {
   return (
     <section className="py-16 sm:py-24 bg-[#050505] relative overflow-hidden">
@@ -18,12 +20,13 @@ export default function CompanyCeoQuote() {
               </blockquote>
 
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#00CE44] bg-[#202020] shrink-0">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#00CE44] bg-[#202020] shrink-0">
                   <img
-                    src="/assets/about-us/about-men.png"
+                    src={hannanAvatar}
                     alt="Hannan Shahnoor"
-                    className="w-full h-full object-cover object-top select-none"
+                    className="w-full h-full object-cover object-center select-none"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div>
