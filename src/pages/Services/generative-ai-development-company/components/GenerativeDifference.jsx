@@ -1,4 +1,5 @@
 import { BrainCircuit, TriangleAlert, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const points = [
   {
@@ -11,11 +12,11 @@ const points = [
     icon: TriangleAlert,
     title: 'Where Most Generative AI Projects Go Wrong',
     description:
-      'The model is rarely the problem. Weak retrieval pipelines, missing governance controls, and no evaluation framework are challenges that often appear after launch, when they are expensive to fix.',
+      'The model is rarely the problem. Weak retrieval pipelines, missing governance controls, and no evaluation framework are the challenges that appear after launch, when they are expensive to fix.',
   },
   {
     icon: Workflow,
-    title: 'What Production-Ready Generative AI Requires',
+    title: 'What Production-Ready Generative AI Actually Requires',
     description:
       'Grounded retrieval connected to your data. Secure integrations with your existing software. Evaluation pipelines that catch hallucinations before they reach users.',
   },
@@ -30,15 +31,13 @@ export default function GenerativeDifference() {
             Why Generative AI Projects Fail to Deliver and What It Takes to Build One That Does
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65]">
-            Most generative AI projects underperform not because the model is wrong, but because the production engineering around it was underbuilt—one reason the debate about{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/will-ai-really-replace-app-developers"
-              target="_blank"
-              rel="noopener noreferrer"
+            Most generative AI projects underperform not because the model is wrong, but because the production engineering around it was underbuilt- one reason the debate about{' '}
+            <Link
+              to="/blog/will-ai-really-replace-app-developers"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               AI replacing developers
-            </a>{' '}
+            </Link>{' '}
             misses what it takes to ship reliable systems.
           </p>
         </div>

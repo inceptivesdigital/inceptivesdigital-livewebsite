@@ -11,12 +11,13 @@ import MachineModels from './components/MachineModels'
 import MachineProcess from './components/MachineProcess'
 import MachineServices from './components/MachineServices'
 import MachineTechStack from './components/MachineTechStack'
+import { Link } from 'react-router-dom'
 
 export default function MachineLearningDevelopmentPage() {
   useEffect(() => {
     const title = 'Machine Learning Software Development Services & Solutions'
     const description =
-      'Our machine learning development services reduce manual tasks by 50%, improve forecasting accuracy, and deliver scalable, reliable AI systems.'
+      'Our Machine learning development services reduce manual tasks by 50%, improve forecasting accuracy, and deliver scalable, reliable AI systems.'
     const canonical = 'https://inceptivesdigital.com/machine-learning-development-services'
 
     document.title = title
@@ -64,14 +65,12 @@ export default function MachineLearningDevelopmentPage() {
         subtitle={
           <>
             See how{' '}
-            <a
-              href="https://inceptivesdigital.com/digital-product-development"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/digital-product-development"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               digital product development
-            </a>{' '}
+            </Link>{' '}
             with machine learning improved forecasting, automation, personalization, and data-driven decision-making.
           </>
         }

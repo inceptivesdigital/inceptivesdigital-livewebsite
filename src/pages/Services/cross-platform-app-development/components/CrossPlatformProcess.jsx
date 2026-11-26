@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function CrossPlatformProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -58,14 +59,12 @@ export default function CrossPlatformProcess() {
       cardDesc: (
         <>
           Every engagement begins with a{' '}
-          <a
-            href="https://inceptivesdigital.com/discovery-sprint"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/discovery-sprint"
             className="text-inherit underline underline-offset-4 hover:opacity-80 transition-colors"
-          >
+>
             discovery sprint
-          </a>{' '}
+          </Link>{' '}
           that documents technical scope, feature priorities, and stack selection. A locked functional specification, fixed timeline, and confirmed cost are produced before the first sprint begins.
         </>
       ),

@@ -83,9 +83,6 @@ export default function SystemTechStack() {
                 {technology}
               </div>
             ))}
-            <p className="col-span-full border-t border-black/20 pt-4 text-sm leading-relaxed text-black">
-              {active.description}
-            </p>
           </div>
         </div>
       </div>

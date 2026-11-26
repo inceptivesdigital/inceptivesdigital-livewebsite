@@ -58,7 +58,7 @@ export default function AiAgentDevelopmentPage() {
             AI Agent Development <span className="text-[#00CE44]">Case Studies and Results</span>
           </>
         }
-        subtitle="Explore real projects that automated multi-step workflows, connected business systems, and reduced repetitive operational work."
+        subtitle="Explore real AI agent projects that automated multi-step workflows, connected business systems, and reduced repetitive operational work."
       />
       <Testimonials
         heading={
@@ -67,7 +67,7 @@ export default function AiAgentDevelopmentPage() {
             <span className="text-[#00CE44]">AI Agent Development</span>
           </>
         }
-        subtitle="Hear directly from clients about the delivery experience, operational improvements, and business value created by their AI solutions."
+        subtitle="Hear directly from clients about the delivery experience, operational improvements, and business value created by their AI agent solutions."
       />
       <AgentProcess />
       <AgentTechStack />

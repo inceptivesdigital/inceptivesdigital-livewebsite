@@ -212,8 +212,8 @@ export default function DigitalProductDevelopment() {
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6 text-left space-y-5">
-              <span className="inline-block text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-[0.2em]">
-                DIGITAL PRODUCT DEVELOPMENT
+              <span className="inline-block text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px]">
+                Digital Product Development
               </span>
 
               <h1 className="text-[32px] sm:text-[42px] lg:text-[46px] font-bold text-white leading-[1.14] tracking-tight">

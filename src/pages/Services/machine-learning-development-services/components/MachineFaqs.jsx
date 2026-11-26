@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
   {
@@ -10,8 +11,8 @@ const faqs = [
     a: (
       <>
         Traditional software and{' '}
-        <a href="https://inceptivesdigital.com/rpa-development-services">RPA development</a> typically rely on explicit rules, while machine learning systems learn patterns from data. The{' '}
-        <a href="https://inceptivesdigital.com/ai-development">AI development</a> process involves data preparation, model training, and ongoing monitoring rather than writing deterministic logic.
+        <Link to="/rpa-development-services">RPA development</Link> typically rely on explicit rules, while machine learning systems learn patterns from data. The{' '}
+        <Link to="/ai-development">AI development</Link> process involves data preparation, model training, and ongoing monitoring rather than writing deterministic logic.
       </>
     ),
   },
@@ -20,7 +21,7 @@ const faqs = [
     a: (
       <>
         A focused ML model or proof of concept starts from $20K. A full production ML system with data pipelines, integration, and deployment typically ranges from $60K to $250K. The precise number is defined in the{' '}
-        <a href="https://inceptivesdigital.com/discovery-sprint">Discovery Sprint</a>.
+        <Link to="/discovery-sprint">Discovery Sprint</Link>.
       </>
     ),
   },
@@ -28,7 +29,7 @@ const faqs = [
     q: '4. How long does it take to build a machine learning model?',
     a: (
       <>
-        A focused <a href="https://inceptivesdigital.com/ai-mvp-development">AI MVP</a> or ML proof of concept typically takes 6 to 10 weeks. A full production ML system with data engineering, integration, and deployment takes 3 to 8 months, depending on data readiness and complexity.
+        A focused <Link to="/ai-mvp-development">AI MVP</Link> or ML proof of concept typically takes 6 to 10 weeks. A full production ML system with data engineering, integration, and deployment takes 3 to 8 months, depending on data readiness and complexity.
       </>
     ),
   },
@@ -41,7 +42,7 @@ const faqs = [
     a: (
       <>
         Yes. We integrate ML models into existing{' '}
-        <a href="https://inceptivesdigital.com/custom-software-development">custom software</a>, APIs, data warehouses, and business workflows. Integration architecture is defined in Discovery before development begins to ensure reliable performance across your full technology stack.
+        <Link to="/custom-software-development">custom software</Link>, APIs, data warehouses, and business workflows. Integration architecture is defined in Discovery before development begins to ensure reliable performance across your full technology stack.
       </>
     ),
   },

@@ -1,50 +1,52 @@
+import { Link } from 'react-router-dom'
+
 export default function AndroidIndustries() {
   const industries = [
     {
       title: 'Healthcare',
-      url: 'https://inceptivesdigital.com/healthcare-app-development',
+      url: '/healthcare-app-development',
       icon: '/assets/industries-icons/industries-healthcare.svg',
       desc: 'Telehealth, clinical workflows, patient engagement, and secure health-data integrations for connected care.',
     },
     {
       title: 'Fintech',
-      url: 'https://inceptivesdigital.com/fintech-app-development',
+      url: '/fintech-app-development',
       icon: '/assets/industries-icons/industries-fintech.svg',
       desc: 'Secure financial experiences spanning digital payments, banking workflows, transactions, and sensitive customer data.',
     },
     {
       title: 'eCommerce',
-      url: 'https://inceptivesdigital.com/ecommerce-app-development-company',
+      url: '/ecommerce-app-development-company',
       icon: '/assets/industries-icons/industries-cart.svg',
       desc: 'High-conversion shopping experiences connecting discovery, personalization, checkout, payments, and fulfillment.',
     },
     {
       title: 'Real Estate',
-      url: 'https://inceptivesdigital.com/real-estate-app-development-company',
+      url: '/real-estate-app-development-company',
       icon: '/assets/industries-icons/industries-realstate.svg',
       desc: 'Digital property experiences built around listings, search, buyer engagement, and agent operations.',
     },
     {
       title: 'Fitness',
-      url: 'https://inceptivesdigital.com/fitness-app-development',
+      url: '/fitness-app-development',
       icon: '/assets/industries-icons/industries-fitness.svg',
       desc: 'Connected experiences combining workouts, wearable data, subscriptions, health insights, and personalized engagement.',
     },
     {
       title: 'eLearning',
-      url: 'https://inceptivesdigital.com/education-app-development-company',
+      url: '/education-app-development-company',
       icon: '/assets/industries-icons/industries-education.svg',
       desc: 'Interactive learning experiences supporting courses, assessments, live instruction, progress, and learner engagement.',
     },
     {
       title: 'Travel',
-      url: 'https://inceptivesdigital.com/travel-app-development-company',
+      url: '/travel-app-development-company',
       icon: '/assets/industries-icons/industries-traveling1.svg',
       desc: 'End-to-end travel experiences connecting discovery, bookings, itineraries, navigation, and real-time trip information.',
     },
     {
       title: 'Food Delivery',
-      url: 'https://inceptivesdigital.com/blog/food-delivery-app-development',
+      url: '/blog/food-delivery-app-development',
       icon: '/assets/industries-icons/Food-Delivery.svg',
       desc: 'On-demand platforms coordinating restaurants, customers, payments, dispatch, and real-time delivery operations.',
     },
@@ -90,12 +92,12 @@ export default function AndroidIndustries() {
               {/* Title: H3 tag, 25px font-size bold */}
               <h3 className="text-[22px] sm:text-[25px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
                 {ind.url ? (
-                  <a
-                    href={ind.url}
+                  <Link
+                    to={ind.url}
                     className="text-[#00CE44] group-hover:text-black transition-colors underline underline-offset-4"
                   >
                     {ind.title}
-                  </a>
+                  </Link>
                 ) : (
                   ind.title
                 )}

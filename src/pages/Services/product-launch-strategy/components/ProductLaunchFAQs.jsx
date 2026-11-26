@@ -3,7 +3,7 @@ import FAQSection from '../../../../components/FAQSection'
 const faqs = [
     {
       q: 'What is a product launch strategy?',
-      a: 'A product launch strategy is a documented framework that defines who your product is for, how it will be positioned against alternatives, and the exact steps required to bring it to market. It covers the four to eight weeks before launch and the four to eight weeks after, since most launch failures happen in one of those two windows rather than at the go-live moment itself.',
+      a: 'A product launch strategy is a documented framework that defines who you are launching to, how you will reach them, what message will move them to act, and what metrics will tell you whether it is working. It covers the four to eight weeks before launch and the four to eight weeks after, since most launch failures happen in one of those two windows rather than at the go-live moment itself.',
     },
     {
       q: 'How long does a product launch strategy take to develop?',
@@ -55,7 +55,14 @@ export default function ProductLaunchFAQs() {
   return (
     <FAQSection
       faqs={faqs}
-      heading={<>Frequently Asked Questions About{' '} <span className="text-[#00CE44]">Product Launch Strategy</span></>}
+      heading={
+        <>
+          <span className="block text-[#00CE44] text-sm sm:text-base font-semibold tracking-wide uppercase mb-2">
+            FAQs
+          </span>
+          Product Launch Strategy Service
+        </>
+      }
     />
   )
 }

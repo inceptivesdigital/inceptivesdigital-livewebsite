@@ -11,13 +11,11 @@ const faqs = [
     a: (
       <>
         A focused{' '}
-        <a
-          href="https://inceptivesdigital.com/ai-mvp-development"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link
+          to="/ai-mvp-development"
+>
           AI MVP
-        </a>{' '}
+        </Link>{' '}
         takes 8 to 12 weeks. A full-scale AI application takes 3 to 9 months, depending on scope, data readiness, and integration complexity.
       </>
     ),
@@ -52,13 +50,11 @@ const faqs = [
     a: (
       <>
         Yes. An{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-mvp-development-guide"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link
+          to="/blog/ai-mvp-development-guide"
+>
           AI MVP development approach
-        </a>{' '}
+        </Link>{' '}
         validates the core concept and identifies the highest-value features before full investment. Typically scoped and delivered in 8 to 12 weeks.
       </>
     ),

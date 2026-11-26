@@ -33,7 +33,7 @@ export default function StaffAugmentation() {
   ]
 
   return (
-    <div className="pt-32 sm:pt-40 pb-20">
+    <div className="pb-20">
       <section className="px-4 sm:px-8 mb-20">
         <div className="w-full mx-auto xl:max-w-[1440px] 2xl:max-w-[1600px] text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#111419] border border-white/10 text-[#00CE44] text-xs font-semibold mb-6">

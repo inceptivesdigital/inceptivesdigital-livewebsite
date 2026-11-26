@@ -89,7 +89,7 @@ export default function ProductLaunchWhyChooseUs() {
               Take the First Step Toward a Successful Launch
             </h3>
             <p className="text-white/80 text-sm sm:text-base font-normal max-w-2xl">
-              Talk to our product strategists about your product, your timeline, and your goals.
+              The right strategy, the right team, and the right timing are all within reach. The next move is yours.
             </p>
           </div>
           <a

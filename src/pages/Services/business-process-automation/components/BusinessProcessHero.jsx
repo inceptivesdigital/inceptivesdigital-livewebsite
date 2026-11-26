@@ -1,8 +1,9 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function BusinessProcessHero() {
   return (
-    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-[#101010] pt-24 text-white">
+    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-[#101010] pt-24 pb-12 text-white">
       <img
         src="/assets/ai-development/business-process-banner.svg"
         alt=""
@@ -11,16 +12,23 @@ export default function BusinessProcessHero() {
         fetchPriority="high"
       />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-[#101010] via-[#101010]/90 to-transparent md:via-[#101010]/60" />
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-10 md:px-16 lg:px-20">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-8 sm:px-10 sm:py-10 md:px-16 lg:px-20">
         <div className="max-w-[620px]">
-          <p className="mb-2 text-sm font-bold text-[#00CE44] sm:text-base">
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-2">
             Business Process Automation Services
-          </p>
-          <h1 className="mb-5 text-[36px] font-bold leading-[1.08] tracking-tight sm:text-[44px] lg:text-[54px]">
-            <span className="text-[#00CE44]">Operational Processes,</span> Executed Without Manual Effort
           </h1>
+          <h2 className="mb-5 text-[36px] font-bold leading-[1.08] tracking-tight text-white sm:text-[44px] lg:text-[54px]">
+            Operational Processes, Executed Without Manual Effort
+          </h2>
           <p className="mb-6 max-w-[590px] text-[15px] leading-relaxed text-white/85 sm:text-base">
-            Business process automation services remove manual execution from structured workflows and use system integration and API automation to connect how operations run across teams and tools.
+            Business process automation services remove manual execution from structured workflows and use{' '}
+            <Link
+              to="/system-integration-api-automation"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              system integration and API automation
+            </Link>{' '}
+            to connect how operations run across teams and tools.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">
               <a

@@ -1,0 +1,38 @@
+User-Agent: *
+Disallow: *?__*
+Disallow: *?utm*
+Disallow: /thank-you/
+Disallow: /thankyou/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-includes/
+Disallow: /wp-content/cache/
+Disallow: /wp-json/
+Disallow: */feed/
+Disallow: */feed
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /category/*/feed/
+Disallow: /tag/*/feed/
+Disallow: /author/*/feed/
+
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+Sitemap: https://inceptivesdigital.com/sitemap_index.xml
+Sitemap: https://inceptivesdigital.com/sitemap.xml

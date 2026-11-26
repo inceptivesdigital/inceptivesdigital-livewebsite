@@ -1,4 +1,5 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function GenerativeHero() {
   return (
@@ -7,22 +8,20 @@ export default function GenerativeHero() {
     >
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-8 items-center">
         <div className="w-full flex flex-col items-start text-left">
-          <p className="text-[#00CE44] text-sm sm:text-base font-bold mb-3">
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
             Generative AI Development Company
-          </p>
-          <h1 className="text-[36px] sm:text-[44px] md:text-[50px] xl:text-[54px] font-bold leading-[1.08] tracking-tight text-white mb-5 max-w-[640px]">
-            Systems That Generate, Retrieve, and Decide With Your Data Behind Them
           </h1>
+          <h2 className="text-[36px] sm:text-[44px] md:text-[50px] xl:text-[54px] font-bold leading-[1.08] tracking-tight text-white mb-5 max-w-[640px]">
+            Systems That Generate, Retrieve, and Decide With Your Data Behind Them
+          </h2>
           <p className="text-white/85 text-[15px] sm:text-[16px] md:text-[17px] leading-[1.68] max-w-[650px] mb-7">
             Content generation, knowledge retrieval, document intelligence, and{' '}
-            <a
-              href="https://inceptivesdigital.com/ai-automation-services"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/ai-automation-services"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
-              workflow automation
-            </a>{' '}
+>
+              AI automation
+            </Link>{' '}
             are built into generative AI systems for businesses that need accurate, secure, and maintainable AI in production.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">

@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { ArrowRight, Bot } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
     name: 'Frameworks & Libraries',
+    description: 'The foundation layer for every autonomous capability is built into the agent.',
     items: [
       { name: 'PyTorch', image: '/assets/ai-development/steck01.png' },
       { name: 'TensorFlow', image: '/assets/ai-development/02stack.png' },
-      { name: 'Hugging Face', image: '/assets/ai-development/03stack.png' },
+      { name: 'HuggingFace Transformers', image: '/assets/ai-development/03stack.png' },
       { name: 'LangChain', image: '/assets/ai-development/04stack.png' },
       { name: 'LlamaIndex', image: '/assets/ai-development/05stack.png' },
       { name: 'AutoGen' },
@@ -16,6 +18,7 @@ const categories = [
   },
   {
     name: 'Vector and Retrieval Systems',
+    description: 'The retrieval infrastructure that grounds agent responses and decisions in your company data.',
     items: [
       { name: 'Pinecone', image: '/assets/ai-development/06stack.png' },
       { name: 'Weaviate', image: '/assets/ai-development/07stack.png' },
@@ -26,6 +29,11 @@ const categories = [
   },
   {
     name: 'Backend and API',
+    description: (
+      <>
+        <Link to="/backend-api-development">Backend API development</Link> provides the server-side infrastructure that connects AI models to the agent application layer.
+      </>
+    ),
     items: [
       { name: 'Node.js', image: '/assets/healthcare/tech/node.jpg' },
       { name: 'FastAPI', image: '/assets/react-native/fastapi.jpg' },
@@ -37,6 +45,7 @@ const categories = [
   },
   {
     name: 'Cloud & MLOps',
+    description: 'Deployment, scaling, and monitoring infrastructure for production AI agents.',
     items: [
       { name: 'AWS SageMaker', image: '/assets/ai-development/03stack-1.png' },
       { name: 'Google Vertex AI', image: '/assets/ai-development/03stack-2-1.jpg' },
@@ -86,24 +95,26 @@ export default function AgentTechStack() {
             ))}
           </div>
 
-          <div className="lg:col-span-8 rounded-2xl bg-[#00CE44] p-6 sm:p-10 flex flex-wrap items-start content-start gap-6 sm:gap-8">
-            {activeItems.map((tech) => (
-              <div key={tech.name} className="flex flex-col items-center w-24 sm:w-28 text-center">
-                <div className="w-24 sm:w-28 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 mb-2.5">
-                  {tech.image ? (
-                    <img
-                      src={tech.image}
-                      alt={tech.name}
-                      className="w-full h-full object-contain"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <Bot className="w-10 h-10 text-[#00CE44]" aria-hidden="true" />
-                  )}
+          <div className="lg:col-span-8 rounded-2xl bg-[#00CE44] p-6 sm:p-10 flex flex-col justify-start">
+            <div className="flex flex-wrap items-start content-start gap-6 sm:gap-8">
+              {activeItems.map((tech) => (
+                <div key={tech.name} className="flex flex-col items-center w-24 sm:w-28 text-center">
+                  <div className="w-24 sm:w-28 h-20 sm:h-24 rounded-xl bg-white flex items-center justify-center p-2.5 mb-2.5">
+                    {tech.image ? (
+                      <img
+                        src={tech.image}
+                        alt={tech.name}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <Bot className="w-10 h-10 text-[#00CE44]" aria-hidden="true" />
+                    )}
+                  </div>
+                  <span className="text-black text-xs sm:text-sm leading-tight">{tech.name}</span>
                 </div>
-                <span className="text-black text-xs sm:text-sm leading-tight">{tech.name}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

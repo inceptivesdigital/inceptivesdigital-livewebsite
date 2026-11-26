@@ -50,26 +50,26 @@ export default function AndroidAwardsSection() {
 
               <p>
                 With a presence in{' '}
-                <a
-                  href="https://inceptivesdigital.com/mobile-app-development-austin"
+                <Link
+                  to="/mobile-app-development-austin"
                   className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-                >
+>
                   Austin
-                </a>
+                </Link>
                 ,{' '}
-                <a
-                  href="https://inceptivesdigital.com/mobile-app-development-new-york"
+                <Link
+                  to="/mobile-app-development-new-york"
                   className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-                >
+>
                   New York
-                </a>
+                </Link>
                 ,{' '}
-                <a
-                  href="https://inceptivesdigital.com/mobile-app-development-san-francisco"
+                <Link
+                  to="/mobile-app-development-san-francisco"
                   className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-                >
+>
                   San Francisco
-                </a>
+                </Link>
                 , and the Dallas–Fort Worth area, the team serves clients nationwide. Businesses can engage our Android developers for custom applications with direct technical collaboration and clearly defined delivery milestones.
               </p>
             </div>

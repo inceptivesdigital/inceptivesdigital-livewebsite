@@ -1,20 +1,41 @@
 import { useState } from 'react'
 import { Activity, Bot, GitBranch, Network, Search, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
     icon: Search,
     tab: 'Discovery',
     title: 'Process Discovery',
-    description:
-      'A Discovery Sprint identifies operational workflows, confirms automation suitability, and defines process boundaries before engineering begins. We leave this stage knowing exactly which workflows are ready to automate and which need restructuring first.',
+    description: (
+      <>
+        A{' '}
+        <Link
+          to="/discovery-sprint"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Discovery Sprint
+        </Link>{' '}
+        identifies operational workflows, confirms automation suitability, and defines process boundaries before engineering begins. We leave this stage knowing exactly which workflows are ready to automate and which need restructuring first.
+      </>
+    ),
   },
   {
     icon: GitBranch,
     tab: 'Blueprint',
     title: 'Workflow Blueprint',
-    description:
-      'Our digital product development process documents each workflow step, defines business rules, and maps exception paths before automation is built. The blueprint determines whether the automation performs in production or fails at the first edge case.',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/digital-product-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          digital product development
+        </Link>{' '}
+        process documents each workflow step, defines business rules, and maps exception paths before automation is built. The blueprint that determines whether the automation performs in production or fails at the first edge case.
+      </>
+    ),
   },
   {
     icon: Bot,
@@ -27,22 +48,62 @@ const steps = [
     icon: Network,
     tab: 'Connection',
     title: 'System Connection',
-    description:
-      'RPA bots can connect SAP, Oracle ERP, Salesforce, internal platforms, web applications, and mobile applications through APIs and direct system connectors. For user-facing automation, AI app development can expose cross-system workflows through intelligent digital interfaces while RPA handles structured execution behind the scenes.',
+    description: (
+      <>
+        RPA bots can connect SAP, Oracle ERP, Salesforce, internal platforms,{' '}
+        <Link
+          to="/web-app-development-company"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          web applications
+        </Link>
+        , and{' '}
+        <Link
+          to="/mobile-app-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          mobile applications
+        </Link>{' '}
+        through APIs and direct system connectors. For user-facing automation,{' '}
+        <Link
+          to="/ai-app-development-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI app development
+        </Link>{' '}
+        can expose cross-system workflows through intelligent digital interfaces while RPA handles structured execution behind the scenes.
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
     tab: 'Validation',
     title: 'Validation Gate',
     description:
-      'End-to-end workflow testing checks accuracy, reliability, and exception handling under real operational conditions. Every rule is validated. Every exception path is tested. No surprises after deployment.',
+      'End-to-end workflow testing for accuracy, reliability, and exception handling under real operational conditions. Every rule validated. Every exception path is tested. No surprises after deployment.',
   },
   {
     icon: Activity,
     tab: 'Live Optimisation',
     title: 'Live Optimisation',
-    description:
-      'Post-launch analytics and iteration track bot performance after deployment and surface workflow exceptions in real time. Product scaling keeps RPA workflows aligned with increasing execution volumes and changing operational requirements. The automation that launches is the starting point, not the finished state.',
+    description: (
+      <>
+        <Link
+          to="/post-launch-analytics-iteration"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Post-launch analytics and iteration
+        </Link>{' '}
+        track bot performance after deployment and surface workflow exceptions in real time.{' '}
+        <Link
+          to="/product-rescue-scaling"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Product scaling
+        </Link>{' '}
+        keeps RPA workflows aligned with increasing execution volumes and changing operational requirements. The automation that launches is the starting point, not the finished state.
+      </>
+    ),
   },
 ]
 

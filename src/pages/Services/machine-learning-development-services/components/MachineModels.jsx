@@ -1,4 +1,5 @@
 import { Activity, BrainCircuit, FileSearch, FileText, Network, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const modelTypes = [
   {
@@ -35,14 +36,12 @@ const modelTypes = [
     description: (
       <>
         ML systems can support{' '}
-        <a
-          href="https://inceptivesdigital.com/generative-ai-development-company"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/generative-ai-development-company"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           generative AI development
-        </a>{' '}
+        </Link>{' '}
         by understanding, classifying, and generating text at scale for language-driven automation and insights.
       </>
     ),
@@ -51,14 +50,12 @@ const modelTypes = [
       'Named entity recognition',
       <>
         Semantic search, Q&A systems, and{' '}
-        <a
-          href="https://inceptivesdigital.com/ai-chatbot-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-chatbot-development-services"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           AI chatbots
-        </a>
+        </Link>
       </>,
     ],
   },

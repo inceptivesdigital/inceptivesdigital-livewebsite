@@ -1,4 +1,5 @@
 import StandardTechStack from '../../../../components/StandardTechStack'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -63,14 +64,12 @@ export default function ChatbotTechStack() {
       subtitle={
         <>
           Every tool below is selected for the specific requirements of the build, not assumptions about{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/will-ai-really-replace-app-developers"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/will-ai-really-replace-app-developers"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             AI replacing app developers
-          </a>
+          </Link>
           . Not listed because we know the name. Listed because we have used it in production.
         </>
       }

@@ -1,11 +1,12 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function NlpHero() {
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] xl:h-screen flex flex-col xl:flex-row items-center bg-[#1b1b1b] text-white overflow-hidden">
+    <section className="relative w-full min-h-screen min-h-[100dvh] pb-10 xl:pb-10 flex flex-col xl:flex-row items-center bg-[#1b1b1b] text-white overflow-hidden">
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
-        <div className="flex flex-col items-start text-left py-12 xl:py-0 xl:w-[44%]">
-          <h1 className="text-[#00CE44] text-sm sm:text-base font-bold mb-3">
+        <div className="flex flex-col items-start text-left py-6 sm:py-8 xl:py-8 xl:w-[44%]">
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
             NLP Development Services
           </h1>
           <h2 className="w-full text-[34px] sm:text-[42px] md:text-[48px] font-bold leading-[1.08] tracking-tight text-white mb-5 max-w-[620px]">
@@ -13,14 +14,12 @@ export default function NlpHero() {
           </h2>
           <p className="w-full text-white/85 text-[15px] sm:text-[16px] leading-[1.65] max-w-[620px] mb-7">
             Through{' '}
-            <a
-              href="https://inceptivesdigital.com/digital-product-development"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/digital-product-development"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               digital product development
-            </a>
+            </Link>
             , text analysis, sentiment classification, entity extraction, document processing, and speech recognition can be built into products that need to understand language at scale.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">

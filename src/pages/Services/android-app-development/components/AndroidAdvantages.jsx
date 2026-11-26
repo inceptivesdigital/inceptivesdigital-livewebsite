@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function AndroidAdvantages() {
   const pillars = [
     {
@@ -9,12 +10,12 @@ export default function AndroidAdvantages() {
       desc: (
         <>
           New features shouldn&apos;t require major architectural changes with every update. Our Android developers build Kotlin-based applications around existing business systems, keeping the architecture flexible enough to support future{' '}
-          <a
-            href="https://inceptivesdigital.com/system-integration-api-automation"
+          <Link
+            to="/system-integration-api-automation"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             API integrations
-          </a>
+          </Link>
           .
         </>
       ),
@@ -28,12 +29,12 @@ export default function AndroidAdvantages() {
       desc: (
         <>
           Protect sensitive business data with{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-security-best-practices"
+          <Link
+            to="/blog/mobile-app-security-best-practices"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             mobile app security best practices
-          </a>{' '}
+          </Link>{' '}
           that account for Android-specific risks. Our engineers use Android Keystore for cryptographic key management and biometric authentication where appropriate while securing communication with backend APIs for your Android apps.
         </>
       ),
@@ -43,12 +44,12 @@ export default function AndroidAdvantages() {
       desc: (
         <>
           Every milestone in the{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-development-timeline"
+          <Link
+            to="/blog/app-development-timeline"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             app development timeline
-          </a>{' '}
+          </Link>{' '}
           gives clients a tangible view of product progress. Android engineers deliver working functionality for review, allowing stakeholders to evaluate implementation decisions before the next development cycle.
         </>
       ),

@@ -8,75 +8,72 @@ import {
   ShieldCheck,
   Target,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const challenges = [
   {
     icon: Target,
-    title: 'Output Accuracy',
+    title: '1. Output Accuracy',
     description:
       'Hallucinations, inconsistent responses, and unreliable outputs are addressed through grounded retrieval, structured prompts, and evaluation pipelines before deployment.',
   },
   {
     icon: Database,
-    title: 'Data Quality',
+    title: '2. Data Quality',
     description: (
       <>
         AI systems are only as good as the data behind them. We prepare, clean, classify, and secure the information used for training, retrieval, and generation before{' '}
-        <a
-          href="https://inceptivesdigital.com/ai-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-development"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           AI development
-        </a>{' '}
+        </Link>{' '}
         begins.
       </>
     ),
   },
   {
     icon: Network,
-    title: 'Model Selection',
+    title: '3. Model Selection',
     description:
-      'Choosing between proprietary and open-source models depends on latency, privacy, context length, and operating cost. We make that decision in Discovery based on your requirements.',
+      'Choosing between proprietary and open-source models depends on latency, privacy, context length, and operating cost. We make that decision in Discovery based on your specific requirements.',
   },
   {
     icon: CircleDollarSign,
-    title: 'Cost Control',
+    title: '4. Cost Control',
     description:
       'Inference costs, token usage, and infrastructure expenses are tracked and optimised from the architecture stage. Production costs should never be a surprise.',
   },
   {
     icon: LockKeyhole,
-    title: 'Security and Access',
+    title: '5. Security and Access',
     description:
       'Sensitive data is protected through encryption, role-based permissions, private deployment options, and controlled model access built into the architecture from day one.',
   },
   {
     icon: Network,
-    title: 'Integration Complexity',
+    title: '6. Integration Complexity',
     description:
-      'We map CRM, ERP, CMS, and internal software integration requirements before development to avoid disruption to existing workflows.',
+      'Connecting generative AI with CRM, ERP, CMS, and internal software requires careful architecture planning. We map integration requirements before development begins to avoid disruption to existing workflows.',
   },
   {
     icon: Scale,
-    title: 'Ethical Issues in Generative AI',
+    title: '7. Ethical Issues in Generative AI',
     description:
       'Moderation, audit trails, human review workflows, and bias testing are built into systems where harmful, biased, or non-compliant outputs carry real risk.',
   },
   {
     icon: Activity,
-    title: 'Long-Term Reliability',
+    title: '8. Long-Term Reliability',
     description: (
       <>
-        <a
-          href="https://inceptivesdigital.com/post-launch-analytics-iteration"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/post-launch-analytics-iteration"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           Post-launch analytics and iteration
-        </a>{' '}
+        </Link>{' '}
         monitor retrieval quality, prompt performance, drift, and latency after deployment. Systems are updated as requirements change and usage grows.
       </>
     ),

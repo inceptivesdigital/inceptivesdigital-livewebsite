@@ -85,7 +85,7 @@ export default function FullWidthCtaSection({
               />
             </div>
           </div>
-        ) : (
+        ) : bgImage ? (
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div className="max-w-3xl text-left">
               <h2 className="text-[26px] sm:text-[34px] lg:text-[40px] font-bold text-white tracking-tight leading-[1.18] mb-3">
@@ -106,6 +106,23 @@ export default function FullWidthCtaSection({
                 {ctaText}
               </a>
             </div>
+          </div>
+        ) : (
+          <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+            <h2 className="text-[26px] sm:text-[34px] lg:text-[40px] font-bold text-white tracking-tight leading-[1.18] mb-4">
+              {heading}
+            </h2>
+            {description && (
+              <p className="text-white/85 text-[15px] sm:text-[17px] leading-relaxed font-normal mb-8">
+                {description}
+              </p>
+            )}
+            <a
+              href={ctaHref}
+              className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-[15px] sm:text-[16px] whitespace-nowrap transition-colors border-0"
+            >
+              {ctaText}
+            </a>
           </div>
         )}
       </div>

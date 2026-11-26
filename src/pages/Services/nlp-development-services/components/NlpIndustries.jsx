@@ -1,4 +1,5 @@
 import { Activity, BrainCircuit, FileSearch, FileText, Network, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const industries = [
   {
@@ -8,14 +9,12 @@ const industries = [
       'Financial report analysis and summarisation',
       'Fraud detection through communication monitoring',
       <>
-        <a
-          href="https://inceptivesdigital.com/ai-agent-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-agent-development"
           className="text-white underline group-hover:text-black"
-        >
+>
           AI agent development
-        </a>{' '}
+        </Link>{' '}
         for customer query automation and intent classification
       </>,
     ],

@@ -1,4 +1,4 @@
-export default function AwardsSection() {
+export default function AwardsSection({ heading = 'Awards And Recognitions' } = {}) {
   const awards = [
     {
       id: 'designrush',
@@ -32,7 +32,7 @@ export default function AwardsSection() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         {/* Title: Centered, Bold, 40px Font Size */}
         <h2 className="text-center font-bold text-3xl sm:text-4xl lg:text-[40px] text-white tracking-tight leading-tight mb-12 sm:mb-16">
-          Awards And Recognitions
+          {heading}
         </h2>
 
         {/* Static Row: All 5 Awards at Equal Uniform Size, No Slider */}

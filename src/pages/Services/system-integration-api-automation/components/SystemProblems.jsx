@@ -1,9 +1,10 @@
 import { Activity, Database, GitBranch, Network, RefreshCw, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const problems = [
   {
     icon: Database,
-    title: 'Manual Data Transfer Between Systems',
+    title: '1. Manual Data Transfer Between Systems',
     description:
       'Data is repeatedly copied between applications like CRM, ERP, and internal tools without direct system communication.',
     impacts: ['Time-consuming operations', 'High error rates', 'Delayed updates across systems'],
@@ -11,7 +12,7 @@ const problems = [
   },
   {
     icon: Network,
-    title: 'Fragmented Application Ecosystems',
+    title: '2. Fragmented Application Ecosystems',
     description:
       'Business tools operate in isolation, creating disconnected workflows across departments.',
     impacts: ['Operational silos', 'Duplicate work', 'Inconsistent data across platforms'],
@@ -19,7 +20,7 @@ const problems = [
   },
   {
     icon: RefreshCw,
-    title: 'Delayed Data Synchronization',
+    title: '3. Delayed Data Synchronization',
     description:
       'Critical business data is updated manually or in batches instead of real time.',
     impacts: ['Outdated reporting', 'Slow decision-making', 'Misaligned operations'],
@@ -27,16 +28,36 @@ const problems = [
   },
   {
     icon: GitBranch,
-    title: 'Integration Dependency on Manual Work',
-    description:
-      'Teams often rely on exports, imports, and manual system interactions where RPA development services can automate repetitive transfer and processing tasks.',
+    title: '4. Integration Dependency on Manual Work',
+    description: (
+      <>
+        Teams often rely on exports, imports, and manual system interactions where{' '}
+        <Link
+          to="/rpa-development-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          RPA development services
+        </Link>{' '}
+        can automate repetitive transfer and processing tasks.
+      </>
+    ),
     impacts: ['Operational overhead', 'Process delays', 'Increased dependency on technical staff'],
-    solution:
-      'Direct system-to-system connections eliminate manual intervention and create the connected infrastructure required for AI automation.',
+    solution: (
+      <>
+        Direct system-to-system connections eliminate manual intervention and create the connected infrastructure required for{' '}
+        <Link
+          to="/ai-automation-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI automation
+        </Link>
+        .
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
-    title: 'Inconsistent Data Across Platforms',
+    title: '5. Inconsistent Data Across Platforms',
     description:
       'Different systems store different versions of the same data, creating operational mismatches.',
     impacts: ['Reporting inconsistencies', 'Compliance risks', 'Data integrity issues'],
@@ -44,12 +65,22 @@ const problems = [
   },
   {
     icon: Activity,
-    title: 'Lack of Workflow Connectivity',
+    title: '6. Lack of Workflow Connectivity',
     description:
       'Processes are split across multiple tools without an automated flow between steps.',
     impacts: ['Broken workflows', 'Manual handoffs', 'Reduced operational efficiency'],
-    solution:
-      'Connected workflows built through structured API integration layers allow AI agents to access data and act across multiple business systems.',
+    solution: (
+      <>
+        Connected workflows built through structured API integration layers allow{' '}
+        <Link
+          to="/ai-agent-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI agents
+        </Link>{' '}
+        to access data and act across multiple business systems.
+      </>
+    ),
   },
 ]
 
@@ -62,7 +93,14 @@ export default function SystemProblems() {
             Operational Gaps Created by Disconnected Systems
           </h2>
           <p className="text-[15px] leading-relaxed text-white/80 sm:text-[17px]">
-            Disconnected systems create operational inefficiencies and limit business process automation by forcing teams to move data manually between tools, platforms, and databases.
+            Disconnected systems create operational inefficiencies and limit{' '}
+            <Link
+              to="/business-process-automation"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              business process automation
+            </Link>{' '}
+            by forcing teams to move data manually between tools, platforms, and databases.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

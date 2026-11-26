@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function CrossPlatformNativeVsCross() {
   const crossPlatformPoints = [
     'You want to launch on iOS and Android together.',
@@ -39,14 +40,12 @@ export default function CrossPlatformNativeVsCross() {
               Strategic Guide
             </span>
             <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug mb-3">
-              <a
-                href="https://inceptivesdigital.com/blog/native-vs-hybrid-vs-cross-platform-app-development"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/blog/native-vs-hybrid-vs-cross-platform-app-development"
                 className="underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-[#00CE44] transition-colors"
-              >
+>
                 Native vs. Cross-Platform App Development
-              </a>
+              </Link>
               : What Should You Choose?
             </h3>
             <p className="text-white/75 text-sm sm:text-base leading-relaxed font-normal">

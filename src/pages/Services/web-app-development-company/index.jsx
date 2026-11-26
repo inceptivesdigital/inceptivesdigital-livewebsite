@@ -388,6 +388,8 @@ export default function WebAppDevelopmentCompanyPage() {
         heading="Tell Us Your Web Application Idea, and We Will Bring It to Life"
         description="Share your idea with the team today. We will scope it, plan it, and build it into a product that lasts."
         buttonText="Start the Conversation"
+        image="/assets/digital-product-development/product-cta.png"
+        imageAlt="Web Application Showcase"
       />
 
       {/* 17. Testimonials */}

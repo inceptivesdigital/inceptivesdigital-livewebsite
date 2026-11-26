@@ -1,5 +1,6 @@
 import React from 'react'
 import { Cpu, AlertTriangle } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function AiAppDifference() {
   return (
@@ -15,14 +16,12 @@ export default function AiAppDifference() {
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.7] font-normal">
             Most apps that claim to use AI have a single model doing one thing in the background, rather than relying on{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/blog/ai-app-builders-vs-human-developers"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               AI app builders
-            </a>{' '}
+            </Link>{' '}
             for the entire product. That is not the same as an application built around AI from the architecture up.
           </p>
         </div>
@@ -35,14 +34,12 @@ export default function AiAppDifference() {
             </h3>
             <p className="text-white/85 group-hover:text-black/90 text-[15px] sm:text-[16px] leading-[1.7] font-normal transition-colors duration-200">
               A regular app adds AI after the core product is built. An AI-powered app is designed around what the intelligence needs to do from day one. The data model, backend architecture, and integration layer are all built around the AI requirements. Intelligence is not a feature. It is the product, and the role of{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/will-ai-really-replace-app-developers"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/blog/will-ai-really-replace-app-developers"
                 className="text-[#00CE44] group-hover:text-black underline transition-colors"
-              >
+>
                 AI app developers
-              </a>{' '}
+              </Link>{' '}
               remains central to building the systems around it.
             </p>
           </div>

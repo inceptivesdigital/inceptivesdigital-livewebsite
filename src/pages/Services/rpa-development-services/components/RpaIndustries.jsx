@@ -1,17 +1,18 @@
 import { Building2, Factory, HeartPulse, Landmark, ShoppingCart, Truck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const industries = [
   {
-    title: 'Finance',
+    title: '1. Finance',
     icon: Landmark,
     items: [
       'Invoice processing and reconciliation automation',
-      'Compliance checks and regulatory workflow automation',
+      'Compliance checks and regulatory reporting workflows',
       'Cross-system financial data synchronisation',
     ],
   },
   {
-    title: 'Healthcare',
+    title: '2. Healthcare',
     icon: HeartPulse,
     items: [
       'Medical record processing and data extraction automation',
@@ -20,16 +21,24 @@ const industries = [
     ],
   },
   {
-    title: 'Retail',
+    title: '3. Retail',
     icon: ShoppingCart,
     items: [
       'Order processing and fulfilment workflow automation',
       'Inventory tracking and stock level synchronisation',
-      'AI chatbot development combined with customer returns and support workflow automation',
+      <>
+        <Link
+          to="/ai-chatbot-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          AI chatbot development
+        </Link>{' '}
+        combined with customer returns and support workflow automation
+      </>,
     ],
   },
   {
-    title: 'Manufacturing',
+    title: '4. Manufacturing',
     icon: Factory,
     items: [
       'Production tracking and operations reporting automation',
@@ -38,7 +47,7 @@ const industries = [
     ],
   },
   {
-    title: 'Logistics',
+    title: '5. Logistics',
     icon: Truck,
     items: [
       'Shipment tracking and status update automation',
@@ -47,7 +56,7 @@ const industries = [
     ],
   },
   {
-    title: 'Enterprise Operations',
+    title: '6. Enterprise Operations',
     icon: Building2,
     items: [
       'HR onboarding and offboarding workflow automation',
@@ -80,7 +89,7 @@ export default function RpaIndustries() {
                 {title}
               </h3>
               <ul className="list-disc space-y-1.5 pl-4 text-[15px] leading-relaxed text-slate-300 transition-colors group-hover:text-black sm:text-base">
-                {items.map((item) => <li key={item}>{item}</li>)}
+                {items.map((item, index) => <li key={index}>{item}</li>)}
               </ul>
             </article>
           ))}

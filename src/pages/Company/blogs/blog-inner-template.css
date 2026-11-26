@@ -106,6 +106,11 @@
   min-width: 220px;
 }
 
+.id-blog .id-editorial-person > a {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
 .id-blog .id-editorial-person img {
   width: 48px;
   height: 48px;
@@ -578,6 +583,11 @@
   margin-bottom: 14px;
 }
 
+.id-blog .id-author-card > a {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
 .id-blog .id-author-card img {
   width: 64px;
   height: 64px;
@@ -602,11 +612,34 @@
   color: #101e19 !important;
 }
 
+.id-blog .id-author-card h3 a {
+  color: inherit !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.id-blog .id-author-card h3 a:hover {
+  color: #009d5b !important;
+  text-decoration: underline;
+}
+
 .id-blog .id-author-card p {
   font-size: 13.5px !important;
   color: #52635c !important;
   margin: 0 !important;
   line-height: 1.6 !important;
+}
+
+.id-blog .id-author-card p a {
+  color: #009d5b !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.id-blog .id-author-card p a:hover {
+  color: #072719 !important;
 }
 
 /* KEY TAKEAWAYS ACCORDION */
@@ -797,7 +830,12 @@
     padding: 16px;
     gap: 14px;
   }
-  .id-blog .id-author-card img {
+  .id-blog .id-author-card > a {
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
+.id-blog .id-author-card img {
     width: 48px;
     height: 48px;
   }

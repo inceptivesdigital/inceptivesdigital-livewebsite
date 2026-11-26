@@ -53,7 +53,7 @@ export default function SmartCapabilities() {
       key={cap.title}
       className="w-[130px] sm:w-[148px] h-[125px] sm:h-[138px] p-3.5 rounded-[16px] bg-[#111312]/90 border border-[#00CE44] flex flex-col items-center justify-center text-center shadow-none"
     >
-      <div className="w-10 h-10 mb-2.5 flex items-center justify-center shrink-0">
+      <div className="w-8 h-8 mb-2 flex items-center justify-center shrink-0">
         <img
           src={cap.icon}
           alt={cap.title}
@@ -61,7 +61,7 @@ export default function SmartCapabilities() {
           loading="lazy"
         />
       </div>
-      <h3 className="text-white text-[11px] sm:text-xs font-bold leading-snug">
+      <h3 className="text-white text-[11px] sm:text-[12px] font-normal leading-snug">
         {cap.title}
       </h3>
     </div>

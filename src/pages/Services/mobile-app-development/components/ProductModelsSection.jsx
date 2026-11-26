@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function ProductModelsSection() {
   const topLeftCard = {
     title: 'MVP Mobile App Development',
@@ -5,12 +6,12 @@ export default function ProductModelsSection() {
     desc: (
       <>
         Start with focused{' '}
-        <a
-          href="https://inceptivesdigital.com/mvp-development"
+        <Link
+          to="/mvp-development"
           className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-        >
+>
           MVP development
-        </a>{' '}
+        </Link>{' '}
         and essential functionality. Our custom mobile app development for startups prioritizes market readiness without unnecessary engineering overhead.
       </>
     ),

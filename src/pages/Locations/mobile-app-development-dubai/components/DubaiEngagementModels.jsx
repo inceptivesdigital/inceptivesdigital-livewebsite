@@ -29,17 +29,17 @@ export default function DubaiEngagementModels() {
   const models = [
     {
       title: 'Full-Cycle Product Development',
-      desc: 'A single team handles the complete build, including discovery, design, engineering, testing, and deployment. Project scope, delivery milestones, and payment terms are established upfront, with clear accountability throughout development. Best for early-stage founders and startups ready to build with one team managing end-to-end.',
+      desc: 'A single team handles the complete build, including discovery, design, engineering, testing, and deployment. Project scope, delivery milestones, and payment terms are established upfront, with clear accountability throughout development.',
       icon: FullCycleIcon,
     },
     {
-      title: 'Dedicated Teams',
-      desc: 'Consistent engineering capacity for products requiring regular releases, new functionality, or long-term technical support. Developers work against an agreed roadmap, with team composition and billing structured around ongoing project requirements. Ideal for enterprises with ongoing app development needs who want consistent experts on every sprint.',
+      title: 'Dedicated Development Teams',
+      desc: 'Consistent engineering capacity for products requiring regular releases, new functionality, or long-term technical support. Developers work against an agreed roadmap, with team composition and billing structured around ongoing project requirements.',
       icon: DedicatedTeamsIcon,
     },
     {
       title: 'IT Staff Augmentation',
-      desc: "Additional engineering expertise for teams managing an existing application or active development project. Specialists join established workflows and support specific technical requirements without changing the team's delivery structure or increasing permanent headcount. The right fit for tech firms already mid-build looking to close a skills gap.",
+      desc: "Additional engineering expertise for teams managing an existing application or active development project. Specialists join established workflows and support specific technical requirements without changing the team's delivery structure or increasing permanent headcount.",
       icon: StaffAugIcon,
     },
   ]

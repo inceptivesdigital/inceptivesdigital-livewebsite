@@ -28,7 +28,7 @@ export default function AiHero() {
           {/* Left Column: Category + Title + Subtitle + CTA + Review Badges */}
           <div className="lg:col-span-7 xl:col-span-7 text-left max-w-2xl">
             {/* Category Tag */}
-            <span className="text-[#00CE44] text-xs sm:text-sm font-bold tracking-widest uppercase block mb-3 sm:mb-4">
+            <span className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3 sm:mb-4">
               AI Development Services
             </span>
 

@@ -1,4 +1,5 @@
 import LocationProcessLayout from '../../../../components/LocationProcessLayout'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
@@ -9,15 +10,13 @@ const steps = [
     imageAlt: 'AI agent opportunity discovery',
     desc: (
       <>
-        Our{' '}
-        <a
-          href="https://inceptivesdigital.com/product-strategy-consulting"
-          target="_blank"
-          rel="noopener noreferrer"
+        The{' '}
+        <Link
+          to="/product-strategy-consulting"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           product strategy consulting
-        </a>{' '}
+        </Link>{' '}
         process maps business objectives, identifies agent use cases, and defines system touchpoints before development begins. KPIs, compliance requirements, and integration points are scoped in this stage. A clear build plan is established before a line of code is written.
       </>
     ),
@@ -40,14 +39,12 @@ const steps = [
     desc: (
       <>
         ML models and{' '}
-        <a
-          href="https://inceptivesdigital.com/nlp-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/nlp-development-services"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           NLP
-        </a>{' '}
+        </Link>{' '}
         pipelines are trained and integrated for decision-making and context management. Multi-step reasoning, state management, and exception handling are built into the agent architecture before deployment.
       </>
     ),
@@ -59,7 +56,7 @@ const steps = [
     image: '/assets/ai-development/process5.png',
     imageAlt: 'AI agent integration and testing',
     desc:
-      'Agents connect to CRM, ERP, databases, and existing systems. Unit, integration, and system testing are completed before deployment. Agent outputs are validated against real operational workflows to ensure accuracy and reliability.',
+      'Agent connected to CRM, ERP, databases, and existing systems. Unit, integration, and system testing completed before deployment. Agent outputs are validated against real operational workflows to ensure accuracy and reliability.',
   },
   {
     num: '05.',
@@ -69,15 +66,13 @@ const steps = [
     imageAlt: 'AI agent deployment and optimization',
     desc: (
       <>
-        Agents are deployed on AWS SageMaker, Google Vertex AI, or Azure ML. They are containerised with Docker and orchestrated with Kubernetes, while MLflow tracks performance and detects drift.{' '}
-        <a
-          href="https://inceptivesdigital.com/post-launch-analytics-iteration"
-          target="_blank"
-          rel="noopener noreferrer"
+        Deployed on AWS SageMaker, Google Vertex AI, or Azure ML. Containerised with Docker, orchestrated with Kubernetes. MLflow tracks performance and detects drift.{' '}
+        <Link
+          to="/post-launch-analytics-iteration"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           Post-launch analytics and iteration
-        </a>{' '}
+        </Link>{' '}
         guide model retraining and workflow refinement based on real operational data.
       </>
     ),
@@ -89,22 +84,20 @@ export default function AgentProcess() {
     <LocationProcessLayout
       heading={
         <>
-          Delivery Process Our AI Agent Development Company Follows{' '}
-          <span className="text-[#00CE44]">to Ship Production</span>
+          Delivery Process Our{' '}
+          <span className="text-[#00CE44]">AI Agent Development Company</span> Follows
         </>
       }
       subtitle={
         <>
-          Our{' '}
-          <a
-            href="https://inceptivesdigital.com/digital-product-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          The{' '}
+          <Link
+            to="/digital-product-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             digital product development
-          </a>{' '}
-          process follows every step because skipping one usually costs more than doing it right.
+          </Link>{' '}
+          process follows every step because skipping one usually costs more than doing it
         </>
       }
       steps={steps}

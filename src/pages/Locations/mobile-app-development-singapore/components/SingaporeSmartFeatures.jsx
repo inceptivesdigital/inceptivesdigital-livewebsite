@@ -107,7 +107,7 @@ export default function SingaporeSmartFeatures() {
                 key={idx}
                 className="p-5 sm:p-6 rounded-[20px] bg-[#12141a]/90 backdrop-blur-sm border-0 shadow-none flex flex-col items-center justify-center text-center transition-all duration-300 hover:scale-[1.03] hover:border hover:border-[#00CE44]/40 group"
               >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 mb-3.5 flex items-center justify-center">
+                <div className="w-8 h-8 mb-2.5 flex items-center justify-center">
                   <img
                     src={feat.icon}
                     alt={feat.title}
@@ -115,7 +115,7 @@ export default function SingaporeSmartFeatures() {
                     loading="lazy"
                   />
                 </div>
-                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#00CE44] transition-colors leading-snug">
+                <h3 className="text-[11px] sm:text-[13px] font-normal text-white group-hover:text-[#00CE44] transition-colors leading-snug">
                   {feat.title}
                 </h3>
               </div>

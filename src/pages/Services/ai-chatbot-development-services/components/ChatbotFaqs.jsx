@@ -7,13 +7,11 @@ const faqs = [
     a: (
       <>
         A simple customer support chatbot starts at $15K. A full enterprise knowledge assistant or RAG-based chatbot typically ranges from $40K to $150K, depending on complexity, integrations, and data infrastructure requirements. The precise number is defined in the{' '}
-        <a
-          href="https://inceptivesdigital.com/discovery-sprint"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link
+          to="/discovery-sprint"
+>
           Discovery Sprint
-        </a>
+        </Link>
         .
       </>
     ),
@@ -23,21 +21,17 @@ const faqs = [
     a: (
       <>
         A focused{' '}
-        <a
-          href="https://inceptivesdigital.com/ai-mvp-development"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link
+          to="/ai-mvp-development"
+>
           AI MVP development
-        </a>{' '}
+        </Link>{' '}
         cycle for a chatbot takes 6 to 10 weeks. According to the{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-mvp-development-guide"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link
+          to="/blog/ai-mvp-development-guide"
+>
           AI MVP development guides
-        </a>
+        </Link>
         , a full enterprise chatbot with complex integrations and RAG architecture takes 3 to 6 months, depending on scope, data readiness, and integration complexity.
       </>
     ),

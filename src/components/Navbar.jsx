@@ -36,13 +36,31 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
+    if (!mobileOpen) return
+
+    const scrollY = window.scrollY
+    const html = document.documentElement
+    const body = document.body
+
+    html.style.overflow = 'hidden'
+    html.style.overscrollBehavior = 'none'
+    body.style.overflow = 'hidden'
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollY}px`
+    body.style.left = '0'
+    body.style.right = '0'
+    body.style.width = '100%'
+
     return () => {
-      document.body.style.overflow = ''
+      html.style.overflow = ''
+      html.style.overscrollBehavior = ''
+      body.style.overflow = ''
+      body.style.position = ''
+      body.style.top = ''
+      body.style.left = ''
+      body.style.right = ''
+      body.style.width = ''
+      window.scrollTo(0, scrollY)
     }
   }, [mobileOpen])
 
@@ -89,15 +107,17 @@ export default function Navbar() {
               Services
             </Link>
 
-            <button
+            <Link
+              to="/industries"
               onMouseEnter={() => setActiveMenu('industries')}
-              onClick={() => setActiveMenu(activeMenu === 'industries' ? null : 'industries')}
               className={`text-[15px] font-medium transition-colors cursor-pointer py-1 ${
-                activeMenu === 'industries' ? 'text-[#00CE44]' : 'text-slate-200 hover:text-white'
+                activeMenu === 'industries' || location.pathname === '/industries'
+                  ? 'text-[#00CE44]'
+                  : 'text-slate-200 hover:text-white'
               }`}
             >
               Industries
-            </button>
+            </Link>
 
             <button
               onMouseEnter={() => setActiveMenu('locations')}
@@ -250,6 +270,7 @@ export default function Navbar() {
                 <li><Link to="/generative-ai-development-company" className="hover:text-white transition">Generative AI Development</Link></li>
                 <li><Link to="/machine-learning-development-services" className="hover:text-white transition">Machine Learning Development</Link></li>
                 <li><Link to="/nlp-development-services" className="hover:text-white transition">NLP Development</Link></li>
+                <li><Link to="/computer-vision-development-services" className="hover:text-white transition">Computer Vision Development</Link></li>
                 <li><Link to="/ai-mvp-development" className="hover:text-white transition">AI MVP Development</Link></li>
               </ul>
 
@@ -297,10 +318,13 @@ export default function Navbar() {
         {activeMenu === 'industries' && (
           <div className="hidden lg:flex w-full bg-[#27292c] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl shadow-black/90 mega-menu-dropdown overflow-hidden max-h-[calc(100vh-90px)] 2xl:max-h-none overflow-y-auto 2xl:overflow-visible megamenu-scroll">
             <div className="w-56 shrink-0 p-6 2xl:p-8 border-r border-white/10 flex items-start bg-[#232528]/80">
-              <div className="inline-flex items-center gap-2.5 text-[16px] 2xl:text-[20px] font-bold text-[#00CE44]">
+              <Link
+                to="/industries"
+                className="inline-flex items-center gap-2.5 text-[16px] 2xl:text-[20px] font-bold text-[#00CE44] hover:brightness-110 transition group"
+              >
                 <span>Industries</span>
-                <ArrowRight className="w-4 h-4 2xl:w-5 2xl:h-5 text-[#00CE44] stroke-[2]" />
-              </div>
+                <ArrowRight className="w-4 h-4 2xl:w-5 2xl:h-5 text-[#00CE44] stroke-[2] group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
 
             <div className="w-[340px] shrink-0 p-6 2xl:p-8 border-r border-white/10">
@@ -415,12 +439,21 @@ export default function Navbar() {
             2. Smooth scrolling (overflow-y-auto max-h-[82vh])
             3. Butter-smooth open/close animation
             ========================================================================= */}
+        {mobileOpen && (
+          <div
+            onClick={() => setMobileOpen(false)}
+            onTouchMove={(e) => e.preventDefault()}
+            className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-[2px] -z-10"
+            aria-hidden="true"
+          />
+        )}
+
         <div
           className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             mobileOpen ? 'max-h-[85vh] opacity-100 mt-0' : 'max-h-0 opacity-0 pointer-events-none'
           }`}
         >
-          <div className="p-4 sm:p-5 bg-[#25272a] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl overflow-y-auto max-h-[80vh] flex flex-col gap-1.5 no-scrollbar">
+          <div className="p-4 sm:p-5 bg-[#25272a] border-x border-b border-[#37393d] rounded-b-2xl shadow-2xl overflow-y-auto overscroll-contain max-h-[80vh] flex flex-col gap-1.5 no-scrollbar">
             
             {/* 1. Services Accordion with FULL Categories, Headings & Sub-links matching Desktop Mega Menu */}
             <div className="border-b border-white/[0.06] pb-1.5">
@@ -624,6 +657,7 @@ export default function Navbar() {
                           { name: 'Generative AI Development', to: '/generative-ai-development-company' },
                           { name: 'Machine Learning Development', to: '/machine-learning-development-services' },
                           { name: 'NLP Development', to: '/nlp-development-services' },
+                          { name: 'Computer Vision Development', to: '/computer-vision-development-services' },
                           { name: 'AI MVP Development', to: '/ai-mvp-development' },
                         ].map((item) => (
                           <Link
@@ -738,6 +772,7 @@ export default function Navbar() {
                 <div className="overflow-hidden">
                   <div className="pl-0 pr-2 py-2 space-y-2 border-l-0 border-[#00CE44]/40 ml-3 text-[13px]">
                     {[
+                      { label: 'All Industries', to: '/industries' },
                       { label: 'Healthcare', to: '/healthcare-app-development' },
                       { label: 'Fitness', to: '/fitness-app-development' },
                       { label: 'FinTech', to: '/fintech-app-development' },

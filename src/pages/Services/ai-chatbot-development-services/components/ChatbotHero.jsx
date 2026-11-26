@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function ChatbotHero() {
   return (
@@ -17,14 +18,12 @@ export default function ChatbotHero() {
             </h1>
 
             <p className="text-white/85 text-[15px] sm:text-[16px] leading-[1.65] font-normal max-w-[540px] mb-7">
-              <a
-                href="https://inceptivesdigital.com/nlp-development-services"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/nlp-development-services"
                 className="text-white/95 underline hover:text-[#00CE44] transition-colors"
-              >
+>
                 Natural language processing
-              </a>
+              </Link>
               , machine learning, LLMs, and RAG architectures integrated into chatbots built for customer support, lead qualification, enterprise knowledge access, and workflow automation.
             </p>
 

@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom'
+
 export default function CrossPlatformLocations() {
   const locations = [
-    { name: 'Austin, TX — HQ', link: 'https://inceptivesdigital.com/mobile-app-development-austin', isHq: true },
-    { name: 'New York, NY', link: 'https://inceptivesdigital.com/mobile-app-development-new-york' },
-    { name: 'San Francisco, CA', link: 'https://inceptivesdigital.com/mobile-app-development-san-francisco' },
-    { name: 'Toronto, Canada', link: 'https://inceptivesdigital.com/mobile-app-development-company-in-toronto-canada' },
-    { name: 'London, UK', link: 'https://inceptivesdigital.com/mobile-app-development-company-london-uk' },
-    { name: 'Dubai, UAE', link: 'https://inceptivesdigital.com/mobile-app-development-company-dubai-uae' },
-    { name: 'Singapore', link: 'https://inceptivesdigital.com/mobile-app-development-company-singapore' },
+    { name: 'Austin, TX — HQ', link: '/mobile-app-development-austin', isHq: true },
+    { name: 'New York, NY', link: '/mobile-app-development-new-york' },
+    { name: 'San Francisco, CA', link: '/mobile-app-development-san-francisco' },
+    { name: 'Toronto, Canada', link: '/mobile-app-development-company-in-toronto-canada' },
+    { name: 'London, UK', link: '/mobile-app-development-company-london-uk' },
+    { name: 'Dubai, UAE', link: '/mobile-app-development-company-dubai-uae' },
+    { name: 'Singapore', link: '/mobile-app-development-company-singapore' },
   ]
 
   return (
@@ -28,11 +30,9 @@ export default function CrossPlatformLocations() {
         {/* City Cards Grid (No icon bg, no border, no padding) */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {locations.map((loc) => (
-            <a
+            <Link
               key={loc.name}
-              href={loc.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              to={loc.link}
               className={`p-6 rounded-[18px] transition-all duration-300 flex flex-col justify-center items-center text-center group ${
                 loc.isHq
                   ? 'bg-[#18191e] border border-[#00CE44]/60 shadow-[0_0_25px_rgba(0,206,68,0.15)]'
@@ -47,7 +47,7 @@ export default function CrossPlatformLocations() {
               <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-[#00CE44] transition-colors leading-snug">
                 {loc.name}
               </h3>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

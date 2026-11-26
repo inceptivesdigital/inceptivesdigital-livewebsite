@@ -49,7 +49,6 @@ export default function ContactUsPage() {
       <ContactClients />
       <ContactProcess />
       <ContactCtaBanner
-        tag="Fast-Track Your Build"
         title="Let's Collaborate on Your Next Product"
         desc="Bring us your idea, mobile, web, AI, or SaaS, and our team will collaborate with you on scope, timeline, and cost, then turn it into a working build within one business day."
       />

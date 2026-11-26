@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function IosAdvancedTech() {
   const techItems = [
     {
@@ -6,12 +7,12 @@ export default function IosAdvancedTech() {
       desc: (
         <>
           Connect iPhone and iPad applications with smart devices through Core Bluetooth and Bluetooth Low Energy (BLE). Our iOS developers support{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/iot-in-healthcare-applications-benefits-and-future-trends"
+          <Link
+            to="/blog/iot-in-healthcare-applications-benefits-and-future-trends"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             IoT in healthcare applications
-          </a>
+          </Link>
           , wearable sensors, and industrial monitoring systems.
         </>
       ),
@@ -32,12 +33,12 @@ export default function IosAdvancedTech() {
       desc: (
         <>
           Apple&apos;s latest Foundation Models framework brings language understanding and structured generation into supported iPhone applications. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/ai-app-development-services"
+          <Link
+            to="/ai-app-development-services"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             AI app development
-          </a>{' '}
+          </Link>{' '}
           services also use Core ML for specialized on-device inference, with Vision supporting image analysis and App Intents connecting app functionality to Siri.
         </>
       ),
@@ -48,12 +49,12 @@ export default function IosAdvancedTech() {
       desc: (
         <>
           For iOS fintech applications requiring{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/blockchain-integration-mobile-apps"
+          <Link
+            to="/blog/blockchain-integration-mobile-apps"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             blockchain integration in mobile apps
-          </a>
+          </Link>
           , our developers integrate wallet authentication and transaction workflows through supported APIs. Sensitive signing operations require appropriate key protection and user authorization.
         </>
       ),
@@ -76,12 +77,12 @@ export default function IosAdvancedTech() {
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal max-w-3xl mx-auto text-center">
             Today&apos;s iPhone applications increasingly rely on capabilities beyond standard mobile functionality. Inceptives Digital brings Apple’s latest frameworks into custom iOS development, helping businesses adopt the latest{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/ios-app-development-trends"
+            <Link
+              to="/blog/ios-app-development-trends"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               iOS app development trends
-            </a>{' '}
+            </Link>{' '}
             without compromising native device compatibility.
           </p>
         </div>

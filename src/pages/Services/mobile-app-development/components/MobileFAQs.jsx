@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
     {
@@ -6,14 +7,12 @@ const faqs = [
       a: (
         <>
           Custom{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/mobile-app-development-cost"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             mobile app development costs
-          </a>{' '}
+          </Link>{' '}
           vary by scope. MVPs range from $25,000 to $50,000, growth products from $60,000 to $150,000, and complex enterprise platforms start at $180,000. Structured discovery fixes the final investment in writing before development begins.
         </>
       ),
@@ -23,14 +22,12 @@ const faqs = [
       a: (
         <>
           Building a production-ready mobile app typically follows an{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-development-timeline"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/app-development-timeline"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             app development timeline
-          </a>{' '}
+          </Link>{' '}
           of 2–6 months. MVPs launch in 2–3 months and growth products in 3–6, while complex multi-platform enterprise solutions run 6+ months of engineering, QA testing, and release validation.
         </>
       ),
@@ -48,14 +45,12 @@ const faqs = [
       a: (
         <>
           An{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mvp-mobile-app-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/mvp-mobile-app-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             MVP
-          </a>{' '}
+          </Link>{' '}
           validates the idea, while a full-scale custom mobile app scales it:
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>MVP: only core features, for rapid market validation.</li>
@@ -71,14 +66,12 @@ const faqs = [
       a: (
         <>
           Our custom mobile app development services build in{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-security-best-practices"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/mobile-app-security-best-practices"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             mobile app security best practices
-          </a>{' '}
+          </Link>{' '}
           from the first sprint, using encrypted data storage and OAuth 2.0 authentication, backed by regular vulnerability testing. Regulated products follow GDPR and HIPAA requirements where they apply.
         </>
       ),
@@ -116,14 +109,12 @@ const faqs = [
       a: (
         <>
           For an MVP,{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/how-to-hire-a-mobile-app-development-company"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/how-to-hire-a-mobile-app-development-company"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             hiring a product studio
-          </a>{' '}
+          </Link>{' '}
           carries less delivery risk than a solo freelancer:
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>

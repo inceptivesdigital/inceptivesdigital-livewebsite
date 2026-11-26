@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function IosDevelopmentProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -64,12 +65,12 @@ export default function IosDevelopmentProcess() {
       cardDesc: (
         <>
           Business objectives, user profiles, and technical constraints are documented before development begins. The output is a defined product scope,{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-development-timeline"
+          <Link
+            to="/blog/app-development-timeline"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             app development timeline
-          </a>
+          </Link>
           , and written estimate that both sides commit to before the first sprint starts.
         </>
       ),
@@ -82,19 +83,19 @@ export default function IosDevelopmentProcess() {
       cardDesc: (
         <>
           As the scope is confirmed, wireframes and high-fidelity prototypes are built through{' '}
-          <a
-            href="https://inceptivesdigital.com/interactive-prototyping"
+          <Link
+            to="/interactive-prototyping"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             interactive prototyping
-          </a>{' '}
+          </Link>{' '}
           against Apple’s Human Interface Guidelines and accessibility standards. Every screen is reviewed and approved, so{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/common-ui-ux-design-mistakes"
+          <Link
+            to="/blog/common-ui-ux-design-mistakes"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             common UI/UX design mistakes
-          </a>{' '}
+          </Link>{' '}
           are caught before a single line of code is written.
         </>
       ),
@@ -107,12 +108,12 @@ export default function IosDevelopmentProcess() {
       cardDesc: (
         <>
           With a validated design foundation in place, development runs in structured two-week sprints. A working build is shared at each cycle close, so feedback shapes the product throughout the engagement and helps avoid{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/common-mobile-app-development-mistakes"
+          <Link
+            to="/blog/common-mobile-app-development-mistakes"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             common mobile app development mistakes
-          </a>
+          </Link>
           .
         </>
       ),
@@ -125,12 +126,12 @@ export default function IosDevelopmentProcess() {
       cardDesc: (
         <>
           Once the build is finished,{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-testing-strategies"
+          <Link
+            to="/blog/mobile-app-testing-strategies"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             functional, performance, and security testing
-          </a>{' '}
+          </Link>{' '}
           are carried out on actual iOS hardware and operating system versions. An audit covering privacy, ATT compliance, and App Store guidelines contributes to a 96% first-submission acceptance rate.
         </>
       ),
@@ -143,12 +144,12 @@ export default function IosDevelopmentProcess() {
       cardDesc: (
         <>
           After Apple&apos;s review,{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
+          <Link
+            to="/blog/publish-update-an-app-on-app-store-google-play"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             App Store assets and metadata
-          </a>{' '}
+          </Link>{' '}
           are fully handled. Post-launch coverage runs under a written SLA with a named iOS engineer assigned from launch day through every release cycle that follows.
         </>
       ),

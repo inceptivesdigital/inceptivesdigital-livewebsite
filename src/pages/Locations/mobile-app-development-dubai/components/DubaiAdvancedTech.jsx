@@ -41,35 +41,10 @@ function FiveGEdgeFullFill({ className = 'w-10 h-10' }) {
   )
 }
 
-function BlockchainFullFill({ className = 'w-10 h-10' }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="#00CE44">
-      <path d="M11.5 2.12a1 1 0 0 1 1 0l8.5 4.9a.5.5 0 0 1 0 .86l-8.5 4.9a1 1 0 0 1-1 0l-8.5-4.9a.5.5 0 0 1 0-.86l8.5-4.9z" opacity="0.95" />
-      <path d="M2.5 9.24a.5.5 0 0 1 .75-.43L11.5 13.6a.5.5 0 0 1 .25.43v9.42a.5.5 0 0 1-.75.43L2.75 19.1a.5.5 0 0 1-.25-.43V9.24z" opacity="0.8" />
-      <path d="M21.5 9.24v9.43a.5.5 0 0 1-.25.43L13 23.88a.5.5 0 0 1-.75-.43v-9.42a.5.5 0 0 1 .25-.43l8.25-4.79a.5.5 0 0 1 .75.43z" />
-    </svg>
-  )
-}
-
 export default function DubaiAdvancedTech() {
   const cards = [
     {
-      title: 'IoT Integration',
-      icon: IotFullFill,
-      desc: 'Connected products require reliable communication between applications, devices, and underlying systems. IoT capabilities support real-time monitoring, automation, and data exchange across smart environments, with relevance to Dubai\'s D33 agenda and its focus on connected digital infrastructure.',
-    },
-    {
-      title: 'AR and VR',
-      icon: ArVrFullFill,
-      desc: 'Immersive experiences create value when they influence how users explore, understand, or interact with products. AR and VR capabilities support applications across real estate, retail, healthcare, and training environments.',
-    },
-    {
-      title: '5G-Enabled App Development',
-      icon: FiveGEdgeFullFill,
-      desc: 'High-performance applications increasingly depend on responsive connectivity and real-time data processing. 5G-ready architecture supports interactive experiences, live streaming, connected devices, and applications requiring faster communication between users and systems.',
-    },
-    {
-      title: 'AI & ML',
+      title: 'Artificial Intelligence and Machine Learning',
       icon: AiMlFullFill,
       desc: (
         <>
@@ -85,12 +60,22 @@ export default function DubaiAdvancedTech() {
       ),
     },
     {
-      title: 'Blockchain Technology',
-      icon: BlockchainFullFill,
-      desc: 'Smart contracts, tokenized assets, decentralized ledgers, and secure transaction authentication engineered for Dubai\'s forward-thinking digital finance and crypto asset regulations.',
+      title: 'IoT and Smart City Integration',
+      icon: IotFullFill,
+      desc: "Connected products require reliable communication between applications, devices, and underlying systems. IoT capabilities support real-time monitoring, automation, and data exchange across smart environments, with relevance to Dubai's D33 agenda and its focus on connected digital infrastructure.",
     },
     {
-      title: 'Generative AI & LLM Integration',
+      title: 'Augmented and Virtual Reality',
+      icon: ArVrFullFill,
+      desc: 'Immersive experiences create value when they influence how users explore, understand, or interact with products. AR and VR capabilities support applications across real estate, retail, healthcare, and training environments.',
+    },
+    {
+      title: '5G-Enabled Applications',
+      icon: FiveGEdgeFullFill,
+      desc: 'High-performance applications increasingly depend on responsive connectivity and real-time data processing. 5G-ready architecture supports interactive experiences, live streaming, connected devices, and applications requiring faster communication between users and systems.',
+    },
+    {
+      title: 'Generative AI and LLM Integration',
       icon: GenAiFullFill,
       desc: (
         <>
@@ -110,11 +95,11 @@ export default function DubaiAdvancedTech() {
   return (
     <section className="py-20 lg:py-28 bg-[#0b0c0f] text-white relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
-        {/* Section Heading matching Screenshot 15 */}
+        {/* Section Heading */}
         <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-18">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight leading-[1.18] mb-5">
-            Next-Gen Technologies Behind Our{' '}
-            <span className="text-[#00CE44]">Mobile App Development Services</span>
+            AI-Powered Mobile App Development in{' '}
+            <span className="text-[#00CE44]">Dubai</span>
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
             AI belongs in a mobile product when it improves a specific workflow or customer interaction, as these{' '}
@@ -135,14 +120,14 @@ export default function DubaiAdvancedTech() {
           </p>
         </div>
 
-        {/* 6 Cards Grid matching Screenshot 15 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        {/* 5 Cards Centered Grid (3 top + 2 bottom centered) */}
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-7">
           {cards.map((c, i) => {
             const Icon = c.icon
             return (
               <div
                 key={i}
-                className="rounded-[20px] bg-[#14151a] p-7 sm:p-8 border border-white/5 hover:border-[#00CE44]/40 transition-all duration-300 flex flex-col justify-start text-left group"
+                className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-19px)] rounded-[20px] bg-[#14151a] p-7 sm:p-8 border border-white/5 hover:border-[#00CE44]/40 transition-all duration-300 flex flex-col justify-start text-left group"
               >
                 <div className="mb-5 flex items-center justify-start">
                   <Icon className="w-10 h-10 shrink-0" />

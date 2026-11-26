@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function BackendServicesGrid() {
   const services = [
     {
@@ -11,14 +12,12 @@ export default function BackendServicesGrid() {
       desc: (
         <>
           REST, GraphQL, gRPC, and webhook-based APIs are built for clarity and stability, so internal teams and third-party partners integrate without friction. Payment processors, CRMs, and ERPs connect through{' '}
-          <a
-            href="https://inceptivesdigital.com/system-integration-api-automation"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/system-integration-api-automation"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             system integration API automation
-          </a>{' '}
+          </Link>{' '}
           with the same architectural rigor as the core system.
         </>
       ),
@@ -39,14 +38,12 @@ export default function BackendServicesGrid() {
       desc: (
         <>
           Relational and NoSQL schemas are designed around the product&apos;s actual access patterns, then tuned through indexing, query optimization, caching, and{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-performance-optimization"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/mobile-app-performance-optimization"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             mobile app performance optimization
-          </a>
+          </Link>
           , so the database performs under production load instead of only under the conditions it was tested in.
         </>
       ),
@@ -57,14 +54,12 @@ export default function BackendServicesGrid() {
       desc: (
         <>
           Legacy systems are migrated to modern architecture without pausing the product&apos;s release cadence. As a result,{' '}
-          <a
-            href="https://inceptivesdigital.com/product-rescue-scaling"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/product-rescue-scaling"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             product rescue scaling
-          </a>{' '}
+          </Link>{' '}
           rebuilds the system for scale and maintainability without the downtime or rebuild risk most migrations carry.
         </>
       ),

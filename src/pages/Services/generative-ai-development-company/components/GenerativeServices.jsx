@@ -9,76 +9,77 @@ import {
   Workflow,
   Wrench,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
     icon: Sparkles,
-    title: 'Custom Generative AI Development',
+    title: '1. Custom Generative AI Development',
     description: (
       <>
-        Our <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/custom-software-development">custom software development</a> approach creates purpose-built generative AI applications around your specific workflows, users, data sources, and operational requirements. Built from the architecture up rather than assembled with generic{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers">AI app builders</a> or adapted from a template.
+        Our <Link className="text-white underline group-hover:text-black" to="/custom-software-development">custom software development</Link> approach creates purpose-built generative AI applications around your specific workflows, users, data sources, and operational requirements. Built from the architecture up rather than assembled with generic{' '}
+        <Link className="text-white underline group-hover:text-black" to="/blog/ai-app-builders-vs-human-developers">AI app builders</Link> or adapted from a template.
       </>
     ),
   },
   {
     icon: Layers3,
-    title: 'Generative AI Application Development',
+    title: '2. Generative AI Application Development',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/ai-app-development-services">AI app development</a> for web, mobile, and SaaS products brings generation, summarisation, search, analysis, and conversational features into the core product architecture.
+        <Link className="text-white underline group-hover:text-black" to="/ai-app-development-services">AI app development</Link> for web, mobile, and SaaS products brings generation, summarisation, search, analysis, and conversational features into the core product architecture.
       </>
     ),
   },
   {
     icon: FileSearch,
-    title: 'RAG System Development',
+    title: '3. RAG System Development',
     description:
-      'Retrieval-augmented generation systems connect to your documents, databases, and knowledge bases. Built for products where responses need to be grounded in your data, not general model knowledge.',
+      'Retrieval-augmented generation systems connected to your documents, databases, and knowledge bases. Built for products where responses need to be grounded in your data, not general model knowledge.',
   },
   {
     icon: Settings2,
-    title: 'LLM Integration and Fine-Tuning',
+    title: '4. LLM Integration and Fine-Tuning',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/nlp-development-services">Natural language processing</a>, foundation model selection, prompt architecture, fine-tuning, evaluation, and LLM integration are configured around your domain and task requirements.
+        <Link className="text-white underline group-hover:text-black" to="/nlp-development-services">Natural language processing</Link>, foundation model selection, prompt architecture, fine-tuning, evaluation, and LLM integration are configured around your specific domain and task requirements.
       </>
     ),
   },
   {
     icon: FileText,
-    title: 'Generative AI for Content Creation',
+    title: '5. Generative AI for Content Creation',
     description:
       'Systems for drafting, editing, summarising, and repurposing content across marketing, operations, and product teams. Built for organisations where content volume outpaces manual production capacity.',
   },
   {
     icon: FileImage,
-    title: 'Generative AI for Image Creation',
+    title: '6. Generative AI for Image Creation',
     description:
       'Image generation and editing workflows for product visuals, creative production, and brand-controlled visual content. Built for teams that need consistent, scalable visual output.',
   },
   {
     icon: FileSearch,
-    title: 'Document Intelligence Solutions',
+    title: '7. Document Intelligence Solutions',
     description:
-      'Applications extract, classify, summarise, compare, and generate information from contracts, reports, forms, and records. Built for organisations that run on documents.',
+      'Applications that extract, classify, summarise, compare, and generate information from contracts, reports, forms, and records. Built for organisations that run on documents.',
   },
   {
     icon: Workflow,
-    title: 'Generative AI Workflow Automation',
+    title: '8. Generative AI Workflow Automation',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/ai-agent-development">AI agent development</a> extends generative AI into workflows that connect foundation models with APIs, business rules, approval steps, and internal software. Built for{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/business-process-automation">business process automation</a> across multi-stage knowledge work that currently depends on manual effort.
+        <Link className="text-white underline group-hover:text-black" to="/ai-agent-development">AI agent development</Link> extends generative AI into workflows that connect foundation models with APIs, business rules, approval steps, and internal software. Built for{' '}
+        <Link className="text-white underline group-hover:text-black" to="/business-process-automation">business process automation</Link> across multi-stage knowledge work that currently depends on manual effort.
       </>
     ),
   },
   {
     icon: Network,
-    title: 'Generative AI Integration Services',
+    title: '9. Generative AI Integration Services',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/system-integration-api-automation">System integration and API automation</a> connect generative AI with CRM, ERP, CMS, data warehouses, and existing digital products—bringing intelligence into the tools you already run.
+        <Link className="text-white underline group-hover:text-black" to="/system-integration-api-automation">System integration and API automation</Link> connect generative AI capabilities with CRM, ERP, CMS, data warehouses, and existing digital products. Built for businesses that need intelligence inside the tools they already run on.
       </>
     ),
   },
@@ -93,7 +94,7 @@ export default function GenerativeServices() {
             Generative AI Development Services With Impact From Day One
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65]">
-            Nine capabilities. Each one is scoped precisely in Discovery and built around the data, controls, and software already in place.
+            Nine capabilities. Each one was scoped precisely in Discovery and built around the data, controls, and software already in place.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

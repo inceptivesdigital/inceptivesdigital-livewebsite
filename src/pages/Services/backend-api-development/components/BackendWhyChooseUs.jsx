@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function BackendWhyChooseUs() {
   const pillars = [
     {
@@ -5,14 +6,12 @@ export default function BackendWhyChooseUs() {
       desc: (
         <>
           A system either scales or gets rebuilt based on one decision: how the boundaries were drawn before any code existed. Inceptives Digital resolves that through a{' '}
-          <a
-            href="https://inceptivesdigital.com/discovery-sprint"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/discovery-sprint"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             discovery sprint
-          </a>
+          </Link>
           , while it still costs nothing to change.
         </>
       ),

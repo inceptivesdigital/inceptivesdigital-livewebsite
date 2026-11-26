@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function AndroidCostSection() {
   const tiers = [
     {
@@ -48,12 +49,12 @@ export default function AndroidCostSection() {
             <span className="text-[#00CE44]">Android App Development Cost?</span>
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-            <a
-              href="https://inceptivesdigital.com/blog/android-app-development-cost"
+            <Link
+              to="/blog/android-app-development-cost"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               Android app development cost
-            </a>{' '}
+            </Link>{' '}
             is determined by what the product actually needs. Complexity, compliance requirements, and feature scope shape every estimate at Inceptives Digital, fixed in writing before development begins so there is financial clarity from day one.
           </p>
         </div>

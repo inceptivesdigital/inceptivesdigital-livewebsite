@@ -1,11 +1,22 @@
 import { Activity, Cloud, Code2, Database, GitBranch, Layers, Network, RefreshCw } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
     icon: Network,
     title: 'API Integration Development',
-    description:
-      'Our custom software development approach includes API integrations that connect applications, databases, and platforms into a unified operational environment.',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/custom-software-development"
+          className="text-white underline group-hover:text-black"
+>
+          custom software development
+        </Link>{' '}
+        approach includes API integrations that connect applications, databases, and platforms into a unified operational environment.
+      </>
+    ),
   },
   {
     icon: RefreshCw,
@@ -16,38 +27,118 @@ const services = [
   {
     icon: GitBranch,
     title: 'Cross-System Workflow Integration',
-    description:
-      'Cross-system connections support digital product development by allowing workflows to move between applications without manual transfer or interruption.',
+    description: (
+      <>
+        Cross-system connections support{' '}
+        <Link
+          to="/digital-product-development"
+          className="text-white underline group-hover:text-black"
+>
+          digital product development
+        </Link>{' '}
+        by allowing workflows to move between applications without manual transfer or interruption.
+      </>
+    ),
   },
   {
     icon: Layers,
     title: 'Enterprise Application Integration',
-    description:
-      'Enterprise integration connects CRM, ERP, internal platforms, AI chatbots, and other business applications into a single connected ecosystem.',
+    description: (
+      <>
+        Enterprise integration connects CRM, ERP, internal platforms,{' '}
+        <Link
+          to="/ai-chatbot-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          AI chatbots
+        </Link>
+        , and other business applications into a single connected ecosystem.
+      </>
+    ),
   },
   {
     icon: Cloud,
     title: 'Cloud & Third-Party System Integration',
-    description:
-      'Secure integration between cloud services, SaaS platforms, and external APIs can connect generative AI, machine learning, and other external intelligence services to existing software.',
+    description: (
+      <>
+        Secure integration between cloud services, SaaS platforms, and external APIs can connect{' '}
+        <Link
+          to="/generative-ai-development-company"
+          className="text-white underline group-hover:text-black"
+>
+          generative AI
+        </Link>
+        ,{' '}
+        <Link
+          to="/machine-learning-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          machine learning
+        </Link>
+        , and other external intelligence services to existing software.
+      </>
+    ),
   },
   {
     icon: Database,
     title: 'Legacy System Modernization Integration',
-    description:
-      'Product rescue and scaling can include connecting older systems with modern applications through API layers and middleware-based integration structures.',
+    description: (
+      <>
+        <Link
+          to="/product-rescue-scaling"
+          className="text-white underline group-hover:text-black"
+>
+          Product rescue and scaling
+        </Link>{' '}
+        can include connecting older systems with modern applications through API layers and middleware-based integration structures.
+      </>
+    ),
   },
   {
     icon: Activity,
     title: 'Middleware & Integration Layer Development',
-    description:
-      'Middleware systems manage communication, data transformation, and routing between disconnected applications, including data exchanged with NLP systems and computer vision services.',
+    description: (
+      <>
+        Middleware systems manage communication, data transformation, and routing between disconnected applications, including data exchanged with{' '}
+        <Link
+          to="/nlp-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          NLP systems
+        </Link>{' '}
+        and{' '}
+        <Link
+          to="/computer-vision-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          computer vision
+        </Link>{' '}
+        services.
+      </>
+    ),
   },
   {
     icon: Code2,
     title: 'Automation-Ready API Architecture',
-    description:
-      'API structures designed for future AI development enable scalable system expansion, while early AI MVP development can validate those integrations before a larger automation rollout.',
+    description: (
+      <>
+        API structures designed for future{' '}
+        <Link
+          to="/ai-development"
+          className="text-white underline group-hover:text-black"
+>
+          AI development
+        </Link>{' '}
+        enable scalable system expansion, while early{' '}
+        <Link
+          to="/ai-mvp-development"
+          className="text-white underline group-hover:text-black"
+>
+          AI MVP development
+        </Link>{' '}
+        can validate those integrations before a larger automation rollout.
+      </>
+    ),
   },
 ]
 

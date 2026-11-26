@@ -1,18 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const CAPABILITIES = [
   {
     title: 'AI Integrations',
     description: (
       <>
-        <a
-          href="https://inceptivesdigital.com/ai-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-development"
           className="font-semibold text-white underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00E522] transition-colors"
-        >
+>
           AI development
-        </a>{' '}
+        </Link>{' '}
         integrates machine learning models, recommendation engines, and predictive logic at the API layer, built into the system architecture rather than connected as external dependencies.
       </>
     ),
@@ -41,23 +40,19 @@ const CAPABILITIES = [
     title: 'Workflow Automation',
     description: (
       <>
-        <a
-          href="https://inceptivesdigital.com/business-process-automation"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/business-process-automation"
           className="font-semibold text-white underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00E522] transition-colors"
-        >
+>
           Business process automation
-        </a>{' '}
+        </Link>{' '}
         handles business logic triggers, data pipelines, and operational processes at the backend layer, removing the manual intervention points that slow product teams down. Secure ledgers and decentralized integrations can also bring{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/blockchain-in-software-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/blockchain-in-software-development"
           className="font-semibold text-white underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00E522] transition-colors"
-        >
+>
           blockchain into software development
-        </a>{' '}
+        </Link>{' '}
         where immutable records or cryptographic verification are required.
       </>
     ),

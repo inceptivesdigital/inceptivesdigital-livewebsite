@@ -32,10 +32,55 @@ header button[class*="bg-[#00CE44]"] {
   white-space: nowrap;
 }
 
-/* 3. Never clip hero content with fixed height on compact desktop/laptop */
-main > section:first-of-type,
-main > div > section:first-of-type {
-  height: auto;
+/* 3. Universal 100vh Hero Sizing + Dynamic Header Clearance (All Devices) */
+:root {
+  --hero-header-clearance: 100px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --hero-header-clearance: 112px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --hero-header-clearance: 120px;
+  }
+}
+
+html body main > section:first-of-type:not(.idap-wrap):not(.category-archive-section),
+html body main > div > section:first-of-type:not(.idap-wrap):not(.category-archive-section) {
+  box-sizing: border-box !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+  min-height: 100dvh !important;
+  height: auto !important;
+  padding-top: var(--hero-header-clearance) !important;
+}
+
+/* Vertically center non-flex hero sections cleanly inside the 100vh frame */
+html body main > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
+html body main > div > section:first-of-type:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Keep bottom-flush desktop heroes (pb-0 with bottom-anchored mockups) flush at bottom on lg+ */
+@media (min-width: 1024px) {
+  html body main > section:first-of-type[class*="pb-0"]:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]),
+  html body main > div > section:first-of-type[class*="pb-0"]:not(.idap-wrap):not(.category-archive-section):not([class*="flex"]) {
+    justify-content: flex-end;
+  }
+}
+
+/* Guarantee header clearance on archive/article/author top sections too */
+html body main .idap-wrap,
+html body main .category-archive-section,
+html body main .id-blog .id-blog-hero,
+html body main .id-pr .id-pr-hero {
+  padding-top: max(var(--hero-header-clearance), 112px) !important;
 }
 
 /* 4. Consistent Container Width with Balanced Left/Right Side Gap Across All Desktop & Laptop Screens */
@@ -44,7 +89,6 @@ main > div > section:first-of-type {
   html body footer > div[class*="max-w-"],
   html body footer section > div[class*="max-w-"],
   html body section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
-  html body section#case-studies > div[class*="max-w-"],
   html body .id-blog .id-blog-wrap,
   html body .id-pr .id-pr-wrap,
   html body #ai-cost-estimator-page .wrap,
@@ -58,6 +102,27 @@ main > div > section:first-of-type {
     margin-right: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+/* Case Studies sections & pages: cap container to 1440px on 1920px+ screens */
+@media (min-width: 1800px) {
+  html body section#case-studies > div[class*="max-w-"],
+  html body #portfolio-page section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]),
+  html body .case-study-page section > div[class*="max-w-"]:not([class*="max-w-2xl"]):not([class*="max-w-3xl"]):not([class*="max-w-4xl"]):not([class*="max-w-5xl"]) {
+    max-width: 1440px !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  html body #portfolio-page #e-096dca3-inner {
+    max-width: 1440px !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -208,7 +273,7 @@ html body main section div[class*="grid"] > * {
     font-size: 15px !important;
     line-height: 1.62 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 14.5px !important;
@@ -240,7 +305,7 @@ html body main section div[class*="grid"] > * {
     font-size: 14.5px !important;
     line-height: 1.6 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 14px !important;
@@ -272,7 +337,7 @@ html body main section div[class*="grid"] > * {
     font-size: 14px !important;
     line-height: 1.6 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 14px !important;
@@ -304,7 +369,7 @@ html body main section div[class*="grid"] > * {
     font-size: 13.5px !important;
     line-height: 1.58 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 13px !important;
@@ -336,7 +401,7 @@ html body main section div[class*="grid"] > * {
     font-size: 13.5px !important;
     line-height: 1.56 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 13px !important;
@@ -368,7 +433,7 @@ html body main section div[class*="grid"] > * {
     font-size: 13px !important;
     line-height: 1.55 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 12.5px !important;
@@ -400,7 +465,7 @@ html body main section div[class*="grid"] > * {
     font-size: 12.5px !important;
     line-height: 1.54 !important;
   }
-  html body main a[href="#contact"],
+  html body main a[href="#contact"]:not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]),
   html body main button[class*="bg-[#00CE44]"]:not([class*="hover:bg-[#00CE44]"]):not([class*="rounded-full"]) {
     font-size: 12px !important;
@@ -417,14 +482,23 @@ html body main section div[class*="grid"] > * {
    - H2 becomes the large display headline
    Pages WITHOUT an H2 right after H1 keep their large H1 completely unchanged.
    ========================================================================== */
-html body main section:first-of-type h1:has(+ h2) {
+html body main section:first-of-type h1:has(+ h2),
+html body main section:first-of-type h1:has(+ h2) span,
+html body main section:first-of-type p[class*="text-[#00CE44]"]:has(+ h1),
+html body main section:first-of-type span[class*="text-[#00CE44]"]:has(+ h1) {
   font-size: 15px !important;
   line-height: 1.35 !important;
   font-weight: 600 !important;
+  color: #00CE44 !important;
+  letter-spacing: 1px !important;
+  text-transform: none !important;
 }
 
 @media (max-width: 767px) {
-  html body main section:first-of-type h1:has(+ h2) {
+  html body main section:first-of-type h1:has(+ h2),
+  html body main section:first-of-type h1:has(+ h2) span,
+  html body main section:first-of-type p[class*="text-[#00CE44]"]:has(+ h1),
+  html body main section:first-of-type span[class*="text-[#00CE44]"]:has(+ h1) {
     font-size: 13.5px !important;
   }
 }
@@ -497,7 +571,7 @@ html body main blockquote a:not([class*="bg-"]):not([class*="inline-flex"]):not(
    buttons sitting side-by-side or across pages always share the exact same
    height at every viewport width.
    ========================================================================== */
-html body main a[href="#contact"]:not([class*="rounded-full"]),
+html body main a[href="#contact"]:not([class*="rounded-full"]):not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
 html body main a.getintouch:not([class*="rounded-full"]),
 html body main button.getintouch:not([class*="rounded-full"]),
 html body main a.openpop-shedule:not([class*="rounded-full"]),
@@ -520,7 +594,7 @@ html body main button[type="submit"]:not([class*="rounded-full"]) {
 }
 
 @media (max-width: 1599px) {
-  html body main a[href="#contact"]:not([class*="rounded-full"]),
+  html body main a[href="#contact"]:not([class*="rounded-full"]):not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a.getintouch:not([class*="rounded-full"]),
   html body main button.getintouch:not([class*="rounded-full"]),
   html body main a.openpop-shedule:not([class*="rounded-full"]),
@@ -536,7 +610,7 @@ html body main button[type="submit"]:not([class*="rounded-full"]) {
 }
 
 @media (max-width: 1279px) {
-  html body main a[href="#contact"]:not([class*="rounded-full"]),
+  html body main a[href="#contact"]:not([class*="rounded-full"]):not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a.getintouch:not([class*="rounded-full"]),
   html body main button.getintouch:not([class*="rounded-full"]),
   html body main a.openpop-shedule:not([class*="rounded-full"]),
@@ -552,7 +626,7 @@ html body main button[type="submit"]:not([class*="rounded-full"]) {
 }
 
 @media (max-width: 767px) {
-  html body main a[href="#contact"]:not([class*="rounded-full"]),
+  html body main a[href="#contact"]:not([class*="rounded-full"]):not([class*="flex-col"]):not([class*="underline"]):not([class~="block"]),
   html body main a.getintouch:not([class*="rounded-full"]),
   html body main button.getintouch:not([class*="rounded-full"]),
   html body main a.openpop-shedule:not([class*="rounded-full"]),
@@ -565,4 +639,95 @@ html body main button[type="submit"]:not([class*="rounded-full"]) {
     height: 42px !important;
     min-height: 42px !important;
   }
+}
+
+/* ==========================================================================
+   10. Process & Compliance Pill Tabs: Zero Overflow or Collision on Any Device
+   - Mobile (< 768px): smooth single-row horizontal swipe with full-width pills.
+   - Tablet/Laptop/Desktop (>= 768px): natural-width centered flex-wrap pills
+     so labels never bleed out of pills, collide, or truncate awkwardly.
+   ========================================================================== */
+html body main section div[class*="no-scrollbar"]:has(> button[class*="rounded-full"]) {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  overflow-x: auto !important;
+  gap: 0.625rem !important;
+}
+
+html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  overflow: hidden !important;
+}
+
+@media (min-width: 768px) {
+  html body main section div[class*="no-scrollbar"]:has(> button[class*="rounded-full"]) {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    overflow-x: visible !important;
+    gap: 0.75rem !important;
+  }
+
+  html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] {
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  html body main section div[class*="no-scrollbar"] > button[class*="rounded-full"] > span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* ==========================================================================
+   11. Unified Dark Card Background (#383838) Site-Wide
+   Applies #383838 to all dark card surfaces across the website while
+   preserving section/page/navbar backgrounds, light/white cards, brand green
+   (#00CE44) panels, CTA buttons, form inputs, icon/avatar badges, 1px grid
+   dividers (gap-px), and green hover transitions.
+   ========================================================================== */
+
+/* 11a. Rounded dark cards inside main sections */
+html body main section :is(div, article, a, li)[class*="rounded"]:not([class*="rounded-full"]):not([class*="rounded-none"]):not([class~="inline-flex"]):not([class~="inset-0"]):not([class~="gap-px"]):not([class~="w-8"]):not([class~="w-9"]):not([class~="w-10"]):not([class~="w-11"]):not([class~="w-12"]):not([class~="w-14"]):not([class~="w-16"]):not([class*="bg-[#00"]):not([class*="bg-[#16a34a" i]):not([class*="bg-[#23103a" i]):not([class*="bg-[#2c3a4d" i]):not([class*="bg-[#361404" i]):not([class*="bg-white"]):not([class*="bg-transparent"]):not([class~="bg-black"]):is(
+  [class*="bg-[#1" i],
+  [class*="bg-[#2" i],
+  [class*="bg-[#30" i],
+  [class*="bg-[#32" i],
+  [class*="bg-[#33" i],
+  [class*="bg-[#0c0e12" i],
+  [class*="bg-[#0d0d0d" i],
+  [class*="bg-[#0e1118" i],
+  [class*="bg-[#0e121d" i],
+  [class*="bg-[#0b0e0c" i],
+  [class*="bg-[#565656]" i]
+),
+/* 11b. Borderless grid-cell dark cards inside gap-px grids (Industries grids) */
+html body main section div[class~="gap-px"] > :is(div, article, a, li):not([class*="bg-[#00"]):not([class*="bg-white"]):is(
+  [class*="bg-[#1" i],
+  [class*="bg-[#2" i],
+  [class*="bg-[#30" i],
+  [class*="bg-[#32" i],
+  [class*="bg-[#33" i]
+),
+/* 11c. Non-rounded dark cards & location map info panels */
+html body main section :is(div, article)[class*="border"][class*="p-"]:not([class*="rounded-full"]):not([class~="inline-flex"]):not([class~="inset-0"]):not([class~="gap-px"]):not([class*="bg-[#00"]):not([class*="bg-white"]):not([class*="bg-transparent"]):not([class~="bg-black"]):is(
+  [class*="bg-[#121316" i],
+  [class*="bg-[#131417" i],
+  [class*="bg-[#181818]" i]
+),
+html body main section div[class*="bg-[#121317" i][class*="p-"],
+/* 11d. Footer location cards */
+html body footer div[class*="rounded"][class*="bg-[#18191d" i] {
+  background-color: #383838 !important;
+}
+
+/* 11e. Preserve brand-green hover state on interactive dark cards */
+html body main section :is(div, article, a, li)[class*="hover:bg-[#00CE44]" i]:hover {
+  background-color: #00CE44 !important;
 }

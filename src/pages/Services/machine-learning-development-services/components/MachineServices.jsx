@@ -9,6 +9,7 @@ import {
   Sparkles,
   Workflow,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -17,9 +18,9 @@ const services = [
     description: (
       <>
         Design and build ML models for your specific business problem, dataset, and performance targets. Built from the architecture up using PyTorch, TensorFlow, or Scikit-learn rather than assembled through generic{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers">
+        <Link className="text-white underline group-hover:text-black" to="/blog/ai-app-builders-vs-human-developers">
           AI app builders
-        </a>{' '}
+        </Link>{' '}
         or templates.
       </>
     ),
@@ -42,9 +43,9 @@ const services = [
     description: (
       <>
         Detect unusual patterns, flag suspicious activity, and use{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/ai-automation-services">
+        <Link className="text-white underline group-hover:text-black" to="/ai-automation-services">
           AI automation
-        </a>{' '}
+        </Link>{' '}
         to trigger responses in real time. Techniques include isolation forests, autoencoders, and real-time scoring pipelines for financial services and operational monitoring.
       </>
     ),
@@ -54,14 +55,12 @@ const services = [
     title: (
       <>
         5.{' '}
-        <a
+        <Link
           className="text-[#00CE44] underline group-hover:text-black"
-          href="https://inceptivesdigital.com/nlp-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          to="/nlp-development-services"
+>
           Natural Language Processing
-        </a>{' '}
+        </Link>{' '}
         and Text Intelligence
       </>
     ),
@@ -73,14 +72,12 @@ const services = [
     title: (
       <>
         6.{' '}
-        <a
+        <Link
           className="text-[#00CE44] underline group-hover:text-black"
-          href="https://inceptivesdigital.com/computer-vision-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          to="/computer-vision-development-services"
+>
           Computer Vision
-        </a>{' '}
+        </Link>{' '}
         and Image Intelligence
       </>
     ),
@@ -92,13 +89,13 @@ const services = [
     title: '7. Machine Learning Integration Services',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/system-integration-api-automation">
+        <Link className="text-white underline group-hover:text-black" to="/system-integration-api-automation">
           System integration and API automation
-        </a>{' '}
+        </Link>{' '}
         embed ML models into your software, APIs, and data pipelines. Integration includes{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/backend-api-development">
+        <Link className="text-white underline group-hover:text-black" to="/backend-api-development">
           backend API development
-        </a>{' '}
+        </Link>{' '}
         with REST and GraphQL, cloud deployment, and connections to data warehouses like Snowflake, BigQuery, and Redshift for real-time intelligence.
       </>
     ),
@@ -109,9 +106,9 @@ const services = [
     description: (
       <>
         Deploy production ML systems with full monitoring, drift detection, and retraining pipelines. For existing products,{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/product-rescue-scaling">
+        <Link className="text-white underline group-hover:text-black" to="/product-rescue-scaling">
           product scaling
-        </a>{' '}
+        </Link>{' '}
         is supported by Kubernetes, Docker, MLflow, and automated CI/CD for resilient and reliable ML performance.
       </>
     ),
@@ -121,9 +118,9 @@ const services = [
     title: '9. Machine Learning Consulting',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/product-strategy-consulting">
+        <Link className="text-white underline group-hover:text-black" to="/product-strategy-consulting">
           Product strategy consulting
-        </a>{' '}
+        </Link>{' '}
         for ML covers use cases, data readiness, feature engineering, model selection, and the implementation roadmap. Ensures teams understand operational requirements, risk mitigation, and ROI before committing to full development.
       </>
     ),

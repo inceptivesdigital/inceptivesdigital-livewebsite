@@ -41,9 +41,8 @@ export default function AustinHero() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
         <div className="max-w-xl lg:max-w-[600px] xl:max-w-2xl text-left">
           {/* Main H1 Title */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] font-bold text-white tracking-tight leading-[1.14] mb-3">
-            Mobile App Development Company in{' '}
-            <span className="text-[#00CE44]">Austin, TX</span>
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
+            Mobile App Development Company in Austin, TX
           </h1>
 
           {/* H2 Subheading */}

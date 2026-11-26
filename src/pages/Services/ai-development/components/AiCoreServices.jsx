@@ -38,7 +38,7 @@ export default function AiCoreServices() {
     {
       title: 'Computer Vision',
       desc: 'Image and video intelligence for object detection, classification, inspection, and real-time monitoring.',
-      link: '/ai-development/computer-vision/',
+      link: '/computer-vision-development-services',
     },
     {
       title: 'AI MVP Development',

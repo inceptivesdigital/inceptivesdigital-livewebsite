@@ -49,12 +49,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Launch iOS and Android applications through one shared development architecture. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/cross-platform-app-development"
+          <Link
+            to="/cross-platform-app-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             cross-platform app development services
-          </a>{' '}
+          </Link>{' '}
           use Flutter and React Native, with native modules handling device functionality that requires platform-specific implementation.
         </>
       ),
@@ -65,19 +65,19 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Integrate LLM-powered{' '}
-          <a
-            href="https://inceptivesdigital.com/ai-chatbot-development-services"
+          <Link
+            to="/ai-chatbot-development-services"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             chatbots
-          </a>{' '}
+          </Link>{' '}
           and intelligent assistants into commercial mobile applications. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/ai-app-development-services"
+          <Link
+            to="/ai-app-development-services"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             AI app development
-          </a>{' '}
+          </Link>{' '}
           expertise covers RAG pipelines and model APIs, with architecture accounting for inference latency and sensitive data requirements.
         </>
       ),
@@ -88,12 +88,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Enterprise mobile app development connects existing business infrastructure with custom mobile workflows. API-first engineering supports CRM and ERP{' '}
-          <a
-            href="https://inceptivesdigital.com/system-integration-api-automation"
+          <Link
+            to="/system-integration-api-automation"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             system integration
-          </a>
+          </Link>
           , while secure middleware handles legacy interfaces and complex data synchronization requirements.
         </>
       ),
@@ -104,12 +104,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Our mobile app{' '}
-          <a
-            href="https://inceptivesdigital.com/ui-ux-design"
+          <Link
+            to="/ui-ux-design"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             UI/UX design services
-          </a>{' '}
+          </Link>{' '}
           bring complex product workflows into intuitive interfaces. Designers develop Figma prototypes around critical user interactions, with usability validation informing native iOS and Android design decisions before engineering begins.
         </>
       ),
@@ -120,12 +120,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Modernize legacy mobile applications without replacing functionality that still serves the business. Our app modernization and{' '}
-          <a
-            href="https://inceptivesdigital.com/product-rescue-scaling"
+          <Link
+            to="/product-rescue-scaling"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             product rescue services
-          </a>{' '}
+          </Link>{' '}
           address outdated SDKs and architectural constraints through targeted refactoring, with migration requirements determined by existing codebase conditions.
         </>
       ),
@@ -136,12 +136,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Mobile app development{' '}
-          <a
-            href="https://inceptivesdigital.com/product-strategy-consulting"
+          <Link
+            to="/product-strategy-consulting"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             consulting
-          </a>{' '}
+          </Link>{' '}
           establishes technical direction before major engineering investments. Senior architects assess platform feasibility and API dependencies, defining the application architecture and delivery scope around documented product requirements.
         </>
       ),
@@ -152,12 +152,12 @@ export default function CustomMobileServices() {
       desc: (
         <>
           Keep production mobile applications compatible with evolving iOS and Android requirements. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-maintenance-cost"
+          <Link
+            to="/blog/mobile-app-maintenance-cost"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             mobile app maintenance
-          </a>{' '}
+          </Link>{' '}
           services cover SDK upgrades and crash monitoring, with ongoing engineering support following agreed operational priorities and release schedules.
         </>
       ),

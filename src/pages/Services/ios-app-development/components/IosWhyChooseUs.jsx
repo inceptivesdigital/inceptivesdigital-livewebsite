@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function IosWhyChooseUs() {
   const pillars = [
     {
@@ -13,12 +14,12 @@ export default function IosWhyChooseUs() {
       desc: (
         <>
           Our iPhone app development services include post-launch support under defined SLA terms that keep{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-maintenance-cost"
+          <Link
+            to="/blog/mobile-app-maintenance-cost"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             iPhone app maintenance cost
-          </a>{' '}
+          </Link>{' '}
           predictable, with engineers available for production issues and compatibility updates.
         </>
       ),
@@ -31,12 +32,12 @@ export default function IosWhyChooseUs() {
       title: 'Native iOS Security',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-security-best-practices"
+          <Link
+            to="/blog/mobile-app-security-best-practices"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Mobile app security best practices
-          </a>{' '}
+          </Link>{' '}
           require controls beyond Apple’s built-in device protection for sensitive application data. Our iOS engineers use Keychain for credential storage and LocalAuthentication for biometric access through Face ID or Touch ID.
         </>
       ),

@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
     {
@@ -14,12 +15,12 @@ const faqs = [
       a: (
         <>
           Yes. Inceptives Digital provides dedicated Android developers who extend your{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/in-house-development-vs-app-development-partner"
+          <Link
+            to="/blog/in-house-development-vs-app-development-partner"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             in-house team
-          </a>
+          </Link>
           , plus complete project teams for end-to-end delivery. Your development scope and internal resources determine which engagement model fits.
         </>
       ),
@@ -29,12 +30,12 @@ const faqs = [
       a: (
         <>
           Hire a freelancer for a limited Android development task with clear requirements.{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/how-to-choose-the-right-mobile-app-development-company"
+          <Link
+            to="/blog/how-to-choose-the-right-mobile-app-development-company"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             Choose an Android app development company
-          </a>{' '}
+          </Link>{' '}
           when your product needs coordinated design, backend engineering, testing, and ongoing technical support.
         </>
       ),
@@ -44,12 +45,12 @@ const faqs = [
       a: (
         <>
           Kotlin is the recommended choice for most new Android applications because Google prioritizes Kotlin support and modern{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/android-app-development-tools"
+          <Link
+            to="/blog/android-app-development-tools"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             Android development tools
-          </a>
+          </Link>
           . Java remains practical for maintaining existing Android codebases and legacy integrations.
         </>
       ),
@@ -59,12 +60,12 @@ const faqs = [
       a: (
         <>
           Choose native Kotlin for Android-specific integrations, demanding performance requirements, or deeper platform control.{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/flutter-vs-react-native-android-app-development"
+          <Link
+            to="/blog/flutter-vs-react-native-android-app-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             Flutter or React Native
-          </a>{' '}
+          </Link>{' '}
           are suitable when your product targets both Android and iOS and can share most application functionality.
         </>
       ),
@@ -78,12 +79,12 @@ const faqs = [
       a: (
         <>
           Yes. Custom Android applications can integrate with CRM, ERP, and other enterprise systems through supported{' '}
-          <a
-            href="https://inceptivesdigital.com/backend-api-development"
+          <Link
+            to="/backend-api-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             backend APIs
-          </a>
+          </Link>
           . Integration complexity depends on system compatibility, authentication requirements, and how data moves between platforms.
         </>
       ),
@@ -92,12 +93,12 @@ const faqs = [
       q: '9. How long does it take to publish an Android app on Google Play?',
       a: (
         <>
-          <a
-            href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
+          <Link
+            to="/blog/publish-update-an-app-on-app-store-google-play"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             Publishing on Google Play
-          </a>{' '}
+          </Link>{' '}
           can take seven days or longer for review. New personal developer accounts also need a closed test with 12 testers for 14 continuous days before requesting production access.
         </>
       ),
@@ -111,19 +112,19 @@ const faqs = [
       a: (
         <>
           Yes. Inceptives Digital offers{' '}
-          <a
-            href="https://inceptivesdigital.com/app-store-optimization"
+          <Link
+            to="/app-store-optimization"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             App Store Optimization
-          </a>{' '}
+          </Link>{' '}
           for Google Play and{' '}
-          <a
-            href="https://inceptivesdigital.com/post-launch-analytics-iteration"
+          <Link
+            to="/post-launch-analytics-iteration"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             post-launch analytics
-          </a>{' '}
+          </Link>{' '}
           support. Store listing improvements support app discoverability, while user behavior data helps identify opportunities for product improvements.
         </>
       ),

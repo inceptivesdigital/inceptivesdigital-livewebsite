@@ -5,7 +5,18 @@ export default function DubaiCostSection() {
   const tiers = [
     {
       name: 'Foundation App',
-      tagline: 'For Dubai startups validating a new product through MVP development with focused functionality and a defined launch scope.',
+      tagline: (
+        <>
+          For Dubai startups validating a new product through{' '}
+          <Link
+            to="/mvp-development"
+            className="text-[#00CE44] font-medium underline underline-offset-4"
+          >
+            MVP development
+          </Link>{' '}
+          with focused functionality and a defined launch scope.
+        </>
+      ),
       cost: 'AED 110,000 – 220,000',
       timeline: '8–14 weeks',
       features: [

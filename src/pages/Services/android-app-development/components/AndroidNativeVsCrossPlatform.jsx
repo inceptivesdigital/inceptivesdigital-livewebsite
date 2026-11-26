@@ -12,12 +12,12 @@ export default function AndroidNativeVsCrossPlatform() {
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
             Native Kotlin fits heavy hardware integration and top-tier performance.{' '}
-            <a
-              href="https://inceptivesdigital.com/cross-platform-app-development"
+            <Link
+              to="/cross-platform-app-development"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               Cross-platform app development
-            </a>{' '}
+            </Link>{' '}
             fits a shared Android and iOS launch. Here&apos;s the honest breakdown.
           </p>
         </div>
@@ -48,12 +48,12 @@ export default function AndroidNativeVsCrossPlatform() {
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#00CE44] font-bold mt-0.5">✓</span>
                   <span>
-                    <a
-                      href="https://inceptivesdigital.com/ai-app-development-services"
+                    <Link
+                      to="/ai-app-development-services"
                       className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-                    >
+>
                       On-device AI
-                    </a>{' '}
+                    </Link>{' '}
                     requires ML Kit or Gemini Nano
                   </span>
                 </li>

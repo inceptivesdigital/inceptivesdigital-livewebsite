@@ -712,7 +712,7 @@ const ESTIMATOR_CSS = `
     --grey-text: #162119;
     --grey-muted: #000;
     --dark-bg: #121a14;
-    --dark-card: #18241b;
+    --dark-card: #383838;
     --dark-border: #243629;
     --dark-text: #e9f2eb;
     --dark-muted: #98aca0;

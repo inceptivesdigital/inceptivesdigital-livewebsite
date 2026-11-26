@@ -28,7 +28,7 @@ export default function BlockchainHero() {
     <>
       {/* Hero Banner */}
       <section
-        className="relative w-full bg-black text-white overflow-hidden pt-32 pb-44 sm:pt-40 sm:pb-56 lg:pt-44 lg:pb-64 bg-cover bg-bottom bg-no-repeat"
+        className="relative w-full flex flex-col justify-start bg-black text-white overflow-hidden pt-32 pb-44 sm:pt-40 sm:pb-56 lg:pt-44 lg:pb-64 bg-cover bg-bottom bg-no-repeat"
         style={{
           backgroundImage: "url('/assets/blockchain-v2/banner-bg.webp')",
         }}

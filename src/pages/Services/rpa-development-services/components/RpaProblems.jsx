@@ -1,26 +1,53 @@
 import { Activity, ArrowLeftRight, GitBranch, RefreshCw, ShieldAlert, UsersRound } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const problems = [
   {
     icon: ArrowLeftRight,
-    title: 'Manual Data Movement',
-    description:
-      'System integration and API automation reduce the need for teams to manually transfer data between disconnected ERP, CRM, and internal systems.',
+    title: '1. Manual Data Movement',
+    description: (
+      <>
+        <Link
+          to="/system-integration-api-automation"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          System integration and API automation
+        </Link>{' '}
+        reduce the need for teams to manually transfer data between disconnected ERP, CRM, and internal systems.
+      </>
+    ),
     impacts: ['Increased operational cost', 'Higher error probability', 'Slower reporting cycles'],
     solution: 'Automated system-to-system data transfer across enterprise platforms without human intervention.',
   },
   {
     icon: RefreshCw,
-    title: 'Repetitive Work',
+    title: '2. Repetitive Work',
     description:
       'High-volume operational tasks like data entry, invoice handling, and reporting consume skilled workforce capacity that should be focused on higher-value operations.',
     impacts: ['Resource inefficiency', 'High operational cost', 'Low team productivity'],
-    solution:
-      'RPA can combine machine learning with generative AI development when workflows involve variable data, unstructured content, or decisions that fixed rules alone cannot handle.',
+    solution: (
+      <>
+        RPA can combine{' '}
+        <Link
+          to="/machine-learning-development-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          machine learning
+        </Link>{' '}
+        with{' '}
+        <Link
+          to="/generative-ai-development-company"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          generative AI development
+        </Link>{' '}
+        when workflows involve variable data, unstructured content, or decisions that fixed rules alone cannot handle.
+      </>
+    ),
   },
   {
     icon: Activity,
-    title: 'Workflow Delays',
+    title: '3. Workflow Delays',
     description:
       'Business processes slow down when execution depends on manual handoffs between departments and systems.',
     impacts: ['Delayed decision cycles', 'Operational bottlenecks', 'Reduced customer responsiveness'],
@@ -28,7 +55,7 @@ const problems = [
   },
   {
     icon: ShieldAlert,
-    title: 'Human Errors',
+    title: '4. Human Errors',
     description:
       'Repetitive structured processes introduce avoidable errors in finance, compliance, HR, and reporting operations.',
     impacts: ['Compliance risks', 'Data inconsistencies', 'Financial inaccuracies'],
@@ -36,7 +63,7 @@ const problems = [
   },
   {
     icon: UsersRound,
-    title: 'Dependency Bottlenecks',
+    title: '5. Dependency Bottlenecks',
     description:
       'Workflows depend on specific individuals or teams to proceed, limiting scalability and operational continuity.',
     impacts: ['Process stagnation', 'Resource dependency', 'Reduced scalability'],
@@ -44,7 +71,7 @@ const problems = [
   },
   {
     icon: GitBranch,
-    title: 'System Fragmentation',
+    title: '6. System Fragmentation',
     description:
       'Enterprise systems like ERP, CRM, and internal tools operate in isolation, requiring manual reconciliation and duplication of effort.',
     impacts: ['Data duplication', 'Reconciliation overhead', 'Operational inefficiency'],

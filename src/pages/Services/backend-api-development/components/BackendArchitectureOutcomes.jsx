@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function BackendArchitectureOutcomes() {
   return (
     <section className="py-16 sm:py-24 bg-[#191919] border-b border-white/10">
@@ -15,14 +16,12 @@ export default function BackendArchitectureOutcomes() {
           <div className="lg:col-span-7 text-left">
             <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
               An API boundary defined incorrectly in week one becomes a limit every feature built afterward must inherit, since nothing built on top of a boundary can exceed it. With API calls now accounting for over 80% of internet traffic, that boundary is the infrastructure a business actually runs on. Inceptives Digital maps it before the first endpoint is written, which is what separates scalable{' '}
-              <a
-                href="https://inceptivesdigital.com/custom-software-development"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/custom-software-development"
                 className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-              >
+>
                 custom software development
-              </a>{' '}
+              </Link>{' '}
               from a system that has to be rebuilt.
             </p>
           </div>

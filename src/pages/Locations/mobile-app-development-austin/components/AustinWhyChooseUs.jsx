@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Shield, MapPin, TrendingUp, Eye } from 'lucide-react'
 
 export default function AustinWhyChooseUs() {
@@ -14,7 +15,18 @@ export default function AustinWhyChooseUs() {
     },
     {
       title: 'Architected to Scale Without a Rebuild',
-      desc: 'A minimum viable product (MVP) that cannot grow is expensive technical debt. Every product is architected for the traffic spikes, user expansion, and data demands that come with scaling in the Texas market.',
+      desc: (
+        <>
+          A minimum{' '}
+          <Link
+            to="/mvp-development"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            viable product (MVP)
+          </Link>{' '}
+          that cannot grow is expensive technical debt. Every product is architected for the traffic spikes, user expansion, and data demands that come with scaling in the Texas market.
+        </>
+      ),
       icon: TrendingUp,
     },
     {

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-
 export default function ProductLaunchNecessity() {
   return (
     <section className="py-16 sm:py-24 bg-[#000000]">
@@ -16,14 +15,14 @@ export default function ProductLaunchNecessity() {
           {/* Right Column Description (16px) */}
           <div className="lg:col-span-7 text-left">
             <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
-              The market has already shifted. 72% of marketers have adopted AI tools, 69% of digital ad spend happens on mobile, and global app install spend hit $94 billion in 2026. A{' '}
+              The market has already shifted. 72% of marketers have adopted AI tools, 69% of digital ad spend happens on mobile, and global app install spend hit $94 billion in 2026. A digital product launch today is not just about going live. It is about reaching the right audience, on the right platform, at the right moment. Without a strategy built around that, the{' '}
               <Link
-                to="/digital-product-development"
+                to="/blog/common-reasons-digital-products-fail"
                 className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
-              >
-                digital product development
+>
+                common reasons digital products fail
               </Link>{' '}
-              launch today is not just about going live. It is about reaching the right audience, on the right platform, at the right moment. Without a strategy built around that, even the best products get lost.
+              can bury even the best products.
             </p>
           </div>
         </div>

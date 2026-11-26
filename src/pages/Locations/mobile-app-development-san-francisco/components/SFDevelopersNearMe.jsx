@@ -4,7 +4,7 @@ export default function SFDevelopersNearMe() {
   return (
     <section className="py-20 lg:py-24 bg-[#0a0b0e] text-white relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center max-w-5xl mx-auto p-8 sm:p-12 lg:p-14 rounded-[28px] bg-gradient-to-br from-[#14151b] via-[#101116] to-[#0c0d10] border border-white/10 shadow-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center max-w-5xl mx-auto p-8 sm:p-12 lg:p-14 rounded-[28px] bg-[#383838] border border-white/10 shadow-2xl">
           {/* Left Text */}
           <div className="lg:col-span-8 text-left">
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.2] mb-4">

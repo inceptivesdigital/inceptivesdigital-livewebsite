@@ -91,7 +91,7 @@ export default function DubaiD33Agenda() {
     <section className="py-20 lg:py-28 bg-[#000000] text-white relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
         {/* Section Heading & D33 Narrative */}
-        <div className="max-w-4xl mx-auto text-center mb-14 sm:mb-18">
+        <div className="max-w-6xl mx-auto text-center mb-14 sm:mb-18">
           <span className="text-[#00CE44] text-xs sm:text-sm font-semibold uppercase tracking-widest block mb-3">
             Economic Acceleration &bull; Vision 2033
           </span>
@@ -112,6 +112,9 @@ export default function DubaiD33Agenda() {
             </p>
             <p className="text-sm sm:text-base text-white/75">
               The agenda also targets AED 1 trillion in private-sector investment and AED 25.6 trillion in foreign trade by 2033. As Dubai strengthens its connections with international markets, businesses have greater reasons to invest in mobile platforms that support digital transactions, multilingual experiences, and cross-border operations.
+            </p>
+            <p className="text-sm sm:text-base text-white/75">
+              Inceptives Digital helps Dubai startups and SMBs develop iOS, Android, and cross-platform applications around these changing market requirements, with architecture designed to support future integrations and regional expansion.
             </p>
           </div>
         </div>

@@ -35,7 +35,7 @@ const services = [
   {
     icon: BarChart3,
     title: '4. Machine Learning App Development',
-    externalLink: 'https://inceptivesdigital.com/machine-learning-development-services',
+    internalLink: '/machine-learning-development-services',
     description:
       'Applications built on predictive models, classification engines, and recommendation systems trained on your data.',
   },
@@ -48,7 +48,7 @@ const services = [
   {
     icon: MessageSquare,
     title: '6. AI Chatbot & Virtual Assistant Integration',
-    externalLink: 'https://inceptivesdigital.com/ai-chatbot-development-services',
+    internalLink: '/ai-chatbot-development-services',
     description:
       'Conversational AI integrated for support, lead qualification, internal knowledge access, and task automation.',
   },
@@ -61,7 +61,7 @@ const services = [
   {
     icon: Eye,
     title: '8. Computer Vision App Development',
-    externalLink: 'https://inceptivesdigital.com/computer-vision-development-services',
+    internalLink: '/computer-vision-development-services',
     description:
       'AI-powered applications for image/video analysis, object detection, visual inspection, and monitoring.',
   },
@@ -97,15 +97,6 @@ export default function AiAppServicesGrid() {
               >
                 {srv.title}
               </Link>
-            ) : srv.externalLink ? (
-              <a
-                href={srv.externalLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-[#00CE44]/60 group-hover:decoration-black"
-              >
-                {srv.title}
-              </a>
             ) : (
               srv.title
             )

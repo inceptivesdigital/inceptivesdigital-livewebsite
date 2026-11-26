@@ -8,8 +8,8 @@ export default function EcommerceCaseStudies() {
   return (
     <>
       {/* eCommerce and Marketplace Applications We've Developed */}
-      <section className="w-full bg-[#000000] text-white py-16 md:py-24">
-        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
+      <section id="case-studies" className="w-full bg-[#000000] text-white py-16 md:py-24">
+        <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
           <div className="text-center max-w-[960px] mx-auto mb-12 md:mb-16">
             <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
               eCommerce and Marketplace Applications{' '}

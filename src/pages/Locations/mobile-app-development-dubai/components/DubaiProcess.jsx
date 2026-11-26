@@ -59,7 +59,7 @@ export default function DubaiProcess() {
   const steps = [
     {
       num: '01.',
-      tabTitle: 'Strategy & Market Validation',
+      tabTitle: 'Discovery & Scoping',
       cardTitle: '1. Discovery and Technical Scoping',
       desc: (
         <>
@@ -73,7 +73,7 @@ export default function DubaiProcess() {
     },
     {
       num: '02.',
-      tabTitle: 'Mobile App UI/UX Design & Prototyping',
+      tabTitle: 'UX & UI Design',
       cardTitle: '2. UX and UI Design',
       desc: (
         <>
@@ -90,7 +90,7 @@ export default function DubaiProcess() {
     },
     {
       num: '03.',
-      tabTitle: 'Agile Engineering & Delivery',
+      tabTitle: 'Engineering & Development',
       cardTitle: '3. Engineering and Development',
       desc: (
         <>
@@ -100,7 +100,7 @@ export default function DubaiProcess() {
     },
     {
       num: '04.',
-      tabTitle: 'Mobile App Testing & Launch Readiness',
+      tabTitle: 'QA & Testing',
       cardTitle: '4. Quality Assurance and Testing',
       desc: (
         <>
@@ -114,19 +114,29 @@ export default function DubaiProcess() {
     },
     {
       num: '05.',
-      tabTitle: 'Deployment & Growth Support',
-      cardTitle: '5. Deployment, Launch & Post-Launch Support',
+      tabTitle: 'Deployment & Launch',
+      cardTitle: '5. Deployment and Launch',
       desc: (
         <>
-          This is where engineering comes together for launch. Platform submissions supported by{' '}
+          This is where months of engineering come together, and the preparation behind the release matters as much as the launch itself. Platform submissions supported by{' '}
           <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
             app store optimization
           </Link>
-          , production configuration, and monitoring create a predictable rollout. Post-launch, performance tracking,{' '}
+          , production configuration, monitoring, and final validation create a predictable rollout while providing immediate visibility into application performance.
+        </>
+      ),
+    },
+    {
+      num: '06.',
+      tabTitle: 'Post-Launch Support',
+      cardTitle: '6. Post-Launch Support',
+      desc: (
+        <>
+          The work continues after your application goes live. Performance monitoring,{' '}
           <Link to="/post-launch-analytics-iteration" className="text-[#00CE44] font-medium underline underline-offset-4">
-            analytics iteration
+            post-launch analytics iteration
           </Link>
-          , and security updates keep the product aligned with evolving user expectations and long-term expansion goals.
+          , feature enhancements, security updates, and technical optimisation keep the product aligned with evolving user expectations, business priorities, and long-term expansion goals.
         </>
       ),
     },
@@ -145,11 +155,11 @@ export default function DubaiProcess() {
             <span className="text-[#00CE44]">Defined Engineering Workflow</span>
           </h2>
           <p className="text-slate-300 text-[16px] sm:text-[18px] font-normal leading-relaxed">
-            Inceptives Digital moves through defined development stages, each clearing technical review before the next starts, so a scope gap surfaces during discovery rather than at launch.
+            Inceptives Digital, regarded as a leading mobile app development company in Dubai, moves through six defined stages, each clearing technical review before the next starts, so a scope gap surfaces during discovery rather than at launch.
           </p>
         </div>
 
-        {/* Process Tabs: Full width 5-col grid on desktop, draggable hidden-scrollbar horizontal scroll on small devices */}
+        {/* Process Tabs: horizontal scroll on mobile, centered wrapping pills on md+ */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -157,7 +167,7 @@ export default function DubaiProcess() {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className="w-full max-w-full flex lg:grid lg:grid-cols-5 items-center gap-2 sm:gap-2.5 lg:gap-3 overflow-x-auto no-scrollbar py-2 mb-10 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="w-full max-w-full flex flex-nowrap md:flex-wrap md:justify-center items-center gap-2.5 sm:gap-3 overflow-x-auto md:overflow-visible no-scrollbar py-2 mb-10 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {steps.map((step, index) => {
@@ -167,7 +177,7 @@ export default function DubaiProcess() {
                 key={step.num}
                 type="button"
                 onClick={(e) => handleTabClick(index, e)}
-                className={`rounded-full shrink-0 lg:shrink min-w-[200px] lg:min-w-0 lg:w-full flex items-center justify-start gap-2 py-2 pl-2 pr-4 transition-all duration-200 cursor-pointer border-0 select-none ${
+                className={`rounded-full shrink-0 w-auto max-w-full overflow-hidden flex items-center justify-start gap-2.5 py-2 pl-2 pr-4 sm:pr-5 transition-all duration-200 cursor-pointer border-0 select-none ${
                   isActive
                     ? 'bg-[#00CE44] text-black font-bold'
                     : 'bg-[#181a20] hover:bg-[#22252e] text-white/90 font-medium'
@@ -179,7 +189,7 @@ export default function DubaiProcess() {
                 </span>
 
                 <span
-                  className={`text-[13px] sm:text-[14px] whitespace-nowrap ${
+                  className={`text-[13px] sm:text-[14px] whitespace-nowrap truncate ${
                     isActive ? 'font-bold text-black' : 'font-normal text-white'
                   }`}
                 >

@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom'
+
 export default function BackendIndustries() {
   const industries = [
     {
       name: 'Fintech',
       desc: 'High-throughput transaction ledgers, payment gateway orchestration, and PCI-compliant APIs built for deterministic financial reliability.',
       icon: '/assets/industries-icons/industries-fintech.svg',
-      url: 'https://inceptivesdigital.com/fintech-app-development',
+      url: '/fintech-app-development',
     },
     {
       name: 'Healthcare',
       desc: 'HIPAA-aligned patient data pipelines, EHR/HL7 integrations, and encrypted clinical APIs engineered for strict compliance.',
       icon: '/assets/industries-icons/industries-healthcare.svg',
-      url: 'https://inceptivesdigital.com/healthcare-app-development',
+      url: '/healthcare-app-development',
     },
     {
       name: 'E-Commerce',
       desc: 'Real-time inventory synchronization, multi-vendor checkout APIs, and distributed order processing that hold steady under peak traffic.',
       icon: '/assets/industries-icons/industries-cart.svg',
-      url: 'https://inceptivesdigital.com/ecommerce-app-development-company',
+      url: '/ecommerce-app-development-company',
     },
     {
       name: 'SaaS',
@@ -32,13 +34,13 @@ export default function BackendIndustries() {
       name: 'EdTech',
       desc: 'Scalable learning content APIs, live assessment backends, and student analytics pipelines supporting concurrent cohorts.',
       icon: '/assets/industries-icons/industries-education.svg',
-      url: 'https://inceptivesdigital.com/education-app-development-company',
+      url: '/education-app-development-company',
     },
     {
       name: 'Real Estate',
       desc: 'MLS/IDX data ingestion pipelines, geospatial property search APIs, and CRM-integrated booking backends.',
       icon: '/assets/industries-icons/industries-realstate.svg',
-      url: 'https://inceptivesdigital.com/real-estate-app-development-company',
+      url: '/real-estate-app-development-company',
     },
     {
       name: 'Travel & Hospitality',
@@ -89,14 +91,12 @@ export default function BackendIndustries() {
               {/* Title: H3 tag, 23px font-size bold */}
               <h3 className="text-[20px] sm:text-[23px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
                 {ind.url ? (
-                  <a
-                    href={ind.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={ind.url}
                     className="text-[#00CE44] group-hover:text-black transition-colors underline underline-offset-4"
                   >
                     {ind.name}
-                  </a>
+                  </Link>
                 ) : (
                   ind.name
                 )}

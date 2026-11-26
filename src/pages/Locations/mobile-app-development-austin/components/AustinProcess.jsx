@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function AustinProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -59,38 +60,88 @@ export default function AustinProcess() {
     {
       num: '01.',
       tabTitle: 'Product Brief & Scope',
-      cardTitle: 'Product Brief & Scope',
+      cardTitle: '1. Product Brief & Scope',
       desc: 'Business objectives, target users, compliance requirements, and technical constraints are defined before design begins. The outcome is a confirmed roadmap, platform recommendation, and delivery plan with realistic timelines.',
     },
     {
       num: '02.',
       tabTitle: 'Architecture & Compliance',
-      cardTitle: 'Architecture & Compliance Planning',
-      desc: 'Platform architecture, data flows, and compliance frameworks are mapped before development starts. TDPSA, SOC 2, and PCI-DSS requirements, along with HIPAA-compliant app development standards, are addressed at the foundation stage, not before launch.',
+      cardTitle: '2. Architecture & Compliance Planning',
+      desc: (
+        <>
+          Platform architecture, data flows, and compliance frameworks are mapped before development starts. TDPSA, SOC 2, and PCI-DSS requirements, along with{' '}
+          <Link
+            to="/blog/hipaa-compliant-app-development"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            HIPAA-compliant app development
+          </Link>{' '}
+          standards, are addressed at the foundation stage, not before launch.
+        </>
+      ),
     },
     {
       num: '03.',
       tabTitle: 'Experience Design',
-      cardTitle: 'Experience Design & Validation',
-      desc: 'Our mobile app UI/UX design process turns user requirements into wireframes and interactive prototypes. We test navigation, screen layouts, and essential workflows before development, helping Austin businesses identify usability problems before they become expensive engineering changes.',
+      cardTitle: '3. Experience Design & Validation',
+      desc: (
+        <>
+          Our mobile app{' '}
+          <Link
+            to="/ui-ux-design"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            UI/UX design
+          </Link>{' '}
+          process turns user requirements into wireframes and{' '}
+          <Link
+            to="/interactive-prototyping"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            interactive prototypes
+          </Link>
+          . We test navigation, screen layouts, and essential workflows before development, helping Austin businesses identify usability problems before they become expensive engineering changes.
+        </>
+      ),
     },
     {
       num: '04.',
       tabTitle: 'Engineering Sprints',
-      cardTitle: 'Engineering Sprints',
+      cardTitle: '4. Engineering Sprints',
       desc: 'Development progresses through transparent two-week sprint cycles with working software delivered to a live staging environment. Every milestone is reviewable, testable, and approved before moving forward.',
     },
     {
       num: '05.',
       tabTitle: 'QA & Launch Readiness',
-      cardTitle: 'Quality Assurance & Launch Readiness',
-      desc: 'Mobile app testing covers functionality, performance, security, and usability across supported devices and operating systems. QA engineers identify release-blocking issues and verify fixes before the application reaches users.',
+      cardTitle: '5. Quality Assurance & Launch Readiness',
+      desc: (
+        <>
+          <Link
+            to="/blog/mobile-app-testing-strategies"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            Mobile app testing
+          </Link>{' '}
+          covers functionality, performance, security, and usability across supported devices and operating systems. QA engineers identify release-blocking issues and verify fixes before the application reaches users.
+        </>
+      ),
     },
     {
       num: '06.',
       tabTitle: 'Deployment & Growth',
-      cardTitle: 'Deployment & Growth Support',
-      desc: 'App Store and Google Play submissions and optimization are managed end-to-end, followed by a dedicated post-launch support period covering monitoring, stability, and critical updates.',
+      cardTitle: '6. Deployment & Growth Support',
+      desc: (
+        <>
+          App Store and Google Play submissions and{' '}
+          <Link
+            to="/app-store-optimization"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            optimization
+          </Link>{' '}
+          are managed end-to-end, followed by a dedicated post-launch support period covering monitoring, stability, and critical updates.
+        </>
+      ),
     },
   ]
 

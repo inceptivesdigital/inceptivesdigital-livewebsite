@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom'
 
 const PRICING_TIERS = [
   {
@@ -46,14 +47,12 @@ export default function BackendCostSection() {
             </h2>
             <p className="text-[16px] text-[#555555] leading-[1.65]">
               Backend &amp; API development costs are scoped to the project, confirmed before the first sprint, and never left open-ended once the engagement starts. The main{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/factors-affecting-app-development-cost"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/blog/factors-affecting-app-development-cost"
                 className="font-semibold text-[#111111] underline decoration-[#00CE44] decoration-2 underline-offset-4 hover:text-[#009e34] transition-colors"
-              >
+>
                 factors affecting app development cost
-              </a>{' '}
+              </Link>{' '}
               are system complexity, integrations, architecture, and infrastructure requirements.
             </p>
           </div>

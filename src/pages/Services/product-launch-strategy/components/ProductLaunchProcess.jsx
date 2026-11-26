@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ProductLaunchProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -51,8 +52,18 @@ export default function ProductLaunchProcess() {
       tabTitle: 'Discovery & Research',
       tabIcon: '/assets/process/tab-1.png',
       cardTitle: 'Discovery and Market Research',
-      cardDesc:
-        'The process begins with a deep understanding of the market, the audience, and the competitive landscape. Every strategic decision that follows is grounded in research rather than assumption.',
+      cardDesc: (
+        <>
+          The process begins with a{' '}
+          <Link
+            to="/discovery-sprint"
+            className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
+          >
+            discovery sprint
+          </Link>{' '}
+          to understand the market, the audience, and the competitive landscape. Every strategic decision that follows is grounded in research rather than assumption.
+        </>
+      ),
     },
     {
       num: '02.',
@@ -101,7 +112,7 @@ export default function ProductLaunchProcess() {
 
         {/* Bottom Text */}
         <p className="mt-3 sm:mt-4 text-white/90 text-[16px] font-normal text-center max-w-3xl mx-auto mb-8 sm:mb-10 leading-relaxed">
-          From initial market validation to post-launch optimization, each stage is engineered to eliminate risk and maximize traction.
+          A successful launch does not happen by chance. It is the result of a structured process where deliberate, sequenced steps are built around the product and the market it is entering.
         </p>
 
         {/* Interactive Step Navigation Tabs (5 Steps) */}

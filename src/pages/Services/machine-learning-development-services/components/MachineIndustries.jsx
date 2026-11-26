@@ -1,4 +1,5 @@
 import { Activity, BrainCircuit, FileSearch, Network, Settings2, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const industries = [
   {
@@ -27,14 +28,12 @@ const industries = [
     bullets: [
       <>
         In-product recommendation engines for{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-powered-mobile-apps-uae-business-operations"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/ai-powered-mobile-apps-uae-business-operations"
           className="text-white underline group-hover:text-black"
-        >
+>
           AI-powered mobile apps
-        </a>{' '}
+        </Link>{' '}
         and SaaS platforms
       </>,
       'Predictive analytics and user behaviour modelling',

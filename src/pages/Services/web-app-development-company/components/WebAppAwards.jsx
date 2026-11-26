@@ -1,22 +1,18 @@
 const BADGES = [
   {
-    title: 'Top App Development Company',
-    subtitle: 'Clutch, Plano 2026',
+    title: 'Top App Development Company — Clutch, Plano 2026',
     image: '/assets/awards-images/award-clutch-austin.png',
   },
   {
-    title: 'Top iPhone App Development Company',
-    subtitle: 'Clutch, United States 2026',
+    title: 'Top iPhone App Development Company — Clutch, United States 2026',
     image: '/assets/awards-images/award-clutch-gaming.png',
   },
   {
-    title: 'Top Design Company',
-    subtitle: 'Clutch, Dallas 2026',
+    title: 'Top Design Company — Clutch, Dallas 2026',
     image: '/assets/awards-images/award-rightfirms.png',
   },
   {
-    title: 'Top User Experience Company',
-    subtitle: 'Clutch, Plano 2026',
+    title: 'Top User Experience Company — Clutch, Plano 2026',
     image: '/assets/awards-images/award-top-developers.png',
   },
 ]
@@ -26,9 +22,9 @@ export default function WebAppAwards() {
     <section className="py-16 sm:py-24 bg-[#0d0e11] text-white border-y border-white/10">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Heading + 4 Visual Badges */}
+          {/* Left Column: Heading + 4 Clean Visual Badges */}
           <div className="lg:col-span-6 text-left">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#00CE44]/15 text-[#00CE44] text-xs font-bold uppercase tracking-wider mb-4">
+            <span className="inline-block bg-transparent border-0 p-0 text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
               Awards &amp; Recognition
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.18] mb-8">
@@ -36,27 +32,15 @@ export default function WebAppAwards() {
               <span className="text-[#00CE44]">Web App Development Company</span> That Delivers
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="flex flex-wrap items-center gap-6 sm:gap-8">
               {BADGES.map((badge) => (
-                <div
+                <img
                   key={badge.title}
-                  className="rounded-2xl bg-[#18191d] border border-white/10 p-4 flex flex-col items-center text-center"
-                >
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 flex items-center justify-center">
-                    <img
-                      src={badge.image}
-                      alt={`${badge.title} — ${badge.subtitle}`}
-                      className="max-w-full max-h-full object-contain select-none"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="text-xs font-bold text-white leading-snug mb-1">
-                    {badge.title}
-                  </div>
-                  <div className="text-[11px] text-[#00CE44] font-medium">
-                    {badge.subtitle}
-                  </div>
-                </div>
+                  src={badge.image}
+                  alt={badge.title}
+                  className="h-20 sm:h-24 w-auto object-contain bg-transparent border-0 p-0 select-none"
+                  loading="lazy"
+                />
               ))}
             </div>
           </div>

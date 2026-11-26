@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
   {
@@ -13,8 +14,8 @@ const faqs = [
     q: '3. How does generative AI work?',
     a: (
       <>
-        <a href="https://inceptivesdigital.com/machine-learning-development-services">Machine learning</a> models, including deep learning systems trained on large datasets, recognise patterns and produce new content. In business applications,{' '}
-        <a href="https://inceptivesdigital.com/backend-api-development">backend API development</a> connects models to private data and retrieval systems to ground outputs in accurate and relevant information.
+        <Link to="/machine-learning-development-services">Machine learning</Link> models, including deep learning systems trained on large datasets, recognise patterns and produce new content. In business applications,{' '}
+        <Link to="/backend-api-development">backend API development</Link> connects models to private data and retrieval systems to ground outputs in accurate and relevant information.
       </>
     ),
   },
@@ -23,8 +24,8 @@ const faqs = [
     a: (
       <>
         Knowledge assistants, document intelligence systems, content generation platforms,{' '}
-        <a href="https://inceptivesdigital.com/ai-chatbot-development-services">AI chatbots</a> for customer support, embedded copilots,{' '}
-        <a href="https://inceptivesdigital.com/blog/ai-powered-mobile-apps-uae-business-operations">AI-powered mobile apps</a>, image generation workflows, and generative AI SaaS products.
+        <Link to="/ai-chatbot-development-services">AI chatbots</Link> for customer support, embedded copilots,{' '}
+        <Link to="/blog/ai-powered-mobile-apps-uae-business-operations">AI-powered mobile apps</Link>, image generation workflows, and generative AI SaaS products.
       </>
     ),
   },
@@ -37,8 +38,8 @@ const faqs = [
     a: (
       <>
         Yes. It integrates with CRM, ERP, CMS, SaaS platforms, databases, internal APIs, and existing{' '}
-        <a href="https://inceptivesdigital.com/web-app-development-company">web applications</a> and{' '}
-        <a href="https://inceptivesdigital.com/mobile-app-development">mobile applications</a> without replacing existing systems. Integration architecture is defined in Discovery before development begins.
+        <Link to="/web-app-development-company">web applications</Link> and{' '}
+        <Link to="/mobile-app-development">mobile applications</Link> without replacing existing systems. Integration architecture is defined in Discovery before development begins.
       </>
     ),
   },
@@ -58,8 +59,8 @@ const faqs = [
     q: '10. How much does generative AI development cost?',
     a: (
       <>
-        A focused <a href="https://inceptivesdigital.com/ai-mvp-development">AI MVP</a> built around a RAG system or generative AI feature starts from $20K. A full platform with complex integrations typically ranges from $80K to $250K. The precise number is defined in the{' '}
-        <a href="https://inceptivesdigital.com/discovery-sprint">Discovery Sprint</a>.
+        A focused <Link to="/ai-mvp-development">AI MVP</Link> built around a RAG system or generative AI feature starts from $20K. A full platform with complex integrations typically ranges from $80K to $250K. The precise number is defined in the{' '}
+        <Link to="/discovery-sprint">Discovery Sprint</Link>.
       </>
     ),
   },

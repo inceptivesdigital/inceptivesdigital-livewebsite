@@ -2,7 +2,7 @@ export default function CompanyCeoQuote() {
   return (
     <section className="py-16 sm:py-24 bg-[#050505] relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        <div className="max-w-5xl mx-auto rounded-[28px] bg-gradient-to-r from-[#111111] via-[#161616] to-[#111111] border border-white/10 p-8 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl">
+        <div className="max-w-5xl mx-auto rounded-[28px] bg-[#383838] border border-white/10 p-8 sm:p-14 lg:p-16 relative overflow-hidden shadow-2xl">
           {/* Subtle Green Glow on Left Border */}
           <div className="absolute top-0 bottom-0 left-0 w-2 bg-[#00CE44]" />
 

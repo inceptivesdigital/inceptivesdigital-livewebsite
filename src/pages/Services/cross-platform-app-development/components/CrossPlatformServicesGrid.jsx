@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function CrossPlatformServicesGrid() {
   const services = [
     {
@@ -59,14 +60,12 @@ export default function CrossPlatformServicesGrid() {
             </h2>
             <p className="text-white/85 text-[16px] leading-relaxed font-normal text-center">
               Inceptives Digital provides end-to-end cross-platform app development services across{' '}
-              <a
-                href="https://inceptivesdigital.com/product-strategy-consulting"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/product-strategy-consulting"
                 className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-              >
+>
                 product strategy
-              </a>
+              </Link>
               , design, engineering, testing, deployment, and post-launch support. One team manages the technical decisions across the product lifecycle, keeping the shared architecture aligned from the first sprint through subsequent platform releases.
             </p>
           </div>

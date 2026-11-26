@@ -35,7 +35,7 @@ const appTypes = [
   {
     icon: Zap,
     title: '3. AI Automation Apps',
-    externalLink: 'https://inceptivesdigital.com/ai-automation-services',
+    internalLink: '/ai-automation-services',
     description:
       'Applications that remove manual effort from high-volume operational processes. AI makes the decisions. The team handles the exceptions.',
     bullets: [
@@ -50,14 +50,12 @@ const appTypes = [
     description: (
       <>
         Intelligent{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-powered-mobile-apps-uae-business-operations"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/ai-powered-mobile-apps-uae-business-operations"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           AI-powered mobile applications
-        </a>{' '}
+        </Link>{' '}
         built for real user load on both platforms. Machine learning, NLP, and computer vision are integrated into native and cross-platform mobile products.
       </>
     ),
@@ -86,14 +84,12 @@ const appTypes = [
       'Smart search and recommendation engines',
       <>
         Automated workflows and{' '}
-        <a
-          href="https://inceptivesdigital.com/system-integration-api-automation"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/system-integration-api-automation"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           system integration api automation
-        </a>
+        </Link>
       </>,
     ],
   },
@@ -103,14 +99,12 @@ const appTypes = [
     description: (
       <>
         Private applications built for internal operations. Knowledge management, analytics dashboards, and productivity tools that make teams more effective through{' '}
-        <a
-          href="https://inceptivesdigital.com/business-process-automation"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/business-process-automation"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           business process automation
-        </a>
+        </Link>
         .
       </>
     ),
@@ -128,19 +122,17 @@ export default function AiAppTypesGrid() {
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="text-center max-w-[980px] mx-auto mb-12 md:mb-16">
           <h2 className="text-[28px] sm:text-[36px] md:text-[42px] font-bold leading-[1.18] text-white mb-4">
-            Our AI Applications{' '}
-            <span className="text-[#00CE44]">Built Across Every Format</span>
+            Our AI Applications Our Development Company{' '}
+            <span className="text-[#00CE44]">Builds Apps Across Every Format</span>
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65] font-normal">
             Web, mobile, SaaS, and internal tools. Each{' '}
-            <a
-              href="https://inceptivesdigital.com/digital-product-development"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/digital-product-development"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               digital product
-            </a>{' '}
+            </Link>{' '}
             is built for a specific operational context, not a generic template.
           </p>
         </div>
@@ -158,15 +150,13 @@ export default function AiAppTypesGrid() {
                   strokeWidth={1.8}
                 />
                 <h3 className="text-[#00CE44] group-hover:text-black text-[19px] sm:text-[21px] font-bold leading-snug mb-3 transition-colors duration-200">
-                  {item.externalLink ? (
-                    <a
-                      href={item.externalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {item.internalLink ? (
+                    <Link
+                      to={item.internalLink}
                       className="underline decoration-[#00CE44]/60 group-hover:decoration-black"
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   ) : (
                     item.title
                   )}

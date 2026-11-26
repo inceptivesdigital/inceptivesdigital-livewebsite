@@ -122,7 +122,7 @@ export default function Testimonials({
               {reviews.map((rev, index) => (
                 <div
                   key={index}
-                  className="bg-[#565656]/25 backdrop-blur-md rounded-[20px] p-6 sm:p-7 border-0 transition-all duration-200 hover:bg-[#565656]/35"
+                  className="bg-[#383838] backdrop-blur-md rounded-[20px] p-6 sm:p-7 border-0 transition-all duration-200 hover:bg-[#424242]"
                 >
                   {/* Quote Text */}
                   <p className="text-white text-sm sm:text-[15px] leading-[23px] font-normal mb-5">

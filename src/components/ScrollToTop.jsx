@@ -8,33 +8,23 @@ export default function ScrollToTop() {
     window.scrollTo({ top: 0, behavior: 'instant' })
   }, [pathname])
 
-  // Ensure every image decodes asynchronously off the main thread for faster rendering
+  // Ensure images decode off the main thread via a single idle pass per route change
   useEffect(() => {
-    const optimizeImages = (root = document) => {
-      const imgs = root.querySelectorAll ? root.querySelectorAll('img:not([decoding])') : []
+    const applyAsyncDecoding = () => {
+      const imgs = document.querySelectorAll('img:not([decoding])')
       imgs.forEach((img) => {
         img.setAttribute('decoding', 'async')
       })
     }
 
-    optimizeImages()
+    if (typeof window.requestIdleCallback === 'function') {
+      const idleId = window.requestIdleCallback(applyAsyncDecoding, { timeout: 300 })
+      return () => window.cancelIdleCallback(idleId)
+    }
 
-    const observer = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        m.addedNodes.forEach((node) => {
-          if (node.nodeType !== 1) return
-          if (node.tagName === 'IMG' && !node.hasAttribute('decoding')) {
-            node.setAttribute('decoding', 'async')
-          } else {
-            optimizeImages(node)
-          }
-        })
-      }
-    })
-
-    observer.observe(document.body, { childList: true, subtree: true })
-    return () => observer.disconnect()
-  }, [])
+    const timerId = window.setTimeout(applyAsyncDecoding, 120)
+    return () => window.clearTimeout(timerId)
+  }, [pathname])
 
   return null
 }

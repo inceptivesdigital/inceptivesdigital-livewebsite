@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function IosServicesGrid() {
   const services = [
     {
@@ -6,19 +7,19 @@ export default function IosServicesGrid() {
       desc: (
         <>
           Have an iPhone{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/how-to-validate-your-mobile-app-idea"
+          <Link
+            to="/blog/how-to-validate-your-mobile-app-idea"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             app idea
-          </a>{' '}
+          </Link>{' '}
           but need a clear development plan? Our iOS consultants examine your product requirements and recommend the appropriate Apple frameworks. A{' '}
-          <a
-            href="https://inceptivesdigital.com/discovery-sprint"
+          <Link
+            to="/discovery-sprint"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             discovery sprint
-          </a>{' '}
+          </Link>{' '}
           establishes the scope and estimated cost before engineering begins.
         </>
       ),
@@ -29,12 +30,12 @@ export default function IosServicesGrid() {
       desc: (
         <>
           Our iOS{' '}
-          <a
-            href="https://inceptivesdigital.com/ui-ux-design"
+          <Link
+            to="/ui-ux-design"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             UI/UX design
-          </a>{' '}
+          </Link>{' '}
           team follows Apple’s Human Interface Guidelines to create interfaces that feel native on iPhone and iPad. SwiftUI design conventions shape navigation, while adaptive layouts support different screen sizes and accessibility settings.
         </>
       ),
@@ -54,19 +55,19 @@ export default function IosServicesGrid() {
       desc: (
         <>
           Business iPhone apps frequently depend on external software. Our iOS application developers handle{' '}
-          <a
-            href="https://inceptivesdigital.com/system-integration-api-automation"
+          <Link
+            to="/system-integration-api-automation"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             system integration and API automation
-          </a>
+          </Link>
           , connecting CRM systems and custom backends through secure APIs. For applications offering digital purchases, StoreKit supports Apple’s in-app payment and subscription{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-monetization-strategies"
+          <Link
+            to="/blog/mobile-app-monetization-strategies"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             monetization
-          </a>{' '}
+          </Link>{' '}
           workflows.
         </>
       ),
@@ -77,12 +78,12 @@ export default function IosServicesGrid() {
       desc: (
         <>
           Legacy Objective-C applications can struggle with changes to Apple&apos;s SDKs and newer iOS releases. Our iPhone app development services include Swift migration, targeted UIKit modernization, and{' '}
-          <a
-            href="https://inceptivesdigital.com/product-rescue-scaling"
+          <Link
+            to="/product-rescue-scaling"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             product rescue
-          </a>
+          </Link>
           , preserving existing functionality where the codebase permits.
         </>
       ),
@@ -93,12 +94,12 @@ export default function IosServicesGrid() {
       desc: (
         <>
           An iOS development company needs to account for Apple&apos;s review requirements before the final build reaches App Store Connect. Our engineers use TestFlight for beta distribution, review Apple’s submission guidelines before you{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
+          <Link
+            to="/blog/publish-update-an-app-on-app-store-google-play"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             publish and update an app on the App Store
-          </a>
+          </Link>
           , and address compatibility issues as Apple updates iOS.
         </>
       ),

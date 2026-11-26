@@ -7,27 +7,27 @@ const categories = [
     items: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Microsoft Power Automate'],
   },
   {
-    name: 'Programming and Automation Logic',
+    name: 'Programming & Automation Logic',
     items: ['Python', 'Node.js', 'JavaScript', 'REST APIs', 'GraphQL'],
   },
   {
     name: 'System Integration Layer',
-    items: ['API Integrations', 'Webhooks', 'ERP/CRM Connectors', 'Database Connectivity'],
+    items: ['API Integrations', 'Webhooks', 'ERP/CRM Connectors', 'Database Connectivity Layers'],
   },
   {
     name: 'Document Processing',
-    items: ['OCR Engines', 'Document Parsing Systems', 'Intelligent Data Extraction'],
+    items: ['OCR Engines', 'Document Parsing Systems', 'Intelligent Data Extraction Tools'],
   },
   {
-    name: 'Data and Storage',
+    name: 'Data & Storage',
     items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
   },
   {
-    name: 'Cloud and Infrastructure',
+    name: 'Cloud & Infrastructure',
     items: ['AWS', 'Google Cloud', 'Microsoft Azure', 'Docker', 'Kubernetes'],
   },
   {
-    name: 'Monitoring and Execution Control',
+    name: 'Monitoring & Execution Control',
     items: ['Workflow Logging Systems', 'Error Tracking Tools', 'Automation Monitoring Dashboards'],
   },
 ]

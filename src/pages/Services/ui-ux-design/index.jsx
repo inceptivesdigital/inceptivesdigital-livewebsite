@@ -247,7 +247,7 @@ export default function UiUxDesign() {
         <div className="relative z-10 w-full max-w-[1220px] mx-auto px-6 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 lg:pr-6 text-left space-y-5 max-w-[580px]">
-              <span className="inline-block text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-[0.2em]">
+              <span className="inline-block text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px]">
                 UI UX Design Services
               </span>
 

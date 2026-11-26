@@ -150,7 +150,7 @@ export default function TorontoProcess() {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className="w-full max-w-full flex lg:grid lg:grid-cols-6 items-center gap-2 sm:gap-2.5 lg:gap-3 overflow-x-auto no-scrollbar py-2 mb-10 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="w-full max-w-full flex flex-nowrap md:flex-wrap md:justify-center items-center gap-2.5 sm:gap-3 overflow-x-auto md:overflow-visible no-scrollbar py-2 mb-10 select-none scroll-smooth cursor-grab active:cursor-grabbing [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {steps.map((step, index) => {
@@ -160,7 +160,7 @@ export default function TorontoProcess() {
                 key={step.num}
                 type="button"
                 onClick={(e) => handleTabClick(index, e)}
-                className={`rounded-full shrink-0 lg:shrink min-w-[190px] lg:min-w-0 lg:w-full flex items-center justify-start gap-2 py-2.5 pl-2.5 pr-3.5 transition-all duration-200 cursor-pointer border-0 select-none ${
+                className={`rounded-full shrink-0 w-auto max-w-full overflow-hidden flex items-center justify-start gap-2.5 py-2 pl-2 pr-4 sm:pr-5 transition-all duration-200 cursor-pointer border-0 select-none ${
                   isActive
                     ? 'bg-[#00CE44] text-black'
                     : 'bg-[#1e2025] hover:bg-[#272931] text-white/90'

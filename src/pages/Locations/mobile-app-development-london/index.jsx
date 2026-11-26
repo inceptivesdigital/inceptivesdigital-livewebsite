@@ -46,7 +46,7 @@ export default function MobileAppLondon() {
       'https://inceptivesdigital.com/mobile-app-development-company-london-uk'
     )
   }, [])
-ch
+
   return (
     <div className="bg-[#050608] min-h-screen text-white selection:bg-[#00CE44] selection:text-black">
       {/* 1. Hero */}

@@ -88,7 +88,7 @@ export default function LocationProcessLayout({
           )}
         </div>
 
-        {/* Single-Line Pill Tabs (Horizontal hidden-scrollbar scroll on mobile/tablet, full-width grid on lg+) */}
+        {/* Single-Line Pill Tabs (Horizontal swipe on mobile, centered wrapping pills on md+) */}
         <div
           ref={tabsRef}
           onMouseDown={handleMouseDown}
@@ -96,7 +96,7 @@ export default function LocationProcessLayout({
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onWheel={handleWheel}
-          className={`w-full flex ${gridColsClass} gap-3 mb-6 overflow-x-auto no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden scroll-smooth cursor-grab active:cursor-grabbing select-none`}
+          className="w-full flex flex-nowrap md:flex-wrap md:justify-center gap-3 mb-6 overflow-x-auto md:overflow-visible no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden scroll-smooth cursor-grab active:cursor-grabbing select-none"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {steps.map((step, index) => {
@@ -108,7 +108,7 @@ export default function LocationProcessLayout({
                 key={numLabel + tabLabel}
                 type="button"
                 onClick={(e) => handleTabClick(index, e)}
-                className={`rounded-full shrink-0 lg:shrink min-w-[180px] lg:min-w-0 lg:w-full flex items-center justify-start gap-3 py-1.5 pl-1.5 pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
+                className={`rounded-full shrink-0 w-auto max-w-full overflow-hidden flex items-center justify-start gap-2.5 py-2 pl-2 pr-4 sm:pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
                   isActive
                     ? 'bg-[#00CE44] text-white font-semibold'
                     : 'bg-[#2c2c2c] hover:bg-[#383838] text-white/90 font-medium'
@@ -117,7 +117,7 @@ export default function LocationProcessLayout({
                 <span className="w-8 h-8 rounded-full bg-white text-black font-extrabold text-xs sm:text-sm flex items-center justify-center shrink-0">
                   {numLabel}
                 </span>
-                <span className="text-sm sm:text-[15px] whitespace-nowrap lg:truncate">
+                <span className="text-sm sm:text-[15px] whitespace-nowrap truncate">
                   {tabLabel}
                 </span>
               </button>
@@ -126,27 +126,13 @@ export default function LocationProcessLayout({
         </div>
 
         {/* Content Card */}
-        <div
-          className={`w-full bg-[#333333] rounded-[14px] px-7 sm:px-10 lg:px-12 py-10 sm:py-12 min-h-[210px] flex flex-col justify-center text-left border-0 ${
-            activeStep.image ? 'grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_160px] gap-8 items-center' : ''
-          }`}
-        >
-          <div>
-            <h3 className="text-2xl sm:text-[26px] font-bold text-[#00CE44] tracking-tight mb-3">
-              {activeStep.cardTitle || activeStep.title}
-            </h3>
-            <p className="text-white/85 text-base sm:text-[17px] leading-relaxed font-normal max-w-4xl">
-              {activeStep.desc || activeStep.description}
-            </p>
-          </div>
-          {activeStep.image && (
-            <img
-              src={activeStep.image}
-              alt={activeStep.imageAlt || ''}
-              className="w-28 h-28 lg:w-36 lg:h-36 object-contain justify-self-center"
-              loading="lazy"
-            />
-          )}
+        <div className="w-full bg-[#333333] rounded-[14px] px-7 sm:px-10 lg:px-12 py-10 sm:py-12 min-h-[210px] flex flex-col justify-center text-left border-0">
+          <h3 className="text-2xl sm:text-[26px] font-bold text-[#00CE44] tracking-tight mb-3">
+            {activeStep.cardTitle || activeStep.title}
+          </h3>
+          <p className="text-white/85 text-base sm:text-[17px] leading-relaxed font-normal max-w-4xl">
+            {activeStep.desc || activeStep.description}
+          </p>
         </div>
       </div>
     </section>

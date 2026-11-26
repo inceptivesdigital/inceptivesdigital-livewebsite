@@ -65,6 +65,7 @@ const AiAgentDevelopment = lazy(() => import('./pages/Services/ai-agent-developm
 const GenerativeAiDevelopment = lazy(() => import('./pages/Services/generative-ai-development-company'))
 const MachineLearningDevelopment = lazy(() => import('./pages/Services/machine-learning-development-services'))
 const NlpDevelopment = lazy(() => import('./pages/Services/nlp-development-services'))
+const ComputerVisionDevelopment = lazy(() => import('./pages/Services/computer-vision-development-services'))
 const AiMvpDevelopment = lazy(() => import('./pages/Services/ai-mvp-development'))
 const AiAutomationServices = lazy(() => import('./pages/Services/ai-automation-services'))
 const SystemIntegrationApiAutomation = lazy(() => import('./pages/Services/system-integration-api-automation'))
@@ -72,6 +73,7 @@ const BusinessProcessAutomation = lazy(() => import('./pages/Services/business-p
 const RpaDevelopmentServices = lazy(() => import('./pages/Services/rpa-development-services'))
 
 // Industries Pages
+const IndustriesHub = lazy(() => import('./pages/Industries'))
 const HealthcareAppDevelopment = lazy(() => import('./pages/Industries/healthcare-app-development'))
 const FitnessAppDevelopment = lazy(() => import('./pages/Industries/fitness-app-development'))
 const FintechAppDevelopment = lazy(() => import('./pages/Industries/fintech-app-development'))
@@ -97,6 +99,7 @@ const AboutUs = lazy(() => import('./pages/Company/about-us'))
 const Blogs = lazy(() => import('./pages/Company/blogs'))
 const BlogDetail = lazy(() => import('./pages/Company/blogs/BlogDetail'))
 const CategoryPage = lazy(() => import('./pages/Company/blogs/CategoryPage'))
+const AuthorPage = lazy(() => import('./pages/Company/blogs/AuthorPage'))
 const PressMedia = lazy(() => import('./pages/Company/press-media'))
 const PressReleaseDetail = lazy(() => import('./pages/Company/press-media/PressReleaseDetail'))
 const Partnership = lazy(() => import('./pages/Company/partnership'))
@@ -148,6 +151,7 @@ export default function App() {
         <main className="flex-grow">
           <Suspense fallback={<div className="min-h-screen bg-[#07080b]" />}>
             <Routes>
+            <Route path="/startup-product-development" element={<StartupAppDevelopment />} />
             {/* General Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
@@ -240,6 +244,9 @@ export default function App() {
             <Route path="/services/machine-learning-development-services" element={<MachineLearningDevelopment />} />
             <Route path="/nlp-development-services" element={<NlpDevelopment />} />
             <Route path="/services/nlp-development-services" element={<NlpDevelopment />} />
+            <Route path="/computer-vision-development-services" element={<ComputerVisionDevelopment />} />
+            <Route path="/services/computer-vision-development-services" element={<ComputerVisionDevelopment />} />
+            <Route path="/ai-development/computer-vision" element={<ComputerVisionDevelopment />} />
             <Route path="/ai-mvp-development" element={<AiMvpDevelopment />} />
             <Route path="/services/ai-mvp-development" element={<AiMvpDevelopment />} />
             <Route path="/ai-automation-services" element={<AiAutomationServices />} />
@@ -252,6 +259,7 @@ export default function App() {
             <Route path="/services/rpa-development-services" element={<RpaDevelopmentServices />} />
 
             {/* Industries Routes */}
+            <Route path="/industries" element={<IndustriesHub />} />
             <Route path="/healthcare-app-development" element={<HealthcareAppDevelopment />} />
             <Route path="/industries/healthcare-app-development" element={<HealthcareAppDevelopment />} />
             <Route path="/fitness-app-development" element={<FitnessAppDevelopment />} />
@@ -315,6 +323,8 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/blogs/:slug" element={<BlogDetail />} />
             <Route path="/category/:slug" element={<CategoryPage />} />
+            <Route path="/author/:slug" element={<AuthorPage />} />
+            <Route path="/authors/:slug" element={<AuthorPage />} />
             <Route path="/company/blogs" element={<Blogs />} />
 
             <Route path="/press-media" element={<PressMedia />} />
@@ -346,6 +356,10 @@ export default function App() {
             />
             <Route
               path="/reviews/*"
+              element={<StaticPublicFolder dir="reviews" />}
+            />
+            <Route
+              path="/testimonial"
               element={<StaticPublicFolder dir="reviews" />}
             />
             <Route

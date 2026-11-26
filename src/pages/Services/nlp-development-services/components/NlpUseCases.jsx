@@ -1,4 +1,5 @@
 import { Activity, FileSearch, FileText, Network, Search, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const useCases = [
   {
@@ -6,14 +7,12 @@ const useCases = [
     title: '1. Customer Support Automation',
     description: (
       <>
-        <a
-          href="https://inceptivesdigital.com/ai-automation-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-automation-services"
           className="text-white underline group-hover:text-black"
-        >
+>
           AI automation
-        </a>{' '}
+        </Link>{' '}
         uses language understanding to classify customer intent, resolve routine queries, and route requests without manual handling at every interaction.
       </>
     ),
@@ -42,14 +41,12 @@ const useCases = [
     description: (
       <>
         Automatically categorise incoming emails, tickets, documents, and messages to support{' '}
-        <a
-          href="https://inceptivesdigital.com/business-process-automation"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/business-process-automation"
           className="text-white underline group-hover:text-black"
-        >
+>
           business process automation
-        </a>{' '}
+        </Link>{' '}
         and route information without manual intervention.
       </>
     ),
@@ -60,14 +57,12 @@ const useCases = [
     description: (
       <>
         Convert spoken language into structured data for transcription,{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-powered-mobile-apps-uae-business-operations"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/ai-powered-mobile-apps-uae-business-operations"
           className="text-white underline group-hover:text-black"
-        >
+>
           AI-powered mobile apps
-        </a>{' '}
+        </Link>{' '}
         with voice interfaces, and call centre automation.
       </>
     ),

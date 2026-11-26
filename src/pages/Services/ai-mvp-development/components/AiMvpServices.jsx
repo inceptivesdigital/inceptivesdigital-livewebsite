@@ -8,6 +8,7 @@ import {
   Smartphone,
   Sparkles,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -16,9 +17,9 @@ const services = [
     description: (
       <>
         Our{' '}
-        <a href="https://inceptivesdigital.com/ai-app-development-services" target="_blank" rel="noopener noreferrer">
+        <Link to="/ai-app-development-services">
           AI app development
-        </a>{' '}
+        </Link>{' '}
         approach starts with a bespoke MVP designed around your specific use case, data sources, and operational requirements. Built from the architecture up for your problem rather than relying on generic AI app builders or adapting a previous engagement.
       </>
     ),
@@ -29,9 +30,9 @@ const services = [
     description: (
       <>
         Focused{' '}
-        <a href="https://inceptivesdigital.com/web-app-development-company" target="_blank" rel="noopener noreferrer">
+        <Link to="/web-app-development-company">
           web app development
-        </a>{' '}
+        </Link>{' '}
         creates a minimal AI product that can validate the core concept with real users. React or Next.js frontend, FastAPI or Node.js backend, AI model integrated and tested under real conditions.
       </>
     ),
@@ -42,9 +43,9 @@ const services = [
     description: (
       <>
         A focused iOS or Android AI application built to prove the concept on mobile. Flutter or React Native for cross-platform delivery. This{' '}
-        <a href="https://inceptivesdigital.com/mobile-app-development" target="_blank" rel="noopener noreferrer">
+        <Link to="/mobile-app-development">
           mobile app MVP development
-        </a>{' '}
+        </Link>{' '}
         approach validates the core AI capability before full native development begins.
       </>
     ),
@@ -61,9 +62,9 @@ const services = [
     description: (
       <>
         A focused{' '}
-        <a href="https://inceptivesdigital.com/generative-ai-development-company" target="_blank" rel="noopener noreferrer">
+        <Link to="/generative-ai-development-company">
           generative AI development
-        </a>{' '}
+        </Link>{' '}
         MVP validates content generation, document intelligence, or knowledge retrieval before a full platform build. RAG architecture, prompt engineering, and retrieval pipeline tested before full platform build.
       </>
     ),
@@ -74,9 +75,9 @@ const services = [
     description: (
       <>
         An AI automation MVP proves whether a specific operational workflow can be automated reliably before full system investment. One{' '}
-        <a href="https://inceptivesdigital.com/business-process-automation" target="_blank" rel="noopener noreferrer">
+        <Link to="/business-process-automation">
           business process automation
-        </a>{' '}
+        </Link>{' '}
         workflow is tested end-to-end, including exception handling, before full system investment.
       </>
     ),
@@ -87,9 +88,9 @@ const services = [
     description: (
       <>
         Our{' '}
-        <a href="https://inceptivesdigital.com/startup-app-development-company" target="_blank" rel="noopener noreferrer">
+        <Link to="/startup-app-development-company">
           startup product development
-        </a>{' '}
+        </Link>{' '}
         approach keeps the AI MVP lean and focused for early-stage companies with limited runway. Core AI concept validated, architecture confirmed, and investor-ready proof of concept delivered without over-engineering.
       </>
     ),
@@ -100,9 +101,9 @@ const services = [
     description: (
       <>
         A focused pilot build scoped for established businesses testing AI before organisation-wide deployment.{' '}
-        <a href="https://inceptivesdigital.com/system-integration-api-automation" target="_blank" rel="noopener noreferrer">
+        <Link to="/system-integration-api-automation">
           System integration and API automation
-        </a>{' '}
+        </Link>{' '}
         with existing platforms, along with compliance and security architecture, are validated before full rollout.
       </>
     ),

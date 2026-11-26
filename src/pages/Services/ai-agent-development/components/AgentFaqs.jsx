@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
   {
@@ -9,7 +10,13 @@ const faqs = [
     q: 'How does an AI agent differ from a chatbot?',
     a: (
       <>
-        An <a href="https://inceptivesdigital.com/ai-chatbot-development-services">AI chatbot</a> handles conversation. An AI agent executes tasks: it interacts with external systems, makes decisions across multiple steps, and completes workflows autonomously. If you need AI to do something rather than say something, you need an agent.
+        <Link
+          to="/ai-chatbot-development-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI chatbot
+        </Link>{' '}
+        handles conversation. An AI agent executes tasks. It interacts with external systems, makes decisions across multiple steps, and completes workflows autonomously. If you need AI to do something rather than say something, you need an agent.
       </>
     ),
   },
@@ -18,7 +25,13 @@ const faqs = [
     a: (
       <>
         A single-task agent starts at $30K. A multi-agent system with complex orchestration typically ranges from $80K to $200K and above. The precise number is defined in the{' '}
-        <a href="https://inceptivesdigital.com/discovery-sprint">Discovery Sprint</a>.
+        <Link
+          to="/discovery-sprint"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Discovery Sprint
+        </Link>
+        .
       </>
     ),
   },
@@ -26,8 +39,21 @@ const faqs = [
     q: 'How long does it take to build an AI agent?',
     a: (
       <>
-        An agent <a href="https://inceptivesdigital.com/ai-mvp-development">MVP</a> takes 8 to 12 weeks. A full multi-agent system takes 3 to 6 months, depending on scope, data readiness, and integration complexity. See our{' '}
-        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide">AI MVP development guide</a>.
+        An AI agent{' '}
+        <Link
+          to="/ai-mvp-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          MVP
+        </Link>{' '}
+        takes 8 to 12 weeks. As covered in our{' '}
+        <Link
+          to="/blog/ai-mvp-development-guide"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI MVP development guide
+        </Link>
+        , a full multi-agent system takes 3 to 6 months, depending on scope, data readiness, and integration complexity.
       </>
     ),
   },
@@ -36,7 +62,13 @@ const faqs = [
     a: (
       <>
         Yes. We connect agents to CRM, ERP, databases, SaaS platforms, internal APIs, and existing{' '}
-        <a href="https://inceptivesdigital.com/web-app-development-company">web applications</a>. Integration architecture is defined in Discovery before development begins.
+        <Link
+          to="/web-app-development-company"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          web applications
+        </Link>
+        . Integration architecture is defined in Discovery before development begins.
       </>
     ),
   },
@@ -50,7 +82,7 @@ const faqs = [
   },
   {
     q: 'How do you ensure AI agent reliability and security?',
-    a: 'Through rigorous testing, SOC 2- and GDPR-compliant architecture, and post-launch monitoring with MLflow that detects drift and triggers retraining when performance degrades.',
+    a: 'Through rigorous testing, SOC 2 and GDPR compliant architecture, and post-launch monitoring with MLflow that detects drift and triggers retraining when performance degrades.',
   },
 ]
 

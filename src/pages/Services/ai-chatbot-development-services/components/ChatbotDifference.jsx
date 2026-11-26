@@ -1,5 +1,6 @@
 import React from 'react'
 import { AlertCircle, Cpu, Plug } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const cards = [
   {
@@ -13,23 +14,19 @@ const cards = [
     body: (
       <>
         The quality of the NLP pipeline. The architecture connecting it to your data. The{' '}
-        <a
-          href="https://inceptivesdigital.com/ui-ux-design"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ui-ux-design"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           UI/UX design
-        </a>{' '}
+        </Link>{' '}
         governing the conversational experience and edge cases. A chatbot grounded in your knowledge base with an RAG architecture responds with precision. Generic{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/ai-app-builders-vs-human-developers"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           AI app builders
-        </a>{' '}
+        </Link>{' '}
         and model wrappers often respond with approximations.
       </>
     ),
@@ -40,14 +37,12 @@ const cards = [
     body: (
       <>
         The most common failure point is not the model. It is the integration layer. Without{' '}
-        <a
-          href="https://inceptivesdigital.com/system-integration-api-automation"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/system-integration-api-automation"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           system integration and API automation
-        </a>
+        </Link>
         , a chatbot disconnected from your CRM, knowledge base, and workflows delivers responses but not value.
       </>
     ),

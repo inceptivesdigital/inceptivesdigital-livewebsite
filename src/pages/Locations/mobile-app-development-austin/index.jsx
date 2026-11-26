@@ -82,14 +82,19 @@ export default function MobileAppAustin() {
       {/* 9. Advanced Smart Features Built for Austin */}
       <AustinSmartFeatures />
 
-      {/* 10. Production-Ready Portfolio / Case Studies (Same as Homepage) */}
-      <CaseStudies />
+      {/* 10. Production-Ready Portfolio / Case Studies */}
+      <CaseStudies
+        heading="Production-Ready Mobile Apps Delivered Across Every Major Sector"
+        subtitle="Mobile applications are built across industries and markets. Every product below is live, in active production, and built to the compliance and performance standards the brief demanded."
+      />
 
       {/* 11. Awards & Recognitions Behind Our Expertise */}
       <AustinAwards />
 
-      {/* 12. Client Testimonials (Same as Homepage) */}
-      <Testimonials />
+      {/* 12. Client Testimonials */}
+      <Testimonials
+        heading="The Best Measure of Our Work Comes From the People We Build It For"
+      />
 
       {/* 13. Mid CTA Banner */}
       <AustinMidCTA />

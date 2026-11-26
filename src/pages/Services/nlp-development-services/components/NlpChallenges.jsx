@@ -1,4 +1,5 @@
 import { Activity, BrainCircuit, FileSearch, Network, ShieldCheck, TriangleAlert } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const challenges = [
   {
@@ -13,9 +14,9 @@ const challenges = [
     description: (
       <>
         NLP systems are only as accurate as the text data behind them. We clean, structure, and prepare language datasets before{' '}
-        <a className="text-[#00CE44] underline hover:opacity-80 transition-colors" href="https://inceptivesdigital.com/ai-development">
+        <Link className="text-[#00CE44] underline hover:opacity-80 transition-colors" to="/ai-development">
           AI development
-        </a>{' '}
+        </Link>{' '}
         and model training begin.
       </>
     ),
@@ -38,9 +39,9 @@ const challenges = [
     description: (
       <>
         NLP outputs need{' '}
-        <a className="text-[#00CE44] underline hover:opacity-80 transition-colors" href="https://inceptivesdigital.com/system-integration-api-automation">
+        <Link className="text-[#00CE44] underline hover:opacity-80 transition-colors" to="/system-integration-api-automation">
           system integration and API automation
-        </a>{' '}
+        </Link>{' '}
         to connect language intelligence with the systems that act on it without disrupting existing workflows.
       </>
     ),
@@ -63,14 +64,12 @@ export default function NlpChallenges() {
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65]">
             Many{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/common-reasons-digital-products-fail"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/blog/common-reasons-digital-products-fail"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               digital products fail
-            </a>{' '}
+            </Link>{' '}
             when predictable NLP issues such as poor data, ambiguity, integration gaps, and model drift are not addressed before development begins.
           </p>
         </div>

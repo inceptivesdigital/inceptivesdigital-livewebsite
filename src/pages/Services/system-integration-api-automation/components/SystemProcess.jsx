@@ -1,41 +1,112 @@
 import { useState } from 'react'
 import { Activity, GitBranch, Network, Search, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
     icon: Search,
     tab: 'Discovery',
     title: 'Integration Discovery',
-    description:
-      'A Discovery Sprint maps current systems, identifies data flows, and confirms integration requirements before development begins. For a startup or early-stage product, startup product development benefits from defining exactly which systems must connect, what data must move, and how frequently it needs to move before engineering begins.',
+    description: (
+      <>
+        A{' '}
+        <Link
+          to="/discovery-sprint"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Discovery Sprint
+        </Link>{' '}
+        maps current systems, identifies data flows, and confirms integration requirements before development begins. For a startup or early-stage product,{' '}
+        <Link
+          to="/startup-product-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          startup product development
+        </Link>{' '}
+        benefits from defining exactly which systems must connect, what data must move, and how frequently it needs to move before engineering begins.
+      </>
+    ),
   },
   {
     icon: GitBranch,
     tab: 'Architecture',
     title: 'Architecture Blueprint',
-    description:
-      'Product strategy consulting can define the API structure, middleware requirements, data transformation logic, and integration approach before engineering begins. A strong integration blueprint helps avoid the architectural issues that are among the common reasons digital products fail after moving into production.',
+    description: (
+      <>
+        <Link
+          to="/product-strategy-consulting"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Product strategy consulting
+        </Link>{' '}
+        can define the API structure, middleware requirements, data transformation logic, and integration approach before engineering begins. A strong integration blueprint helps avoid the architectural issues that are among the common reasons{' '}
+        <Link
+          to="/blog/common-reasons-digital-products-fail"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          digital products fail
+        </Link>{' '}
+        after moving into production.
+      </>
+    ),
   },
   {
     icon: Network,
     tab: 'Connection Build',
     title: 'Connection Build',
-    description:
-      'APIs, middleware, and system connectors are developed around the requirements of existing web applications, mobile applications, and enterprise platforms. REST APIs, GraphQL, or middleware layers are selected based on the systems being connected and the data flows being automated.',
+    description: (
+      <>
+        APIs, middleware, and system connectors are developed around the requirements of existing{' '}
+        <Link
+          to="/web-app-development-company"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          web applications
+        </Link>
+        ,{' '}
+        <Link
+          to="/mobile-app-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          mobile applications
+        </Link>
+        , and enterprise platforms. REST APIs, GraphQL, or middleware layers are selected based on the systems being connected and the data flows being automated.
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
     tab: 'Validation',
     title: 'Validation Gate',
-    description:
-      'For an early AI product, the validation principles in our AI MVP development guide also apply to integration testing: data flow is checked for accuracy, latency, and reliability across every critical connection. Real-time synchronisation is validated, and error handling and failover logic are confirmed before production deployment.',
+    description: (
+      <>
+        For an early AI product, the validation principles in our{' '}
+        <Link
+          to="/blog/ai-mvp-development-guide"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI MVP development guide
+        </Link>{' '}
+        also apply to integration testing: data flow must be checked for accuracy, latency, and reliability across every critical connection. Real-time synchronisation validated. Error handling and failover logic confirmed before production deployment.
+      </>
+    ),
   },
   {
     icon: Activity,
     tab: 'Live & Monitor',
     title: 'Live and Monitor',
-    description:
-      'After deployment, post-launch analytics and iteration monitor data flows, surface integration errors early, and optimize connections as system requirements and data volumes evolve.',
+    description: (
+      <>
+        After deployment,{' '}
+        <Link
+          to="/post-launch-analytics-iteration"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          post-launch analytics and iteration
+        </Link>{' '}
+        monitor data flows, surface integration errors early, and optimize connections as system requirements and data volumes evolve.
+      </>
+    ),
   },
 ]
 

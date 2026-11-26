@@ -291,7 +291,7 @@ export default function MvpDevelopment() {
       <section className="relative w-full min-h-screen flex flex-col lg:flex-row lg:items-center bg-[#0F0F0F] pt-28 sm:pt-32 lg:pt-24 pb-0 overflow-hidden">
         <div className="relative z-10 w-full max-w-[1220px] mx-auto px-6 sm:px-8">
           <div className="w-full lg:w-[52%] xl:w-[48%] text-left space-y-5 py-8 lg:py-16">
-            <span className="inline-block text-[#00CE44] text-xs sm:text-sm font-bold uppercase tracking-[0.2em]">
+            <span className="inline-block text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px]">
               MVP Development Services
             </span>
 

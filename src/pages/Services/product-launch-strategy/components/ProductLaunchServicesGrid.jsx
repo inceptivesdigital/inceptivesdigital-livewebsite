@@ -96,7 +96,14 @@ export default function ProductLaunchServicesGrid() {
             <span className="text-[#00CE44]">Successful Product Launches</span>
           </h2>
           <p className="text-white/90 text-[16px] leading-relaxed font-normal text-center max-w-3xl mx-auto">
-            A digital product development launch is a sequence of deliberate decisions, each one moving the product closer to the audience it was built for.
+            A{' '}
+            <Link
+              to="/digital-product-development"
+              className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
+            >
+              digital product development
+            </Link>{' '}
+            launch is a sequence of deliberate decisions, each one moving the product closer to the audience it was built for.
           </p>
         </div>
 

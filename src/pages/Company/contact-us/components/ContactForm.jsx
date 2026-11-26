@@ -29,7 +29,7 @@ export default function ContactForm() {
     if (sending) return
     setSending(true)
     await submitFormToSeo({
-      formName: 'Contact Us Page Form',
+      formName: 'Lead Form Inceptives Digital',
       subject: `Contact Us Page - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,
       fields: {
@@ -60,30 +60,37 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      id="lead-form-inceptives-digital"
+      name="Lead Form Inceptives Digital"
+      data-form-name="Lead Form Inceptives Digital"
+      aria-label="Lead Form Inceptives Digital"
+      onSubmit={handleSubmit}
+      className="space-y-6"
+    >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <input type="text" required placeholder="First Name" value={formData.firstName} onChange={update('firstName')} className={inputClass} />
-        <input type="text" required placeholder="Last Name" value={formData.lastName} onChange={update('lastName')} className={inputClass} />
+        <input type="text" name="first_name" autoComplete="given-name" required placeholder="First Name" value={formData.firstName} onChange={update('firstName')} className={inputClass} />
+        <input type="text" name="last_name" autoComplete="family-name" required placeholder="Last Name" value={formData.lastName} onChange={update('lastName')} className={inputClass} />
       </div>
 
-      <input type="email" required placeholder="Email" value={formData.email} onChange={update('email')} className={inputClass} />
+      <input type="email" name="email" autoComplete="email" required placeholder="Email" value={formData.email} onChange={update('email')} className={inputClass} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <input type="tel" required placeholder="+1 (000) 000-0000" value={formData.phone} onChange={update('phone')} className={inputClass} />
-        <input type="text" placeholder="Subject" value={formData.subject} onChange={update('subject')} className={inputClass} />
+        <input type="tel" name="phone" autoComplete="tel" required placeholder="+1 (000) 000-0000" value={formData.phone} onChange={update('phone')} className={inputClass} />
+        <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={update('subject')} className={inputClass} />
       </div>
 
-      <textarea rows={3} required placeholder="Message" value={formData.message} onChange={update('message')} className={inputClass} />
+      <textarea name="message" rows={3} required placeholder="Message" value={formData.message} onChange={update('message')} className={inputClass} />
 
       <div className="space-y-3 pt-1">
         <label className="flex items-start gap-2.5 cursor-pointer text-white/85 text-[11px] sm:text-xs leading-relaxed">
-          <input type="checkbox" checked={formData.transactionalConsent} onChange={toggle('transactionalConsent')} className="mt-0.5 accent-[#00CE44] shrink-0" />
+          <input type="checkbox" name="transactional_sms_consent" value="Yes" checked={formData.transactionalConsent} onChange={toggle('transactionalConsent')} className="mt-0.5 accent-[#00CE44] shrink-0" />
           <span>
             I consent to receive transactional messages from Inceptives Digital at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Reply HELP for help or STOP to opt out.
           </span>
         </label>
         <label className="flex items-start gap-2.5 cursor-pointer text-white/85 text-[11px] sm:text-xs leading-relaxed">
-          <input type="checkbox" checked={formData.marketingConsent} onChange={toggle('marketingConsent')} className="mt-0.5 accent-[#00CE44] shrink-0" />
+          <input type="checkbox" name="marketing_sms_consent" value="Yes" checked={formData.marketingConsent} onChange={toggle('marketingConsent')} className="mt-0.5 accent-[#00CE44] shrink-0" />
           <span>
             I consent to receive marketing and promotional messages from Inceptives Digital at the phone number provided. Message frequency may vary. Message &amp; data rates may apply. Reply HELP for help or STOP to opt out.
           </span>

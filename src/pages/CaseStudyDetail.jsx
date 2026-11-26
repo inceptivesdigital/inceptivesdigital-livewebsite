@@ -71,9 +71,9 @@ export default function CaseStudyDetail() {
   const study = studies[slug] || studies['halwar-connect']
 
   return (
-    <div className="pt-32 sm:pt-40 pb-20">
+    <div className="case-study-page pb-20">
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="w-full mx-auto xl:max-w-[1440px] 2xl:max-w-[1600px]">
+        <div className="w-full mx-auto max-w-[1440px]">
           <Link
             to="/portfolio"
             className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white mb-8 transition"
@@ -109,7 +109,7 @@ export default function CaseStudyDetail() {
 
       {/* Challenge & Solution */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="w-full mx-auto xl:max-w-[1440px] 2xl:max-w-[1600px] space-y-10">
+        <div className="w-full mx-auto max-w-[1440px] space-y-10">
           <div className="p-8 rounded-3xl bg-[#0e1118] border border-white/10">
             <h2 className="text-2xl font-bold text-white mb-4">The Challenge</h2>
             <p className="text-slate-300 text-base leading-relaxed">{study.challenge}</p>

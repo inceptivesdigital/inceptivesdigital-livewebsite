@@ -47,7 +47,7 @@ export default function FAQSection({ faqs: customFaqs, heading = "Frequently Ask
 
             return (
               <div
-                key={qText || idx}
+                key={typeof qText === 'string' ? qText : idx}
                 className="bg-[#1b1c21] rounded-[16px] sm:rounded-[18px] border border-white/[0.04] overflow-hidden transition-colors duration-300"
               >
                 {/* Accordion Header / Trigger Button */}

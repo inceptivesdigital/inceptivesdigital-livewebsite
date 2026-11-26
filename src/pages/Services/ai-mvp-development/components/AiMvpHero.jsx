@@ -2,9 +2,9 @@ import HeroTrustBadges from '../../../../components/HeroTrustBadges'
 
 export default function AiMvpHero() {
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col xl:flex-row items-center bg-[#1b1b1b] text-white overflow-hidden">
+    <section className="relative w-full min-h-screen min-h-[100dvh] pb-10 xl:pb-10 flex flex-col xl:flex-row items-center bg-[#1b1b1b] text-white overflow-hidden">
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
-        <div className="flex flex-col items-start text-left py-12 xl:py-0 xl:w-[48%]">
+        <div className="flex flex-col items-start text-left py-6 sm:py-8 xl:py-8 xl:w-[48%]">
           <h1 className="text-[#00CE44] text-sm sm:text-base font-bold mb-3">
             AI MVP Development Services
           </h1>

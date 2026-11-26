@@ -3,86 +3,6 @@ import { Link } from 'react-router-dom'
 export default function ProductLaunchIndustries() {
   const industries = [
     {
-      title: 'Healthcare',
-      url: '/healthcare-app-development',
-      icon: '/assets/industries-icons/industries-healthcare.svg',
-      desc: (
-        <>
-          HIPAA-compliant launches for telehealth, EHR integrations, and patient-first medical applications designed for adoption and clinical trust.{' '}
-          <Link
-            to="/healthcare-app-development"
-            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
-          >
-            Explore healthcare
-          </Link>
-        </>
-      ),
-    },
-    {
-      title: 'Fitness & Wellness',
-      url: '/fitness-app-development',
-      icon: '/assets/industries-icons/industries-fitness.svg',
-      desc: (
-        <>
-          Engaging go-to-market strategies for health tracking, workout streaming, and wearable integrations that build active, loyal communities.{' '}
-          <Link
-            to="/fitness-app-development"
-            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
-          >
-            Explore fitness
-          </Link>
-        </>
-      ),
-    },
-    {
-      title: 'Education & eLearning',
-      url: '/education-app-development-company',
-      icon: '/assets/industries-icons/industries-education.svg',
-      desc: (
-        <>
-          Structured rollouts for virtual classrooms, LMS tools, and interactive educational platforms built to drive teacher and student engagement.{' '}
-          <Link
-            to="/education-app-development-company"
-            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
-          >
-            Explore education
-          </Link>
-        </>
-      ),
-    },
-    {
-      title: 'Real Estate',
-      url: '/real-estate-app-development-company',
-      icon: '/assets/industries-icons/industries-realstate.svg',
-      desc: (
-        <>
-          High-impact launches for property discovery, virtual tours, and CRM platforms that streamline real estate transactions from day one.{' '}
-          <Link
-            to="/real-estate-app-development-company"
-            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
-          >
-            Explore real estate
-          </Link>
-        </>
-      ),
-    },
-    {
-      title: 'Travel & Hospitality',
-      url: '/travel-app-development-company',
-      icon: '/assets/industries-icons/industries-traveling1.svg',
-      desc: (
-        <>
-          Seamless product launches for booking engines, travel guides, and itinerary planning tools engineered to capture seasonal demand.{' '}
-          <Link
-            to="/travel-app-development-company"
-            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
-          >
-            Explore travel
-          </Link>
-        </>
-      ),
-    },
-    {
       title: 'FinTech',
       url: '/fintech-app-development',
       icon: '/assets/industries-icons/industries-fintech.svg',
@@ -94,6 +14,22 @@ export default function ProductLaunchIndustries() {
             className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
           >
             Explore fintech
+          </Link>
+        </>
+      ),
+    },
+    {
+      title: 'Healthcare',
+      url: '/healthcare-app-development',
+      icon: '/assets/industries-icons/industries-healthcare.svg',
+      desc: (
+        <>
+          HIPAA-compliant launches for telehealth, EHR integrations, and patient-first medical applications designed for adoption and clinical trust.{' '}
+          <Link
+            to="/healthcare-app-development"
+            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
+          >
+            Explore healthcare
           </Link>
         </>
       ),
@@ -131,6 +67,54 @@ export default function ProductLaunchIndustries() {
       ),
     },
     {
+      title: 'Real Estate',
+      url: '/real-estate-app-development-company',
+      icon: '/assets/industries-icons/industries-realstate.svg',
+      desc: (
+        <>
+          High-impact launches for property discovery, virtual tours, and CRM platforms that streamline real estate transactions from day one.{' '}
+          <Link
+            to="/real-estate-app-development-company"
+            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
+          >
+            Explore real estate
+          </Link>
+        </>
+      ),
+    },
+    {
+      title: 'Education & eLearning',
+      url: '/education-app-development-company',
+      icon: '/assets/industries-icons/industries-education.svg',
+      desc: (
+        <>
+          Structured rollouts for virtual classrooms, LMS tools, and interactive educational platforms built to drive teacher and student engagement.{' '}
+          <Link
+            to="/education-app-development-company"
+            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
+          >
+            Explore education
+          </Link>
+        </>
+      ),
+    },
+    {
+      title: 'Travel & Hospitality',
+      url: '/travel-app-development-company',
+      icon: '/assets/industries-icons/industries-traveling1.svg',
+      desc: (
+        <>
+          Seamless product launches for booking engines, travel guides, and itinerary planning tools engineered to capture seasonal demand.{' '}
+          <Link
+            to="/travel-app-development-company"
+            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
+          >
+            Explore travel
+          </Link>
+        </>
+      ),
+    },
+    {
       title: 'Manufacturing & Industrial',
       url: '/custom-software-development',
       icon: '/assets/mobile-app/manufacturing.svg',
@@ -142,6 +126,22 @@ export default function ProductLaunchIndustries() {
             className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
           >
             Explore manufacturing
+          </Link>
+        </>
+      ),
+    },
+    {
+      title: 'Fitness & Wellness',
+      url: '/fitness-app-development',
+      icon: '/assets/industries-icons/industries-fitness.svg',
+      desc: (
+        <>
+          Engaging go-to-market strategies for health tracking, workout streaming, and wearable integrations that build active, loyal communities.{' '}
+          <Link
+            to="/fitness-app-development"
+            className="underline text-[#00CE44] group-hover:text-black font-normal transition-colors"
+          >
+            Explore fitness
           </Link>
         </>
       ),

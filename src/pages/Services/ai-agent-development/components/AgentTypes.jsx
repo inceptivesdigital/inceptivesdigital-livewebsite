@@ -6,13 +6,14 @@ import {
   Headset,
   Workflow,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const agentTypes = [
   {
     icon: Workflow,
-    title: 'Workflow Automation Agents',
+    title: '1. Workflow Automation Agents',
     description:
-      'Agents execute multi-step operational processes, route decisions, and complete tasks across enterprise systems without manual intervention at every stage.',
+      'Agents that execute multi-step operational processes, route decisions, and complete tasks across enterprise systems without manual intervention at every stage.',
     bullets: [
       'Multi-step task execution and process orchestration',
       'Cross-system workflow routing and exception handling',
@@ -21,9 +22,9 @@ const agentTypes = [
   },
   {
     icon: Database,
-    title: 'Knowledge Retrieval and RAG Agents',
+    title: '2. Knowledge Retrieval and RAG Agents',
     description:
-      'Agents connect to your company knowledge base, databases, and APIs for context-aware decision support and precise information retrieval.',
+      "Agents connected to your company's knowledge base, databases, and APIs for context-aware decision support and precise information retrieval.",
     bullets: [
       'RAG architecture for knowledge-grounded responses',
       'Structured and unstructured data retrieval',
@@ -32,9 +33,9 @@ const agentTypes = [
   },
   {
     icon: Bot,
-    title: 'AI Copilots and Productivity Agents',
+    title: '3. AI Copilots and Productivity Agents',
     description:
-      'Intelligent agents embedded into internal tools assist teams with recommendations, task prioritisation, and workflow automation.',
+      'Intelligent agents embedded into internal tools to assist teams with recommendations, task prioritisation, and workflow automation.',
     bullets: [
       'Task management and workflow prioritisation',
       'Context-aware recommendations and decision support',
@@ -43,9 +44,9 @@ const agentTypes = [
   },
   {
     icon: AudioLines,
-    title: 'Voice-Enabled Agents',
+    title: '4. Voice-Enabled Agents',
     description:
-      'AI agents built for voice interactions, call automation, and IVR workflows where real-time speech is the interface.',
+      'AI agents built for voice interactions, call automation, and IVR workflows in operational contexts where real-time speech is the interface.',
     bullets: [
       'Natural language voice recognition and understanding',
       'Automated call routing and IVR workflow management',
@@ -54,26 +55,32 @@ const agentTypes = [
   },
   {
     icon: Headset,
-    title: 'Customer Engagement and Sales Agents',
+    title: '5. Customer Engagement and Sales Agents',
     description: (
       <>
-        <a href="https://inceptivesdigital.com/ai-app-development-services">AI app development services</a> support agents that engage prospects, qualify leads, and manage customer interactions across web and mobile platforms, with thoughtful <a href="https://inceptivesdigital.com/ui-ux-design">UI/UX design</a>.
+        <Link to="/ai-app-development-services">AI app development services</Link> support agents, combining intelligent automation with <Link to="/ui-ux-design">UI/UX design</Link> to engage prospects, qualify leads, and manage customer interactions across web and mobile platforms.
       </>
     ),
     bullets: [
       'Lead capture, scoring, and automated follow-up',
       'Context-aware recommendations and escalation',
-      'CRM integration and multi-channel engagement',
+      <>
+        CRM integration and <Link to="/blog/ai-powered-mobile-apps-uae-business-operations">AI-powered mobile apps</Link> for multi-channel engagement
+      </>,
     ],
   },
   {
     icon: BriefcaseBusiness,
-    title: 'Internal Operations Agents',
+    title: '6. Internal Operations Agents',
     description:
-      'Agents embedded into internal systems automate document processing, analytics, and cross-department task orchestration.',
+      'Agents embedded into internal systems for workflow automation, document processing, analytics, and cross-department task orchestration.',
     bullets: [
-      'Computer vision for document processing and summarisation',
-      'RPA for workflow automation across departments',
+      <>
+        <Link to="/computer-vision-development-services">Computer vision</Link> for document processing and knowledge summarisation
+      </>,
+      <>
+        <Link to="/rpa-development-services">RPA development services</Link> for workflow automation across departments
+      </>,
       'Analytics dashboards and operational reporting',
     ],
   },
@@ -88,7 +95,7 @@ export default function AgentTypes() {
             Operational Agent Solutions From Our AI Agent Development Company
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65]">
-            Workflow automation, knowledge retrieval, voice-enabled, and customer-facing agents. Each one is built for a specific operational context and the systems it needs to run on.
+            Workflow automation, knowledge retrieval, voice-enabled, and customer-facing. Each one is built for a specific operational context and the systems it needs to run on.
           </p>
         </div>
 
@@ -109,9 +116,9 @@ export default function AgentTypes() {
                 {description}
               </p>
               <ul className="space-y-2.5">
-                {bullets.map((bullet) => (
+                {bullets.map((bullet, bulletIdx) => (
                   <li
-                    key={bullet}
+                    key={bulletIdx}
                     className="flex items-start gap-2.5 text-white/80 group-hover:text-black text-sm leading-relaxed transition-colors"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#00CE44] group-hover:bg-black mt-2 shrink-0 transition-colors" />

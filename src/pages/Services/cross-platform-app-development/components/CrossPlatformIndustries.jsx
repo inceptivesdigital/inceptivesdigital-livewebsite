@@ -1,50 +1,52 @@
+import { Link } from 'react-router-dom'
+
 export default function CrossPlatformIndustries() {
   const industries = [
     {
       name: 'Healthcare',
-      link: 'https://inceptivesdigital.com/healthcare-app-development',
+      link: '/healthcare-app-development',
       icon: '/assets/industries-icons/industries-healthcare.svg',
       desc: 'HIPAA-aware architecture for patient portals, telehealth, and remote monitoring apps.',
     },
     {
       name: 'Fintech',
-      link: 'https://inceptivesdigital.com/fintech-app-development',
+      link: '/fintech-app-development',
       icon: '/assets/industries-icons/industries-fintech.svg',
       desc: 'Secure authentication and PCI-DSS-compliant payment flows for wallets and investment platforms.',
     },
     {
       name: 'e-Commerce',
-      link: 'https://inceptivesdigital.com/ecommerce-app-development-company',
+      link: '/ecommerce-app-development-company',
       icon: '/assets/industries-icons/industries-cart.svg',
       desc: 'Real-time inventory, checkout, and order tracking built for high-traffic release cycles.',
     },
     {
       name: 'Real Estate',
-      link: 'https://inceptivesdigital.com/real-estate-app-development-company',
+      link: '/real-estate-app-development-company',
       icon: '/assets/industries-icons/industries-realstate.svg',
       desc: 'Listing search, virtual tours, and scheduling built for both platforms simultaneously.',
     },
     {
       name: 'Fitness',
-      link: 'https://inceptivesdigital.com/fitness-app-development',
+      link: '/fitness-app-development',
       icon: '/assets/industries-icons/industries-fitness.svg',
       desc: 'Wearable integration and activity tracking synced across iOS and Android.',
     },
     {
       name: 'e-Learning',
-      link: 'https://inceptivesdigital.com/education-app-development-company',
+      link: '/education-app-development-company',
       icon: '/assets/industries-icons/industries-education.svg',
       desc: 'Offline-capable course delivery and progress tracking for distributed user bases.',
     },
     {
       name: 'Travel',
-      link: 'https://inceptivesdigital.com/travel-app-development-company',
+      link: '/travel-app-development-company',
       icon: '/assets/industries-icons/industries-traveling1.svg',
       desc: 'Booking, itinerary, and real-time notification systems built for on-the-go use.',
     },
     {
       name: 'Food Delivery',
-      link: 'https://inceptivesdigital.com/food-delivery-app-development',
+      link: '/food-delivery-app-development',
       icon: '/assets/industries-icons/Food-Delivery.svg',
       desc: 'Live order tracking and driver-facing apps running on the same shared backend.',
     },
@@ -88,14 +90,12 @@ export default function CrossPlatformIndustries() {
 
               <h3 className="text-xl sm:text-2xl font-bold text-[#00CE44] mb-2 leading-snug">
                 {ind.link ? (
-                  <a
-                    href={ind.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={ind.link}
                     className="hover:underline hover:text-white transition-colors"
                   >
                     {ind.name}
-                  </a>
+                  </Link>
                 ) : (
                   ind.name
                 )}

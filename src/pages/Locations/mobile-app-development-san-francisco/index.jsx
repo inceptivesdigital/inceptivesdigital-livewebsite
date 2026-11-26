@@ -25,7 +25,7 @@ import SFCostFactors from './components/SFCostFactors'
 import SFWhyChooseUs from './components/SFWhyChooseUs'
 import SFComparisonTable from './components/SFComparisonTable'
 import SFBottomCTA from './components/SFBottomCTA'
-import FAQSection from '../../../components/FAQSection'
+import SFFaqs from './components/SFFaqs'
 
 export default function MobileAppSanFrancisco() {
   useEffect(() => {
@@ -132,8 +132,8 @@ export default function MobileAppSanFrancisco() {
       {/* 26. Bottom CTA (Validate Your Mobile App) */}
       <SFBottomCTA />
 
-      {/* 27. FAQs Section matching Homepage */}
-      <FAQSection />
+      {/* 27. FAQs Section */}
+      <SFFaqs />
     </div>
   )
 }

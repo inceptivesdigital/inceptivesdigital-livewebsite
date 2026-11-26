@@ -62,8 +62,8 @@ export default function DubaiSmartFeatures() {
           {/* Left Column: Heading & Description matching Screenshot 9 */}
           <div className="lg:col-span-5 text-left">
             <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black text-white tracking-tight leading-[1.14] mb-6">
-              Smart Features For{' '}
-              <span className="text-[#00CE44]">Smarter Mobile Apps</span>
+              Mobile Capabilities Built Around{' '}
+              <span className="text-[#00CE44]">Real User Needs</span>
             </h2>
             <p className="text-white/85 text-base sm:text-lg leading-relaxed mb-8 font-normal">
               Mobile applications serving Dubai&apos;s diverse customer base need reliable interactions across languages, devices, and payment methods. Secure authentication, real-time updates, location services, and connected workflows support everyday transactions and business operations without adding unnecessary steps to the experience.
@@ -92,7 +92,7 @@ export default function DubaiSmartFeatures() {
                   key={item.title}
                   className="p-5 rounded-[18px] bg-[#14151a]/90 backdrop-blur-md border border-white/5 hover:border-[#00CE44]/40 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1 group"
                 >
-                  <div className="w-11 h-11 mb-3 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 mb-2.5 flex items-center justify-center shrink-0">
                     <img
                       src={item.icon}
                       alt={item.title}
@@ -100,7 +100,7 @@ export default function DubaiSmartFeatures() {
                       loading="lazy"
                     />
                   </div>
-                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#00CE44] transition-colors leading-snug">
+                  <span className="text-[11px] sm:text-[13px] font-normal text-white group-hover:text-[#00CE44] transition-colors leading-snug">
                     {item.title}
                   </span>
                 </div>

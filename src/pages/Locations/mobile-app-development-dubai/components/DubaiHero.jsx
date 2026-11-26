@@ -50,7 +50,7 @@ export default function DubaiHero() {
               Discuss Your Project
             </Link>
             <Link
-              to="/work"
+              to="/portfolio"
               className="inline-flex items-center justify-center px-8 py-4 rounded-none bg-transparent hover:bg-white/10 border border-white/30 text-white font-medium text-base transition-colors uppercase tracking-wide cursor-pointer shadow-none"
             >
               Explore Our Portfolio

@@ -9,24 +9,28 @@ const KNOWN_REVIEWERS = {
   6: {
     id: 6,
     name: 'Muhammad Usman',
+    slug: 'muhammad_usman',
     bio: 'Editorial reviewer at Inceptives Digital.',
     avatar: '/assets/ID-logo.jpg',
   },
   14: {
     id: 14,
     name: 'Atif Zaidy',
+    slug: 'atif_zaidy',
     bio: 'Editorial reviewer at Inceptives Digital.',
     avatar: '/assets/ID-logo.jpg',
   },
   7: {
     id: 7,
     name: 'Noshaba Noor',
+    slug: 'noshaba_noor',
     bio: 'Editorial reviewer at Inceptives Digital.',
     avatar: '/assets/ID-logo.jpg',
   },
   10: {
     id: 10,
     name: 'Soha Shakeel',
+    slug: 'soha_shakeel',
     bio: 'Editorial reviewer at Inceptives Digital.',
     avatar: '/assets/ID-logo.jpg',
   },
@@ -77,6 +81,34 @@ function setCanonicalLink(href) {
 function normalizeSiteUrl(url = '', fallbackSlug = '') {
   if (!url) return fallbackSlug ? `https://inceptivesdigital.com/blog/${fallbackSlug}` : 'https://inceptivesdigital.com/blog'
   return url.replace(/^https?:\/\/nextincep\.wpenginepowered\.com/i, 'https://inceptivesdigital.com')
+}
+
+function formatAuthorBioHtml(raw = '') {
+  if (!raw) return ''
+  const decoded = raw.includes('&lt;') ? decodeHtml(raw) : raw
+  return decoded
+    .replace(
+      /href=(["'])https?:\/\/(?:www\.)?(?:nextincep\.wpenginepowered\.com|inceptivesdigital\.com)(\/[^"']*)?\1/gi,
+      (_, quote, path = '/') => `href=${quote}${path || '/'}${quote}`
+    )
+    .replace(/https?:\/\/nextincep\.wpenginepowered\.com/gi, 'https://inceptivesdigital.com')
+}
+
+function normalizeArticleHtml(raw = '') {
+  if (!raw) return ''
+  return raw.replace(
+    /<a\b([^>]*?)\bhref=(["'])https?:\/\/(?:www\.)?(?:inceptivesdigital\.com|nextincep\.wpenginepowered\.com)((?:\/[^"']*)?)\2([^>]*)>/gi,
+    (full, before = '', quote, rawPath = '', after = '') => {
+      const path = rawPath || '/'
+      if (/^\/(?:wp-content|wp-json)\//i.test(path)) return full
+      const cleanedPath = path.replace(/([?&])(_gl|_gcl_au)=[^&#]*/g, '$1').replace(/\?&+/, '?').replace(/[?&]+$/, '') || '/'
+      const stripAttrs = (attrs) =>
+        attrs
+          .replace(/\s*\btarget=(["'])_blank\1/gi, '')
+          .replace(/\s*\brel=(["'])(?:noopener|noreferrer|nofollow|\s)*\1/gi, '')
+      return `<a${stripAttrs(before)} href=${quote}${cleanedPath}${quote}${stripAttrs(after)}>`
+    }
+  )
 }
 
 function applyYoastSeoToHead(p, formatted) {
@@ -183,7 +215,7 @@ export default function BlogDetailPage() {
       id: p.id,
       slug: p.slug,
       title: decodeHtml(p.title?.rendered || ''),
-      content: p.content?.rendered || '',
+      content: normalizeArticleHtml(p.content?.rendered || ''),
       wpUrl: p.link || `https://inceptivesdigital.com/blog/${p.slug}`,
       date: p.date
         ? new Date(p.date).toLocaleDateString('en-US', {
@@ -194,6 +226,7 @@ export default function BlogDetailPage() {
         : '',
       author: {
         name: authorObj?.name || 'Inceptives Digital',
+        slug: authorObj?.slug || '',
         bio: authorObj?.description || 'Contributor at Inceptives Digital.',
         avatar:
           authorObj?.avatar_urls?.['96'] ||
@@ -257,6 +290,7 @@ export default function BlogDetailPage() {
                 const fullReviewer = {
                   id: revData.id,
                   name: decodeHtml(revData.name),
+                  slug: revData.slug || fallbackReviewer?.slug || '',
                   bio: revData.description || 'Editorial reviewer at Inceptives Digital.',
                   avatar:
                     revData.avatar_urls?.['96'] ||
@@ -601,19 +635,53 @@ export default function BlogDetailPage() {
 
           <div className="id-editorial-strip">
             <div className="id-editorial-person">
-              <img src={post.author.avatar} alt={post.author.name} />
+              {post.author.slug ? (
+                <Link to={`/author/${encodeURIComponent(post.author.slug)}`} aria-label={post.author.name}>
+                  <img src={post.author.avatar} alt={post.author.name} />
+                </Link>
+              ) : (
+                <img src={post.author.avatar} alt={post.author.name} />
+              )}
               <div>
                 <small>WRITTEN BY</small>
-                <strong>{post.author.name}</strong>
+                <strong>
+                  {post.author.slug ? (
+                    <Link
+                      to={`/author/${encodeURIComponent(post.author.slug)}`}
+                      className="id-reviewer-profile"
+                    >
+                      {post.author.name}
+                    </Link>
+                  ) : (
+                    post.author.name
+                  )}
+                </strong>
               </div>
             </div>
 
             {post.reviewer && (
               <div className="id-editorial-person">
-                <img src={post.reviewer.avatar} alt={post.reviewer.name} />
+                {post.reviewer.slug ? (
+                  <Link to={`/author/${encodeURIComponent(post.reviewer.slug)}`} aria-label={post.reviewer.name}>
+                    <img src={post.reviewer.avatar} alt={post.reviewer.name} />
+                  </Link>
+                ) : (
+                  <img src={post.reviewer.avatar} alt={post.reviewer.name} />
+                )}
                 <div>
                   <small>REVIEWED &amp; APPROVED BY</small>
-                  <strong>{post.reviewer.name}</strong>
+                  <strong>
+                    {post.reviewer.slug ? (
+                      <Link
+                        to={`/author/${encodeURIComponent(post.reviewer.slug)}`}
+                        className="id-reviewer-profile"
+                      >
+                        {post.reviewer.name}
+                      </Link>
+                    ) : (
+                      post.reviewer.name
+                    )}
+                  </strong>
                 </div>
               </div>
             )}
@@ -726,21 +794,49 @@ export default function BlogDetailPage() {
           {/* AUTHOR & REVIEWER SECTION */}
           <section className="id-author-section">
             <div className="id-author-card">
-              <img src={post.author.avatar} alt={post.author.name} />
+              {post.author.slug ? (
+                <Link to={`/author/${encodeURIComponent(post.author.slug)}`} aria-label={post.author.name}>
+                  <img src={post.author.avatar} alt={post.author.name} />
+                </Link>
+              ) : (
+                <img src={post.author.avatar} alt={post.author.name} />
+              )}
               <div>
                 <div className="id-person-label">WRITTEN BY</div>
-                <h3>{post.author.name}</h3>
-                <p>{post.author.bio}</p>
+                <h3>
+                  {post.author.slug ? (
+                    <Link to={`/author/${encodeURIComponent(post.author.slug)}`}>
+                      {post.author.name}
+                    </Link>
+                  ) : (
+                    post.author.name
+                  )}
+                </h3>
+                <p dangerouslySetInnerHTML={{ __html: formatAuthorBioHtml(post.author.bio) }} />
               </div>
             </div>
 
             {post.reviewer && (
               <div className="id-author-card id-review-card">
-                <img src={post.reviewer.avatar} alt={post.reviewer.name} />
+                {post.reviewer.slug ? (
+                  <Link to={`/author/${encodeURIComponent(post.reviewer.slug)}`} aria-label={post.reviewer.name}>
+                    <img src={post.reviewer.avatar} alt={post.reviewer.name} />
+                  </Link>
+                ) : (
+                  <img src={post.reviewer.avatar} alt={post.reviewer.name} />
+                )}
                 <div>
                   <div className="id-person-label">REVIEWED &amp; APPROVED BY</div>
-                  <h3>{post.reviewer.name}</h3>
-                  <p>{post.reviewer.bio}</p>
+                  <h3>
+                    {post.reviewer.slug ? (
+                      <Link to={`/author/${encodeURIComponent(post.reviewer.slug)}`}>
+                        {post.reviewer.name}
+                      </Link>
+                    ) : (
+                      post.reviewer.name
+                    )}
+                  </h3>
+                  <p dangerouslySetInnerHTML={{ __html: formatAuthorBioHtml(post.reviewer.bio) }} />
                 </div>
               </div>
             )}

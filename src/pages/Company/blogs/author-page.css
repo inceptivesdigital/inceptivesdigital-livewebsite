@@ -1,0 +1,492 @@
+/* Author and Articles: isolated, responsive styles ported from author-page-articles.code-snippets.php */
+.idap-page {
+  background: #ffffff;
+  color: #101828;
+  min-height: 75vh;
+  padding-top: 108px;
+}
+
+.idap-wrap {
+  --id-green: #00d65a;
+  --id-ink: #101828;
+  --id-muted: #475467;
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px clamp(18px, 3vw, 48px) 72px;
+  color: var(--id-ink);
+  font-family: 'Manrope', sans-serif;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.idap-wrap,
+.idap-wrap * {
+  box-sizing: border-box;
+}
+
+.idap-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #475467;
+  margin-bottom: 18px;
+}
+
+.idap-breadcrumb a {
+  color: #078c43;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.idap-breadcrumb a:hover {
+  color: #04612f;
+  text-decoration: underline;
+}
+
+.idap-hero {
+  display: grid;
+  grid-template-columns: clamp(180px, 18vw, 260px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(22px, 3vw, 48px);
+  padding: 28px 28px 38px;
+  border-radius: 18px;
+  border-bottom: 1px solid #00ce4438;
+  background: #bcfacb45;
+}
+
+.idap-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  text-align: center;
+  min-width: 0;
+  align-self: center;
+}
+
+.idap-wrap .authurimg-set {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.idap-avatar {
+  width: min(100%, 210px);
+  aspect-ratio: 1;
+  border: 2px solid var(--id-green);
+  border-radius: 50%;
+  padding: 6px;
+  overflow: hidden;
+  background: #eaf8ed;
+}
+
+.idap-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.idap-avatar-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.3;
+  font-weight: 800;
+  color: var(--id-ink);
+  margin: 14px 0 0;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.idap-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0a66c2;
+  box-shadow: 0 4px 12px #10182814;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.idap-linkedin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px #10182824;
+}
+
+.idap-linkedin svg {
+  width: 20px;
+  height: 20px;
+}
+
+.idap-bio {
+  min-width: 0;
+  align-self: center;
+  background: transparent;
+}
+
+.idap-wrap .abt-author {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(26px, 3.2vw, 35px);
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--id-ink);
+  letter-spacing: -0.025em;
+  margin: 0 0 12px;
+}
+
+.idap-description {
+  width: 100%;
+  max-width: 850px;
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #344054;
+  overflow-wrap: break-word;
+}
+
+.idap-description p {
+  margin: 0 0 12px;
+  color: #344054;
+}
+
+.idap-description p:last-child {
+  margin-bottom: 0;
+}
+
+.idap-description a {
+  color: #078c43;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.idap-description a:hover {
+  color: #04612f;
+}
+
+.idap-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 34px 0 24px;
+  min-width: 0;
+  background: transparent;
+}
+
+.idap-section-head h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(22px, 2.5vw, 28px);
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  color: var(--id-ink);
+  margin: 0;
+}
+
+.idap-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #eaf8ed;
+  border: 1px solid #00ce4455;
+  color: #103421;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.idap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.idap-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e9eeeb;
+  border-radius: 13px;
+  box-shadow: 0 5px 22px #1018280f;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.idap-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #10182816;
+}
+
+.idap-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 2.05;
+  min-width: 0;
+  background: #07321e;
+  text-decoration: none;
+}
+
+.idap-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 11px 11px 6px 6px;
+}
+
+.idap-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.idap-cat {
+  position: absolute;
+  bottom: -10px;
+  left: 13px;
+  padding: 5px 11px;
+  max-width: calc(100% - 26px);
+  border-radius: 30px;
+  background: #bcfacb;
+  color: #103421;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.idap-pinned-label {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #00ce44;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+.idap-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 23px 16px 16px;
+  background: #ffffff;
+}
+
+.idap-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 800;
+  margin: 0 0 9px;
+  color: var(--id-ink);
+}
+
+.idap-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.idap-card h3 a:hover {
+  color: #07883f;
+}
+
+.idap-card-body p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #666666;
+  margin: 0 0 17px;
+  flex: 1;
+}
+
+.idap-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  min-width: 0;
+}
+
+.idap-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #000000;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.idap-arrow:hover {
+  color: #07883f;
+}
+
+.idap-pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  margin: 36px 0 0;
+}
+
+.idap-pages button,
+.idap-pages .idap-current {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 5px 9px;
+  border: 1px solid #e6e8ec;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #101828;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.idap-pages button:hover {
+  background: #f2f4f7;
+}
+
+.idap-pages .idap-current {
+  background: var(--id-green);
+  color: #072b15;
+  border-color: var(--id-green);
+  font-weight: 800;
+  cursor: default;
+}
+
+.idap-ellipsis {
+  display: grid;
+  place-items: center;
+  padding: 0 4px;
+  color: #667085;
+}
+
+.idap-empty {
+  padding: 36px 24px;
+  background: #f9fafb;
+  border: 1px solid #e9eeeb;
+  border-radius: 13px;
+  color: #667085;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .idap-hero {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .idap-wrap {
+    padding: 20px 22px 50px;
+  }
+  .idap-hero {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px 18px 28px;
+  }
+  .idap-avatar {
+    max-width: 150px;
+  }
+  .idap-description {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+  .idap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+}
+
+@media (max-width: 767px) {
+  .idap-page {
+    padding-top: 92px;
+  }
+}
+
+@media (max-width: 540px) {
+  .idap-wrap {
+    padding: 16px 16px 45px;
+  }
+  .idap-hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px 16px 22px;
+  }
+  .idap-avatar-col {
+    justify-self: center;
+    width: 100%;
+    max-width: 280px;
+  }
+  .idap-avatar {
+    width: 180px;
+    max-width: 180px;
+  }
+  .idap-avatar-name {
+    font-size: 20px;
+  }
+  .idap-bio {
+    width: 100%;
+    align-self: stretch;
+  }
+  .idap-description {
+    width: 100%;
+    max-width: none;
+    font-size: 13.5px;
+    line-height: 1.75;
+    text-align: left;
+  }
+  .idap-section-head h2 {
+    font-size: 21px;
+  }
+  .idap-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .idap-card,
+  .idap-linkedin {
+    transition: none;
+  }
+  .idap-card:hover,
+  .idap-linkedin:hover {
+    transform: none;
+  }
+}

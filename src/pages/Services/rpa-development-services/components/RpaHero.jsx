@@ -1,8 +1,9 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function RpaHero() {
   return (
-    <section className="relative isolate flex min-h-[720px] items-center overflow-hidden bg-[#05070c] text-white sm:min-h-[100svh]">
+    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-[#05070c] pb-12 text-white">
       <img
         src="/assets/ai-development/rpa-banner.png"
         alt=""
@@ -11,7 +12,7 @@ export default function RpaHero() {
         fetchPriority="high"
       />
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#05070c] via-[#05070c]/85 to-[#05070c]/15" />
-      <div className="relative z-20 mx-auto w-full max-w-[1100px] px-6 pb-14 pt-32 sm:px-10 sm:pb-20">
+      <div className="relative z-20 mx-auto w-full max-w-[1100px] px-6 py-8 sm:px-10 sm:py-10">
         <div className="max-w-[740px]">
           <h1 className="mb-1 text-sm font-bold tracking-wide text-[#00CE44] sm:text-base">
             RPA Development Services
@@ -22,7 +23,14 @@ export default function RpaHero() {
             <span className="lg:block">Systems</span>
           </h2>
           <p className="mb-6 max-w-[590px] text-[15px] leading-relaxed text-white/90 sm:text-base">
-            Robotic process automation supports business process automation by executing structured workflows, connecting enterprise systems, and removing repetitive operational work across departments and tools.
+            Robotic process automation supports{' '}
+            <Link
+              to="/business-process-automation"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              business process automation
+            </Link>{' '}
+            by executing structured workflows, connecting enterprise systems, and removing repetitive operational work across departments and tools.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">
               <a

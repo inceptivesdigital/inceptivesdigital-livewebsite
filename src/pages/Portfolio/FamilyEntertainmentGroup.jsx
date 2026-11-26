@@ -142,7 +142,7 @@ export default function FamilyEntertainmentGroup() {
   }, [])
 
   return (
-    <div className="w-full bg-[#151515] text-white overflow-x-hidden">
+    <div className="case-study-page w-full bg-[#151515] text-white overflow-x-hidden">
       {/* 1. HERO SECTION */}
       <section className="w-full bg-[#151515] pt-32 sm:pt-36 lg:pt-44 pb-0">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8 flex flex-col items-center text-center">

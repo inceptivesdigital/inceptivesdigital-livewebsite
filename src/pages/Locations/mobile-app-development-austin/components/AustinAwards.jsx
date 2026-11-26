@@ -52,19 +52,30 @@ export default function AustinAwards() {
           </p>
         </div>
 
-        {/* Clean Floating Award Badges Row */}
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-18 xl:gap-20">
+        {/* 6 Award Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {awards.map((item) => (
             <div
               key={item.title + item.org}
-              className="h-24 sm:h-28 lg:h-32 w-auto max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
+              className="bg-[#14151a] border border-white/10 hover:border-[#00CE44]/40 rounded-[20px] p-7 text-left transition-all duration-300 flex flex-col items-start"
             >
-              <img
-                src={item.logoSrc}
-                alt={`${item.org} - ${item.title}`}
-                className="max-h-full max-w-full w-auto h-auto object-contain select-none"
-                loading="lazy"
-              />
+              <div className="h-20 w-auto flex items-center justify-start mb-5">
+                <img
+                  src={item.logoSrc}
+                  alt={`${item.org} - ${item.title}`}
+                  className="h-20 w-auto object-contain select-none"
+                  loading="lazy"
+                />
+              </div>
+              <span className="text-xs font-bold uppercase tracking-wider text-white/60 mb-1">
+                {item.org}
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-3 leading-snug">
+                {item.title}
+              </h3>
+              <p className="text-white/80 text-sm sm:text-[15px] leading-relaxed font-normal">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

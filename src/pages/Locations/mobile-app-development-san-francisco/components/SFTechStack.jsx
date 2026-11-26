@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export const sfTechCategories = [
   {
@@ -83,14 +84,12 @@ export default function SFTechStack() {
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
             The{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/blog/mobile-app-tech-stack"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               mobile app technology stack
-            </a>{' '}
+            </Link>{' '}
             includes Swift, Kotlin, Flutter, React Native, backend APIs, and cloud infrastructure. Our mobile app development services in San Francisco combine production-ready frameworks, cloud platforms, and engineering tools selected around your product goals.
           </p>
         </div>

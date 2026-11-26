@@ -1,26 +1,25 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function MachineHero() {
   return (
-    <section className="relative w-full min-h-screen min-h-[100dvh] xl:h-screen flex flex-col xl:flex-row items-center bg-[#1b1b1b] text-white overflow-hidden">
+    <section className="relative w-full min-h-screen min-h-[100dvh] pb-10 xl:pb-10 flex flex-col xl:flex-row items-center bg-[#1b1b1b] text-white overflow-hidden">
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
-        <div className="flex flex-col items-start text-left py-12 xl:py-0 xl:w-[48%]">
-          <p className="text-[#00CE44] text-sm sm:text-base font-bold mb-3">
+        <div className="flex flex-col items-start text-left py-6 sm:py-8 xl:py-8 xl:w-[48%]">
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
             Machine Learning Development Services
-          </p>
-          <h1 className="w-full text-[36px] sm:text-[44px] md:text-[50px] font-bold leading-[1.08] tracking-tight text-white mb-5 max-w-[600px]">
-            Custom ML Models That Power Real Business Decisions
           </h1>
+          <h2 className="w-full text-[36px] sm:text-[44px] md:text-[50px] font-bold leading-[1.08] tracking-tight text-white mb-5 max-w-[600px]">
+            Custom ML Models That Power Real Business Decisions
+          </h2>
           <p className="w-full text-white/85 text-[15px] sm:text-[16px] leading-[1.65] max-w-[600px] mb-7">
             Predictive models, classification engines, recommendation systems, and anomaly detection support{' '}
-            <a
-              href="https://inceptivesdigital.com/business-process-automation"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/business-process-automation"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               business process automation
-            </a>{' '}
+            </Link>{' '}
             for companies that need machine learning to do real work, not demonstrate potential.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">

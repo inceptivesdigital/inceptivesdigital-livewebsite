@@ -79,7 +79,7 @@ export default function SFSmartFeatures() {
                   key={item.title}
                   className="p-5 rounded-[16px] bg-[#14151a] border border-white/5 hover:border-[#00CE44]/40 flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1 group"
                 >
-                  <div className="w-11 h-11 mb-3 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 mb-2.5 flex items-center justify-center shrink-0">
                     <img
                       src={item.icon}
                       alt={item.title}
@@ -87,7 +87,7 @@ export default function SFSmartFeatures() {
                       loading="lazy"
                     />
                   </div>
-                  <span className="text-xs sm:text-sm font-semibold text-white group-hover:text-[#00CE44] transition-colors leading-snug">
+                  <span className="text-[11px] sm:text-[13px] font-normal text-white group-hover:text-[#00CE44] transition-colors leading-snug">
                     {item.title}
                   </span>
                 </div>

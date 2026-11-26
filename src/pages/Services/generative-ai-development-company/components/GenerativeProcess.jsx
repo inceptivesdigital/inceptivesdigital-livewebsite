@@ -1,4 +1,5 @@
 import LocationProcessLayout from '../../../../components/LocationProcessLayout'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
@@ -10,13 +11,13 @@ const steps = [
     desc: (
       <>
         Following the{' '}
-        <a href="https://inceptivesdigital.com/blog/ai-mvp-development-guide" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+        <Link to="/blog/ai-mvp-development-guide" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           AI MVP development guide
-        </a>
+        </Link>
         , we map business objectives, identify workflows where generative AI creates leverage, define user roles, and review data sources before development begins. This{' '}
-        <a href="https://inceptivesdigital.com/product-strategy-consulting" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+        <Link to="/product-strategy-consulting" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           product strategy consulting
-        </a>{' '}
+        </Link>{' '}
         stage creates a clear build plan before a line of code is written.
       </>
     ),
@@ -28,7 +29,7 @@ const steps = [
     image: '/assets/ai-development/presstwo.png',
     imageAlt: 'Generative AI data readiness and architecture',
     desc:
-      'Data quality is assessed and prepared for retrieval, training, or generation. RAG, fine-tuning, or prompt engineering approaches are determined. The tech stack, integration requirements, and deployment environment are defined upfront.',
+      'Data quality assessed and prepared for retrieval, training, or generation. RAG, fine-tuning, or prompt engineering approach determined. Tech stack, integration requirements, and deployment environment defined upfront.',
   },
   {
     num: '03.',
@@ -37,7 +38,7 @@ const steps = [
     image: '/assets/ai-development/proess3.png',
     imageAlt: 'Generative AI model development and integration',
     desc:
-      'Foundation models are configured or fine-tuned for your domain and task requirements. RAG pipelines, embedding workflows, and retrieval logic are built and connected to CRM, ERP, CMS, and internal software from the start.',
+      'Foundation models configured or fine-tuned for your specific domain and task requirements. RAG pipelines, embedding workflows, and retrieval logic built. Connected to CRM, ERP, CMS, and internal software from the start.',
   },
   {
     num: '04.',
@@ -46,7 +47,7 @@ const steps = [
     image: '/assets/ai-development/process5.png',
     imageAlt: 'Generative AI evaluation and deployment',
     desc:
-      'Factual accuracy, retrieval quality, hallucination risk, and latency are tested before deployment. Unit, integration, and security testing are completed. Systems are deployed on AWS, Google Cloud, or Azure with monitoring in place from day one.',
+      'Factual accuracy, retrieval quality, hallucination risk, and latency were tested before deployment. Unit, integration, and security testing completed. Deployed on AWS, Google Cloud, or Azure with monitoring in place from day one.',
   },
   {
     num: '05.',
@@ -56,10 +57,10 @@ const steps = [
     imageAlt: 'Generative AI optimization and support',
     desc: (
       <>
-        Prompt performance, retrieval accuracy, and operating costs are tracked post-launch. Models, datasets, and workflows are updated as requirements change.{' '}
-        <a href="https://inceptivesdigital.com/product-rescue-scaling" target="_blank" rel="noopener noreferrer" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+        Prompt performance, retrieval accuracy, and operating costs tracked post-launch. Models, datasets, and workflows updated as requirements change.{' '}
+        <Link to="/product-rescue-scaling" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Product scaling
-        </a>{' '}
+        </Link>{' '}
         keeps infrastructure aligned as usage and generative AI workloads grow.
       </>
     ),

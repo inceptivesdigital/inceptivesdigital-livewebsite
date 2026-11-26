@@ -7,65 +7,68 @@ import {
   Workflow,
   Zap,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
     icon: BrainCircuit,
-    title: 'Custom AI Agent Development',
+    title: '1. Custom AI Agent Development',
     description: (
       <>
-        Our <a href="https://inceptivesdigital.com/custom-software-development">custom software development</a> approach creates autonomous agents around your business workflows, operational requirements, and system architecture. Built from the ground up for your use case, not adapted from a generic template.
+        Our <Link to="/custom-software-development">custom software development</Link> approach creates autonomous agents around your specific business workflows, operational requirements, and system architecture. Built from the ground up for your use case, not adapted from a generic template.
       </>
     ),
   },
   {
     icon: Workflow,
-    title: 'Enterprise Workflow Automation Agents',
+    title: '2. Enterprise Workflow Automation Agents',
     description: (
       <>
-        Our <a href="https://inceptivesdigital.com/ai-automation-services">AI automation services</a> use agents to manage multi-step processes, reduce manual intervention, and execute decisions across enterprise systems.
+        Our <Link to="/ai-automation-services">AI automation services</Link> use agents to manage multi-step operational processes, reduce manual intervention, and execute decisions across enterprise systems without human input at every stage.
       </>
     ),
   },
   {
     icon: Zap,
-    title: 'AI Copilots and Productivity Assistants',
+    title: '3. AI Copilots and Productivity Assistants',
     description: (
       <>
-        Through <a href="https://inceptivesdigital.com/ai-development">AI app development</a>, intelligent agents are embedded into internal tools to assist teams with recommendations, task prioritisation, analytics, and workflow automation. They augment the tools and teams you already use.
+        In <Link to="/ai-development">AI app development</Link>, the Intelligent agents embedded into internal tools to assist teams with recommendations, task prioritisation, analytics, and workflow automation. Built to augment the tools and teams you already use rather than frame adoption around{' '}
+        <Link to="/blog/will-ai-really-replace-app-developers">AI replacing app developers</Link>.
       </>
     ),
   },
   {
     icon: Database,
-    title: 'RAG-Enabled Knowledge Agents',
+    title: '4. RAG Enabled Knowledge Agents',
     description: (
       <>
-        Agents connect to structured and unstructured enterprise data for context-aware decision support and knowledge retrieval. Our <a href="https://inceptivesdigital.com/generative-ai-development-company">generative AI development</a> grounds responses in your business data when general model knowledge is not precise enough.
+        Agents connected to your structured and unstructured enterprise data for context-aware decision support and knowledge retrieval. Built for organisations where{' '}
+        <Link to="/generative-ai-development-company">generative AI development</Link> must be grounded in enterprise data because general model knowledge is not precise enough.
       </>
     ),
   },
   {
     icon: Network,
-    title: 'Multi-System and API Integration',
+    title: '5. Multi-System and API Integration',
     description: (
       <>
-        <a href="https://inceptivesdigital.com/system-integration-api-automation">System integration and API automation</a> connect agents to your CRM, ERP, databases, and SaaS platforms for seamless cross-system workflow execution.
+        <Link to="/system-integration-api-automation">System integration and API automation</Link> connect AI agents to your CRM, ERP, databases, and SaaS platforms for seamless cross-system workflow execution. Built for businesses that need agents to operate across the full technology stack.
       </>
     ),
   },
   {
     icon: Headset,
-    title: 'Voice and Conversational Agents',
+    title: '6. Voice and Conversational Agents',
     description:
-      'Voice-enabled AI agents for call centres, IVR systems, and enterprise voice workflows, built for operational contexts where real-time speech interaction is a requirement.',
+      'Voice-enabled AI agents for call centres, IVR systems, and enterprise voice workflows. Built for operational contexts where real-time speech interaction is a requirement.',
   },
   {
     icon: Settings2,
-    title: 'AI Model Training and Optimization',
+    title: '7. AI Model Training and Optimization',
     description: (
       <>
-        <a href="https://inceptivesdigital.com/machine-learning-development-services">Machine learning</a> models trained and fine-tuned for decision-making, predictive analytics, and adaptive agent behaviour, designed to improve with every operational cycle.
+        <Link to="/machine-learning-development-services">Machine learning</Link> models trained and fine-tuned for decision-making, predictive analytics, and adaptive agent behaviour. Built for agents who need to improve with every operational cycle.
       </>
     ),
   },

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -24,7 +25,17 @@ const categories = [
   },
   {
     name: 'Cloud and Infrastructure',
-    description: 'Product scaling requires deployment, monitoring, and infrastructure capable of supporting growing production automation workloads.',
+    description: (
+      <>
+        <Link
+          to="/product-rescue-scaling"
+          className="underline font-semibold"
+>
+          Product scaling
+        </Link>{' '}
+        requires deployment, monitoring, and infrastructure capable of supporting growing production automation workloads.
+      </>
+    ),
     items: ['AWS', 'Google Cloud', 'Azure', 'Docker', 'Kubernetes'],
   },
 ]
@@ -83,9 +94,6 @@ export default function BusinessProcessTechStack() {
                 {technology}
               </div>
             ))}
-            <p className="col-span-full border-t border-black/20 pt-4 text-sm leading-relaxed text-black">
-              {active.description}
-            </p>
           </div>
         </div>
       </div>

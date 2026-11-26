@@ -67,7 +67,7 @@ export default function ProductLaunchHero() {
                 href="#contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
               >
-                Start Planning Your Launch
+                Launch Your Product
               </a>
               <a
                 href="#contact"

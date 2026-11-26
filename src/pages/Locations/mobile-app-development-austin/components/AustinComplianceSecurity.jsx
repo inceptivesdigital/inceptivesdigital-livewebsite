@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle2, ChevronRight } from 'lucide-react'
 
 export default function AustinComplianceSecurity() {
@@ -152,7 +153,14 @@ export default function AustinComplianceSecurity() {
             <span className="text-[#00CE44]">Compliance Requirements</span>
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
-            Mobile apps serving Austin and Texas customers must account for state privacy laws, biometric data restrictions, and applicable industry security standards. Inceptives Digital helps businesses address these requirements during mobile app development, from consent management to secure data handling that follows app security best practices.
+            Mobile apps serving Austin and Texas customers must account for state privacy laws, biometric data restrictions, and applicable industry security standards. Inceptives Digital helps businesses address these requirements during mobile app development, from consent management to secure data handling that follows{' '}
+            <Link
+              to="/blog/mobile-app-security-best-practices"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+            >
+              app security best practices
+            </Link>
+            . Our team considers Texas privacy legislation, healthcare regulations, payment security, and AI governance requirements based on each application&apos;s functionality.
           </p>
         </div>
 

@@ -22,15 +22,19 @@ export default function AustinEngineeringExpertise() {
   const awards = [
     {
       src: '/assets/awards-images/award-clutch-austin.png',
-      alt: 'Clutch Top App Development Company Plano 2026',
+      org: 'Clutch',
+      label: 'Top App Development Company Plano 2026',
     },
     {
       src: '/assets/awards-images/award-top-developers.png',
-      alt: 'SoftwareWorld Top Trending 2026',
+      org: 'SoftwareWorld',
+      label: 'Top Trending, 2026',
     },
     {
       src: '/assets/awards-images/award-clutch-gaming.png',
-      alt: 'Top iPhone App Development Company, USA 2026',
+      org: 'Clutch',
+      label: 'Top iPhone App Development Company, USA 2026',
+      subtext: "Recognized in Clutch's U.S. iPhone app development company rankings.",
     },
   ]
 
@@ -50,15 +54,29 @@ export default function AustinEngineeringExpertise() {
             </p>
 
             {/* Award Badges */}
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8 pt-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
               {awards.map((a) => (
-                <div key={a.alt} className="transition-transform duration-200 hover:scale-105">
+                <div
+                  key={a.label}
+                  className="rounded-xl bg-[#14151a] border border-white/10 p-4 flex flex-col items-start text-left transition-transform duration-200 hover:-translate-y-0.5 hover:border-[#00CE44]/40"
+                >
                   <img
                     src={a.src}
-                    alt={a.alt}
-                    className="h-20 sm:h-24 w-auto object-contain select-none"
+                    alt={`${a.org} - ${a.label}`}
+                    className="h-14 w-auto object-contain select-none mb-3"
                     loading="lazy"
                   />
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#00CE44] mb-1">
+                    {a.org}
+                  </span>
+                  <p className="text-xs font-semibold text-white leading-snug">
+                    {a.label}
+                  </p>
+                  {a.subtext && (
+                    <p className="text-[11px] text-white/65 leading-snug mt-1">
+                      {a.subtext}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -76,7 +94,7 @@ export default function AustinEngineeringExpertise() {
                   <div className="flex items-start gap-4">
                     {/* Clean Solid Full-fill Icon (Zero bg, zero border, zero padding) */}
                     <div className="shrink-0 mt-1 flex items-center justify-center">
-                      <Icon className="w-8 h-8" />
+                      <Icon className="w-8 h-8 text-[#00CE44]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2">

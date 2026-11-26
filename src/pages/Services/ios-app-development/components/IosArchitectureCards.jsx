@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function IosArchitectureCards() {
   const cards = [
     {
@@ -7,12 +8,12 @@ export default function IosArchitectureCards() {
       desc: (
         <>
           SwiftUI and UIKit, the core{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/ios-app-development-frameworks"
+          <Link
+            to="/blog/ios-app-development-frameworks"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             iOS app development frameworks
-          </a>
+          </Link>
           , handle native interfaces, while MVVM separates application logic from the presentation layer.
         </>
       ),
@@ -29,12 +30,12 @@ export default function IosArchitectureCards() {
       title: 'Backend Connectivity',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/backend-api-development"
+          <Link
+            to="/backend-api-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Backend API development
-          </a>{' '}
+          </Link>{' '}
           pairs with URLSession for secure API communication. For offline iPhone applications, SwiftData or Core Data manages local persistence.
         </>
       ),
@@ -45,12 +46,12 @@ export default function IosArchitectureCards() {
       title: 'Performance Optimization',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-performance-optimization"
+          <Link
+            to="/blog/mobile-app-performance-optimization"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Mobile app performance optimization
-          </a>{' '}
+          </Link>{' '}
           starts with Xcode Instruments, which identifies memory bottlenecks, while Swift Concurrency helps manage asynchronous operations in complex iOS applications.
         </>
       ),

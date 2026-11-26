@@ -1,23 +1,51 @@
 import { Bot, BrainCircuit, FileSearch, GitBranch, Map, Network, Route, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
     icon: Bot,
     title: 'Custom RPA Bot Development',
-    description:
-      'Our custom software development approach creates RPA bots that execute defined workflows across systems based on structured rules, triggers, and process logic.',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/custom-software-development"
+          className="text-white underline group-hover:text-black"
+>
+          custom software development
+        </Link>{' '}
+        approach creates RPA bots that execute defined workflows across systems based on structured rules, triggers, and process logic.
+      </>
+    ),
   },
   {
     icon: Workflow,
     title: 'Cross-System Workflow Automation',
     description:
-      'Execution pipelines connect disconnected systems into a single flow, removing manual transfer between tools and platforms.',
+      'Execution pipelines that connect disconnected systems into a single flow, removing manual transfer between tools and platforms.',
   },
   {
     icon: FileSearch,
     title: 'Document and Data Process Automation',
-    description:
-      'Automated document processing can combine natural language processing with computer vision to extract, validate, and structure information from text, scanned forms, and other operational inputs.',
+    description: (
+      <>
+        Automated document processing can combine{' '}
+        <Link
+          to="/nlp-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          natural language processing
+        </Link>{' '}
+        with{' '}
+        <Link
+          to="/computer-vision-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          computer vision
+        </Link>{' '}
+        to extract, validate, and structure information from text, scanned forms, and other operational inputs.
+      </>
+    ),
   },
   {
     icon: GitBranch,
@@ -28,26 +56,63 @@ const services = [
   {
     icon: Network,
     title: 'System Integration Automation',
-    description:
-      'Backend API development enables direct data movement between tools, removing manual synchronization steps from RPA workflows.',
+    description: (
+      <>
+        <Link
+          to="/backend-api-development"
+          className="text-white underline group-hover:text-black"
+>
+          Backend API development
+        </Link>{' '}
+        enables direct data movement between tools, removing manual synchronization steps from RPA workflows.
+      </>
+    ),
   },
   {
     icon: BrainCircuit,
     title: 'AI-Enhanced RPA Development',
-    description:
-      'AI automation extends RPA with intelligent processing for workflows involving variability, exceptions, or unstructured inputs.',
+    description: (
+      <>
+        <Link
+          to="/ai-automation-services"
+          className="text-white underline group-hover:text-black"
+>
+          AI automation
+        </Link>{' '}
+        extends RPA with intelligent processing for workflows involving variability, exceptions, or unstructured inputs.
+      </>
+    ),
   },
   {
     icon: Route,
     title: 'Exception Handling Automation',
-    description:
-      'For more complex exceptions, AI agents can support real-time detection, classification, routing, and action while maintaining workflow continuity.',
+    description: (
+      <>
+        For more complex exceptions,{' '}
+        <Link
+          to="/ai-agent-development"
+          className="text-white underline group-hover:text-black"
+>
+          AI agents
+        </Link>{' '}
+        can support real-time detection, classification, routing, and action while maintaining workflow continuity.
+      </>
+    ),
   },
   {
     icon: Map,
     title: 'RPA Consulting and Process Mapping',
-    description:
-      'Product strategy consulting helps identify automation opportunities and define the execution architecture before RPA development begins.',
+    description: (
+      <>
+        <Link
+          to="/product-strategy-consulting"
+          className="text-white underline group-hover:text-black"
+>
+          Product strategy consulting
+        </Link>{' '}
+        helps identify automation opportunities and define the execution architecture before RPA development begins.
+      </>
+    ),
   },
 ]
 

@@ -21,8 +21,8 @@ export default function AgentHero() {
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="w-full lg:w-[58%] xl:w-[54%] flex flex-col items-start text-left">
-          <h1 className="text-[36px] sm:text-[46px] md:text-[52px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-white mb-4">
-            AI Agent Development <span className="text-[#00CE44]">Company</span>
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
+            AI Agent Development Company
           </h1>
 
           <h2 className="text-[19px] sm:text-[22px] md:text-[24px] font-semibold leading-[1.35] text-white/95 mb-5 max-w-[660px]">

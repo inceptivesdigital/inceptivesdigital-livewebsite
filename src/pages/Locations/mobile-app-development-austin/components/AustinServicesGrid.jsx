@@ -75,65 +75,49 @@ export default function AustinServicesGrid() {
       title: 'iOS App Development',
       icon: AppleIcon,
       link: '/ios-app-development',
-      linkText: 'iOS app developers',
-      descBefore: 'Premium iOS applications built for products where trust, retention, and customer experience directly influence growth. Our ',
-      descAfter: ' serve Austin businesses using Swift and SwiftUI to build secure, high-performing iPhone and iPad applications with deeper Apple ecosystem integration.',
+      desc: 'Premium iOS applications built for products where trust, retention, and customer experience directly influence growth. Our iOS app developers serve Austin businesses using Swift and SwiftUI to build secure, high-performing iPhone and iPad applications with deeper Apple ecosystem integration.',
     },
     {
       title: 'Android App Development',
       icon: AndroidIcon,
       link: '/android-app-development',
-      linkText: 'Android app development services',
-      descBefore: 'Our ',
-      descAfter: ' in Austin help businesses build native applications that scale across devices, customer segments, and operating environments. Using Kotlin and Jetpack Compose, our developers deliver consistent performance and reliable functionality across the Android ecosystem.',
+      desc: 'Our Android app development services in Austin help businesses build native applications that scale across devices, customer segments, and operating environments. Using Kotlin and Jetpack Compose, our developers deliver consistent performance and reliable functionality across the Android ecosystem.',
     },
     {
       title: 'Cross-Platform App Development',
       icon: CrossPlatformIcon,
       link: '/cross-platform-app-development',
-      linkText: 'Cross-platform app development',
-      descBefore: '',
-      descAfter: 'offers a practical approach for businesses balancing speed to market, budget efficiency, and platform reach. Shared codebases reduce engineering overhead while maintaining a near-native experience on both platforms.',
+      desc: 'A practical approach for businesses balancing speed to market, budget efficiency, and platform reach. Shared codebases reduce engineering overhead while maintaining a near-native experience on both platforms.',
     },
     {
       title: 'React Native Development',
       icon: ReactIcon,
       link: '/react-native-app-development',
-      linkText: 'React Native app development',
-      descBefore: '',
-      descAfter: ' gives Austin startups a practical way to reach iOS and Android users through shared engineering resources. We use the framework for products requiring platform coverage without maintaining two separate frontend codebases.',
+      desc: 'React Native app development gives Austin startups a practical way to reach iOS and Android users through shared engineering resources. We use the framework for products requiring platform coverage without maintaining two separate frontend codebases.',
     },
     {
       title: 'Flutter App Development',
       icon: FlutterIcon,
       link: '/flutter-app-development',
-      linkText: 'Flutter app development services',
-      descBefore: 'For businesses prioritizing consistent mobile interfaces, our ',
-      descAfter: ' support iOS and Android from a shared codebase. Flutter delivers a uniform experience across platforms without increasing maintenance complexity.',
+      desc: 'For businesses prioritizing consistent mobile interfaces, our Flutter app development services support iOS and Android from a shared codebase. Flutter delivers a uniform experience across platforms without increasing maintenance complexity.',
     },
     {
       title: 'Kotlin Multiplatform Development',
       icon: KotlinIcon,
       link: '/kotlin-multiplatform-app-development',
-      linkText: 'Kotlin Multiplatform development',
-      descBefore: '',
-      descAfter: ' delivers shared business logic with native experiences on every platform. A strong fit for growing products that need engineering efficiency without sacrificing performance or user experience quality.',
+      desc: 'Shared business logic with native experiences on every platform. A strong fit for growing products that need engineering efficiency without sacrificing performance or user experience quality.',
     },
     {
       title: 'Backend and API Development',
       icon: BackendIcon,
       link: '/backend-api-development',
-      linkText: 'mobile app backend development services',
-      descBefore: 'We provide ',
-      descAfter: ' connecting applications with business databases, payment systems, CRMs, and third-party APIs. Austin companies can integrate new mobile products with existing infrastructure while retaining control over system access and data flows.',
+      desc: 'We provide mobile app backend development services connecting applications with business databases, payment systems, CRMs, and third-party APIs. Austin companies can integrate new mobile products with existing infrastructure while retaining control over system access and data flows.',
     },
     {
       title: 'AI-Powered Mobile Applications',
       icon: AiIcon,
-      link: '/ai-development',
-      linkText: 'AI development capabilities',
-      descBefore: 'From intelligent recommendations and semantic search to workflow automation and conversational interfaces, ',
-      descAfter: ' are integrated where they create measurable business value rather than unnecessary complexity.',
+      link: '/ai-app-development-services',
+      desc: 'From intelligent recommendations and semantic search to workflow automation and conversational interfaces, AI capabilities are integrated where they create measurable business value rather than unnecessary complexity.',
     },
   ]
 
@@ -166,18 +150,15 @@ export default function AustinServicesGrid() {
                     <Icon className="w-10 h-10 shrink-0" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
-                    {s.title}
+                    <Link
+                      to={s.link}
+                      className="hover:text-[#00CE44] hover:underline transition-colors"
+                    >
+                      {s.title}
+                    </Link>
                   </h3>
                   <p className="text-white/75 text-sm sm:text-[15px] leading-relaxed">
-                    {s.descBefore}
-                    {s.link ? (
-                      <Link to={s.link} className="underline text-[#00CE44] hover:opacity-80 transition-colors">
-                        {s.linkText}
-                      </Link>
-                    ) : (
-                      s.linkText
-                    )}
-                    {s.descAfter}
+                    {s.desc}
                   </p>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -26,9 +27,9 @@ const categories = [
     name: 'Backend and API',
     description: (
       <>
-        <a href="https://inceptivesdigital.com/backend-api-development" target="_blank" rel="noopener noreferrer" className="underline font-semibold">
+        <Link to="/backend-api-development" className="underline font-semibold">
           Backend API development
-        </a>{' '}
+        </Link>{' '}
         provides the server-side infrastructure that connects AI models to the product interface.
       </>
     ),
@@ -116,9 +117,6 @@ export default function AiMvpTechStack() {
                 <span className="text-black text-xs sm:text-sm leading-tight">{technology.name}</span>
               </div>
             ))}
-            <p className="w-full border-t border-black/20 pt-5 text-black text-sm leading-relaxed">
-              {categories[activeCategory].description}
-            </p>
           </div>
         </div>
       </div>

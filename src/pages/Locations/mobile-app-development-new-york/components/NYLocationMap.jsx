@@ -22,9 +22,20 @@ export default function NYLocationMap() {
                   <span>1178 Broadway, 3rd Floor, New York, NY 10001, United States</span>
                 </div>
 
-                <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-8 font-normal">
+                <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-6 font-normal">
                   The Broadway address places Inceptives Digital in Manhattan’s NoMad area, close to businesses across technology, retail, finance, and professional services. Mobile app developers in New York can support local product discussions while delivery teams handle the technical work under an agreed project plan.
                 </p>
+
+                <div className="flex flex-wrap items-center gap-3 mb-7">
+                  {['8+ Years', '70+ Apps', '4.9 ★ Clutch'].map((badge) => (
+                    <span
+                      key={badge}
+                      className="px-4 py-2 rounded-lg bg-[#181a20] border border-white/10 text-xs sm:text-sm font-semibold text-[#00CE44]"
+                    >
+                      {badge}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Get Directions Button */}

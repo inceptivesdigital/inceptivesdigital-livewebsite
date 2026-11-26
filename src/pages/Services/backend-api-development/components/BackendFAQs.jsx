@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const FAQS = [
   {
@@ -54,14 +55,12 @@ const FAQS = [
     answer: (
       <>
         A focused backend covering core API and database architecture typically takes six to twelve weeks. A full-system build, including integrations and deployment, runs fourteen to twenty-four weeks. The final{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/app-development-timeline"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/app-development-timeline"
           className="font-semibold text-[#111111] underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00B81B] transition-colors"
-        >
+>
           app development timeline
-        </a>{' '}
+        </Link>{' '}
         for migrations depends on the size and condition of the existing system.
       </>
     ),
@@ -87,32 +86,26 @@ const FAQS = [
     answer: (
       <>
         Yes.{' '}
-        <a
-          href="https://inceptivesdigital.com/startup-product-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/startup-product-development"
           className="font-semibold text-[#111111] underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00B81B] transition-colors"
-        >
+>
           Startup product development
-        </a>{' '}
+        </Link>{' '}
         is scoped around what the product actually needs at its current stage, not a fixed minimum. A focused backend foundation suits{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/software-development-for-startups"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/software-development-for-startups"
           className="font-semibold text-[#111111] underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00B81B] transition-colors"
-        >
+>
           software development for startups
-        </a>{' '}
+        </Link>{' '}
         validating early traction; a full-system build suits a product scaling post-funding. For very early products, understanding{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/mvp-development-cost"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/mvp-development-cost"
           className="font-semibold text-[#111111] underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00B81B] transition-colors"
-        >
+>
           MVP development cost
-        </a>{' '}
+        </Link>{' '}
         also helps define an appropriate first backend scope.
       </>
     ),
@@ -130,14 +123,12 @@ const FAQS = [
     answer: (
       <>
         A focused backend engagement typically starts around $20,000, while a full-system build spans a wider range depending on integration complexity and target infrastructure. Cost scales with system scope, integration count, and whether the work is greenfield or migration. The{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/signs-startup-needs-custom-software-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/signs-startup-needs-custom-software-development"
           className="font-semibold text-[#111111] underline decoration-[#00E522] decoration-2 underline-offset-4 hover:text-[#00B81B] transition-colors"
-        >
+>
           signs a startup needs custom software development
-        </a>{' '}
+        </Link>{' '}
         often become clear when existing infrastructure can no longer support that growth.
       </>
     ),

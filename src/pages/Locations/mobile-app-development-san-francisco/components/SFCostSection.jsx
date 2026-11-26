@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function SFCostSection() {
   const tiers = [
@@ -68,14 +69,12 @@ export default function SFCostSection() {
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
             The{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/mobile-app-development-cost"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/blog/mobile-app-development-cost"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               cost of mobile app development
-            </a>{' '}
+            </Link>{' '}
             depends on product complexity, platform selection, integrations, compliance requirements, and engineering effort. As a mobile app development company in San Francisco, Inceptives Digital provides fixed-cost estimates tailored to your product requirements before development begins.
           </p>
         </div>

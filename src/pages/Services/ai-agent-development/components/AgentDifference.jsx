@@ -1,4 +1,5 @@
 import { Bot, GitBranch, Workflow } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const points = [
   {
@@ -12,16 +13,16 @@ const points = [
     title: 'Where AI Agents Create Real Operational Value',
     description: (
       <>
-        The highest-value use cases are high-volume, multi-step operational processes that currently depend on manual effort: data ingestion, exception detection,{' '}
-        <a href="https://inceptivesdigital.com/business-process-automation">business process automation</a>, and cross-system workflow orchestration. These are tasks that repeat at volume and cannot afford human handling at every step.
+        The highest value AI agent use cases are high-volume, multi-step operational processes that currently depend on manual effort. Data ingestion. Exception detection.{' '}
+        <Link to="/business-process-automation">Business process automation</Link> and Cross-system workflow orchestration. Tasks that repeat at volume and cannot afford human handling at every step.
       </>
     ),
   },
   {
     icon: GitBranch,
-    title: 'Why Agent Architecture Is Different',
+    title: 'Why Agent Architecture Is Different From Other AI Builds',
     description:
-      'An agent needs to reason across steps, maintain state across interactions, and handle exceptions without breaking the workflow. The architecture decisions that determine whether the system performs in production are made before development begins.',
+      'An agent needs to reason across steps, maintain state across interactions, and handle exceptions without breaking the workflow. The AI agent architecture decisions that determine whether the system performs in production are made before development begins.',
   },
 ]
 
@@ -35,10 +36,10 @@ export default function AgentDifference() {
           </h2>
           <p className="text-white/80 text-[15px] sm:text-[17px] leading-[1.65]">
             Most{' '}
-            <a href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers">
+            <Link to="/blog/ai-app-builders-vs-human-developers">
               AI app builders
-            </a>{' '}
-            and tools respond to instructions. An AI agent acts on them. The architecture, integration layer, and decision logic all follow from that single difference.
+            </Link>{' '}
+            and tools respond to instructions. An AI agent acts on them. The architecture, the integration layer, and the decision logic all follow from that single difference.
           </p>
         </div>
 

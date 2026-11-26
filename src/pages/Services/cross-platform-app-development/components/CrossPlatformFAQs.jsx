@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
     {
@@ -58,23 +59,19 @@ const faqs = [
       a: (
         <>
           We build cross-platform products for consumer, eCommerce, fintech, healthcare, marketplace,{' '}
-          <a
-            href="https://inceptivesdigital.com/food-delivery-app-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/food-delivery-app-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             on-demand
-          </a>
+          </Link>
           , SaaS, and enterprise applications where functionality overlaps across iOS and Android. The same overlap shows up in{' '}
-          <a
-            href="https://inceptivesdigital.com/education-app-development-company"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/education-app-development-company"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             education
-          </a>{' '}
+          </Link>{' '}
           and travel products, though anything leaning on specialized hardware integration is flagged for native.
         </>
       ),

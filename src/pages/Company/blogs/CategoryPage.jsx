@@ -283,7 +283,7 @@ export default function CategoryPage() {
   const pageNumbers = buildPaginationRange(currentPage, totalPages)
 
   return (
-    <section className="w-full min-h-[70vh] bg-[#E3FAEA] text-[#111111] pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-24">
+    <section className="category-archive-section w-full min-h-[70vh] bg-[#E3FAEA] text-[#111111] pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-24">
       <div className="w-full max-w-[1160px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Bold Category Title (Matches WP /category/android-app-development) */}
         <div className="text-center pb-10 sm:pb-12">

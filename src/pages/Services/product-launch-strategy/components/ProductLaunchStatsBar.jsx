@@ -6,8 +6,8 @@ export default function ProductLaunchStatsBar() {
       icon: '/assets/mobile-app/apps-launch.svg',
     },
     {
-      value: '150+',
-      label: 'Active Developers',
+      value: '$10K–$100K',
+      label: 'Launch Budgets Managed',
       icon: '/assets/mobile-app/active-developer.svg',
     },
     {

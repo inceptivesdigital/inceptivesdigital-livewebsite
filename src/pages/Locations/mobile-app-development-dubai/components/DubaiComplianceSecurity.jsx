@@ -10,7 +10,7 @@ export default function DubaiComplianceSecurity() {
         'DIFC Data Protection Law No. 5 of 2020',
         'Dubai Data Law No. 26 of 2015',
         'Cross-Border Data Transfer Requirements',
-        'Privacy by Design & Data Controls',
+        'Privacy by Design & Data Protection Controls',
       ],
     },
     {
@@ -18,10 +18,10 @@ export default function DubaiComplianceSecurity() {
       image: '/assets/locations/dubai/dubai-compliance-fintech.jpg',
       items: [
         'Central Bank of the UAE (CBUAE) Regulations',
-        'Retail Payment Services and Card Schemes',
+        'Retail Payment Services and Card Schemes Regulation',
         'Payment Token Services Regulation',
         'PCI DSS Payment Security Standards',
-        'AML & KYC Requirements',
+        'Anti-Money Laundering (AML) & KYC Requirements',
       ],
     },
     {
@@ -30,20 +30,20 @@ export default function DubaiComplianceSecurity() {
       items: [
         'UAE Federal Health ICT Law No. 2 of 2019',
         'Dubai Health Authority (DHA) Requirements',
-        'NABIDH Health Information Exchange',
-        'Healthcare Data Residency Requirements',
-        'Patient Privacy & Encryption Controls',
+        'NABIDH Health Information Exchange Standards',
+        'UAE Healthcare Data Residency Requirements',
+        'Healthcare Data Security & Patient Privacy Controls',
       ],
     },
     {
       title: 'Application & Cybersecurity',
       image: '/assets/locations/dubai/dubai-compliance-cybersecurity.jpg',
       items: [
-        'Dubai Electronic Security Center (DESC)',
+        'Dubai Electronic Security Center (DESC) Requirements',
         'Dubai Information Security Regulation (ISR)',
-        'OWASP MASVS Verification Standard',
-        'ISO/IEC 27001 Information Security',
-        'Mobile App Security Testing & Secure APIs',
+        'OWASP Mobile Application Security Verification Standard (MASVS)',
+        'ISO/IEC 27001 Information Security Standard',
+        'Mobile Application Security Testing & Secure APIs',
       ],
     },
     {
@@ -51,10 +51,10 @@ export default function DubaiComplianceSecurity() {
       image: '/assets/locations/dubai/dubai-compliance-gov.jpg',
       items: [
         'UAE National Digital Accessibility Policy',
-        'Web Content Accessibility Guidelines (WCAG)',
-        'UAE PASS Digital Identity Integration',
-        'Electronic Transactions & Trust Services Law',
-        'Apple App Store & Google Play Standards',
+        'Web Content Accessibility Guidelines (WCAG 2.2 AA)',
+        'UAE PASS Digital Identity Integration Requirements',
+        'UAE Electronic Transactions & Trust Services Law',
+        'Apple App Store & Google Play Compliance Requirements',
       ],
     },
   ]
@@ -64,22 +64,19 @@ export default function DubaiComplianceSecurity() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
         {/* Section Heading matching User Screenshot */}
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.18] mb-3">
-            UAE Mobile App{' '}
-            <span className="text-[#00CE44]">Compliance and Security</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-[1.18] mb-4">
+            UAE Mobile App Compliance, Security{' '}
+            <span className="text-[#00CE44]">&amp; Regulatory Standards</span>
           </h2>
-          <h3 className="text-white/90 text-sm sm:text-base font-semibold mb-3">
-            We Protect Your Business Through Secure and Compliant Development
-          </h3>
-          <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal max-w-3xl mx-auto">
-            Compliance is a core part of how we build apps. From planning and architecture to deployment, our team follows industry-specific regulations and{' '}
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal max-w-3xl mx-auto">
+            Mobile app development in Dubai requires attention to applicable UAE privacy laws, industry regulations, and cybersecurity standards. Inceptives Digital considers these requirements during development, following{' '}
             <Link
               to="/blog/mobile-app-security-best-practices"
               className="text-[#00CE44] font-medium underline underline-offset-4"
             >
               app security best practices
-            </Link>{' '}
-            to help businesses launch applications that are secure, compliant, and built for long-term growth across the UAE.
+            </Link>
+            , to support secure mobile applications for businesses across the UAE.
           </p>
         </div>
 

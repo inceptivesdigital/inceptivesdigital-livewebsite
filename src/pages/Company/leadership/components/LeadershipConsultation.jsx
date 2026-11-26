@@ -21,12 +21,13 @@ export default function LeadershipConsultation() {
     if (sending) return
     setSending(true)
     await submitFormToSeo({
-      formName: 'Leadership Strategy Consultation Form',
+      formName: 'Lead Form Inceptives Digital',
       subject: `Leadership Consultation - ${formData.fullName}`,
       replyTo: formData.email,
       fields: {
         'Full Name': formData.fullName,
         Email: formData.email,
+        Phone: formData.phone,
         'Contact Number': formData.phone,
         'Budget Range': formData.budget || 'Not specified',
         'Project Description': formData.message,
@@ -58,7 +59,7 @@ export default function LeadershipConsultation() {
 
       {/* Main Consultation Card (Matching Attachment 8) */}
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-[#0c0e12] via-[#090b0e] to-[#06080a] p-8 sm:p-12 lg:p-16 shadow-2xl">
+        <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-[#383838] p-8 sm:p-12 lg:p-16 shadow-2xl">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -101,10 +102,19 @@ export default function LeadershipConsultation() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5 text-left">
+                  <form
+                    id="lead-form-inceptives-digital"
+                    name="Lead Form Inceptives Digital"
+                    data-form-name="Lead Form Inceptives Digital"
+                    aria-label="Lead Form Inceptives Digital"
+                    onSubmit={handleSubmit}
+                    className="space-y-5 text-left"
+                  >
                     <div>
                       <input
                         type="text"
+                        name="full_name"
+                        autoComplete="name"
                         required
                         placeholder="Full Name"
                         value={formData.fullName}
@@ -116,6 +126,8 @@ export default function LeadershipConsultation() {
                     <div>
                       <input
                         type="email"
+                        name="email"
+                        autoComplete="email"
                         required
                         placeholder="Email*"
                         value={formData.email}
@@ -127,6 +139,8 @@ export default function LeadershipConsultation() {
                     <div>
                       <input
                         type="tel"
+                        name="phone"
+                        autoComplete="tel"
                         required
                         placeholder="Contact Number*"
                         value={formData.phone}
@@ -137,6 +151,7 @@ export default function LeadershipConsultation() {
 
                     <div>
                       <select
+                        name="budget"
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                         className="w-full pb-3 pt-1 bg-transparent border-b border-gray-300 text-black text-sm focus:outline-none focus:border-[#00CE44] transition-colors cursor-pointer"
@@ -151,6 +166,7 @@ export default function LeadershipConsultation() {
 
                     <div>
                       <textarea
+                        name="message"
                         rows={2}
                         placeholder="Describe Your Project/Idea In Brief (Helps Us Come Back Better Prepared)"
                         value={formData.message}

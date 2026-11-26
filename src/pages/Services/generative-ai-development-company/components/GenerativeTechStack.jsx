@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight, BrainCircuit } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -12,7 +13,7 @@ const categories = [
       { name: 'Google Gemini', image: '/assets/ai-development/03stack-2-1.jpg' },
       { name: 'Meta LLaMA', image: '/assets/ai-development/07stack-1.png' },
       { name: 'Mistral' },
-      { name: 'Hugging Face Transformers', image: '/assets/ai-development/03stack.png' },
+      { name: 'HuggingFace Transformers', image: '/assets/ai-development/03stack.png' },
       { name: 'LangChain', image: '/assets/ai-development/04stack.png' },
       { name: 'LlamaIndex', image: '/assets/ai-development/05stack.png' },
     ],
@@ -22,14 +23,12 @@ const categories = [
     description: (
       <>
         The model layer combines generative models with{' '}
-        <a
-          href="https://inceptivesdigital.com/computer-vision-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/computer-vision-development-services"
           className="underline font-semibold"
-        >
+>
           computer vision
-        </a>{' '}
+        </Link>{' '}
         for image generation, editing, and multimodal intelligence.
       </>
     ),
@@ -135,9 +134,6 @@ export default function GenerativeTechStack() {
                 <span className="text-black text-xs sm:text-sm leading-tight">{tech.name}</span>
               </div>
             ))}
-            <p className="w-full border-t border-black/20 pt-5 text-black text-sm leading-relaxed">
-              {categories[activeCategory].description}
-            </p>
           </div>
         </div>
       </div>

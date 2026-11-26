@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { techStackCategories } from '../../mobile-app-development/components/TechStackTabs'
+import { Link } from 'react-router-dom'
 
 export default function CrossPlatformTechStack() {
   const [activeCategory, setActiveCategory] = useState(0)
@@ -16,14 +17,12 @@ export default function CrossPlatformTechStack() {
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
             The frameworks, libraries, and integrations selected for every engagement are chosen for one reason: production-grade performance across iOS and Android from a single codebase. Every tool earns its place against the specific demands of the product, including the{' '}
-            <a
-              href="https://inceptivesdigital.com/backend-api-development"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/backend-api-development"
               className="text-inherit underline underline-offset-4 hover:opacity-80 transition-colors"
-            >
+>
               backend and API layer
-            </a>{' '}
+            </Link>{' '}
             each build connects to.
           </p>
         </div>

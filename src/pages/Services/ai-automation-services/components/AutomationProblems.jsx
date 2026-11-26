@@ -1,39 +1,79 @@
 import { Activity, FileText, Network, ShieldCheck, Timer, TrendingUp } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const problems = [
   {
     icon: FileText,
-    title: 'High-Volume Repetitive Tasks',
-    description:
-      'High-volume processes such as data entry, document processing, and report generation are strong candidates for RPA development services, freeing skilled teams from repetitive work.',
+    title: '1. High-Volume Repetitive Tasks',
+    description: (
+      <>
+        High-volume processes such as data entry, document processing, and report generation are strong candidates for{' '}
+        <Link
+          to="/rpa-development-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          RPA development services
+        </Link>
+        , freeing skilled teams from repetitive work.
+      </>
+    ),
   },
   {
     icon: Timer,
-    title: 'Slow Decision-Making',
-    description:
-      'AI agent development can reduce decisions waiting for human review at every step, helping remove bottlenecks that slow operations and delay responses.',
+    title: '2. Slow Decision-Making',
+    description: (
+      <>
+        <Link
+          to="/ai-agent-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI agent development
+        </Link>{' '}
+        can reduce decisions waiting for human review at every step, helping remove bottlenecks that slow operations and delay responses.
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
-    title: 'Human Error in Critical Processes',
+    title: '3. Human Error in Critical Processes',
     description:
       'Manual processes introduce inconsistency and error into workflows where accuracy is non-negotiable. Payroll, compliance, and financial operations cannot afford mistakes.',
   },
   {
     icon: TrendingUp,
-    title: 'Inability to Scale Operations',
-    description:
-      'Manual processes do not scale. Product scaling with AI automation enables higher operational volume without proportional increases in manual effort.',
+    title: '4. Inability to Scale Operations',
+    description: (
+      <>
+        Manual processes do not scale. Adding volume often means adding headcount, while{' '}
+        <Link
+          to="/product-rescue-scaling"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          product scaling
+        </Link>{' '}
+        with AI automation enables higher operational volume without proportional increases in manual effort.
+      </>
+    ),
   },
   {
     icon: Network,
-    title: 'Disconnected Systems and Data Silos',
-    description:
-      'Business data sitting in disconnected systems creates manual reconciliation work. System integration and API automation connect systems, move data, and trigger actions across the full technology stack.',
+    title: '5. Disconnected Systems and Data Silos',
+    description: (
+      <>
+        Business data sitting in disconnected systems creates manual reconciliation work.{' '}
+        <Link
+          to="/system-integration-api-automation"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          System integration and API automation
+        </Link>{' '}
+        connect systems, move data, and trigger actions across the full technology stack.
+      </>
+    ),
   },
   {
     icon: Activity,
-    title: 'Slow Response to Exceptions',
+    title: '6. Slow Response to Exceptions',
     description:
       'Exceptions and edge cases that require human attention get buried in queues. AI automation identifies, routes, and escalates exceptions in real time without manual triage.',
   },

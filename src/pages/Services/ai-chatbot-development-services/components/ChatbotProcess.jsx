@@ -9,14 +9,12 @@ const steps = [
     desc: (
       <>
         Our{' '}
-        <a
-          href="https://inceptivesdigital.com/product-strategy-consulting"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/product-strategy-consulting"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           product strategy consulting
-        </a>{' '}
+        </Link>{' '}
         process maps business objectives, identifies user personas, and defines key chatbot use cases before development begins. The output is a clear build plan before a line of code is written.
       </>
     ),
@@ -40,14 +38,12 @@ const steps = [
           AI development
         </Link>{' '}
         starts with models selected for your specific use case. LLMs like GPT and Claude for{' '}
-        <a
-          href="https://inceptivesdigital.com/generative-ai-development-company"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/generative-ai-development-company"
           className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-        >
+>
           generative AI development
-        </a>{' '}
+        </Link>{' '}
         and conversational experiences. RAG architectures with Pinecone or Weaviate for knowledge-grounded responses. NLP pipelines for intent recognition and context management.
       </>
     ),
@@ -89,14 +85,12 @@ export default function ChatbotProcess() {
       subtitle={
         <>
           Our{' '}
-          <a
-            href="https://inceptivesdigital.com/digital-product-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/digital-product-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             digital product development
-          </a>{' '}
+          </Link>{' '}
           process moves fast because we know exactly where we are going before we start.
         </>
       }

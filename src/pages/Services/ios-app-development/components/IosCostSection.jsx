@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function IosCostSection() {
   const tiers = [
     {
@@ -6,12 +7,12 @@ export default function IosCostSection() {
       desc: (
         <>
           Launching an iPhone MVP? This range covers native{' '}
-          <a
-            href="https://inceptivesdigital.com/mvp-development"
+          <Link
+            to="/mvp-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             MVP development
-          </a>{' '}
+          </Link>{' '}
           for a focused application with essential features and limited integrations.
         </>
       ),
@@ -21,12 +22,12 @@ export default function IosCostSection() {
         <span key="3">Ideal for validating a product idea</span>,
         <span key="4">
           App Store submission and{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-store-optimization-aso"
+          <Link
+            to="/blog/app-store-optimization-aso"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             ASO
-          </a>{' '}
+          </Link>{' '}
           covered
         </span>,
         <span key="5">Eight to twelve weeks from scope confirmation</span>,
@@ -39,12 +40,12 @@ export default function IosCostSection() {
       features: [
         <span key="1">Multi-flow product, richer UI design</span>,
         <span key="2">
-          <a
-            href="https://inceptivesdigital.com/backend-api-development"
+          <Link
+            to="/backend-api-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Backend connectivity
-          </a>{' '}
+          </Link>{' '}
           and push notifications included
         </span>,
         <span key="3">Custom authentication and role-based access</span>,
@@ -60,21 +61,21 @@ export default function IosCostSection() {
         <span key="1">Custom backend with real-time architecture</span>,
         <span key="2">AI, AR, IoT, or blockchain integrated natively</span>,
         <span key="3">
-          <a
-            href="https://inceptivesdigital.com/blog/hipaa-compliant-app-development"
+          <Link
+            to="/blog/hipaa-compliant-app-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             HIPAA-compliant
-          </a>
+          </Link>
           , PCI-DSS, and GDPR compliance covered
         </span>,
         <span key="4">
-          <a
-            href="https://inceptivesdigital.com/post-launch-analytics-iteration"
+          <Link
+            to="/post-launch-analytics-iteration"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Post-launch optimization
-          </a>{' '}
+          </Link>{' '}
           and iteration included
         </span>,
         <span key="5">Timeline defined by scope and compliance requirements</span>,
@@ -93,12 +94,12 @@ export default function IosCostSection() {
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
             Every business deserves to know what they&apos;re paying before development begins. At Inceptives Digital, we provide transparent{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/ios-app-development-cost"
+            <Link
+              to="/blog/ios-app-development-cost"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               iOS app development cost
-            </a>{' '}
+            </Link>{' '}
             estimates based on project requirements, with defined milestones for fixed-scope engagements.
           </p>
         </div>

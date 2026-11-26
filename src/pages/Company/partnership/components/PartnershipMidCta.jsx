@@ -34,7 +34,7 @@ export default function PartnershipMidCta() {
           {/* Right Column 3D Puzzle Graphic */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end items-center">
             <img
-              src="/assets/partnership/partner-cta.svg"
+              src="/assets/partnership/partner-cta.png"
               alt="Start a Partnership"
               className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px] h-auto object-contain block select-none p-0 border-0 bg-transparent"
               loading="lazy"

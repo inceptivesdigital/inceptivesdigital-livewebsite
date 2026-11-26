@@ -55,22 +55,33 @@ export const torontoFaqs = [
     a: "Yes. We integrate external platforms such as payment systems, CRM and ERP tools, authentication providers, maps, analytics platforms, and cloud services based on the product's functional and scalability requirements.",
   },
   {
-    q: '10. Will you help publish the app to the App Store and Google Play?',
-    a: (
+    q: (
       <>
-        Yes. We support the complete{' '}
+        10. Will you help{' '}
         <Link
           to="/blog/publish-update-an-app-on-app-store-google-play"
-          className="text-[#00CE44] font-medium underline underline-offset-4"
+          onClick={(e) => e.stopPropagation()}
+          className="underline underline-offset-4 hover:text-[#00CE44] transition-colors"
         >
           publish the app
         </Link>{' '}
-        release process, including store preparation, compliance requirements, testing,{' '}
-        <Link to="/app-store-optimization" className="text-[#00CE44] font-medium underline underline-offset-4">
+        to the App Store and Google Play?
+      </>
+    ),
+    a: (
+      <>
+        Yes. We support the complete release process, including store preparation, compliance requirements, testing,{' '}
+        <Link
+          to="/app-store-optimization"
+          className="text-[#00CE44] font-medium underline underline-offset-4"
+        >
           app store optimization
         </Link>
         , submission, and deployment.{' '}
-        <Link to="/post-launch-analytics-iteration" className="text-[#00CE44] font-medium underline underline-offset-4">
+        <Link
+          to="/post-launch-analytics-iteration"
+          className="text-[#00CE44] font-medium underline underline-offset-4"
+        >
           Post-launch
         </Link>
         , we monitor performance and help address early product improvements.

@@ -39,23 +39,23 @@ export default function IosAchievements() {
             <div className="space-y-4 text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
               <p>
                 Inceptives Digital was recognized by Clutch as a Top iPhone App Development Company in the United States for 2026, reinforcing the engineering standards behind our iOS and mobile development practice. That recognition is supported by additional distinctions from Clutch for app development, UX, and design, along with recognition from RightFirms, SoftwareSuggest, and SoftwareWorld across mobile development,{' '}
-                <a
-                  href="https://inceptivesdigital.com/ai-development"
+                <Link
+                  to="/ai-development"
                   className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-                >
+>
                   artificial intelligence development
-                </a>
+                </Link>
                 , customer support, value, and client satisfaction.
               </p>
 
               <p>
                 Our iOS app development services are built around the same standards these recognitions reflect: disciplined{' '}
-                <a
-                  href="https://inceptivesdigital.com/product-strategy-consulting"
+                <Link
+                  to="/product-strategy-consulting"
                   className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-                >
+>
                   product strategy consulting
-                </a>
+                </Link>
                 , native Swift and SwiftUI engineering, Apple compliance, secure architecture, and accountable post-launch support. From custom iPhone applications to enterprise iOS platforms backed by broader{' '}
                 <Link
                   to="/custom-software-development"

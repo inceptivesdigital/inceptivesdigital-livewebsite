@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom'
-import { MapPin } from 'lucide-react'
+
+function MapPinFilledIcon({ className = 'w-7 h-7' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="#00CE44" aria-hidden="true">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+    </svg>
+  )
+}
 
 const LOCATIONS = [
   { name: 'London, UK', region: 'UNITED KINGDOM', to: '/mobile-app-development-company-london-uk' },
@@ -42,14 +49,8 @@ export default function WebAppRegions() {
                   : 'bg-[#141519] border-white/10 hover:border-[#00CE44]/70 hover:bg-[#1a1c22]'
               }`}
             >
-              <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 transition-colors ${
-                  loc.isHq
-                    ? 'bg-[#00CE44] text-black'
-                    : 'bg-white/5 text-[#00CE44] group-hover:bg-[#00CE44] group-hover:text-black'
-                }`}
-              >
-                <MapPin className="w-5 h-5" />
+              <div className="mb-3 flex items-center justify-center bg-transparent border-0 p-0">
+                <MapPinFilledIcon className="w-7 h-7" />
               </div>
               <div className="text-sm font-bold text-white group-hover:text-[#00CE44] transition-colors mb-1">
                 {loc.name}

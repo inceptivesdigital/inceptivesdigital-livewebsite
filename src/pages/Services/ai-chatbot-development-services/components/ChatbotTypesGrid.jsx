@@ -71,39 +71,33 @@ const botTypes = [
     description: (
       <>
         Bots are embedded into internal systems for{' '}
-        <a
-          href="https://inceptivesdigital.com/business-process-automation"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/business-process-automation"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           business process automation
-        </a>
+        </Link>
         , document processing, and employee productivity.
       </>
     ),
     bullets: [
       <>
-        <a
-          href="https://inceptivesdigital.com/rpa-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/rpa-development-services"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           RPA development services
-        </a>{' '}
+        </Link>{' '}
         for workflow automation and process orchestration
       </>,
       'Analytics dashboards and reporting',
       <>
-        <a
-          href="https://inceptivesdigital.com/computer-vision-development-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/computer-vision-development-services"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           Computer vision
-        </a>{' '}
+        </Link>{' '}
         for document processing and data extraction
       </>,
     ],

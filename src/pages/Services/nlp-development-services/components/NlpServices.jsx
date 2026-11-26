@@ -8,6 +8,7 @@ import {
   Speech,
   Workflow,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -16,13 +17,13 @@ const services = [
     description: (
       <>
         Our{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/custom-software-development">
+        <Link className="text-white underline group-hover:text-black" to="/custom-software-development">
           custom software development
-        </a>{' '}
-        approach builds NLP models around your specific language data, domain context, and performance requirements. Each model is built for production rather than assembled through generic{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/blog/ai-app-builders-vs-human-developers">
+        </Link>{' '}
+        approach builds NLP models around your specific language data, domain context, and performance requirements, then built for production rather than assembled through generic{' '}
+        <Link className="text-white underline group-hover:text-black" to="/blog/ai-app-builders-vs-human-developers">
           AI app builders
-        </a>.
+        </Link>.
       </>
     ),
   },
@@ -32,9 +33,9 @@ const services = [
     description: (
       <>
         Models automatically categorise text across emails, tickets, documents, and messages so{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/rpa-development-services">
+        <Link className="text-white underline group-hover:text-black" to="/rpa-development-services">
           RPA development services
-        </a>{' '}
+        </Link>{' '}
         can route and act on structured language data at scale.
       </>
     ),
@@ -43,7 +44,7 @@ const services = [
     icon: FileSearch,
     title: '3. Named Entity Recognition and Extraction',
     description:
-      'NLP pipelines identify and extract people, organisations, locations, dates, and domain-specific entities from unstructured text at scale.',
+      'NLP pipelines that identify and extract people, organisations, locations, dates, and domain-specific entities from unstructured text at scale.',
   },
   {
     icon: Activity,
@@ -63,9 +64,9 @@ const services = [
     description: (
       <>
         NLP systems, often paired with{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/computer-vision-development-services">
+        <Link className="text-white underline group-hover:text-black" to="/computer-vision-development-services">
           computer vision
-        </a>{' '}
+        </Link>{' '}
         for scanned forms and records, extract, classify, summarise, and compare information from business documents.
       </>
     ),
@@ -75,9 +76,9 @@ const services = [
     title: '7. NLP Chatbot Development',
     description: (
       <>
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/ai-chatbot-development-services">
+        <Link className="text-white underline group-hover:text-black" to="/ai-chatbot-development-services">
           AI chatbot development
-        </a>{' '}
+        </Link>{' '}
         uses NLP pipelines to understand intent, retain context, and respond accurately across customer support, sales, and internal knowledge use cases.
       </>
     ),
@@ -88,9 +89,9 @@ const services = [
     description: (
       <>
         Systems convert spoken language into structured data for transcription,{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/mobile-app-development">
+        <Link className="text-white underline group-hover:text-black" to="/mobile-app-development">
           mobile applications
-        </a>{' '}
+        </Link>{' '}
         with voice interfaces, IVR automation, and call centre intelligence.
       </>
     ),
@@ -101,9 +102,9 @@ const services = [
     description: (
       <>
         For{' '}
-        <a className="text-white underline group-hover:text-black" href="https://inceptivesdigital.com/ai-app-development-services">
+        <Link className="text-white underline group-hover:text-black" to="/ai-app-development-services">
           AI app development
-        </a>
+        </Link>
         , NLP models and pipelines can be integrated into existing software, APIs, CRM platforms, and business workflows. Built for businesses that need language intelligence inside the systems they already run on.
       </>
     ),

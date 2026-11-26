@@ -22,7 +22,7 @@ export default function MobileContactCTA() {
     if (sending) return
     setSending(true)
     await submitFormToSeo({
-      formName: 'Mobile App Development Contact Form',
+      formName: 'Lead Form Inceptives Digital',
       subject: `Mobile App Development Inquiry - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,
       fields: {
@@ -75,12 +75,21 @@ export default function MobileContactCTA() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                id="lead-form-inceptives-digital"
+                name="Lead Form Inceptives Digital"
+                data-form-name="Lead Form Inceptives Digital"
+                aria-label="Lead Form Inceptives Digital"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
                 {/* Row 1: First Name | Last Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <input
                       type="text"
+                      name="first_name"
+                      autoComplete="given-name"
                       required
                       placeholder="First Name*"
                       value={formData.firstName}
@@ -91,6 +100,8 @@ export default function MobileContactCTA() {
                   <div>
                     <input
                       type="text"
+                      name="last_name"
+                      autoComplete="family-name"
                       required
                       placeholder="Last Name*"
                       value={formData.lastName}
@@ -104,6 +115,8 @@ export default function MobileContactCTA() {
                 <div>
                   <input
                     type="email"
+                    name="email"
+                    autoComplete="email"
                     required
                     placeholder="Email Address*"
                     value={formData.email}
@@ -117,6 +130,8 @@ export default function MobileContactCTA() {
                   <div>
                     <input
                       type="tel"
+                      name="phone"
+                      autoComplete="tel"
                       required
                       placeholder="Phone Number* (+1 000-000-0000)"
                       value={formData.phone}
@@ -127,6 +142,7 @@ export default function MobileContactCTA() {
                   <div>
                     <input
                       type="text"
+                      name="subject"
                       placeholder="Subject"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -138,6 +154,7 @@ export default function MobileContactCTA() {
                 {/* Row 4: Tell Us About Your Project */}
                 <div>
                   <textarea
+                    name="message"
                     rows={3}
                     required
                     placeholder="Tell Us About Your Project*"
@@ -152,6 +169,8 @@ export default function MobileContactCTA() {
                   <label className="flex items-start gap-2.5 cursor-pointer text-white/85 text-[11px] sm:text-xs leading-relaxed">
                     <input
                       type="checkbox"
+                      name="transactional_sms_consent"
+                      value="Yes"
                       checked={formData.transactionalConsent}
                       onChange={(e) =>
                         setFormData({ ...formData, transactionalConsent: e.target.checked })
@@ -166,6 +185,8 @@ export default function MobileContactCTA() {
                   <label className="flex items-start gap-2.5 cursor-pointer text-white/85 text-[11px] sm:text-xs leading-relaxed">
                     <input
                       type="checkbox"
+                      name="marketing_sms_consent"
+                      value="Yes"
                       checked={formData.marketingConsent}
                       onChange={(e) =>
                         setFormData({ ...formData, marketingConsent: e.target.checked })

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ArrowRight, TrendingUp, Users } from 'lucide-react'
 
 export default function AustinMarketOpportunities() {
@@ -32,7 +33,14 @@ export default function AustinMarketOpportunities() {
             </p>
 
             <p className="text-white/80 text-base sm:text-lg leading-relaxed font-normal mb-8">
-              Technology investment also extends beyond Austin's city limits. Texas workforce projections anticipate 29% growth in software developer employment between 2024 and 2034. For businesses preparing to compete in this evolving market, Inceptives Digital provides custom mobile app development services in Austin, helping startups and SMBs with product discovery and development around genuine customer needs.
+              Technology investment also extends beyond Austin&apos;s city limits. Texas workforce projections anticipate 29% growth in software developer employment between 2024 and 2034. For businesses preparing to compete in this evolving market, Inceptives Digital provides custom mobile app development services in Austin, helping startups and SMBs with{' '}
+              <Link
+                to="/discovery-sprint"
+                className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+              >
+                product discovery
+              </Link>{' '}
+              and development around genuine customer needs.
             </p>
 
             {/* Micro Data Badges: Clean rounded cards without harsh border */}

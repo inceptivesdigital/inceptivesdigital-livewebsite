@@ -73,12 +73,12 @@ export default function DevelopmentProcess() {
       cardDesc: (
         <>
           With the product scope in place, designers translate critical user journeys into{' '}
-          <a
-            href="https://inceptivesdigital.com/interactive-prototyping"
+          <Link
+            to="/interactive-prototyping"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             interactive Figma prototypes
-          </a>
+          </Link>
           . Client reviews help refine the interface before mobile engineers begin production development.
         </>
       ),
@@ -91,12 +91,12 @@ export default function DevelopmentProcess() {
       cardDesc: (
         <>
           Once the team approves the designs, our developers begin native or cross-platform engineering in two-week sprints. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/backend-api-development"
+          <Link
+            to="/backend-api-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             backend API development
-          </a>{' '}
+          </Link>{' '}
           specialists integrate the required APIs, while regular working builds give clients visibility into implementation.
         </>
       ),
@@ -117,12 +117,12 @@ export default function DevelopmentProcess() {
       cardDesc: (
         <>
           Following QA approval, the release team prepares production builds for{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/publish-update-an-app-on-app-store-google-play"
+          <Link
+            to="/blog/publish-update-an-app-on-app-store-google-play"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Apple App Store and Google Play submission
-          </a>
+          </Link>
           . We coordinate store requirements with backend deployment to complete the planned release.
         </>
       ),

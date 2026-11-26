@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -18,9 +19,9 @@ const categories = [
     description: (
       <>
         Foundation models for{' '}
-        <a href="https://inceptivesdigital.com/generative-ai-development-company" target="_blank" rel="noopener noreferrer" className="underline font-semibold">
+        <Link to="/generative-ai-development-company" className="underline font-semibold">
           generative AI development
-        </a>
+        </Link>
         , conversational systems, and reasoning-heavy NLP applications.
       </>
     ),
@@ -57,9 +58,9 @@ const categories = [
     name: 'Cloud and Infrastructure',
     description: (
       <>
-        <a href="https://inceptivesdigital.com/product-rescue-scaling" target="_blank" rel="noopener noreferrer" className="underline font-semibold">
+        <Link to="/product-rescue-scaling" className="underline font-semibold">
           Product scaling
-        </a>{' '}
+        </Link>{' '}
         requires deployment, serving, and infrastructure designed for production NLP workloads.
       </>
     ),
@@ -126,9 +127,6 @@ export default function NlpTechStack() {
                 <span className="text-black text-xs sm:text-sm leading-tight">{technology.name}</span>
               </div>
             ))}
-            <p className="w-full border-t border-black/20 pt-5 text-black text-sm leading-relaxed">
-              {categories[activeCategory].description}
-            </p>
           </div>
         </div>
       </div>

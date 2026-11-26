@@ -101,7 +101,7 @@ export default function CaseStudies({
       buttonTextCol: 'text-white',
       playStoreBadge: '/assets/case-studies/play-store.png',
       link: '/portfolio/dps-airem',
-      mockup: '/assets/case-studies/dps-mockup.svg',
+      mockup: '/assets/case-studies/dps-mockup.png',
       mockupAlt: 'DPS Airem App Screens',
       alt: 'DPS Airem App Screens'
     },

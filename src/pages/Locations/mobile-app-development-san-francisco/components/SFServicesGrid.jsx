@@ -122,7 +122,7 @@ export default function SFServicesGrid() {
     {
       title: 'AI-Powered Mobile Applications',
       icon: AiIcon,
-      link: '/ai-development',
+      link: '/ai-app-development-services',
       desc: 'AI mobile applications support search, document processing, recommendations, and conversational interfaces. OpenAI and model integrations require careful evaluation of data access, output accuracy, response times, and inference costs.',
     },
   ]

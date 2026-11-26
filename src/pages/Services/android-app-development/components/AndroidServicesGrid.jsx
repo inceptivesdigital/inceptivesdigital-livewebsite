@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function AndroidServicesGrid() {
   const services = [
     {
@@ -6,12 +7,12 @@ export default function AndroidServicesGrid() {
       desc: (
         <>
           Make informed investment decisions before Android development begins. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/product-strategy-consulting"
+          <Link
+            to="/product-strategy-consulting"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             product strategy consultants
-          </a>{' '}
+          </Link>{' '}
           assess your product requirements against platform capabilities and integration constraints to establish a realistic MVP scope. It results in a technical roadmap that gives your team a clearer picture of development costs and delivery priorities.
         </>
       ),
@@ -22,12 +23,12 @@ export default function AndroidServicesGrid() {
       desc: (
         <>
           Android{' '}
-          <a
-            href="https://inceptivesdigital.com/ui-ux-design"
+          <Link
+            to="/ui-ux-design"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             UI/UX design
-          </a>{' '}
+          </Link>{' '}
           at Inceptives Digital accounts for how people interact with applications across smartphones, tablets, and foldables. Material Design 3 guides the interface, while Jetpack Compose supports adaptive layouts for different screen sizes. Figma prototypes let you review navigation and usability before development starts.
         </>
       ),
@@ -43,12 +44,12 @@ export default function AndroidServicesGrid() {
       desc: (
         <>
           Reliable Android applications must perform consistently beyond the development environment. Our Android{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/mobile-app-testing-strategies"
+          <Link
+            to="/blog/mobile-app-testing-strategies"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             app testing strategies
-          </a>{' '}
+          </Link>{' '}
           use Espresso and JUnit to validate core functionality, while Firebase Test Lab helps identify compatibility issues across Android versions and device manufacturers. This approach helps catch performance problems before they affect users in production.
         </>
       ),
@@ -59,12 +60,12 @@ export default function AndroidServicesGrid() {
       desc: (
         <>
           Take your Android application from a completed build to a production-ready release. Our Google Play Store deployment services handle everything required for submission, including Android App Bundle preparation and Play Console setup. Before expanding availability, a staged{' '}
-          <a
-            href="https://inceptivesdigital.com/product-launch-strategy"
+          <Link
+            to="/product-launch-strategy"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             product launch strategy
-          </a>{' '}
+          </Link>{' '}
           helps your team monitor app stability and catch potential issues early.
         </>
       ),
@@ -75,12 +76,12 @@ export default function AndroidServicesGrid() {
       desc: (
         <>
           Keep your Android application compatible with newer OS releases without replacing a product that still serves your business. Maintenance addresses outdated SDK dependencies and recurring performance issues. When legacy architecture restricts new functionality, Android app modernization and{' '}
-          <a
-            href="https://inceptivesdigital.com/product-rescue-scaling"
+          <Link
+            to="/product-rescue-scaling"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             product rescue
-          </a>{' '}
+          </Link>{' '}
           provide a practical path to extend the application’s useful life.
         </>
       ),

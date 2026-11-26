@@ -1,16 +1,18 @@
+import { Link } from 'react-router-dom'
+
 export default function FlutterIndustries() {
   const industries = [
     {
       name: 'FinTech',
       desc: 'Secure digital wallets, mobile banking, and real-time payment platforms engineered with Flutter cross-platform precision.',
       icon: '/assets/industries-icons/industries-fintech.svg',
-      url: 'https://inceptivesdigital.com/fintech-app-development',
+      url: '/fintech-app-development',
     },
     {
       name: 'Healthcare',
       desc: 'HIPAA-aligned patient engagement, telehealth, and remote monitoring apps built in Flutter across iOS, Android, and web.',
       icon: '/assets/industries-icons/industries-healthcare.svg',
-      url: 'https://inceptivesdigital.com/healthcare-app-development',
+      url: '/healthcare-app-development',
     },
     {
       name: 'Logistics & Supply Chain',
@@ -21,25 +23,25 @@ export default function FlutterIndustries() {
       name: 'eCommerce & Retail',
       desc: 'High-conversion mobile storefronts, personalized catalogs, and seamless checkout flows across iOS, Android, and web.',
       icon: '/assets/industries-icons/industries-cart.svg',
-      url: 'https://inceptivesdigital.com/ecommerce-app-development-company',
+      url: '/ecommerce-app-development-company',
     },
     {
       name: 'Real Estate',
       desc: 'Property discovery, interactive map search, virtual walkthroughs, and agent CRM workflows in one shared codebase.',
       icon: '/assets/industries-icons/industries-realstate.svg',
-      url: 'https://inceptivesdigital.com/real-estate-app-development-company',
+      url: '/real-estate-app-development-company',
     },
     {
       name: 'Education & eLearning',
       desc: 'Interactive mobile learning platforms with video lessons, assessments, progress tracking, and offline access.',
       icon: '/assets/industries-icons/industries-education.svg',
-      url: 'https://inceptivesdigital.com/education-app-development-company',
+      url: '/education-app-development-company',
     },
     {
       name: 'Travel & Hospitality',
       desc: 'Booking engines, live itinerary management, location-based recommendations, and loyalty experiences.',
       icon: '/assets/industries-icons/industries-traveling1.svg',
-      url: 'https://inceptivesdigital.com/travel-app-development-company',
+      url: '/travel-app-development-company',
     },
     {
       name: 'Manufacturing & Industrial',
@@ -50,7 +52,7 @@ export default function FlutterIndustries() {
       name: 'Fitness & Wellness',
       desc: 'Wearable-connected workout tracking, live coaching, and subscription wellness applications for iOS and Android.',
       icon: '/assets/industries-icons/industries-fitness.svg',
-      url: 'https://inceptivesdigital.com/fitness-app-development',
+      url: '/fitness-app-development',
     },
   ]
 
@@ -91,14 +93,12 @@ export default function FlutterIndustries() {
               {/* Title: H3 tag, 23px font-size bold */}
               <h3 className="text-[20px] sm:text-[23px] font-bold text-[#00CE44] group-hover:text-black transition-colors duration-300 leading-tight mb-3">
                 {ind.url ? (
-                  <a
-                    href={ind.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={ind.url}
                     className="text-[#00CE44] group-hover:text-black transition-colors underline underline-offset-4"
                   >
                     {ind.name}
-                  </a>
+                  </Link>
                 ) : (
                   ind.name
                 )}

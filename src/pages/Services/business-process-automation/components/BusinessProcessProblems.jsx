@@ -1,9 +1,10 @@
 import { Activity, GitBranch, Network, RefreshCw, ShieldCheck, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const problems = [
   {
     icon: Network,
-    title: 'Manual Work Across Systems',
+    title: '1. Manual Work Across Systems',
     description:
       'Workflows require data to be entered, copied, or updated across multiple tools without a direct system connection.',
     impacts: ['Time loss across operations', 'High error probability', 'Repeated manual effort'],
@@ -11,31 +12,50 @@ const problems = [
   },
   {
     icon: RefreshCw,
-    title: 'Repetitive Operational Work',
-    description:
-      'Daily tasks like approvals, reporting, and updates are strong candidates for RPA development services when the execution logic remains consistent.',
+    title: '2. Repetitive Operational Work',
+    description: (
+      <>
+        Daily tasks like approvals, reporting, and updates are strong candidates for{' '}
+        <Link
+          to="/rpa-development-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          RPA development services
+        </Link>{' '}
+        when the execution logic remains consistent.
+      </>
+    ),
     impacts: ['Reduced team capacity', 'Operational slowdown', 'Low process efficiency'],
     outcome: 'Rule-based workflows execute without repeated human input.',
   },
   {
     icon: Activity,
-    title: 'Delayed Workflow Execution',
-    description:
-      'AI automation can keep processes moving between steps when execution would otherwise depend on manual triggers or human availability.',
+    title: '3. Delayed Workflow Execution',
+    description: (
+      <>
+        <Link
+          to="/ai-automation-services"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI automation
+        </Link>{' '}
+        can keep processes moving between steps when execution would otherwise depend on manual triggers or human availability.
+      </>
+    ),
     impacts: ['Slower turnaround time', 'Process bottlenecks', 'Delayed decisions'],
     outcome: 'Workflows progress automatically based on defined triggers.',
   },
   {
     icon: ShieldCheck,
-    title: 'Inconsistent Process Execution',
+    title: '4. Inconsistent Process Execution',
     description:
       'The same workflow produces different results depending on who executes it and when.',
     impacts: ['Process variation', 'Compliance risks', 'Reduced reliability'],
-    outcome: 'Standardized execution logic is applied across all process runs.',
+    outcome: 'Standardized execution logic applied across all process runs.',
   },
   {
     icon: GitBranch,
-    title: 'System Gaps Between Tools',
+    title: '5. System Gaps Between Tools',
     description:
       'Tools operate independently, forcing teams to bridge gaps manually between platforms.',
     impacts: ['Fragmented operations', 'Duplicate work', 'Data inconsistencies'],
@@ -43,9 +63,18 @@ const problems = [
   },
   {
     icon: Users,
-    title: 'Execution Dependency on People',
-    description:
-      'AI agents can execute defined actions across a workflow so processes do not depend on specific individuals being available at every step.',
+    title: '6. Execution Dependency on People',
+    description: (
+      <>
+        <Link
+          to="/ai-agent-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI agents
+        </Link>{' '}
+        can execute defined actions across a workflow so processes do not depend on specific individuals being available at every step.
+      </>
+    ),
     impacts: ['Process dependency risk', 'Limited scalability', 'Workflow interruptions'],
     outcome: 'Processes execute independently of individual availability.',
   },

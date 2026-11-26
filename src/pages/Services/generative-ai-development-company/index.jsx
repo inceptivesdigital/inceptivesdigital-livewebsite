@@ -10,6 +10,7 @@ import GenerativeIndustries from './components/GenerativeIndustries'
 import GenerativeProcess from './components/GenerativeProcess'
 import GenerativeServices from './components/GenerativeServices'
 import GenerativeTechStack from './components/GenerativeTechStack'
+import { Link } from 'react-router-dom'
 
 export default function GenerativeAiDevelopmentPage() {
   useEffect(() => {
@@ -62,14 +63,12 @@ export default function GenerativeAiDevelopmentPage() {
         subtitle={
           <>
             Explore how our{' '}
-            <a
-              href="https://inceptivesdigital.com/digital-product-development"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/digital-product-development"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               digital product development
-            </a>{' '}
+            </Link>{' '}
             work produced generative AI solutions that improved content creation, knowledge access, automation, and decision-making.
           </>
         }

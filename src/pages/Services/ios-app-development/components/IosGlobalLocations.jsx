@@ -1,38 +1,40 @@
+import { Link } from 'react-router-dom'
+
 export default function IosGlobalLocations() {
   const locations = [
     {
       name: 'London, UK',
-      url: 'https://inceptivesdigital.com/mobile-app-development-company-london-uk',
+      url: '/mobile-app-development-company-london-uk',
       icon: '/assets/ios-app/big-ben-1.png',
     },
     {
       name: 'Toronto, Canada',
-      url: 'https://inceptivesdigital.com/mobile-app-development-company-in-toronto-canada',
+      url: '/mobile-app-development-company-in-toronto-canada',
       icon: '/assets/ios-app/cn-tower-1.png',
     },
     {
       name: 'Austin, TX',
-      url: 'https://inceptivesdigital.com/mobile-app-development-austin',
+      url: '/mobile-app-development-austin',
       icon: '/assets/ios-app/american-1.png',
     },
     {
       name: 'San Francisco, CA',
-      url: 'https://inceptivesdigital.com/mobile-app-development-san-francisco',
+      url: '/mobile-app-development-san-francisco',
       icon: '/assets/ios-app/golden-gate-bridge-1.png',
     },
     {
       name: 'New York, NY',
-      url: 'https://inceptivesdigital.com/mobile-app-development-new-york',
+      url: '/mobile-app-development-new-york',
       icon: '/assets/ios-app/newyork-1.png',
     },
     {
       name: 'Dubai, UAE',
-      url: 'https://inceptivesdigital.com/mobile-app-development-company-dubai-uae',
+      url: '/mobile-app-development-company-dubai-uae',
       icon: '/assets/ios-app/united-arab-emirates-1.png',
     },
     {
       name: 'Singapore',
-      url: 'https://inceptivesdigital.com/mobile-app-development-company-singapore',
+      url: '/mobile-app-development-company-singapore',
       icon: '/assets/ios-app/marina-bay-sands-1.png',
     },
   ]
@@ -57,9 +59,9 @@ export default function IosGlobalLocations() {
         {/* 7 Global Tech Hubs Grid */}
         <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6">
           {locations.map((loc) => (
-            <a
+            <Link
               key={loc.name}
-              href={loc.url}
+              to={loc.url}
               className="w-[calc(50%-10px)] sm:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] xl:w-[calc(14.285%-21px)] min-w-[155px] p-6 rounded-[16px] bg-[#1e1e1e] hover:bg-[#262626] border border-white/10 hover:border-[#00CE44] transition-all flex flex-col items-center justify-center text-center group"
             >
               <div className="w-12 h-12 mb-3.5 flex items-center justify-center">
@@ -73,7 +75,7 @@ export default function IosGlobalLocations() {
               <span className="text-white group-hover:text-[#00CE44] text-sm sm:text-[15px] font-bold transition-colors">
                 {loc.name}
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

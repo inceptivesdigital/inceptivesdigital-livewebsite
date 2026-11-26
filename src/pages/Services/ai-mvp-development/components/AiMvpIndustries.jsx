@@ -1,4 +1,5 @@
 import { Activity, BookOpen, BrainCircuit, FileText, Network, ShoppingCart } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const industries = [
   {
@@ -16,15 +17,15 @@ const industries = [
     items: [
       <>
         Clinical decision support MVP using{' '}
-        <a href="https://inceptivesdigital.com/machine-learning-development-services" target="_blank" rel="noopener noreferrer">
+        <Link to="/machine-learning-development-services">
           machine learning development
-        </a>{' '}
+        </Link>{' '}
         for predictive models
       </>,
       <>
-        <a href="https://inceptivesdigital.com/ai-chatbot-development-services" target="_blank" rel="noopener noreferrer">
+        <Link to="/ai-chatbot-development-services">
           AI chatbot development
-        </a>{' '}
+        </Link>{' '}
         for patient assistance using RAG architecture
       </>,
       'Medical document processing and summarisation proof',
@@ -36,9 +37,9 @@ const industries = [
     items: [
       'Recommendation engine MVP trained on behavioural data',
       <>
-        <a href="https://inceptivesdigital.com/blog/ai-powered-mobile-apps-uae-business-operations" target="_blank" rel="noopener noreferrer">
+        <Link to="/blog/ai-powered-mobile-apps-uae-business-operations">
           AI-powered mobile apps
-        </a>{' '}
+        </Link>{' '}
         for search and personalisation proof of concept
       </>,
       'Customer sentiment analysis and segmentation MVP',
@@ -50,9 +51,9 @@ const industries = [
     items: [
       <>
         Embedded copilots and{' '}
-        <a href="https://inceptivesdigital.com/ai-agent-development" target="_blank" rel="noopener noreferrer">
+        <Link to="/ai-agent-development">
           AI agent development
-        </a>{' '}
+        </Link>{' '}
         MVPs for existing SaaS products
       </>,
       'Generative AI feature validation before platform build',

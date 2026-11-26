@@ -1,4 +1,5 @@
 import FAQSection from '../../../../components/FAQSection'
+import { Link } from 'react-router-dom'
 
 const faqs = [
     {
@@ -14,12 +15,12 @@ const faqs = [
       a: (
         <>
           Choose native iOS development for applications requiring advanced Apple integrations, such as HealthKit or ARKit. Cross-platform development, including{' '}
-          <a
-            href="https://inceptivesdigital.com/kotlin-multiplatform-app-development"
+          <Link
+            to="/kotlin-multiplatform-app-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             Kotlin Multiplatform app development
-          </a>
+          </Link>
           , suits businesses launching on iPhone and Android when both platforms share similar functionality.
         </>
       ),
@@ -49,12 +50,12 @@ const faqs = [
       a: (
         <>
           Yes. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/ai-development"
+          <Link
+            to="/ai-development"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             AI development
-          </a>{' '}
+          </Link>{' '}
           team supports Core ML, Apple’s Foundation Models framework, and App Intents where compatible. These technologies enable on-device AI capabilities, depending on hardware support and application requirements.
         </>
       ),
@@ -64,12 +65,12 @@ const faqs = [
       a: (
         <>
           We begin{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/guide-to-custom-ios-app-development-for-businesses"
+          <Link
+            to="/blog/guide-to-custom-ios-app-development-for-businesses"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             custom iOS app development
-          </a>{' '}
+          </Link>{' '}
           with discovery and an approved interface prototype. Swift engineering proceeds through Agile sprints, followed by device testing and preparation for App Store submission.
         </>
       ),

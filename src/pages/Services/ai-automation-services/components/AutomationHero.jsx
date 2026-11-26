@@ -1,8 +1,9 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function AutomationHero() {
   return (
-    <section className="relative isolate flex min-h-[680px] items-center overflow-hidden bg-black text-white sm:min-h-[720px]">
+    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-black pb-12 text-white">
       <img
         src="/assets/ai-development/ai-automationbanner-scaled.jpg"
         alt=""
@@ -12,14 +13,22 @@ export default function AutomationHero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/90 to-black/10" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-10 md:px-16 lg:px-20">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-8 sm:px-10 sm:py-10 md:px-16 lg:px-20">
         <div className="max-w-[660px]">
-          <p className="mb-3 text-sm font-bold text-[#00CE44] sm:text-base">AI Development Services</p>
+          <p className="mb-3 text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px]">
+            AI Automation Services
+          </p>
           <h1 className="mb-5 text-[36px] font-bold leading-[1.08] tracking-tight sm:text-[44px] lg:text-[54px]">
-            <span className="text-[#00CE44]">AI Automation Services</span> That Replace Manual Processes With Intelligent Systems
+            AI Automation Services That Replace Manual Processes With Intelligent Systems
           </h1>
           <p className="mb-7 max-w-[620px] text-[15px] leading-relaxed text-white/85 sm:text-base">
-            Business process automation, workflow intelligence, and decision automation are built for businesses that need operational processes to run themselves, not just run faster.
+            <Link
+              to="/business-process-automation"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              Business process automation
+            </Link>
+            , workflow intelligence, and decision automation are built for businesses that need operational processes to run themselves, not just run faster.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">
               <a

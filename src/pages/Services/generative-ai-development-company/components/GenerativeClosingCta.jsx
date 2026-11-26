@@ -23,6 +23,9 @@ export default function GenerativeClosingCta() {
           >
             Start a Technical Review →
           </a>
+          <p className="text-white/70 text-sm mt-4">
+            30 minutes. Strategic insight. AI engineered for impact.
+          </p>
         </div>
       </div>
     </section>

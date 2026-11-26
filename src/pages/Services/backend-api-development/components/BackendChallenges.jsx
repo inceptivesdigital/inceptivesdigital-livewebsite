@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function BackendChallenges() {
   const challenges = [
     'Slow API response times as traffic grows, usually caused by missing indexes, not the API itself',
@@ -21,14 +22,12 @@ export default function BackendChallenges() {
 
             <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-6">
               The majority of scaling issues stem from a single architecture decision that was made early on and never revisited. These are also among the{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/common-reasons-digital-products-fail"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/blog/common-reasons-digital-products-fail"
                 className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-              >
+>
                 common reasons digital products fail
-              </a>{' '}
+              </Link>{' '}
               once traffic and system complexity increase.
             </p>
 
@@ -43,14 +42,12 @@ export default function BackendChallenges() {
 
             <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal">
               At Inceptives Digital, these challenges are addressed through{' '}
-              <a
-                href="https://inceptivesdigital.com/product-strategy-consulting"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/product-strategy-consulting"
                 className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-              >
+>
                 product strategy consulting
-              </a>{' '}
+              </Link>{' '}
               and architecture planning, where thoughtful engineering decisions prevent expensive rework later in the product lifecycle.
             </p>
           </div>

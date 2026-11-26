@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Check } from 'lucide-react'
 
 export default function AustinCostSection() {
@@ -47,7 +48,15 @@ export default function AustinCostSection() {
         'Advanced AI, ML, and IoT capabilities',
         'Multi-site architecture and role-based access control',
         'Full compliance stack across TDPSA, HIPAA, SOC 2, and PCI-DSS',
-        'Staged rollouts, performance monitoring & maintenance',
+        <>
+          Staged rollouts, live performance monitoring, and{' '}
+          <Link
+            to="/blog/mobile-app-maintenance-cost"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            ongoing maintenance
+          </Link>
+        </>,
       ],
       subtext:
         'Built for Austin organisations where compliance depth, transaction security, and operational scale are baseline requirements.',
@@ -64,7 +73,14 @@ export default function AustinCostSection() {
             <span className="text-[#00CE44]">Mobile App in Austin?</span>
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
-            Every engagement has different compliance requirements, platform targets, and integration complexity. These mobile app development costs reflect typical project scopes and are defined precisely in the discovery sprint.
+            Every engagement has different compliance requirements, platform targets, and integration complexity. These{' '}
+            <Link
+              to="/blog/mobile-app-development-cost"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+            >
+              mobile app development cost
+            </Link>{' '}
+            reflect typical project scope and are defined precisely in the discovery sprint.
           </p>
         </div>
 

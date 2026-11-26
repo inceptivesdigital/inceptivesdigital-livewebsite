@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const categories = [
   {
@@ -53,9 +54,9 @@ const categories = [
     name: 'Programming and Backend',
     description: (
       <>
-        <a href="https://inceptivesdigital.com/ai-app-development-services" target="_blank" rel="noopener noreferrer" className="underline font-semibold">
+        <Link to="/ai-app-development-services" className="underline font-semibold">
           AI app development
-        </a>{' '}
+        </Link>{' '}
         uses these languages and APIs to connect ML models to the products and systems they serve.
       </>
     ),
@@ -122,9 +123,6 @@ export default function MachineTechStack() {
                 <span className="text-black text-xs sm:text-sm leading-tight">{technology.name}</span>
               </div>
             ))}
-            <p className="w-full border-t border-black/20 pt-5 text-black text-sm leading-relaxed">
-              {categories[activeCategory].description}
-            </p>
           </div>
         </div>
       </div>

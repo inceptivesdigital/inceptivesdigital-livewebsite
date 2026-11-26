@@ -1,136 +1,137 @@
+import { Link } from 'react-router-dom'
 export default function IosIndustries() {
   const industries = [
     {
       title: 'Healthcare iOS App Development',
-      url: 'https://inceptivesdigital.com/healthcare-app-development',
+      url: '/healthcare-app-development',
       icon: '/assets/industries-icons/industries-healthcare.svg',
       desc: (
         <>
           HIPAA-compliant{' '}
-          <a
-            href="https://inceptivesdigital.com/healthcare-app-development"
+          <Link
+            to="/healthcare-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             healthcare app development
-          </a>{' '}
+          </Link>{' '}
           with secure patient data handling and seamless HealthKit integrations.
         </>
       ),
     },
     {
       title: 'Fintech & Financial Services',
-      url: 'https://inceptivesdigital.com/fintech-app-development',
+      url: '/fintech-app-development',
       icon: '/assets/industries-icons/industries-fintech.svg',
       desc: (
         <>
           High-security{' '}
-          <a
-            href="https://inceptivesdigital.com/fintech-app-development"
+          <Link
+            to="/fintech-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             fintech app development
-          </a>{' '}
+          </Link>{' '}
           featuring Apple Pay, biometric authentication via Face ID/Touch ID, and PCI-DSS compliance.
         </>
       ),
     },
     {
       title: 'e-Commerce & Retail',
-      url: 'https://inceptivesdigital.com/ecommerce-app-development-company',
+      url: '/ecommerce-app-development-company',
       icon: '/assets/industries-icons/industries-cart.svg',
       desc: (
         <>
           Fast, conversion-focused{' '}
-          <a
-            href="https://inceptivesdigital.com/ecommerce-app-development-company"
+          <Link
+            to="/ecommerce-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             e-commerce app development
-          </a>{' '}
+          </Link>{' '}
           with one-tap checkout, push notifications, and high-volume catalog search.
         </>
       ),
     },
     {
       title: 'Fitness & Wellness',
-      url: 'https://inceptivesdigital.com/fitness-app-development',
+      url: '/fitness-app-development',
       icon: '/assets/industries-icons/industries-fitness.svg',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/fitness-app-development"
+          <Link
+            to="/fitness-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             Fitness app development
-          </a>{' '}
+          </Link>{' '}
           for connected health platforms featuring real-time workout tracking, Apple Watch companion apps, and sensor data sync.
         </>
       ),
     },
     {
       title: 'Real Estate & Property',
-      url: 'https://inceptivesdigital.com/real-estate-app-development-company',
+      url: '/real-estate-app-development-company',
       icon: '/assets/industries-icons/industries-realstate.svg',
       desc: (
         <>
           Interactive{' '}
-          <a
-            href="https://inceptivesdigital.com/real-estate-app-development-company"
+          <Link
+            to="/real-estate-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             real estate app development
-          </a>{' '}
+          </Link>{' '}
           with custom MapKit location features, virtual property tours, and instant agent messaging.
         </>
       ),
     },
     {
       title: 'On-Demand & Logistics',
-      url: 'https://inceptivesdigital.com/food-delivery-app-development',
+      url: '/food-delivery-app-development',
       icon: '/assets/industries-icons/Food-Delivery.svg',
       desc: (
         <>
           Location-based{' '}
-          <a
-            href="https://inceptivesdigital.com/food-delivery-app-development"
+          <Link
+            to="/food-delivery-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             delivery app development
-          </a>{' '}
+          </Link>{' '}
           for service platforms featuring live GPS tracking, dynamic order status, and automated push alerts.
         </>
       ),
     },
     {
       title: 'e-Learning & Education',
-      url: 'https://inceptivesdigital.com/education-app-development-company',
+      url: '/education-app-development-company',
       icon: '/assets/industries-icons/industries-education.svg',
       desc: (
         <>
           Engaging{' '}
-          <a
-            href="https://inceptivesdigital.com/education-app-development-company"
+          <Link
+            to="/education-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             education app development
-          </a>{' '}
+          </Link>{' '}
           for mobile learning platforms supporting offline content access, video streaming, and StoreKit course subscriptions.
         </>
       ),
     },
     {
       title: 'Travel & Hospitality',
-      url: 'https://inceptivesdigital.com/travel-app-development-company',
+      url: '/travel-app-development-company',
       icon: '/assets/industries-icons/industries-traveling1.svg',
       desc: (
         <>
           Comprehensive{' '}
-          <a
-            href="https://inceptivesdigital.com/travel-app-development-company"
+          <Link
+            to="/travel-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             travel app development
-          </a>{' '}
+          </Link>{' '}
           with offline trip itineraries, location-based guides, and instant booking updates.
         </>
       ),

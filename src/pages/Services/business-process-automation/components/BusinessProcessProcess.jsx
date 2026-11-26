@@ -1,41 +1,105 @@
 import { useState } from 'react'
 import { Activity, GitBranch, Network, Search, Settings } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
     icon: Search,
     tab: 'Discovery',
     title: 'Process Discovery',
-    description:
-      'Product strategy consulting helps map current workflows, identify manual touchpoints, and determine automation suitability before development begins. We leave this stage knowing exactly which processes are ready to automate and which need redesigning first.',
+    description: (
+      <>
+        <Link
+          to="/product-strategy-consulting"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Product strategy consulting
+        </Link>{' '}
+        helps map current workflows, identify manual touchpoints, and determine automation suitability before development begins. We leave this stage knowing exactly which processes are ready to automate and which need redesigning first.
+      </>
+    ),
   },
   {
     icon: GitBranch,
     tab: 'Standardisation',
     title: 'Workflow Standardisation',
-    description:
-      'Every process step is documented, every business rule defined, and complex workflow paths are validated through interactive prototyping before automation is built. Standardized workflow design determines whether automation executes consistently or breaks at the first variation.',
+    description: (
+      <>
+        Every process step is documented, every business rule defined, and complex workflow paths can be validated through{' '}
+        <Link
+          to="/interactive-prototyping"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          interactive prototyping
+        </Link>{' '}
+        before automation is built. The standardised workflow design that determines whether the automation executes consistently or breaks at the first variation.
+      </>
+    ),
   },
   {
     icon: Settings,
     tab: 'Automation Build',
     title: 'Automation Build',
-    description:
-      'Automation systems are built around the standardized workflow design, with AI development added where the process requires learned decision-making rather than fixed rules alone. Microsoft Power Automate, UiPath, Automation Anywhere, or low-code platforms are selected based on the specific process requirements and existing enterprise stack.',
+    description: (
+      <>
+        Automation systems are built around the standardised workflow design, with{' '}
+        <Link
+          to="/ai-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI development
+        </Link>{' '}
+        added where the process requires learned decision-making rather than fixed rules alone. Microsoft Power Automate, UiPath, Automation Anywhere, or low-code platforms are selected based on the specific process requirements and existing enterprise stack.
+      </>
+    ),
   },
   {
     icon: Network,
     tab: 'System Connection',
     title: 'System Connection',
-    description:
-      'Automation connects ERP, CRM, ServiceNow, Salesforce, internal platforms, web applications, and mobile applications through API integrations. End-to-end workflow execution is verified across every system the process touches before deployment.',
+    description: (
+      <>
+        Automation connects ERP, CRM, ServiceNow, Salesforce, internal platforms,{' '}
+        <Link
+          to="/web-app-development-company"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          web applications
+        </Link>
+        , and{' '}
+        <Link
+          to="/mobile-app-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          mobile applications
+        </Link>{' '}
+        through API integrations. End-to-end workflow execution is verified across every system the process touches before deployment.
+      </>
+    ),
   },
   {
     icon: Activity,
     tab: 'Live & Optimise',
     title: 'Live and Optimise',
-    description:
-      'Automation is deployed to production. Post-launch analytics and iteration track workflow performance, monitor exceptions, and refine processes as operational requirements evolve. Automation should continue evolving as real operational conditions change.',
+    description: (
+      <>
+        Automation deployed to production.{' '}
+        <Link
+          to="/post-launch-analytics-iteration"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Post-launch analytics and iteration
+        </Link>{' '}
+        track workflow performance, monitor exceptions, and refine processes as operational requirements evolve. Treating launch as the finished state is one of the common reasons{' '}
+        <Link
+          to="/blog/common-reasons-digital-products-fail"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          digital products fail
+        </Link>
+        ; automation should continue evolving as real operational conditions change.
+      </>
+    ),
   },
 ]
 
@@ -51,7 +115,14 @@ export default function BusinessProcessProcess() {
             How We Design and Deploy Business Process Automation Systems
           </h2>
           <p className="text-[15px] leading-relaxed text-white/80 sm:text-[17px]">
-            Every automation system follows a structured digital product development process designed to ensure workflows operate reliably across real operational conditions.
+            Every automation system follows a structured{' '}
+            <Link
+              to="/blog/what-is-digital-product-development"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              digital product development process
+            </Link>{' '}
+            designed to ensure workflows operate reliably across real operational conditions.
           </p>
         </div>
         <div role="tablist" aria-label="Business process automation stages" className="mb-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">

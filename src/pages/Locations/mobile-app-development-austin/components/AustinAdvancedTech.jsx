@@ -53,7 +53,18 @@ export default function AustinAdvancedTech() {
   const technologies = [
     {
       title: 'Artificial Intelligence and Machine Learning',
-      desc: 'On-device ML models, delivered through machine learning development services, and LLM integrations enter the architecture where the product scope demands it.',
+      desc: (
+        <>
+          On-device ML models, delivered through{' '}
+          <Link
+            to="/machine-learning-development-services"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            machine learning development services
+          </Link>
+          , and LLM integrations enter the architecture where the product scope demands it.
+        </>
+      ),
       icon: AiMlFullFill,
     },
     {
@@ -68,7 +79,17 @@ export default function AustinAdvancedTech() {
     },
     {
       title: 'Blockchain Integration',
-      desc: 'Blockchain development enters the product where ownership, verification, payments, or transaction transparency sit at the center of the product model.',
+      desc: (
+        <>
+          <Link
+            to="/blockchain-development"
+            className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+          >
+            Blockchain development
+          </Link>{' '}
+          enters the product where ownership, verification, payments, or transaction transparency sit at the center of the product model.
+        </>
+      ),
       icon: BlockchainFullFill,
     },
     {

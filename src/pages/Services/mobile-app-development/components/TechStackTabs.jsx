@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 // =========================================================================
 // SEO & TECH STACK IMAGE CONFIGURATION
@@ -265,12 +266,12 @@ export default function TechStackTabs() {
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
             Every technology decision shapes your product&apos;s future. We build on a proven{' '}
-            <a
-              href="https://inceptivesdigital.com/blog/mobile-app-tech-stack"
+            <Link
+              to="/blog/mobile-app-tech-stack"
               className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-            >
+>
               mobile app tech stack
-            </a>{' '}
+            </Link>{' '}
             with modern infrastructure that supports performance today and growth tomorrow.
           </p>
         </div>

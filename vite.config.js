@@ -92,7 +92,7 @@ const SEO_ROUTES = {
   '/ai-agent-development': {
     title: 'AI Agent Development Company | Custom AI Agent Development',
     description:
-      'Inceptives Digital builds intelligent AI agents that automate workflows, integrate enterprise systems, and deliver measurable business impact.',
+      'Inceptives Digital, a leading AI agent development company, builds intelligent agents that automate workflows and deliver measurable business impact.',
     canonical: 'https://inceptivesdigital.com/ai-agent-development',
   },
   '/generative-ai-development-company': {
@@ -104,7 +104,7 @@ const SEO_ROUTES = {
   '/machine-learning-development-services': {
     title: 'Machine Learning Software Development Services & Solutions',
     description:
-      'Our machine learning development services reduce manual tasks by 50%, improve forecasting accuracy, and deliver scalable, reliable AI systems.',
+      'Our Machine learning development services reduce manual tasks by 50%, improve forecasting accuracy, and deliver scalable, reliable AI systems.',
     canonical: 'https://inceptivesdigital.com/machine-learning-development-services',
   },
   '/nlp-development-services': {
@@ -112,6 +112,12 @@ const SEO_ROUTES = {
     description:
       'Build custom NLP solutions for text classification, sentiment analysis, entity extraction, semantic search, document processing, and speech recognition. Conversational systems understand intent, retain context, and respond accurately across customer support, sales, and internal knowledge use cases.',
     canonical: 'https://inceptivesdigital.com/nlp-development-services',
+  },
+  '/computer-vision-development-services': {
+    title: 'Computer Vision Development Company for Operational AI Systems',
+    description:
+      'Computer Vision Development company delivering AI solutions that automate visual workflows, reduce manual effort, and yield reliable, production-ready outcomes.',
+    canonical: 'https://inceptivesdigital.com/computer-vision-development-services',
   },
   '/ai-mvp-development': {
     title: 'AI MVP Development Services | Validate Your AI Idea',
@@ -244,6 +250,11 @@ function routeSeoPlugin() {
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    watch: {
+      ignored: ['**/dist/**', '**/public/assets/**', '**/.git/**'],
+    },
+  },
   plugins: [
     routeSeoPlugin(),
     react(),

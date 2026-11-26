@@ -144,7 +144,7 @@ const PORTFOLIO_CSS = `
 
 #portfolio-page #e-096dca3-inner {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -174,7 +174,7 @@ const PORTFOLIO_CSS = `
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #1E1E1E;
+  background-color: #383838;
   border-radius: 25px;
   padding: 0 0 40px 0;
   overflow: visible;
@@ -208,7 +208,7 @@ const PORTFOLIO_CSS = `
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  background-color: #1E1E1E;
+  background-color: #383838;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -337,21 +337,25 @@ const PORTFOLIO_CSS = `
   width: 83%;
 }
 
-/* Card 10: Pets B4 Profit — overflow visible so phone pops out cleanly on right & bottom */
+/* Card 10: Pets B4 Profit — keep mobile mockups cleanly inside the pet background frame */
 #portfolio-page #e-b248e41 {
   min-height: 620px;
-  overflow: visible !important;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden !important;
 }
 #portfolio-page #e-f8fedfc {
-  transform: translate(58px, 130px);
+  transform: none !important;
   margin: 0%;
-  text-align: end;
+  padding: 24px 16px 0;
+  text-align: center;
 }
 #portfolio-page #e-f8fedfc img {
-  width: 88%;
+  width: 82%;
+  max-width: 100%;
 }
 #portfolio-page #e-2a5c3fd {
-  padding-top: 44px;
+  padding-top: 20px;
 }
 
 /* Shared Text Body */
@@ -462,13 +466,13 @@ const PORTFOLIO_CSS = `
   }
   #portfolio-page #e-b248e41 {
     min-height: 460px;
-    overflow: visible !important;
+    overflow: hidden !important;
   }
   #portfolio-page #e-f8fedfc {
-    transform: translate(54px, 95px);
+    transform: none !important;
   }
   #portfolio-page #e-f8fedfc img {
-    width: 90%;
+    width: 84%;
   }
   #portfolio-page .pf-title {
     font-size: 25px !important;
@@ -482,7 +486,7 @@ const PORTFOLIO_CSS = `
 
 @media (min-width: 1300px) and (max-width: 1344px) {
   #portfolio-page .case-stadie-last {
-    transform: translate(54px, 95px) !important;
+    transform: none !important;
   }
 }
 
@@ -502,9 +506,10 @@ const PORTFOLIO_CSS = `
   }
   #portfolio-page #e-b248e41 {
     min-height: 350px;
+    overflow: hidden !important;
   }
   #portfolio-page #e-f8fedfc {
-    transform: translate(32px, 72px);
+    transform: none !important;
   }
   #portfolio-page #e-f8fedfc img {
     width: 80%;
@@ -542,7 +547,7 @@ const PORTFOLIO_CSS = `
     margin-top: -40%;
   }
   #portfolio-page #e-f8fedfc {
-    transform: translate(22px, 138px);
+    transform: none !important;
   }
 }
 

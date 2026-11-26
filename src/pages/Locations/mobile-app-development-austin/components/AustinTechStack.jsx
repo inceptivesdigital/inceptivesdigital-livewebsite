@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { techStackCategories } from '../../../Services/mobile-app-development/components/TechStackTabs'
 
@@ -15,7 +16,14 @@ export default function AustinTechStack() {
             <span className="text-[#00CE44]">Austin Projects</span>
           </h2>
           <p className="text-white/85 text-base sm:text-lg leading-relaxed font-normal">
-            Every technology decision affects scalability, maintainability, and future flexibility. Our tech stack is chosen around product requirements, not developer preferences.
+            Every technology decision affects scalability, maintainability, and future flexibility. Our{' '}
+            <Link
+              to="/blog/mobile-app-tech-stack"
+              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+            >
+              tech stack
+            </Link>{' '}
+            is chosen around product requirements, not developer preferences.
           </p>
         </div>
 

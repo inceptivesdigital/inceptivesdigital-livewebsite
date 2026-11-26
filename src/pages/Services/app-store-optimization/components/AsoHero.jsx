@@ -23,11 +23,11 @@ export default function AsoHero() {
   ]
 
   return (
-    <section className="relative min-h-[640px] lg:min-h-[85vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-16 lg:pb-20 bg-black overflow-hidden">
+    <section className="relative min-h-[640px] lg:min-h-[88vh] flex items-center pt-28 sm:pt-36 lg:pt-36 pb-0 lg:pb-20 bg-black overflow-hidden lg:bg-[url('/assets/app-store-optimization/aos-banner.png')] lg:bg-no-repeat lg:bg-right-bottom lg:bg-[length:auto_88%] xl:bg-[length:auto_96%] 2xl:bg-[length:auto_100%]">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column */}
-          <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-start text-left pb-4 lg:pb-0">
+          <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left pb-8 lg:pb-0">
             <h1 className="text-[#00CE44] text-sm sm:text-base lg:text-[17px] font-bold block mb-3">
               App Store Optimization Services
             </h1>
@@ -83,15 +83,14 @@ export default function AsoHero() {
             </div>
           </div>
 
-          {/* Right Column: Hero Banner Image */}
-          <div className="lg:col-span-6 xl:col-span-5 flex justify-center lg:justify-end items-center">
-            <div className="w-full max-w-[500px] sm:max-w-[580px] lg:max-w-[640px] xl:max-w-[720px]">
-              <img
-                src="/assets/app-store-optimization/aos-banner.png"
-                alt="App Store Optimization Services"
-                className="w-full h-auto object-contain block select-none"
-              />
-            </div>
+          {/* Mobile / Tablet Right-Bottom Banner Image */}
+          <div className="lg:hidden flex justify-end w-full -mr-4 sm:-mr-6">
+            <img
+              src="/assets/app-store-optimization/aos-banner.png"
+              alt="App Store Optimization Services"
+              className="w-full max-w-[520px] h-auto object-cover object-right-bottom block select-none"
+              loading="eager"
+            />
           </div>
         </div>
       </div>

@@ -75,7 +75,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="pt-24 sm:pt-28 lg:pt-32 pb-14 sm:pb-20 overflow-visible">
+    <section className="pt-24 sm:pt-28 lg:pt-32 pb-10 lg:pb-12 overflow-visible">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative overflow-visible">
         {!isDesktop ? (
           /* =========================================================================
@@ -157,9 +157,9 @@ export default function Hero() {
           /* =========================================================================
               DESKTOP LAYOUT (>= lg): Slanted Green Shape Over Video
               ========================================================================= */
-          <div className="hidden lg:flex relative min-h-[600px] xl:min-h-[640px] items-center overflow-visible">
+          <div className="hidden lg:flex relative min-h-[540px] xl:min-h-[600px] 2xl:min-h-[640px] items-center overflow-visible">
             {/* Background Poster + Deferred Video Container */}
-            <div className="w-full h-[580px] xl:h-[620px] rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#0c0d10] border border-white/10 shadow-2xl relative z-0">
+            <div className="w-full h-[520px] xl:h-[580px] 2xl:h-[620px] rounded-[36px] lg:rounded-[44px] overflow-hidden bg-[#0c0d10] border border-white/10 shadow-2xl relative z-0">
               <img
                 src="/assets/hero-banner-full.jpg"
                 alt="Inceptives Digital App Showcase"
@@ -187,7 +187,7 @@ export default function Hero() {
             </div>
 
             {/* Slanted Green Shape & Managed Content */}
-            <div className="absolute -top-5 -bottom-5 left-0 lg:-top-6 lg:-bottom-6 w-[60%] xl:w-[58%] 2xl:w-[56%] z-20 flex flex-col justify-between p-8 lg:p-10 xl:p-11 select-none">
+            <div className="absolute -top-5 -bottom-5 left-0 lg:-top-6 lg:-bottom-6 w-[60%] xl:w-[58%] 2xl:w-[45%] z-20 flex flex-col justify-between p-8 lg:p-10 xl:p-11 select-none">
               <img
                 src="/assets/green-banner-shape.png"
                 alt=""

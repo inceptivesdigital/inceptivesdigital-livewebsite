@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function IndustriesMobile() {
   const industries = [
     {
@@ -6,12 +7,12 @@ export default function IndustriesMobile() {
       desc: (
         <>
           Our{' '}
-          <a
-            href="https://inceptivesdigital.com/healthcare-app-development"
+          <Link
+            to="/healthcare-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             healthcare mobile app development services
-          </a>{' '}
+          </Link>{' '}
           cover patient portals and telehealth applications with EHR integrations and HIPAA-focused architecture.
         </>
       ),
@@ -22,12 +23,12 @@ export default function IndustriesMobile() {
       desc: (
         <>
           Custom mobile banking and{' '}
-          <a
-            href="https://inceptivesdigital.com/fintech-app-development"
+          <Link
+            to="/fintech-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             fintech app development services
-          </a>{' '}
+          </Link>{' '}
           come with KYC verification, digital wallets, and secure payment gateway integrations.
         </>
       ),
@@ -38,12 +39,12 @@ export default function IndustriesMobile() {
       desc: (
         <>
           Personalized shopping experiences with Shopify and WooCommerce through integrated checkouts and inventory APIs with our{' '}
-          <a
-            href="https://inceptivesdigital.com/ecommerce-app-development-company"
+          <Link
+            to="/ecommerce-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             eCommerce app development
-          </a>
+          </Link>
           .
         </>
       ),
@@ -54,12 +55,12 @@ export default function IndustriesMobile() {
       desc: (
         <>
           Our{' '}
-          <a
-            href="https://inceptivesdigital.com/education-app-development-company"
+          <Link
+            to="/education-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             education app development
-          </a>{' '}
+          </Link>{' '}
           team engineers mobile learning platforms with LMS integrations, AI tutoring capabilities, and real-time student progress tracking.
         </>
       ),
@@ -69,12 +70,12 @@ export default function IndustriesMobile() {
       icon: '/assets/industries-icons/industries-fitness.svg',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/fitness-app-development"
+          <Link
+            to="/fitness-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             Fitness mobile app development
-          </a>{' '}
+          </Link>{' '}
           supports custom mobile apps with workout tracking and personalized coaching, with HealthKit and wearable integrations connecting activity data.
         </>
       ),
@@ -85,12 +86,12 @@ export default function IndustriesMobile() {
       desc: (
         <>
           Custom{' '}
-          <a
-            href="https://inceptivesdigital.com/real-estate-app-development-company"
+          <Link
+            to="/real-estate-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             real estate app development
-          </a>{' '}
+          </Link>{' '}
           brings property discovery to iOS and Android through MLS integrations and location-based search.
         </>
       ),
@@ -100,12 +101,12 @@ export default function IndustriesMobile() {
       icon: '/assets/industries-icons/industries-traveling1.svg',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/travel-app-development-company"
+          <Link
+            to="/travel-app-development-company"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             Travel app development
-          </a>{' '}
+          </Link>{' '}
           covers mobile booking platforms with reservation APIs, live availability, and integrated itinerary management for travelers.
         </>
       ),
@@ -115,12 +116,12 @@ export default function IndustriesMobile() {
       icon: '/assets/industries-icons/Food-Delivery.svg',
       desc: (
         <>
-          <a
-            href="https://inceptivesdigital.com/food-delivery-app-development"
+          <Link
+            to="/food-delivery-app-development"
             className="underline text-[#00CE44] group-hover:text-black transition-colors"
-          >
+>
             Food delivery mobile app development
-          </a>{' '}
+          </Link>{' '}
           connects customer ordering with restaurant operations through GPS tracking and integrated payment gateways.
         </>
       ),

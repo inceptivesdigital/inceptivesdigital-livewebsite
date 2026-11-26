@@ -4,37 +4,26 @@ export default function DubaiAwards() {
       title: 'Top Artificial Intelligence, 2026',
       org: 'RightFirms',
       logoSrc: '/assets/awards-images/award-rightfirms.png',
-      desc: 'Recognized for advanced generative AI integration, predictive algorithms, and custom machine learning workflows across mobile architectures.',
     },
     {
       title: 'Top Mobile App Development, 2026',
       org: 'RightFirms',
       logoSrc: '/assets/ios-app/rf-badge-top-mobile-app-development-2026-982x1024.png',
-      desc: 'National recognition for high-performance iOS, Android, and cross-platform mobile application engineering and deployment.',
     },
     {
       title: 'Top Mobile App Development Company, 2025',
       org: 'SoftwareSuggest',
       logoSrc: '/assets/ios-app/top-mobile-app-development-company-2025.png',
-      desc: 'Awarded for exceptional product usability, intuitive interface design, and scalable backend architecture for growing enterprises.',
     },
     {
-      title: 'Customer Choice Award, 2026',
-      org: 'SoftwareWorld',
-      logoSrc: '/assets/ios-app/top-rated-logo-1024x1024.png',
-      desc: 'Honored by clients for technical transparency, clear communication, and dependable post-launch product stability.',
-    },
-    {
-      title: 'Top Trending Digital Agency, 2026',
+      title: 'Top Trending, 2026',
       org: 'SoftwareWorld',
       logoSrc: '/assets/ai-development/top-rated-logo.png',
-      desc: 'Ranked among top trending development partners for consistent delivery velocity, code quality, and client satisfaction.',
     },
     {
-      title: 'Top Mobile App Developers, 2025',
-      org: 'Clutch',
-      logoSrc: '/assets/awards-images/award-top-developers.png',
-      desc: 'Independent recognition on Clutch reflecting verified client reviews, engineering excellence, and successful mobile launches.',
+      title: 'Customer Choice, 2026',
+      org: 'SoftwareWorld',
+      logoSrc: '/assets/ios-app/top-rated-logo-1024x1024.png',
     },
   ]
 
@@ -55,19 +44,27 @@ export default function DubaiAwards() {
           </p>
         </div>
 
-        {/* Clean Floating Award Badges Row */}
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 md:gap-14 lg:gap-18 xl:gap-20">
+        {/* 5 Centered Dark Award Cards */}
+        <div className="flex flex-wrap justify-center gap-6">
           {awards.map((item) => (
             <div
               key={item.title + item.org}
-              className="h-24 sm:h-28 lg:h-32 w-auto max-w-[140px] sm:max-w-[160px] lg:max-w-[180px] flex items-center justify-center transition-transform duration-300 hover:scale-105"
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] bg-[#14151a] border border-white/10 hover:border-[#00CE44]/40 rounded-[20px] p-7 text-left transition-all duration-300 flex flex-col items-start"
             >
-              <img
-                src={item.logoSrc}
-                alt={`${item.org} - ${item.title}`}
-                className="max-h-full max-w-full w-auto h-auto object-contain select-none"
-                loading="lazy"
-              />
+              <div className="h-20 w-auto flex items-center justify-start mb-5">
+                <img
+                  src={item.logoSrc}
+                  alt={`${item.org} - ${item.title}`}
+                  className="h-20 w-auto object-contain select-none"
+                  loading="lazy"
+                />
+              </div>
+              <span className="text-xs font-bold uppercase tracking-wider text-white/60 mb-1">
+                {item.org}
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] leading-snug">
+                {item.title}
+              </h3>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function AndroidDevelopmentProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -64,12 +65,12 @@ export default function AndroidDevelopmentProcess() {
       cardDesc: (
         <>
           The process starts with a{' '}
-          <a
-            href="https://inceptivesdigital.com/discovery-sprint"
+          <Link
+            to="/discovery-sprint"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             discovery sprint
-          </a>{' '}
+          </Link>{' '}
           that defines the product around its users, business objectives, integrations, technical constraints, and delivery priorities. These decisions establish the initial scope, architecture direction, milestones, dependencies, and estimated investment.
         </>
       ),
@@ -82,12 +83,12 @@ export default function AndroidDevelopmentProcess() {
       cardDesc: (
         <>
           With the product direction established, UI/UX turns requirements into navigable Android experiences.{' '}
-          <a
-            href="https://inceptivesdigital.com/interactive-prototyping"
+          <Link
+            to="/interactive-prototyping"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Interactive prototyping
-          </a>{' '}
+          </Link>{' '}
           validates key user flows, usability, accessibility, and interface decisions before engineering begins, reducing costly changes later in development.
         </>
       ),

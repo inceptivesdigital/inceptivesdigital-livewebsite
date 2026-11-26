@@ -1,13 +1,24 @@
 import { useState } from 'react'
 import { Activity, BrainCircuit, Network, Rocket, Search } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const steps = [
   {
     icon: Search,
     tab: 'Discovery',
     title: 'Discovery & Assessment',
-    description:
-      'Business processes are mapped, operational bottlenecks identified, and automation feasibility confirmed before a clear implementation plan is defined.',
+    description: (
+      <>
+        As outlined in our{' '}
+        <Link
+          to="/blog/ai-mvp-development-guide"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI MVP development guide
+        </Link>
+        , business processes are mapped, operational bottlenecks identified, and automation feasibility confirmed before a clear implementation plan is defined.
+      </>
+    ),
   },
   {
     icon: Network,
@@ -20,22 +31,57 @@ const steps = [
     icon: BrainCircuit,
     tab: 'AI Model',
     title: 'Automation Design & Development',
-    description:
-      'AI development combines custom AI and RPA pipelines with decision rules, ML-enhanced logic, and exception handling to create production-ready automation around your workflows.',
+    description: (
+      <>
+        <Link
+          to="/ai-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          AI development
+        </Link>{' '}
+        combines custom AI and RPA pipelines with decision rules, ML-enhanced logic, and exception handling to create production-ready automation around your workflows.
+      </>
+    ),
   },
   {
     icon: Rocket,
     tab: 'Development',
     title: 'Integration & Deployment',
-    description:
-      'Automation systems integrate into existing web applications, mobile applications, APIs, and enterprise platforms. They are tested for accuracy, latency, and operational reliability, then deployed to cloud or on-prem environments.',
+    description: (
+      <>
+        Automation systems can be integrated into existing{' '}
+        <Link
+          to="/web-app-development-company"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          web applications
+        </Link>
+        ,{' '}
+        <Link
+          to="/mobile-app-development"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          mobile applications
+        </Link>
+        , APIs, and enterprise platforms. Tested for accuracy, latency, and operational reliability. Deployed to cloud or on-prem environments.
+      </>
+    ),
   },
   {
     icon: Activity,
     tab: 'Monitoring',
     title: 'Monitoring & Continuous Optimization',
-    description:
-      'Post-launch analytics and iteration monitor automated workflows, flag exceptions, optimize processes, and guide model retraining as operational conditions change.',
+    description: (
+      <>
+        <Link
+          to="/post-launch-analytics-iteration"
+          className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+          Post-launch analytics and iteration
+        </Link>{' '}
+        monitor automated workflows, flag exceptions, optimize processes, and guide model retraining as operational conditions change.
+      </>
+    ),
   },
 ]
 

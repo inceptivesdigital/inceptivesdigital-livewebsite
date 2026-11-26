@@ -12,12 +12,11 @@ export default function ProductLaunchRolloutTable() {
       aspect: 'Primary goal',
       soft: (
         <>
-          Validate your{' '}
           <Link
             to="/blog/how-to-validate-your-mobile-app-idea"
             className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
-            mobile app idea
+            Validate your mobile app idea
           </Link>
           , fix bugs, and test{' '}
           <Link
@@ -42,35 +41,33 @@ export default function ProductLaunchRolloutTable() {
       aspect: 'Best for',
       soft: 'Early-stage apps needing real user data before committing a full marketing budget',
       full: 'Established products with proven retention, ready for immediate large-scale growth',
-      phased: 'Apps balancing market testing with steady, controlled user growth',
+      phased: 'Apps balancing confidence in the product with a need for controlled scaling',
     },
     {
       aspect: 'ASO implication',
-      soft: (
+      soft: 'Keyword and creative testing happens quietly before competitors notice the app',
+      full: (
         <>
-          Early testing helps avoid{' '}
+          Metadata and creative must be conversion-ready to avoid{' '}
           <Link
             to="/blog/app-store-optimization-mistakes"
             className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             app store optimization mistakes
-          </Link>{' '}
-          before broad distribution
+          </Link>
         </>
       ),
-      full: (
+      phased: (
         <>
-          Demands proven{' '}
           <Link
             to="/blog/10-aso-strategies-to-increase-your-app-store-rankings"
             className="text-[#00CE44] underline font-normal hover:opacity-80 transition-colors"
           >
             ASO strategies to increase app store rankings
           </Link>{' '}
-          to capitalize on initial launch traffic
+          evolve market by market based on real performance data
         </>
       ),
-      phased: 'Allows step-by-step keyword and conversion rate optimization as new markets are added',
     },
   ]
 

@@ -73,7 +73,7 @@ function isContactTrigger(el) {
 
   const href = el.tagName === 'A' ? el.getAttribute('href') || '' : null
   if (href !== null) {
-    if (href === '#contact' || /\/contact-us\/?$/i.test(href)) return true
+    if (href === '#contact') return true
     if (/^\s*get in touch\s*!?$/i.test(label)) return true
   }
 
@@ -189,7 +189,7 @@ export default function ContactPopupModal() {
     }
     setCaptchaError(false)
     await submitFormToSeo({
-      formName: 'Global Contact Popup Form',
+      formName: 'Lead Form Inceptives Digital',
       subject: `Contact Popup Inquiry - ${form.firstName} ${form.lastName}`.trim(),
       replyTo: form.email,
       fields: {
@@ -212,13 +212,13 @@ export default function ContactPopupModal() {
 
   const handleClose = () => {
     close()
-    window.setTimeout(() => {
-      setSubmitted(false)
-      setForm(EMPTY_FORM)
-      setCaptcha(newCaptcha())
-      setCaptchaError(false)
-    }, 300)
+    setSubmitted(false)
+    setForm(EMPTY_FORM)
+    setCaptcha(newCaptcha())
+    setCaptchaError(false)
   }
+
+  if (!isOpen) return null
 
   return (
     <>
@@ -339,38 +339,45 @@ export default function ContactPopupModal() {
                     <p>We have received your inquiry. Our engineering team will get back to you within 24 hours.</p>
                   </div>
                 ) : (
-                  <form className="id-cp__form" onSubmit={handleSubmit}>
+                  <form
+                    id="lead-form-inceptives-digital-popup"
+                    name="Lead Form Inceptives Digital"
+                    data-form-name="Lead Form Inceptives Digital"
+                    aria-label="Lead Form Inceptives Digital"
+                    className="id-cp__form"
+                    onSubmit={handleSubmit}
+                  >
                     <div className="id-cp__row">
                       <label className="id-cp__field">
                         <span>First Name</span>
-                        <input type="text" required placeholder="First Name" value={form.firstName} onChange={set('firstName')} />
+                        <input type="text" name="first_name" autoComplete="given-name" required placeholder="First Name" value={form.firstName} onChange={set('firstName')} />
                       </label>
                       <label className="id-cp__field">
                         <span>Last Name</span>
-                        <input type="text" required placeholder="Last Name" value={form.lastName} onChange={set('lastName')} />
+                        <input type="text" name="last_name" autoComplete="family-name" required placeholder="Last Name" value={form.lastName} onChange={set('lastName')} />
                       </label>
                     </div>
                     <label className="id-cp__field">
                       <span>Email</span>
-                      <input type="email" required placeholder="Email" value={form.email} onChange={set('email')} />
+                      <input type="email" name="email" autoComplete="email" required placeholder="Email" value={form.email} onChange={set('email')} />
                     </label>
                     <div className="id-cp__row">
                       <label className="id-cp__field">
                         <span>Phone</span>
-                        <input type="tel" required placeholder="+1 (000) 000-0000" value={form.phone} onChange={set('phone')} />
+                        <input type="tel" name="phone" autoComplete="tel" required placeholder="+1 (000) 000-0000" value={form.phone} onChange={set('phone')} />
                       </label>
                       <label className="id-cp__field">
                         <span>Subject</span>
-                        <input type="text" placeholder="Subject" value={form.subject} onChange={set('subject')} />
+                        <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={set('subject')} />
                       </label>
                     </div>
                     <label className="id-cp__field">
                       <span>Message</span>
-                      <textarea required placeholder="Message" value={form.message} onChange={set('message')} />
+                      <textarea name="message" required placeholder="Message" value={form.message} onChange={set('message')} />
                     </label>
 
                     <label className="id-cp__check">
-                      <input type="checkbox" checked={form.transactionalConsent} onChange={set('transactionalConsent')} />
+                      <input type="checkbox" name="transactional_sms_consent" value="Yes" checked={form.transactionalConsent} onChange={set('transactionalConsent')} />
                       <span>
                         I consent to receive transactional messages from Inceptives Digital at the phone number
                         provided. Message frequency may vary. Message &amp; data rates may apply. Reply HELP for help
@@ -378,7 +385,7 @@ export default function ContactPopupModal() {
                       </span>
                     </label>
                     <label className="id-cp__check">
-                      <input type="checkbox" checked={form.marketingConsent} onChange={set('marketingConsent')} />
+                      <input type="checkbox" name="marketing_sms_consent" value="Yes" checked={form.marketingConsent} onChange={set('marketingConsent')} />
                       <span>
                         I consent to receive marketing and promotional messages from Inceptives Digital at the phone
                         number provided. Message frequency may vary. Message &amp; data rates may apply. Reply HELP

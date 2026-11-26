@@ -1,4 +1,5 @@
 import { ShieldCheck, TrendingUp, Lightbulb, Code2 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function SFWhyChooseUs() {
   const reasons = [
@@ -17,14 +18,12 @@ export default function SFWhyChooseUs() {
       renderDesc: () => (
         <span>
           California apps require a privacy assessment.{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/app-development-timeline"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blog/app-development-timeline"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Development planning
-          </a>{' '}
+          </Link>{' '}
           addresses CCPA, HIPAA, or PCI DSS obligations according to product data and applicable regulatory scope.
         </span>
       ),

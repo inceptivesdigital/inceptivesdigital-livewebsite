@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 export default function CrossPlatformEmergingTech() {
   const items = [
     {
@@ -6,14 +7,12 @@ export default function CrossPlatformEmergingTech() {
       desc: (
         <>
           Integrating on-device models via TensorFlow Lite and cloud AI APIs to power predictive data flows, automated workflows, and tailored content engines, as part of our broader{' '}
-          <a
-            href="https://inceptivesdigital.com/ai-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/ai-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             AI development
-          </a>{' '}
+          </Link>{' '}
           practice.
         </>
       ),
@@ -29,14 +28,12 @@ export default function CrossPlatformEmergingTech() {
       desc: (
         <>
           Embedding decentralized identity verification, immutable ledger syncing, and secure cryptographic transactions into high-security cross-platform environments through our{' '}
-          <a
-            href="https://inceptivesdigital.com/blockchain-development"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/blockchain-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             blockchain development
-          </a>{' '}
+          </Link>{' '}
           capability.
         </>
       ),

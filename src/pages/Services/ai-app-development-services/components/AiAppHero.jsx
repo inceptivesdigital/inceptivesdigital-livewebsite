@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function AiAppHero() {
   return (
@@ -23,8 +24,8 @@ export default function AiAppHero() {
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
         <div className="w-full lg:w-[58%] xl:w-[54%] flex flex-col items-start text-left">
-          <h1 className="text-[36px] sm:text-[46px] md:text-[52px] lg:text-[56px] font-bold leading-[1.1] tracking-tight text-white mb-4">
-            AI App Development <span className="text-[#00CE44]">Services</span>
+          <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
+            AI App Development Services
           </h1>
 
           <h2 className="text-[19px] sm:text-[22px] md:text-[24px] font-semibold leading-[1.35] text-white/95 mb-5 max-w-[660px]">
@@ -33,23 +34,19 @@ export default function AiAppHero() {
 
           <p className="text-white/85 text-[15px] sm:text-[16px] md:text-[17px] leading-[1.68] font-normal max-w-[650px] mb-8">
             Machine learning, generative AI,{' '}
-            <a
-              href="https://inceptivesdigital.com/ai-agent-development"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/ai-agent-development"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               AI agents
-            </a>
+            </Link>
             ,{' '}
-            <a
-              href="https://inceptivesdigital.com/nlp-development-services"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/nlp-development-services"
               className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-            >
+>
               NLP
-            </a>
+            </Link>
             , and computer vision integrated into web and mobile applications built for businesses that cannot afford to ship something that breaks under real load.
           </p>
 

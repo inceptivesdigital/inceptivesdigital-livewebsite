@@ -8,14 +8,7 @@ export default function ProductLaunchCostSection() {
       price: '$10,000 – $25,000',
       desc: (
         <>
-          Product launch strategy engagements typically range from $10,000 for focused{' '}
-          <Link
-            to="/mvp-development"
-            className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
-          >
-            MVP development
-          </Link>{' '}
-          launches to $100,000 and above for full-scale enterprise products requiring end-to-end strategy, execution, and post-launch growth support.
+          A focused launch strategy for early-stage products and MVPs entering the market for the first time, covering core positioning, go-to-market planning, and campaign execution to validate the product quickly. This engagement typically runs 4–6 weeks from kickoff to launch.
         </>
       ),
       features: [
@@ -81,7 +74,14 @@ export default function ProductLaunchCostSection() {
               <span className="text-[#00CE44]">Engagement Costs</span>
             </h2>
             <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-              Product launch strategy engagements typically range from $10,000 for focused MVP launches to $100,000 and above for full-scale enterprise products requiring end-to-end strategy, execution, and post-launch growth support.
+              Product launch strategy engagements typically range from $10,000 for focused{' '}
+              <Link
+                to="/mvp-development"
+                className="underline text-[#00CE44] font-normal hover:opacity-80 transition-colors"
+              >
+                MVP development
+              </Link>{' '}
+              launches to $100,000 and above for full-scale enterprise products requiring end-to-end strategy, execution, and post-launch growth support.
             </p>
           </div>
 
@@ -121,6 +121,19 @@ export default function ProductLaunchCostSection() {
                 </ul>
               </div>
             ))}
+          </div>
+
+          {/* Scoped Launch Estimate CTA */}
+          <div className="mt-12 text-center max-w-2xl mx-auto">
+            <p className="text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-normal mb-6">
+              Tell us what you are launching and get a scoped product launch strategy estimate.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0"
+            >
+              Get Your Launch Estimate
+            </a>
           </div>
         </div>
       </section>

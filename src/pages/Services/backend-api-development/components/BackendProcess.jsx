@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function BackendProcess() {
   const [activeTab, setActiveTab] = useState(0)
@@ -96,14 +97,12 @@ export default function BackendProcess() {
       cardDesc: (
         <>
           After successful validation, the backend is deployed through automated CI/CD pipelines with comprehensive technical documentation. Our{' '}
-          <a
-            href="https://inceptivesdigital.com/post-launch-analytics-iteration"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/post-launch-analytics-iteration"
             className="text-[#00CE44] underline hover:opacity-80 transition-colors"
-          >
+>
             post-launch analytics iteration
-          </a>{' '}
+          </Link>{' '}
           team continues supporting the product beyond launch, ensuring the architecture adapts smoothly as user demands emerge.
         </>
       ),

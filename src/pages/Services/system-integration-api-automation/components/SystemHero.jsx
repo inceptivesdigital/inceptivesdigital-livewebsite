@@ -1,8 +1,9 @@
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
+import { Link } from 'react-router-dom'
 
 export default function SystemHero() {
   return (
-    <section className="relative isolate flex min-h-[680px] items-center overflow-hidden bg-black text-white sm:min-h-[720px]">
+    <section className="relative isolate flex min-h-screen min-h-[100dvh] items-center overflow-hidden bg-black pb-12 text-white">
       <img
         src="/assets/ai-development/system-banner-scaled.jpg"
         alt=""
@@ -12,13 +13,19 @@ export default function SystemHero() {
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/10" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/50 via-transparent to-black/15" />
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-10 md:px-16 lg:px-20">
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-8 sm:px-10 sm:py-10 md:px-16 lg:px-20">
         <div className="max-w-[660px]">
           <h1 className="mb-5 text-[36px] font-bold leading-[1.08] tracking-tight sm:text-[44px] lg:text-[54px]">
-            System Integration &amp; <span className="text-[#00CE44]">API Automation Services</span>
+            System Integration &amp; API Automation Services
           </h1>
           <p className="mb-7 max-w-[620px] text-[15px] leading-relaxed text-white/85 sm:text-base">
-            System integration and API automation services that connect applications, databases, and workflows so data moves automatically between tools without manual transfer or duplication.
+            <Link
+              to="/backend-api-development"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              Backend API development
+            </Link>{' '}
+            connects applications, databases, and workflows so data moves automatically between tools without manual transfer or duplication.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">
               <a

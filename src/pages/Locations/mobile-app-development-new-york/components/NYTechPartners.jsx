@@ -85,18 +85,23 @@ export default function NYTechPartners() {
           {ecosystems.map((eco) => (
             <div
               key={eco.name}
-              className="h-28 sm:h-32 rounded-2xl bg-[#14151a] border-0 flex items-center justify-center p-6 transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-none"
+              className="min-h-[136px] sm:min-h-[148px] rounded-2xl bg-[#14151a] border border-white/10 hover:border-[#00CE44]/40 flex flex-col items-center justify-center gap-3 p-6 transition-all duration-300 hover:scale-[1.02]"
             >
-              {eco.svg ? (
-                eco.svg
-              ) : (
-                <img
-                  src={eco.src}
-                  alt={eco.alt}
-                  className="max-h-12 sm:max-h-14 w-auto object-contain select-none shadow-none"
-                  loading="lazy"
-                />
-              )}
+              <div className="h-12 flex items-center justify-center">
+                {eco.svg ? (
+                  eco.svg
+                ) : (
+                  <img
+                    src={eco.src}
+                    alt={eco.alt}
+                    className="max-h-10 sm:max-h-12 w-auto object-contain select-none shadow-none"
+                    loading="lazy"
+                  />
+                )}
+              </div>
+              <span className="text-xs sm:text-sm font-medium text-white/80 text-center leading-tight">
+                {eco.name}
+              </span>
             </div>
           ))}
         </div>

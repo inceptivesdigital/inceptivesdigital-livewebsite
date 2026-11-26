@@ -1,6 +1,6 @@
 const industries = [
   {
-    title: 'Finance',
+    title: '1. Finance',
     icon: '/assets/industries-icons/industries-fintech.svg',
     alt: 'Finance',
     items: [
@@ -10,7 +10,7 @@ const industries = [
     ],
   },
   {
-    title: 'Healthcare',
+    title: '2. Healthcare',
     icon: '/assets/industries-icons/industries-healthcare.svg',
     alt: 'Healthcare',
     items: [
@@ -20,7 +20,7 @@ const industries = [
     ],
   },
   {
-    title: 'Retail',
+    title: '3. Retail',
     icon: '/assets/industries-icons/industries-cart.svg',
     alt: 'Retail',
     items: [
@@ -30,7 +30,7 @@ const industries = [
     ],
   },
   {
-    title: 'Manufacturing',
+    title: '4. Manufacturing',
     icon: '/assets/industries-icons/industries-realstate.svg',
     alt: 'Manufacturing',
     items: [
@@ -40,7 +40,7 @@ const industries = [
     ],
   },
   {
-    title: 'Logistics',
+    title: '5. Logistics',
     icon: '/assets/industries-icons/industries-traveling1.svg',
     alt: 'Logistics',
     items: [
@@ -50,7 +50,7 @@ const industries = [
     ],
   },
   {
-    title: 'Internal Operations',
+    title: '6. Internal Operations',
     icon: '/assets/industries-icons/industries-startup.svg',
     alt: 'Internal operations',
     items: [

@@ -1,4 +1,5 @@
 import { Activity, Database, FileText, GitBranch, Network, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -16,26 +17,69 @@ const services = [
   {
     icon: Database,
     title: 'Data Movement Automation',
-    description:
-      'Backend API development enables automated data transfer across systems, eliminating manual updates between tools and platforms.',
+    description: (
+      <>
+        <Link
+          to="/backend-api-development"
+          className="text-white underline group-hover:text-black"
+>
+          Backend API development
+        </Link>{' '}
+        enables automated data transfer across systems, eliminating manual updates between tools and platforms.
+      </>
+    ),
   },
   {
     icon: FileText,
     title: 'Reporting Process Automation',
-    description:
-      'Generative AI development can produce narrative summaries and report content, while automated workflows distribute them based on scheduled or event-based triggers.',
+    description: (
+      <>
+        <Link
+          to="/generative-ai-development-company"
+          className="text-white underline group-hover:text-black"
+>
+          Generative AI development
+        </Link>{' '}
+        can produce narrative summaries and report content, while automated workflows distribute them based on scheduled or event-based triggers.
+      </>
+    ),
   },
   {
     icon: Users,
     title: 'Customer Operations Automation',
-    description:
-      'AI app development can embed automated customer workflows into digital products, while AI chatbots can handle onboarding questions, requests, and routine updates within those flows.',
+    description: (
+      <>
+        <Link
+          to="/ai-app-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          AI app development
+        </Link>{' '}
+        can embed automated customer workflows into digital products, while{' '}
+        <Link
+          to="/ai-chatbot-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          AI chatbots
+        </Link>{' '}
+        can handle onboarding questions, requests, and routine updates within those flows.
+      </>
+    ),
   },
   {
     icon: Activity,
     title: 'Internal Operations Automation',
-    description:
-      'Custom software development can automate internal HR, finance, and administrative workflows without manual coordination between steps.',
+    description: (
+      <>
+        <Link
+          to="/custom-software-development"
+          className="text-white underline group-hover:text-black"
+>
+          Custom software development
+        </Link>{' '}
+        can automate internal HR, finance, and administrative workflows without manual coordination between steps.
+      </>
+    ),
   },
 ]
 
@@ -48,7 +92,14 @@ export default function BusinessProcessServices() {
             Business Process Automation Services Built Around Operational Workflows
           </h2>
           <p className="text-[15px] leading-relaxed text-white/80 sm:text-[17px]">
-            Our digital product development approach designs automation systems that remove manual execution from structured business processes and run them as defined operational flows across tools and systems.
+            Our{' '}
+            <Link
+              to="/digital-product-development"
+              className="text-[#00CE44] underline hover:opacity-80 transition-colors"
+>
+              digital product development
+            </Link>{' '}
+            approach designs automation systems that remove manual execution from structured business processes and run them as defined operational flows across tools and systems.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">

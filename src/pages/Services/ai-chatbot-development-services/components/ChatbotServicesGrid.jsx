@@ -23,14 +23,12 @@ const services = [
     title: '2. Customer Support Chatbots',
     description: (
       <>
-        <a
-          href="https://inceptivesdigital.com/ai-automation-services"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-automation-services"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           AI automation services
-        </a>{' '}
+        </Link>{' '}
         power chatbots that resolve routine queries, provide instant responses, and escalate complex issues to human agents. Built to reduce support workload without reducing support quality.
       </>
     ),
@@ -40,14 +38,12 @@ const services = [
     title: '3. Enterprise Knowledge Assistants',
     description: (
       <>
-        <a
-          href="https://inceptivesdigital.com/ai-agent-development"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/ai-agent-development"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           AI agent development
-        </a>{' '}
+        </Link>{' '}
         for internal knowledge assistants gives employees real-time access to documentation, automates workflows, and surfaces relevant information from large knowledge bases using RAG architecture.
       </>
     ),
@@ -83,14 +79,12 @@ const services = [
           AI app development services
         </Link>{' '}
         deploy chatbots across web, mobile, SaaS, and messaging platforms with consistent functionality. Built for businesses developing{' '}
-        <a
-          href="https://inceptivesdigital.com/blog/ai-powered-mobile-apps-uae-business-operations"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/blog/ai-powered-mobile-apps-uae-business-operations"
           className="text-[#00CE44] group-hover:text-black underline"
-        >
+>
           AI-powered mobile apps
-        </a>{' '}
+        </Link>{' '}
         and other conversational experiences wherever their users are.
       </>
     ),

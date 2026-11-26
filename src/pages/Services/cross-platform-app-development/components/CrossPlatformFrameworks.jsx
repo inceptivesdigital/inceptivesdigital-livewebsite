@@ -34,14 +34,12 @@ export default function CrossPlatformFrameworks() {
             </h2>
             <p className="text-white/85 text-[16px] leading-relaxed mb-8 font-normal">
               Being an experienced cross-platform app development company, every app we build runs on a{' '}
-              <a
-                href="https://inceptivesdigital.com/blog/5-cross-platform-frameworks-for-mobile-app-development"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/blog/5-cross-platform-frameworks-for-mobile-app-development"
                 className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-              >
+>
                 proven framework
-              </a>{' '}
+              </Link>{' '}
               at production scale. Inceptives Digital works in{' '}
               <Link
                 to="/flutter-app-development"

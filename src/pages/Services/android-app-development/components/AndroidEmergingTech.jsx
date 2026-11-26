@@ -8,12 +8,12 @@ export default function AndroidEmergingTech() {
       desc: (
         <>
           Bring on-device{' '}
-          <a
-            href="https://inceptivesdigital.com/machine-learning-development-services"
+          <Link
+            to="/machine-learning-development-services"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             machine learning
-          </a>{' '}
+          </Link>{' '}
           into Android products with TensorFlow Lite and ML Kit, enabling personalization, image analysis, text processing, recommendations, and real-time data capabilities across applications.
         </>
       ),
@@ -29,12 +29,12 @@ export default function AndroidEmergingTech() {
       desc: (
         <>
           Create immersive{' '}
-          <a
-            href="https://inceptivesdigital.com/blog/android-ar-app-development"
+          <Link
+            to="/blog/android-ar-app-development"
             className="underline text-[#00CE44] hover:opacity-80 transition-colors"
-          >
+>
             Android AR
-          </a>{' '}
+          </Link>{' '}
           experiences with ARCore for property visualization, interactive fitness, location-aware travel features, product visualization, and other spatial use cases requiring contextual user interaction.
         </>
       ),

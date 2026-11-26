@@ -1,11 +1,29 @@
 import { Activity, BrainCircuit, FileText, Layers, Network, Settings, ShieldCheck, Sparkles } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
     icon: BrainCircuit,
     title: 'Custom AI Automation Development',
-    description:
-      'Our custom software development approach builds automation systems around your specific processes, data sources, and operational requirements rather than relying on generic AI app builders.',
+    description: (
+      <>
+        Our{' '}
+        <Link
+          to="/custom-software-development"
+          className="text-white underline group-hover:text-black"
+>
+          custom software development
+        </Link>{' '}
+        approach builds automation systems around your specific processes, data sources, and operational requirements rather than relying on generic{' '}
+        <Link
+          to="/blog/ai-app-builders-vs-human-developers"
+          className="text-white underline group-hover:text-black"
+>
+          AI app builders
+        </Link>
+        .
+      </>
+    ),
   },
   {
     icon: Network,
@@ -16,38 +34,99 @@ const services = [
   {
     icon: FileText,
     title: 'Document Process Automation',
-    description:
-      'Intelligent systems combine natural language processing with computer vision where needed to extract, classify, validate, and route information from documents without manual handling at every stage.',
+    description: (
+      <>
+        Intelligent systems combine{' '}
+        <Link
+          to="/nlp-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          natural language processing
+        </Link>{' '}
+        with{' '}
+        <Link
+          to="/computer-vision-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          computer vision
+        </Link>{' '}
+        where needed to extract, classify, validate, and route information from documents without manual handling at every stage.
+      </>
+    ),
   },
   {
     icon: Activity,
     title: 'Decision Automation',
-    description:
-      'AI systems use machine learning to evaluate inputs alongside business rules and make decisions in real time without waiting for human review at every step.',
+    description: (
+      <>
+        AI systems use{' '}
+        <Link
+          to="/machine-learning-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          machine learning
+        </Link>{' '}
+        to evaluate inputs alongside business rules and make decisions in real time without waiting for human review at every step.
+      </>
+    ),
   },
   {
     icon: Sparkles,
     title: 'AI Automation Consulting',
-    description:
-      'Product strategy consulting helps identify automation opportunities, assess feasibility, and define the implementation roadmap. Built for businesses that need clarity before committing to a full automation build.',
+    description: (
+      <>
+        <Link
+          to="/product-strategy-consulting"
+          className="text-white underline group-hover:text-black"
+>
+          Product strategy consulting
+        </Link>{' '}
+        helps identify automation opportunities, assess feasibility, and define the implementation roadmap. Built for businesses that need clarity before committing to a full automation build.
+      </>
+    ),
   },
   {
     icon: Settings,
     title: 'Robotic Process Automation With AI',
-    description:
-      'RPA development services combine rule-based automation with machine learning for workflows involving unstructured data, variability, and complex decision logic.',
+    description: (
+      <>
+        <Link
+          to="/rpa-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          RPA development services
+        </Link>{' '}
+        combine rule-based automation with machine learning for workflows involving unstructured data, variability, and complex decision logic.
+      </>
+    ),
   },
   {
     icon: Layers,
     title: 'AI Automation Integration Services',
-    description:
-      'Backend API development connects automation systems with your CRM, ERP, databases, and business software, while AI app development embeds intelligent automation into the products your teams already use.',
+    description: (
+      <>
+        <Link
+          to="/backend-api-development"
+          className="text-white underline group-hover:text-black"
+>
+          Backend API development
+        </Link>{' '}
+        connects automation systems with your CRM, ERP, databases, and business software, while{' '}
+        <Link
+          to="/ai-app-development-services"
+          className="text-white underline group-hover:text-black"
+>
+          AI app development
+        </Link>{' '}
+        embeds intelligent automation into the products your teams already use.
+      </>
+    ),
   },
   {
     icon: ShieldCheck,
     title: 'Intelligent Exception Management',
     description:
-      'AI systems identify, classify, and route exceptions in real time for high-volume operational processes where manual exception handling creates bottlenecks.',
+      'AI systems that identify, classify, and route exceptions in real time. Built for high-volume operational processes where manual exception handling creates bottlenecks.',
   },
 ]
 
