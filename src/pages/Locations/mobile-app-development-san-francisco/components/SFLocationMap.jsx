@@ -5,12 +5,12 @@ export default function SFLocationMap() {
     'https://www.google.com/maps/search/?api=1&query=490+Post+St+Ste+500+San+Francisco+CA+94102'
 
   return (
-    <section className="py-20 lg:py-28 bg-[#000000] text-white relative overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
-        <div className="relative rounded-[28px] bg-[#121317] border border-white/10 overflow-hidden shadow-2xl">
+    <section className="w-full bg-[#000000] text-white relative overflow-hidden">
+      <div className="w-full">
+        <div className="relative bg-[#000000] border-0 overflow-hidden shadow-none">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             {/* Left Column: Details */}
-            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 flex flex-col justify-between text-left relative z-10 bg-[#121317]/95">
+            <div className="lg:col-span-6 p-8 sm:p-12 lg:p-16 xl:px-20 lg:py-20 flex flex-col justify-between text-left relative z-10 bg-[#000000]">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white tracking-tight leading-[1.18] mb-4">
                   Where San Francisco&apos;s Most Demanding{' '}
@@ -41,22 +41,20 @@ export default function SFLocationMap() {
             </div>
 
             {/* Right Column: Interactive Live Google Map (Zoomed Out, Dark Themed) */}
-            <div className="lg:col-span-6 relative min-h-[380px] lg:min-h-full overflow-hidden bg-[#181a20] rounded-b-[28px] lg:rounded-b-none lg:rounded-r-[28px]">
+            <div className="lg:col-span-6 relative min-h-[420px] lg:min-h-[520px] overflow-hidden bg-[#181a20]">
               <iframe
                 title="Inceptives Digital San Francisco Office - 490 Post St Union Square"
-                src="https://maps.google.com/maps?q=490+Post+St,+San+Francisco,+CA+94102&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
+                src="https://www.google.com/maps?q=490+Post+St,+San+Francisco,+CA+94102&hl=en&z=14&output=embed"
                 style={{
                   border: 0,
                   filter: 'invert(90%) hue-rotate(180deg) contrast(95%)',
                 }}
                 allowFullScreen=""
-                loading="lazy"
+                loading="eager"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full min-h-[380px] lg:min-h-full select-none"
+                className="absolute inset-0 w-full h-full select-none"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#121317] via-transparent to-transparent hidden lg:block pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-transparent to-transparent hidden lg:block pointer-events-none" />
             </div>
           </div>
         </div>

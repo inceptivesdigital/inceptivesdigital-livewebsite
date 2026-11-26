@@ -231,6 +231,20 @@ html body main .id-pr .id-pr-hero {
   }
 }
 
+/* Hero section ONLY: keep outside centered container with 100px side margins across all pages */
+@media (min-width: 1280px) {
+  html body main > section:first-child:not(.idap-wrap):not(.category-archive-section) > div[class*="max-w-"],
+  html body main > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section) > div[class*="max-w-"],
+  html body main > div:first-child > div:first-child > section:first-of-type:not(.idap-wrap):not(.category-archive-section) > div[class*="max-w-"] {
+    max-width: none !important;
+    width: auto !important;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   html body header > div[class*="max-w-"],
   html body footer > div[class*="max-w-"],

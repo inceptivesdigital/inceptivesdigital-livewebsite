@@ -82,7 +82,7 @@ export default function Footer() {
       name: 'Dubai, UAE',
       flag: '/assets/flags/ae.webp',
       address: 'Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates',
-      mapUrl: 'https://maps.google.com/?q=Building+A1,+Dubai+Digital+Park,+Dubai+Silicon+Oasis,+Dubai,+United+Arab+Emirates',
+      mapUrl: 'https://maps.app.goo.gl/p6evYRMmzCrSFP8K6',
     },
     {
       name: 'Singapore',

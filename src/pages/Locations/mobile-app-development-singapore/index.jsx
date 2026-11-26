@@ -16,6 +16,7 @@ import SingaporeTechStack from './components/SingaporeTechStack'
 import SingaporeTechPartners from './components/SingaporeTechPartners'
 import SingaporeInfrastructure from './components/SingaporeInfrastructure'
 import SingaporeAdvancedTech from './components/SingaporeAdvancedTech'
+import SingaporeLocationMap from './components/SingaporeLocationMap'
 import SingaporeCostSection from './components/SingaporeCostSection'
 import SingaporeWhyChooseUs from './components/SingaporeWhyChooseUs'
 import SingaporeBottomCTA from './components/SingaporeBottomCTA'
@@ -98,6 +99,9 @@ export default function MobileAppSingapore() {
 
       {/* 17. AI & Emerging Technologies */}
       <SingaporeAdvancedTech />
+
+      {/* 17b. Office Location Map */}
+      <SingaporeLocationMap />
 
       {/* 18. Investment & Cost Scopes */}
       <SingaporeCostSection />
