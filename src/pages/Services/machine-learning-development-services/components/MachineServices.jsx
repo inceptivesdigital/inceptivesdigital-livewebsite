@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: BrainCircuit,
-    title: '1. Custom Machine Learning Model Development',
+    title: 'Custom Machine Learning Model Development',
     description: (
       <>
         Design and build ML models for your specific business problem, dataset, and performance targets. Built from the architecture up using PyTorch, TensorFlow, or Scikit-learn rather than assembled through generic{' '}
@@ -27,19 +27,19 @@ const services = [
   },
   {
     icon: Activity,
-    title: '2. Predictive Analytics and Forecasting',
+    title: 'Predictive Analytics and Forecasting',
     description:
       'Identify patterns in historical data to produce accurate forecasts for demand, revenue, risk, and operational performance. Models include time-series forecasting, regression, and ensemble methods for actionable predictions.',
   },
   {
     icon: Sparkles,
-    title: '3. Recommendation Engine Development',
+    title: 'Recommendation Engine Development',
     description:
       'Deliver personalized recommendations using collaborative filtering, content-based filtering, and hybrid models. Optimized for eCommerce, SaaS, and content platforms to increase engagement and conversions.',
   },
   {
     icon: ShieldCheck,
-    title: '4. Anomaly Detection and Fraud Prevention',
+    title: 'Anomaly Detection and Fraud Prevention',
     description: (
       <>
         Detect unusual patterns, flag suspicious activity, and use{' '}
@@ -86,7 +86,7 @@ const services = [
   },
   {
     icon: Network,
-    title: '7. Machine Learning Integration Services',
+    title: 'Machine Learning Integration Services',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/system-integration-api-automation">
@@ -102,7 +102,7 @@ const services = [
   },
   {
     icon: Settings2,
-    title: '8. Model Deployment and MLOps',
+    title: 'Model Deployment and MLOps',
     description: (
       <>
         Deploy production ML systems with full monitoring, drift detection, and retraining pipelines. For existing products,{' '}
@@ -115,7 +115,7 @@ const services = [
   },
   {
     icon: Workflow,
-    title: '9. Machine Learning Consulting',
+    title: 'Machine Learning Consulting',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/product-strategy-consulting">

@@ -12,7 +12,7 @@ import {
 const botTypes = [
   {
     icon: Headphones,
-    title: '1. Customer Support Chatbots',
+    title: 'Customer Support Chatbots',
     description:
       'Chatbots that handle routine queries, provide instant responses, and escalate complex issues to human agents. Built to reduce support workload without reducing support quality.',
     bullets: [
@@ -23,7 +23,7 @@ const botTypes = [
   },
   {
     icon: BookOpen,
-    title: '2. Enterprise Knowledge Assistants',
+    title: 'Enterprise Knowledge Assistants',
     description:
       'Internal chatbots that give employees real-time access to company documentation and surface relevant information from large knowledge bases.',
     bullets: [
@@ -34,7 +34,7 @@ const botTypes = [
   },
   {
     icon: TrendingUp,
-    title: '3. Lead Qualification and Sales Bots',
+    title: 'Lead Qualification and Sales Bots',
     description:
       'Conversational bots that engage website visitors, qualify leads automatically, and connect with CRM and sales systems.',
     bullets: [
@@ -45,7 +45,7 @@ const botTypes = [
   },
   {
     icon: Database,
-    title: '4. RAG-Based AI Chatbots',
+    title: 'RAG-Based AI Chatbots',
     description:
       "Chatbots are grounded in your company's knowledge base and APIs. Built for products where generic model knowledge is not precise enough and source traceability matters.",
     bullets: [
@@ -56,7 +56,7 @@ const botTypes = [
   },
   {
     icon: Mic,
-    title: '5. Voice-Enabled Chatbots and IVR Systems',
+    title: 'Voice-Enabled Chatbots and IVR Systems',
     description:
       'Conversational AI built for voice interactions, call automation, and intelligent IVR experiences.',
     bullets: [
@@ -67,7 +67,7 @@ const botTypes = [
   },
   {
     icon: Briefcase,
-    title: '6. Internal Productivity Bots',
+    title: 'Internal Productivity Bots',
     description: (
       <>
         Bots are embedded into internal systems for{' '}

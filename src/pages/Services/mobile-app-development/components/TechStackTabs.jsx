@@ -252,7 +252,7 @@ export const techStackCategories = [
   },
 ]
 
-export default function TechStackTabs() {
+export default function TechStackTabs({ heading = null, description = null } = {}) {
   const [activeCategory, setActiveCategory] = useState(0)
 
   return (
@@ -261,18 +261,26 @@ export default function TechStackTabs() {
         {/* Section Header: Centered (H2 = 40px, Subtitle = 16px center) */}
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white text-center tracking-tight leading-[1.2] mb-4">
-            Tech Stack Powering Our{' '}
-            <span className="text-[#00CE44]">Custom Mobile App Development Services</span>
+            {heading ?? (
+              <>
+                Tech Stack Powering Our{' '}
+                <span className="text-[#00CE44]">Custom Mobile App Development Services</span>
+              </>
+            )}
           </h2>
           <p className="text-white/90 text-[16px] text-center leading-relaxed font-normal max-w-3xl mx-auto">
-            Every technology decision shapes your product&apos;s future. We build on a proven{' '}
-            <Link
-              to="/blog/mobile-app-tech-stack"
-              className="underline text-[#00CE44] hover:opacity-80 transition-colors"
->
-              mobile app tech stack
-            </Link>{' '}
-            with modern infrastructure that supports performance today and growth tomorrow.
+            {description ?? (
+              <>
+                Every technology decision shapes your product&apos;s future. We build on a proven{' '}
+                <Link
+                  to="/blog/mobile-app-tech-stack"
+                  className="underline text-[#00CE44] hover:opacity-80 transition-colors"
+                >
+                  mobile app tech stack
+                </Link>{' '}
+                with modern infrastructure that supports performance today and growth tomorrow.
+              </>
+            )}
           </p>
         </div>
 

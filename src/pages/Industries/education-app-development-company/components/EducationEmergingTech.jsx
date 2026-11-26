@@ -4,7 +4,7 @@ import { BrainCircuit, View, Sliders, BarChart3, Trophy, Cloud } from 'lucide-re
 const capabilities = [
   {
     icon: BrainCircuit,
-    title: '1. AI Tutoring and Personalized Learning',
+    title: 'AI Tutoring and Personalized Learning',
     description: (
       <>
         <Link
@@ -19,31 +19,31 @@ const capabilities = [
   },
   {
     icon: View,
-    title: '2. AR and VR Learning Simulations',
+    title: 'AR and VR Learning Simulations',
     description:
       'Bring complex subjects to life through interactive AR/VR simulations built around your curriculum and supported learning devices.',
   },
   {
     icon: Sliders,
-    title: '3. Adaptive Assessment Engineering',
+    title: 'Adaptive Assessment Engineering',
     description:
       'Our assessment engines adjust question difficulty based on student performance, helping educators measure learning progress more accurately.',
   },
   {
     icon: BarChart3,
-    title: '4. Predictive Learning Analytics',
+    title: 'Predictive Learning Analytics',
     description:
       'Student performance data helps identify learning gaps early. Predictive analytics give educators clearer insights for planning additional support.',
   },
   {
     icon: Trophy,
-    title: '5. Gamification and Microlearning',
+    title: 'Gamification and Microlearning',
     description:
       'Interactive challenges and short lessons encourage regular participation, with rewards and progress tracking suited to your learning platform.',
   },
   {
     icon: Cloud,
-    title: '6. Scalable Learning Platform Architecture',
+    title: 'Scalable Learning Platform Architecture',
     description: (
       <>
         Growing education platforms need reliable performance. Our engineers build cloud infrastructure and apply{' '}

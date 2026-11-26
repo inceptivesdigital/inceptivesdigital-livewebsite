@@ -1,27 +1,27 @@
 export default function FlutterWhyChooseUs() {
   const pillars = [
     {
-      title: '1. Experienced Flutter App Developers',
+      title: 'Experienced Flutter App Developers',
       desc: 'Work with Flutter developers who understand Dart architecture and complex widget systems. Our engineers account for platform-specific requirements during implementation, giving your product the technical attention its functionality demands.',
     },
     {
-      title: '2. Architecture Built for Growth',
+      title: 'Architecture Built for Growth',
       desc: 'Our Flutter architects assess state management requirements and native dependencies before development begins. This technical groundwork helps businesses avoid costly architectural changes as their applications expand.',
     },
     {
-      title: '3. Cross-Functional Product Team',
+      title: 'Cross-Functional Product Team',
       desc: 'With mobile engineering and backend expertise working within one delivery team, technical dependencies receive coordinated attention. Clients can move through complex development engagements without managing multiple vendors.',
     },
     {
-      title: '4. Direct Collaboration With Engineers',
+      title: 'Direct Collaboration With Engineers',
       desc: 'Get direct insight into the engineering decisions shaping your application. Our Flutter developers discuss implementation requirements with clients throughout delivery, keeping technical priorities aligned with the agreed scope.',
     },
     {
-      title: '5. Performance Validation on Real Devices',
+      title: 'Performance Validation on Real Devices',
       desc: 'Flutter applications undergo performance checks across supported device configurations. Our engineers investigate rendering behavior through profiling tools and test critical interactions before approving production releases.',
     },
     {
-      title: '6. Long-Term Flutter Product Ownership',
+      title: 'Long-Term Flutter Product Ownership',
       desc: 'Our Flutter engineering support extends into subsequent releases through SDK compatibility reviews and application maintenance. This continuity helps businesses manage platform updates while planning future product development.',
     },
   ]

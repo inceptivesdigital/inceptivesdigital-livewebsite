@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const industries = [
   {
-    title: '1. Finance',
+    title: 'Finance',
     icon: Landmark,
     items: [
       'Invoice processing and reconciliation automation',
@@ -12,7 +12,7 @@ const industries = [
     ],
   },
   {
-    title: '2. Healthcare',
+    title: 'Healthcare',
     icon: HeartPulse,
     items: [
       'Medical record processing and data extraction automation',
@@ -21,7 +21,7 @@ const industries = [
     ],
   },
   {
-    title: '3. Retail',
+    title: 'Retail',
     icon: ShoppingCart,
     items: [
       'Order processing and fulfilment workflow automation',
@@ -38,7 +38,7 @@ const industries = [
     ],
   },
   {
-    title: '4. Manufacturing',
+    title: 'Manufacturing',
     icon: Factory,
     items: [
       'Production tracking and operations reporting automation',
@@ -47,7 +47,7 @@ const industries = [
     ],
   },
   {
-    title: '5. Logistics',
+    title: 'Logistics',
     icon: Truck,
     items: [
       'Shipment tracking and status update automation',
@@ -56,7 +56,7 @@ const industries = [
     ],
   },
   {
-    title: '6. Enterprise Operations',
+    title: 'Enterprise Operations',
     icon: Building2,
     items: [
       'HR onboarding and offboarding workflow automation',

@@ -1,32 +1,32 @@
 export default function FlutterEmergingTech() {
   const techItems = [
     {
-      title: '1. AI-Enhanced Flutter Apps',
+      title: 'AI-Enhanced Flutter Apps',
       icon: '/assets/mobile-app/Generative-AI.svg',
       desc: "Integrate AI-powered recommendations into Flutter applications, with our engineers tailoring model connectivity to your product's requirements.",
     },
     {
-      title: '2. Cloud-Powered Infrastructure',
+      title: 'Cloud-Powered Infrastructure',
       icon: '/assets/mobile-app/Cloud-Integration-1.svg',
       desc: 'Our Flutter cloud integrations connect applications with AWS, Firebase, and Google Cloud for scalable backend operations.',
     },
     {
-      title: '3. AR and VR Experiences',
+      title: 'AR and VR Experiences',
       icon: '/assets/react-native/Augmented-Virtual-Reality-2.svg',
       desc: 'Create immersive Flutter experiences through compatible AR and VR integrations that support interactive visualization and specialized product requirements.',
     },
     {
-      title: '4. Blockchain Integrations',
+      title: 'Blockchain Integrations',
       icon: '/assets/mobile-app/blockchain.svg',
       desc: 'For blockchain-enabled Flutter products, our engineers integrate supported networks and smart contracts around secure transaction requirements.',
     },
     {
-      title: '5. IoT Connectivity',
+      title: 'IoT Connectivity',
       icon: '/assets/mobile-app/Internet-Of-Things-1.svg',
       desc: 'Connect Flutter applications with compatible IoT devices, enabling real-time sensor monitoring and operational controls across connected systems.',
     },
     {
-      title: '6. 5G-Optimized Performance',
+      title: '5G-Optimized Performance',
       icon: '/assets/ios-app/5G-Architecture.svg',
       desc: 'Our developers optimize Flutter application networking for high-bandwidth experiences while maintaining responsiveness across varying mobile connection conditions.',
     },

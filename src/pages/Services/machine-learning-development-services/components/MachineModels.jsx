@@ -4,35 +4,35 @@ import { Link } from 'react-router-dom'
 const modelTypes = [
   {
     icon: BrainCircuit,
-    title: '1. Supervised Learning Models',
+    title: 'Supervised Learning Models',
     description:
       'Models trained on labeled data to classify, predict, and score outcomes with measurable accuracy for structured business problems.',
     examples: ['Predict customer churn', 'Assess credit risk and fraud', 'Forecast demand and sales'],
   },
   {
     icon: Network,
-    title: '2. Unsupervised Learning Models',
+    title: 'Unsupervised Learning Models',
     description:
       'Models that identify hidden patterns, clusters, and anomalies without labeled examples, providing actionable insights from raw data.',
     examples: ['Segment customers by behavior', 'Detect operational anomalies', 'Discover market basket patterns'],
   },
   {
     icon: Workflow,
-    title: '3. Reinforcement Learning Models',
+    title: 'Reinforcement Learning Models',
     description:
       'Models that learn optimal decisions through trial and error in dynamic environments, adapting continuously to changing conditions.',
     examples: ['Optimize dynamic pricing', 'Allocate resources efficiently', 'Adaptive recommendation systems'],
   },
   {
     icon: Activity,
-    title: '4. Deep Learning Models',
+    title: 'Deep Learning Models',
     description:
       'Neural network architectures capable of recognizing complex patterns across images, text, audio, and high-dimensional datasets.',
     examples: ['Classify images and videos', 'Speech recognition and audio analysis', 'Advanced NLP tasks'],
   },
   {
     icon: FileText,
-    title: '5. Natural Language Models',
+    title: 'Natural Language Models',
     description: (
       <>
         ML systems can support{' '}
@@ -61,7 +61,7 @@ const modelTypes = [
   },
   {
     icon: FileSearch,
-    title: '6. Computer Vision Models',
+    title: 'Computer Vision Models',
     description:
       'Models designed for visual data at scale, enabling automated inspection, classification, and monitoring in operational contexts.',
     examples: ['Object detection and visual inspection', 'Image classification and tagging', 'Real-time video monitoring'],

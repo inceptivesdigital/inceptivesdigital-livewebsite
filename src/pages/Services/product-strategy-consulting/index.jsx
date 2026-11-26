@@ -8,19 +8,19 @@ import TechStackTabs from '../mobile-app-development/components/TechStackTabs'
 
 const STATS = [
   {
-    value: '150+',
+    value: '70+',
     label: 'Products Delivered',
     icon: '/assets/product-strategy-consulting/apps-launch.svg',
+  },
+  {
+    value: '3M+',
+    label: 'Downloads',
+    icon: '/assets/product-strategy-consulting/app-downloads.svg',
   },
   {
     value: '8+',
     label: 'Strategy-First Approach',
     icon: '/assets/product-strategy-consulting/active-developer.svg',
-  },
-  {
-    value: '10M+',
-    label: 'Downloads',
-    icon: '/assets/product-strategy-consulting/app-downloads.svg',
   },
   {
     value: '4.7',
@@ -71,7 +71,7 @@ const STRATEGY_SERVICES = [
   },
   {
     title: 'Technical & Business Advisory',
-    desc: 'Product leaders regularly face decisions that extend beyond software development. Our product advisory services cover build-versus-buy evaluations, technology stack direction, vendor and platform assessments, delivery sequencing, and investment priorities, helping leadership teams make informed calls.',
+    desc: 'Product leaders regularly face decisions that extend beyond software development. Our product advisory services cover build-versus-buy evaluations, technology stack direction, vendor and platform assessments, delivery sequencing, and investment priorities, helping leadership teams make informed calls throughout the product lifecycle.',
   },
 ]
 
@@ -189,7 +189,7 @@ export default function ProductStrategyConsulting() {
   useEffect(() => {
     const title = 'Product Strategy & Consulting Services | Inceptives Digital'
     const desc =
-      'Validate Your Product Direction Before You Build. Senior-level digital product strategy, roadmap planning, architecture guidance, and market positioning.'
+      'Inceptives Digital validates product ideas, defines strategic roadmaps, and guides technical decisions before you invest in product development.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -250,7 +250,7 @@ export default function ProductStrategyConsulting() {
                 href="#contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 rounded-[10px] bg-transparent hover:bg-white/10 border border-white text-white font-medium text-sm sm:text-base transition-colors"
               >
-                Schedule A Call
+                See How We Work
               </a>
             </div>
 
@@ -392,7 +392,10 @@ export default function ProductStrategyConsulting() {
       </section>
 
       {/* 6. CASE STUDIES (Homepage Component) */}
-      <CaseStudies />
+      <CaseStudies
+        heading="Product Strategy Case Studies That Delivered Measurable Results"
+        subtitle="Explore how our consulting work has helped businesses reduce risk, clarify priorities, and build products with greater confidence."
+      />
 
       {/* 7. TESTIMONIALS (Homepage Component) */}
       <Testimonials />

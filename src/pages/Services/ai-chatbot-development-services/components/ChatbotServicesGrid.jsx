@@ -14,13 +14,13 @@ import {
 const services = [
   {
     icon: MessageSquare,
-    title: '1. Custom AI Chatbot Development',
+    title: 'Custom AI Chatbot Development',
     description:
       'Conversational systems designed around your specific business workflows, user needs, and operational requirements. Built from the architecture up, not assembled from generic components.',
   },
   {
     icon: Headphones,
-    title: '2. Customer Support Chatbots',
+    title: 'Customer Support Chatbots',
     description: (
       <>
         <Link
@@ -35,7 +35,7 @@ const services = [
   },
   {
     icon: BookOpen,
-    title: '3. Enterprise Knowledge Assistants',
+    title: 'Enterprise Knowledge Assistants',
     description: (
       <>
         <Link
@@ -50,25 +50,25 @@ const services = [
   },
   {
     icon: Mic,
-    title: '4. Voice-Enabled Chatbots and IVR Systems',
+    title: 'Voice-Enabled Chatbots and IVR Systems',
     description:
       'Conversational AI built for voice interactions, call automation, and intelligent IVR experiences. Built for products where typing is not the interface.',
   },
   {
     icon: TrendingUp,
-    title: '5. Lead Qualification and Conversational Sales Bots',
+    title: 'Lead Qualification and Conversational Sales Bots',
     description:
       'Chatbots that engage website visitors, qualify leads automatically, and connect with CRM and sales systems. Built to convert conversations into a pipeline without manual intervention.',
   },
   {
     icon: Database,
-    title: '6. RAG-Based AI Chatbots',
+    title: 'RAG-Based AI Chatbots',
     description:
       'Retrieval-augmented chatbots connected to your enterprise knowledge bases, databases, and APIs. Built for products where accuracy and source traceability are non-negotiable.',
   },
   {
     icon: Layers,
-    title: '7. Multi-Platform Chatbot Integration',
+    title: 'Multi-Platform Chatbot Integration',
     description: (
       <>
         Our{' '}
@@ -91,7 +91,7 @@ const services = [
   },
   {
     icon: SlidersHorizontal,
-    title: '8. AI Model Training and Fine-Tuning',
+    title: 'AI Model Training and Fine-Tuning',
     description:
       'LLMs and NLP models trained and fine-tuned on your domain-specific data for context-aware, personalised conversations. Built for products where a general model is not precise enough.',
   },

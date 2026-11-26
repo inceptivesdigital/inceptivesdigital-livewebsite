@@ -24,8 +24,8 @@ const STATS = [
     icon: '/assets/ui-ux-design/app-downloads.svg',
   },
   {
-    value: '4.7',
-    label: 'Clutch Rating',
+    value: 'WCAG',
+    label: 'Accessibility Compliant',
     icon: '/assets/ui-ux-design/rating.svg',
   },
 ]
@@ -193,9 +193,9 @@ const FAQS = [
 
 export default function UiUxDesign() {
   useEffect(() => {
-    const title = 'UI UX Design Services | Inceptives Digital'
+    const title = 'UI/UX Design Services for Web & Mobile Products'
     const desc =
-      'Product design for startups and growth-stage businesses. From discovery and information architecture through high-fidelity interfaces and design systems.'
+      'Inceptives Digital builds clickable, high-fidelity prototypes for investor demos, usability testing, and development validation. Test the product before a line of code is written.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -276,6 +276,9 @@ export default function UiUxDesign() {
                 Schedule A Call
               </a>
               </div>
+              <p className="text-white/60 text-[13px] font-medium tracking-wide">
+                Show us the product. We will tell you what it needs to work.
+              </p>
 
               {/* Trust / Review Badges Below CTA */}
               <div className="flex flex-wrap items-center gap-7 sm:gap-9 pt-4">
@@ -482,7 +485,10 @@ export default function UiUxDesign() {
       </section>
 
       {/* 9. TECH STACK (Homepage Component) */}
-      <TechStackTabs />
+      <TechStackTabs
+        heading="The Design Stack Behind Every Great Experience"
+        description="Every tool is selected because it closes the gap between a design decision and a development reality rather than widening it."
+      />
 
       {/* 10. EMERGING TECHNOLOGIES INFLUENCING MODERN PRODUCT DESIGN (Sticky Left + Stacking Right) */}
       <section className="w-full bg-[#000000] py-16 sm:py-20 lg:py-24">

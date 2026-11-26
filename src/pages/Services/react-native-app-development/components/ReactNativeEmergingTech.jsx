@@ -91,7 +91,7 @@ export default function ReactNativeEmergingTech() {
                 loading="lazy"
               />
               <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-2.5 leading-snug">
-                {idx + 1}. {item.title}
+                {item.title}
               </h3>
               <p className="text-white/90 text-xs sm:text-[13.5px] leading-relaxed font-normal">
                 {item.desc}

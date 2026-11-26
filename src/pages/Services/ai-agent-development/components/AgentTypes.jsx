@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 const agentTypes = [
   {
     icon: Workflow,
-    title: '1. Workflow Automation Agents',
+    title: 'Workflow Automation Agents',
     description:
       'Agents that execute multi-step operational processes, route decisions, and complete tasks across enterprise systems without manual intervention at every stage.',
     bullets: [
@@ -22,7 +22,7 @@ const agentTypes = [
   },
   {
     icon: Database,
-    title: '2. Knowledge Retrieval and RAG Agents',
+    title: 'Knowledge Retrieval and RAG Agents',
     description:
       "Agents connected to your company's knowledge base, databases, and APIs for context-aware decision support and precise information retrieval.",
     bullets: [
@@ -33,7 +33,7 @@ const agentTypes = [
   },
   {
     icon: Bot,
-    title: '3. AI Copilots and Productivity Agents',
+    title: 'AI Copilots and Productivity Agents',
     description:
       'Intelligent agents embedded into internal tools to assist teams with recommendations, task prioritisation, and workflow automation.',
     bullets: [
@@ -44,7 +44,7 @@ const agentTypes = [
   },
   {
     icon: AudioLines,
-    title: '4. Voice-Enabled Agents',
+    title: 'Voice-Enabled Agents',
     description:
       'AI agents built for voice interactions, call automation, and IVR workflows in operational contexts where real-time speech is the interface.',
     bullets: [
@@ -55,7 +55,7 @@ const agentTypes = [
   },
   {
     icon: Headset,
-    title: '5. Customer Engagement and Sales Agents',
+    title: 'Customer Engagement and Sales Agents',
     description: (
       <>
         <Link to="/ai-app-development-services">AI app development services</Link> support agents, combining intelligent automation with <Link to="/ui-ux-design">UI/UX design</Link> to engage prospects, qualify leads, and manage customer interactions across web and mobile platforms.
@@ -71,7 +71,7 @@ const agentTypes = [
   },
   {
     icon: BriefcaseBusiness,
-    title: '6. Internal Operations Agents',
+    title: 'Internal Operations Agents',
     description:
       'Agents embedded into internal systems for workflow automation, document processing, analytics, and cross-department task orchestration.',
     bullets: [

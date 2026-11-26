@@ -154,7 +154,7 @@ export default function AutomationServices() {
                 aria-hidden="true"
               />
               <h3 className="mb-3 text-lg font-bold leading-tight text-[#00CE44] transition-colors group-hover:text-black sm:text-xl">
-                {index + 1}. {title}
+                {title}
               </h3>
               <p className="text-sm leading-relaxed text-white/80 transition-colors group-hover:text-black/85">
                 {description}

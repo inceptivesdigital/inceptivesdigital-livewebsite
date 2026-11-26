@@ -10,7 +10,7 @@ const steps = [
     imageAlt: 'AI MVP discovery and scoping',
     desc: (
       <>
-        <Link to="/product-launch-strategy" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+        <Link to="/product-strategy-consulting" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
           Product strategy consulting
         </Link>{' '}
         defines the business problem, success criteria, and MVP boundaries before development begins. We leave this stage with one clearly scoped AI use case, not three, not five. One. The one worth proving.
@@ -43,7 +43,11 @@ const steps = [
     imageAlt: 'AI MVP prototype integrated in a product interface',
     desc: (
       <>
-        Through interactive prototyping, the core AI capability is integrated into a minimal product interface and tested against real data. Eight to twelve weeks. One working system that processes real inputs and produces real outputs.
+        Through{' '}
+        <Link to="/interactive-prototyping" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+          interactive prototyping
+        </Link>
+        , the core AI capability is integrated into a minimal product interface and tested against real data. Eight to twelve weeks. One working system that processes real inputs and produces real outputs.
       </>
     ),
   },

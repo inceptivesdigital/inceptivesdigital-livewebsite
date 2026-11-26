@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 const challenges = [
   {
     icon: BrainCircuit,
-    title: '1. Domain-Specific Language',
+    title: 'Domain-Specific Language',
     description:
       'Generic models trained on general text fail when applied to specialised business language. We build and fine-tune models on your domain-specific data before deployment.',
   },
   {
     icon: FileSearch,
-    title: '2. Data Quality and Preparation',
+    title: 'Data Quality and Preparation',
     description: (
       <>
         NLP systems are only as accurate as the text data behind them. We clean, structure, and prepare language datasets before{' '}
@@ -23,19 +23,19 @@ const challenges = [
   },
   {
     icon: TriangleAlert,
-    title: '3. Ambiguity and Context',
+    title: 'Ambiguity and Context',
     description:
       'Natural language is ambiguous. We build context management and disambiguation logic into NLP pipelines to handle the edge cases that break generic models.',
   },
   {
     icon: Network,
-    title: '4. Multilingual Requirements',
+    title: 'Multilingual Requirements',
     description:
       'Businesses operating across languages need NLP systems that perform consistently in every language they serve. We build multilingual pipelines from the architecture stage.',
   },
   {
     icon: ShieldCheck,
-    title: '5. Integration Complexity',
+    title: 'Integration Complexity',
     description: (
       <>
         NLP outputs need{' '}
@@ -48,7 +48,7 @@ const challenges = [
   },
   {
     icon: Activity,
-    title: '6. Model Drift and Accuracy Degradation',
+    title: 'Model Drift and Accuracy Degradation',
     description:
       'Language evolves. Business terminology changes. We build monitoring pipelines that detect accuracy degradation before it affects operational outcomes.',
   },

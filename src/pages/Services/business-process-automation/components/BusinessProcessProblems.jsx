@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const problems = [
   {
     icon: Network,
-    title: '1. Manual Work Across Systems',
+    title: 'Manual Work Across Systems',
     description:
       'Workflows require data to be entered, copied, or updated across multiple tools without a direct system connection.',
     impacts: ['Time loss across operations', 'High error probability', 'Repeated manual effort'],
@@ -12,7 +12,7 @@ const problems = [
   },
   {
     icon: RefreshCw,
-    title: '2. Repetitive Operational Work',
+    title: 'Repetitive Operational Work',
     description: (
       <>
         Daily tasks like approvals, reporting, and updates are strong candidates for{' '}
@@ -30,7 +30,7 @@ const problems = [
   },
   {
     icon: Activity,
-    title: '3. Delayed Workflow Execution',
+    title: 'Delayed Workflow Execution',
     description: (
       <>
         <Link
@@ -47,7 +47,7 @@ const problems = [
   },
   {
     icon: ShieldCheck,
-    title: '4. Inconsistent Process Execution',
+    title: 'Inconsistent Process Execution',
     description:
       'The same workflow produces different results depending on who executes it and when.',
     impacts: ['Process variation', 'Compliance risks', 'Reduced reliability'],
@@ -55,7 +55,7 @@ const problems = [
   },
   {
     icon: GitBranch,
-    title: '5. System Gaps Between Tools',
+    title: 'System Gaps Between Tools',
     description:
       'Tools operate independently, forcing teams to bridge gaps manually between platforms.',
     impacts: ['Fragmented operations', 'Duplicate work', 'Data inconsistencies'],
@@ -63,7 +63,7 @@ const problems = [
   },
   {
     icon: Users,
-    title: '6. Execution Dependency on People',
+    title: 'Execution Dependency on People',
     description: (
       <>
         <Link

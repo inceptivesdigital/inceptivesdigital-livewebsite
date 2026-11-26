@@ -8,23 +8,23 @@ import TechStackTabs from '../mobile-app-development/components/TechStackTabs'
 
 const STATS = [
   {
-    value: '150+',
-    label: 'Apps Launched',
+    value: '70+',
+    label: 'Products Delivered',
     icon: '/assets/digital-product-development/apps-launch.svg',
   },
   {
-    value: '60+',
-    label: 'Active Developers',
+    value: '3M+',
+    label: 'Downloads',
     icon: '/assets/digital-product-development/active-developer.svg',
   },
   {
-    value: '10M+',
-    label: 'App Downloads',
+    value: 'Discovery-First',
+    label: 'on Every Engagement',
     icon: '/assets/digital-product-development/app-downloads.svg',
   },
   {
     value: '4.7',
-    label: 'Rating on Clutch',
+    label: 'Clutch Rating',
     icon: '/assets/digital-product-development/rating.svg',
   },
 ]
@@ -33,27 +33,27 @@ const ENGAGEMENT_SERVICES = [
   {
     title: 'Discovery Sprint',
     icon: '/assets/digital-product-development/discovery-print.png',
-    desc: 'A structured 2-week engagement that produces a validated product roadmap, technical architecture, UX wireframes, and a phased cost estimate. The work that prevents the rebuild.',
+    desc: 'Before any development starts, the underlying assumptions need to be tested. Our Discovery Sprint uses structured research and competitive analysis to confirm direction, surface risks early, and give the founder a validated plan instead of a guess.',
   },
   {
     title: 'MVP Development',
     icon: '/assets/digital-product-development/MVP-Development.png',
-    desc: 'From validated idea to working product in 8–14 weeks. Scope is locked, architecture is proven, and the build is designed to survive the user behaviour you will discover after launch.',
+    desc: "An MVP is built to test core assumptions in the market with as little wasted effort as possible. That doesn't mean cutting corners; it means we build only what's needed to learn, while keeping the technical foundation solid enough to scale once the right signals appear.",
   },
   {
     title: 'Product Rescue & Scaling',
     icon: '/assets/digital-product-development/Product-Rescue.png',
-    desc: 'We step in where others left off. Codebase audit, architecture assessment, and a structured path forward — without starting over unless starting over is genuinely the right answer.',
+    desc: "Some products launch well but stall shortly after. Our approach starts with an audit of what's broken, what's structurally weak, and what's simply unfinished, and rebuilds from there, with a clear path toward sustainable growth rather than another quick patch.",
   },
   {
     title: 'Product Strategy & Consulting',
     icon: '/assets/digital-product-development/Product-Strategy-Consulting.png',
-    desc: 'Market positioning, feature prioritisation, go-to-market sequencing, and roadmap architecture. For products that need a clear strategic direction before engineering resources are committed.',
+    desc: "Roadmap decisions, architecture choices, and market positioning all benefit from senior input before they're locked in. We provide that input directly, so decisions get made with the right context instead of being figured out after the fact.",
   },
   {
     title: 'Custom Software Development',
     icon: '/assets/digital-product-development/Custom-Software-Development.png',
-    desc: 'Complex products that do not fit a template. Custom architecture, purpose-built integrations, and engineering standards that hold up when the product scales beyond its first release.',
+    desc: "Off-the-shelf tools don't always fit a specific market or workflow. Our team engineers custom software around the exact requirements of the business, built to perform under real operating conditions, and designed to grow as the business does.",
   },
 ]
 
@@ -61,12 +61,12 @@ const CRAFT_SERVICES = [
   {
     title: 'UI/UX Design',
     icon: '/assets/digital-product-development/UI-UX.png',
-    desc: 'Interfaces designed against real user behaviour, not design trends. High-fidelity prototypes in Figma, tested before development starts. The design work that removes doubt from the build.',
+    desc: 'Our UI/UX design process aligns user needs with product goals through thoughtful interfaces, intuitive user flows, and clear interaction patterns that support usability and long-term product adoption.',
   },
   {
     title: 'Interactive Prototyping',
     icon: '/assets/digital-product-development/Interactive-Prototyping.png',
-    desc: 'Working prototypes in Figma or Framer that show exactly how the product will behave — before the engineering budget is committed. The step that turns a concept into a decision.',
+    desc: 'We use interactive prototypes that allow us to test user journeys, evaluate key interactions, and identify usability issues before development, helping validate product decisions with greater confidence.',
   },
 ]
 
@@ -176,7 +176,7 @@ export default function DigitalProductDevelopment() {
   useEffect(() => {
     const title = 'Digital Product Development Services | Inceptives Digital'
     const desc =
-      'Products built on thinking. Not just requirements. End-to-end digital product discovery, strategy, UI/UX design, and full-scale engineering under one roof.'
+      'Inceptives Digital is a digital product development company offering strategy, design, and engineering services for founders building market-ready products.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -213,16 +213,16 @@ export default function DigitalProductDevelopment() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6 text-left space-y-5">
               <span className="inline-block text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px]">
-                Digital Product Development
+                Digital Product Development Services
               </span>
 
               <h1 className="text-[32px] sm:text-[42px] lg:text-[46px] font-bold text-white leading-[1.14] tracking-tight">
-                Products built on thinking.{' '}
-                <span className="text-[#00CE44]">Not just requirements.</span>
+                A Disciplined Approach to Building{' '}
+                <span className="text-[#00CE44]">Market-Ready Products</span>
               </h1>
 
               <p className="text-white/85 text-[15px] sm:text-[16.5px] leading-[1.68]">
-                From initial discovery and product strategy to UX/UI design and full-scale engineering, we bring every stage of product development together under one roof. Our cross-functional team collaborates from day one to eliminate silos, reduce risk, and accelerate delivery. By aligning business goals with technical execution, we build reliable, scalable digital products that launch with confidence and perform as expected the very first time.
+                Digital product development is the work of turning an idea into something people use, rely on, and pay for. That work depends less on inspiration than on process: structured research, deliberate design decisions, and engineering that holds up once real users are involved. Inceptives Digital operates as a digital product development company built around that discipline, treating every engagement as a sequence of decisions that need to be right, not just fast.
               </p>
 
               {/* Dual CTAs */}
@@ -231,14 +231,14 @@ export default function DigitalProductDevelopment() {
                   href="#contact"
                   className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#00CE44] text-black font-semibold px-6 py-3.5 text-sm sm:text-[15px] hover:bg-[#00b53c] transition-colors"
                 >
-                  <span>Start My Product Roadmap</span>
+                  <span>Start Your Product Journey</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
                   href="#contact"
                   className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-transparent text-white font-semibold px-6 py-3.5 text-sm sm:text-[15px] hover:border-[#00CE44] hover:text-[#00CE44] transition-colors"
                 >
-                  <span>Schedule A Call</span>
+                  <span>Get The Roadmap to Your Product</span>
                 </a>
               </div>
 
@@ -305,15 +305,16 @@ export default function DigitalProductDevelopment() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start text-left">
             <div className="lg:col-span-5">
               <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.18]">
-                Why Go For <span className="text-[#00CE44]">Digital Product Development</span>
+                Why the World&apos;s Fastest-Growing Companies Bet on{' '}
+                <span className="text-[#00CE44]">Digital Products</span>
               </h2>
             </div>
             <div className="lg:col-span-7 space-y-5">
               <p className="text-white text-[16px] sm:text-[18px] leading-[1.68]">
-                Most digital products fail not because of poor code, but because of a missing discovery phase. Building for requirements alone creates bloat. Building for outcomes creates value.
+                The global digital transformation market is projected to reach $14,847.91 billion by 2034. Apple generates billions annually from digital product ecosystems alone. Spotify, Notion, and Shopify scaled to billions in valuation without a single physical product.
               </p>
               <p className="text-white/85 text-[15.5px] sm:text-[17px] leading-[1.68]">
-                Inceptives Digital starts with thinking. We interrogate your assumptions, validate your market fit, and engineer systems that are architected for growth from the first line of code.
+                The pattern is consistent: rigorous digital product design and development, executed through a repeatable, outcome-driven process, is what separates category leaders from everyone else. For founders who understand that difference, the right digital product development company makes all the difference.
               </p>
             </div>
           </div>
@@ -325,8 +326,8 @@ export default function DigitalProductDevelopment() {
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8 space-y-14">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.2]">
-              Services provided by Inceptives Digital for{' '}
-              <span className="text-[#00CE44]">Digital Product Development</span>
+              Digital Product Development Services Designed to{' '}
+              <span className="text-[#00CE44]">Move Products Forward</span>
             </h2>
           </div>
 
@@ -337,7 +338,7 @@ export default function DigitalProductDevelopment() {
                 By Engagement
               </h3>
               <p className="text-white/80 text-[15px] sm:text-[16px] mt-1">
-                What you are trying to accomplish and where you are in the product journey.
+                Every engagement is designed around where a product stands today and where it needs to go.
               </p>
             </div>
 
@@ -436,7 +437,10 @@ export default function DigitalProductDevelopment() {
       </section>
 
       {/* 6. CASE STUDIES (Homepage Component) */}
-      <CaseStudies />
+      <CaseStudies
+        heading="Case Studies That Reflect the Standard"
+        subtitle="Each project below represents a real product challenge met with a thorough solution and an outcome measured against goals that mattered from the start."
+      />
 
       {/* 7. CLIENT TESTIMONIALS (Homepage Component) */}
       <Testimonials />
@@ -475,7 +479,10 @@ export default function DigitalProductDevelopment() {
       />
 
       {/* 10. TECHNOLOGY STACK */}
-      <TechStackTabs />
+      <TechStackTabs
+        heading="Technology Stack Built for Product Performance"
+        description="The right technology stack supports product performance, scalability, and long-term growth. Our development expertise spans modern frontend, backend, cloud, database, mobile, and design technologies, enabling us to build reliable digital products that evolve with changing business and user needs."
+      />
 
       {/* 11. THE DIGITAL PRODUCT DEVELOPMENT PROCESS (5 STAGES TIMELINE) */}
       <section className="w-full bg-[#151515] py-16 sm:py-20 lg:py-24">

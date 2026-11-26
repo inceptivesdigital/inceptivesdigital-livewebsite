@@ -10,32 +10,32 @@ const EXPERTISE_CARDS = [
   {
     title: 'Software Consulting',
     icon: '/assets/custom-software-development/software1.svg',
-    desc: 'We provide strategic consulting to set specific goals and document a customized project plan to ensure that all steps of development align with your business objectives and strategies. Our service is aimed at reducing risks and increasing ROI.',
+    desc: 'Make confident technology decisions with strategic consulting, solution architecture, feasibility analysis, and technology roadmaps that reduce risk before development begins.',
   },
   {
     title: 'Full-Stack Development',
     icon: '/assets/custom-software-development/software2.svg',
-    desc: 'We successfully deliver robust, agile, and high-performing software solutions across the entire web application lifecycle. Our end-to-end full-stack development ensures successful software delivery.',
+    desc: 'Build scalable web applications with modern frontend frameworks, robust backend systems, APIs, and cloud-native architecture designed for long-term growth.',
   },
   {
     title: 'Product Design',
     icon: '/assets/custom-software-development/software3.svg',
-    desc: 'We specialize in creating creative, visually attractive, and intuitive user interfaces. Each design representation that we create is checked in terms of the user to ensure the user-first designs are able to satisfy and exceed expectations.',
+    desc: 'Transform complex business requirements into intuitive digital experiences through UX research, information architecture, wireframes, and user-centered interface design.',
   },
   {
     title: 'MVP Development',
     icon: '/assets/custom-software-development/software4.svg',
-    desc: 'Launch faster and smarter with our MVP development services. We help you validate ideas, attract early adopters, and scale efficiently by building lean, functional products that evolve with your vision.',
+    desc: 'Launch faster with an MVP focused on validating your idea, gathering user feedback, and creating a scalable foundation for future product iterations.',
   },
   {
     title: 'API Development',
     icon: '/assets/custom-software-development/software5.svg',
-    desc: 'We design and implement secure, reliable APIs that seamlessly connect your software with third-party platforms. This ensures interoperability, efficiency, and a connected business ecosystem.',
+    desc: 'Connect applications, third-party platforms, and internal systems through secure REST APIs, GraphQL services, and event-driven integrations that keep data flowing reliably.',
   },
   {
     title: 'Custom CRM Development',
     icon: '/assets/custom-software-development/software6.svg',
-    desc: 'Our custom CRM development team builds customized CRM solutions that make support, sales, and marketing processes smooth, resulting in optimized customer relations, helping your business generate leads, improve engagement, and boost sales.',
+    desc: 'Develop CRM solutions tailored to your sales, marketing, and customer service workflows, giving your teams a centralized platform for managing relationships and business growth.',
   },
 ]
 
@@ -166,7 +166,7 @@ const ENGAGEMENT_MODELS = [
     desc: 'Entrust your entire software development lifecycle to our team, from product strategy and engineering to deployment and long-term support.',
   },
   {
-    title: 'Dedicated Software Development Team',
+    title: 'Dedicated Development Team',
     desc: 'Extend your business with a dedicated team of designers, developers, QA engineers, and project managers focused exclusively on your product.',
   },
   {
@@ -204,36 +204,36 @@ const PRODUCT_THINKING = [
 
 const FAQS = [
   {
-    q: 'What are custom software development services?',
-    a: 'Custom software development is the end-to-end process of designing, building, deploying, and maintaining software tailored specifically to your business workflows, users, and growth goals rather than relying on generic off-the-shelf tools.',
+    q: 'Q1. How much do custom software development services cost?',
+    a: "The cost depends on your project's scope, complexity, features, integrations, and infrastructure requirements. We provide a tailored estimate after understanding your business needs.",
   },
   {
-    q: 'How is custom software different from off-the-shelf software?',
-    a: 'Off-the-shelf software forces your team to adapt to fixed features and recurring per-seat licensing. Custom software is architected around your exact operations, integrates seamlessly with your existing stack, and gives you full IP ownership.',
+    q: 'Q2. How long does it take to develop custom software?',
+    a: "Most MVPs take 2–4 months, while enterprise software projects typically require 6 months or more, depending on the project's complexity and requirements.",
   },
   {
-    q: 'How much does custom software development cost?',
-    a: 'A focused MVP or proof-of-concept typically starts from $15,000–$25,000. Full production enterprise or multi-platform systems generally range from $50,000 to $200,000+, scoped accurately during Discovery.',
+    q: 'Q3. How do you ensure the software fits our business?',
+    a: 'We begin with product discovery to understand your workflows, users, and business goals before defining the architecture and development roadmap.',
   },
   {
-    q: 'How long does it take to build custom software?',
-    a: 'An MVP or focused internal system typically takes 8–12 weeks, while complex enterprise platforms with integrations and compliance requirements take 3–6+ months depending on scope.',
+    q: 'Q4. Can you integrate custom software with our existing systems?',
+    a: 'Yes. We develop secure APIs and integrations that connect your software with CRMs, ERPs, payment gateways, cloud platforms, and other third-party systems.',
   },
   {
-    q: 'Can custom software integrate with our existing systems?',
-    a: 'Yes. We design secure APIs and integration layers to connect seamlessly with your CRM, ERP, payment gateways, databases, analytics tools, and third-party cloud platforms.',
+    q: 'Q5. Can you modernize or replace legacy software?',
+    a: 'Absolutely. We modernize outdated applications by improving performance, security, scalability, and user experience while minimizing business disruption.',
   },
   {
-    q: 'What engagement models do you offer?',
-    a: 'We offer full-cycle Software Development Outsourcing, Dedicated Software Development Teams, and Staff Augmentation depending on whether you want turnkey delivery or embedded engineering capacity.',
+    q: 'Q6. Do you provide post-launch support?',
+    a: 'Yes. We offer maintenance, monitoring, security updates, performance optimization, and continuous feature enhancements after launch.',
   },
   {
-    q: 'Do we own the source code and intellectual property?',
-    a: 'Yes. You retain 100% ownership of the source code, architecture documentation, design assets, and intellectual property upon delivery.',
+    q: 'Q7. How do you keep custom software secure?',
+    a: 'We follow secure development practices, including encrypted data, role-based access control, secure authentication, regular testing, and compliance with standards such as GDPR and HIPAA where applicable.',
   },
   {
-    q: 'How do we get started on a custom software project?',
-    a: 'Start with a free consultation and Discovery Sprint to align on business goals, technical architecture, timeline, and budget before engineering begins.',
+    q: 'Q8. Why choose Inceptives Digital for custom software development?',
+    a: 'We combine product strategy, design, engineering, and long-term support to build software that solves real business challenges and continues to create value long after launch.',
   },
 ]
 
@@ -241,9 +241,9 @@ export default function CustomSoftwareDevelopment() {
   const [activeStage, setActiveStage] = useState(0)
 
   useEffect(() => {
-    const title = 'End-to-End Custom Software Development Services | Inceptives Digital'
+    const title = 'Custom Software Development Services | Inceptives Digital'
     const desc =
-      'Top-tier custom software development company with 8+ years of experience and 70+ custom solutions delivered across 20+ industries.'
+      'Launch secure, scalable software with Inceptives Digital. Custom software development services built around your business, users, and future growth.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -282,12 +282,15 @@ export default function CustomSoftwareDevelopment() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/50 to-transparent pointer-events-none" />
         <div className="relative z-10 w-full max-w-[1220px] mx-auto px-6 sm:px-8 text-center flex flex-col items-center space-y-5">
           <h1 className="text-[32px] sm:text-[42px] lg:text-[46px] font-bold text-white leading-[1.14] tracking-tight max-w-4xl">
-            End-to-End{' '}
             <span className="text-[#00CE44]">Custom Software Development</span> Services
           </h1>
 
+          <h2 className="text-[20px] sm:text-[24px] lg:text-[28px] font-semibold text-white/95 leading-[1.25] max-w-3xl">
+            Software Should Fit Your Business, Not the Other Way Around
+          </h2>
+
           <p className="text-white/90 text-[15px] sm:text-[17px] leading-[1.68] max-w-3xl">
-            We are a top-tier custom software development company with 8+ years of experience accumulated and delivered 70+ custom solutions across 20+ industries. From initiation to deployment, we follow a comprehensive process to develop custom solutions specific to your business and market requirements.
+            Every business has workflows that off-the-shelf software can&apos;t support. We build custom software that simplifies operations, connects your systems, and gives your teams the tools they need to work smarter, scale faster, and adapt as your business evolves.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -311,11 +314,14 @@ export default function CustomSoftwareDevelopment() {
       {/* 2. OUR EXPERTISE IN CUSTOM SOFTWARE DEVELOPMENT SERVICES (6 Cards) */}
       <section className="w-full bg-[#151515] py-16 sm:py-20 lg:py-24">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8 text-left">
-          <div className="max-w-3xl mb-10 sm:mb-12">
+          <div className="max-w-3xl mb-10 sm:mb-12 space-y-3">
             <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.18]">
-              Our Expertise in{' '}
-              <span className="text-[#00CE44]">Custom Software Development</span> Services
+              Software Development Services Designed for{' '}
+              <span className="text-[#00CE44]">Complex Business Operations</span>
             </h2>
+            <p className="text-white/80 text-[15px] sm:text-[16px] leading-relaxed">
+              Purpose-built custom software development services designed around your workflows, users, and long-term business goals.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
@@ -404,10 +410,10 @@ export default function CustomSoftwareDevelopment() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6 text-left space-y-5">
               <h2 className="text-[28px] sm:text-[36px] lg:text-[40px] font-bold text-white leading-[1.18]">
-                Start Your Custom Software Journey With Inceptives Digital Today
+                Let&apos;s Build the Software Your Business Actually Needs
               </h2>
               <p className="text-white/85 text-[15px] sm:text-[16px] leading-[1.68]">
-                We provide strategic consulting to set specific goals and document a customized project plan to ensure that all steps of development align with your business objectives and strategies. Our service is aimed at reducing risks and increasing ROI.
+                No unnecessary features. No rigid templates. Just software designed around the way your business works.
               </p>
               <div className="pt-1">
                 <a
@@ -560,10 +566,13 @@ export default function CustomSoftwareDevelopment() {
       {/* 9. EMERGING TECH (Pure Black Background + Centered Heading + 6 Cards with Green BadgeCheck) */}
       <section className="w-full bg-[#000000] py-16 sm:py-20 lg:py-24">
         <div className="w-full max-w-[1220px] mx-auto px-6 sm:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
             <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.18]">
               Custom Software Development Powered by Emerging Tech
             </h2>
+            <p className="text-white/85 text-[14.5px] sm:text-[15.5px] leading-relaxed">
+              Emerging technologies integrated into custom software that helps businesses innovate, automate, and scale.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-left">
@@ -640,7 +649,7 @@ export default function CustomSoftwareDevelopment() {
               Custom Software Development Built on Product Thinking
             </h2>
             <p className="text-white/85 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-              We are a custom software development company with 70+ dynamic and unique projects delivered, that too with a 100% client satisfaction rate.
+              Great software is shaped by the decisions made before, during, and after development. That&apos;s why every project is guided by product thinking, engineering excellence, and long-term partnership.
             </p>
           </div>
 
@@ -684,7 +693,7 @@ export default function CustomSoftwareDevelopment() {
       </section>
 
       {/* 16. FAQS (Homepage Component) */}
-      <FAQSection faqs={FAQS} heading="Frequently Asked Questions" />
+      <FAQSection faqs={FAQS} heading="Custom Software Development FAQs" />
     </div>
   )
 }

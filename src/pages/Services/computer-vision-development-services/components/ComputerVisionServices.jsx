@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: Eye,
-    title: '1. Custom Computer Vision Development',
+    title: 'Custom Computer Vision Development',
     description: (
       <>
         Our{' '}
@@ -36,31 +36,31 @@ const services = [
   },
   {
     icon: ScanSearch,
-    title: '2. Object Detection and Recognition Systems',
+    title: 'Object Detection and Recognition Systems',
     description:
       'ML models that identify, locate, and classify objects within images and video streams in real time. Built for products and operations where visual recognition drives decisions.',
   },
   {
     icon: Tags,
-    title: '3. Image Classification and Tagging',
+    title: 'Image Classification and Tagging',
     description:
       'Deep learning models that categorise and tag images at scale. Built for products that need to organise, search, and retrieve visual content without manual labelling.',
   },
   {
     icon: ShieldCheck,
-    title: '4. Visual Inspection and Quality Control',
+    title: 'Visual Inspection and Quality Control',
     description:
       'Computer vision systems that detect defects, anomalies, and quality issues in products, components, and materials. Built for manufacturing and operational environments where human inspection cannot keep up with volume.',
   },
   {
     icon: UserCheck,
-    title: '5. Face Recognition and Identity Verification',
+    title: 'Face Recognition and Identity Verification',
     description:
       'ML models that identify, verify, and authenticate individuals from images and video. Built for security, access control, and identity verification systems with enterprise-grade accuracy requirements.',
   },
   {
     icon: Video,
-    title: '6. Video Analysis and Real-Time Monitoring',
+    title: 'Video Analysis and Real-Time Monitoring',
     description: (
       <>
         Computer vision pipelines process video streams, trigger{' '}
@@ -83,13 +83,13 @@ const services = [
   },
   {
     icon: HeartPulse,
-    title: '7. Medical Image Analysis',
+    title: 'Medical Image Analysis',
     description:
       'Deep learning models that analyse medical images for diagnostic support, anomaly detection, and clinical data extraction. Built for healthcare products where accuracy and compliance are non-negotiable.',
   },
   {
     icon: Network,
-    title: '8. Computer Vision Integration Services',
+    title: 'Computer Vision Integration Services',
     description: (
       <>
         <Link

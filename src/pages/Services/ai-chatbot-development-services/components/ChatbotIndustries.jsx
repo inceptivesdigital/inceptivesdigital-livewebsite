@@ -12,7 +12,7 @@ import {
 const industries = [
   {
     icon: HeartPulse,
-    title: '1. Healthcare',
+    title: 'Healthcare',
     to: '/healthcare-app-development',
     bullets: [
       'Patient assistance and symptom triage chatbots',
@@ -22,7 +22,7 @@ const industries = [
   },
   {
     icon: Landmark,
-    title: '2. Financial Services',
+    title: 'Financial Services',
     to: '/fintech-app-development',
     bullets: [
       'Fraud detection alerts and risk notifications',
@@ -32,7 +32,7 @@ const industries = [
   },
   {
     icon: ShoppingCart,
-    title: '3. Ecommerce and Retail',
+    title: 'Ecommerce and Retail',
     to: '/ecommerce-app-development-company',
     bullets: [
       'Product recommendations and personalisation',
@@ -42,7 +42,7 @@ const industries = [
   },
   {
     icon: GraduationCap,
-    title: '4. Education',
+    title: 'Education',
     to: '/education-app-development-company',
     bullets: [
       'Virtual tutoring and personalised learning paths',
@@ -52,7 +52,7 @@ const industries = [
   },
   {
     icon: Plane,
-    title: '5. Travel and Hospitality',
+    title: 'Travel and Hospitality',
     to: '/travel-app-development-company',
     bullets: [
       'Booking and itinerary assistance',
@@ -62,7 +62,7 @@ const industries = [
   },
   {
     icon: Briefcase,
-    title: '6. Enterprise Productivity',
+    title: 'Enterprise Productivity',
     to: '#contact',
     bullets: [
       'Knowledge retrieval and documentation assistance',

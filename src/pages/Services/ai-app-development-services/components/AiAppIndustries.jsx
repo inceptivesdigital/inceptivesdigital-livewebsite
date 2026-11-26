@@ -13,7 +13,7 @@ import {
 const industries = [
   {
     icon: HeartPulse,
-    title: '1. Healthcare',
+    title: 'Healthcare',
     to: '/healthcare-app-development',
     bullets: [
       'Clinical workflow apps',
@@ -23,7 +23,7 @@ const industries = [
   },
   {
     icon: Landmark,
-    title: '2. Fintech',
+    title: 'Fintech',
     to: '/fintech-app-development',
     bullets: [
       'Fraud detection apps',
@@ -33,7 +33,7 @@ const industries = [
   },
   {
     icon: ShoppingCart,
-    title: '3. Ecommerce',
+    title: 'Ecommerce',
     to: '/ecommerce-app-development-company',
     bullets: [
       'Personalisation engines',
@@ -43,7 +43,7 @@ const industries = [
   },
   {
     icon: GraduationCap,
-    title: '4. Education',
+    title: 'Education',
     to: '/education-app-development-company',
     bullets: [
       'Intelligent tutoring platforms',
@@ -53,7 +53,7 @@ const industries = [
   },
   {
     icon: Building2,
-    title: '5. Real Estate',
+    title: 'Real Estate',
     to: '/real-estate-app-development-company',
     bullets: [
       'AI-based property valuation',
@@ -63,7 +63,7 @@ const industries = [
   },
   {
     icon: Plane,
-    title: '6. Travel',
+    title: 'Travel',
     to: '/travel-app-development-company',
     bullets: [
       'Booking and itinerary apps',
@@ -73,7 +73,7 @@ const industries = [
   },
   {
     icon: Dumbbell,
-    title: '7. Fitness',
+    title: 'Fitness',
     to: '/fitness-app-development',
     bullets: [
       'Workout recommendation engines',

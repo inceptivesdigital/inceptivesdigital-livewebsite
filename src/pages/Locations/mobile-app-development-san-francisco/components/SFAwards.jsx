@@ -1,37 +1,37 @@
 export default function SFAwards() {
   const awards = [
     {
-      title: '1. SoftwareWorld: Customer Choice 2026',
+      title: 'SoftwareWorld: Customer Choice 2026',
       org: 'SoftwareWorld',
       logoSrc: '/assets/ios-app/top-rated-logo-1024x1024.png',
       desc: 'SoftwareWorld awards Inceptives Digital its 2026 Customer Choice badge, so San Francisco teams gain another outside signal when they shortlist a mobile app partner.',
     },
     {
-      title: '2. Clutch — Top iPhone App Development Company 2026',
+      title: 'Clutch — Top iPhone App Development Company 2026',
       org: 'Clutch',
       logoSrc: '/assets/ios-app/iPhone_App_Development_Companies_in_the_United_States.png',
       desc: 'National recognition for iPhone app development expertise, including native iOS applications and Apple-focused engineering capabilities.',
     },
     {
-      title: '3. RightFirms — Mobile App Development 2026',
+      title: 'RightFirms — Mobile App Development 2026',
       org: 'RightFirms',
       logoSrc: '/assets/ios-app/rf-badge-top-mobile-app-development-2026-982x1024.png',
       desc: "Recognized in RightFirms' mobile app development category, covering custom applications for businesses across different industries and product requirements.",
     },
     {
-      title: '4. RightFirms — Artificial Intelligence 2026',
+      title: 'RightFirms — Artificial Intelligence 2026',
       org: 'RightFirms',
       logoSrc: '/assets/awards-images/award-rightfirms.png',
       desc: 'Recognition in artificial intelligence services, complementing our experience with LLM integrations, intelligent automation, and AI-enabled mobile applications.',
     },
     {
-      title: '5. SoftwareSuggest — Top Mobile App Development Company 2025',
+      title: 'SoftwareSuggest — Top Mobile App Development Company 2025',
       org: 'SoftwareSuggest',
       logoSrc: '/assets/ios-app/top-mobile-app-development-company-2025.png',
       desc: 'Recognized by SoftwareSuggest in its mobile app development category, providing an additional industry credential for prospective clients.',
     },
     {
-      title: '6. SoftwareWorld: Top Rated 2026',
+      title: 'SoftwareWorld: Top Rated 2026',
       org: 'SoftwareWorld',
       logoSrc: '/assets/ai-development/top-rated-logo.png',
       desc: 'SoftwareWorld names Inceptives Digital Top Rated for 2026, giving San Francisco businesses an independent credential to weigh when they compare app development partners.',

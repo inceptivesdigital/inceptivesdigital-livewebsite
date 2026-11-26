@@ -108,11 +108,16 @@ const FRAMEWORK_STAGES = [
   },
   {
     stage: 'STAGE 04',
+    title: 'Quality Assurance & Launch',
+    desc: 'Every release goes through structured functional, performance, and regression testing before deployment. Nothing ships to a deadline. It ships when it is ready to perform under real usage conditions.',
+  },
+  {
+    stage: 'STAGE 05',
     title: 'Measure & Learn',
     desc: 'Post-launch behavioural analytics, user feedback, and performance data are reviewed to determine what the product has confirmed, what it has not, and what that means for the next stage.',
   },
   {
-    stage: 'STAGE 05',
+    stage: 'STAGE 06',
     title: 'Scale with Confidence',
     desc: 'Insights from the measure stage drive roadmap updates, architecture improvements, and new feature development, ensuring every decision at scale carries the same evidence-based rigour as the build itself.',
   },
@@ -171,7 +176,7 @@ const TIMELINE_PHASES = [
 const COST_TIERS = [
   {
     title: 'Basic MVP',
-    price: '$15,000 – $50,000',
+    price: '$15,000 to $50,000',
     features: [
       'Single platform, core user flows only',
       'Single database architecture, relational or NoSQL',
@@ -181,7 +186,7 @@ const COST_TIERS = [
   },
   {
     title: 'Mid-Complexity MVP',
-    price: '$50,000 – $150,000',
+    price: '$50,000 to $150,000',
     features: [
       'Web and mobile, up to 40 API endpoints',
       'Multi-database architecture with caching layer',
@@ -191,7 +196,7 @@ const COST_TIERS = [
   },
   {
     title: 'Complex MVP',
-    price: '$150,000 – $300,000+',
+    price: '$150,000 to $300,000+',
     features: [
       'AI capabilities, compliance infrastructure, or marketplace logic',
       'Multi-platform delivery across web, iOS, and Android',
@@ -254,9 +259,9 @@ const FAQS = [
 
 export default function MvpDevelopment() {
   useEffect(() => {
-    const title = 'MVP Development Services | Inceptives Digital'
+    const title = 'MVP Development Services for Startups | Inceptives Digital'
     const desc =
-      'Where Product Ideas Become Validated Decisions. Disciplined MVP development aligning assumptions, user needs, and scalable technical architecture.'
+      'MVP development services built around validation. Senior-led teams, scalable architecture, and a structured process from discovery to launch. Talk to us today.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -553,7 +558,7 @@ export default function MvpDevelopment() {
         <div className="absolute inset-0 bg-black/75 pointer-events-none" />
         <div className="relative z-10 w-full max-w-[1220px] mx-auto px-6 sm:px-8 text-center space-y-5">
           <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.2] max-w-3xl mx-auto">
-            Know Whether Your Product Is{' '}
+            Know Whether Your Idea Is{' '}
             <span className="text-[#00CE44]">Ready for an MVP</span>
           </h2>
           <p className="text-white/85 text-[16px] sm:text-[18px] max-w-2xl mx-auto">
@@ -609,7 +614,7 @@ export default function MvpDevelopment() {
               The Framework Behind Every Successful MVP Development
             </h2>
             <p className="text-white/85 text-[14.5px] sm:text-[15.5px] leading-relaxed">
-              Every MVP development engagement at Inceptives Digital follows a structured process, where each stage builds directly on the one before it and informs everything that follows.
+              Every MVP development engagement at Inceptives Digital follows a structured six-stage process, where each stage builds directly on the one before it and informs everything that follows.
             </p>
           </div>
 
@@ -700,7 +705,7 @@ export default function MvpDevelopment() {
       </section>
 
       {/* 11. CASE STUDIES (Homepage Component) */}
-      <CaseStudies />
+      <CaseStudies heading="Case Studies That Prove Our Approach to MVP Development" />
 
       {/* 12. TESTIMONIALS (Homepage Component) */}
       <Testimonials />

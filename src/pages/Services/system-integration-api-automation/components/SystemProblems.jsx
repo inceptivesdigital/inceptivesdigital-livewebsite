@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const problems = [
   {
     icon: Database,
-    title: '1. Manual Data Transfer Between Systems',
+    title: 'Manual Data Transfer Between Systems',
     description:
       'Data is repeatedly copied between applications like CRM, ERP, and internal tools without direct system communication.',
     impacts: ['Time-consuming operations', 'High error rates', 'Delayed updates across systems'],
@@ -12,7 +12,7 @@ const problems = [
   },
   {
     icon: Network,
-    title: '2. Fragmented Application Ecosystems',
+    title: 'Fragmented Application Ecosystems',
     description:
       'Business tools operate in isolation, creating disconnected workflows across departments.',
     impacts: ['Operational silos', 'Duplicate work', 'Inconsistent data across platforms'],
@@ -20,7 +20,7 @@ const problems = [
   },
   {
     icon: RefreshCw,
-    title: '3. Delayed Data Synchronization',
+    title: 'Delayed Data Synchronization',
     description:
       'Critical business data is updated manually or in batches instead of real time.',
     impacts: ['Outdated reporting', 'Slow decision-making', 'Misaligned operations'],
@@ -28,7 +28,7 @@ const problems = [
   },
   {
     icon: GitBranch,
-    title: '4. Integration Dependency on Manual Work',
+    title: 'Integration Dependency on Manual Work',
     description: (
       <>
         Teams often rely on exports, imports, and manual system interactions where{' '}
@@ -57,7 +57,7 @@ const problems = [
   },
   {
     icon: ShieldCheck,
-    title: '5. Inconsistent Data Across Platforms',
+    title: 'Inconsistent Data Across Platforms',
     description:
       'Different systems store different versions of the same data, creating operational mismatches.',
     impacts: ['Reporting inconsistencies', 'Compliance risks', 'Data integrity issues'],
@@ -65,7 +65,7 @@ const problems = [
   },
   {
     icon: Activity,
-    title: '6. Lack of Workflow Connectivity',
+    title: 'Lack of Workflow Connectivity',
     description:
       'Processes are split across multiple tools without an automated flow between steps.',
     impacts: ['Broken workflows', 'Manual handoffs', 'Reduced operational efficiency'],

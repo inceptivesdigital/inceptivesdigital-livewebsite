@@ -3,55 +3,55 @@ import React from 'react'
 const services = [
   {
     number: '01',
-    title: '1. Custom Real Estate Mobile App Development',
+    title: 'Custom Real Estate Mobile App Development',
     description:
       'Our real estate mobile app development services extend property operations to iOS and Android. From brokerage-specific interfaces to tenant applications, we engineer mobile products that work with your existing business infrastructure.',
   },
   {
     number: '02',
-    title: '2. Property Search & Listing App Development',
+    title: 'Property Search & Listing App Development',
     description:
       'Give property seekers a faster route from discovery to inquiry. Our listing applications combine authorized MLS/IDX data with location-aware search, keeping availability accurate as brokers update properties across connected systems.',
   },
   {
     number: '03',
-    title: '3. Real Estate Marketplace App Development',
+    title: 'Real Estate Marketplace App Development',
     description:
       'A marketplace must support independent listing owners without losing operational control. We engineer property platforms with seller onboarding and moderated listings, while accommodating your subscription or commission-based revenue model.',
   },
   {
     number: '04',
-    title: '4. Property Management & Tenant App Development',
+    title: 'Property Management & Tenant App Development',
     description:
       'For property managers handling growing portfolios, scattered tenant requests create expensive administrative work. Our real estate software development services connect lease records with maintenance operations through a shared management environment.',
   },
   {
     number: '05',
-    title: '5. Real Estate CRM & Agent App Development',
+    title: 'Real Estate CRM & Agent App Development',
     description:
       'Keep every property inquiry connected to the agent responsible for closing it. We build CRM-linked applications that carry lead history into viewing schedules, giving brokerage teams visibility across active sales opportunities.',
   },
   {
     number: '06',
-    title: '6. AI-Powered Real Estate App Development',
+    title: 'AI-Powered Real Estate App Development',
     description:
       'Bring intelligent property matching into products where search relevance affects user engagement. Our AI-powered real estate apps also support valuation workflows, using suitable market datasets and models evaluated against business requirements.',
   },
   {
     number: '07',
-    title: '7. Real Estate Investment App Development',
+    title: 'Real Estate Investment App Development',
     description:
       'Investment platforms need to make property performance visible before an acquisition decision. We develop applications that calculate rental yields and track portfolio returns, with data integrations suited to your investment strategy.',
   },
   {
     number: '08',
-    title: '8. Virtual Tour & 3D Real Estate App Development',
+    title: 'Virtual Tour & 3D Real Estate App Development',
     description:
       'Make remote property evaluation part of the actual sales journey. We integrate interactive tours into listing applications, giving buyers a closer look at layouts before committing time to an in-person viewing.',
   },
   {
     number: '09',
-    title: '9. Real Estate Developer & Buyer Portal Development',
+    title: 'Real Estate Developer & Buyer Portal Development',
     description:
       'Give property developers a single place to manage unit availability and buyer reservations. Our portals connect sales teams with current project inventory, keeping customer-facing updates aligned with actual project status.',
   },

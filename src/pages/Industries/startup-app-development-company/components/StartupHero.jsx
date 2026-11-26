@@ -3,7 +3,7 @@ import HeroTrustBadges from '../../../../components/HeroTrustBadges'
 
 export default function StartupHero() {
   return (
-    <section className="relative w-full bg-[#000000] text-white overflow-hidden pt-28 pb-14 lg:pt-36 lg:pb-0">
+    <section className="relative w-full bg-[#000000] text-white overflow-hidden pt-28 pb-14 lg:h-screen lg:min-h-screen lg:py-0 flex items-center">
       {/* Subtle Ambient Glow */}
       <div
         className="pointer-events-none absolute -top-24 right-0 w-[620px] h-[620px] rounded-full opacity-20 blur-[140px]"
@@ -13,18 +13,18 @@ export default function StartupHero() {
         }}
       />
 
-      {/* Right Large Hero Visual (Desktop) */}
-      <div className="hidden lg:flex items-end justify-end pointer-events-none absolute inset-y-0 right-0 w-[50%] xl:w-[52%] pr-4 xl:pr-10 pt-20">
+      {/* Right Large Hero Visual Fixed to Bottom-Right (Desktop) */}
+      <div className="hidden lg:flex items-end justify-end pointer-events-none absolute bottom-0 right-0 w-[52%] xl:w-[50%] h-full pt-24 pr-0">
         <img
           src="/assets/cross-platform/crossnew-banner.png"
           alt="Startup App Development Company Showcase"
-          className="w-full max-w-[740px] max-h-[640px] object-contain object-bottom drop-shadow-[0_24px_60px_rgba(0,206,68,0.18)]"
+          className="w-full max-w-[820px] xl:max-w-[920px] max-h-[84vh] xl:max-h-[88vh] object-contain object-right-bottom"
           loading="eager"
         />
       </div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20">
-        <div className="w-full lg:w-[54%] xl:w-[52%] flex flex-col items-start text-left lg:pb-24">
+        <div className="w-full lg:w-[54%] xl:w-[52%] flex flex-col items-start text-left">
           <h1 className="text-[#00CE44] text-[13.5px] sm:text-[15px] font-semibold leading-[1.35] tracking-[1px] block mb-3">
             Startup App Development Company
           </h1>

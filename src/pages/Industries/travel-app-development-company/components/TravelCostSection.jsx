@@ -2,7 +2,7 @@ import React from 'react';
 
 const tiers = [
   {
-    title: '1. Foundation App',
+    title: 'Foundation App',
     subtitle:
       'For startups and travel businesses launching a focused booking or itinerary platform.',
     cost: '$20,000 – $35,000',
@@ -16,7 +16,7 @@ const tiers = [
     ],
   },
   {
-    title: '2. Advanced Travel Platform',
+    title: 'Advanced Travel Platform',
     subtitle:
       'For travel companies managing bookings, traveler engagement, and multi-service experiences.',
     cost: '$35,000 – $70,000',
@@ -30,7 +30,7 @@ const tiers = [
     ],
   },
   {
-    title: '3. Enterprise App',
+    title: 'Enterprise App',
     subtitle:
       'For travel enterprises building intelligent platforms with AI, automation, and large-scale integrations.',
     cost: '$80,000 – $160,000+',

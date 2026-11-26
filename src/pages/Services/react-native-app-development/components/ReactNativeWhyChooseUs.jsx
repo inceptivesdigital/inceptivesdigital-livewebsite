@@ -188,7 +188,7 @@ export default function ReactNativeWhyChooseUs() {
                   />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-[#00CE44] mb-2.5 leading-snug">
-                  {idx + 1}. {p.title}
+                  {p.title}
                 </h3>
                 <p className="text-white/90 text-xs sm:text-[14px] leading-relaxed font-normal">
                   {p.desc}

@@ -4,55 +4,55 @@ import { SolidIcon } from './StartupSolidIcons'
 const services = [
   {
     icon: 'rocket',
-    title: '1. MVP App Development',
+    title: 'MVP App Development',
     description:
       'A working, investor-ready application stripped to its highest-impact core. Architecture designed to scale without a full rebuild. Delivered in 6 to 10 weeks from signed specification to deployment.',
   },
   {
     icon: 'smartphone',
-    title: '2. Custom Mobile App Development',
+    title: 'Custom Mobile App Development',
     description:
       'Native iOS, native Android, and cross-platform mobile applications built with React Native and Flutter. Optimised for performance, device-specific UX, and App Store approval from the first submission.',
   },
   {
     icon: 'cart',
-    title: '3. eCommerce App Development',
+    title: 'eCommerce App Development',
     description:
       'High-converting ecommerce applications with advanced product discovery, frictionless checkout, multi-currency payment gateways, and AI-driven personalisation. Built for the specific commerce model your startup is building around.',
   },
   {
     icon: 'cloud',
-    title: '4. SaaS Application Development',
+    title: 'SaaS Application Development',
     description:
       'Multi-tenant SaaS platforms with subscription billing engines, role-based access control, and API-first backends. Engineered to grow from your first 100 users to your first 100,000 without re-platforming.',
   },
   {
     icon: 'globe',
-    title: '5. Web App Development',
+    title: 'Web App Development',
     description:
       "Fast-loading, SEO-friendly, and device-agnostic web applications built across React, Next.js, Vue, and Node.js. Framework selected based on your product's specific performance and scalability requirements.",
   },
   {
     icon: 'design',
-    title: '6. UI/UX Design and Prototyping',
+    title: 'UI/UX Design and Prototyping',
     description:
       'Data-informed interface architecture from clickable Figma prototypes to full design systems. Built to reduce user drop-off, increase session depth, and make investor demos land with conviction.',
   },
   {
     icon: 'server',
-    title: '7. Backend and API Development',
+    title: 'Backend and API Development',
     description:
       'RESTful and GraphQL APIs, microservices architectures, and real-time event-driven systems built on Node.js, Python, and Go. The invisible engine that keeps your product reliable under any load.',
   },
   {
     icon: 'refresh',
-    title: '8. App Modernisation and Re-engineering',
+    title: 'App Modernisation and Re-engineering',
     description:
       'Legacy applications migrated to cloud-native, modular platforms. Business logic preserved. Technical debt eliminated. Features unlocked that your current stack cannot support without a ground-up rebuild.',
   },
   {
     icon: 'trending',
-    title: '9. Post-Launch Support and Growth Engineering',
+    title: 'Post-Launch Support and Growth Engineering',
     description:
       'Performance monitoring, feature iteration, security patching, A/B testing, and analytics-driven optimisation are delivered as a continuous engagement. The product that launches is the starting point, not the finished state.',
   },

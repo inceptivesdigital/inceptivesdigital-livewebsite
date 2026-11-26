@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const problems = [
   {
     icon: FileText,
-    title: '1. High-Volume Repetitive Tasks',
+    title: 'High-Volume Repetitive Tasks',
     description: (
       <>
         High-volume processes such as data entry, document processing, and report generation are strong candidates for{' '}
@@ -20,7 +20,7 @@ const problems = [
   },
   {
     icon: Timer,
-    title: '2. Slow Decision-Making',
+    title: 'Slow Decision-Making',
     description: (
       <>
         <Link
@@ -35,13 +35,13 @@ const problems = [
   },
   {
     icon: ShieldCheck,
-    title: '3. Human Error in Critical Processes',
+    title: 'Human Error in Critical Processes',
     description:
       'Manual processes introduce inconsistency and error into workflows where accuracy is non-negotiable. Payroll, compliance, and financial operations cannot afford mistakes.',
   },
   {
     icon: TrendingUp,
-    title: '4. Inability to Scale Operations',
+    title: 'Inability to Scale Operations',
     description: (
       <>
         Manual processes do not scale. Adding volume often means adding headcount, while{' '}
@@ -57,7 +57,7 @@ const problems = [
   },
   {
     icon: Network,
-    title: '5. Disconnected Systems and Data Silos',
+    title: 'Disconnected Systems and Data Silos',
     description: (
       <>
         Business data sitting in disconnected systems creates manual reconciliation work.{' '}
@@ -73,7 +73,7 @@ const problems = [
   },
   {
     icon: Activity,
-    title: '6. Slow Response to Exceptions',
+    title: 'Slow Response to Exceptions',
     description:
       'Exceptions and edge cases that require human attention get buried in queues. AI automation identifies, routes, and escalates exceptions in real time without manual triage.',
   },

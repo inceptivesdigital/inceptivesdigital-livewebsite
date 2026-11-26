@@ -19,18 +19,18 @@ import TechStackTabs from '../mobile-app-development/components/TechStackTabs'
 
 const STATS = [
   {
-    value: '150+',
-    label: 'Senior-Led Product Rescue',
+    value: 'Senior-Led',
+    label: 'Product Rescue',
     icon: '/assets/product-rescue-scaling/apps-launch.svg',
   },
   {
-    value: '8+',
-    label: 'Years of Experience',
+    value: 'Audit-First',
+    label: 'Every Time',
     icon: '/assets/product-rescue-scaling/active-developer.svg',
   },
   {
-    value: '10M+',
-    label: 'Downloads',
+    value: 'Built for',
+    label: 'Sustainable Scaling',
     icon: '/assets/product-rescue-scaling/app-downloads.svg',
   },
   {
@@ -277,7 +277,7 @@ export default function ProductRescueScaling() {
   useEffect(() => {
     const title = 'Product Rescue & Scaling Services | Inceptives Digital'
     const desc =
-      "Fix What's Holding Your Product Back Before It Gets Worse. Senior-led codebase audits, UX & retention overhauls, and structured scaling roadmaps."
+      'Inceptives Digital audits stalled products, identifies the root cause, and rebuilds the parts blocking growth. Audit-first. No guesswork.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -338,7 +338,7 @@ export default function ProductRescueScaling() {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-transparent text-white font-semibold px-6 py-3.5 text-sm sm:text-[15px] hover:border-[#00CE44] hover:text-[#00CE44] transition-colors"
               >
-                <span>Talk to a Strategist</span>
+                <span>Book a Rescue Consultation</span>
               </a>
             </div>
 
@@ -459,7 +459,7 @@ export default function ProductRescueScaling() {
               Who Benefits Most From Product Rescue Services
             </h2>
             <p className="text-white/85 text-[15px] sm:text-[16px]">
-              Software rescue work looks different depending on who owns the problem. The audit stays the same. What changes are what the findings need to unlock.
+              Software rescue work looks different depending on who owns the problem. The audit stays the same. What changes are what the findings need to unlock?
             </p>
           </div>
 
@@ -519,7 +519,7 @@ export default function ProductRescueScaling() {
             </div>
             <div className="lg:col-span-7 space-y-4">
               <p className="text-white/85 text-[15.5px] sm:text-[17px] leading-[1.68]">
-                Every engagement starts with a full review of the product as it stands today. The team examines the codebase, user flow, analytics, and support history to distinguish what is genuinely broken from what only appears broken.
+                Every engagement starts with a full review of the product as it stands today. The team examines the codebase, user flow, analytics, and support history to distinguish what is genuinely broken from what only appears broken. The audit ends with a concrete package, not a verbal opinion.
               </p>
               <a
                 href="#contact"
@@ -674,19 +674,26 @@ export default function ProductRescueScaling() {
       </section>
 
       {/* 11. CASE STUDIES (Homepage Component) */}
-      <CaseStudies />
+      <CaseStudies
+        heading="Case Studies That Show Our Results-Oriented Approach"
+        subtitle="Each rescue below represents a product that had genuinely stalled, and a rebuild measured against the growth outcomes that mattered from day one."
+      />
 
       {/* 12. TESTIMONIALS (Homepage Component) */}
       <Testimonials />
 
       {/* 13. INDUSTRIES (Homepage Grid Design, Icon + White Title / Black Hover, No Extra Description) */}
       <IndustriesSection
-        heading="OUR WORK ACROSS INDUSTRIES"
+        heading="Industries Where We've Rescued and Scaled Digital Products"
+        subtitle="The same audit-first approach applies across every sector, adjusted to fit how each market actually operates."
         showDesc={false}
       />
 
       {/* 14. TECHNOLOGY STACK */}
-      <TechStackTabs />
+      <TechStackTabs
+        heading="Technology Stack Built for Software Modernization"
+        description="Application rescue demands experience across multiple technologies and platforms. We handle legacy application modernization, optimize application architecture, improve performance, and strengthen infrastructure to support reliable releases, increasing user demand and long-term scalability."
+      />
 
       {/* 15. OUR PROVEN PROCESS (5-Stage Green-Dot Timeline) */}
       <section className="w-full bg-[#151515] py-16 sm:py-20 lg:py-24">

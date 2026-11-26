@@ -13,20 +13,24 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: BrainCircuit,
-    title: '1. Custom AI MVP Development',
+    title: 'Custom AI MVP Development',
     description: (
       <>
         Our{' '}
         <Link to="/ai-app-development-services">
           AI app development
         </Link>{' '}
-        approach starts with a bespoke MVP designed around your specific use case, data sources, and operational requirements. Built from the architecture up for your problem rather than relying on generic AI app builders or adapting a previous engagement.
+        approach starts with a bespoke MVP designed around your specific use case, data sources, and operational requirements. Built from the architecture up for your problem rather than relying on generic{' '}
+        <Link to="/blog/ai-app-builders-vs-human-developers">
+          AI app builders
+        </Link>{' '}
+        or adapting a previous engagement.
       </>
     ),
   },
   {
     icon: Globe,
-    title: '2. AI Web MVP',
+    title: 'AI Web MVP',
     description: (
       <>
         Focused{' '}
@@ -39,11 +43,15 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: '3. AI Mobile MVP',
+    title: 'AI Mobile MVP',
     description: (
       <>
-        A focused iOS or Android AI application built to prove the concept on mobile. Flutter or React Native for cross-platform delivery. This{' '}
-        <Link to="/mobile-app-development">
+        A focused{' '}
+        <Link to="/ios-app-development">iOS</Link> or{' '}
+        <Link to="/android-app-development">Android</Link> AI application built to prove the concept on mobile.{' '}
+        <Link to="/flutter-app-development">Flutter</Link> or{' '}
+        <Link to="/react-native-app-development">React Native</Link> for cross-platform delivery. This{' '}
+        <Link to="/blog/mvp-mobile-app-development">
           mobile app MVP development
         </Link>{' '}
         approach validates the core AI capability before full native development begins.
@@ -52,13 +60,13 @@ const services = [
   },
   {
     icon: Layers,
-    title: '4. AI SaaS MVP',
+    title: 'AI SaaS MVP',
     description:
       'A minimal multi-tenant AI platform built to validate the product concept before full SaaS architecture investment. Core AI feature, basic dashboard, and user access built for early customer validation.',
   },
   {
     icon: Sparkles,
-    title: '5. Generative AI MVP',
+    title: 'Generative AI MVP',
     description: (
       <>
         A focused{' '}
@@ -71,10 +79,14 @@ const services = [
   },
   {
     icon: FileText,
-    title: '6. AI Automation MVP',
+    title: 'AI Automation MVP',
     description: (
       <>
-        An AI automation MVP proves whether a specific operational workflow can be automated reliably before full system investment. One{' '}
+        An{' '}
+        <Link to="/ai-automation-services">
+          AI automation
+        </Link>{' '}
+        MVP proves whether a specific operational workflow can be automated reliably before full system investment. One{' '}
         <Link to="/business-process-automation">
           business process automation
         </Link>{' '}
@@ -84,11 +96,11 @@ const services = [
   },
   {
     icon: Rocket,
-    title: '7. Startup AI MVP',
+    title: 'Startup AI MVP',
     description: (
       <>
         Our{' '}
-        <Link to="/startup-app-development-company">
+        <Link to="/startup-product-development">
           startup product development
         </Link>{' '}
         approach keeps the AI MVP lean and focused for early-stage companies with limited runway. Core AI concept validated, architecture confirmed, and investor-ready proof of concept delivered without over-engineering.
@@ -97,7 +109,7 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: '8. Enterprise AI MVP',
+    title: 'Enterprise AI MVP',
     description: (
       <>
         A focused pilot build scoped for established businesses testing AI before organisation-wide deployment.{' '}

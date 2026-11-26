@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import HeroTrustBadges from '../../../../components/HeroTrustBadges'
 
 export default function AiMvpHero() {
@@ -12,7 +13,11 @@ export default function AiMvpHero() {
             Validate, Verify, and De-Risk Your AI Investment
           </h2>
           <p className="w-full text-white/85 text-[15px] sm:text-[16px] leading-[1.65] max-w-[620px] mb-7">
-            Rapid AI MVP development helps startups and growing businesses validate the direction before committing to full-scale AI development. Scope defined, risks identified, proof delivered.
+            Rapid AI MVP development helps startups and growing businesses validate the direction before committing to full-scale{' '}
+            <Link to="/ai-development" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+              AI development
+            </Link>
+            . Scope defined, risks identified, proof delivered.
           </p>
           <div className="flex flex-wrap items-center gap-4 mb-3">
               <a

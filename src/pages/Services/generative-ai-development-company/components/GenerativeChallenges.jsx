@@ -13,13 +13,13 @@ import { Link } from 'react-router-dom'
 const challenges = [
   {
     icon: Target,
-    title: '1. Output Accuracy',
+    title: 'Output Accuracy',
     description:
       'Hallucinations, inconsistent responses, and unreliable outputs are addressed through grounded retrieval, structured prompts, and evaluation pipelines before deployment.',
   },
   {
     icon: Database,
-    title: '2. Data Quality',
+    title: 'Data Quality',
     description: (
       <>
         AI systems are only as good as the data behind them. We prepare, clean, classify, and secure the information used for training, retrieval, and generation before{' '}
@@ -35,37 +35,37 @@ const challenges = [
   },
   {
     icon: Network,
-    title: '3. Model Selection',
+    title: 'Model Selection',
     description:
       'Choosing between proprietary and open-source models depends on latency, privacy, context length, and operating cost. We make that decision in Discovery based on your specific requirements.',
   },
   {
     icon: CircleDollarSign,
-    title: '4. Cost Control',
+    title: 'Cost Control',
     description:
       'Inference costs, token usage, and infrastructure expenses are tracked and optimised from the architecture stage. Production costs should never be a surprise.',
   },
   {
     icon: LockKeyhole,
-    title: '5. Security and Access',
+    title: 'Security and Access',
     description:
       'Sensitive data is protected through encryption, role-based permissions, private deployment options, and controlled model access built into the architecture from day one.',
   },
   {
     icon: Network,
-    title: '6. Integration Complexity',
+    title: 'Integration Complexity',
     description:
       'Connecting generative AI with CRM, ERP, CMS, and internal software requires careful architecture planning. We map integration requirements before development begins to avoid disruption to existing workflows.',
   },
   {
     icon: Scale,
-    title: '7. Ethical Issues in Generative AI',
+    title: 'Ethical Issues in Generative AI',
     description:
       'Moderation, audit trails, human review workflows, and bias testing are built into systems where harmful, biased, or non-compliant outputs carry real risk.',
   },
   {
     icon: Activity,
-    title: '8. Long-Term Reliability',
+    title: 'Long-Term Reliability',
     description: (
       <>
         <Link

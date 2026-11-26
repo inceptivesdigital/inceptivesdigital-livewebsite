@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const problems = [
   {
     icon: ArrowLeftRight,
-    title: '1. Manual Data Movement',
+    title: 'Manual Data Movement',
     description: (
       <>
         <Link
@@ -21,7 +21,7 @@ const problems = [
   },
   {
     icon: RefreshCw,
-    title: '2. Repetitive Work',
+    title: 'Repetitive Work',
     description:
       'High-volume operational tasks like data entry, invoice handling, and reporting consume skilled workforce capacity that should be focused on higher-value operations.',
     impacts: ['Resource inefficiency', 'High operational cost', 'Low team productivity'],
@@ -47,7 +47,7 @@ const problems = [
   },
   {
     icon: Activity,
-    title: '3. Workflow Delays',
+    title: 'Workflow Delays',
     description:
       'Business processes slow down when execution depends on manual handoffs between departments and systems.',
     impacts: ['Delayed decision cycles', 'Operational bottlenecks', 'Reduced customer responsiveness'],
@@ -55,7 +55,7 @@ const problems = [
   },
   {
     icon: ShieldAlert,
-    title: '4. Human Errors',
+    title: 'Human Errors',
     description:
       'Repetitive structured processes introduce avoidable errors in finance, compliance, HR, and reporting operations.',
     impacts: ['Compliance risks', 'Data inconsistencies', 'Financial inaccuracies'],
@@ -63,7 +63,7 @@ const problems = [
   },
   {
     icon: UsersRound,
-    title: '5. Dependency Bottlenecks',
+    title: 'Dependency Bottlenecks',
     description:
       'Workflows depend on specific individuals or teams to proceed, limiting scalability and operational continuity.',
     impacts: ['Process stagnation', 'Resource dependency', 'Reduced scalability'],
@@ -71,7 +71,7 @@ const problems = [
   },
   {
     icon: GitBranch,
-    title: '6. System Fragmentation',
+    title: 'System Fragmentation',
     description:
       'Enterprise systems like ERP, CRM, and internal tools operate in isolation, requiring manual reconciliation and duplication of effort.',
     impacts: ['Data duplication', 'Reconciliation overhead', 'Operational inefficiency'],

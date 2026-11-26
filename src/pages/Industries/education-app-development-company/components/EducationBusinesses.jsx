@@ -3,7 +3,7 @@ import { Rocket, School, GraduationCap, MonitorPlay, Briefcase, Award, CheckCirc
 const businesses = [
   {
     icon: Rocket,
-    title: '1. EdTech Startups',
+    title: 'EdTech Startups',
     bullets: [
       'Education app MVPs',
       'AI-powered learning apps',
@@ -13,7 +13,7 @@ const businesses = [
   },
   {
     icon: School,
-    title: '2. Schools and K–12 Institutions',
+    title: 'Schools and K–12 Institutions',
     bullets: [
       'Student learning apps',
       'Parent communication apps',
@@ -24,7 +24,7 @@ const businesses = [
   },
   {
     icon: GraduationCap,
-    title: '3. Universities and Colleges',
+    title: 'Universities and Colleges',
     bullets: [
       'Student portals',
       'Campus learning apps',
@@ -34,7 +34,7 @@ const businesses = [
   },
   {
     icon: MonitorPlay,
-    title: '4. Online Education Providers',
+    title: 'Online Education Providers',
     bullets: [
       'On-demand course apps',
       'Virtual classroom apps',
@@ -43,7 +43,7 @@ const businesses = [
   },
   {
     icon: Briefcase,
-    title: '5. Corporate Training Providers',
+    title: 'Corporate Training Providers',
     bullets: [
       'Employee training apps',
       'Compliance training platforms',
@@ -53,7 +53,7 @@ const businesses = [
   },
   {
     icon: Award,
-    title: '6. Professional Certification Organizations',
+    title: 'Professional Certification Organizations',
     bullets: [
       'Exam preparation apps',
       'Online examination systems',

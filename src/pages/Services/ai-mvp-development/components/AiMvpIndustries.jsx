@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const industries = [
   {
     icon: Activity,
-    title: '1. Fintech',
+    title: 'Fintech',
     items: [
       'Fraud detection model validation on real transaction data',
       'Credit scoring MVP using structured and alternative data',
@@ -13,7 +13,7 @@ const industries = [
   },
   {
     icon: BrainCircuit,
-    title: '2. Healthcare',
+    title: 'Healthcare',
     items: [
       <>
         Clinical decision support MVP using{' '}
@@ -33,7 +33,7 @@ const industries = [
   },
   {
     icon: ShoppingCart,
-    title: '3. Ecommerce',
+    title: 'Ecommerce',
     items: [
       'Recommendation engine MVP trained on behavioural data',
       <>
@@ -47,7 +47,7 @@ const industries = [
   },
   {
     icon: Network,
-    title: '4. SaaS and Technology',
+    title: 'SaaS and Technology',
     items: [
       <>
         Embedded copilots and{' '}
@@ -62,16 +62,22 @@ const industries = [
   },
   {
     icon: FileText,
-    title: '5. Legal and Professional Services',
+    title: 'Legal and Professional Services',
     items: [
       'Contract analysis and clause extraction proof of concept',
-      'Legal document summarisation MVP using natural language processing and LLMs',
+      <>
+        Legal document summarisation MVP using{' '}
+        <Link to="/nlp-development-services">
+          natural language processing
+        </Link>{' '}
+        and LLMs
+      </>,
       'Knowledge retrieval MVP built on RAG architecture',
     ],
   },
   {
     icon: BookOpen,
-    title: '6. Education',
+    title: 'Education',
     items: [
       'Intelligent tutoring MVP powered by LLM-based models',
       'Automated assessment and grading proof of concept',

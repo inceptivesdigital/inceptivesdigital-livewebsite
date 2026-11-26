@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: BrainCircuit,
-    title: '1. Custom NLP Model Development',
+    title: 'Custom NLP Model Development',
     description: (
       <>
         Our{' '}
@@ -29,7 +29,7 @@ const services = [
   },
   {
     icon: Activity,
-    title: '2. Text Classification and Categorisation',
+    title: 'Text Classification and Categorisation',
     description: (
       <>
         Models automatically categorise text across emails, tickets, documents, and messages so{' '}
@@ -42,25 +42,25 @@ const services = [
   },
   {
     icon: FileSearch,
-    title: '3. Named Entity Recognition and Extraction',
+    title: 'Named Entity Recognition and Extraction',
     description:
       'NLP pipelines that identify and extract people, organisations, locations, dates, and domain-specific entities from unstructured text at scale.',
   },
   {
     icon: Activity,
-    title: '4. Sentiment Analysis and Opinion Mining',
+    title: 'Sentiment Analysis and Opinion Mining',
     description:
       'Models that analyse customer feedback, reviews, and social data to surface actionable insights about perception, satisfaction, and brand sentiment.',
   },
   {
     icon: Search,
-    title: '5. Semantic Search and Information Retrieval',
+    title: 'Semantic Search and Information Retrieval',
     description:
       'Search systems that understand meaning rather than keywords. Built for products where users need to find relevant information from large unstructured datasets.',
   },
   {
     icon: FileText,
-    title: '6. Document Intelligence and Processing',
+    title: 'Document Intelligence and Processing',
     description: (
       <>
         NLP systems, often paired with{' '}
@@ -73,7 +73,7 @@ const services = [
   },
   {
     icon: Speech,
-    title: '7. NLP Chatbot Development',
+    title: 'NLP Chatbot Development',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/ai-chatbot-development-services">
@@ -85,7 +85,7 @@ const services = [
   },
   {
     icon: Network,
-    title: '8. Speech Recognition and Voice Intelligence',
+    title: 'Speech Recognition and Voice Intelligence',
     description: (
       <>
         Systems convert spoken language into structured data for transcription,{' '}
@@ -98,7 +98,7 @@ const services = [
   },
   {
     icon: Workflow,
-    title: '9. NLP Integration Services',
+    title: 'NLP Integration Services',
     description: (
       <>
         For{' '}

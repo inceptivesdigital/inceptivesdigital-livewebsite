@@ -5,7 +5,7 @@ import { Building2, Rocket, Store, KeyRound, HardHat, TrendingUp, CheckCircle2 }
 const segments = [
   {
     icon: Building2,
-    title: '1. Real Estate Agencies and Brokerages',
+    title: 'Real Estate Agencies and Brokerages',
     bullets: [
       'Property listing apps',
       'Real estate CRM apps',
@@ -16,7 +16,7 @@ const segments = [
   },
   {
     icon: Rocket,
-    title: '2. PropTech Startups',
+    title: 'PropTech Startups',
     bullets: [
       <>
         Custom real estate{' '}
@@ -34,7 +34,7 @@ const segments = [
   },
   {
     icon: Store,
-    title: '3. Property Marketplace Operators',
+    title: 'Property Marketplace Operators',
     bullets: [
       'Multi-vendor marketplace apps',
       'MLS-connected listing apps',
@@ -44,7 +44,7 @@ const segments = [
   },
   {
     icon: KeyRound,
-    title: '4. Rental and Property Management Companies',
+    title: 'Rental and Property Management Companies',
     bullets: [
       'Tenant management apps',
       'Lease management apps',
@@ -55,7 +55,7 @@ const segments = [
   },
   {
     icon: HardHat,
-    title: '5. Real Estate Developers',
+    title: 'Real Estate Developers',
     bullets: [
       'Unit inventory apps',
       'Buyer reservation apps',
@@ -66,7 +66,7 @@ const segments = [
   },
   {
     icon: TrendingUp,
-    title: '6. Real Estate Investors',
+    title: 'Real Estate Investors',
     bullets: [
       'Real estate investment apps',
       'Portfolio tracking apps',

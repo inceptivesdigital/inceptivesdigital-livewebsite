@@ -11,19 +11,19 @@ import { Link } from 'react-router-dom'
 const risks = [
   {
     icon: Database,
-    title: '1. Training Data Quality',
+    title: 'Training Data Quality',
     description:
       'Models trained on unrepresentative data fail when real-world conditions differ from training conditions. We curate and annotate datasets that reflect the actual operational environment before training begins.',
   },
   {
     icon: Target,
-    title: '2. Edge Case Accuracy',
+    title: 'Edge Case Accuracy',
     description:
       'Lighting variations, occlusions, and motion blur break models that performed well in testing. We test against real edge cases before deployment.',
   },
   {
     icon: Clock,
-    title: '3. Inference Latency',
+    title: 'Inference Latency',
     description: (
       <>
         Real-time video and high-volume image processing have strict latency requirements. For{' '}
@@ -39,7 +39,7 @@ const risks = [
   },
   {
     icon: Smartphone,
-    title: '4. Edge Device Deployment',
+    title: 'Edge Device Deployment',
     description: (
       <>
         Many computer vision systems, including{' '}
@@ -55,13 +55,13 @@ const risks = [
   },
   {
     icon: Activity,
-    title: '5. Model Drift',
+    title: 'Model Drift',
     description:
       'Lighting, equipment, and operational conditions shift over time and degrade accuracy quietly. We build monitoring pipelines that detect degradation before it affects outcomes.',
   },
   {
     icon: Network,
-    title: '6. System Integration',
+    title: 'System Integration',
     description: (
       <>
         Computer vision outputs need{' '}

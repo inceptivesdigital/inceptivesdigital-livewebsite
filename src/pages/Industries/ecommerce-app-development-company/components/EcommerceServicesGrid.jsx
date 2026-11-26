@@ -15,13 +15,13 @@ import {
 const services = [
   {
     icon: Code2,
-    title: '1. Custom eCommerce App Development',
+    title: 'Custom eCommerce App Development',
     description:
       'Build custom shopping applications around your catalog structure, checkout rules, and customer journeys. Our custom eCommerce app developers engineer scalable backend services, secure payment integrations, and smooth inventory workflows that accommodate your business operations.',
   },
   {
     icon: Smartphone,
-    title: '2. iOS eCommerce App Development',
+    title: 'iOS eCommerce App Development',
     description: (
       <>
         For brands targeting Apple customers, our native{' '}
@@ -37,7 +37,7 @@ const services = [
   },
   {
     icon: TabletSmartphone,
-    title: '3. Android eCommerce App Development',
+    title: 'Android eCommerce App Development',
     description: (
       <>
         Android shoppers expect reliable experiences across phones, tablets, and varied screen sizes. Using Kotlin and Jetpack Compose, our{' '}
@@ -53,7 +53,7 @@ const services = [
   },
   {
     icon: Layers,
-    title: '4. Cross-Platform eCommerce App Development',
+    title: 'Cross-Platform eCommerce App Development',
     description: (
       <>
         Our eCommerce expertise in{' '}
@@ -69,13 +69,13 @@ const services = [
   },
   {
     icon: Store,
-    title: '5. eCommerce Marketplace App Development',
+    title: 'eCommerce Marketplace App Development',
     description:
       'Managing multiple sellers requires reliable transaction controls and independent vendor operations. We engineer multi-vendor marketplace applications with seller onboarding, commission management, automated payout workflows, and centralized order administration.',
   },
   {
     icon: Briefcase,
-    title: '6. B2B eCommerce Application Development',
+    title: 'B2B eCommerce Application Development',
     description: (
       <>
         Supporting wholesalers and distributors with B2B eCommerce applications featuring contract pricing, bulk ordering, account permissions, and approval workflows. ERP{' '}
@@ -91,19 +91,19 @@ const services = [
   },
   {
     icon: ShoppingCart,
-    title: '7. Shopify and Headless Commerce App Development',
+    title: 'Shopify and Headless Commerce App Development',
     description:
       'Protect your existing commerce investment while extending it to mobile. We connect custom storefronts to Shopify and compatible headless platforms through APIs that synchronize products, customer accounts, checkout sessions, and orders.',
   },
   {
     icon: ShoppingBag,
-    title: '8. Retail eCommerce App Development',
+    title: 'Retail eCommerce App Development',
     description:
       'Retailers managing digital and physical sales need accurate information across channels. Our retail app developers integrate POS systems, inventory availability, loyalty programs, promotions, and fulfillment workflows to support connected shopping experiences.',
   },
   {
     icon: Wrench,
-    title: '9. eCommerce App Maintenance and Modernization',
+    title: 'eCommerce App Maintenance and Modernization',
     description: (
       <>
         Keep existing shopping applications compatible with platform updates and changing commerce requirements. Our{' '}

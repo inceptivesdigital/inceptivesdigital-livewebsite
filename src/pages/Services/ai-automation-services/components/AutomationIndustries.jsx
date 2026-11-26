@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 const industries = [
   {
-    title: '1. Fintech',
+    title: 'Fintech',
     icon: '/assets/industries-icons/industries-fintech.svg',
     alt: 'Fintech',
     items: [
@@ -19,7 +19,7 @@ const industries = [
     ],
   },
   {
-    title: '2. Healthcare',
+    title: 'Healthcare',
     icon: '/assets/industries-icons/industries-healthcare.svg',
     alt: 'Healthcare',
     items: [
@@ -29,7 +29,7 @@ const industries = [
     ],
   },
   {
-    title: '3. Legal and Professional Services',
+    title: 'Legal and Professional Services',
     icon: '/assets/industries-icons/industries-realstate.svg',
     alt: 'Professional services',
     items: [
@@ -39,7 +39,7 @@ const industries = [
     ],
   },
   {
-    title: '4. E-commerce',
+    title: 'E-commerce',
     icon: '/assets/industries-icons/industries-cart.svg',
     alt: 'E-commerce',
     items: [
@@ -49,7 +49,7 @@ const industries = [
     ],
   },
   {
-    title: '5. Media and Publishing',
+    title: 'Media and Publishing',
     icon: '/assets/industries-icons/industries-education.svg',
     alt: 'Media and publishing',
     items: [
@@ -67,7 +67,7 @@ const industries = [
     ],
   },
   {
-    title: '6. Enterprise Operations',
+    title: 'Enterprise Operations',
     icon: '/assets/industries-icons/industries-startup.svg',
     alt: 'Enterprise operations',
     items: [

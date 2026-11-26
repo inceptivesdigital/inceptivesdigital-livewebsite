@@ -2,37 +2,37 @@ import React from 'react';
 
 const services = [
   {
-    title: '1. On-Demand Food Delivery App Development',
+    title: 'On-Demand Food Delivery App Development',
     description:
       'Robust on-demand food delivery platforms with real-time ordering, live tracking, and secure payments. Built for startups and established businesses handling high order volumes without operational bottlenecks.',
     icon: '/assets/healthcare/sector1.svg',
   },
   {
-    title: '2. Milk Delivery App Development',
+    title: 'Milk Delivery App Development',
     description:
       'Scheduled delivery management with temperature monitoring, route optimisation, and automated delivery workflows. Built for businesses where consistency, quality assurance, and cost-efficient logistics determine customer retention.',
     icon: '/assets/healthcare/sector2.svg',
   },
   {
-    title: '3. Restaurant Food Delivery App Development',
+    title: 'Restaurant Food Delivery App Development',
     description:
       'Custom delivery platforms for single restaurants and multi-branch chains. Menu management, POS integrations, and smooth checkout flows built around the specific operational requirements of restaurant delivery.',
     icon: '/assets/healthcare/sector3.svg',
   },
   {
-    title: '4. Meat Delivery App Development',
+    title: 'Meat Delivery App Development',
     description:
       'Cold-chain monitoring, delivery slot management, and regulatory compliance are built into meat delivery applications. Quality and freshness are maintained from dispatch to doorstep without manual quality checks at every stage.',
     icon: '/assets/healthcare/sector4.svg',
   },
   {
-    title: '5. Pet Food Delivery App Development',
+    title: 'Pet Food Delivery App Development',
     description:
       'Smart reordering, custom delivery intervals, and reliable order fulfilment built for pet food delivery businesses. Live delivery visibility and logistics reliability built to maintain customer trust and long-term retention.',
     icon: '/assets/healthcare/sector5.svg',
   },
   {
-    title: '6. Niche Food Delivery App Development',
+    title: 'Niche Food Delivery App Development',
     description:
       'Custom delivery platforms for specialised markets, vegan, keto, locally sourced, and diet-specific food businesses. User experience and features built around the specific expectations of niche food audiences.',
     icon: '/assets/healthcare/sector6.svg',

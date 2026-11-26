@@ -14,7 +14,7 @@ import {
 const services = [
   {
     icon: Smartphone,
-    title: '1. Custom Education Mobile App Development',
+    title: 'Custom Education Mobile App Development',
     desc: (
       <>
         Launch native iOS, Android, or cross-platform learning apps tailored to your educational model. Our education{' '}
@@ -30,17 +30,17 @@ const services = [
   },
   {
     icon: BookOpen,
-    title: '2. Learning Management System Development',
+    title: 'Learning Management System Development',
     desc: 'Take control of digital learning delivery with a custom LMS tailored to your institution. We engineer course management workflows and instructor dashboards that accommodate academic operations and growing learner populations.',
   },
   {
     icon: School,
-    title: '3. Student Information and School Management Systems',
+    title: 'Student Information and School Management Systems',
     desc: 'Manage institutional operations through education software that connects enrollment records with daily academic administration. Our developers create centralized systems that give authorized staff reliable access to student information across departments.',
   },
   {
     icon: Users,
-    title: '4. Online Tutoring App Development',
+    title: 'Online Tutoring App Development',
     desc: (
       <>
         Bring independent tutors and learners onto a dedicated teaching platform. Our online tutoring app development expertise supports session scheduling and live instruction, with flexible{' '}
@@ -56,27 +56,27 @@ const services = [
   },
   {
     icon: Video,
-    title: '5. Virtual Classroom App Development',
+    title: 'Virtual Classroom App Development',
     desc: 'Extend instructor-led learning beyond physical classrooms with live education apps built for interactive participation. We integrate real-time video and classroom management workflows to support scheduled teaching across connected devices.',
   },
   {
     icon: ClipboardCheck,
-    title: '6. Assessment and Examination App Development',
+    title: 'Assessment and Examination App Development',
     desc: 'Our digital assessment platforms give institutions greater control over examination delivery and grading operations. Configurable question banks support different testing formats, while structured reporting helps educators evaluate learner performance.',
   },
   {
     icon: PlayCircle,
-    title: '7. On-Demand eLearning App Development',
+    title: 'On-Demand eLearning App Development',
     desc: 'Give learners access to courses beyond fixed classroom schedules. Our eLearning app development services support self-paced education platforms with organized course libraries and subscription workflows tailored to your learning business.',
   },
   {
     icon: Briefcase,
-    title: '8. Corporate Training App Development',
+    title: 'Corporate Training App Development',
     desc: 'Equip your workforce with a dedicated training platform that supports structured professional development. Our developers connect employee learning programs with certification workflows and reporting requirements established by your organization.',
   },
   {
     icon: BrainCircuit,
-    title: '9. AI-Powered Adaptive Learning App Development',
+    title: 'AI-Powered Adaptive Learning App Development',
     desc: 'Personalized learning becomes more effective when content responds to individual progress. Our AI-powered education apps use learner performance data to adjust instructional pathways according to defined educational objectives.',
   },
 ]

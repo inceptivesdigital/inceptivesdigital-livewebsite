@@ -18,13 +18,13 @@ const STATS = [
     icon: '/assets/interactive-prototyping/active-developer.svg',
   },
   {
-    value: '3M+',
-    label: 'App Downloads',
+    value: '100%',
+    label: 'Client Success Rate',
     icon: '/assets/interactive-prototyping/app-downloads.svg',
   },
   {
-    value: '4.7',
-    label: 'Clutch Rating',
+    value: 'WCAG',
+    label: 'Accessibility Compliant',
     icon: '/assets/interactive-prototyping/rating.svg',
   },
 ]
@@ -150,9 +150,9 @@ const FAQS = [
 
 export default function InteractivePrototyping() {
   useEffect(() => {
-    const title = 'Interactive Prototyping Services | Inceptives Digital'
+    const title = 'Interactive Prototyping Services for Digital Products'
     const desc =
-      'Clickable, high-fidelity prototypes for investor demos, usability testing, stakeholder alignment, and development validation before development begins.'
+      'Build interactive prototypes that simulate real user flows. Validate ideas faster, reduce risk, and improve product decisions before development starts.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -217,6 +217,9 @@ export default function InteractivePrototyping() {
                 Schedule A Call
               </a>
               </div>
+              <p className="text-white/60 text-[13px] font-medium tracking-wide">
+                Test first. Build once.
+              </p>
 
               {/* Trust / Review Badges Below CTA */}
               <div className="flex flex-wrap items-center gap-7 sm:gap-9 pt-4">
@@ -372,7 +375,10 @@ export default function InteractivePrototyping() {
       </section>
 
       {/* 6. CASE STUDIES (Homepage Component) */}
-      <CaseStudies />
+      <CaseStudies
+        heading="Real Prototype Work From Products Now Live in Production"
+        subtitle="Every product below involved a prototype that answered a specific question before the build answered it expensively."
+      />
 
       {/* 7. TESTIMONIALS (Homepage Component) */}
       <Testimonials />
@@ -431,7 +437,10 @@ export default function InteractivePrototyping() {
       </section>
 
       {/* 10. TECH STACK (Homepage Component) */}
-      <TechStackTabs />
+      <TechStackTabs
+        heading="The Tools Behind Every Prototype We Build"
+        description="Every tool is selected for a specific reason. The prototype type, the audience, and the fidelity level required determine which one gets used, not habit or preference."
+      />
 
       {/* 11. BOTTOM CTA BANNER */}
       <section

@@ -15,59 +15,59 @@ import {
 const services = [
   {
     icon: BrainCircuit,
-    title: '1. Custom AI App Development',
+    title: 'Custom AI App Development',
     internalLink: '/ai-development',
     description:
       'Applications designed around your workflows, user needs, and operational requirements. Built from the architecture up, not assembled from generic components.',
   },
   {
     icon: Smartphone,
-    title: '2. AI Mobile App Development',
+    title: 'AI Mobile App Development',
     description:
       'Intelligent iOS and Android apps with ML, predictive analytics, and conversational AI built into the core for real user load.',
   },
   {
     icon: Globe,
-    title: '3. AI Web App Development',
+    title: 'AI Web App Development',
     description:
       'Scalable web apps with AI models, automation, and real-time intelligence integrated from the start.',
   },
   {
     icon: BarChart3,
-    title: '4. Machine Learning App Development',
+    title: 'Machine Learning App Development',
     internalLink: '/machine-learning-development-services',
     description:
       'Applications built on predictive models, classification engines, and recommendation systems trained on your data.',
   },
   {
     icon: Sparkles,
-    title: '5. Generative AI App Development',
+    title: 'Generative AI App Development',
     description:
       'Apps that generate content, summarize data, automate workflows, and enable intelligent user interactions using LLMs.',
   },
   {
     icon: MessageSquare,
-    title: '6. AI Chatbot & Virtual Assistant Integration',
+    title: 'AI Chatbot & Virtual Assistant Integration',
     internalLink: '/ai-chatbot-development-services',
     description:
       'Conversational AI integrated for support, lead qualification, internal knowledge access, and task automation.',
   },
   {
     icon: Database,
-    title: '7. RAG-Based AI App Development',
+    title: 'RAG-Based AI App Development',
     description:
       'Applications connected to structured and unstructured data sources for real-time, knowledge-grounded AI responses.',
   },
   {
     icon: Eye,
-    title: '8. Computer Vision App Development',
+    title: 'Computer Vision App Development',
     internalLink: '/computer-vision-development-services',
     description:
       'AI-powered applications for image/video analysis, object detection, visual inspection, and monitoring.',
   },
   {
     icon: Plug,
-    title: '9. Existing App AI Integration',
+    title: 'Existing App AI Integration',
     description:
       'Add AI capabilities to your current application without rebuilding it — chatbots, recommendation engines, predictive analytics, and smart search integrated into your system.',
   },

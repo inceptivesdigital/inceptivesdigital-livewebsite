@@ -12,7 +12,7 @@ import {
 const appTypes = [
   {
     icon: Users,
-    title: '1. AI Consumer Apps',
+    title: 'AI Consumer Apps',
     description:
       'Intelligent applications built for end users. Personalisation, recommendation engines, and conversational interfaces that improve with every interaction.',
     bullets: [
@@ -23,7 +23,7 @@ const appTypes = [
   },
   {
     icon: Cloud,
-    title: '2. AI SaaS Platforms',
+    title: 'AI SaaS Platforms',
     description:
       'Multi-tenant AI platforms for businesses that want to offer intelligent capabilities as a core product feature. Scalable architecture and automated workflows built in from the start.',
     bullets: [
@@ -34,7 +34,7 @@ const appTypes = [
   },
   {
     icon: Zap,
-    title: '3. AI Automation Apps',
+    title: 'AI Automation Apps',
     internalLink: '/ai-automation-services',
     description:
       'Applications that remove manual effort from high-volume operational processes. AI makes the decisions. The team handles the exceptions.',
@@ -46,7 +46,7 @@ const appTypes = [
   },
   {
     icon: Smartphone,
-    title: '4. AI Mobile Apps for iOS and Android',
+    title: 'AI Mobile Apps for iOS and Android',
     description: (
       <>
         Intelligent{' '}
@@ -76,7 +76,7 @@ const appTypes = [
   },
   {
     icon: Globe,
-    title: '5. AI Web Applications',
+    title: 'AI Web Applications',
     description:
       'Scalable web applications with AI models and real-time intelligence integrated from the architecture stage. Built to handle data volume and user load without degradation.',
     bullets: [
@@ -95,7 +95,7 @@ const appTypes = [
   },
   {
     icon: Briefcase,
-    title: '6. Internal Business AI Tools',
+    title: 'Internal Business AI Tools',
     description: (
       <>
         Private applications built for internal operations. Knowledge management, analytics dashboards, and productivity tools that make teams more effective through{' '}

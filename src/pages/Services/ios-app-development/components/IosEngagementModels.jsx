@@ -1,7 +1,7 @@
 export default function IosEngagementModels() {
   const models = [
     {
-      title: '1. Fixed-Scope iOS Development',
+      title: 'Fixed-Scope iOS Development',
       price: '$15,000 – $60,000+ per project',
       bestFor: 'Best for defined products and MVPs',
       intro:
@@ -15,7 +15,7 @@ export default function IosEngagementModels() {
       cta: 'Get a Project Estimate',
     },
     {
-      title: '2. Agile iOS Development',
+      title: 'Agile iOS Development',
       price: '$12,000 – $30,000+ per month',
       bestFor: 'Best for evolving product requirements',
       intro:
@@ -29,7 +29,7 @@ export default function IosEngagementModels() {
       cta: 'Start an Agile Build',
     },
     {
-      title: '3. Dedicated iOS Product Team',
+      title: 'Dedicated iOS Product Team',
       price: '$20,000 – $45,000+ per month',
       bestFor: 'Best for long-term product development',
       intro:
@@ -43,7 +43,7 @@ export default function IosEngagementModels() {
       cta: 'Build My iOS Team',
     },
     {
-      title: '4. iOS Team Extension',
+      title: 'iOS Team Extension',
       price: '$5,000 – $15,000+ per month',
       bestFor: 'Best for strengthening an existing engineering team',
       intro:

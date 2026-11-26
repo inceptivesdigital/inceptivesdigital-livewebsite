@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const useCases = [
   {
     icon: Workflow,
-    title: '1. Customer Support Automation',
+    title: 'Customer Support Automation',
     description: (
       <>
         <Link
@@ -19,25 +19,25 @@ const useCases = [
   },
   {
     icon: FileText,
-    title: '2. Document Intelligence',
+    title: 'Document Intelligence',
     description:
       'Extract, classify, and summarise information from contracts, reports, forms, and records at a speed no human team can match.',
   },
   {
     icon: Activity,
-    title: '3. Sentiment Analysis',
+    title: 'Sentiment Analysis',
     description:
       'Analyse customer feedback, reviews, and social data to surface actionable insights about how people feel about your product or brand.',
   },
   {
     icon: Search,
-    title: '4. Semantic Search',
+    title: 'Semantic Search',
     description:
       'Search systems that understand meaning rather than keywords. Built for products where users need to find relevant information from large unstructured datasets.',
   },
   {
     icon: FileSearch,
-    title: '5. Text Classification',
+    title: 'Text Classification',
     description: (
       <>
         Automatically categorise incoming emails, tickets, documents, and messages to support{' '}
@@ -53,7 +53,7 @@ const useCases = [
   },
   {
     icon: Network,
-    title: '6. Speech Recognition',
+    title: 'Speech Recognition',
     description: (
       <>
         Convert spoken language into structured data for transcription,{' '}

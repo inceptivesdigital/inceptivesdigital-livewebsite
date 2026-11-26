@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 const services = [
   {
     icon: Sparkles,
-    title: '1. Custom Generative AI Development',
+    title: 'Custom Generative AI Development',
     description: (
       <>
         Our <Link className="text-white underline group-hover:text-black" to="/custom-software-development">custom software development</Link> approach creates purpose-built generative AI applications around your specific workflows, users, data sources, and operational requirements. Built from the architecture up rather than assembled with generic{' '}
@@ -24,7 +24,7 @@ const services = [
   },
   {
     icon: Layers3,
-    title: '2. Generative AI Application Development',
+    title: 'Generative AI Application Development',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/ai-app-development-services">AI app development</Link> for web, mobile, and SaaS products brings generation, summarisation, search, analysis, and conversational features into the core product architecture.
@@ -33,13 +33,13 @@ const services = [
   },
   {
     icon: FileSearch,
-    title: '3. RAG System Development',
+    title: 'RAG System Development',
     description:
       'Retrieval-augmented generation systems connected to your documents, databases, and knowledge bases. Built for products where responses need to be grounded in your data, not general model knowledge.',
   },
   {
     icon: Settings2,
-    title: '4. LLM Integration and Fine-Tuning',
+    title: 'LLM Integration and Fine-Tuning',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/nlp-development-services">Natural language processing</Link>, foundation model selection, prompt architecture, fine-tuning, evaluation, and LLM integration are configured around your specific domain and task requirements.
@@ -48,25 +48,25 @@ const services = [
   },
   {
     icon: FileText,
-    title: '5. Generative AI for Content Creation',
+    title: 'Generative AI for Content Creation',
     description:
       'Systems for drafting, editing, summarising, and repurposing content across marketing, operations, and product teams. Built for organisations where content volume outpaces manual production capacity.',
   },
   {
     icon: FileImage,
-    title: '6. Generative AI for Image Creation',
+    title: 'Generative AI for Image Creation',
     description:
       'Image generation and editing workflows for product visuals, creative production, and brand-controlled visual content. Built for teams that need consistent, scalable visual output.',
   },
   {
     icon: FileSearch,
-    title: '7. Document Intelligence Solutions',
+    title: 'Document Intelligence Solutions',
     description:
       'Applications that extract, classify, summarise, compare, and generate information from contracts, reports, forms, and records. Built for organisations that run on documents.',
   },
   {
     icon: Workflow,
-    title: '8. Generative AI Workflow Automation',
+    title: 'Generative AI Workflow Automation',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/ai-agent-development">AI agent development</Link> extends generative AI into workflows that connect foundation models with APIs, business rules, approval steps, and internal software. Built for{' '}
@@ -76,7 +76,7 @@ const services = [
   },
   {
     icon: Network,
-    title: '9. Generative AI Integration Services',
+    title: 'Generative AI Integration Services',
     description: (
       <>
         <Link className="text-white underline group-hover:text-black" to="/system-integration-api-automation">System integration and API automation</Link> connect generative AI capabilities with CRM, ERP, CMS, data warehouses, and existing digital products. Built for businesses that need intelligence inside the tools they already run on.

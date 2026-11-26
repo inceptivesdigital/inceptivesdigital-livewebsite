@@ -66,7 +66,7 @@ export default function LondonComplianceSecurity() {
 
   const tabs = [
     {
-      title: '1. UK Data Privacy & Protection',
+      title: 'UK Data Privacy & Protection',
       shortTitle: 'UK Data Privacy & Protection',
       image: '/assets/locations/new-york/ny-compliance-privacy.jpg',
       items: [
@@ -89,7 +89,7 @@ export default function LondonComplianceSecurity() {
       ],
     },
     {
-      title: '2. FCA & Financial Services Compliance',
+      title: 'FCA & Financial Services Compliance',
       shortTitle: 'FCA & Financial Services',
       image: '/assets/locations/new-york/ny-compliance-fintech.jpg',
       items: [
@@ -112,7 +112,7 @@ export default function LondonComplianceSecurity() {
       ],
     },
     {
-      title: '3. NHS & Healthcare Data Protection',
+      title: 'NHS & Healthcare Data Protection',
       shortTitle: 'NHS & Healthcare Data',
       image: '/assets/locations/new-york/ny-compliance-healthcare.jpg',
       items: [
@@ -135,7 +135,7 @@ export default function LondonComplianceSecurity() {
       ],
     },
     {
-      title: '4. Application & Engineering Security',
+      title: 'Application & Engineering Security',
       shortTitle: 'Application Security',
       image: '/assets/locations/new-york/ny-compliance-ai.jpg',
       items: [
@@ -158,7 +158,7 @@ export default function LondonComplianceSecurity() {
       ],
     },
     {
-      title: '5. Accessibility & Digital Governance',
+      title: 'Accessibility & Digital Governance',
       shortTitle: 'Accessibility & Governance',
       image: '/assets/locations/new-york/ny-compliance-gov.jpg',
       items: [

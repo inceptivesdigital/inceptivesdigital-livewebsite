@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const comparisonRows = [
   ['Goal', 'Prove the concept works', 'Deploy a production system'],
   ['Timeline', '8 to 12 weeks', '16 to 32 weeks'],
@@ -46,7 +48,13 @@ export default function AiMvpComparison() {
           Most businesses that think they are ready for a full build are not. An AI MVP is how you find out before it is expensive to discover.
         </p>
         <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-          <span className="text-white/80 text-sm sm:text-base">Not sure which one fits? That is what the Discovery Sprint is for.</span>
+          <span className="text-white/80 text-sm sm:text-base">
+            Not sure which one fits? That is what the{' '}
+            <Link to="/discovery-sprint" className="text-[#00CE44] underline hover:opacity-80 transition-colors">
+              Discovery Sprint
+            </Link>{' '}
+            is for.
+          </span>
           <a href="#contact" className="text-[#00CE44] font-semibold hover:opacity-80 transition-colors underline underline-offset-4">
             Book a Discovery Sprint <span aria-hidden="true">→</span>
           </a>

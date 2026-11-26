@@ -1,47 +1,47 @@
 export default function WebAppServicesGrid() {
   const services = [
     {
-      title: '1. Custom Web Application Development',
+      title: 'Custom Web Application Development',
       icon: '/assets/ios-app/serivces5.svg',
       desc: 'Off-the-shelf software often falls short when your business has specific workflows or operational requirements. We engineer custom web applications around those gaps, giving you greater control over business logic, user permissions, and how the platform connects with existing systems.',
     },
     {
-      title: '2. Full-Stack Web Development',
+      title: 'Full-Stack Web Development',
       icon: '/assets/ios-app/serivces3.svg',
       desc: 'The interface is only one part of a working application. Our full-stack web developers use React, Next.js, and Vue alongside Node.js and Python to connect frontend experiences with backend logic, APIs, and databases.',
     },
     {
-      title: '3. Web Application UI/UX Design',
+      title: 'Web Application UI/UX Design',
       icon: '/assets/ios-app/serivces2.svg',
       desc: 'Complex workflows demand interfaces that users can navigate without unnecessary steps. We map critical user journeys into wireframes and interactive prototypes, resolving navigation issues before development and shaping interfaces around how people actually work.',
     },
     {
-      title: '4. API Development and Integration',
+      title: 'API Development and Integration',
       icon: '/assets/ios-app/serivces4.svg',
       desc: 'Your existing software should work with the new application, not become another disconnected system. From CRM and ERP integrations to payment gateways, we develop custom APIs that keep data moving reliably between platforms.',
     },
     {
-      title: '5. MVP Web App Development',
+      title: 'MVP Web App Development',
       icon: '/assets/ios-app/serivces1.svg',
       desc: 'Have a product idea worth testing? Start with the features customers need to experience its core value. We define the first release around a clear validation goal, keeping development focused on what the market needs to prove.',
     },
     {
-      title: '6. Progressive Web App Development',
+      title: 'Progressive Web App Development',
       icon: '/assets/ios-app/serivces6.svg',
       desc: 'Bring your application directly to users through an installable web experience. We engineer PWAs with responsive interfaces, offline functionality where supported, and browser-based notifications, reducing the need for separate native applications when a web-first approach fits.',
     },
     {
-      title: '7. Web Application Modernization',
+      title: 'Web Application Modernization',
       icon: '/assets/mobile-app/Third-Part-Integration-1.svg',
       desc: "An aging application doesn't always need a complete replacement. We assess the existing codebase before restructuring backend components, upgrading frameworks, or migrating infrastructure, preserving the functionality your business still relies on.",
     },
     {
-      title: '8. Cloud Application Development',
+      title: 'Cloud Application Development',
       icon: '/assets/mobile-app/Cloud-Integration-1.svg',
       desc: 'Cloud architecture starts with understanding how your application handles data, traffic, and connected services. Working with AWS, Google Cloud, and Microsoft Azure, we configure infrastructure around those demands while accounting for security and operating costs.',
     },
     {
-      title: '9. Web Application Maintenance and Support',
+      title: 'Web Application Maintenance and Support',
       icon: '/assets/mobile-app/monitor.svg',
       desc: "Production software needs more than occasional bug fixes. We monitor application performance, resolve production issues, and maintain dependencies so technical problems don't interrupt the workflows your business relies on.",
     },

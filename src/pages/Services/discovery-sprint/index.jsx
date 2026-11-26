@@ -8,17 +8,17 @@ import TechStackTabs from '../mobile-app-development/components/TechStackTabs'
 
 const STATS = [
   {
-    value: '150+',
+    value: '70+',
     label: 'Products Planned & Built',
     icon: '/assets/discovery-sprint/apps-launch.svg',
   },
   {
-    value: '8+',
-    label: 'Years of Development',
+    value: 'Discovery-First',
+    label: 'Development',
     icon: '/assets/discovery-sprint/web-development-1.svg',
   },
   {
-    value: '10M+',
+    value: '3M+',
     label: 'Product Downloads',
     icon: '/assets/discovery-sprint/app-downloads.svg',
   },
@@ -141,17 +141,17 @@ const DELIVERABLES = [
 
 const FRAMEWORK_WEEKS = [
   {
-    title: 'Research',
+    title: 'Week 1: Research',
     tag: 'Phases 1–3',
     desc: 'Stakeholder workshops, competitive research, and structured user interviews establish the factual foundation on which the sprint builds. This replaces internal opinions about your digital product with evidence gathered directly from the market.',
   },
   {
-    title: 'Validation',
+    title: 'Week 2: Validation',
     tag: 'Phases 4–6',
     desc: 'Here come our product validation services. Wireframes, clickable prototypes, and technical discovery work get tested against user and stakeholder feedback. This confirms whether the proposed solution solves the problem before design and engineering commit real hours.',
   },
   {
-    title: 'Planning',
+    title: 'Week 3: Planning',
     tag: 'Phases 7–9',
     desc: "Roadmap, technical architecture, and budget get brought together into a single execution-ready plan. It sequences the digital product's features by dependency and value, so development can start with a build order.",
   },
@@ -188,21 +188,21 @@ const WHY_CHOOSE = [
 const COST_TIERS = [
   {
     title: 'Focused Reviews',
-    bestFor: 'Validate an idea with essential features',
-    timeline: '2–3 Months',
-    investment: '$25,000 – $50,000',
+    bestFor: 'A single roadmap review or architecture review, built on your existing data.',
+    timeline: '2 Weeks',
+    investment: '$2,500 to $5,000',
   },
   {
-    title: 'Growth Product',
-    bestFor: 'Businesses expanding functionality and user base',
-    timeline: '3–6 Months',
-    investment: '$60,000 – $150,000',
+    title: 'Standard Engagements',
+    bestFor: 'Roadmap planning, feature prioritization, and positioning combined, including stakeholder workshops.',
+    timeline: '3–5 Weeks',
+    investment: '$5,000 to $12,000',
   },
   {
-    title: 'Enterprise Product',
-    bestFor: 'Complex platforms with integrations, compliance, and high scalability',
-    timeline: '6+ Months',
-    investment: '$180,000',
+    title: 'Full Engagements',
+    bestFor: 'Everything above plus customer interviews, market analysis, competitive research, and architecture guidance.',
+    timeline: '5–8 Weeks',
+    investment: '$12,000 to $25,000',
   },
 ]
 
@@ -211,6 +211,11 @@ const COMPARISON_ROWS = [
     aspect: 'Purpose',
     sprint: 'Validate the idea and de-risk the build before committing budget',
     mvp: 'Build and ship a working product to real users',
+  },
+  {
+    aspect: 'Typical duration',
+    sprint: '1-3 weeks',
+    mvp: '6-16 weeks (varies by scope)',
   },
   {
     aspect: 'Core Question',
@@ -313,7 +318,7 @@ export default function DiscoverySprint() {
   useEffect(() => {
     const title = 'Discovery Sprint Services | Inceptives Digital'
     const desc =
-      'Turn Your Product Idea Into a Development-Ready Roadmap in 2–4 Weeks. Validate your product concept, architecture, and budget before investing in development.'
+      'Validate your product idea and get a development-ready roadmap in 2-4 weeks with a Discovery Sprint from Inceptives Digital. Start yours today.'
     document.title = title
     window.scrollTo(0, 0)
 
@@ -543,14 +548,18 @@ export default function DiscoverySprint() {
       </section>
 
       {/* 6. CASE STUDIES (Homepage Component) */}
-      <CaseStudies />
+      <CaseStudies
+        heading="Case Study: A Real Discovery Sprint in Action"
+        subtitle="Here's a look at how our discovery sprint service played out for one real product engagement."
+      />
 
       {/* 7. TESTIMONIALS (Homepage Component) */}
       <Testimonials />
 
       {/* 8. INDUSTRIES (Homepage Grid Design, Icon + White Title / Black Hover, No Extra Description) */}
       <IndustriesSection
-        heading="OUR WORK ACROSS INDUSTRIES"
+        heading="Industries We've Worked With on Product Discovery Services"
+        subtitle="Discovery Sprint engagements span multiple industries, though a few sectors return again and again for product and technical planning work."
         showDesc={false}
       />
 
@@ -662,7 +671,10 @@ export default function DiscoverySprint() {
       </section>
 
       {/* 12. TECHNOLOGY STACK */}
-      <TechStackTabs />
+      <TechStackTabs
+        heading="The Tech Stack Behind Every Discovery Sprint Engagement"
+        description="Discovery sprints rely on the right set of collaboration, research, design, and technical planning tools. Our team works across modern product discovery technologies to map user journeys, validate concepts, document insights, and define a technical foundation that supports informed product decisions and successful development."
+      />
 
       {/* 13. THE DISCOVERY SPRINT FRAMEWORK (Sticky Left + Stacking Vertical Scroll Cards) */}
       <section className="w-full bg-[#151515] py-16 sm:py-20 lg:py-28">
@@ -812,7 +824,7 @@ export default function DiscoverySprint() {
             <table className="w-full min-w-[640px] border-collapse">
               <thead>
                 <tr className="bg-[#00CE44] text-black font-bold text-sm sm:text-base uppercase tracking-wide">
-                  <th className="px-6 py-4 text-left w-[22%]">Factor</th>
+                  <th className="px-6 py-4 text-left w-[22%]">Criteria</th>
                   <th className="px-6 py-4 text-left w-[39%]">Discovery Sprint</th>
                   <th className="px-6 py-4 text-left w-[39%]">MVP Development</th>
                 </tr>
@@ -845,11 +857,11 @@ export default function DiscoverySprint() {
         <div className="absolute inset-0 bg-black/75 pointer-events-none" />
         <div className="relative z-10 w-full max-w-[1220px] mx-auto px-6 sm:px-8 text-center space-y-5">
           <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold text-white leading-[1.2] max-w-3xl mx-auto">
-            Every Great Digital Product Starts With{' '}
-            <span className="text-[#00CE44]">Better Decisions</span>
+            Ready to Move Forward?{' '}
+            <span className="text-[#00CE44]">Let&apos;s Build Your Roadmap Together</span>
           </h2>
           <p className="text-white/85 text-[16px] sm:text-[18px] max-w-2xl mx-auto">
-            The fastest way to waste time and money is to build without clarity. Validate the idea, align the team, and move into development with confidence.
+            Ready to replace assumptions with a validated roadmap? Every Discovery Sprint starts with a single conversation about your next product.
           </p>
           <div className="pt-2">
             <a
