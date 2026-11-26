@@ -26,9 +26,9 @@ function IndustryCard({ item }) {
         name={item.icon}
         className="w-11 h-11 text-[#00CE44] mb-3.5"
       />
-      <h3 className="text-white font-semibold text-[12px] sm:text-[13px] leading-snug">
+      <span className="text-white !font-normal text-[11px] sm:text-[12px] leading-snug">
         {item.title}
-      </h3>
+      </span>
     </div>
   )
 }

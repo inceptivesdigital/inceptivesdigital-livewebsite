@@ -119,24 +119,21 @@ p Link {
   animation: marquee 35s linear infinite;
 }
 
-/* Smooth Downward Unroll Animation for Desktop Mega Menu */
+/* Smooth Downward Unroll Animation for Desktop Mega Menu (releases GPU layer for crisp text) */
 @keyframes megaMenuSlideDown {
   0% {
     opacity: 0;
-    transform: translateY(-8px);
-    clip-path: inset(0 0 100% 0 round 0 0 16px 16px);
+    transform: translateY(-6px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
-    clip-path: inset(0 0 0% 0 round 0 0 16px 16px);
+    transform: none;
   }
 }
 
 .mega-menu-dropdown {
   transform-origin: top center;
-  animation: megaMenuSlideDown 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  will-change: transform, opacity, clip-path;
+  animation: megaMenuSlideDown 0.2s ease-out;
 }
 
 .animate-marquee:hover {

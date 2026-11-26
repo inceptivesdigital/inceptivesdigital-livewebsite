@@ -2,28 +2,33 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, CheckCircle2, Shield, Clock } from 'lucide-react'
 import { submitFormToSeo } from '../../../../utils/submitFormToSeo'
+import TurnstileWidget from '../../../../components/TurnstileWidget'
 
 export default function LeadershipConsultation() {
   const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileReset, setTurnstileReset] = useState(0)
+  const [turnstileError, setTurnstileError] = useState('')
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     phone: '',
     budget: '',
     message: '',
-    captcha: '',
   })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
     setSending(true)
-    await submitFormToSeo({
+    setTurnstileError('')
+    const res = await submitFormToSeo({
       formName: 'Lead Form Inceptives Digital',
       subject: `Leadership Consultation - ${formData.fullName}`,
       replyTo: formData.email,
+      turnstileToken,
       fields: {
         'Full Name': formData.fullName,
         Email: formData.email,
@@ -34,6 +39,12 @@ export default function LeadershipConsultation() {
       },
     })
     setSending(false)
+    if (!res?.ok) {
+      setTurnstileError(res?.error || 'Security verification failed. Please try again.')
+      setTurnstileToken('')
+      setTurnstileReset((n) => n + 1)
+      return
+    }
     setSubmitted(true)
     navigate('/thank-you')
   }
@@ -175,25 +186,28 @@ export default function LeadershipConsultation() {
                       />
                     </div>
 
-                    {/* Captcha & Submit Row */}
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4">
-                      <div className="flex items-center gap-3">
-                        <span className="text-sm font-bold text-gray-700">2 + 3 =</span>
-                        <input
-                          type="text"
-                          required
-                          placeholder="___"
-                          value={formData.captcha}
-                          onChange={(e) => setFormData({ ...formData, captcha: e.target.value })}
-                          className="w-16 pb-1 bg-transparent border-b border-gray-300 text-center text-sm font-bold focus:outline-none focus:border-[#00CE44]"
-                        />
-                      </div>
+                    {/* Turnstile & Submit Row */}
+                    <div className="flex flex-col gap-4 pt-4">
+                      <TurnstileWidget
+                        theme="light"
+                        resetKey={turnstileReset}
+                        onVerify={(token) => {
+                          setTurnstileToken(token)
+                          setTurnstileError('')
+                        }}
+                        onExpire={() => setTurnstileToken('')}
+                        onError={() => setTurnstileError('Security check failed to load. Please refresh.')}
+                      />
+                      {turnstileError && (
+                        <p className="text-red-600 text-xs" role="alert">{turnstileError}</p>
+                      )}
 
                       <button
                         type="submit"
-                        className="px-6 sm:px-8 py-3.5 bg-[#0055ff] hover:bg-[#0044cc] text-white font-bold text-sm rounded-none transition-all cursor-pointer border-0 shadow-lg active:scale-95 whitespace-nowrap"
+                        disabled={sending}
+                        className="px-6 sm:px-8 py-3.5 bg-[#0055ff] hover:bg-[#0044cc] text-white font-bold text-sm rounded-none transition-all cursor-pointer border-0 shadow-lg active:scale-95 whitespace-nowrap disabled:opacity-60"
                       >
-                        Schedule Free Consultation
+                        {sending ? 'Submitting...' : 'Schedule Free Consultation'}
                       </button>
                     </div>
 

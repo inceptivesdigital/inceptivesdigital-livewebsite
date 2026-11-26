@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 
 export default function ReactNativeTechPartnerships() {
   const partners = [
-    { name: 'AWS', src: '/assets/ios-app/aws-2.svg' },
-    { name: 'Microsoft Azure', src: '/assets/ios-app/Microsoft_Azure_Logo.svg' },
-    { name: 'Google Cloud', src: '/assets/ios-app/Google_Cloud_logo.svg' },
-    { name: 'Firebase', src: '/assets/ios-app/New_Firebase_logo.svg' },
-    { name: 'Stripe', src: '/assets/ios-app/Stripe_Logo_revised_2016.svg' },
+    { name: 'AWS', src: '/assets/ios-app/awsas-icon.png' },
+    { name: 'Microsoft Azure', src: '/assets/mobile-game/logos/azure.svg' },
+    { name: 'Google Cloud', src: '/assets/ios-app/googlecloud-img.png' },
+    { name: 'Firebase', src: '/assets/ios-app/firebasedlogo2.png' },
+    { name: 'Stripe', src: '/assets/ios-app/strip-png.png' },
     { name: 'OpenAI', src: '/assets/mobile-app/openai.png' },
   ]
 

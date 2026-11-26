@@ -79,6 +79,13 @@ export async function trackGhlLeadSubmission({
       : '') ||
     ''
 
+  const companyName =
+    fields.Company || fields.company || fields['Company Name'] || ''
+  const notes = Object.entries(fields)
+    .filter(([, v]) => v !== undefined && v !== null && String(v).trim() !== '')
+    .map(([k, v]) => `${k}: ${v}`)
+    .join('\n')
+
   const payload = {
     trackingId: GHL_TRACKING_ID,
     locationId: GHL_LOCATION_ID,
@@ -93,6 +100,8 @@ export async function trackGhlLeadSubmission({
       lastName,
       email,
       phone,
+      ...(companyName ? { companyName } : {}),
+      ...(notes ? { notes } : {}),
     },
     fields,
   }

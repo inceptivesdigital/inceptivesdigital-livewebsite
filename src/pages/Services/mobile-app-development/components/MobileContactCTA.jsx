@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { submitFormToSeo } from '../../../../utils/submitFormToSeo'
+import TurnstileWidget from '../../../../components/TurnstileWidget'
 
 export default function MobileContactCTA() {
   const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileReset, setTurnstileReset] = useState(0)
+  const [turnstileError, setTurnstileError] = useState('')
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -21,10 +25,12 @@ export default function MobileContactCTA() {
     e.preventDefault()
     if (sending) return
     setSending(true)
-    await submitFormToSeo({
+    setTurnstileError('')
+    const res = await submitFormToSeo({
       formName: 'Lead Form Inceptives Digital',
       subject: `Mobile App Development Inquiry - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,
+      turnstileToken,
       fields: {
         'First Name': formData.firstName,
         'Last Name': formData.lastName,
@@ -37,6 +43,12 @@ export default function MobileContactCTA() {
       },
     })
     setSending(false)
+    if (!res?.ok) {
+      setTurnstileError(res?.error || 'Security verification failed. Please try again.')
+      setTurnstileToken('')
+      setTurnstileReset((n) => n + 1)
+      return
+    }
     setSubmitted(true)
     navigate('/thank-you')
   }
@@ -199,12 +211,27 @@ export default function MobileContactCTA() {
                   </label>
                 </div>
 
-                {/* Rectangular Full-Width Green Submit Button (No Cloudflare widget per user instruction) */}
+                <TurnstileWidget
+                  theme="dark"
+                  resetKey={turnstileReset}
+                  onVerify={(token) => {
+                    setTurnstileToken(token)
+                    setTurnstileError('')
+                  }}
+                  onExpire={() => setTurnstileToken('')}
+                  onError={() => setTurnstileError('Security check failed to load. Please refresh.')}
+                />
+                {turnstileError && (
+                  <p className="text-red-400 text-xs" role="alert">{turnstileError}</p>
+                )}
+
+                {/* Rectangular Full-Width Green Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0 shadow-none cursor-pointer"
+                  disabled={sending}
+                  className="w-full py-3.5 rounded-none bg-[#00CE44] hover:bg-[#00b83d] text-black font-semibold text-sm sm:text-base transition-colors border-0 shadow-none cursor-pointer disabled:opacity-60"
                 >
-                  Submit Now
+                  {sending ? 'Submitting...' : 'Submit Now'}
                 </button>
 
                 {/* Privacy Policy | Terms of Services */}

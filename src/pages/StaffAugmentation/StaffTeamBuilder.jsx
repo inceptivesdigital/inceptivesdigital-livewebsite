@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { X } from 'lucide-react'
 import { submitFormToSeo } from '../../utils/submitFormToSeo'
+import TurnstileWidget from '../../components/TurnstileWidget'
 
 const DURATION_OPTIONS = [
   { value: '1-2', label: '1 - 2 months' },
@@ -93,6 +94,8 @@ export default function StaffTeamBuilder() {
   const [step, setStep] = useState(1)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileReset, setTurnstileReset] = useState(0)
   const [selectedRoles, setSelectedRoles] = useState([
     { role: 'developer', duration: '3-6', count: '2-5', extra: {}, othersText: '' },
   ])
@@ -136,13 +139,8 @@ export default function StaffTeamBuilder() {
     setStep(2)
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (sending) return
-    setSending(true)
-    setError('')
-
-    const rolesSummary = selectedRoles
+  const formatRolesSummary = () =>
+    selectedRoles
       .map((r) => {
         const extraStr = Object.entries(r.extra)
           .filter(([, v]) => v)
@@ -153,10 +151,19 @@ export default function StaffTeamBuilder() {
       })
       .join('\n')
 
-    await submitFormToSeo({
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (sending) return
+    setSending(true)
+    setError('')
+
+    const rolesSummary = formatRolesSummary()
+
+    const res = await submitFormToSeo({
       formName: 'Lead Form Inceptives Digital',
       subject: `Staff Augmentation Team Request - ${contact.fullName}`,
       replyTo: contact.email,
+      turnstileToken,
       fields: {
         'Full Name': contact.fullName,
         Company: contact.company,
@@ -168,6 +175,12 @@ export default function StaffTeamBuilder() {
     })
 
     setSending(false)
+    if (!res?.ok) {
+      setError(res?.error || 'Security verification failed. Please try again.')
+      setTurnstileToken('')
+      setTurnstileReset((n) => n + 1)
+      return
+    }
     navigate('/thank-you')
   }
 
@@ -331,6 +344,7 @@ export default function StaffTeamBuilder() {
                 onSubmit={handleSubmit}
                 className="flex flex-col justify-between h-full text-left"
               >
+                <input type="hidden" name="selected_roles" value={formatRolesSummary()} />
                 <div
                   className="rounded-2xl border border-white/10 p-4 sm:p-5 space-y-3.5"
                   style={{ backgroundColor: '#171717' }}
@@ -402,6 +416,19 @@ export default function StaffTeamBuilder() {
                     />
                   </div>
                 </div>
+
+                <TurnstileWidget
+                  theme="dark"
+                  className="mt-4"
+                  resetKey={turnstileReset}
+                  onVerify={(token) => {
+                    setTurnstileToken(token)
+                    setError('')
+                  }}
+                  onExpire={() => setTurnstileToken('')}
+                  onError={() => setError('Security check failed to load. Please refresh.')}
+                />
+                {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
 
                 <div className="grid grid-cols-2 gap-3 mt-5">
                   <button

@@ -17,13 +17,15 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://clients.inceptivesdigital.com" />
     <link rel="dns-prefetch" href="https://r2.leadsy.ai" />
+    <link rel="preconnect" href="https://calendly.com" crossorigin />
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin />
     <link rel="dns-prefetch" href="https://calendly.com" />
     <link rel="dns-prefetch" href="https://assets.calendly.com" />
     <link rel="dns-prefetch" href="https://nextincep.wpenginepowered.com" />
 
     <!-- Deferred Third-Party Loader (GTM-5BV286F5, Leadsy, GoHighLevel)
-         Loads immediately on first user interaction or 3.5s after page load so
-         real visitors get 100% tracking while initial LCP/TBT stays near 0ms. -->
+         Loads immediately on first user interaction or 2s after page load so
+         real visitors get 100% tracking & LiveChat while initial LCP/TBT stays near 0ms. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       (function () {
@@ -63,7 +65,7 @@
           window.addEventListener(evt, loadThirdPartyTags, { once: true, passive: true });
         });
         window.addEventListener('load', function () {
-          window.setTimeout(loadThirdPartyTags, 8000);
+          window.setTimeout(loadThirdPartyTags, 2000);
         });
       })();
     </script>

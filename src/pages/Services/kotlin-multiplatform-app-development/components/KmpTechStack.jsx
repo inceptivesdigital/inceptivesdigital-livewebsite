@@ -76,12 +76,12 @@ const techStackCategories = [
 ]
 
 const partners = [
-  { name: 'AWS', src: '/assets/ios-app/aws-2.svg' },
-  { name: 'Google Cloud', src: '/assets/ios-app/Google_Cloud_logo.svg' },
-  { name: 'Microsoft Azure', src: '/assets/ios-app/Microsoft_Azure_Logo.svg' },
-  { name: 'Firebase', src: '/assets/ios-app/New_Firebase_logo.svg' },
-  { name: 'Stripe', src: '/assets/ios-app/Stripe_Logo_revised_2016.svg' },
-  { name: 'Google', src: '/assets/ios-app/Google_2015_logo.svg' },
+  { name: 'AWS', src: '/assets/ios-app/awsas-icon.png' },
+  { name: 'Google Cloud', src: '/assets/ios-app/googlecloud-img.png' },
+  { name: 'Microsoft Azure', src: '/assets/mobile-game/logos/azure.svg' },
+  { name: 'Firebase', src: '/assets/ios-app/firebasedlogo2.png' },
+  { name: 'Stripe', src: '/assets/ios-app/strip-png.png' },
+  { name: 'Google', src: '/assets/marquee/google.png' },
 ]
 
 export default function KmpTechStack() {

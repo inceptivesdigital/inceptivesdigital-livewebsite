@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { submitFormToSeo } from '../utils/submitFormToSeo'
+import TurnstileWidget from './TurnstileWidget'
 
 const TESTIMONIALS = [
   {
@@ -106,8 +107,10 @@ export default function ContactPopupModal() {
   const [isOpen, setIsOpen] = useState(false)
   const [slide, setSlide] = useState(0)
   const [form, setForm] = useState(EMPTY_FORM)
-  const [captcha, setCaptcha] = useState(newCaptcha)
-  const [captchaError, setCaptchaError] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileReset, setTurnstileReset] = useState(0)
+  const [turnstileError, setTurnstileError] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   const panelRef = useRef(null)
@@ -192,15 +195,14 @@ export default function ContactPopupModal() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    if (parseInt(form.captcha, 10) !== captcha.a + captcha.b) {
-      setCaptchaError(true)
-      return
-    }
-    setCaptchaError(false)
-    await submitFormToSeo({
+    if (sending) return
+    setSending(true)
+    setTurnstileError('')
+    const res = await submitFormToSeo({
       formName: 'Lead Form Inceptives Digital',
       subject: `Contact Popup Inquiry - ${form.firstName} ${form.lastName}`.trim(),
       replyTo: form.email,
+      turnstileToken,
       fields: {
         'First Name': form.firstName,
         'Last Name': form.lastName,
@@ -212,10 +214,18 @@ export default function ContactPopupModal() {
         'Marketing SMS Consent': form.marketingConsent ? 'Yes' : 'No',
       },
     })
+    setSending(false)
+    if (!res?.ok) {
+      setTurnstileError(res?.error || 'Security verification failed. Please try again.')
+      setTurnstileToken('')
+      setTurnstileReset((n) => n + 1)
+      return
+    }
     setSubmitted(true)
     setIsOpen(false)
     setForm(EMPTY_FORM)
-    setCaptcha(newCaptcha())
+    setTurnstileToken('')
+    setTurnstileReset((n) => n + 1)
     navigate('/thank-you')
   }
 
@@ -223,8 +233,9 @@ export default function ContactPopupModal() {
     close()
     setSubmitted(false)
     setForm(EMPTY_FORM)
-    setCaptcha(newCaptcha())
-    setCaptchaError(false)
+    setTurnstileToken('')
+    setTurnstileReset((n) => n + 1)
+    setTurnstileError('')
   }
 
   if (!isOpen) return null
@@ -402,21 +413,22 @@ export default function ContactPopupModal() {
                       </span>
                     </label>
 
+                    <TurnstileWidget
+                      theme="dark"
+                      resetKey={turnstileReset}
+                      onVerify={(token) => {
+                        setTurnstileToken(token)
+                        setTurnstileError('')
+                      }}
+                      onExpire={() => setTurnstileToken('')}
+                      onError={() => setTurnstileError('Security check failed to load. Please refresh.')}
+                    />
                     <div className="id-cp__submit-row">
-                      <div className="id-cp__captcha">
-                        <span>{captcha.a} + {captcha.b} =</span>
-                        <input
-                          type="text"
-                          inputMode="numeric"
-                          required
-                          aria-label="Captcha answer"
-                          value={form.captcha}
-                          onChange={set('captcha')}
-                        />
-                      </div>
-                      <button type="submit" className="id-cp__submit">Submit</button>
+                      <button type="submit" disabled={sending} className="id-cp__submit">
+                        {sending ? 'Submitting...' : 'Submit'}
+                      </button>
                     </div>
-                    {captchaError && <p className="id-cp__error" role="alert">Incorrect answer, please try again.</p>}
+                    {turnstileError && <p className="id-cp__error" role="alert">{turnstileError}</p>}
                   </form>
                 )}
 

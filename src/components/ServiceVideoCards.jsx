@@ -6,21 +6,21 @@ export default function ServiceVideoCards() {
     {
       id: 'mobile-app',
       title: 'Mobile App Development',
-      link: '/services',
+      link: '/mobile-app-development',
       icon: '/assets/mobile-appicon.svg',
       desc: 'User expectations define successful mobile experiences. Our mobile app development focuses on intuitive interactions, reliable performance, and scalable architecture across iOS, Android, and cross-platform platforms.'
     },
     {
       id: 'digital-product',
       title: 'Digital Product Development',
-      link: '/services',
+      link: '/digital-product-development',
       icon: '/assets/mobile-appicon2.svg',
       desc: 'Great products require more than code. From early validation to complex digital platforms, our product development approach connects strategy, UX, technology, and business objectives into one focused product journey.'
     },
     {
       id: 'ai-powered',
       title: 'AI-Powered Systems',
-      link: '/services',
+      link: '/ai-development',
       icon: '/assets/mobile-appicon3.svg',
       iconAlt: 'AI Development',
       desc: 'AI creates value when it improves how people work, decide, and interact with products. Our AI development approach combines intelligent capabilities, data strategy, and product thinking to create practical AI-powered solutions.'

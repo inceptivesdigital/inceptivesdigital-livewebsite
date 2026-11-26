@@ -71,7 +71,7 @@
       "destination": "/email-signature/index.html"
     },
     {
-      "source": "/((?!assets/|images/|fonts/|custom-mobile-application-development/|reviews/|email-signature/|robots\\.txt|sitemap_index\\.xml|(?:page-|post-|author-)?sitemap\\.xml).*)",
+      "source": "/((?!api/|cdn-cgi/|assets/|images/|fonts/|custom-mobile-application-development/|reviews/|email-signature/|robots\\.txt|sitemap_index\\.xml|(?:page-|post-|author-)?sitemap\\.xml).*)",
       "destination": "/index.html"
     }
   ]

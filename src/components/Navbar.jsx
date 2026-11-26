@@ -211,7 +211,7 @@ export default function Navbar() {
 
             {/* Column 2: Application Development */}
             <div className="col-span-3 p-5 2xl:p-7 border-r border-[#37393d]">
-              <h3 className="text-[16px] 2xl:text-[20px] font-bold text-white mb-2 2xl:mb-3">
+              <h3 className="text-[14.5px] xl:text-[16px] 2xl:text-[20px] font-bold text-white whitespace-nowrap mb-2 2xl:mb-3">
                 Application Development
               </h3>
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
@@ -255,12 +255,12 @@ export default function Navbar() {
 
             {/* Column 3: Artificial Intelligence */}
             <div className="col-span-3 p-5 2xl:p-7 border-r border-[#37393d]">
-              <h3 className="text-[16px] 2xl:text-[20px] font-bold text-white mb-2 2xl:mb-3">
+              <h3 className="text-[14.5px] xl:text-[16px] 2xl:text-[20px] font-bold text-white whitespace-nowrap mb-2 2xl:mb-3">
                 Artificial Intelligence
               </h3>
 
               <h4 className="text-[12px] 2xl:text-[13px] font-bold text-[#00CE44] mb-1.5 2xl:mb-2 uppercase tracking-wider">
-                AI Servicess
+                AI Services
               </h4>
               <ul className="space-y-1 2xl:space-y-1.5 mb-3.5 2xl:mb-5 text-[13px] 2xl:text-[14px] text-slate-300">
                 <li><Link to="/ai-development" className="hover:text-white transition">AI Development</Link></li>
@@ -287,7 +287,7 @@ export default function Navbar() {
 
             {/* Column 4: Digital Product Development */}
             <div className="col-span-4 p-5 2xl:p-7">
-              <h3 className="text-[16px] 2xl:text-[20px] font-bold text-white mb-2 2xl:mb-3">
+              <h3 className="text-[14.5px] xl:text-[16px] 2xl:text-[20px] font-bold text-white whitespace-nowrap mb-2 2xl:mb-3">
                 Digital Product Development
               </h3>
 

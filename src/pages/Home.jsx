@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, lazy, Suspense } from 'react'
 import Hero from '../components/Hero'
 import ClientMarquee from '../components/ClientMarquee'
+import ScheduleSection from '../components/ScheduleSection'
 
 // Lazy-load below-the-fold homepage sections so Mobile & Desktop initial JS & network stay minimal
 const CoreCapabilities = lazy(() => import('../components/CoreCapabilities'))
@@ -13,7 +14,6 @@ const Testimonials = lazy(() => import('../components/Testimonials'))
 const IndustriesSection = lazy(() => import('../components/IndustriesSection'))
 const DiscoverySprintCTA = lazy(() => import('../components/DiscoverySprintCTA'))
 const ProcessSection = lazy(() => import('../components/ProcessSection'))
-const ScheduleSection = lazy(() => import('../components/ScheduleSection'))
 const SuccessSection = lazy(() => import('../components/SuccessSection'))
 const BlogSection = lazy(() => import('../components/BlogSection'))
 const FAQSection = lazy(() => import('../components/FAQSection'))
@@ -92,8 +92,8 @@ export default function Home() {
         <DiscoverySprintCTA />
         <ProcessSection />
       </LazyOnScroll>
+      <ScheduleSection />
       <LazyOnScroll minHeight={420}>
-        <ScheduleSection />
         <SuccessSection />
         <BlogSection />
         <FAQSection />

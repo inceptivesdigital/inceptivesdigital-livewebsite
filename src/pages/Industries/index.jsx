@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { submitFormToSeo } from '../../utils/submitFormToSeo'
 import AwardsSection from '../../components/AwardsSection'
+import TurnstileWidget from '../../components/TurnstileWidget'
 
 const INDUSTRIES = [
   {
@@ -177,6 +178,9 @@ const AWARDS = [
 export default function IndustriesHubPage() {
   const navigate = useNavigate()
   const [sending, setSending] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileReset, setTurnstileReset] = useState(0)
+  const [turnstileError, setTurnstileError] = useState('')
   const [formData, setFormData] = useState({
     firstName: '',
     email: '',
@@ -222,10 +226,12 @@ export default function IndustriesHubPage() {
     e.preventDefault()
     if (sending) return
     setSending(true)
-    await submitFormToSeo({
+    setTurnstileError('')
+    const res = await submitFormToSeo({
       formName: 'Lead Form Inceptives Digital',
       subject: `Industries Consultation - ${formData.firstName}`.trim(),
       replyTo: formData.email,
+      turnstileToken,
       fields: {
         'First Name': formData.firstName,
         Email: formData.email,
@@ -236,6 +242,12 @@ export default function IndustriesHubPage() {
       },
     })
     setSending(false)
+    if (!res?.ok) {
+      setTurnstileError(res?.error || 'Security verification failed. Please try again.')
+      setTurnstileToken('')
+      setTurnstileReset((n) => n + 1)
+      return
+    }
     navigate('/thank-you')
   }
 
@@ -357,6 +369,20 @@ export default function IndustriesHubPage() {
                       </span>
                     </label>
                   </div>
+
+                  <TurnstileWidget
+                    theme="dark"
+                    resetKey={turnstileReset}
+                    onVerify={(token) => {
+                      setTurnstileToken(token)
+                      setTurnstileError('')
+                    }}
+                    onExpire={() => setTurnstileToken('')}
+                    onError={() => setTurnstileError('Security check failed to load. Please refresh.')}
+                  />
+                  {turnstileError && (
+                    <p className="text-red-400 text-xs text-left" role="alert">{turnstileError}</p>
+                  )}
 
                   <button
                     type="submit"

@@ -27,7 +27,7 @@ export default function DiscoverySprintCTA() {
           {/* Button: 18px font-size, 500 font-weight, sharp corners */}
           <div>
             <Link
-              to="/services"
+              to="/discovery-sprint"
               style={{ fontWeight: 500 }}
               className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-none bg-[#00CE44] hover:bg-[#00e04b] text-black font-medium text-[18px] tracking-tight transition-all duration-150 active:scale-95 shadow-none cursor-pointer border-0"
             >

@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { submitFormToSeo, SEO_RECIPIENT_EMAIL } from '../../../../utils/submitFormToSeo'
+import TurnstileWidget from '../../../../components/TurnstileWidget'
 
 const QUIZ_QUESTIONS = [
   {
@@ -452,6 +453,8 @@ export default function IosArchitectureQuiz() {
   })
   const [error, setError] = useState('')
   const [sending, setSending] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const [turnstileReset, setTurnstileReset] = useState(0)
   const [submittedData, setSubmittedData] = useState(null)
   const [pdfDownloading, setPdfDownloading] = useState(false)
   const [pdfError, setPdfError] = useState('')
@@ -508,11 +511,12 @@ export default function IosArchitectureQuiz() {
     const fit = calculateIosScore(answers)
 
     try {
-      await submitFormToSeo({
+      const res = await submitFormToSeo({
         formName: 'iOS APP DEVELOPMENT Architecture Quiz',
         subject: `iOS APP DEVELOPMENT Page - ${trimmedName}`,
         replyTo: trimmedEmail,
         wpAction: 'id_ios_quiz_submit',
+        turnstileToken,
         fields: {
           'Full Name': trimmedName,
           Email: trimmedEmail,
@@ -534,6 +538,13 @@ export default function IosArchitectureQuiz() {
           timeline: answers.timeline,
         },
       })
+
+      if (!res?.ok) {
+        setError(res?.error || 'Security verification failed. Please try again.')
+        setTurnstileToken('')
+        setTurnstileReset((n) => n + 1)
+        return
+      }
 
       const outData = {
         result: fit,
@@ -989,6 +1000,27 @@ export default function IosArchitectureQuiz() {
                     {step === 4 && (
                       <fieldset className="id-ios-step" data-step={4}>
                         <legend>5. Where should we send your assessment?</legend>
+                        {/* Preserve all Step 1-4 radio selections in the DOM for GHL external-tracking form capture */}
+                        <input type="hidden" name="platform" value={answers.platform || ''} />
+                        <input type="hidden" name="hardware" value={answers.hardware || ''} />
+                        <input type="hidden" name="performance" value={answers.performance || ''} />
+                        <input type="hidden" name="timeline" value={answers.timeline || ''} />
+                        <input
+                          type="hidden"
+                          name="recommendation"
+                          value={calculateIosScore(answers).title}
+                        />
+                        <input
+                          type="hidden"
+                          name="message"
+                          value={[
+                            `1. Platform: ${answers.platform || 'N/A'}`,
+                            `2. Hardware: ${answers.hardware || 'N/A'}`,
+                            `3. Performance: ${answers.performance || 'N/A'}`,
+                            `4. Timeline: ${answers.timeline || 'N/A'}`,
+                            `Recommendation: ${calculateIosScore(answers).title}`,
+                          ].join(' | ')}
+                        />
                         <div className="id-ios-contact">
                           <label>
                             Full Name
@@ -1040,6 +1072,17 @@ export default function IosArchitectureQuiz() {
                           {SEO_RECIPIENT_EMAIL}). After submission, you can download your complete
                           assessment as a PDF.
                         </p>
+                        <TurnstileWidget
+                          theme="dark"
+                          className="mt-3"
+                          resetKey={turnstileReset}
+                          onVerify={(token) => {
+                            setTurnstileToken(token)
+                            setError('')
+                          }}
+                          onExpire={() => setTurnstileToken('')}
+                          onError={() => setError('Security check failed to load. Please refresh.')}
+                        />
                       </fieldset>
                     )}
 
