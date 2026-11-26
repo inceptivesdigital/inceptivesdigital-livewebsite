@@ -75,7 +75,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="pt-24 sm:pt-28 lg:pt-32 pb-10 lg:pb-12 overflow-visible">
+    <section className="pt-20 sm:pt-24 lg:pt-32 pb-10 lg:pb-12 overflow-visible">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative overflow-visible">
         {!isDesktop ? (
           /* =========================================================================
@@ -108,7 +108,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="mt-8 w-full h-[260px] sm:h-[360px] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0c0d10] border border-white/10 shadow-2xl relative">
+            <div className="mt-7 w-full h-[240px] sm:h-[340px] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0c0d10] border border-white/10 shadow-2xl relative">
               <img
                 src="/assets/hero-banner-full.jpg"
                 alt="Inceptives Digital App Showcase"
@@ -116,7 +116,7 @@ export default function Hero() {
                 height={720}
                 fetchPriority="high"
                 decoding="sync"
-                className="w-full h-full object-cover object-center"
+                className="w-[188%] max-w-none h-full object-cover object-right -ml-[88%]"
               />
               {loadVideo && (
                 <video
@@ -126,7 +126,7 @@ export default function Hero() {
                   playsInline
                   preload="metadata"
                   poster="/assets/hero-banner-full.jpg"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-cover object-right"
                 >
                   <source src="/assets/comp-bannerhero.mp4" type="video/mp4" />
                 </video>

@@ -348,11 +348,17 @@ export default function ScheduleCallModal() {
           background: #ffffff;
         }
         @media (max-width: 1023px) {
+          #schedulePopup .schedule-popup-box {
+            width: 94%;
+            max-width: 760px;
+          }
           #schedulePopup .schedule-popup-content {
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
           }
           #schedulePopup .schedule-popup-content iframe {
             min-width: 0;
+            max-height: none !important;
           }
         }
         #schedulePopup.calendly-loaded .schedule-popup-content iframe {
@@ -550,12 +556,11 @@ export default function ScheduleCallModal() {
                 src={iframeSrc}
                 title="Calendly Scheduling Page"
                 loading="eager"
-                scrolling="no"
+                scrolling="auto"
                 allow="fullscreen"
                 style={{
                   height: `${iframeHeight}px`,
                   maxHeight: 'calc(94vh - 60px)',
-                  overflow: 'hidden',
                 }}
                 tabIndex={status === 'loaded' ? 0 : -1}
                 onLoad={handleIframeLoad}

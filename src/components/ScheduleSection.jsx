@@ -36,31 +36,30 @@ export default function ScheduleSection() {
           Schedule Your Strategy Session
         </h2>
 
-        {/* Clean transparent container: Eliminates the double-card white gap */}
-        <div className="w-full flex justify-center relative overflow-x-auto no-scrollbar">
+        {/* Clean transparent container: Responsive on mobile/iPad, 2-column on desktop */}
+        <div className="w-full flex justify-center relative overflow-hidden">
           
           {/* Subtle loading placeholder until Calendly is fully rendered */}
           {!isLoaded && (
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-transparent transition-opacity duration-300 min-h-[680px]">
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-transparent transition-opacity duration-300 min-h-[580px] sm:min-h-[680px]">
               <div className="w-10 h-10 border-2 border-[#00CE44] border-t-transparent rounded-full animate-spin mb-4" />
               <span className="text-sm font-medium text-slate-400">Loading strategy calendar...</span>
             </div>
           )}
 
-          {/* Iframe with 1120px locks Calendly into 2-column side-by-side mode without redundant outer white border */}
+          {/* Full-width responsive below lg (mobile & iPad); 2-column 1020px-1120px on desktop */}
           <iframe
             src={calendlyUrl}
             title="Calendly Scheduling Page"
             onLoad={() => setIsLoaded(true)}
-            className={`w-full min-w-[1120px] max-w-[1120px] border-0 block mx-auto bg-transparent transition-opacity duration-500 ${
+            className={`w-full min-w-0 max-w-[1120px] border-0 block mx-auto bg-transparent transition-opacity duration-500 ${
               isLoaded ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
               height: `${iframeHeight}px`,
-              minHeight: '700px',
-              overflow: 'hidden'
+              minHeight: '640px',
             }}
-            scrolling="no"
+            scrolling="auto"
             loading="eager"
           />
         </div>
