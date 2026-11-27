@@ -64,7 +64,7 @@ export default function Hero() {
     const start = () => {
       if (!cancelled) setLoadVideo(true)
     }
-    const events = ['pointerdown', 'mousemove', 'scroll', 'touchstart', 'keydown']
+    const events = ['pointerdown', 'scroll', 'touchstart', 'keydown', 'wheel']
     events.forEach((evt) =>
       window.addEventListener(evt, start, { once: true, passive: true })
     )
@@ -110,10 +110,10 @@ export default function Hero() {
 
             <div className="mt-7 w-full h-[240px] sm:h-[340px] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0c0d10] border border-white/10 shadow-2xl relative">
               <img
-                src="/assets/hero-banner-full.jpg"
+                src="/assets/hero-banner-mobile.jpg"
                 alt="Inceptives Digital App Showcase"
-                width={1280}
-                height={720}
+                width={768}
+                height={382}
                 fetchPriority="high"
                 decoding="sync"
                 className="w-[188%] max-w-none h-full object-cover object-right -ml-[88%]"
@@ -125,7 +125,7 @@ export default function Hero() {
                   muted
                   playsInline
                   preload="metadata"
-                  poster="/assets/hero-banner-full.jpg"
+                  poster="/assets/hero-banner-mobile.jpg"
                   className="absolute inset-0 w-full h-full object-cover object-right"
                 >
                   <source src="/assets/comp-bannerhero.mp4" type="video/mp4" />

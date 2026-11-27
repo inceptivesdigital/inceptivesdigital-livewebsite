@@ -10,22 +10,21 @@
     <meta name="msapplication-TileImage" content="/assets/favicon-270x270.webp?v=2" />
     
     <!-- Preload Critical LCP Hero Assets (media-scoped so mobile never preloads desktop-only assets) -->
-    <link rel="preload" as="image" href="/assets/hero-banner-full.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-banner-mobile.jpg" fetchpriority="high" media="(max-width: 1023px)" />
+    <link rel="preload" as="image" href="/assets/hero-banner-full.jpg" fetchpriority="high" media="(min-width: 1024px)" />
     <link rel="preload" as="image" href="/assets/green-banner-shape.png" fetchpriority="high" media="(min-width: 1024px)" />
 
     <!-- Calendly, WordPress & Third-Party Analytics DNS-Prefetch -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://clients.inceptivesdigital.com" />
     <link rel="dns-prefetch" href="https://r2.leadsy.ai" />
-    <link rel="preconnect" href="https://calendly.com" crossorigin />
-    <link rel="preconnect" href="https://assets.calendly.com" crossorigin />
     <link rel="dns-prefetch" href="https://calendly.com" />
     <link rel="dns-prefetch" href="https://assets.calendly.com" />
     <link rel="dns-prefetch" href="https://nextincep.wpenginepowered.com" />
 
     <!-- Google Tag Manager, Leadsy, GoHighLevel & LiveChat Loader
          Initializes dataLayer immediately; loads third-party scripts on first user
-         interaction or 3.5s after load so real visitors get full tracking & LiveChat
+         interaction so real visitors get full tracking & LiveChat
          while Mobile/Desktop PageSpeed TBT stays minimal. -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -35,7 +34,7 @@
         function loadIntegrations() {
           if (loaded) return;
           loaded = true;
-          ['pointerdown', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+          ['pointerdown', 'keydown', 'scroll', 'touchstart', 'wheel'].forEach(function (evt) {
             window.removeEventListener(evt, loadIntegrations);
           });
 
@@ -94,7 +93,7 @@
           }, 2500);
         }
 
-        ['pointerdown', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
+        ['pointerdown', 'keydown', 'scroll', 'touchstart', 'wheel'].forEach(function (evt) {
           window.addEventListener(evt, loadIntegrations, { once: true, passive: true });
         });
       })();
