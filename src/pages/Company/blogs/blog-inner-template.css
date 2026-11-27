@@ -25,21 +25,14 @@
 
 .id-blog .id-blog-wrap {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1600px;
   margin-inline: auto;
   padding-inline: 2rem;
 }
 
-@media (min-width: 1601px) {
+@media (min-width: 1536px) {
   .id-blog .id-blog-wrap {
     max-width: 1600px;
-    padding-inline: 2.5rem;
-  }
-}
-
-@media (min-width: 1536px) and (max-width: 1600px) {
-  .id-blog .id-blog-wrap {
-    max-width: 1280px;
     padding-inline: 2.5rem;
   }
 }
