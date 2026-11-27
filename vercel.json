@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/blog-seo.js": {
+      "includeFiles": "dist/index.html"
+    }
+  },
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -1285,6 +1290,22 @@
     {
       "source": "/web-app-development-company/",
       "destination": "/web-app-development-company/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/api/blog-seo"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/api/blog-seo"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/api/blog-seo?slug=:slug"
+    },
+    {
+      "source": "/blog/:slug/",
+      "destination": "/api/blog-seo?slug=:slug"
     },
     {
       "source": "/((?!api/|cdn-cgi/|assets/|images/|fonts/|custom-mobile-application-development/|reviews/|email-signature/|robots\\.txt|sitemap_index\\.xml|(?:page-|post-|author-)?sitemap\\.xml).*)",
