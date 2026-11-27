@@ -74,6 +74,14 @@ export default function FitnessServicesGrid() {
                   src={srv.icon}
                   alt={srv.title}
                   className="max-h-12 max-w-12 object-contain select-none"
+                  style={
+                    srv.icon.endsWith('.png')
+                      ? {
+                          filter:
+                            'brightness(0) saturate(100%) invert(58%) sepia(92%) saturate(1650%) hue-rotate(102deg) brightness(96%) contrast(103%)',
+                        }
+                      : undefined
+                  }
                   loading="lazy"
                 />
               </div>
