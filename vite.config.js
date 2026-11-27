@@ -3,6 +3,7 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { collectAllRouteSeo } from './scripts/prerender-route-seo.mjs'
 
 const SEO_ROUTES = {
   '/mobile-app-development': {
@@ -209,6 +210,7 @@ function createPublicSubdirMiddleware(rootDir) {
 }
 
 function routeSeoPlugin() {
+  const allSeoRoutes = { ...collectAllRouteSeo(), ...SEO_ROUTES }
   return {
     name: 'route-seo-html-plugin',
     configureServer(server) {
@@ -225,7 +227,7 @@ function routeSeoPlugin() {
         if (!html.includes('id="root"')) return html
         const rawUrl = ctx?.originalUrl || ctx?.path || '/'
         const cleanPath = rawUrl.split('?')[0].replace(/\/+$/, '') || '/'
-        const seo = SEO_ROUTES[cleanPath]
+        const seo = allSeoRoutes[cleanPath]
         return applyRouteSeoToHtml(html, seo)
       },
     },
@@ -234,7 +236,7 @@ function routeSeoPlugin() {
       const baseHtmlPath = path.join(distDir, 'index.html')
       if (!fs.existsSync(baseHtmlPath)) return
       const baseHtml = fs.readFileSync(baseHtmlPath, 'utf-8')
-      for (const [routePath, seo] of Object.entries(SEO_ROUTES)) {
+      for (const [routePath, seo] of Object.entries(allSeoRoutes)) {
         const routeDir = path.join(distDir, routePath.replace(/^\/+/, ''))
         const targetIndex = path.join(routeDir, 'index.html')
         if (fs.existsSync(targetIndex)) continue

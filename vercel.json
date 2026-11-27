@@ -71,6 +71,1222 @@
       "destination": "/email-signature/index.html"
     },
     {
+      "source": "/about-us",
+      "destination": "/about-us/index.html"
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about-us/index.html"
+    },
+    {
+      "source": "/ai-agent-development",
+      "destination": "/ai-agent-development/index.html"
+    },
+    {
+      "source": "/ai-agent-development/",
+      "destination": "/ai-agent-development/index.html"
+    },
+    {
+      "source": "/ai-app-development-services",
+      "destination": "/ai-app-development-services/index.html"
+    },
+    {
+      "source": "/ai-app-development-services/",
+      "destination": "/ai-app-development-services/index.html"
+    },
+    {
+      "source": "/ai-automation-services",
+      "destination": "/ai-automation-services/index.html"
+    },
+    {
+      "source": "/ai-automation-services/",
+      "destination": "/ai-automation-services/index.html"
+    },
+    {
+      "source": "/ai-chatbot-development-services",
+      "destination": "/ai-chatbot-development-services/index.html"
+    },
+    {
+      "source": "/ai-chatbot-development-services/",
+      "destination": "/ai-chatbot-development-services/index.html"
+    },
+    {
+      "source": "/ai-cost-estimator",
+      "destination": "/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/ai-cost-estimator/",
+      "destination": "/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/ai-development",
+      "destination": "/ai-development/index.html"
+    },
+    {
+      "source": "/ai-development/",
+      "destination": "/ai-development/index.html"
+    },
+    {
+      "source": "/ai-development/ai-cost-estimator",
+      "destination": "/ai-development/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/ai-development/ai-cost-estimator/",
+      "destination": "/ai-development/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/ai-development/computer-vision",
+      "destination": "/ai-development/computer-vision/index.html"
+    },
+    {
+      "source": "/ai-development/computer-vision/",
+      "destination": "/ai-development/computer-vision/index.html"
+    },
+    {
+      "source": "/ai-mvp-development",
+      "destination": "/ai-mvp-development/index.html"
+    },
+    {
+      "source": "/ai-mvp-development/",
+      "destination": "/ai-mvp-development/index.html"
+    },
+    {
+      "source": "/android-app-development",
+      "destination": "/android-app-development/index.html"
+    },
+    {
+      "source": "/android-app-development/",
+      "destination": "/android-app-development/index.html"
+    },
+    {
+      "source": "/anroid-app-development",
+      "destination": "/anroid-app-development/index.html"
+    },
+    {
+      "source": "/anroid-app-development/",
+      "destination": "/anroid-app-development/index.html"
+    },
+    {
+      "source": "/app-store-optimization",
+      "destination": "/app-store-optimization/index.html"
+    },
+    {
+      "source": "/app-store-optimization/",
+      "destination": "/app-store-optimization/index.html"
+    },
+    {
+      "source": "/ar-app-development",
+      "destination": "/ar-app-development/index.html"
+    },
+    {
+      "source": "/ar-app-development/",
+      "destination": "/ar-app-development/index.html"
+    },
+    {
+      "source": "/backend-api-development",
+      "destination": "/backend-api-development/index.html"
+    },
+    {
+      "source": "/backend-api-development/",
+      "destination": "/backend-api-development/index.html"
+    },
+    {
+      "source": "/blockchain-development",
+      "destination": "/blockchain-development/index.html"
+    },
+    {
+      "source": "/blockchain-development/",
+      "destination": "/blockchain-development/index.html"
+    },
+    {
+      "source": "/business-process-automation",
+      "destination": "/business-process-automation/index.html"
+    },
+    {
+      "source": "/business-process-automation/",
+      "destination": "/business-process-automation/index.html"
+    },
+    {
+      "source": "/company",
+      "destination": "/company/index.html"
+    },
+    {
+      "source": "/company/",
+      "destination": "/company/index.html"
+    },
+    {
+      "source": "/company/about-us",
+      "destination": "/company/about-us/index.html"
+    },
+    {
+      "source": "/company/about-us/",
+      "destination": "/company/about-us/index.html"
+    },
+    {
+      "source": "/company/contact-us",
+      "destination": "/company/contact-us/index.html"
+    },
+    {
+      "source": "/company/contact-us/",
+      "destination": "/company/contact-us/index.html"
+    },
+    {
+      "source": "/company/founders-letter",
+      "destination": "/company/founders-letter/index.html"
+    },
+    {
+      "source": "/company/founders-letter/",
+      "destination": "/company/founders-letter/index.html"
+    },
+    {
+      "source": "/company/leadership",
+      "destination": "/company/leadership/index.html"
+    },
+    {
+      "source": "/company/leadership/",
+      "destination": "/company/leadership/index.html"
+    },
+    {
+      "source": "/company/life-at-inceptives-digital",
+      "destination": "/company/life-at-inceptives-digital/index.html"
+    },
+    {
+      "source": "/company/life-at-inceptives-digital/",
+      "destination": "/company/life-at-inceptives-digital/index.html"
+    },
+    {
+      "source": "/company/partnership",
+      "destination": "/company/partnership/index.html"
+    },
+    {
+      "source": "/company/partnership/",
+      "destination": "/company/partnership/index.html"
+    },
+    {
+      "source": "/company/press-media",
+      "destination": "/company/press-media/index.html"
+    },
+    {
+      "source": "/company/press-media/",
+      "destination": "/company/press-media/index.html"
+    },
+    {
+      "source": "/computer-vision-development-services",
+      "destination": "/computer-vision-development-services/index.html"
+    },
+    {
+      "source": "/computer-vision-development-services/",
+      "destination": "/computer-vision-development-services/index.html"
+    },
+    {
+      "source": "/contact-us",
+      "destination": "/contact-us/index.html"
+    },
+    {
+      "source": "/contact-us/",
+      "destination": "/contact-us/index.html"
+    },
+    {
+      "source": "/cross-platform-app-development",
+      "destination": "/cross-platform-app-development/index.html"
+    },
+    {
+      "source": "/cross-platform-app-development/",
+      "destination": "/cross-platform-app-development/index.html"
+    },
+    {
+      "source": "/custom-software-development",
+      "destination": "/custom-software-development/index.html"
+    },
+    {
+      "source": "/custom-software-development/",
+      "destination": "/custom-software-development/index.html"
+    },
+    {
+      "source": "/digital-product-development",
+      "destination": "/digital-product-development/index.html"
+    },
+    {
+      "source": "/digital-product-development/",
+      "destination": "/digital-product-development/index.html"
+    },
+    {
+      "source": "/discovery-sprint",
+      "destination": "/discovery-sprint/index.html"
+    },
+    {
+      "source": "/discovery-sprint/",
+      "destination": "/discovery-sprint/index.html"
+    },
+    {
+      "source": "/ecommerce-app-development",
+      "destination": "/ecommerce-app-development/index.html"
+    },
+    {
+      "source": "/ecommerce-app-development/",
+      "destination": "/ecommerce-app-development/index.html"
+    },
+    {
+      "source": "/ecommerce-app-development-company",
+      "destination": "/ecommerce-app-development-company/index.html"
+    },
+    {
+      "source": "/ecommerce-app-development-company/",
+      "destination": "/ecommerce-app-development-company/index.html"
+    },
+    {
+      "source": "/education-app-development-company",
+      "destination": "/education-app-development-company/index.html"
+    },
+    {
+      "source": "/education-app-development-company/",
+      "destination": "/education-app-development-company/index.html"
+    },
+    {
+      "source": "/flutter-app-development",
+      "destination": "/flutter-app-development/index.html"
+    },
+    {
+      "source": "/flutter-app-development/",
+      "destination": "/flutter-app-development/index.html"
+    },
+    {
+      "source": "/founders-letter",
+      "destination": "/founders-letter/index.html"
+    },
+    {
+      "source": "/founders-letter/",
+      "destination": "/founders-letter/index.html"
+    },
+    {
+      "source": "/generative-ai-development-company",
+      "destination": "/generative-ai-development-company/index.html"
+    },
+    {
+      "source": "/generative-ai-development-company/",
+      "destination": "/generative-ai-development-company/index.html"
+    },
+    {
+      "source": "/industries",
+      "destination": "/industries/index.html"
+    },
+    {
+      "source": "/industries/",
+      "destination": "/industries/index.html"
+    },
+    {
+      "source": "/industries/ecommerce-app-development",
+      "destination": "/industries/ecommerce-app-development/index.html"
+    },
+    {
+      "source": "/industries/ecommerce-app-development/",
+      "destination": "/industries/ecommerce-app-development/index.html"
+    },
+    {
+      "source": "/industries/ecommerce-app-development-company",
+      "destination": "/industries/ecommerce-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/ecommerce-app-development-company/",
+      "destination": "/industries/ecommerce-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/education-app-development-company",
+      "destination": "/industries/education-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/education-app-development-company/",
+      "destination": "/industries/education-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/real-estate-app-development-company",
+      "destination": "/industries/real-estate-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/real-estate-app-development-company/",
+      "destination": "/industries/real-estate-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/startup-app-development",
+      "destination": "/industries/startup-app-development/index.html"
+    },
+    {
+      "source": "/industries/startup-app-development/",
+      "destination": "/industries/startup-app-development/index.html"
+    },
+    {
+      "source": "/industries/startup-app-development-company",
+      "destination": "/industries/startup-app-development-company/index.html"
+    },
+    {
+      "source": "/industries/startup-app-development-company/",
+      "destination": "/industries/startup-app-development-company/index.html"
+    },
+    {
+      "source": "/interactive-prototyping",
+      "destination": "/interactive-prototyping/index.html"
+    },
+    {
+      "source": "/interactive-prototyping/",
+      "destination": "/interactive-prototyping/index.html"
+    },
+    {
+      "source": "/ios-app-development",
+      "destination": "/ios-app-development/index.html"
+    },
+    {
+      "source": "/ios-app-development/",
+      "destination": "/ios-app-development/index.html"
+    },
+    {
+      "source": "/iot-development",
+      "destination": "/iot-development/index.html"
+    },
+    {
+      "source": "/iot-development/",
+      "destination": "/iot-development/index.html"
+    },
+    {
+      "source": "/kotlin-multiplatform-app-development",
+      "destination": "/kotlin-multiplatform-app-development/index.html"
+    },
+    {
+      "source": "/kotlin-multiplatform-app-development/",
+      "destination": "/kotlin-multiplatform-app-development/index.html"
+    },
+    {
+      "source": "/kotlin-multiplatform-development",
+      "destination": "/kotlin-multiplatform-development/index.html"
+    },
+    {
+      "source": "/kotlin-multiplatform-development/",
+      "destination": "/kotlin-multiplatform-development/index.html"
+    },
+    {
+      "source": "/leadership",
+      "destination": "/leadership/index.html"
+    },
+    {
+      "source": "/leadership/",
+      "destination": "/leadership/index.html"
+    },
+    {
+      "source": "/life-at-inceptives-digital",
+      "destination": "/life-at-inceptives-digital/index.html"
+    },
+    {
+      "source": "/life-at-inceptives-digital/",
+      "destination": "/life-at-inceptives-digital/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-austin",
+      "destination": "/locations/mobile-app-development-austin/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-austin/",
+      "destination": "/locations/mobile-app-development-austin/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-company-in-toronto-canada",
+      "destination": "/locations/mobile-app-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-company-in-toronto-canada/",
+      "destination": "/locations/mobile-app-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-company-london-uk",
+      "destination": "/locations/mobile-app-development-company-london-uk/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-company-london-uk/",
+      "destination": "/locations/mobile-app-development-company-london-uk/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-company-singapore",
+      "destination": "/locations/mobile-app-development-company-singapore/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-company-singapore/",
+      "destination": "/locations/mobile-app-development-company-singapore/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-london",
+      "destination": "/locations/mobile-app-development-london/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-london/",
+      "destination": "/locations/mobile-app-development-london/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-new-york",
+      "destination": "/locations/mobile-app-development-new-york/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-new-york/",
+      "destination": "/locations/mobile-app-development-new-york/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-newyork",
+      "destination": "/locations/mobile-app-development-newyork/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-newyork/",
+      "destination": "/locations/mobile-app-development-newyork/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-san-francisco",
+      "destination": "/locations/mobile-app-development-san-francisco/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-san-francisco/",
+      "destination": "/locations/mobile-app-development-san-francisco/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-singapore",
+      "destination": "/locations/mobile-app-development-singapore/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-singapore/",
+      "destination": "/locations/mobile-app-development-singapore/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-toronto",
+      "destination": "/locations/mobile-app-development-toronto/index.html"
+    },
+    {
+      "source": "/locations/mobile-app-development-toronto/",
+      "destination": "/locations/mobile-app-development-toronto/index.html"
+    },
+    {
+      "source": "/locations/mobile-apps-development-company-in-toronto-canada",
+      "destination": "/locations/mobile-apps-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/locations/mobile-apps-development-company-in-toronto-canada/",
+      "destination": "/locations/mobile-apps-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/machine-learning-development-services",
+      "destination": "/machine-learning-development-services/index.html"
+    },
+    {
+      "source": "/machine-learning-development-services/",
+      "destination": "/machine-learning-development-services/index.html"
+    },
+    {
+      "source": "/mobile-app-development",
+      "destination": "/mobile-app-development/index.html"
+    },
+    {
+      "source": "/mobile-app-development/",
+      "destination": "/mobile-app-development/index.html"
+    },
+    {
+      "source": "/mobile-app-development-austin",
+      "destination": "/mobile-app-development-austin/index.html"
+    },
+    {
+      "source": "/mobile-app-development-austin/",
+      "destination": "/mobile-app-development-austin/index.html"
+    },
+    {
+      "source": "/mobile-app-development-company-in-toronto-canada",
+      "destination": "/mobile-app-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/mobile-app-development-company-in-toronto-canada/",
+      "destination": "/mobile-app-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/mobile-app-development-company-london-uk",
+      "destination": "/mobile-app-development-company-london-uk/index.html"
+    },
+    {
+      "source": "/mobile-app-development-company-london-uk/",
+      "destination": "/mobile-app-development-company-london-uk/index.html"
+    },
+    {
+      "source": "/mobile-app-development-company-singapore",
+      "destination": "/mobile-app-development-company-singapore/index.html"
+    },
+    {
+      "source": "/mobile-app-development-company-singapore/",
+      "destination": "/mobile-app-development-company-singapore/index.html"
+    },
+    {
+      "source": "/mobile-app-development-london",
+      "destination": "/mobile-app-development-london/index.html"
+    },
+    {
+      "source": "/mobile-app-development-london/",
+      "destination": "/mobile-app-development-london/index.html"
+    },
+    {
+      "source": "/mobile-app-development-new-york",
+      "destination": "/mobile-app-development-new-york/index.html"
+    },
+    {
+      "source": "/mobile-app-development-new-york/",
+      "destination": "/mobile-app-development-new-york/index.html"
+    },
+    {
+      "source": "/mobile-app-development-newyork",
+      "destination": "/mobile-app-development-newyork/index.html"
+    },
+    {
+      "source": "/mobile-app-development-newyork/",
+      "destination": "/mobile-app-development-newyork/index.html"
+    },
+    {
+      "source": "/mobile-app-development-san-francisco",
+      "destination": "/mobile-app-development-san-francisco/index.html"
+    },
+    {
+      "source": "/mobile-app-development-san-francisco/",
+      "destination": "/mobile-app-development-san-francisco/index.html"
+    },
+    {
+      "source": "/mobile-app-development-singapore",
+      "destination": "/mobile-app-development-singapore/index.html"
+    },
+    {
+      "source": "/mobile-app-development-singapore/",
+      "destination": "/mobile-app-development-singapore/index.html"
+    },
+    {
+      "source": "/mobile-app-development-toronto",
+      "destination": "/mobile-app-development-toronto/index.html"
+    },
+    {
+      "source": "/mobile-app-development-toronto/",
+      "destination": "/mobile-app-development-toronto/index.html"
+    },
+    {
+      "source": "/mobile-apps-development-company-in-toronto-canada",
+      "destination": "/mobile-apps-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/mobile-apps-development-company-in-toronto-canada/",
+      "destination": "/mobile-apps-development-company-in-toronto-canada/index.html"
+    },
+    {
+      "source": "/mobile-game-development",
+      "destination": "/mobile-game-development/index.html"
+    },
+    {
+      "source": "/mobile-game-development/",
+      "destination": "/mobile-game-development/index.html"
+    },
+    {
+      "source": "/mvp-development",
+      "destination": "/mvp-development/index.html"
+    },
+    {
+      "source": "/mvp-development/",
+      "destination": "/mvp-development/index.html"
+    },
+    {
+      "source": "/nlp-development-services",
+      "destination": "/nlp-development-services/index.html"
+    },
+    {
+      "source": "/nlp-development-services/",
+      "destination": "/nlp-development-services/index.html"
+    },
+    {
+      "source": "/partnership",
+      "destination": "/partnership/index.html"
+    },
+    {
+      "source": "/partnership/",
+      "destination": "/partnership/index.html"
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio/index.html"
+    },
+    {
+      "source": "/portfolio/",
+      "destination": "/portfolio/index.html"
+    },
+    {
+      "source": "/portfolio/dps-airem",
+      "destination": "/portfolio/dps-airem/index.html"
+    },
+    {
+      "source": "/portfolio/dps-airem/",
+      "destination": "/portfolio/dps-airem/index.html"
+    },
+    {
+      "source": "/portfolio/family-entertainment-group",
+      "destination": "/portfolio/family-entertainment-group/index.html"
+    },
+    {
+      "source": "/portfolio/family-entertainment-group/",
+      "destination": "/portfolio/family-entertainment-group/index.html"
+    },
+    {
+      "source": "/portfolio/halwar-connect",
+      "destination": "/portfolio/halwar-connect/index.html"
+    },
+    {
+      "source": "/portfolio/halwar-connect/",
+      "destination": "/portfolio/halwar-connect/index.html"
+    },
+    {
+      "source": "/portfolio/my-tango-event",
+      "destination": "/portfolio/my-tango-event/index.html"
+    },
+    {
+      "source": "/portfolio/my-tango-event/",
+      "destination": "/portfolio/my-tango-event/index.html"
+    },
+    {
+      "source": "/portfolio/pets-b4-profit",
+      "destination": "/portfolio/pets-b4-profit/index.html"
+    },
+    {
+      "source": "/portfolio/pets-b4-profit/",
+      "destination": "/portfolio/pets-b4-profit/index.html"
+    },
+    {
+      "source": "/portfolio/pulse-check-timer",
+      "destination": "/portfolio/pulse-check-timer/index.html"
+    },
+    {
+      "source": "/portfolio/pulse-check-timer/",
+      "destination": "/portfolio/pulse-check-timer/index.html"
+    },
+    {
+      "source": "/portfolio/stakbread",
+      "destination": "/portfolio/stakbread/index.html"
+    },
+    {
+      "source": "/portfolio/stakbread/",
+      "destination": "/portfolio/stakbread/index.html"
+    },
+    {
+      "source": "/portfolio/state-of-the-art-chiropractic",
+      "destination": "/portfolio/state-of-the-art-chiropractic/index.html"
+    },
+    {
+      "source": "/portfolio/state-of-the-art-chiropractic/",
+      "destination": "/portfolio/state-of-the-art-chiropractic/index.html"
+    },
+    {
+      "source": "/portfolio/wordsmith-pro",
+      "destination": "/portfolio/wordsmith-pro/index.html"
+    },
+    {
+      "source": "/portfolio/wordsmith-pro/",
+      "destination": "/portfolio/wordsmith-pro/index.html"
+    },
+    {
+      "source": "/portfolio/zoom-read",
+      "destination": "/portfolio/zoom-read/index.html"
+    },
+    {
+      "source": "/portfolio/zoom-read/",
+      "destination": "/portfolio/zoom-read/index.html"
+    },
+    {
+      "source": "/post-launch-analytics-iteration",
+      "destination": "/post-launch-analytics-iteration/index.html"
+    },
+    {
+      "source": "/post-launch-analytics-iteration/",
+      "destination": "/post-launch-analytics-iteration/index.html"
+    },
+    {
+      "source": "/press-media",
+      "destination": "/press-media/index.html"
+    },
+    {
+      "source": "/press-media/",
+      "destination": "/press-media/index.html"
+    },
+    {
+      "source": "/press-release",
+      "destination": "/press-release/index.html"
+    },
+    {
+      "source": "/press-release/",
+      "destination": "/press-release/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/product-launch-strategy",
+      "destination": "/product-launch-strategy/index.html"
+    },
+    {
+      "source": "/product-launch-strategy/",
+      "destination": "/product-launch-strategy/index.html"
+    },
+    {
+      "source": "/product-rescue-scaling",
+      "destination": "/product-rescue-scaling/index.html"
+    },
+    {
+      "source": "/product-rescue-scaling/",
+      "destination": "/product-rescue-scaling/index.html"
+    },
+    {
+      "source": "/product-strategy-consulting",
+      "destination": "/product-strategy-consulting/index.html"
+    },
+    {
+      "source": "/product-strategy-consulting/",
+      "destination": "/product-strategy-consulting/index.html"
+    },
+    {
+      "source": "/react-native-app-development",
+      "destination": "/react-native-app-development/index.html"
+    },
+    {
+      "source": "/react-native-app-development/",
+      "destination": "/react-native-app-development/index.html"
+    },
+    {
+      "source": "/real-estate-app-development-company",
+      "destination": "/real-estate-app-development-company/index.html"
+    },
+    {
+      "source": "/real-estate-app-development-company/",
+      "destination": "/real-estate-app-development-company/index.html"
+    },
+    {
+      "source": "/rpa-development-services",
+      "destination": "/rpa-development-services/index.html"
+    },
+    {
+      "source": "/rpa-development-services/",
+      "destination": "/rpa-development-services/index.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services/index.html"
+    },
+    {
+      "source": "/services/",
+      "destination": "/services/index.html"
+    },
+    {
+      "source": "/services/ai-agent-development",
+      "destination": "/services/ai-agent-development/index.html"
+    },
+    {
+      "source": "/services/ai-agent-development/",
+      "destination": "/services/ai-agent-development/index.html"
+    },
+    {
+      "source": "/services/ai-app-development-services",
+      "destination": "/services/ai-app-development-services/index.html"
+    },
+    {
+      "source": "/services/ai-app-development-services/",
+      "destination": "/services/ai-app-development-services/index.html"
+    },
+    {
+      "source": "/services/ai-automation-services",
+      "destination": "/services/ai-automation-services/index.html"
+    },
+    {
+      "source": "/services/ai-automation-services/",
+      "destination": "/services/ai-automation-services/index.html"
+    },
+    {
+      "source": "/services/ai-chatbot-development-services",
+      "destination": "/services/ai-chatbot-development-services/index.html"
+    },
+    {
+      "source": "/services/ai-chatbot-development-services/",
+      "destination": "/services/ai-chatbot-development-services/index.html"
+    },
+    {
+      "source": "/services/ai-cost-estimator",
+      "destination": "/services/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/services/ai-cost-estimator/",
+      "destination": "/services/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/services/ai-development",
+      "destination": "/services/ai-development/index.html"
+    },
+    {
+      "source": "/services/ai-development/",
+      "destination": "/services/ai-development/index.html"
+    },
+    {
+      "source": "/services/ai-development/ai-cost-estimator",
+      "destination": "/services/ai-development/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/services/ai-development/ai-cost-estimator/",
+      "destination": "/services/ai-development/ai-cost-estimator/index.html"
+    },
+    {
+      "source": "/services/ai-mvp-development",
+      "destination": "/services/ai-mvp-development/index.html"
+    },
+    {
+      "source": "/services/ai-mvp-development/",
+      "destination": "/services/ai-mvp-development/index.html"
+    },
+    {
+      "source": "/services/android-app-development",
+      "destination": "/services/android-app-development/index.html"
+    },
+    {
+      "source": "/services/android-app-development/",
+      "destination": "/services/android-app-development/index.html"
+    },
+    {
+      "source": "/services/app-store-optimization",
+      "destination": "/services/app-store-optimization/index.html"
+    },
+    {
+      "source": "/services/app-store-optimization/",
+      "destination": "/services/app-store-optimization/index.html"
+    },
+    {
+      "source": "/services/ar-app-development",
+      "destination": "/services/ar-app-development/index.html"
+    },
+    {
+      "source": "/services/ar-app-development/",
+      "destination": "/services/ar-app-development/index.html"
+    },
+    {
+      "source": "/services/backend-api-development",
+      "destination": "/services/backend-api-development/index.html"
+    },
+    {
+      "source": "/services/backend-api-development/",
+      "destination": "/services/backend-api-development/index.html"
+    },
+    {
+      "source": "/services/blockchain-development",
+      "destination": "/services/blockchain-development/index.html"
+    },
+    {
+      "source": "/services/blockchain-development/",
+      "destination": "/services/blockchain-development/index.html"
+    },
+    {
+      "source": "/services/business-process-automation",
+      "destination": "/services/business-process-automation/index.html"
+    },
+    {
+      "source": "/services/business-process-automation/",
+      "destination": "/services/business-process-automation/index.html"
+    },
+    {
+      "source": "/services/computer-vision-development-services",
+      "destination": "/services/computer-vision-development-services/index.html"
+    },
+    {
+      "source": "/services/computer-vision-development-services/",
+      "destination": "/services/computer-vision-development-services/index.html"
+    },
+    {
+      "source": "/services/cross-platform-app-development",
+      "destination": "/services/cross-platform-app-development/index.html"
+    },
+    {
+      "source": "/services/cross-platform-app-development/",
+      "destination": "/services/cross-platform-app-development/index.html"
+    },
+    {
+      "source": "/services/custom-software-development",
+      "destination": "/services/custom-software-development/index.html"
+    },
+    {
+      "source": "/services/custom-software-development/",
+      "destination": "/services/custom-software-development/index.html"
+    },
+    {
+      "source": "/services/digital-product-development",
+      "destination": "/services/digital-product-development/index.html"
+    },
+    {
+      "source": "/services/digital-product-development/",
+      "destination": "/services/digital-product-development/index.html"
+    },
+    {
+      "source": "/services/discovery-sprint",
+      "destination": "/services/discovery-sprint/index.html"
+    },
+    {
+      "source": "/services/discovery-sprint/",
+      "destination": "/services/discovery-sprint/index.html"
+    },
+    {
+      "source": "/services/flutter-app-development",
+      "destination": "/services/flutter-app-development/index.html"
+    },
+    {
+      "source": "/services/flutter-app-development/",
+      "destination": "/services/flutter-app-development/index.html"
+    },
+    {
+      "source": "/services/generative-ai-development-company",
+      "destination": "/services/generative-ai-development-company/index.html"
+    },
+    {
+      "source": "/services/generative-ai-development-company/",
+      "destination": "/services/generative-ai-development-company/index.html"
+    },
+    {
+      "source": "/services/interactive-prototyping",
+      "destination": "/services/interactive-prototyping/index.html"
+    },
+    {
+      "source": "/services/interactive-prototyping/",
+      "destination": "/services/interactive-prototyping/index.html"
+    },
+    {
+      "source": "/services/ios-app-development",
+      "destination": "/services/ios-app-development/index.html"
+    },
+    {
+      "source": "/services/ios-app-development/",
+      "destination": "/services/ios-app-development/index.html"
+    },
+    {
+      "source": "/services/iot-development",
+      "destination": "/services/iot-development/index.html"
+    },
+    {
+      "source": "/services/iot-development/",
+      "destination": "/services/iot-development/index.html"
+    },
+    {
+      "source": "/services/kotlin-multiplatform-app-development",
+      "destination": "/services/kotlin-multiplatform-app-development/index.html"
+    },
+    {
+      "source": "/services/kotlin-multiplatform-app-development/",
+      "destination": "/services/kotlin-multiplatform-app-development/index.html"
+    },
+    {
+      "source": "/services/kotlin-multiplatform-development",
+      "destination": "/services/kotlin-multiplatform-development/index.html"
+    },
+    {
+      "source": "/services/kotlin-multiplatform-development/",
+      "destination": "/services/kotlin-multiplatform-development/index.html"
+    },
+    {
+      "source": "/services/machine-learning-development-services",
+      "destination": "/services/machine-learning-development-services/index.html"
+    },
+    {
+      "source": "/services/machine-learning-development-services/",
+      "destination": "/services/machine-learning-development-services/index.html"
+    },
+    {
+      "source": "/services/mobile-app-development",
+      "destination": "/services/mobile-app-development/index.html"
+    },
+    {
+      "source": "/services/mobile-app-development/",
+      "destination": "/services/mobile-app-development/index.html"
+    },
+    {
+      "source": "/services/mobile-game-development",
+      "destination": "/services/mobile-game-development/index.html"
+    },
+    {
+      "source": "/services/mobile-game-development/",
+      "destination": "/services/mobile-game-development/index.html"
+    },
+    {
+      "source": "/services/mvp-development",
+      "destination": "/services/mvp-development/index.html"
+    },
+    {
+      "source": "/services/mvp-development/",
+      "destination": "/services/mvp-development/index.html"
+    },
+    {
+      "source": "/services/nlp-development-services",
+      "destination": "/services/nlp-development-services/index.html"
+    },
+    {
+      "source": "/services/nlp-development-services/",
+      "destination": "/services/nlp-development-services/index.html"
+    },
+    {
+      "source": "/services/post-launch-analytics-iteration",
+      "destination": "/services/post-launch-analytics-iteration/index.html"
+    },
+    {
+      "source": "/services/post-launch-analytics-iteration/",
+      "destination": "/services/post-launch-analytics-iteration/index.html"
+    },
+    {
+      "source": "/services/product-launch-strategy",
+      "destination": "/services/product-launch-strategy/index.html"
+    },
+    {
+      "source": "/services/product-launch-strategy/",
+      "destination": "/services/product-launch-strategy/index.html"
+    },
+    {
+      "source": "/services/product-rescue-scaling",
+      "destination": "/services/product-rescue-scaling/index.html"
+    },
+    {
+      "source": "/services/product-rescue-scaling/",
+      "destination": "/services/product-rescue-scaling/index.html"
+    },
+    {
+      "source": "/services/product-strategy-consulting",
+      "destination": "/services/product-strategy-consulting/index.html"
+    },
+    {
+      "source": "/services/product-strategy-consulting/",
+      "destination": "/services/product-strategy-consulting/index.html"
+    },
+    {
+      "source": "/services/react-native-app-development",
+      "destination": "/services/react-native-app-development/index.html"
+    },
+    {
+      "source": "/services/react-native-app-development/",
+      "destination": "/services/react-native-app-development/index.html"
+    },
+    {
+      "source": "/services/rpa-development-services",
+      "destination": "/services/rpa-development-services/index.html"
+    },
+    {
+      "source": "/services/rpa-development-services/",
+      "destination": "/services/rpa-development-services/index.html"
+    },
+    {
+      "source": "/services/system-integration-api-automation",
+      "destination": "/services/system-integration-api-automation/index.html"
+    },
+    {
+      "source": "/services/system-integration-api-automation/",
+      "destination": "/services/system-integration-api-automation/index.html"
+    },
+    {
+      "source": "/services/ui-ux-design",
+      "destination": "/services/ui-ux-design/index.html"
+    },
+    {
+      "source": "/services/ui-ux-design/",
+      "destination": "/services/ui-ux-design/index.html"
+    },
+    {
+      "source": "/services/virtual-reality-development",
+      "destination": "/services/virtual-reality-development/index.html"
+    },
+    {
+      "source": "/services/virtual-reality-development/",
+      "destination": "/services/virtual-reality-development/index.html"
+    },
+    {
+      "source": "/services/web-app-development-company",
+      "destination": "/services/web-app-development-company/index.html"
+    },
+    {
+      "source": "/services/web-app-development-company/",
+      "destination": "/services/web-app-development-company/index.html"
+    },
+    {
+      "source": "/staff-augmentation",
+      "destination": "/staff-augmentation/index.html"
+    },
+    {
+      "source": "/staff-augmentation/",
+      "destination": "/staff-augmentation/index.html"
+    },
+    {
+      "source": "/startup-app-development",
+      "destination": "/startup-app-development/index.html"
+    },
+    {
+      "source": "/startup-app-development/",
+      "destination": "/startup-app-development/index.html"
+    },
+    {
+      "source": "/startup-app-development-company",
+      "destination": "/startup-app-development-company/index.html"
+    },
+    {
+      "source": "/startup-app-development-company/",
+      "destination": "/startup-app-development-company/index.html"
+    },
+    {
+      "source": "/startup-product-development",
+      "destination": "/startup-product-development/index.html"
+    },
+    {
+      "source": "/startup-product-development/",
+      "destination": "/startup-product-development/index.html"
+    },
+    {
+      "source": "/system-integration-api-automation",
+      "destination": "/system-integration-api-automation/index.html"
+    },
+    {
+      "source": "/system-integration-api-automation/",
+      "destination": "/system-integration-api-automation/index.html"
+    },
+    {
+      "source": "/terms-and-condition",
+      "destination": "/terms-and-condition/index.html"
+    },
+    {
+      "source": "/terms-and-condition/",
+      "destination": "/terms-and-condition/index.html"
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms-and-conditions/index.html"
+    },
+    {
+      "source": "/terms-and-conditions/",
+      "destination": "/terms-and-conditions/index.html"
+    },
+    {
+      "source": "/ui-ux-design",
+      "destination": "/ui-ux-design/index.html"
+    },
+    {
+      "source": "/ui-ux-design/",
+      "destination": "/ui-ux-design/index.html"
+    },
+    {
+      "source": "/virtual-reality-development",
+      "destination": "/virtual-reality-development/index.html"
+    },
+    {
+      "source": "/virtual-reality-development/",
+      "destination": "/virtual-reality-development/index.html"
+    },
+    {
+      "source": "/web-app-development-company",
+      "destination": "/web-app-development-company/index.html"
+    },
+    {
+      "source": "/web-app-development-company/",
+      "destination": "/web-app-development-company/index.html"
+    },
+    {
       "source": "/((?!api/|cdn-cgi/|assets/|images/|fonts/|custom-mobile-application-development/|reviews/|email-signature/|robots\\.txt|sitemap_index\\.xml|(?:page-|post-|author-)?sitemap\\.xml).*)",
       "destination": "/index.html"
     }

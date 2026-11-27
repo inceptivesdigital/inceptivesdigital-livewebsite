@@ -4,19 +4,19 @@ export default function IosAchievements() {
   const badges = [
     {
       title: 'Top iPhone App Development Company in the United States for 2026 by Clutch',
-      src: '/assets/ios-app/iPhone_App_Development_Companies_in_the_United_States.png',
+      src: '/assets/ios-app/clutch-top-iphone-us-2026.png',
     },
     {
       title: 'Top Clutch App Development Company Plano by Clutch',
-      src: '/assets/ios-app/rf-badge-top-mobile-app-development-2026-982x1024.png',
+      src: '/assets/ios-app/clutch-top-app-plano-2026.png',
     },
     {
       title: 'Highly Recommended by SoftwareWorld 2026',
-      src: '/assets/ios-app/top-mobile-app-development-company-2025.png',
+      src: '/assets/ios-app/softwareworld-highly-recommended-2026.png',
     },
     {
       title: 'Customer Choice by SoftwareWorld 2026',
-      src: '/assets/ios-app/top-rated-logo-1024x1024.png',
+      src: '/assets/ios-app/softwareworld-customer-choice-2026.png',
     },
   ]
 

@@ -82,9 +82,9 @@ const ROLE_EXTRA_FIELDS = {
     },
   ],
   'data scientist': [{ label: 'Seniority', options: SENIORITY_OPTIONS }],
-  'ux analyst': [{ label: 'Seniority', options: SENIORITY_OPTIONS }],
+  'UX Analyst': [{ label: 'Seniority', options: SENIORITY_OPTIONS }],
   'security engineer': [{ label: 'Seniority', options: SENIORITY_OPTIONS }],
-  'ui designer': [{ label: 'Seniority', options: SENIORITY_OPTIONS }],
+  'UI Designer': [{ label: 'Seniority', options: SENIORITY_OPTIONS }],
 }
 
 const ALL_ROLES = [...Object.keys(ROLE_EXTRA_FIELDS), 'others']
@@ -160,6 +160,7 @@ export default function StaffTeamBuilder() {
     const rolesSummary = formatRolesSummary()
 
     const res = await submitFormToSeo({
+      formId: 'lead-form-inceptives-digital-team-builder',
       formName: 'Lead Form Inceptives Digital',
       subject: `Staff Augmentation Team Request - ${contact.fullName}`,
       replyTo: contact.email,

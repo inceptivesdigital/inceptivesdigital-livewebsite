@@ -1,9 +1,33 @@
 import { trackGhlLeadSubmission } from './ghlTracking'
 import { notifyCallRailFormCapture } from './callrail'
 import { trackLeadSubmitted } from './conversionTracking'
+import { getLeadAttribution } from './attribution'
 import { isTurnstileEnabled } from '../components/TurnstileWidget'
 
 export const SEO_RECIPIENT_EMAIL = 'seo@inceptivesdigital.com'
+
+const SENSITIVE_FIELD_RE =
+  /^(turnstiletoken|cf-turnstile-response|captcha|password|pass|secret|token|authorization)$/i
+
+const inFlightFormKeys = new Set()
+
+function createSubmissionId() {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID()
+  }
+  return `sub_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`
+}
+
+function sanitizeClientFields(fields = {}) {
+  const clean = {}
+  for (const [k, v] of Object.entries(fields || {})) {
+    if (!k || SENSITIVE_FIELD_RE.test(k.trim())) continue
+    if (v !== undefined && v !== null) {
+      clean[k] = v
+    }
+  }
+  return clean
+}
 
 export async function verifyTurnstileToken(token) {
   if (!isTurnstileEnabled) return { ok: true, skipped: true }
@@ -21,8 +45,6 @@ export async function verifyTurnstileToken(token) {
       body: JSON.stringify({ token }),
     })
 
-    // In local Vite-only dev (`npm run dev`), /api/* serverless functions are not served (404).
-    // On Vercel (`vercel dev` or production), /api/verify-turnstile is always active.
     if (
       res.status === 404 &&
       typeof window !== 'undefined' &&
@@ -50,15 +72,20 @@ export async function verifyTurnstileToken(token) {
 }
 
 /**
- * Universal form submission helper for all forms across Inceptives Digital.
- * Follows the accepted conversion flow from THIRD_PARTY_INTEGRATIONS.md:
- *   0. Cloudflare Turnstile server-side verification (when VITE_TURNSTILE_SITE_KEY is configured)
- *   1. Email delivery to seo@inceptivesdigital.com (table format)
- *   2. GoHighLevel / LeadConnector external-tracking acknowledgement
- *   3. CallRail form capture handling
- *   4. Website `lead_submitted` dataLayer event (triggers GTM GA4 generate_lead, Meta Lead, OpenAI lead_created)
+ * Universal form submission helper for all enquiry/lead forms across Inceptives Digital.
+ * Flow:
+ *   0. Browser in-flight dedup + Cloudflare Turnstile check (when enabled)
+ *   1. Server-side /api/lead -> validates, deduplicates (submissionId), strips sensitive fields,
+ *      and forwards to private ZAPIER_WEBHOOK_URL (awaits Zapier acceptance)
+ *   2. Only after Zapier acceptance:
+ *      - Email delivery to seo@inceptivesdigital.com (FormSubmit)
+ *      - WordPress admin-ajax fallback (if wpAction)
+ *      - GoHighLevel / LeadConnector external-tracking acknowledgement
+ *      - CallRail form capture handling
+ *      - Website `lead_submitted` dataLayer event (fired once)
  */
 export async function submitFormToSeo({
+  formId = 'website-form',
   formName = 'Website Form',
   subject = '',
   replyTo = '',
@@ -66,88 +93,145 @@ export async function submitFormToSeo({
   wpAction = '',
   wpFormData = null,
   turnstileToken = '',
+  submissionId = '',
 } = {}) {
-  const verification = await verifyTurnstileToken(turnstileToken)
-  if (!verification.ok) {
-    return { ok: false, error: verification.error }
-  }
-  const pageUrl =
-    typeof window !== 'undefined' ? window.location.href : 'https://inceptivesdigital.com'
-  const emailSubject =
-    subject || `${formName} Submission - Inceptives Digital`
-
-  const payload = {
-    _subject: emailSubject,
-    _template: 'table',
-    _captcha: 'false',
-    ...(replyTo ? { _replyto: replyTo } : {}),
-    Recipient: SEO_RECIPIENT_EMAIL,
-    Form: formName,
-    'Page URL': pageUrl,
-    ...fields,
-  }
-
-  const requests = []
-
-  // 1. FormSubmit AJAX endpoint -> seo@inceptivesdigital.com
-  requests.push(
-    fetch(`https://formsubmit.co/ajax/${SEO_RECIPIENT_EMAIL}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify(payload),
-    }).catch(() => null)
-  )
-
-  // 2. WordPress admin-ajax fallback (when hosted alongside WP or proxied)
-  if (wpAction) {
-    try {
-      const fd = wpFormData instanceof FormData ? wpFormData : new FormData()
-      if (!(wpFormData instanceof FormData)) {
-        fd.append('action', wpAction)
-        fd.append('recipient', SEO_RECIPIENT_EMAIL)
-        Object.entries(fields).forEach(([k, v]) => {
-          if (v !== undefined && v !== null) fd.append(k, String(v))
-        })
-      }
-      requests.push(
-        fetch('https://nextincep.wpenginepowered.com/wp-admin/admin-ajax.php', {
-          method: 'POST',
-          body: fd,
-        }).catch(() => null)
-      )
-    } catch {
-      // Ignore FormData errors
+  const cleanFields = sanitizeClientFields(fields)
+  const dedupKey = `${formId}:${cleanFields.Email || cleanFields.email || cleanFields.Phone || cleanFields.phone || ''}`
+  if (inFlightFormKeys.has(dedupKey)) {
+    return {
+      ok: false,
+      duplicate: true,
+      error: 'Your submission is already being processed. Please wait a moment.',
     }
   }
 
-  // 3. GoHighLevel / LeadConnector external tracking acknowledgement (capped at 2.5s)
-  requests.push(
-    trackGhlLeadSubmission({
+  inFlightFormKeys.add(dedupKey)
+
+  try {
+    const verification = await verifyTurnstileToken(turnstileToken)
+    if (!verification.ok) {
+      return { ok: false, error: verification.error }
+    }
+
+    const pageUrl =
+      typeof window !== 'undefined' ? window.location.href : 'https://inceptivesdigital.com'
+    const submittedAt = new Date().toISOString()
+    const resolvedSubmissionId = submissionId || createSubmissionId()
+    const attribution = getLeadAttribution()
+
+    // 1. Server-side Zapier Catch Hook delivery (must succeed before thank-you / conversion events)
+    try {
+      const leadRes = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          submissionId: resolvedSubmissionId,
+          formId,
+          formName,
+          sourceUrl: pageUrl,
+          submittedAt,
+          fields: cleanFields,
+          attribution,
+          turnstileRequired: isTurnstileEnabled,
+          ...(turnstileToken ? { turnstileToken } : {}),
+        }),
+      })
+
+      const leadData = await leadRes.json().catch(() => ({}))
+      if (!leadRes.ok || !leadData.ok) {
+        return {
+          ok: false,
+          error:
+            leadData.error ||
+            'We could not submit your enquiry right now. Please try again.',
+        }
+      }
+    } catch {
+      return {
+        ok: false,
+        error: 'Network error while submitting your enquiry. Please try again.',
+      }
+    }
+
+    // 2. Downstream non-blocking integrations (run only after Zapier accepted)
+    const emailSubject =
+      subject || `${formName} Submission - Inceptives Digital`
+
+    const emailPayload = {
+      _subject: emailSubject,
+      _template: 'table',
+      _captcha: 'false',
+      ...(replyTo ? { _replyto: replyTo } : {}),
+      Recipient: SEO_RECIPIENT_EMAIL,
+      Form: formName,
+      'Form ID': formId,
+      'Submission ID': resolvedSubmissionId,
+      'Page URL': pageUrl,
+      ...cleanFields,
+    }
+
+    const requests = [
+      fetch(`https://formsubmit.co/ajax/${SEO_RECIPIENT_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(emailPayload),
+      }).catch(() => null),
+    ]
+
+    if (wpAction) {
+      try {
+        const fd = wpFormData instanceof FormData ? wpFormData : new FormData()
+        if (!(wpFormData instanceof FormData)) {
+          fd.append('action', wpAction)
+          fd.append('recipient', SEO_RECIPIENT_EMAIL)
+          Object.entries(cleanFields).forEach(([k, v]) => {
+            if (v !== undefined && v !== null) fd.append(k, String(v))
+          })
+        }
+        requests.push(
+          fetch('https://nextincep.wpenginepowered.com/wp-admin/admin-ajax.php', {
+            method: 'POST',
+            body: fd,
+          }).catch(() => null)
+        )
+      } catch {
+        // Ignore FormData errors
+      }
+    }
+
+    requests.push(
+      trackGhlLeadSubmission({
+        formName,
+        pageUrl,
+        fields: cleanFields,
+      }).catch(() => null)
+    )
+
+    await Promise.allSettled(requests)
+
+    notifyCallRailFormCapture({
       formName,
       pageUrl,
-      fields,
-    }).catch(() => null)
-  )
+      fields: cleanFields,
+    })
 
-  await Promise.allSettled(requests)
+    trackLeadSubmitted({
+      formName,
+      pageUrl,
+      subject: emailSubject,
+      fields: cleanFields,
+    })
 
-  // 4. CallRail form capture handling (uses GTM-loaded CallTrk SDK)
-  notifyCallRailFormCapture({
-    formName,
-    pageUrl,
-    fields,
-  })
-
-  // 5. Emit canonical `lead_submitted` dataLayer event for GTM (GA4, Meta, OpenAI)
-  trackLeadSubmitted({
-    formName,
-    pageUrl,
-    subject: emailSubject,
-    fields,
-  })
-
-  return { ok: true, recipient: SEO_RECIPIENT_EMAIL }
+    return {
+      ok: true,
+      zapierAccepted: true,
+      submissionId: resolvedSubmissionId,
+      recipient: SEO_RECIPIENT_EMAIL,
+    }
+  } finally {
+    inFlightFormKeys.delete(dedupKey)
+  }
 }

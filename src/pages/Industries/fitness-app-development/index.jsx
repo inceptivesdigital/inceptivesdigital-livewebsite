@@ -21,7 +21,7 @@ import FitnessFaqs from './components/FitnessFaqs'
 
 export default function FitnessAppDevelopmentPage() {
   useEffect(() => {
-    document.title = 'Fitness App Development Company | Inceptives Digital'
+    document.title = 'Fitness App Development Services Company | Inceptives Digital'
     let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {
       metaDescription = document.createElement('meta')

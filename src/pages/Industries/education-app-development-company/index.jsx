@@ -20,7 +20,7 @@ export default function EducationAppDevelopmentPage() {
   useEffect(() => {
     const title = 'Education App Development Company | Inceptives Digital'
     const description =
-      'Inceptives Digital is an education app development company building custom learning apps for EdTech businesses and institutions across the US.'
+      'Inceptives Digital is an education app development company offering educational app development to build interactive, user-focused learning apps and platforms.'
 
     document.title = title
 

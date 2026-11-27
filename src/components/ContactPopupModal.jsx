@@ -199,6 +199,7 @@ export default function ContactPopupModal() {
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
+      formId: 'lead-form-inceptives-digital-popup',
       formName: 'Lead Form Inceptives Digital',
       subject: `Contact Popup Inquiry - ${form.firstName} ${form.lastName}`.trim(),
       replyTo: form.email,

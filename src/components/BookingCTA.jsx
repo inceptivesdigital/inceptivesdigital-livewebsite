@@ -27,6 +27,7 @@ export default function BookingCTA() {
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
+      formId: 'get-in-touch-footer-form',
       formName: 'Get In Touch Footer',
       subject: `Get In Touch Footer - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,

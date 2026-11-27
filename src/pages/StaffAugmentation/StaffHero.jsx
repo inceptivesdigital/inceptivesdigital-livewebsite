@@ -38,6 +38,11 @@ export default function StaffHero() {
       className="relative min-h-[100vh] lg:h-[100vh] w-full bg-white bg-cover bg-bottom bg-no-repeat flex flex-col justify-center pt-28 sm:pt-32 lg:pt-28 pb-32 sm:pb-40 lg:pb-24 overflow-hidden"
       style={{ backgroundImage: `url(${heroBannerImg})` }}
     >
+      {/* Subtle light scrim for readable dark typography over background photo */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-gradient-to-b from-white/92 via-white/78 to-white/40 pointer-events-none"
+      />
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px] relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-extrabold text-black tracking-tight leading-[1.15]">

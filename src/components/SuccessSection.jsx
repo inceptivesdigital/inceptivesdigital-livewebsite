@@ -86,21 +86,21 @@ export default function SuccessSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-4 sm:mb-5 mt-2">
                 
                 {/* Stat 1: 8+ Years */}
-                <div className="bg-[#00CE44]/[0.08] hover:bg-[#00CE44]/[0.12] transition-colors rounded-[22px] sm:rounded-[25px] p-6 sm:p-7 flex flex-col items-center justify-center text-center">
-                  <div className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
+                <div className="bg-[#00CE44]/[0.08] rounded-[22px] sm:rounded-[25px] p-5 sm:p-6 flex flex-col items-center justify-center text-center">
+                  <div className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-[#00CE44] tracking-tight leading-tight mb-1.5 sm:mb-2">
                     {count1}+ Years
                   </div>
-                  <h4 className="text-[14px] sm:text-[15px] font-medium text-white/90 tracking-tight leading-normal">
+                  <h4 className="text-[13px] sm:text-[14px] font-medium text-white/90 tracking-tight leading-normal">
                     Product development experience
                   </h4>
                 </div>
 
                 {/* Stat 2: 60+ Team Members */}
-                <div className="bg-[#00CE44]/[0.08] hover:bg-[#00CE44]/[0.12] transition-colors rounded-[22px] sm:rounded-[25px] p-6 sm:p-7 flex flex-col items-center justify-center text-center">
-                  <div className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
+                <div className="bg-[#00CE44]/[0.08] rounded-[22px] sm:rounded-[25px] p-5 sm:p-6 flex flex-col items-center justify-center text-center">
+                  <div className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-[#00CE44] tracking-tight leading-tight mb-1.5 sm:mb-2">
                     {count2}+
                   </div>
-                  <h4 className="text-[14px] sm:text-[15px] font-medium text-white/90 tracking-tight leading-normal">
+                  <h4 className="text-[13px] sm:text-[14px] font-medium text-white/90 tracking-tight leading-normal">
                     Team Members — Product, design, and engineering specialists
                   </h4>
                 </div>
@@ -108,11 +108,11 @@ export default function SuccessSection() {
               </div>
 
               {/* Stat 3: 70+ Clients */}
-              <div className="bg-[#00CE44]/[0.08] hover:bg-[#00CE44]/[0.12] transition-colors rounded-[22px] sm:rounded-[25px] p-6 sm:p-8 flex flex-col items-center justify-center text-center">
-                <div className="text-4xl sm:text-5xl lg:text-[60px] font-bold text-[#00CE44] tracking-tight leading-none mb-2 sm:mb-2.5">
+              <div className="bg-[#00CE44]/[0.08] rounded-[22px] sm:rounded-[25px] p-5 sm:p-7 flex flex-col items-center justify-center text-center">
+                <div className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#00CE44] tracking-tight leading-tight mb-1.5 sm:mb-2">
                   {count3}+ Clients
                 </div>
-                <h4 className="text-[15px] sm:text-[16px] font-medium text-white/90 tracking-tight leading-normal">
+                <h4 className="text-[13px] sm:text-[14px] font-medium text-white/90 tracking-tight leading-normal">
                   Supporting businesses across industries
                 </h4>
               </div>

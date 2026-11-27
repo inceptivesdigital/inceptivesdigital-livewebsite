@@ -22,9 +22,9 @@ import EcommerceFaqs from './components/EcommerceFaqs'
 
 export default function EcommerceAppDevelopmentPage() {
   useEffect(() => {
-    const title = 'eCommerce App Development Services | Inceptives Digital'
+    const title = 'eCommerce App Development Company | Inceptives Digital  '
     const description =
-      'Custom eCommerce app development services for iOS, Android, and cross-platform apps. Build secure shopping experiences with Inceptives Digital.'
+      'Partner with a leading eCommerce app development company with 8+ years of expertise and 70+ projects delivered, building secure and conversion-driven eCommerce apps.'
 
     document.title = title
 

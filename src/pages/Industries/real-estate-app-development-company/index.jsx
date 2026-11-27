@@ -23,7 +23,7 @@ export default function RealEstateAppDevelopment() {
     window.scrollTo({ top: 0, behavior: 'instant' })
     const title = 'Real Estate App Development Company | Inceptives Digital'
     const description =
-      'Inceptives Digital is a real estate app development company building custom mobile applications for brokerages, property managers, and PropTech businesses across the US.'
+      'Inceptives Digital is a real estate app development company that provides custom real estate app development to simplify property management and listings.'
 
     document.title = title
 

@@ -228,6 +228,7 @@ export default function IndustriesHubPage() {
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
+      formId: 'lead-form-inceptives-digital-industries',
       formName: 'Lead Form Inceptives Digital',
       subject: `Industries Consultation - ${formData.firstName}`.trim(),
       replyTo: formData.email,

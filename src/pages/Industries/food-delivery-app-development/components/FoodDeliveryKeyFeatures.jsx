@@ -194,7 +194,7 @@ export default function FoodDeliveryKeyFeatures() {
         </div>
 
         {/* Single-Line Pill Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12">
+        <div className="flex flex-nowrap lg:flex-wrap justify-start lg:justify-center gap-3 sm:gap-4 mb-12 overflow-x-auto lg:overflow-visible no-scrollbar px-1 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {tabs.map((tab) => {
             const isActive = tab.id === activeTab;
             return (
@@ -202,7 +202,7 @@ export default function FoodDeliveryKeyFeatures() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-7 py-3.5 rounded-full text-[15px] md:text-[16px] font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                className={`shrink-0 px-7 py-3.5 rounded-full text-[15px] md:text-[16px] font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                   isActive
                     ? 'bg-[#00CE44] text-black shadow-lg'
                     : 'bg-[#262626] text-white hover:bg-[#333333] border border-white/10'

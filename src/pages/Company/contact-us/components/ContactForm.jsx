@@ -34,6 +34,7 @@ export default function ContactForm() {
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
+      formId: 'lead-form-inceptives-digital-contact',
       formName: 'Lead Form Inceptives Digital',
       subject: `Contact Us Page - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,

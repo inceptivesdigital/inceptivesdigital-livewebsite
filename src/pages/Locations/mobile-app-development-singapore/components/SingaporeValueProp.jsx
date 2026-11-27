@@ -7,7 +7,7 @@ export default function SingaporeValueProp() {
           <div className="lg:col-span-5 text-left">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.12]">
               Built Around Singapore&apos;s{' '}
-              <span className="text-[#00CE44]">Business &amp; Tech Landscape</span>
+              <span className="text-[#00CE44]">Business and Technology Landscape</span>
             </h2>
           </div>
 

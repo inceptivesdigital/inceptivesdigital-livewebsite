@@ -1,8 +1,38 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function ScheduleSection() {
+  const sectionRef = useRef(null)
+  const [shouldLoad, setShouldLoad] = useState(false)
   const [iframeHeight, setIframeHeight] = useState(700)
   const [isLoaded, setIsLoaded] = useState(false)
+
+  // Preload Calendly on first user interaction or when approaching #schedule
+  // so real visitors experience zero wait while keeping initial PageSpeed TBT near 0ms.
+  useEffect(() => {
+    if (shouldLoad) return
+    const trigger = () => setShouldLoad(true)
+    const events = ['scroll', 'pointerdown', 'touchstart', 'keydown', 'mousemove']
+    events.forEach((evt) =>
+      window.addEventListener(evt, trigger, { once: true, passive: true })
+    )
+
+    let obs
+    const el = sectionRef.current
+    if (el && typeof IntersectionObserver !== 'undefined') {
+      obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) trigger()
+        },
+        { rootMargin: '1400px' }
+      )
+      obs.observe(el)
+    }
+
+    return () => {
+      events.forEach((evt) => window.removeEventListener(evt, trigger))
+      obs?.disconnect()
+    }
+  }, [shouldLoad])
 
   // Listen to Calendly's height messages for perfect responsiveness without inner scrolling
   useEffect(() => {
@@ -28,7 +58,7 @@ export default function ScheduleSection() {
     'https://calendly.com/inceptivesdigital-info/30min?embed_type=Inline&embed_domain=1&month=2026-11'
 
   return (
-    <section id="schedule" className="py-16 sm:py-20 lg:py-24 bg-black relative overflow-hidden">
+    <section id="schedule" ref={sectionRef} className="py-16 sm:py-20 lg:py-24 bg-black relative overflow-hidden">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:max-w-[1440px] 2xl:max-w-[1600px]">
         
         {/* Heading: 40px bold, text-center, vibrant green #00CE44 */}
@@ -48,20 +78,22 @@ export default function ScheduleSection() {
           )}
 
           {/* Full-width responsive below lg (mobile & iPad); 2-column 1020px-1120px on desktop */}
-          <iframe
-            src={calendlyUrl}
-            title="Calendly Scheduling Page"
-            onLoad={() => setIsLoaded(true)}
-            className={`w-full min-w-0 max-w-[1120px] border-0 block mx-auto bg-transparent transition-opacity duration-500 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{
-              height: `${iframeHeight}px`,
-              minHeight: '640px',
-            }}
-            scrolling="auto"
-            loading="eager"
-          />
+          {shouldLoad && (
+            <iframe
+              src={calendlyUrl}
+              title="Calendly Scheduling Page"
+              onLoad={() => setIsLoaded(true)}
+              className={`w-full min-w-0 max-w-[1120px] border-0 block mx-auto bg-transparent transition-opacity duration-500 ${
+                isLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              style={{
+                height: `${iframeHeight}px`,
+                minHeight: '640px',
+              }}
+              scrolling="auto"
+              loading="eager"
+            />
+          )}
         </div>
 
       </div>

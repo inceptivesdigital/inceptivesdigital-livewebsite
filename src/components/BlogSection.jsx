@@ -128,8 +128,8 @@ export default function BlogSection() {
               className="group bg-[#18191d] rounded-[22px] border-2 border-[#383a42] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#00CE44]/50 hover:shadow-[0_10px_30px_rgba(0,206,68,0.06)]"
             >
               {/* Featured Image with Sparkle Badge */}
-              <div className="relative w-full aspect-[800/370] bg-[#121316]  rounded-t-[20px]">
-                <Link to={post.link} className="block w-full h-full">
+              <div className="relative w-full aspect-[800/370] bg-[#121316] rounded-t-[20px]">
+                <Link to={post.link} className="block w-full h-full overflow-hidden rounded-t-[20px]">
                   <img
                     src={post.featured_image}
                     alt={post.featured_image_alt || post.title}
@@ -159,14 +159,21 @@ export default function BlogSection() {
               </div>
 
               {/* Card Body - ONLY Title and Read More (matching user screenshot) */}
-              <div className="p-6 pt-5 flex flex-col flex-grow justify-between">
-                <h3 className="text-[18px] sm:text-[19px] font-semibold text-[#B9B9B9] group-hover:text-white transition-colors leading-[26px] line-clamp-2 min-h-[52px]">
+              <div className="p-6 pt-6 flex flex-col flex-grow justify-between">
+                <h3
+                  className="text-[18px] sm:text-[19px] font-semibold text-[#B9B9B9] group-hover:text-white transition-colors leading-[27px] h-[54px] overflow-hidden line-clamp-2"
+                  style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                  }}
+                >
                   <Link to={post.link} className="hover:text-[#00CE44] transition-colors">
                     {post.title}
                   </Link>
                 </h3>
 
-                <div className="mt-6 pt-2">
+                <div className="mt-5 pt-2">
                   <Link
                     to={post.link}
                     className="inline-flex items-center gap-3 text-[#00CE44] hover:text-[#00e84d] font-medium text-[16px] transition-colors group/link"

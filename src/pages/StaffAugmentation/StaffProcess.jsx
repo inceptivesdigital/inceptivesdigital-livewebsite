@@ -53,7 +53,7 @@ export default function StaffProcess() {
         </div>
 
         {/* Full-Width Pill Tabs Row matching Content Card Width */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
+        <div className="w-full flex flex-nowrap lg:grid lg:grid-cols-4 gap-3 sm:gap-4 mb-6 overflow-x-auto lg:overflow-visible no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {STEPS.map((step, index) => {
             const isActive = index === activeTab
             return (
@@ -61,7 +61,7 @@ export default function StaffProcess() {
                 key={step.num}
                 type="button"
                 onClick={() => setActiveTab(index)}
-                className={`w-full rounded-full flex items-center justify-start gap-3 py-2.5 pl-2.5 pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
+                className={`w-auto lg:w-full shrink-0 lg:shrink whitespace-nowrap rounded-full flex items-center justify-start gap-3 py-2.5 pl-2.5 pr-5 transition-all duration-200 cursor-pointer border-0 focus:outline-none select-none ${
                   isActive
                     ? 'bg-[#00CE44] text-black font-semibold'
                     : 'bg-[#2c2c2c] hover:bg-[#383838] text-white/90 font-medium'

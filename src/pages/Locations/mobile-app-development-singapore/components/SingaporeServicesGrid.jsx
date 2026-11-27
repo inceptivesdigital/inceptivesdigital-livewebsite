@@ -8,11 +8,7 @@ export default function SingaporeServicesGrid() {
       img: '/assets/mobile-app/Android-App.png',
       desc: (
         <>
-          Apple users expect precision across every interaction. Inceptives Digital builds native{' '}
-          <Link to="/ios-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
-            iOS app development
-          </Link>{' '}
-          applications for Singapore businesses using Swift and SwiftUI, with engineering decisions shaped by Apple&apos;s platform conventions, device capabilities, and future product requirements.
+          Apple users expect precision across every interaction. Inceptives Digital builds native iOS applications for Singapore businesses using Swift and SwiftUI, with engineering decisions shaped by Apple&apos;s platform conventions, device capabilities, and future product requirements.
         </>
       ),
     },
@@ -22,11 +18,7 @@ export default function SingaporeServicesGrid() {
       img: '/assets/mobile-app/mobile-screen01.png',
       desc: (
         <>
-          An Android product may reach customers through smartphones, tablets, and devices running different OS versions. Our{' '}
-          <Link to="/android-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
-            Android app development
-          </Link>{' '}
-          work for Singapore businesses accounts for these differences early, with Kotlin-based engineering focused on reliable functionality and maintainable code.
+          An Android product may reach customers through smartphones, tablets, and devices running different OS versions. Our Android app development work for Singapore businesses accounts for these differences early, with Kotlin-based engineering focused on reliable functionality and maintainable code.
         </>
       ),
     },
@@ -36,11 +28,7 @@ export default function SingaporeServicesGrid() {
       img: '/assets/mobile-app/react.png',
       desc: (
         <>
-          React Native works well for products that need efficient multi-platform expansion without sacrificing user experience.{' '}
-          <Link to="/react-native-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
-            React Native app development
-          </Link>{' '}
-          engineering decisions around shared components and native capabilities help maintain application quality while keeping future iterations more manageable.
+          React Native works well for products that need efficient multi-platform expansion without sacrificing user experience. Engineering decisions around shared components and native capabilities help maintain application quality while keeping future iterations more manageable.
         </>
       ),
     },
@@ -50,11 +38,7 @@ export default function SingaporeServicesGrid() {
       img: '/assets/mobile-app/flutter.png',
       desc: (
         <>
-          Flutter is particularly useful when a product&apos;s interface needs to behave consistently across iOS and Android.{' '}
-          <Link to="/flutter-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
-            Flutter app development
-          </Link>{' '}
-          rendering approach gives designers greater control over visual details, while a shared codebase keeps platform-specific differences from complicating routine updates.
+          Flutter is particularly useful when a product&apos;s interface needs to behave consistently across iOS and Android. Its rendering approach gives designers greater control over visual details, while a shared codebase keeps platform-specific differences from complicating routine updates.
         </>
       ),
     },
@@ -64,11 +48,7 @@ export default function SingaporeServicesGrid() {
       img: '/assets/mobile-app/mobilere.png',
       desc: (
         <>
-          Not every application benefits from the same cross-platform architecture.{' '}
-          <Link to="/cross-platform-app-development" className="text-[#00CE44] font-medium underline underline-offset-4">
-            Cross platform app development
-          </Link>{' '}
-          assesses performance demands, device integrations, release schedules, and maintenance requirements before recommending a framework. The decision follows what the product needs to accomplish.
+          Not every application benefits from the same cross-platform architecture. We assess performance demands, device integrations, release schedules, and maintenance requirements before recommending a framework. The decision follows what the product needs to accomplish, not a preference for one technology.
         </>
       ),
     },
@@ -78,11 +58,7 @@ export default function SingaporeServicesGrid() {
       img: '/assets/mobile-app/Kotlin-Multiplatform-Development.png',
       desc: (
         <>
-          A mobile interface is only as reliable as the systems supporting it.{' '}
-          <Link to="/backend-api-development" className="text-[#00CE44] font-medium underline underline-offset-4">
-            Backend and API development
-          </Link>{' '}
-          and cloud infrastructure receive the same level of attention as the application layer to ensure products remain secure, scalable, and ready for future growth.
+          A mobile interface is only as reliable as the systems supporting it. Backend architecture, API design, and cloud infrastructure receive the same level of attention as the application layer to ensure products remain secure, scalable, and ready for future growth.
         </>
       ),
     },

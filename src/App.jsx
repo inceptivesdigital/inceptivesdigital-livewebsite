@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
 import ThirdPartyRouteTracker from './components/ThirdPartyRouteTracker'
+import { captureLandingAttribution } from './utils/attribution'
 
 // Lazy-load below-the-fold chrome & interactive modals to shrink initial JS payload
 const BookingCTA = lazy(() => import('./components/BookingCTA'))
@@ -131,6 +132,7 @@ function PreFooterCTA({ isNotFound }) {
     pathname === '/company/founders-letter' ||
     pathname === '/ai-development' ||
     pathname === '/services/ai-development' ||
+    pathname === '/staff-augmentation' ||
     pathname === '/thank-you'
   ) return null
   return <BookingCTA />
@@ -160,16 +162,14 @@ function DeferredChrome({ isNotFound }) {
         ([entry]) => {
           if (entry.isIntersecting) trigger()
         },
-        { rootMargin: '600px' }
+        { rootMargin: '800px' }
       )
       obs.observe(el)
     }
 
-    const timer = window.setTimeout(trigger, 2500)
     return () => {
       events.forEach((evt) => window.removeEventListener(evt, trigger))
       if (obs) obs.disconnect()
-      window.clearTimeout(timer)
     }
   }, [ready, hash])
 
@@ -192,12 +192,10 @@ function DeferredModals() {
   useEffect(() => {
     if (ready) return
     const trigger = () => setReady(true)
-    const events = ['pointerdown', 'keydown', 'touchstart', 'scroll']
+    const events = ['pointerdown', 'keydown', 'touchstart', 'scroll', 'mousemove']
     events.forEach((evt) => window.addEventListener(evt, trigger, { once: true, passive: true }))
-    const timer = window.setTimeout(trigger, 3000)
     return () => {
       events.forEach((evt) => window.removeEventListener(evt, trigger))
-      window.clearTimeout(timer)
     }
   }, [ready])
 
@@ -212,6 +210,10 @@ function DeferredModals() {
 
 export default function App() {
   const [isNotFound, setIsNotFound] = useState(false)
+
+  useEffect(() => {
+    captureLandingAttribution()
+  }, [])
 
   return (
     <BrowserRouter>

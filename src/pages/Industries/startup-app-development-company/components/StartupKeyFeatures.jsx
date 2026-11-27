@@ -181,7 +181,7 @@ export default function StartupKeyFeatures() {
         </div>
 
         {/* White Pill Tab Bar */}
-        <div className="bg-white rounded-[14px] p-1.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1.5 mb-6 max-w-[1280px] mx-auto">
+        <div className="bg-white rounded-[14px] p-1.5 flex flex-nowrap lg:grid lg:grid-cols-4 gap-1.5 mb-6 max-w-[1280px] mx-auto overflow-x-auto lg:overflow-visible no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {tabs.map((tab, idx) => {
             const isActive = idx === activeTab
             return (
@@ -189,7 +189,7 @@ export default function StartupKeyFeatures() {
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(idx)}
-                className={`px-4 py-3.5 rounded-[10px] text-[14px] sm:text-[15px] font-semibold transition-all duration-200 cursor-pointer ${
+                className={`shrink-0 lg:shrink whitespace-nowrap px-4 py-3.5 rounded-[10px] text-[14px] sm:text-[15px] font-semibold transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'bg-[#00CE44] text-white shadow-sm'
                     : 'bg-transparent text-black hover:bg-black/5'

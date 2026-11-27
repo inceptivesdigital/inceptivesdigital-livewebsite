@@ -62,6 +62,8 @@ export default function ClientGridSection({ heading } = {}) {
               <img
                 src={encodeURI(client.src)}
                 alt={client.name}
+                width={180}
+                height={72}
                 className="max-h-12 sm:max-h-14 md:max-h-20 w-auto max-w-[82%] object-contain select-none"
                 loading="lazy"
               />

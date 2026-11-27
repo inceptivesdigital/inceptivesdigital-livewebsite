@@ -25,6 +25,7 @@ export default function LeadershipConsultation() {
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
+      formId: 'lead-form-inceptives-digital-leadership',
       formName: 'Lead Form Inceptives Digital',
       subject: `Leadership Consultation - ${formData.fullName}`,
       replyTo: formData.email,

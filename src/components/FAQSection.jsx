@@ -102,9 +102,9 @@ export default function FAQSection({ faqs: customFaqs, heading = "Frequently Ask
                   <div className="overflow-hidden">
                     <div className="px-4 sm:px-6 lg:px-5 pb-6 sm:pb-7 pt-0 text-slate-300 text-[14px] sm:text-[15px] lg:text-[16px] leading-relaxed font-normal [&_a]:text-[#00CE44] [&_a]:underline hover:[&_a]:text-white [&_a]:transition-colors">
                       {typeof aContent === 'string' ? (
-                        <p dangerouslySetInnerHTML={{ __html: aContent }} />
+                        <div dangerouslySetInnerHTML={{ __html: aContent }} />
                       ) : (
-                        <p>{aContent}</p>
+                        <div>{aContent}</div>
                       )}
                     </div>
                   </div>

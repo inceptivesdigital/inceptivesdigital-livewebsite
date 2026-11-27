@@ -23,6 +23,8 @@ export default function CoreCapabilities() {
                 <img
                   src="/assets/homesection.avif"
                   alt="Core Capabilities Behind Modern Digital Products Mockups"
+                  width={1024}
+                  height={754}
                   className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
                   loading="lazy"
                 />

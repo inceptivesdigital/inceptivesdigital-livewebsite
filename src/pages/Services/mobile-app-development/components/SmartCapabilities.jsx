@@ -55,11 +55,11 @@ export default function SmartCapabilities() {
       key={cap.title}
       className={`${
         mobileGrid
-          ? 'w-full min-h-[120px] sm:min-h-[130px]'
-          : 'w-[130px] sm:w-[148px] h-[125px] sm:h-[138px]'
+          ? 'w-full min-h-[130px] sm:min-h-[140px]'
+          : 'w-[148px] sm:w-[164px] min-h-[136px] sm:min-h-[148px]'
       } p-3.5 rounded-[16px] bg-[#111312]/90 border border-[#00CE44] flex flex-col items-center justify-center text-center shadow-none`}
     >
-      <div className="w-8 h-8 mb-2 flex items-center justify-center shrink-0">
+      <div className="w-8 h-8 mb-2.5 flex items-center justify-center shrink-0">
         <img
           src={cap.icon}
           alt={cap.title}
@@ -67,7 +67,7 @@ export default function SmartCapabilities() {
           loading="lazy"
         />
       </div>
-      <h3 className="text-white text-[12px] sm:text-[13px] font-normal leading-snug">
+      <h3 className="text-white text-[16px] font-normal leading-snug">
         {cap.title}
       </h3>
     </div>

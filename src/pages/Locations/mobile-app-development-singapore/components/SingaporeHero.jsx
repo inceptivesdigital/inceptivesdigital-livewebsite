@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 export default function SingaporeHero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#050608] text-white pt-28 pb-16 lg:pt-36 lg:pb-24">
-      {/* Background Skyline Banner from Toronto / Singapore WordPress Link */}
+      {/* Background Singapore Skyline Banner */}
       <div
         className="absolute inset-0 z-0 select-none pointer-events-none bg-no-repeat bg-right lg:bg-center bg-cover opacity-60"
         style={{
-          backgroundImage: `url('/assets/locations/singapore/banner-toronto.webp')`,
+          backgroundImage: `url('/assets/locations/singapore/singapore-hero-banner-hd.jpg')`,
         }}
       />
       {/* Dark gradient blend on left for high-contrast typography */}

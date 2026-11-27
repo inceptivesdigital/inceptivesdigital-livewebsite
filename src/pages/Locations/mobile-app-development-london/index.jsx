@@ -24,9 +24,9 @@ import LondonFaqs from './components/LondonFaqs'
 
 export default function MobileAppLondon() {
   useEffect(() => {
-    const title = 'Mobile App Development Company London | Inceptives Digital'
+    const title = 'Mobile App Development Company in Singapore | Inceptives Digital'
     const description =
-      'Leading mobile app development company in London building iOS, Android, cross-platform, and AI-powered apps for UK startups and growing ventures.'
+      'Inceptives Digital is a mobile app development company in Singapore building iOS, Android, and AI-powered apps for startups and SMB teams across Southeast Asia.'
 
     document.title = title
 
