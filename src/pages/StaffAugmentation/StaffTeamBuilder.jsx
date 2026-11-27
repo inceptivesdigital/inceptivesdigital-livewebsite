@@ -154,6 +154,10 @@ export default function StaffTeamBuilder() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setError('')
 
@@ -164,7 +168,7 @@ export default function StaffTeamBuilder() {
       formName: 'Lead Form Inceptives Digital',
       subject: `Staff Augmentation Team Request - ${contact.fullName}`,
       replyTo: contact.email,
-      turnstileToken,
+      turnstileToken: resolvedTurnstileToken,
       fields: {
         'Full Name': contact.fullName,
         Company: contact.company,

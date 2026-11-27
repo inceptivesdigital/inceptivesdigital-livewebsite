@@ -230,7 +230,7 @@ export default async function handler(req, res) {
       ? forwardedFor.split(',')[0].trim()
       : req.socket?.remoteAddress
 
-  if (process.env.TURNSTILE_SECRET_KEY && rawBody.turnstileRequired !== false && rawBody.turnstileToken) {
+  if (process.env.TURNSTILE_SECRET_KEY && rawBody.turnstileRequired !== false) {
     const turnstileCheck = await verifyTurnstile(rawBody.turnstileToken, remoteIp)
     if (!turnstileCheck.ok) {
       return res.status(turnstileCheck.status || 403).json({

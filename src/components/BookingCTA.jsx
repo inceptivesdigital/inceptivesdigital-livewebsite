@@ -24,6 +24,10 @@ export default function BookingCTA() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
@@ -31,7 +35,7 @@ export default function BookingCTA() {
       formName: 'Get In Touch Footer',
       subject: `Get In Touch Footer - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,
-      turnstileToken,
+      turnstileToken: resolvedTurnstileToken,
       fields: {
         'Form Source': 'Get In Touch Footer',
         'First Name': formData.firstName,

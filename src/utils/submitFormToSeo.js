@@ -108,9 +108,12 @@ export async function submitFormToSeo({
   inFlightFormKeys.add(dedupKey)
 
   try {
-    const verification = await verifyTurnstileToken(turnstileToken)
-    if (!verification.ok) {
-      return { ok: false, error: verification.error }
+    const resolvedToken = (turnstileToken || '').trim()
+    if (isTurnstileEnabled && !resolvedToken) {
+      return {
+        ok: false,
+        error: 'Please complete the security verification before submitting.',
+      }
     }
 
     const pageUrl =
@@ -119,7 +122,7 @@ export async function submitFormToSeo({
     const resolvedSubmissionId = submissionId || createSubmissionId()
     const attribution = getLeadAttribution()
 
-    // 1. Server-side Zapier Catch Hook delivery (must succeed before thank-you / conversion events)
+    // 1. Server-side Turnstile verification + Zapier Catch Hook delivery (single-use token verified once in /api/lead)
     try {
       const leadRes = await fetch('/api/lead', {
         method: 'POST',
@@ -133,7 +136,7 @@ export async function submitFormToSeo({
           fields: cleanFields,
           attribution,
           turnstileRequired: isTurnstileEnabled,
-          ...(turnstileToken ? { turnstileToken } : {}),
+          ...(resolvedToken ? { turnstileToken: resolvedToken } : {}),
         }),
       })
 

@@ -24,6 +24,10 @@ export default function MobileContactCTA() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
@@ -31,7 +35,7 @@ export default function MobileContactCTA() {
       formName: 'Lead Form Inceptives Digital',
       subject: `Mobile App Development Inquiry - ${formData.firstName} ${formData.lastName}`.trim(),
       replyTo: formData.email,
-      turnstileToken,
+      turnstileToken: resolvedTurnstileToken,
       fields: {
         'First Name': formData.firstName,
         'Last Name': formData.lastName,

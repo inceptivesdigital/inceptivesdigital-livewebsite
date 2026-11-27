@@ -22,6 +22,10 @@ export default function LeadershipConsultation() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
@@ -29,7 +33,7 @@ export default function LeadershipConsultation() {
       formName: 'Lead Form Inceptives Digital',
       subject: `Leadership Consultation - ${formData.fullName}`,
       replyTo: formData.email,
-      turnstileToken,
+      turnstileToken: resolvedTurnstileToken,
       fields: {
         'Full Name': formData.fullName,
         Email: formData.email,

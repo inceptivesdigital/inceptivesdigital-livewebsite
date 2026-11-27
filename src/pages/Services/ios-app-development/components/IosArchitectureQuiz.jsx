@@ -505,6 +505,10 @@ export default function IosArchitectureQuiz() {
       return
     }
 
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setError('')
 
@@ -517,7 +521,7 @@ export default function IosArchitectureQuiz() {
         subject: `iOS APP DEVELOPMENT Page - ${trimmedName}`,
         replyTo: trimmedEmail,
         wpAction: 'id_ios_quiz_submit',
-        turnstileToken,
+        turnstileToken: resolvedTurnstileToken,
         fields: {
           'Full Name': trimmedName,
           Email: trimmedEmail,

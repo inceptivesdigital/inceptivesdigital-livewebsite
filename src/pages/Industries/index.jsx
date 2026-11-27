@@ -225,6 +225,10 @@ export default function IndustriesHubPage() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
@@ -232,7 +236,7 @@ export default function IndustriesHubPage() {
       formName: 'Lead Form Inceptives Digital',
       subject: `Industries Consultation - ${formData.firstName}`.trim(),
       replyTo: formData.email,
-      turnstileToken,
+      turnstileToken: resolvedTurnstileToken,
       fields: {
         'First Name': formData.firstName,
         Email: formData.email,

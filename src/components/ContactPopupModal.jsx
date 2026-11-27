@@ -196,6 +196,10 @@ export default function ContactPopupModal() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (sending) return
+    const resolvedTurnstileToken =
+      turnstileToken ||
+      e.currentTarget?.querySelector?.('[name="cf-turnstile-response"]')?.value ||
+      ''
     setSending(true)
     setTurnstileError('')
     const res = await submitFormToSeo({
@@ -203,7 +207,7 @@ export default function ContactPopupModal() {
       formName: 'Lead Form Inceptives Digital',
       subject: `Contact Popup Inquiry - ${form.firstName} ${form.lastName}`.trim(),
       replyTo: form.email,
-      turnstileToken,
+      turnstileToken: resolvedTurnstileToken,
       fields: {
         'First Name': form.firstName,
         'Last Name': form.lastName,
