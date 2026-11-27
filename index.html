@@ -97,9 +97,6 @@
         ['pointerdown', 'mousemove', 'keydown', 'scroll', 'touchstart'].forEach(function (evt) {
           window.addEventListener(evt, loadIntegrations, { once: true, passive: true });
         });
-        window.addEventListener('load', function () {
-          window.setTimeout(loadIntegrations, 5500);
-        });
       })();
     </script>
 
