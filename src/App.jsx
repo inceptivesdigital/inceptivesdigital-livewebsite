@@ -1,9 +1,71 @@
-import { useState, useEffect, useRef, lazy, Suspense } from 'react'
+import { useState, useEffect, useRef, Component, lazy as reactLazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Navbar from './components/Navbar'
 import ThirdPartyRouteTracker from './components/ThirdPartyRouteTracker'
 import { captureLandingAttribution } from './utils/attribution'
+
+const CHUNK_RELOAD_KEY = 'id_chunk_reload_at'
+
+function lazy(importer) {
+  return reactLazy(() =>
+    importer().catch((err) => {
+      if (typeof window !== 'undefined' && window.sessionStorage) {
+        const last = Number(window.sessionStorage.getItem(CHUNK_RELOAD_KEY) || 0)
+        if (Date.now() - last > 15000) {
+          window.sessionStorage.setItem(CHUNK_RELOAD_KEY, String(Date.now()))
+          window.location.reload()
+          return new Promise(() => {})
+        }
+      }
+      throw err
+    })
+  )
+}
+
+class ChunkErrorBoundary extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-[#07080b] text-white flex flex-col items-center justify-center px-6 text-center pt-24">
+          <h2 className="text-2xl font-bold mb-3">A newer version is available</h2>
+          <p className="text-white/75 text-sm mb-6 max-w-md">
+            Please reload the page to load the latest content.
+          </p>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="px-6 py-3 bg-[#00CE44] hover:bg-[#00b53c] text-black font-semibold text-sm cursor-pointer border-0"
+          >
+            Reload Page
+          </button>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
+
+function RouteLoadingFallback() {
+  return (
+    <div
+      className="min-h-screen bg-[#07080b] flex items-center justify-center pt-20"
+      aria-busy="true"
+      aria-label="Loading page"
+    >
+      <div className="w-8 h-8 rounded-full border-2 border-white/20 border-t-[#00CE44] animate-spin" />
+    </div>
+  )
+}
 
 // Lazy-load below-the-fold chrome & interactive modals to shrink initial JS payload
 const BookingCTA = lazy(() => import('./components/BookingCTA'))
@@ -225,7 +287,8 @@ export default function App() {
 
         {/* Dynamic Route Content */}
         <main className="flex-grow">
-          <Suspense fallback={<div className="min-h-screen bg-[#07080b]" />}>
+          <ChunkErrorBoundary>
+          <Suspense fallback={<RouteLoadingFallback />}>
             <Routes>
             <Route path="/startup-product-development" element={<StartupAppDevelopment />} />
             {/* General Routes */}
@@ -448,6 +511,7 @@ export default function App() {
             <Route path="*" element={<NotFound onMountChange={setIsNotFound} />} />
           </Routes>
           </Suspense>
+          </ChunkErrorBoundary>
         </main>
 
         {/* Universal Pre-Footer Contact Section, Footer & Modals (deferred for faster initial load) */}
